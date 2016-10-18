@@ -47,7 +47,6 @@ The content contains several independent modules that cover different aspects of
 + [Monitor and tune SpringBoot application deployed on Oracle Application Container Cloud Service](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/monitor.application.deployed.accs.md)
 
 
-
 #### Deploy Java EE application to Oracle Java Cloud Service####
 
 + [Create Database Cloud Service Instance using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md)
@@ -60,6 +59,11 @@ The content contains several independent modules that cover different aspects of
 + [Direct access and management of Oracle Java Cloud Service](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/view.jcs.log.using.ssh.md)
 + [Scale-Out Oracle Java Cloud Service using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/jcs.scale.md)
 + [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/psm.cli.md)
+
+####Making Java Cloud Service elasticly sclable through Policy based Auto-scaling####
++ policy based auto scaling content
+
+
 
 ####Upgrade WebLogic Server 11g (10.3.6) running on premise to 12cR2 with Multitenancy and migrate to Java Cloud Service####
 
