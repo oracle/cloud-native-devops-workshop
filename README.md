@@ -20,9 +20,8 @@ During the execution you will create several public cloud service instances what
 
 The content contains several independent modules that cover different aspects of the application development in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependendent on each other. 
 
-### Content of this workshop ###
-
 ----
+
 ####Run Lightweight Java container in the  Oracle Application Container Cloud Service####
 
 + [Deploy Tomcat sample application to Oracle Application Container Cloud](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/deploy.tomcat.on.accs.md)
