@@ -1,3 +1,5 @@
+![](images/customer.logo.png)
+---
 # ORACLE Cloud-Native DevOps workshop #
 
 ## Introduction ##
