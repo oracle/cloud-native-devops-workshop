@@ -76,6 +76,14 @@ The content contains several independent modules that cover different aspects of
 
 + [Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool](https://github.com/oracle-weblogic/weblogic-innovation-seminars/tree/caf-12.2.1/cloud.demos/app.2.cloud)
  
+ ----
+ 
+ ####Customizing and personalizing the workshop content####
+ 
+ + [Customize and personalize the workshop materials] (./tree/master/customize)
+ 
+ ----
+ 
 ####Clean up the environment####
 
 + [Delete Java Cloud, Database Cloud and Database Container Services using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/cleanup.md)
