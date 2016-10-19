@@ -28,6 +28,8 @@ Click on the icon "Edit this file"
 
 You will open the metadata editor of tabale of the contest. Customize it to your needs (for example by removing not needed tutorials). Click on 'Commit changes" at the end.
 
+We allow also to customize the tutorial and make it more personalized by modifying cloud-native-devops-workshop/images/customer.logo.png image. This image is presented on top of every tutorial page.
+
 #### Make needed changes in the VirtualBox images (optional - only if you are using them) ####
 
 Every participant who uses the distributed by oracle VirtualBox image will need to change the following:
