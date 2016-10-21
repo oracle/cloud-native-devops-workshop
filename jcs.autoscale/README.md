@@ -2,7 +2,7 @@
 ---
 # ORACLE Cloud-Native DevOps workshop #
 -----
-## Auto Scaling Oracle Java Cloud Service ##
+## Oracle Java Cloud Service Policy Based Auto Scaling ##
 
 ### Introduction ###
 Scaling lets you add or remove resources for an Oracle Java Cloud Service instance on demand in response to changes in load on the service instance. You can scale an Oracle Java Cloud Service instance by scaling a cluster, a node, or the Coherence data tier in the service instance.

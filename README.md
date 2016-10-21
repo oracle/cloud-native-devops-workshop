@@ -61,7 +61,7 @@ The content contains several independent modules that cover different aspects of
 + [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/psm.cli.md)
 
 ####Making Java Cloud Service elasticly sclable through Policy based Auto-scaling####
-+ policy based auto scaling content
++ [Oracle Java Cloud Service Policy Based Auto Scaling](../jcs.autoscale/README.md)
 
 
 
