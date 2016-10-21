@@ -1,4 +1,4 @@
-![](images/customer.logo.png)
+![](common/images/customer.logo.png)
 ---
 # ORACLE Cloud-Native DevOps workshop #
 
@@ -79,7 +79,7 @@ The content contains several independent modules that cover different aspects of
  
 ####Customizing and personalizing the workshop content####
  
- + [Customize and personalize the workshop materials] (https://github.com/oracle-weblogic/cloud-native-devops-workshop/tree/master/customize)
+ + [Customize and personalize the workshop materials] (customize/README.md)
  
 ----
  

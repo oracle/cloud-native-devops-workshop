@@ -1,3 +1,5 @@
+![](../common/images/customer.logo.png)
+---
 # ORACLE Public Cloud Service tutorial #
 -----
 ## Deploy Tomcat based application to Application Container Cloud Service ##

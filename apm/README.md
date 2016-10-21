@@ -1,3 +1,5 @@
+![](../common/images/customer.logo.png)
+---
 # ORACLE Cloud-Native DevOps workshop #
 -----
 ## Deploying APM Agent and setting up Application Performance Monitoring ##
