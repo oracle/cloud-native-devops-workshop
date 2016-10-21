@@ -1,0 +1,242 @@
+/*  The styles most likely to be used are:
+	- h1, h2, h3, h4: Title, second, third, and fourth-level headings within the body of a topic
+	- relatedTopics: Related Topics
+	- procTitle: Within How Do I:... topics, for headings within the body of a topic that are followed by
+	  bulleted procedures ("To do this").
+	- pre: For code blocks
+	- langinline: For code fragments within a (non-code) regular section.
+	- notepara: Notes	 
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+.smaller {font-size:80%; margin-top:0px; margin-bottom:5px;}
+
+
+/* Use h1 for the topic title */
+h1 {
+	font-weight: bold;
+	font-style: normal;
+	font-family: Verdana, sans-serif;
+	font-size: 175%;
+	background-color: #FFFFFF;
+	color: #000000;
+
+
+}
+
+/* Use h2 for all second-level headings. */
+h2 {
+	font-weight: bold;
+	font-size: 150%;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+/* Use h3 for all third-level headings. */
+h3 {
+	font-size: 120%;
+	margin-top: 1em;
+	margin-bottom: .6em;
+}
+
+/* Use h4 for all fourth-level headings. 
+   Note: this style looks identical to the relatedtopics and proctitle styles. */
+h4 {
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: .6em;
+}
+
+/* Use h5 for all fifth-level heading.  
+   Currently, there are no h5s in use in the document.*/
+h5 {
+	font-size: 105%;
+	margin-top: 1em;
+	margin-bottom: .6em;
+}
+
+/* Used for figure captions.*/
+p.arttitle {
+	font-weight: Bold;
+}
+  
+
+/* Standard HTML tag. */
+body {
+	padding: 0px 0px 0px 15px;
+	background: #ffffff;
+	color: #000000;
+	font-size: 80%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Standard HTML tag. */
+span.bold {
+	font-weight: Bold;
+}
+
+/* Standard HTML tag. */
+blockquote {
+	margin: 0em 0em 0em 2em;
+	padding: 0px;
+}
+
+/* Use the filepath style to designate file paths. It is currently a monospace file. */
+span.filepath {
+	font: 100% Courier New Courier mono;
+	font-family: "Courier New", monospace;
+}
+
+/* The langinline style, like userinput and filepath, also renders text monospace. Use this
+   to denote any individual instance of code in the context of non-coded text. For example, 
+   you would use this to denote the name of a class when you're describing it in the paragraph that
+   precedes a code sample. To denote a code sample, however, use the <pre> tag. */
+span.langinline {
+	font: 100% Courier New Courier mono;
+	font-family: "Courier New", monospace;
+}
+
+/* The notepara style indents your text to the tab stop for note
+   text. You should always begin Note text with the word "Note:" in
+   boldface. */
+p.notepara {
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-bottom: 1.5em;
+}
+
+/* The background of header cells is grey, and the text is bottom-aligned. */
+  th {
+  	padding-left: 8px;
+  	padding-right: 8px;
+  	background: #cccccc;
+  	text-align: left;
+  	vertical-align: top;
+  }
+
+
+/* Standard HTML tags. */
+ul,
+ol {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	list-style-position: outside;
+	list-style-image: none;
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+/* Standard HTML tag. */
+ol {
+	list-style-type: 1;
+	margin-left: 1em;
+}
+
+/* Standard HTML tag. */
+ul {
+	list-style-type: disc;
+	margin-left: 1em;
+}
+
+/* Standard HTML tag. */
+li {
+	margin-top: .2em; 
+	margin-bottom: .7em;
+}
+
+
+
+BODY {padding:0; font-family: Tahoma,Arial, Helvetica, sans-serif;  font-size: 90%; scrollbar-face-color:#EEEEEE;
+scrollbar-base-color:#EEEEEE;
+scrollbar-shadow-color:#999999;
+scrollbar-highlight-color:#CCCCCC;
+scrollbar-3dlight-color:#EEEEEE;
+scrollbar-darkshadow-color:#EEEEEE;
+scrollbar-arrow-color:#666666;}
+
+A:link, A:active, A:visited {
+		COLOR: #0000aa; 
+		FONT-FAMILY:Tahoma,Arial,Helvetica,Verdana,sans-serif;
+		text-decoration:none;
+		}
+
+A:hover {COLOR: #000000; 
+		FONT-FAMILY:Tahoma,Arial,Helvetica,Verdana,sans-serif; 
+		text-decoration: underline; 
+		background-color: #E7EFFC;}
+
+textarea, select, option {background-color: #E7EFFC;
+		border: 1px solid #19355E; padding: 4px;}
+
+.textinput{background-color: #E7EFFC; border: 1px solid #19355E; padding: 2px}
+
+.button, .button:ACTIVE {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	color:#000000;
+	background-color: #8EA8C6;
+	background-image: url(core/images/button_bg.gif);
+	background-repeat: repeat-x;
+	border: 1px solid #4A637B;
+	background-position: top;
+	padding: 0px;
+	margin: 0px;
+	font-size:75%;
+
+}
+.navbutton, navbutton:ACTIVE{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	text-decoration: none;
+	text-align: center;
+	color:#000000;
+	background-color: #8EA8C6;
+	background-image: url(../core/images/button_bg.gif);
+	background-repeat: repeat-x;
+	border: 1px solid #4A637B;
+	background-position: top;
+	padding: 0px;
+	margin: 0px;
+
+}
+.navbutton:HOVER {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	color:#FFffff;
+	background-color: #19355E;
+	background-image: url(../core/images/button_bg_hover.gif);
+	background-repeat: repeat-x;
+	border: 1px solid #19355E;
+	background-position: bottom;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.button:HOVER {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	color:#FFFFFF;
+	background-color: #19355E;
+	background-image: url(../core/images/button_bg_hover.gif);
+	background-repeat: repeat-x;
+	border: 1px solid #19355E;
+	background-position: bottom;
+	margin: 0px;
+	padding: 0px;
+}
+p {margin-left:10px;}
+
+code{font-family:"Courier New", Courier, mono;font-size:100%;}
+
+

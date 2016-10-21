@@ -1,0 +1,1 @@
+springUrl=Sample resource
