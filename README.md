@@ -26,7 +26,7 @@ The content contains several independent modules that cover different aspects of
 
 ####Run Lightweight Java container in the  Oracle Application Container Cloud Service####
 
-+ [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs.tomcat/README.md)
++ [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
 + [Scale up/down Application Container Service using user interface and PaaS Service Manager (PSM) Command Line Interface (CLI) tool](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/scale.up.down.accs.md)
 
 ####Deploy sample app to lightweight Java container and monitor the application using Oracle Management Cloud Service####
@@ -61,7 +61,7 @@ The content contains several independent modules that cover different aspects of
 + [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/psm.cli.md)
 
 ####Making Java Cloud Service elasticly sclable through Policy based Auto-scaling####
-+ [Oracle Java Cloud Service Policy Based Auto Scaling](jcs.autoscale/README.md)
++ [Oracle Java Cloud Service Policy Based Auto Scaling](jcs-autoscale/README.md)
 
 
 
