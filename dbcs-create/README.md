@@ -1,7 +1,7 @@
 ![](../common/images/customer.logo.png)
 ---
 # ORACLE Cloud-Native DevOps workshop #
------
+
 ## Create Database Cloud Service instance using user interface ##
 
 ### Introduction ###
