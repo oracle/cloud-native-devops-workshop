@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateOrdersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_orderId}" for="orderId" />
+                    <h:inputText id="orderId" value="#{ordersController.current.orderId}" title="#{bundle.CreateOrdersTitle_orderId}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_orderId}"/>
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_orderDate}" for="orderDate" />
+                    <h:inputText id="orderDate" value="#{ordersController.current.orderDate}" title="#{bundle.CreateOrdersTitle_orderDate}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_orderDate}"/>
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_orderMode}" for="orderMode" />
+                    <h:inputText id="orderMode" value="#{ordersController.current.orderMode}" title="#{bundle.CreateOrdersTitle_orderMode}" />
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_orderStatus}" for="orderStatus" />
+                    <h:inputText id="orderStatus" value="#{ordersController.current.orderStatus}" title="#{bundle.CreateOrdersTitle_orderStatus}" />
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_orderTotal}" for="orderTotal" />
+                    <h:inputText id="orderTotal" value="#{ordersController.current.orderTotal}" title="#{bundle.CreateOrdersTitle_orderTotal}" />
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_salesRepId}" for="salesRepId" />
+                    <h:inputText id="salesRepId" value="#{ordersController.current.salesRepId}" title="#{bundle.CreateOrdersTitle_salesRepId}" />
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_promotionId}" for="promotionId" />
+                    <h:inputText id="promotionId" value="#{ordersController.current.promotionId}" title="#{bundle.CreateOrdersTitle_promotionId}" />
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_customerId}" for="customerId" />
+                    <h:selectOneMenu id="customerId" value="#{ordersController.current.customer}" title="#{bundle.CreateOrdersTitle_customerId}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_customerId}">
+                        <f:selectItems value="#{customersController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{ordersController.create}" value="#{bundle.CreateOrdersSaveLink}" />
+                |
+                <h:commandLink action="#{ordersController.prepareList}" value="#{bundle.CreateOrdersShowAllLink}" immediate="true"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

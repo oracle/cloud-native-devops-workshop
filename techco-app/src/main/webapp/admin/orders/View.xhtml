@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewOrdersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewOrdersLabel_orderId}"/>
+                    <h:outputText value="#{ordersController.current.orderId}" title="#{bundle.ViewOrdersTitle_orderId}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_orderDate}"/>
+                    <h:outputText value="#{ordersController.current.orderDate}" title="#{bundle.ViewOrdersTitle_orderDate}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_orderMode}"/>
+                    <h:outputText value="#{ordersController.current.orderMode}" title="#{bundle.ViewOrdersTitle_orderMode}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_orderStatus}"/>
+                    <h:outputText value="#{ordersController.current.orderStatus}" title="#{bundle.ViewOrdersTitle_orderStatus}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_orderTotal}"/>
+                    <h:outputText value="#{ordersController.current.orderTotal}" title="#{bundle.ViewOrdersTitle_orderTotal}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_salesRepId}"/>
+                    <h:outputText value="#{ordersController.current.salesRepId}" title="#{bundle.ViewOrdersTitle_salesRepId}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_promotionId}"/>
+                    <h:outputText value="#{ordersController.current.promotionId}" title="#{bundle.ViewOrdersTitle_promotionId}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_customerId}"/>
+                    <h:outputText value="#{ordersController.current.customer}" title="#{bundle.ViewOrdersTitle_customerId}"/>
+                </h:panelGrid>
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewOrdersEditLink}"/>
+                |
+                <h:commandLink action="#{ordersController.destroy}" value="#{bundle.ViewOrdersDestroyLink}"/>
+                |
+                <h:commandLink action="#{ordersController.prepareCreate}" value="#{bundle.ViewOrdersCreateLink}" />
+                |
+                <h:commandLink action="#{ordersController.prepareList}" value="#{bundle.ViewOrdersShowAllLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

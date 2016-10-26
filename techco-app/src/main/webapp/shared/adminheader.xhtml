@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition>
+        <div class="navbar topnavbar col-lg-12 col-md-12">
+            <!-- top menu -->
+            <h:form id="headerLinksForm">
+                <a href="${facesContext.externalContext.requestContextPath}/admin" class="navbar-brand logo">
+                    <h:graphicImage alt="no image available" library="default" name="img/logo.png"/>
+                </a>
+                <ui:param name="view" value="#{facesContext.viewRoot.viewId}"/>
+                <!--nav-->
+                <ul class="nav navbar-nav topnavright">
+                    <h:panelGroup rendered="#{not empty request.remoteUser}">
+                        <li>
+                            <h:commandLink action="#{myOrdersController.prepareList}" value="#{logoutController.userDisplayName}"/>
+                        </li>
+                        <li>
+                            <h:commandLink styleClass="logoutLink" action="#{logoutController.logout}" value="Log Out"/>
+                        </li>
+                    </h:panelGroup>
+                </ul>
+                <ul class="nav navbar-nav topnav">
+                    <li class="dropdown #{view == '/index.xhtml' ? 'active' : ''}">
+                        <h:link outcome="/admin/customers/List" value="Customers" />
+                    </li>
+                    <li class="dropdown #{(view == '/shop/BrowseProducts.xhtml' or view == '/shop/BrowseCategories.xhtml') ? 'active' : ''}">
+                        <h:link outcome="/admin/orders/List" value="Orders" />
+                    </li>
+                    <li class="dropdown #{view == '/shop/Basket.xhtml' ? 'active' : ''}">
+                        <h:link outcome="/admin/productInformation/List" value="Products"/>
+                    </li>
+                    <li class="dropdown #{view == '/user/MyOrders.xhtml' ? 'active' : ''}">
+                        <h:link outcome="/admin/orderItems/List" value="Orders Items"/>
+                    </li>
+                </ul>
+                <!--/nav-->
+            </h:form>
+            <!-- end menu -->
+        </div>
+    </ui:composition>
+
+</html>

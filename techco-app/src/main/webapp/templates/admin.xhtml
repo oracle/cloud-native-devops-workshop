@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <!-- styles -->
+    <!--h:outputStylesheet library="default" name="css/bootstrap.min.css"/-->
+    <h:outputStylesheet name="/webjars/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <h:outputStylesheet library="default" name="css/style.css"/>
+    <!--h:outputStylesheet library="default" name="css/font-awesome.css"/-->
+    <h:outputStylesheet name="/webjars/font-awesome/3.0.2/css/font-awesome.css"/>
+    <h:outputStylesheet library="default" name="css/overwrite.css"/>
+    <h:outputStylesheet library="default" name="css/default.css"/>
+    <h:outputStylesheet library="default" name="css/mainappstyle.css"/>    
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <h:outputScript name="/webjars/jquery/1.11.1/jquery.min.js"/>
+    <h:outputScript name="/webjars/bootstrap/3.3.1/js/bootstrap.min.js"/>
+    <!-- fav and touch icons -->
+    <!--link rel="shortcut icon" href="${facesContext.externalContext.requestContextPath}/assets/ico/favicon.ico"/-->
+</h:head>
+<h:body>
+    <!-- outer main div -->
+    <div class="mainouterdiv">
+        <!-- panel for header and nav bar -->
+        <div class="headersec">
+            <div class="container">
+                <ui:include src="/shared/adminheader.xhtml"/>
+            </div>
+        </div>
+        <!-- end panel for header and nav bar -->
+        <!--section id="maincontent"-->
+        <div class="admincontentsec">
+            <div class="container">
+                <div class="col-lg-12 col-md-12">
+                    <div class="titleHeader">
+                        <ui:insert name="title"/>
+                    </div>
+                    <div class="maincontent">
+                        <ui:insert name="content"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/section-->
+    </div>
+    <!-- end outer main div -->
+    <!--footer class="footer"-->
+    <div class="footersec">
+        <div class="container">
+            <ui:include src="/shared/footer.xhtml"/>
+        </div>
+    </div>
+    <!-- end footer-->
+</h:body>
+</html>

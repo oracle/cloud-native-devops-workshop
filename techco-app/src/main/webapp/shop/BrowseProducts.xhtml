@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+      xmlns:jsfutil="http://oracle.com/jsfutil"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/templates/main.xhtml">
+        <f:metadata>
+            <f:viewParam name="category" value="#{browseProductsController.categoryId}"/>
+            <f:event type="preRenderView" listener="#{browseProductsController.loadCategoryProducts}"/>
+        </f:metadata>
+        <ui:define name="title">
+            Search Products
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block" class="row">
+                <h:messages infoClass="text-info" warnClass="text-warning" errorClass="text-danger" layout="table"/>
+            </h:panelGroup>
+            <h:panelGroup id="browseProductPanel" layout="block" styleClass="row">
+                <h:form id="browseProdForm">
+                    <h:panelGroup layout="block" styleClass="row">
+                        <h:panelGroup layout="block" styleClass="col-lg-6 col-md-6 col-sm-6 nopadding">
+                            <h:panelGroup layout="block" styleClass="input-group col-lg-6 col-md-6 col-sm-6">
+                                <h:inputText styleClass="prodsearchIt form-control" id="filterByNameOrDesc"
+                                             value="#{browseProductsController.filterByNameOrDesc}"/>
+                                <h:panelGroup styleClass="input-group-btn">
+                                    <h:commandButton type="submit" styleClass="prodsearchbtn btn btn-success"
+                                                     value="Go" action="#{browseProductsController.filter()}"/>
+                                </h:panelGroup>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                        <h:panelGroup id="categoryFilter2" layout="block" styleClass="col-lg-6 col-md-6 col-sm-6 nopadding">
+                            <h:panelGroup id="categoryDropdown" styleClass="btn-group">
+                                <button type="button" class="dd btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    #{browseProductsController.categoryName} <span class="caret"></span>
+                                </button>
+                                <ul class="dd dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                    <ui:repeat value="#{jsfutil:mapToList(browseProductsController.productCategories)}" var="category">
+                                        <li>
+                                            <a tabindex="-1" href="BrowseProducts.xhtml?category=#{category.key}">#{category.value}</a>
+                                        </li>
+                                    </ui:repeat>
+                                </ul>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="row" rendered="#{fn:length(browseProductsController.items) > 0}">
+                        <h:panelGroup layout="block" styleClass="paginator col-lg-6 col-md-6">
+                            <ui:include src="/shared/pagination.xhtml">
+                                <ui:param name="controller" value="#{browseProductsController}" />
+                            </ui:include>
+                        </h:panelGroup>
+                        <h:panelGroup layout="block" styleClass="itemsPerPage col-lg-6 col-md-6">
+                            <h:outputText value="Number of items: "/>
+                            <h:commandButton type="submit"
+                                             styleClass="btn btn-success #{browseProductsController.numOfItemsFilter == 6 ? 'filterselected' : ''}"
+                                             value="6"
+                                             action="#{browseProductsController.setNumOfItemsFilter(6)}"/>&nbsp;
+                            <h:commandButton type="submit"
+                                             styleClass="btn btn-success #{browseProductsController.numOfItemsFilter == 9 ? 'filterselected' : ''}"
+                                             value="9"
+                                             action="#{browseProductsController.setNumOfItemsFilter(9)}"/>&nbsp;
+                            <h:commandButton type="submit"
+                                             styleClass="btn btn-success #{browseProductsController.numOfItemsFilter == 12 ? 'filterselected' : ''}"
+                                             value="12"
+                                             action="#{browseProductsController.setNumOfItemsFilter(12)}"/>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" style="width: 100%" styleClass="text-center text-info h5"
+                                  rendered="#{fn:length(browseProductsController.items) == 0}">
+                        <h:outputText escape="false" value="#{bundle.BrowseProductInformationEmpty}"/>
+                    </h:panelGroup>
+                    <h:panelGroup rendered="#{fn:length(browseProductsController.items) > 0}">
+                        <p:dataGrid var="item" value="#{browseProductsController.items}" columns="3" layout="grid"
+                                    rows="" paginator="false" id="prods">
+                            <p:panel styleClass="prodPanel">
+                                <h:panelGroup styleClass="prodImgPanel">
+                                    <h:link outcome="ProductDetails">
+                                        <f:param name="id" value="#{item.productId}"/>
+                                        <!-- products/1797.jpg img/products/${item.productId}.png -->
+                                        <!-- browseProductsController.checkImage(item.productId) -->
+                                        <h:graphicImage styleClass="prodImgSize" align="middle" alt="image not available"
+                                                        library="default" name="img/products/${item.productId}.png"/>
+                                    </h:link>
+                                </h:panelGroup>
+                                <div class="priceDiv">
+                                    <h:outputText class="prodname prodorgprice" value="#{item.listPrice}"><f:convertNumber
+                                            locale="en-US" type="currency"/></h:outputText>
+                                    <br/>
+                                    <h:outputText
+                                            class="prodname prodsaleprice" value="#{item.minPrice}"><f:convertNumber
+                                            locale="en-US" type="currency"/></h:outputText>
+                                </div>
+                            </p:panel>
+                            <h:panelGrid columns="2" cellpadding="10" styleClass="prodNameDiv"
+                                         columnClasses="prodNameDivleft, prodNameDivright" width="100%">
+                                <h:panelGroup> <h:link styleClass="prodLink" outcome="ProductDetails" value="">
+                                    <f:param name="id" value="#{item.productId}"/>
+                                    <h:outputText class="prodname" value="#{item.productId} #{item.productName}"/>
+                                </h:link></h:panelGroup>
+                                <h:panelGroup><h:commandButton type="submit" styleClass="btn btn-success"
+                                                               action="#{browseProductsController.addToBasket(item)}"
+                                                               value="#{bundle.BrowseProductInformationAddToCartLink}"/></h:panelGroup>
+                            </h:panelGrid>
+                        </p:dataGrid>
+                        <h:panelGroup layout="block" styleClass="row">
+                            <h:panelGroup layout="block" styleClass="paginator">
+                                <ui:include src="/shared/pagination.xhtml">
+                                    <ui:param name="controller" value="#{browseProductsController}" />
+                                </ui:include>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:form>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+
+</html>

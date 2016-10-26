@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/main.xhtml">
+    <ui:define name="title">
+        Shopping Cart
+    </ui:define>
+    <ui:define name="content">
+        <h:panelGroup id="cartPanel" layout="block">
+            <h:panelGroup layout="block" styleClass="text-center">
+                <h:messages warnClass="text-warning" errorClass="text-danger" infoClass="text-info" layout="table"/>
+            </h:panelGroup>
+            <h:panelGroup layout="block" styleClass="centermessage"
+                          rendered="#{empty basket.products and empty facesContext.messageList}">
+                <h:link style="font-size: 18px;font-weight: bold;" value="Cart is empty... Go shopping"
+                        outcome="BrowseProducts"/>
+            </h:panelGroup>
+            <h:panelGroup layout="block" style="width: 100%" styleClass="text-center text-info h5"
+                          rendered="#{not empty basket.products}">
+                <h:form id="shoppingCartForm">
+                    <h:panelGroup layout="block" styleClass="row">
+                        <div class="form-group col-lg-12 col-md-12 carttaboutdiv nopadding">
+                            <h:dataTable value="#{basket.products}" var="item"
+                                         columnClasses="pimgcol,pnamecol,ppricecol,pqtycol,ppricecol,pactioncol"
+                                         rendered="#{not empty basket.products}"
+                                         styleClass="carttable">
+                                <h:column id="colimg">
+                                    <h:link outcome="ProductDetails" value="">
+                                        <f:param name="id" value="#{item.product.productId}"/>
+                                        <h:graphicImage styleClass="cartImgSize" align="middle"
+                                                        alt="image not available"
+                                                        library="default"
+                                                        name="img/products/${item.product.productId}.png"/>
+                                    </h:link>
+                                </h:column>
+                                <h:column headerClass="pnameheader" id="colProductName">
+                                    <f:facet name="header">Product Name</f:facet>
+                                    <h:outputText
+                                            value="#{item.product.productId}#{' | '}#{item.product.productName}"
+                                            escape="true"/>
+                                </h:column>
+                                <h:column id="colPrice">
+                                    <f:facet name="header">Unit Price</f:facet>
+                                    <h:outputText value="#{item.product.listPrice}">
+                                        <f:convertNumber locale="en-US" type="currency"/>
+                                    </h:outputText>
+                                </h:column>
+                                <h:column id="colQuantity">
+                                    <f:facet name="header">Qty</f:facet>
+                                    <h:inputText style="width: 60px" value="#{item.quantity}"
+                                                 styleClass="form-control"/>
+                                </h:column>
+                                <h:column id="colsubPrice">
+                                    <f:facet name="header">Subtotal</f:facet>
+                                    <h:outputText value="#{item.quantity * item.product.listPrice}">
+                                        <f:convertNumber locale="en-US" type="currency"/>
+                                    </h:outputText>
+                                </h:column>
+                                <h:column id="colAction">
+                                    <f:facet name="header"></f:facet>
+                                    <h:commandLink action="#{basket.removeItem(item)}">
+                                        <h:graphicImage alt="no image available" library="default"
+                                                        name="img/icons/delete.png" width="15" height="20"/>
+                                    </h:commandLink>
+                                </h:column>
+                            </h:dataTable>
+                        </div>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="row">
+                        <h:panelGroup id="buttons" layout="block" styleClass="carttabbottom">
+                            <h:panelGroup layout="block" styleClass="left col-lg-9 col-md-7 col-sm-5">
+                                <h:link id="continueShoppingBtn" outcome="BrowseProducts" value="Continue Shopping"
+                                        styleClass="btn btn-flat"/>
+                            </h:panelGroup>
+                            <h:panelGroup layout="block" styleClass="right col-lg-3 col-md-5 col-sm-7">
+                                <h:commandButton id="clearCartBtn" action="#{basket.clearBasket()}" value="Clear Cart"
+                                                 styleClass="btn btn-flat"/>
+                                <h:commandButton id="updateCartBtn" action="#{basket.updateTotal()}" value="Update Cart"
+                                                 styleClass="btn btn-flat"/>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="row">
+                        <h:panelGroup layout="block" styleClass="carttabbottomco">
+                            <h:commandButton action="#{basket.prepareCheckout}" value="Proceed To Payment"
+                                             styleClass="btn btn-success" rendered="#{empty request.remoteUser}"/>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:form>
+            </h:panelGroup>
+        </h:panelGroup>
+        <h:panelGroup rendered="#{not empty basket.products and not empty request.remoteUser}">
+            <ui:include src="/user/CheckoutPanel.xhtml"/>
+        </h:panelGroup>
+    </ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition>
+        <h:commandButton type="submit"
+                         action="#{controller.previous}"
+                         value="#{bundle.Previous} #{controller.pagination.pageSize}"
+                         styleClass="pagCounterIncr btn btn-flat}"
+                         rendered="#{controller.pagination.hasPreviousPage}">&nbsp;</h:commandButton>
+        <h:outputText styleClass="pagCounter"
+                      value="#{controller.pagination.pageFirstItem + 1} ... #{controller.pagination.pageLastItem + 1} of #{controller.pagination.itemsCount}"/>&nbsp;
+        <h:commandButton type="submit"
+                         action="#{controller.next}"
+                         value="#{bundle.Next} #{controller.pagination.pageSize}"
+                         styleClass="pagCounterIncr btn btn-flat}"
+                         rendered="#{controller.pagination.hasNextPage}"/>
+    </ui:composition>
+
+</html>

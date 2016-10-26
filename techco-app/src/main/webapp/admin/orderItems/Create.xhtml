@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateOrderItemsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateOrderItemsLabel_orderItemsPK_lineItemId}" for="orderItemsPK_lineItemId" />
+                    <h:inputText id="orderItemsPK_lineItemId" value="#{orderItemsController.current.orderItemsPK.lineItemId}" title="#{bundle.CreateOrderItemsTitle_orderItemsPK_lineItemId}" required="true" requiredMessage="#{bundle.CreateOrderItemsRequiredMessage_orderItemsPK_lineItemId}"/>
+                    <h:outputLabel value="#{bundle.CreateOrderItemsLabel_unitPrice}" for="unitPrice" />
+                    <h:inputText id="unitPrice" value="#{orderItemsController.current.unitPrice}" title="#{bundle.CreateOrderItemsTitle_unitPrice}" />
+                    <h:outputLabel value="#{bundle.CreateOrderItemsLabel_quantity}" for="quantity" />
+                    <h:inputText id="quantity" value="#{orderItemsController.current.quantity}" title="#{bundle.CreateOrderItemsTitle_quantity}" />
+                    <h:outputLabel value="#{bundle.CreateOrderItemsLabel_orders}" for="orders" />
+                    <h:selectOneMenu id="orders" value="#{orderItemsController.current.order}" title="#{bundle.CreateOrderItemsTitle_orders}" required="true" requiredMessage="#{bundle.CreateOrderItemsRequiredMessage_orders}">
+                        <f:selectItems value="#{ordersController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateOrderItemsLabel_productId}" for="productId" />
+                    <h:selectOneMenu id="productId" value="#{orderItemsController.current.productId}" title="#{bundle.CreateOrderItemsTitle_productId}" required="true" requiredMessage="#{bundle.CreateOrderItemsRequiredMessage_productId}">
+                        <f:selectItems value="#{productInformationController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{orderItemsController.create}" value="#{bundle.CreateOrderItemsSaveLink}" />
+                |
+                <h:commandLink action="#{orderItemsController.prepareList}" value="#{bundle.CreateOrderItemsShowAllLink}" immediate="true"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

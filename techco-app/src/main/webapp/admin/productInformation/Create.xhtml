@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateProductInformationTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_productId}" for="productId" />
+                    <h:inputText id="productId" value="#{productInformationController.current.productId}" title="#{bundle.CreateProductInformationTitle_productId}" required="true" requiredMessage="#{bundle.CreateProductInformationRequiredMessage_productId}"/>
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_productName}" for="productName" />
+                    <h:inputText id="productName" value="#{productInformationController.current.productName}" title="#{bundle.CreateProductInformationTitle_productName}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_productDescription}" for="productDescription" />
+                    <h:inputText id="productDescription" value="#{productInformationController.current.productDescription}" title="#{bundle.CreateProductInformationTitle_productDescription}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_categoryId}" for="categoryId" />
+                    <h:inputText id="categoryId" value="#{productInformationController.current.categoryId}" title="#{bundle.CreateProductInformationTitle_categoryId}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_weightClass}" for="weightClass" />
+                    <h:inputText id="weightClass" value="#{productInformationController.current.weightClass}" title="#{bundle.CreateProductInformationTitle_weightClass}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_productStatus}" for="productStatus" />
+                    <h:inputText id="productStatus" value="#{productInformationController.current.productStatus}" title="#{bundle.CreateProductInformationTitle_productStatus}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_listPrice}" for="listPrice" />
+                    <h:inputText id="listPrice" value="#{productInformationController.current.listPrice}" title="#{bundle.CreateProductInformationTitle_listPrice}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_minPrice}" for="minPrice" />
+                    <h:inputText id="minPrice" value="#{productInformationController.current.minPrice}" title="#{bundle.CreateProductInformationTitle_minPrice}" />
+                    <h:outputLabel value="#{bundle.CreateProductInformationLabel_catalogUrl}" for="catalogUrl" />
+                    <h:inputText id="catalogUrl" value="#{productInformationController.current.catalogUrl}" title="#{bundle.CreateProductInformationTitle_catalogUrl}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{productInformationController.create}" value="#{bundle.CreateProductInformationSaveLink}" />
+                |
+                <h:commandLink action="#{productInformationController.prepareList}" value="#{bundle.CreateProductInformationShowAllLink}" immediate="true"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

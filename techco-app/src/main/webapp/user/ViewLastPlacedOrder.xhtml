@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/main.xhtml">
+        <ui:define name="title">
+            Order Confirmation
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="orderConfirmationPanel" layout="block">
+                <h:panelGroup id="orderConfirmation" layout="block" styleClass="row">
+                    <h4>The following order has been placed</h4>
+                    <h:panelGroup id="orderImage" layout="block" styleClass="col-lg-3 col-md-3 col-sm-4">
+                        <h:graphicImage alt="image not available" align="middle" library="default" name="img/products/${myOrdersController.current.orderItemsCollection[0].productId.productId}.png"/>
+                    </h:panelGroup>
+                    <h:panelGroup id="orderDetails" layout="block" styleClass="col-lg-9 col-md-9 col-sm-8">
+                        <h:panelGrid columns="2">
+                            <h:outputText value="#{bundle.ViewOrdersLabel_orderId}"/>
+                            <h:outputText value="#{myOrdersController.current.orderId}" title="#{bundle.ViewOrdersTitle_orderId}" class="value"/>
+                            <h:outputText value="#{bundle.ViewOrdersLabel_orderDate}"/>
+                            <h:outputText value="#{myOrdersController.current.orderDate}" title="#{bundle.ViewOrdersTitle_orderDate}" class="value"/>
+                            <h:outputText value="#{bundle.ViewOrdersLabel_orderMode}"/>
+                            <h:outputText value="#{myOrdersController.current.orderMode}" title="#{bundle.ViewOrdersTitle_orderMode}" class="value"/>
+                            <h:outputText value="#{bundle.ViewOrdersLabel_orderStatus}"/>
+                            <h:outputText value="#{myOrdersController.current.orderStatus}" title="#{bundle.ViewOrdersTitle_orderStatus}" class="value"/>
+                            <h:outputText value="#{bundle.ViewOrdersLabel_orderTotal}"/>
+                            <h:outputText value="#{myOrdersController.current.orderTotal}" title="#{bundle.ViewOrdersTitle_orderTotal}" class="value">
+                                <f:convertNumber locale="en-US" type="currency"/>
+                            </h:outputText>
+                        </h:panelGrid>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+
+</html>

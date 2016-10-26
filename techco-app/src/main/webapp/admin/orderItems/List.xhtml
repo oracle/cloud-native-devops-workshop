@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListOrderItemsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:panelGroup layout="block" styleClass="row" rendered="#{fn:length(orderItemsController.items) == 0}">
+                    <h:outputText escape="false" value="#{bundle.ListOrderItemsEmpty}"/>
+                </h:panelGroup>
+                <h:panelGroup rendered="#{fn:length(orderItemsController.items) > 0}">
+                    <ui:include src="/shared/pagination.xhtml">
+                        <ui:param name="controller" value="#{orderItemsController}" />
+                    </ui:include>
+                    <h:dataTable value="#{orderItemsController.items}" var="item" styleClass="carttable">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListOrderItemsTitle_orderItemsPK_lineItemId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderItemsPK.lineItemId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListOrderItemsTitle_unitPrice}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.unitPrice}">
+                                <f:convertNumber locale="en-US" type="currency"/>
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListOrderItemsTitle_quantity}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.quantity}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListOrderItemsTitle_orders}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.order}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListOrderItemsTitle_productId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.productId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{orderItemsController.prepareView(item)}" value="#{bundle.ListOrderItemsViewLink}"/>
+                            <h:outputText value="&nbsp;&nbsp;"/>
+                            <h:commandLink action="#{orderItemsController.prepareEdit(item)}" value="#{bundle.ListOrderItemsEditLink}"/>
+                            <h:outputText value="&nbsp;&nbsp;"/>
+                            <h:commandLink action="#{orderItemsController.destroy(item)}" value="#{bundle.ListOrderItemsDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <h:commandLink action="#{orderItemsController.prepareCreate}" value="#{bundle.ListOrderItemsCreateLink}"/>
+                <br />
+                <h:link outcome="/admin/index" value="#{bundle.ListOrderItemsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

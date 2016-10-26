@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+        <ui:composition template="/templates/admin.xhtml">
+            <ui:define name="content">
+                <div class="row">
+                    <h4>
+                        <a href="http://cloud.oracle.com">
+                            <h:graphicImage alt="no image available" library="default" name="img/oracle-cloud-logo.png" style="float: right; width: 35%;"/>
+                        </a>
+                        Welcome to the <a href="http://cloud.oracle.com">Oracle Public Cloud</a>
+                        Demo! This demo is a simple web-based application with a 
+                        database in the back-end, as well serving you with REST services for Mobile applications, 
+                        and integration with other Cloud services. For more information, check your Hands-on Guide.
+                    </h4>
+                    <h:panelGroup>
+                        <p>
+                            <h:link outcome="customers/List" value="Show All Customers"/>
+                            <br />
+                            <h:link outcome="orderItems/List" value="Show All Order Items"/>
+                            <br />
+                            <h:link outcome="orders/List" value="Show All Orders"/>
+                            <br />
+                            <h:link outcome="productInformation/List" value="Show All Product Information"/>
+                        </p>
+                    </h:panelGroup>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+
+</html>

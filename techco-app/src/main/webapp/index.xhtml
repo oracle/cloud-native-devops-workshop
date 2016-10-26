@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/home.xhtml">
+        <ui:define name="content">
+            <!--section id="intro"-->
+            <div class="slidersec">
+                <div class="jumbotron masthead">
+                    <div class="sequence-theme">
+                        <div id="sequence">
+                            <!-- slider navigation -->
+                            <div class="sequence-nav">
+                                <div class="sequence-prev">
+                                    <span/>
+                                </div>
+                                <div class="sequence-next">
+                                    <span/>
+                                </div>
+                            </div>
+                            <!-- end slider navigation -->
+                            <ul class="sequence-canvas">
+                                <!-- Layer 1 -->
+                                <li class="animate-in">
+                                    <div class="info col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                                        <h:link styleClass="prodLink" outcome="shop/ProductDetails">
+                                            <f:param name="id" value="1797"/>
+                                            <h:graphicImage alt="no image available" library="default" name="img/slides/sequence/home_product_1.png"/>
+                                        </h:link>
+                                    </div>
+                                </li>
+                                <!-- Layer 2 -->
+                                <li>
+                                    <div class="info col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                                        <h:link styleClass="prodLink" outcome="shop/ProductDetails">
+                                            <f:param name="id" value="2453"/>
+                                            <h:graphicImage alt="no image available" library="default" name="img/slides/sequence/home_product_2.png"/>
+                                        </h:link>
+                                    </div>
+                                </li>
+                                <!-- Layer 3 -->
+                                <li>
+                                    <div class="info col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                                        <h:link styleClass="prodLink" outcome="shop/ProductDetails">
+                                            <f:param name="id" value="2253"/>
+                                            <h:graphicImage alt="no image available" library="default" name="img/slides/sequence/home_product_3.png"/>
+                                        </h:link>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/section-->
+        </ui:define>
+    </ui:composition>
+
+</html>

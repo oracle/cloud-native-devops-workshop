@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <ui:composition template="/templates/main.xhtml">
+        <ui:define name="title">
+            My Orders
+        </ui:define>
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{basket.loadCustomerInfo}"/>
+        </f:metadata>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block" class="row">
+                <h:messages infoClass="text-info" warnClass="text-warning" errorClass="text-danger" layout="table"/>
+            </h:panelGroup>
+            <h:panelGroup layout="block" style="width: 100%" styleClass="centermessage"
+                          rendered="#{fn:length(myOrdersController.items) == 0}">
+                <h:link value="You haven't placed any order yet... Go shopping" outcome="/shop/BrowseProducts"/>
+            </h:panelGroup>
+            <h:panelGroup id="myOrdersPanel" layout="block" class="row">
+                <h:form id="myOrdersForm">
+                    <h:panelGroup layout="block" rendered="#{fn:length(myOrdersController.items) > 0}">
+                        <h:panelGroup layout="block" styleClass="row">
+                            <h:panelGroup layout="block" styleClass="paginator col-lg-6 col-md-6">
+                                <ui:include src="/shared/pagination.xhtml">
+                                    <ui:param name="controller" value="#{myOrdersController}" />
+                                </ui:include>
+                            </h:panelGroup>
+                            <h:panelGroup layout="block" styleClass="itemsPerPage col-lg-6 col-md-6">
+                                <h:outputText value="Number of items: "/>
+                                <h:commandButton type="submit"
+                                                 styleClass="btn btn-success #{myOrdersController.numOfItemsFilter == 5 ? 'filterselected' : ''}"
+                                                 value="5"
+                                                 action="#{myOrdersController.setNumOfItemsFilter(5)}"/>&nbsp;
+                                <h:commandButton type="submit"
+                                                 styleClass="btn btn-success #{myOrdersController.numOfItemsFilter == 10 ? 'filterselected' : ''}"
+                                                 value="10"
+                                                 action="#{myOrdersController.setNumOfItemsFilter(10)}"/>&nbsp;
+                                <h:commandButton type="submit"
+                                                 styleClass="btn btn-success #{myOrdersController.numOfItemsFilter == 15 ? 'filterselected' : ''}"
+                                                 value="15"
+                                                 action="#{myOrdersController.setNumOfItemsFilter(15)}"/>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                        <h:panelGroup styleClass="row text-center">
+                            <h:dataTable value="#{myOrdersController.items}" var="item"
+                                         columnClasses="pimgcol,ppricecol,ppricecol,ppricecol,ppricecol,ppricecol,pactioncol"
+                                         styleClass="carttable">
+                                <h:column id="colimg">
+                                    <h:graphicImage styleClass="orderImgSize"
+                                                    alt="image not available" align="middle"
+                                                    library="default"
+                                                    name="img/products/${item.orderItemsCollection[0].productId.productId}.png"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        <h:outputText
+                                                value="#{bundle.ListOrdersTitle_orderId}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.orderId}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        <h:outputText
+                                                value="#{bundle.ListOrdersTitle_orderDate}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.orderDate}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        <h:outputText
+                                                value="#{bundle.ListOrdersTitle_orderMode}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.orderMode}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        <h:outputText
+                                                value="#{bundle.ListOrdersTitle_orderStatus}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.orderStatus}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        <h:outputText
+                                                value="#{bundle.ListOrdersTitle_orderTotal}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.orderTotal}">
+                                        <f:convertNumber locale="en-US" type="currency"/>
+                                    </h:outputText>
+                                </h:column>
+                                <h:column>
+                                    <h:commandLink action="#{myOrdersController.destroy(item)}">
+                                        <h:graphicImage alt="no image available" library="default"
+                                                        name="img/icons/delete.png" width="15" height="20"/>
+                                    </h:commandLink>
+                                </h:column>
+                            </h:dataTable>
+                        </h:panelGroup>
+                        <h:panelGroup layout="block" styleClass="row">
+                            <h:panelGroup layout="block" styleClass="paginator">
+                                <ui:include src="/shared/pagination.xhtml">
+                                    <ui:param name="controller" value="#{myOrdersController}" />
+                                </ui:include>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:form>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+
+</html>

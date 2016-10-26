@@ -1,0 +1,58 @@
+username = '@wls.admin.user@'
+password = '@wls.admin.password@'
+datasource_user='oe'
+datasource_password=encrypt('@database.dba.pass@')
+
+adminserver = '@jcs.instance@'
+cluster_name = adminserver + '_cluster'
+
+adminserver = adminserver[0:8] + '_adminserver'
+
+URL='t3://@jcs.instance@-wls-1.compute-@identity.domain@.oraclecloud.internal:7001'
+
+JDBCURL='jdbc:oracle:thin:@@database.instance.1@:1521/PDB1.@identity.domain@.oraclecloud.internal'
+ 
+connect(username,password,URL)
+edit()
+
+startEdit()
+
+cd('/')
+cmo.createJDBCSystemResource('OE')
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE')
+cmo.setName('OE')
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE/JDBCDataSourceParams/OE')
+set('JNDINames',jarray.array([String('jdbc/OE')], String))
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE/JDBCDriverParams/OE')
+cmo.setUrl(JDBCURL)
+cmo.setDriverName('oracle.jdbc.xa.client.OracleXADataSource')
+cmo.setPasswordEncrypted(datasource_password)
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE/JDBCConnectionPoolParams/OE')
+cmo.setTestTableName('SQL SELECT 1 FROM DUAL\r\n\r\n')
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE/JDBCDriverParams/OE/Properties/OE')
+cmo.createProperty('user')
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE/JDBCDriverParams/OE/Properties/OE/Properties/user')
+cmo.setValue(datasource_user)
+
+cd('/JDBCSystemResources/OE/JDBCResource/OE/JDBCDataSourceParams/OE')
+cmo.setGlobalTransactionsProtocol('TwoPhaseCommit')
+
+cd('/JDBCSystemResources/OE')
+set('Targets',jarray.array([ObjectName('com.bea:Name=' + adminserver + ',Type=Server'), ObjectName('com.bea:Name=' + cluster_name + ',Type=Cluster')], ObjectName))
+
+
+activate()
+
+deploy('TechCo-ECommerce-1.0-SNAPSHOT','/tmp/TechCo-ECommerce-1.0-SNAPSHOT.war',targets=cluster_name)
+startApplication('TechCo-ECommerce-1.0-SNAPSHOT')
+
+dumpStack()
+exit()
+
+

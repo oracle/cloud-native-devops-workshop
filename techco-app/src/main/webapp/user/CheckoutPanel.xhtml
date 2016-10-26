@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition>
+        <h:panelGroup id="checkoutPanel" layout="block">
+            <h:form id="checkoutForm">
+                <h:panelGroup layout="block" styleClass="row">
+                    <h:panelGroup id="billingInfo" layout="block" styleClass="col-lg-5 col-md-5 nopadding">
+                        <h:panelGroup layout="block" styleClass="border">
+                            <h:panelGroup layout="block" styleClass="form-group">
+                                <h:outputLabel value="#{bundle.CheckoutLabel_custFirstName}" for="custFirstName"/>
+                                <h:inputText id="custFirstName" value="#{customersController.current.custFirstName}" title="#{bundle.CheckoutTitle_custFirstName}" required="true" requiredMessage="#{bundle.CheckoutRequiredMessage_custFirstName}" styleClass="form-control span4"/>
+                            </h:panelGroup>
+                            <h:panelGroup layout="block" styleClass="form-group">
+                                <h:outputLabel value="#{bundle.CheckoutLabel_custLastName}" for="custLastName"/>
+                                <h:inputText id="custLastName" value="#{customersController.current.custLastName}" title="#{bundle.CheckoutTitle_custLastName}" required="true" requiredMessage="#{bundle.CheckoutRequiredMessage_custLastName}" styleClass="form-control span4"/>
+                            </h:panelGroup>
+                            <h:panelGroup layout="block" styleClass="form-group">
+                                <h:outputLabel value="#{bundle.CheckoutLabel_streetAddress}" for="streetAddress"/>
+                                <h:inputText id="streetAddress" value="#{customersController.current.custAddress.streetAddress}" title="#{bundle.CheckoutTitle_streetAddress}" required="true" requiredMessage="#{bundle.CheckoutRequiredMessage_streetAddress}" styleClass="form-control span4"/>
+                            </h:panelGroup>
+                            <h:panelGroup layout="block" styleClass="form-group">
+                                <h:outputLabel value="#{bundle.CheckoutLabel_city}" for="city"/>
+                                <h:inputText id="city" value="#{customersController.current.custAddress.city}" title="#{bundle.CheckoutTitle_city}" required="true" requiredMessage="#{bundle.CheckoutRequiredMessage_city}" styleClass="form-control span4"/>
+                            </h:panelGroup>
+                            <h:panelGroup layout="block" styleClass="form-inline">
+                                <h:panelGroup id="stateFieldset" layout="block" styleClass="form-group col-lg-6 col-md-6 nopadding">
+                                    <h:outputLabel value="#{bundle.CheckoutLabel_state}" for="state" styleClass="col-lg-12 col-md-12 nopadding"/>
+                                    <h:inputText id="state" value="#{customersController.current.custAddress.stateProvince}" title="#{bundle.CheckoutTitle_state}" required="true" requiredMessage="#{bundle.CheckoutRequiredMessage_state}" styleClass="form-control col-lg-6 col-md-6"/>
+                                </h:panelGroup>
+                                <h:panelGroup id="zipFieldset" layout="block" styleClass="form-group col-lg-6 col-md-6 nopadding">
+                                    <h:outputLabel value="#{bundle.CheckoutLabel_zipCode}" for="zipCode" styleClass="col-lg-12 col-md-12 nopadding"/>
+                                    <h:inputText id="zipCode" value="#{customersController.current.custAddress.postalCode}" title="#{bundle.CheckoutTitle_zipCode}" required="true" requiredMessage="#{bundle.CheckoutRequiredMessage_zipCode}" styleClass="form-control col-lg-6 col-md-6"/>
+                                </h:panelGroup>
+                            </h:panelGroup>
+                            <h:panelGroup id="emailFieldset" layout="block" styleClass="form-group">
+                                <h:outputLabel value="#{bundle.EditCustomersLabel_custEmail}" for="custEmail"/>
+                                <h:inputText id="custEmail" value="#{customersController.current.custEmail}" title="#{bundle.EditCustomersTitle_custEmail}" styleClass="form-control span4"/>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                    <h:panelGroup id="shippingInfo" layout="block" styleClass="col-lg-4 col-md-4">
+                        <h:panelGroup layout="block" styleClass="border">
+                            <h:panelGroup id="ship" layout="block">
+                                <h4>Shipping Information</h4>
+                                <h:selectBooleanCheckbox id="cb" value="true"/><h:outputLabel value=" Ship to billing address" for="cb"/>
+                            </h:panelGroup>
+                            <h:panelGroup id="pay" layout="block">
+                                <h4>Payment Method</h4>
+                                <h:selectOneRadio layout="pageDirection" value="cc">
+                                    <f:selectItem itemLabel="Credit Card" itemValue="cc"/>
+                                    <f:selectItem itemLabel="PayPal" itemValue="pp"/>
+                                </h:selectOneRadio>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                    <h:panelGroup id="checkoutInfo" layout="block" styleClass="col-lg-3 col-md-3 nopadding">
+                        <h:panelGroup layout="block" styleClass="border row">
+                            <h:panelGrid columns="2">
+                                <h4>Total</h4>
+                                <h:outputText value="&nbsp;"/>
+                                <h:outputText value="Subtotal"/>
+                                <h:outputText value="#{basket.total}">
+                                    <f:convertNumber locale="en-US" type="currency"/>
+                                </h:outputText>
+                                <h:outputText value="Tax"/>
+                                <h:outputText value="#{basket.total * 0.123}">
+                                    <!-- TODO: tax is added for visual effect, currently not factored into order total -->
+                                    <f:convertNumber locale="en-US" type="currency"/>
+                                </h:outputText>
+                                <h:outputText value="Grand Total" styleClass="lg"/>
+                                <h:outputText value="#{basket.total + (basket.total * 0.123)}" styleClass="lg">
+                                    <f:convertNumber locale="en-US" type="currency"/>
+                                </h:outputText>
+                            </h:panelGrid>
+                        </h:panelGroup>
+                        <h:panelGroup layout="block" styleClass="row">
+                            <h:commandButton type="submit" styleClass="btn btn-success" value="Checkout" action="#{basket.checkout()}"/>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:form>
+        </h:panelGroup>
+    </ui:composition>
+
+</html>

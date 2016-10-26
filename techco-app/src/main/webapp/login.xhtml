@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="/templates/main.xhtml">
+        <ui:param name="page" value="login"/>
+        <ui:define name="content">
+            <div class="loginmaincontent">
+                <form method="post" action="j_security_check">
+                    <div class="row">
+                        <h4 class="text-center">Please Log In</h4>
+                    </div>
+                    <div class="row">
+                        <div class="input-group col-lg-12">
+                            <label for="j_username">Username</label>
+                            <input type="text" id="j_username" name="j_username" class="form-control loginit"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group col-lg-12">
+                            <label for="j_password">Password</label>
+                            <input type="password" id="j_password" name="j_password" class="form-control loginit"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success">Sign in</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="registerNewUser" class="text-center">
+                            <h:link outcome="/login" value="Register as a new user"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</html>

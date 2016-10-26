@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/main.xhtml">
+        <f:metadata>
+            <f:viewParam name="id" value="#{browseProductsController.currentProductId}"/>
+            <f:event type="preRenderView" listener="#{browseProductsController.loadCurrentProductInformation}"/>
+        </f:metadata>
+        <ui:define name="title">
+            Product Details
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block" class="row">
+                <h:panelGroup id="messageTextPanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+            </h:panelGroup>
+            <h:panelGroup id="productDetailsPanel" layout="block" class="row">
+                <h:panelGroup id="productImage" layout="block" styleClass="col-lg-4 col-md-4 ">
+                   <!-- browseProductsController.checkImage(browseProductsController.current.productId)-->
+                    <h:graphicImage alt="no image available" align="middle" library="default" name="img/products/${browseProductsController.current.productId}.png"/>
+                </h:panelGroup>
+                <h:panelGroup id="productDetails" layout="block" styleClass="col-lg-8 col-md-8 ">
+                    <h:form id="detailsForm">
+                        <ui:fragment>
+                            <script type="text/javascript">
+                                function incrementQty() {
+                                    var qty = $("#detailsForm\\:qty");
+                                    var val = Number(qty.attr("value"));
+                                    if (!isNaN(val)) {
+                                        qty.attr("value",val+1);
+                                    }
+                                    return false;
+                                }
+                                function decrementQty() {
+                                    var qty = $("#detailsForm\\:qty");
+                                    var val = Number(qty.attr("value"));
+                                    if (val > 1) {
+                                        qty.attr("value",val-1);
+                                    }
+                                    return false;
+                                }
+                            </script>
+                        </ui:fragment>
+                        <h:panelGroup layout="block">
+                            <h:outputText value="Product #"/>
+                            <h:outputText value="#{browseProductsController.current.productId}" title="#{bundle.ViewProductInformationTitle_productId}"/>
+                            <h:panelGroup id="productName" layout="block">
+                                <h:outputText value="#{browseProductsController.current.productName}" title="#{bundle.ViewProductInformationTitle_productName}"/>
+                            </h:panelGroup>
+                            <h:panelGroup id="price">
+                                <h:outputText id="minPrice" value="#{browseProductsController.current.minPrice}" title="#{bundle.ViewProductInformationTitle_minPrice}">
+                                    <f:convertNumber locale="en-US" type="currency"/>
+                                </h:outputText>
+                                <h:outputText id="listPrice" value="#{browseProductsController.current.listPrice}" title="#{bundle.ViewProductInformationTitle_listPrice}">
+                                    <f:convertNumber locale="en-US" type="currency"/>
+                                </h:outputText>
+                            </h:panelGroup>
+                            <h:panelGroup id="availability" layout="block">
+                                <h:outputText value="Availability: "/>
+                                <h:outputText id="isAvailable" value="In Stock"/>
+                            </h:panelGroup>
+                            <h:panelGroup id="quantity" layout="block">
+                                <h:outputLabel value="Qty:" for="qty" style="display: inline;" />
+                                <h:commandButton id="minusBtn" type="submit" value="-" onclick="return decrementQty();"/>
+                                <h:inputText id="qty" default="1" value="#{browseProductsController.currentQuantity}" title="Quantity"/>
+                                <h:commandButton id="plusBtn" type="submit" value="+" onclick="return incrementQty();"/>
+                                <h:commandButton type="submit" styleClass="btn btn-success" value="Add To Cart" action="#{browseProductsController.addToBasket()}"/>
+                                <h:link style="margin-left: 10px" class="btn btn-success" outcome="/shop/BrowseProducts" value="SHOP"/>
+                            </h:panelGroup>
+                            <hr/>
+                            <h:panelGroup id="details" layout="block">
+                                <h:panelGroup id="productDescription" layout="block">
+                                    <h:outputText value="#{browseProductsController.current.productDescription}" title="#{bundle.ViewProductInformationTitle_productDescription}"/>
+                                </h:panelGroup>
+                                <h:panelGrid columns="2" cellpadding="5">
+                                    <h:outputText value="#{bundle.ViewProductInformationLabel_categoryId}"/>
+                                    <h:outputText value="#{browseProductsController.current.categoryId}" title="#{bundle.ViewProductInformationTitle_categoryId}"/>
+                                    <h:outputText value="#{bundle.ViewProductInformationLabel_weightClass}"/>
+                                    <h:outputText value="#{browseProductsController.current.weightClass}" title="#{bundle.ViewProductInformationTitle_weightClass}"/>
+                                    <h:outputText value="#{bundle.ViewProductInformationLabel_productStatus}"/>
+                                    <h:outputText value="#{browseProductsController.current.productStatus}" title="#{bundle.ViewProductInformationTitle_productStatus}"/>
+                                    <h:outputText value="#{bundle.ViewProductInformationLabel_catalogUrl}"/>
+                                    <!--
+                                    <a href="#{browseProductsController.current.catalogUrl}" onclick="window.open(this.href,'_blank');return false;">#{browseProductsController.current.catalogUrl}</a>
+                                    -->
+                                    <a href="#{browseProductsController.catalogUrlForCurrentProduct}" onclick="window.open(this.href,'_blank');return false;">${browseProductsController.current.productId} Product Brochure</a>
+                                </h:panelGrid>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:form>
+                </h:panelGroup>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+
+</html>

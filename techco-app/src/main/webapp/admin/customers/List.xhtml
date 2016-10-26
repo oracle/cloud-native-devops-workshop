@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListCustomersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:panelGroup layout="block" styleClass="row filter">
+                    <h:panelGroup layout="block" styleClass="col-lg-4 col-md-6 col-sm-6 nopadding">
+                        <h:panelGroup layout="block" styleClass="input-group">
+                            <h:inputText class="form-control" id="filterByEmail" value="#{customersController.filterByEmail}" />
+                            <h:panelGroup styleClass="input-group-btn">
+                                <h:commandButton type="submit" styleClass="btn btn-success" value="Search" action="#{customersController.filter()}"/>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block" styleClass="col-lg-1 col-md-1 col-sm-12 nopadding">
+                        <h:panelGroup styleClass="input-group">
+                            <h:commandButton type="submit" styleClass="btn btn-danger" value="Clear" action="#{customersController.clearFilter()}"/>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:panelGroup>
+                <h:panelGroup layout="block" styleClass="row" rendered="#{fn:length(customersController.items) == 0}">
+                    <h:outputText escape="false" value="#{bundle.ListCustomersEmpty}"/>
+                </h:panelGroup>
+                <h:panelGroup rendered="#{fn:length(customersController.items) > 0}">
+                    <ui:include src="/shared/pagination.xhtml">
+                        <ui:param name="controller" value="#{customersController}" />
+                    </ui:include>
+                    <h:dataTable value="#{customersController.items}" var="item" styleClass="carttable">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_customerId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.customerId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_custFirstName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.custFirstName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_custLastName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.custLastName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_creditLimit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.creditLimit}">
+                                <f:convertNumber locale="en-US" type="currency"/>
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_custEmail}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.custEmail}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_dateOfBirth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dateOfBirth}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_maritalStatus}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.maritalStatus}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_gender}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.gender}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCustomersTitle_incomeLevel}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.incomeLevel}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{customersController.prepareView(item)}" value="#{bundle.ListCustomersViewLink}"/>
+                            <h:outputText value="&nbsp;&nbsp;"/>
+                            <h:commandLink action="#{customersController.prepareEdit(item)}" value="#{bundle.ListCustomersEditLink}"/>
+                            <h:outputText value="&nbsp;&nbsp;"/>
+                            <h:commandLink action="#{customersController.destroy(item)}" value="#{bundle.ListCustomersDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <h:commandLink action="#{customersController.prepareCreate}" value="#{bundle.ListCustomersCreateLink}"/>
+                <br />
+                <h:link outcome="/admin/index" value="#{bundle.ListCustomersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

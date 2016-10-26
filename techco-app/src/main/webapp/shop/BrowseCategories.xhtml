@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:composition template="/templates/main.xhtml">
+        <ui:define name="title">
+            Browse Categories
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="browseCatPanel" layout="block">
+                <h:panelGroup styleClass="row" layout="block">
+                    <h:panelGroup styleClass="col-lg-4 col-md-4 col-sm-6" layout="block">
+                        <h:link styleClass="prodLink" outcome="BrowseProducts" value="">
+                            <f:param name="category" value="101"/>
+                            <h:graphicImage alt="no image available" library="default" name="img/category/hardware.jpg"/>
+                        </h:link>
+                    </h:panelGroup>
+                    <h:panelGroup styleClass="col-lg-4 col-md-4 col-sm-6" layout="block">
+                        <h:link styleClass="prodLink" outcome="BrowseProducts" value="">
+                            <f:param name="category" value="20"/>
+                            <h:graphicImage alt="no image available" library="default" name="img/category/software.jpg"/>
+                        </h:link>
+                    </h:panelGroup>
+                    <h:panelGroup styleClass="col-lg-4 col-md-4 col-sm-6" layout="block">
+                        <h:link styleClass="prodLink" outcome="BrowseProducts" value="">
+                            <f:param name="category" value="30"/>
+                            <h:graphicImage alt="no image available" library="default" name="img/category/office.jpg"/>
+                        </h:link>
+                    </h:panelGroup>
+                    <h:panelGroup styleClass="col-lg-4 col-md-4 col-sm-6" layout="block">
+                        <h:link styleClass="prodLink" outcome="BrowseProducts" value="">
+                            <f:param name="category" value="90"/>
+                            <h:graphicImage alt="no image available" library="default" name="img/category/catalog.jpg"/>
+                        </h:link>
+                    </h:panelGroup>
+                    <h:panelGroup styleClass="col-lg-4 col-md-4 col-sm-6" layout="block">
+                        <h:link styleClass="prodLink" outcome="BrowseProducts" value="">
+                            <f:param name="category" value="102"/>
+                            <h:graphicImage alt="no image available" library="default" name="img/category/equipment.jpg"/>
+                        </h:link>
+                    </h:panelGroup>
+                    <h:panelGroup styleClass="col-lg-4 col-md-4 col-sm-6" layout="block">
+                        <h:link styleClass="prodLink" outcome="BrowseProducts" value="">
+                            <f:param name="category" value="103"/>
+                            <h:graphicImage alt="no image available" library="default" name="img/category/others.jpg"/>
+                        </h:link>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd">
+	<jsp-descriptor>
+		<keepgenerated>true</keepgenerated>
+		<debug>true</debug>
+	</jsp-descriptor>
+	<security-role-assignment>
+		<role-name>Admins</role-name>
+		<principal-name>Administrators</principal-name>
+	</security-role-assignment>
+	<security-role-assignment>
+		<role-name>Customers</role-name>
+		<principal-name>AppTesters</principal-name>
+		<principal-name>OECustomers</principal-name>
+	</security-role-assignment>
+	<session-descriptor>
+		<persistent-store-type>replicated_if_clustered</persistent-store-type>
+	</session-descriptor>
+    <description>TechCo-ECommerce</description>
+    <context-root>TechCo-ECommerce</context-root>
+</weblogic-web-app>

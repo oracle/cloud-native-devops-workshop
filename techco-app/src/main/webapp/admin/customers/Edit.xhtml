@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditCustomersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_customerId}" for="customerId" />
+                    <h:inputText id="customerId" value="#{customersController.current.customerId}" title="#{bundle.EditCustomersTitle_customerId}" required="true" requiredMessage="#{bundle.EditCustomersRequiredMessage_customerId}"/>
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_custFirstName}" for="custFirstName" />
+                    <h:inputText id="custFirstName" value="#{customersController.current.custFirstName}" title="#{bundle.EditCustomersTitle_custFirstName}" required="true" requiredMessage="#{bundle.EditCustomersRequiredMessage_custFirstName}"/>
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_custLastName}" for="custLastName" />
+                    <h:inputText id="custLastName" value="#{customersController.current.custLastName}" title="#{bundle.EditCustomersTitle_custLastName}" required="true" requiredMessage="#{bundle.EditCustomersRequiredMessage_custLastName}"/>
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_creditLimit}" for="creditLimit" />
+                    <h:inputText id="creditLimit" value="#{customersController.current.creditLimit}" title="#{bundle.EditCustomersTitle_creditLimit}" />
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_custEmail}" for="custEmail" />
+                    <h:inputText id="custEmail" value="#{customersController.current.custEmail}" title="#{bundle.EditCustomersTitle_custEmail}" />
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_dateOfBirth}" for="dateOfBirth" />
+                    <h:inputText id="dateOfBirth" value="#{customersController.current.dateOfBirth}" title="#{bundle.EditCustomersTitle_dateOfBirth}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_maritalStatus}" for="maritalStatus" />
+                    <h:inputText id="maritalStatus" value="#{customersController.current.maritalStatus}" title="#{bundle.EditCustomersTitle_maritalStatus}" />
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_gender}" for="gender" />
+                    <h:inputText id="gender" value="#{customersController.current.gender}" title="#{bundle.EditCustomersTitle_gender}" />
+                    <h:outputLabel value="#{bundle.EditCustomersLabel_incomeLevel}" for="incomeLevel" />
+                    <h:inputText id="incomeLevel" value="#{customersController.current.incomeLevel}" title="#{bundle.EditCustomersTitle_incomeLevel}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{customersController.update}" value="#{bundle.EditCustomersSaveLink}"/>
+                |
+                <h:link outcome="View" value="#{bundle.EditCustomersViewLink}"/>
+                |
+                <h:commandLink action="#{customersController.prepareList}" value="#{bundle.EditCustomersShowAllLink}" immediate="true"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

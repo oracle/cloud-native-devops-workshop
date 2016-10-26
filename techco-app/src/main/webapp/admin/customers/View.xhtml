@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/templates/admin.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewCustomersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewCustomersLabel_customerId}"/>
+                    <h:outputText value="#{customersController.current.customerId}" title="#{bundle.ViewCustomersTitle_customerId}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_custFirstName}"/>
+                    <h:outputText value="#{customersController.current.custFirstName}" title="#{bundle.ViewCustomersTitle_custFirstName}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_custLastName}"/>
+                    <h:outputText value="#{customersController.current.custLastName}" title="#{bundle.ViewCustomersTitle_custLastName}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_creditLimit}"/>
+                    <h:outputText value="#{customersController.current.creditLimit}" title="#{bundle.ViewCustomersTitle_creditLimit}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_custEmail}"/>
+                    <h:outputText value="#{customersController.current.custEmail}" title="#{bundle.ViewCustomersTitle_custEmail}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_dateOfBirth}"/>
+                    <h:outputText value="#{customersController.current.dateOfBirth}" title="#{bundle.ViewCustomersTitle_dateOfBirth}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_maritalStatus}"/>
+                    <h:outputText value="#{customersController.current.maritalStatus}" title="#{bundle.ViewCustomersTitle_maritalStatus}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_gender}"/>
+                    <h:outputText value="#{customersController.current.gender}" title="#{bundle.ViewCustomersTitle_gender}"/>
+                    <h:outputText value="#{bundle.ViewCustomersLabel_incomeLevel}"/>
+                    <h:outputText value="#{customersController.current.incomeLevel}" title="#{bundle.ViewCustomersTitle_incomeLevel}"/>
+                </h:panelGrid>
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewCustomersEditLink}"/>
+                |
+                <h:commandLink action="#{customersController.destroy}" value="#{bundle.ViewCustomersDestroyLink}"/>
+                |
+                <h:commandLink action="#{customersController.prepareCreate}" value="#{bundle.ViewCustomersCreateLink}" />
+                |
+                <h:commandLink action="#{customersController.prepareList}" value="#{bundle.ViewCustomersShowAllLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
