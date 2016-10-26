@@ -51,8 +51,8 @@ The content contains several independent modules that cover different aspects of
 
 + [Create Database Cloud Service Instance using user interface](dbcs-create/README.md)
 + [Create Java Cloud Service Instance using user interface](jcs-create/README.md)
-+ [Prepare Database Cloud Service Instance to store sample application's data](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/prepare.dbcs.md)
-+ [Deploy Java EE sample application to Oracle Java Cloud Service using Admin console](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/deploy.to.jcs.md)
++ [Prepare Database Cloud Service Instance to store sample application's data](dbcs-prepare/README.md)
++ [Deploy Java EE sample application to Oracle Java Cloud Service using Admin console](jcs-deploy/README.md)
 
 ####Manage Oracle Java Cloud Service using UI and PaaS Service Manager####
 
