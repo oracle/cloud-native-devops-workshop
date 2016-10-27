@@ -86,3 +86,10 @@ The content contains several independent modules that cover different aspects of
 
 + [Delete Java Cloud, Database Cloud and Database Container Services using user interface](cleanup/cleanup-ui.md)
 + [Delete Application Cloud Container Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](cleanup/cleanup-psm.md)
+
+## [Contributing](CONTRIBUTING.md)
+Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## [License](LICENSE.md)
+Copyright (c) 2014, 2016 Oracle and/or its affiliates
+The Universal Permissive License (UPL), Version 1.0
