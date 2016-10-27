@@ -40,12 +40,12 @@ The content contains several independent modules that cover different aspects of
 
 ####Bind Frontend Application running on lightweight container in Oracle Appplication Container Cloud with backend resources running on Java Cloud Service####
 
-+ [Implement new function (REST client) in SpringBoot sample application using Service Bindings to access Oracle Java Cloud Services](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/change.mgmt.devcs.md)
++ [Implement new function (REST client) in SpringBoot sample application using Service Bindings to access Oracle Java Cloud Services](devops-bind/README
++ .md)
 
 ####Perform basic monitoring of application run inside Application Container Cloud thrugh diagnostic capabilities of Java Mission Control and Java Flight Recorder ####
 
 + [Monitor and tune SpringBoot application deployed on Oracle Application Container Cloud Service](monitor-tune/README.md)
-
 
 #### Deploy Java EE application to Oracle Java Cloud Service####
 
@@ -61,9 +61,8 @@ The content contains several independent modules that cover different aspects of
 + [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](jcs-scale-psm/README.md)
 
 ####Making Java Cloud Service elasticly sclable through Policy based Auto-scaling####
+
 + [Oracle Java Cloud Service Policy Based Auto Scaling](jcs-autoscale/README.md)
-
-
 
 ####Upgrade WebLogic Server 11g (10.3.6) running on premise to 12cR2 with Multitenancy and migrate to Java Cloud Service####
 
