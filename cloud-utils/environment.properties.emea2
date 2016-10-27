@@ -1,0 +1,51 @@
+opc.base.url=jcs.emea.oraclecloud.com
+# Enter your cloud credential here, after you did the modification, you need to rename this file to environment.properties
+opc.identity.domain=DOMAIN_TO_BE_EDITED
+opc.username=USERNAME_TO_BE_EDITED
+opc.password=PWD_TO_BE_EDITED
+
+# Storage information
+# Check your generic storage url - see documentation
+opc.storage.generic.url=storage.oraclecloud.com
+# The name of the container to use by Database and Java Cloud Services
+opc.storage.container=wins_container
+
+# SSH key details
+# first you need to create your SSH key pair. Use example Putty's Keygen tool - see documentation
+ssh.user=opc
+# public ssh key in the following format, copy the public key value from winsmt.pub file which is inside the MT-Workshop folder
+ssh.public.key=KEY_TO_BE_GENERATED
+
+ssh.passphrase=weblogic
+
+#the name of the private key file located in 'cloud.demos' folder
+ssh.privatekey=pk.openssh
+
+# JCS details
+jcs.base.url=jaas.oraclecloud.com
+jcs.rest.url=/paas/service/jcs/api/v1.1/instances/
+jcs.instance.version.1=12.2.1
+jcs.instance.otd.1=false
+jcs.instance.1=winsdemoWLS
+jcs.instance.desc.1=winsdemo instance through REST
+jcs.instance.partition.1=1
+jcs.instance.admin.user.1=weblogic
+jcs.instance.admin.password.1=welcome1
+
+# DBCS details
+dbcs.base.url=dbcs.emea.oraclecloud.com
+dbcs.rest.url=/paas/service/dbcs/api/v1.1/instances/
+dbcs.instance.version.1=12.1.0.2
+dbcs.instance.1=winsdemo
+dbcs.instance.sid.1=ORCL
+dbcs.instance.pdb1.1=PDB1
+dbcs.instance.pdb2.1=PDB2
+dbcs.instance.desc.1=winsdemo db instance through REST
+dbcs.instance.usable.storage.1=25
+# DEMOS will be an additional pluggable database with the service name: DEMOS.{identity-domain}.oraclecloud.internal
+# If DEMOS required DBCS storage must be larger than 25GB
+# You need to enable demo users/schemas explicitly after provisioning
+dbcs.instance.demos.1=yes
+
+dbcs.dba.name=sys
+dbcs.dba.password=Welcome_1

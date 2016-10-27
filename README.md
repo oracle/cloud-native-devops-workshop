@@ -56,7 +56,7 @@ The content contains several independent modules that cover different aspects of
 
 ####Manage Oracle Java Cloud Service using UI and PaaS Service Manager####
 
-+ [Direct access and management of Oracle Java Cloud Service](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/view.jcs.log.using.ssh.md)
++ [Direct access and management of Oracle Java Cloud Service](jcs-direct/README.md)
 + [Scale-Out Oracle Java Cloud Service using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/jcs.scale.md)
 + [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/psm.cli.md)
 
@@ -86,4 +86,3 @@ The content contains several independent modules that cover different aspects of
 
 + [Delete Java Cloud, Database Cloud and Database Container Services using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/cleanup.md)
 + [Delete Application Cloud Container Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/cleanup.psm.md)
-+ Delete storage container using REST API management interface
