@@ -23,7 +23,7 @@ This tutorial demonstrates how to:
 ### Steps ###
 
 #### Create Weblogic 10.3.6 domain and deploy the Petstore sample application ####
-Open a terminal and change to `GIT_REPO_LOCAL_CLONE//app-2-cloud` folder.
+Open a terminal and change to `GIT_REPO_LOCAL_CLONE/app-2-cloud` folder.
 
 	$ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/app-2-cloud
 	Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareDBCS.sh <db user> <db password> <ssh key file> <db server ip> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:

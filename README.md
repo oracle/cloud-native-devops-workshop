@@ -67,9 +67,8 @@ The content contains several independent modules that cover different aspects of
 
 ####Upgrade WebLogic Server 11g (10.3.6) running on premise to 12cR2 with Multitenancy and migrate to Java Cloud Service####
 
-+ [Introduction and prerequisites](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/lift.andshift.intro.and.prereq.md) 
-+ [Convert WebLogic 11g domain into the 12cR2 partition using DPCT (Domain to Partition Conversion Tool)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/HOL7606/dpct.11g.12R2.migration.md)
-+ [Move partition from WebLogic Server 12cR2 to Oracle Java Cloud Service](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/HOL7606/lift.and.shift.md)
++ [Convert WebLogic 11g domain into the 12cR2 partition using DPCT (Domain to Partition Conversion Tool)](dpct/README.md)
++ [Move partition from WebLogic Server 12cR2 to Oracle Java Cloud Service](lift-and-shift/README.md)
 
 ####Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool ####
 
@@ -79,7 +78,7 @@ The content contains several independent modules that cover different aspects of
  
 ####Customizing and personalizing the workshop content####
  
- + [Customize and personalize the workshop materials] (customize/README.md)
+ + [Customize and personalize the workshop materials](customize/README.md)
  
 ----
  

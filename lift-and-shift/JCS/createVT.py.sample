@@ -1,0 +1,22 @@
+cluster_name='@jcs.instance@_cluster'
+
+print 'Cluster name: ' + cluster_name;
+
+connect('@weblogic.admin.user@','@weblogic.admin.pass@','t3://@jcs.instance@-wls-1.compute-@identity.domain@.oraclecloud.internal:7001')
+edit()
+
+print "************************ Creating Virtual Target Microcontainer1-AdminServer-virtualTarget ****************************"
+
+startEdit()
+cd('/')
+cmo.createVirtualTarget('Microcontainer1-AdminServer-virtualTarget')
+
+cd('/VirtualTargets/Microcontainer1-AdminServer-virtualTarget')
+cmo.setUriPrefix('/')
+set('HostNames',jarray.array([String('@jcs.ip@')], String))
+set('Targets',jarray.array([ObjectName('com.bea:Name='+cluster_name+',Type=Cluster')], ObjectName))
+
+activate()
+
+disconnect()
+

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sqlplus system/@database.dba.pass@@@database.instance.1@:1521/@database.instance.pdb1.1@.@identity.domain@.oraclecloud.internal <<EOF
+ drop user petstore cascade;
+
+ create user petstore identified by petstore;
+ grant DBA to petstore;
+ exit;
+EOF
+
+sqlplus petstore/petstore@@database.instance.1@:1521/@database.instance.pdb1.1@.@identity.domain@.oraclecloud.internal <<EOF
+ @/tmp/petstore.sql
+ exit;
+EOF
