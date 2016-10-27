@@ -11,7 +11,7 @@ dbuser=${1}
 dbpassword=${2}
 #Default PDB to PDB1 if not specified
 if [ -z "$3" ]; then
-   pdb="PDB2";
+   pdb="PDB1";
 else
   pdb=${3};
 fi
@@ -123,7 +123,7 @@ echo "********** ADMIN SERVER (WEBLOGIC 10.3.6 - DOMAIN1036) HAS BEEN STARTED **
 
 cd $APP2CLOUD_DIR
 
-unzip -j ../dpct/Domain1036.jar _apps_/petstore.12.war -d $APP2CLOUD_DIR
+unzip -j ../dpct/domain-templates/Domain1036.jar _apps_/petstore.12.war -d $APP2CLOUD_DIR
 
 cp wlst/deployPetstore_template.py wlst/deployPetstore.py
 sed "s|@database.dba.pass@|${dbpassword}|g; s|@database.pdb@|${pdb}|g" -i wlst/deployPetstore.py
