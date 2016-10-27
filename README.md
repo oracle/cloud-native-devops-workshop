@@ -57,8 +57,8 @@ The content contains several independent modules that cover different aspects of
 ####Manage Oracle Java Cloud Service using UI and PaaS Service Manager####
 
 + [Direct access and management of Oracle Java Cloud Service](jcs-direct/README.md)
-+ [Scale-Out Oracle Java Cloud Service using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/jcs.scale.md)
-+ [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/psm.cli.md)
++ [Scale-Out Oracle Java Cloud Service using user interface](jcs-scale-ui/README.md)
++ [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](jcs-scale-psm/README.md)
 
 ####Making Java Cloud Service elasticly sclable through Policy based Auto-scaling####
 + [Oracle Java Cloud Service Policy Based Auto Scaling](jcs-autoscale/README.md)
