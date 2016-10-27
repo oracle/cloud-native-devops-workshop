@@ -1,0 +1,17 @@
+
+Linux root   password:	oracle
+Database all passwords:	welcome1
+Middleware   passwords:	welcome1
+
+Database Information:
+Oracle CDB SID	: orcl (system/welcome1)
+Pluggable PDB1:	pdborcl
+Pluggable PDB2:	pdb2 (systempdb2/welcome1)
+
+*** Please note 
+1) Ensure you have the latest WInS Demos code by running the "Update WInS Demos" command on the desktop!
+2) Ensure you have configured the proxy for the Oracle network if you are on the Oracle Network or VPN!
+3) This appliance is for testing purposes only, as such it is unsupported and should not be used as a production environment.
+
+
+
