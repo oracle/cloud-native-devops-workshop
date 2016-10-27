@@ -1,7 +1,7 @@
-![](common/images/customer.logo.png)
+![](../common/images/customer.logo.png)
 ---
 # ORACLE Cloud-Native DevOps workshop #
-
+----
 ## Scale up/down Application Container Service using user interface and psm CLI tool ##
 
 ### About this tutorial ###

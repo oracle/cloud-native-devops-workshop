@@ -25,146 +25,146 @@ This tutorial demonstrates how to:
 #### Create Weblogic 10.3.6 domain and deploy the Petstore sample application ####
 Open a terminal and change to `/u01/content/cloud-native-devops-workshop/app-2-cloud` folder.
 
-    $ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/app-2-cloud
-Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareDBCS.sh <db user> <db password> <ssh key file> <db server ip> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:
+	$ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/app-2-cloud
+	Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareDBCS.sh <db user> <db password> <ssh key file> <db server ip> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:
 
     $ [oracle@localhost app-2-cloud]$ ./prepareEnv.sh system welcome1
-  Oracle database (sid: orcl) is running.
-  Open pluggable database: PDB2.
-  PDB2 is already opened
-  ********** CREATING PetStore DB USER **********************************************
-  
-  User dropped.
-  
-  
-  User created.
-  
-  
-  Grant succeeded.
-  
-  ********** CREATING DB ENTRIES FOR PetStore Application ***************************
-  
-  SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 11 05:55:45 2016
-  
-  Copyright (c) 1982, 2014, Oracle.  All rights reserved.
-  
-  
-  Connected to:
-  Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-  With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-  
-  SQL> 
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  Table created.
-  
-  
-  1 row created.
-  
-  ...
-  
-  1 row created.
-  
-  
-  Commit complete.
-  
-  SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-  With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-  ********** CREATING PETSTORE_DOMAIN (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ***********
-  << read template from "/u01/content/cloud-native-devops-workshop/app-2-cloud/template/petstore_domain_template.jar"
-  >>  succeed: read template from "/u01/content/cloud-native-devops-workshop/app-2-cloud/template/petstore_domain_template.jar"
-  << find User "weblogic" as u1_CREATE_IF_NOT_EXIST
-  >>  succeed: find User "weblogic" as u1_CREATE_IF_NOT_EXIST
-  << set u1_CREATE_IF_NOT_EXIST attribute Password to "********"
-  >>  succeed: set u1_CREATE_IF_NOT_EXIST attribute Password to "********"
-  << write Domain to "/u01/wins/wls1036/user_projects/domains/petstore_domain"
-  ...............................................................................................
-  >>  succeed: write Domain to "/u01/wins/wls1036/user_projects/domains/petstore_domain"
-  << close template
-  >>  succeed: close template
-  ********** STARTING ADMIN SERVER (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) **************
-  ********** STARTING MSERVER1 SERVER (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ***********
-  ********** STARTING MSERVER2 SERVER (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ***********
-  ********** ADMIN SERVER (WEBLOGIC 10.3.6 - DOMAIN1036) HAS BEEN STARTED ***********
-  ********** DEPLOY PETSTORE (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ********************
-  
-  Initializing WebLogic Scripting Tool (WLST) ...
-  
-  Welcome to WebLogic Server Administration Scripting Shell
-  
-  Type help() for help on available commands
-  
-  ************************ Create resources for PETSTORE application *****************************************
-  Connecting to t3://localhost:7001 with userid weblogic ...
-  Successfully connected to Admin Server 'AdminServer' that belongs to domain 'petstore_domain'.
-  
-  Warning: An insecure protocol was used to connect to the 
-  server. To ensure on-the-wire security, the SSL port or 
-  Admin port should be used instead.
-  
-  Location changed to edit tree. This is a writable tree with 
-  DomainMBean as the root. To make changes you will need to start 
-  an edit session via startEdit(). 
-  
-  For more help, use help(edit)
-  
-  Starting an edit session ...
-  Started edit session, please be sure to save and activate your 
-  changes once you are done.
-  Saving all your changes ...
-  Saved all your changes successfully.
-  Activating all your changes, this may take a while ... 
-  The edit lock associated with this edit session is released 
-  once the activation is completed.
-  Activation completed
-  ************************ Deploy PETSTORE application *****************************************
-  Deploying application from /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war to targets petstore_cluster (upload=false) ...
-  <Oct 11, 2016 5:57:20 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, jsf [archive: /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war], to petstore_cluster .> 
-  .Completed the deployment of Application with status completed
-  Current Status of your Deployment:
-  Deployment command type: deploy
-  Deployment State       : completed
-  Deployment Message     : [Deployer:149194]Operation 'deploy' on application 'jsf [LibSpecVersion=2.0,LibImplVersion=1.0.0.0_2-0-2]' has succeeded on 'mserver2'
-  Deploying application from /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war to targets petstore_cluster (upload=false) ...
-  <Oct 11, 2016 5:57:23 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, Petstore [archive: /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war], to petstore_cluster .> 
-  ...Completed the deployment of Application with status completed
-  Current Status of your Deployment:
-  Deployment command type: deploy
-  Deployment State       : completed
-  Deployment Message     : [Deployer:149194]Operation 'deploy' on application 'Petstore' has succeeded on 'mserver2'
-  Starting application Petstore.
-  <Oct 11, 2016 5:57:33 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating start operation for application, Petstore [archive: null], to petstore_cluster .> 
-  .Completed the start of Application with status completed
-  Current Status of your Deployment:
-  Deployment command type: start
-  Deployment State       : completed
-  Deployment Message     : [Deployer:149194]Operation 'start' on application 'Petstore' has succeeded on 'mserver2'
-  No stack trace available.
-  <Oct 11, 2016 5:57:36 AM PDT> <Warning> <JNDI> <BEA-050001> <WLContext.close() was called in a different thread than the one in which it was created.> 
-  ********** OPEN PETSTORE APPLICATION AT http://localhost:7003/petstore/faces/catalog.jsp
-  [oracle@localhost app-2-cloud]$ 
+	  Oracle database (sid: orcl) is running.
+	  Open pluggable database: PDB2.
+	  PDB2 is already opened
+	  ********** CREATING PetStore DB USER **********************************************
+	  
+	  User dropped.
+	  
+	  
+	  User created.
+	  
+	  
+	  Grant succeeded.
+	  
+	  ********** CREATING DB ENTRIES FOR PetStore Application ***************************
+	  
+	  SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 11 05:55:45 2016
+	  
+	  Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+	  
+	  
+	  Connected to:
+	  Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	  With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+	  
+	  SQL> 
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  Table created.
+	  
+	  
+	  1 row created.
+	  
+	  ...
+	  
+	  1 row created.
+	  
+	  
+	  Commit complete.
+	  
+	  SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	  With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+	  ********** CREATING PETSTORE_DOMAIN (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ***********
+	  << read template from "/u01/content/cloud-native-devops-workshop/app-2-cloud/template/petstore_domain_template.jar"
+	  >>  succeed: read template from "/u01/content/cloud-native-devops-workshop/app-2-cloud/template/petstore_domain_template.jar"
+	  << find User "weblogic" as u1_CREATE_IF_NOT_EXIST
+	  >>  succeed: find User "weblogic" as u1_CREATE_IF_NOT_EXIST
+	  << set u1_CREATE_IF_NOT_EXIST attribute Password to "********"
+	  >>  succeed: set u1_CREATE_IF_NOT_EXIST attribute Password to "********"
+	  << write Domain to "/u01/wins/wls1036/user_projects/domains/petstore_domain"
+	  ...............................................................................................
+	  >>  succeed: write Domain to "/u01/wins/wls1036/user_projects/domains/petstore_domain"
+	  << close template
+	  >>  succeed: close template
+	  ********** STARTING ADMIN SERVER (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) **************
+	  ********** STARTING MSERVER1 SERVER (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ***********
+	  ********** STARTING MSERVER2 SERVER (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ***********
+	  ********** ADMIN SERVER (WEBLOGIC 10.3.6 - DOMAIN1036) HAS BEEN STARTED ***********
+	  ********** DEPLOY PETSTORE (WEBLOGIC 10.3.6 - PETSTORE_DOMAIN) ********************
+	  
+	  Initializing WebLogic Scripting Tool (WLST) ...
+	  
+	  Welcome to WebLogic Server Administration Scripting Shell
+	  
+	  Type help() for help on available commands
+	  
+	  ************************ Create resources for PETSTORE application *****************************************
+	  Connecting to t3://localhost:7001 with userid weblogic ...
+	  Successfully connected to Admin Server 'AdminServer' that belongs to domain 'petstore_domain'.
+	  
+	  Warning: An insecure protocol was used to connect to the 
+	  server. To ensure on-the-wire security, the SSL port or 
+	  Admin port should be used instead.
+	  
+	  Location changed to edit tree. This is a writable tree with 
+	  DomainMBean as the root. To make changes you will need to start 
+	  an edit session via startEdit(). 
+	  
+	  For more help, use help(edit)
+	  
+	  Starting an edit session ...
+	  Started edit session, please be sure to save and activate your 
+	  changes once you are done.
+	  Saving all your changes ...
+	  Saved all your changes successfully.
+	  Activating all your changes, this may take a while ... 
+	  The edit lock associated with this edit session is released 
+	  once the activation is completed.
+	  Activation completed
+	  ************************ Deploy PETSTORE application *****************************************
+	  Deploying application from /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war to targets petstore_cluster (upload=false) ...
+	  <Oct 11, 2016 5:57:20 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, jsf [archive: /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war], to petstore_cluster .> 
+	  .Completed the deployment of Application with status completed
+	  Current Status of your Deployment:
+	  Deployment command type: deploy
+	  Deployment State       : completed
+	  Deployment Message     : [Deployer:149194]Operation 'deploy' on application 'jsf [LibSpecVersion=2.0,LibImplVersion=1.0.0.0_2-0-2]' has succeeded on 'mserver2'
+	  Deploying application from /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war to targets petstore_cluster (upload=false) ...
+	  <Oct 11, 2016 5:57:23 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, Petstore [archive: /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war], to petstore_cluster .> 
+	  ...Completed the deployment of Application with status completed
+	  Current Status of your Deployment:
+	  Deployment command type: deploy
+	  Deployment State       : completed
+	  Deployment Message     : [Deployer:149194]Operation 'deploy' on application 'Petstore' has succeeded on 'mserver2'
+	  Starting application Petstore.
+	  <Oct 11, 2016 5:57:33 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating start operation for application, Petstore [archive: null], to petstore_cluster .> 
+	  .Completed the start of Application with status completed
+	  Current Status of your Deployment:
+	  Deployment command type: start
+	  Deployment State       : completed
+	  Deployment Message     : [Deployer:149194]Operation 'start' on application 'Petstore' has succeeded on 'mserver2'
+	  No stack trace available.
+	  <Oct 11, 2016 5:57:36 AM PDT> <Warning> <JNDI> <BEA-050001> <WLContext.close() was called in a different thread than the one in which it was created.> 
+	  ********** OPEN PETSTORE APPLICATION AT http://localhost:7003/petstore/faces/catalog.jsp
+	  [oracle@localhost app-2-cloud]$ 
 
 
 Now check the Petstore demo application. Open a browser and enter *http://localhost:7003/petstore/faces/catalog.jsp* URL to hit the application.
@@ -177,16 +177,16 @@ Note in the virtualbox environment there is no load balancer configured for the 
 
 If you are not using the prepared virtualbox environment you need to download the AppToCloud tool from this [location](http://www.oracle.com/technetwork/topics/cloud/downloads/index.html#apptocloud). You can also use the Download Center in the service console. Click your user name at the top of the console, select Help and then select Download Center. The tool is simply zipped so use an archive tool to extract `a2c-zip-installer.zip` to your destination directory. AppToCloud needs to be installed on the machine that is running Administration Server for your domain. In case of prepared virtualbox environment the tool is extracted to `/u01/oracle_jcs_app2cloud` folder. Verify that the file `a2c-healthcheck.sh` exists in the specified directory.
 
-  [oracle@localhost app-2-cloud]$ ls -la /u01/oracle_jcs_app2cloud/bin
-  total 60
-  drwxr-xr-x. 2 oracle oracle 4096 Oct 10 09:01 .
-  drwxr-x---. 7 oracle oracle 4096 Oct 11 00:16 ..
-  -rw-r-----. 1 oracle oracle 7582 Aug  4 11:25 a2c-export.cmd
-  -rwxr-x---. 1 oracle oracle 7137 Aug  4 11:25 a2c-export.sh
-  -rw-r-----. 1 oracle oracle 8683 Aug  4 11:25 a2c-healthcheck.cmd
-  -rwxr-x---. 1 oracle oracle 8169 Aug  4 11:25 a2c-healthcheck.sh
-  -rw-r-----. 1 oracle oracle 6095 Aug  4 11:25 a2c-import.cmd
-  -rwxr-x---. 1 oracle oracle 5673 Aug  4 11:25 a2c-import.sh
+	[oracle@localhost app-2-cloud]$ ls -la /u01/oracle_jcs_app2cloud/bin
+	total 60
+	drwxr-xr-x. 2 oracle oracle 4096 Oct 10 09:01 .
+	drwxr-x---. 7 oracle oracle 4096 Oct 11 00:16 ..
+	-rw-r-----. 1 oracle oracle 7582 Aug  4 11:25 a2c-export.cmd
+	-rwxr-x---. 1 oracle oracle 7137 Aug  4 11:25 a2c-export.sh
+	-rw-r-----. 1 oracle oracle 8683 Aug  4 11:25 a2c-healthcheck.cmd
+	-rwxr-x---. 1 oracle oracle 8169 Aug  4 11:25 a2c-healthcheck.sh
+	-rw-r-----. 1 oracle oracle 6095 Aug  4 11:25 a2c-import.cmd
+	-rwxr-x---. 1 oracle oracle 5673 Aug  4 11:25 a2c-import.sh
 
 Now use the `a2c-healthcheck` command in the AppToCloud tools to validate your on-premises WebLogic Server domain and applications in preparation to move them to an Oracle Java Cloud Service environment. The command requires the following parameters:
 
@@ -196,49 +196,49 @@ Now use the `a2c-healthcheck` command in the AppToCloud tools to validate your o
 
 Now run the `a2c-healthcheck.sh` to check and export the running domain. During the execution enter the administrator’s password: *welcome1*, when prompted for it.
 
-  [oracle@localhost app-2-cloud]$ /u01/oracle_jcs_app2cloud/bin/a2c-healthcheck.sh -oh /u01/wins/wls1036 -adminUrl t3://localhost:7001 -adminUser weblogic -outputDir /u01/jcs_a2c_output
-  JDK version is 1.8.0_60-b27
-  A2C_HOME is /u01/oracle_jcs_app2cloud
-  /usr/java/latest/bin/java -Xmx512m -cp /u01/oracle_jcs_app2cloud/jcs_a2c/modules/features/jcsa2c_lib.jar -Djava.util.logging.config.class=oracle.jcs.lifecycle.util.JCSLifecycleLoggingConfig oracle.jcs.lifecycle.healthcheck.AppToCloudHealthCheck -oh /u01/wins/wls1036 -adminUrl t3://localhost:7001 -adminUser weblogic -outputDir /u01/jcs_a2c_output
-  The a2c-healthcheck program will write its log to /u01/oracle_jcs_app2cloud/logs/jcsa2c-healthcheck.log
-  Enter password: 
-  Checking Domain Health
-  Connecting to domain
-  
-  Connected to the domain petstore_domain
-  
-  Checking Java Configuration
-  ...
-  checking server runtime : mserver2
-  ...
-  checking server runtime : mserver1
-  ...
-  checking server runtime : AdminServer
-  Done Checking Java Configuration
-  Checking Servers Health
-  
-  Done checking Servers Health
-  Checking Applications Health
-  Checking jsf#2.0@1.0.0.0_2-0-2
-  Checking Petstore
-  Done Checking Applications Health
-  Checking Datasource Health
-  Done Checking Datasource Health
-  Done Checking Domain Health
-  
-  Activity Log for HEALTHCHECK
-  
-  Informational Messages:
-  
-    1. JCSLCM-04037: Healthcheck Completed
-  
-  An HTML version of this report can be found at /u01/jcs_a2c_output/reports/petstore_domain-healthcheck-activityreport.html
-  
-  Output archive saved as /u01/jcs_a2c_output/petstore_domain.zip.  You can use this archive for the a2c-export tool.
-  
-  
-  a2c-healthcheck completed successfully (exit code = 0)
-  [oracle@localhost bin]$ 
+	[oracle@localhost app-2-cloud]$ /u01/oracle_jcs_app2cloud/bin/a2c-healthcheck.sh -oh /u01/wins/wls1036 -adminUrl t3://localhost:7001 -adminUser weblogic -outputDir /u01/jcs_a2c_output
+	JDK version is 1.8.0_60-b27
+	A2C_HOME is /u01/oracle_jcs_app2cloud
+	/usr/java/latest/bin/java -Xmx512m -cp /u01/oracle_jcs_app2cloud/jcs_a2c/modules/features/jcsa2c_lib.jar -Djava.util.logging.config.class=oracle.jcs.lifecycle.util.JCSLifecycleLoggingConfig oracle.jcs.lifecycle.healthcheck.AppToCloudHealthCheck -oh /u01/wins/wls1036 -adminUrl t3://localhost:7001 -adminUser weblogic -outputDir /u01/jcs_a2c_output
+	The a2c-healthcheck program will write its log to /u01/oracle_jcs_app2cloud/logs/jcsa2c-healthcheck.log
+	Enter password: 
+	Checking Domain Health
+	Connecting to domain
+	
+	Connected to the domain petstore_domain
+	
+	Checking Java Configuration
+	...
+	checking server runtime : mserver2
+	...
+	checking server runtime : mserver1
+	...
+	checking server runtime : AdminServer
+	Done Checking Java Configuration
+	Checking Servers Health
+	
+	Done checking Servers Health
+	Checking Applications Health
+	Checking jsf#2.0@1.0.0.0_2-0-2
+	Checking Petstore
+	Done Checking Applications Health
+	Checking Datasource Health
+	Done Checking Datasource Health
+	Done Checking Domain Health
+	
+	Activity Log for HEALTHCHECK
+	
+	Informational Messages:
+	
+	1. JCSLCM-04037: Healthcheck Completed
+	
+	An HTML version of this report can be found at /u01/jcs_a2c_output/reports/petstore_domain-healthcheck-activityreport.html
+	
+	Output archive saved as /u01/jcs_a2c_output/petstore_domain.zip.  You can use this archive for the a2c-export tool.
+	
+	
+	a2c-healthcheck completed successfully (exit code = 0)
+	[oracle@localhost bin]$ 
 
 Verify that the Health Check tool completed successfully (exit code is 0). Address any problems described in the Error Messages section of the Health Check output. Then run the Health Check tool again.
 You can also view the activity report as an HTML file. The report’s file name and location are included in the Health Check output.
@@ -271,57 +271,57 @@ Note the public IP address of the node hosting Database Cloud Service.
 
 Having all the necessary input run the script which will prepare the Database Cloud Service for Petstore demo application. The output should be similar to the following:
 
-  [oracle@localhost app-2-cloud]$ ./prepareDBCS.sh system <YOUR_DBCS_SYSTEM_PASSWORD ><YOUR_PRIVATEKEY_LOCATION> <YOUR_DBCS_PUBLIC_IP>
-  Enter passphrase for key '../pk.openssh': 
-  create_user.sh                                                                                                     100%  301     0.3KB/s   00:00    
-  create_user.sql                                                                                                    100%  101     0.1KB/s   00:00    
-  petstore.sql                                                                                                       100%   55KB  55.3KB/s   00:00    
-  Enter passphrase for key '../pk.openssh': 
-  
-  SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 11 09:32:46 2016
-  
-  Copyright (c) 1982, 2014, Oracle.  All rights reserved.
-  
-  Last Successful login time: Mon Sep 12 2016 12:40:26 +00:00
-  
-  Connected to:
-  Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-  
-  SQL> DROP USER petstore cascade
-            *
-  ERROR at line 1:
-  ORA-01918: user 'PETSTORE' does not exist
-  
-  
-  SQL> SQL> 
-  User created.
-  
-  SQL> 
-  Grant succeeded.
-  
-  SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-  
-  SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 11 09:32:46 2016
-  
-  Copyright (c) 1982, 2014, Oracle.  All rights reserved.
-  
-  
-  Connected to:
-  Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-  
-  SQL> SQL>   2    3    4    5    6    7  
-  Table created.
-  
-  ...
-  
-  SQL> 
-  1 row created.
-  
-  SQL> SQL> 
-  Commit complete.
-  
-  SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-  [oracle@localhost app-2-cloud]$ 
+	[oracle@localhost app-2-cloud]$ ./prepareDBCS.sh system <YOUR_DBCS_SYSTEM_PASSWORD ><YOUR_PRIVATEKEY_LOCATION> <YOUR_DBCS_PUBLIC_IP>
+	Enter passphrase for key '../pk.openssh': 
+	create_user.sh                                                                                                     100%  301     0.3KB/s   00:00    
+	create_user.sql                                                                                                    100%  101     0.1KB/s   00:00    
+	petstore.sql                                                                                                       100%   55KB  55.3KB/s   00:00    
+	Enter passphrase for key '../pk.openssh': 
+	
+	SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 11 09:32:46 2016
+	
+	Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+	
+	Last Successful login time: Mon Sep 12 2016 12:40:26 +00:00
+	
+	Connected to:
+	Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	
+	SQL> DROP USER petstore cascade
+	        *
+	ERROR at line 1:
+	ORA-01918: user 'PETSTORE' does not exist
+	
+	
+	SQL> SQL> 
+	User created.
+	
+	SQL> 
+	Grant succeeded.
+	
+	SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	
+	SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 11 09:32:46 2016
+	
+	Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+	
+	
+	Connected to:
+	Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	
+	SQL> SQL>   2    3    4    5    6    7  
+	Table created.
+	
+	...
+	
+	SQL> 
+	1 row created.
+	
+	SQL> SQL> 
+	Commit complete.
+	
+	SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	[oracle@localhost app-2-cloud]$ 
 
 The script is re-runnable. In case of failure try to fix the parameter or other issue and run again.
 
@@ -346,41 +346,41 @@ Now use the `a2c-export.sh` script in the AppToCloud tools to capture your on-pr
 
 Using the parameters above run the `a2c-export.sh` to complete the export and upload. The following parameters belong to prepared virtualbox environment except the Cloud storage conatiner and credentials. Please change according to your environment. When prompted, enter the password for your cloud storage user.
 
-  [oracle@localhost app-2-cloud]$ /u01/oracle_jcs_app2cloud/bin/a2c-export.sh -oh /u01/wins/wls1036 -domainDir /u01/wins/wls1036/user_projects/domains/petstore_domain -archiveFile /u01/jcs_a2c_output/petstore_domain.zip -cloudStorageContainer  <YOUR_CLOUD_CONTAINER_PATH> -cloudStorageUser <YOUR_CLOUD_STORAGE_USER>
-  JDK version is 1.8.0_60-b27
-  A2C_HOME is /u01/oracle_jcs_app2cloud
-  /usr/java/latest/bin/java -Xmx512m -DUseSunHttpHandler=true -cp /u01/oracle_jcs_app2cloud/jcs_a2c/modules/features/jcsa2c_lib.jar -Djava.util.logging.config.class=oracle.jcs.lifecycle.util.JCSLifecycleLoggingConfig oracle.jcs.lifecycle.discovery.AppToCloudExport -oh /u01/wins/wls1036 -domainDir /u01/wins/wls1036/user_projects/domains/petstore_domain -archiveFile /u01/jcs_a2c_output/petstore_domain.zip -cloudStorageContainer Storage-appdev004/app2cloud -cloudStorageUser peter.nagy@oracle.com
-  The a2c-export program will write its log to /u01/oracle_jcs_app2cloud/logs/jcsa2c-export.log
-  Enter Storage Cloud password: 
-  ####<Oct 11, 2016 12:30:52 AM> <INFO> <AppToCloudExport> <getModel> <JCSLCM-02005> <Creating new model for domain /u01/wins/wls1036/user_projects/domains/petstore_domain>
-  ####<Oct 11, 2016 12:30:53 AM> <INFO> <EnvironmentModelBuilder> <populateOrRefreshFromEnvironment> <FMWPLATFRM-08552> <Try to discover a WebLogic Domain in offline mode>
-  ####<Oct 11, 2016 12:31:03 AM> <INFO> <EnvironmentModelBuilder> <populateOrRefreshFromEnvironment> <FMWPLATFRM-08550> <End of the Environment discovery>
-  ####<Oct 11, 2016 12:31:03 AM> <WARNING> <ModelNotYetImplementedFeaturesScrubber> <transform> <JCSLCM-00579> <Export for Security configuration is not currently implemented and must be manually configured on the target domain.>
-  ####<Oct 11, 2016 12:31:03 AM> <INFO> <AppToCloudExport> <archiveApplications> <JCSLCM-02003> <Adding application to the archive: Petstore from /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war>
-  ####<Oct 11, 2016 12:31:04 AM> <INFO> <AppToCloudExport> <archiveSharedLibraries> <JCSLCM-02003> <Adding library to the archive: jsf#2.0@1.0.0.0_2-0-2 from /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war>
-  ####<Oct 11, 2016 12:31:05 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02009> <Successfully exported model and artifacts to /u01/jcs_a2c_output/petstore_domain.zip. Overrides file written to /u01/jcs_a2c_output/petstore_domain.json>
-  ####<Oct 11, 2016 12:31:05 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02028> <Uploading override file to cloud storage from /u01/jcs_a2c_output/petstore_domain.json>
-  ####<Oct 11, 2016 12:31:09 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02028> <Uploading archive file to cloud storage from /u01/jcs_a2c_output/petstore_domain.zip>
-  ####<Oct 11, 2016 12:33:47 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02009> <Successfully exported model and artifacts to https://appdev004.storage.oraclecloud.com. Overrides file written to Storage-appdev004/app2cloud/petstore_domain.json>
-  
-  Activity Log for EXPORT
-  
-  Informational Messages:
-  
-    1. JCSLCM-02030: Uploaded override file to Oracle Cloud Storage container Storage-appdev004/app2cloud
-    2. JCSLCM-02030: Uploaded archive file to Oracle Cloud Storage container Storage-appdev004/app2cloud
-  
-  Features Not Yet Implemented Messages:
-  
-    1. JCSLCM-00579: Export for Security configuration is not currently implemented and must be manually configured on the target domain.
-  
-  An HTML version of this report can be found at /u01/jcs_a2c_output/reports/petstore_domain-export-activityreport.html
-  
-  Successfully exported model and artifacts to https://appdev004.storage.oraclecloud.com. Overrides file written to Storage-appdev004/app2cloud/petstore_domain.json
-  
-  
-  a2c-export completed successfully (exit code = 0)
-  [oracle@localhost bin]$ 
+	[oracle@localhost app-2-cloud]$ /u01/oracle_jcs_app2cloud/bin/a2c-export.sh -oh /u01/wins/wls1036 -domainDir /u01/wins/wls1036/user_projects/domains/petstore_domain -archiveFile /u01/jcs_a2c_output/petstore_domain.zip -cloudStorageContainer  <YOUR_CLOUD_CONTAINER_PATH> -cloudStorageUser <YOUR_CLOUD_STORAGE_USER>
+	JDK version is 1.8.0_60-b27
+	A2C_HOME is /u01/oracle_jcs_app2cloud
+	/usr/java/latest/bin/java -Xmx512m -DUseSunHttpHandler=true -cp /u01/oracle_jcs_app2cloud/jcs_a2c/modules/features/jcsa2c_lib.jar -Djava.util.logging.config.class=oracle.jcs.lifecycle.util.JCSLifecycleLoggingConfig oracle.jcs.lifecycle.discovery.AppToCloudExport -oh /u01/wins/wls1036 -domainDir /u01/wins/wls1036/user_projects/domains/petstore_domain -archiveFile /u01/jcs_a2c_output/petstore_domain.zip -cloudStorageContainer Storage-appdev004/app2cloud -cloudStorageUser peter.nagy@oracle.com
+	The a2c-export program will write its log to /u01/oracle_jcs_app2cloud/logs/jcsa2c-export.log
+	Enter Storage Cloud password: 
+	####<Oct 11, 2016 12:30:52 AM> <INFO> <AppToCloudExport> <getModel> <JCSLCM-02005> <Creating new model for domain /u01/wins/wls1036/user_projects/domains/petstore_domain>
+	####<Oct 11, 2016 12:30:53 AM> <INFO> <EnvironmentModelBuilder> <populateOrRefreshFromEnvironment> <FMWPLATFRM-08552> <Try to discover a WebLogic Domain in offline mode>
+	####<Oct 11, 2016 12:31:03 AM> <INFO> <EnvironmentModelBuilder> <populateOrRefreshFromEnvironment> <FMWPLATFRM-08550> <End of the Environment discovery>
+	####<Oct 11, 2016 12:31:03 AM> <WARNING> <ModelNotYetImplementedFeaturesScrubber> <transform> <JCSLCM-00579> <Export for Security configuration is not currently implemented and must be manually configured on the target domain.>
+	####<Oct 11, 2016 12:31:03 AM> <INFO> <AppToCloudExport> <archiveApplications> <JCSLCM-02003> <Adding application to the archive: Petstore from /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war>
+	####<Oct 11, 2016 12:31:04 AM> <INFO> <AppToCloudExport> <archiveSharedLibraries> <JCSLCM-02003> <Adding library to the archive: jsf#2.0@1.0.0.0_2-0-2 from /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war>
+	####<Oct 11, 2016 12:31:05 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02009> <Successfully exported model and artifacts to /u01/jcs_a2c_output/petstore_domain.zip. Overrides file written to /u01/jcs_a2c_output/petstore_domain.json>
+	####<Oct 11, 2016 12:31:05 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02028> <Uploading override file to cloud storage from /u01/jcs_a2c_output/petstore_domain.json>
+	####<Oct 11, 2016 12:31:09 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02028> <Uploading archive file to cloud storage from /u01/jcs_a2c_output/petstore_domain.zip>
+	####<Oct 11, 2016 12:33:47 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02009> <Successfully exported model and artifacts to https://appdev004.storage.oraclecloud.com. Overrides file written to Storage-appdev004/app2cloud/petstore_domain.json>
+	
+	Activity Log for EXPORT
+	
+	Informational Messages:
+	
+	1. JCSLCM-02030: Uploaded override file to Oracle Cloud Storage container Storage-appdev004/app2cloud
+	2. JCSLCM-02030: Uploaded archive file to Oracle Cloud Storage container Storage-appdev004/app2cloud
+	
+	Features Not Yet Implemented Messages:
+	
+	1. JCSLCM-00579: Export for Security configuration is not currently implemented and must be manually configured on the target domain.
+	
+	An HTML version of this report can be found at /u01/jcs_a2c_output/reports/petstore_domain-export-activityreport.html
+	
+	Successfully exported model and artifacts to https://appdev004.storage.oraclecloud.com. Overrides file written to Storage-appdev004/app2cloud/petstore_domain.json
+	
+	
+	a2c-export completed successfully (exit code = 0)
+	[oracle@localhost bin]$ 
 
 Verify that the Export tool completed successfully (exit code is 0). Also note the name of the generated JSON file.
 
