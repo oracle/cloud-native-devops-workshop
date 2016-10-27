@@ -8,7 +8,7 @@ Oracle Cloud is the industry’s broadest and most integrated public cloud. It o
 
 ### Prerequisites ###
 
-Get the following account details ready to complete the tutorial and replace to your values when it is required:
+The workshop suppposed to work with Oracle paaS trial account. To get such account look into [here](common/request.for.trial.md). Get the following account details ready to complete the tutorial and replace to your values when it is required:
 
 + Oracle Cloud account **username** and **password**
 + Oracle Cloud **identity domain**
