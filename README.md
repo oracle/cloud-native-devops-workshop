@@ -73,8 +73,8 @@ The content contains several independent modules that cover different aspects of
 
 ####Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool ####
 
-+ [Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool](https://github.com/oracle-weblogic/weblogic-innovation-seminars/tree/caf-12.2.1/cloud.demos/app.2.cloud)
- 
++ [Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool](app-2-cloud/README.md)
+
 ----
  
 ####Customizing and personalizing the workshop content####

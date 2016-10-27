@@ -2,7 +2,7 @@
 ---
 # ORACLE Cloud-Native DevOps workshop #
 ----
-## Prepare Database Cloud Service ##
+## Prepare Database Cloud Service for TechCo (Java EE) Demo Application ##
 
 ### Introduction ###
 Oracle Database Cloud Service provides you the ability to deploy Oracle databases in the Cloud, with each database deployment containing a single Oracle database. You have full access to the features and operations available with Oracle Database, but with Oracle providing the computing power, physical storage and (optionally) tooling to simplify routine database maintenance and management operations.
