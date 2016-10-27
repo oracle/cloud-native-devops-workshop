@@ -78,11 +78,11 @@ The content contains several independent modules that cover different aspects of
  
 ####Customizing and personalizing the workshop content####
  
- + [Customize and personalize the workshop materials](customize/README.md)
++ [Customize and personalize the workshop materials](customize/README.md)
  
 ----
  
 ####Clean up the environment####
 
-+ [Delete Java Cloud, Database Cloud and Database Container Services using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/cleanup.md)
-+ [Delete Application Cloud Container Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/cleanup.psm.md)
++ [Delete Java Cloud, Database Cloud and Database Container Services using user interface](cleanup/cleanup-ui.md)
++ [Delete Application Cloud Container Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](cleanup/cleanup-psm.md)
