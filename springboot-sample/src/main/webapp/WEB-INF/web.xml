@@ -4,6 +4,21 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
   <servlet>
+    <servlet-name>CXF</servlet-name>
+    <display-name>CXF</display-name>
+    <servlet-class>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-class>
+    <init-param>
+       <param-name>jaxrs.serviceClasses</param-name>
+       <param-value>com.example.springboot.rsapi.Api</param-value>
+    </init-param>
+    <init-param>
+       <param-name>jaxrs.providers</param-name>
+       <param-value>org.codehaus.jackson.jaxrs.JacksonJsonProvider</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
     <servlet-name>appServlet</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
@@ -22,7 +37,7 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <!-- Disables Servlet Container welcome file handling. Needed for compatibility 
+  <!-- Disables Servlet Container welcome file handling. Needed for compatibility
     with Servlet 3.0 and Tomcat 7.0 -->
   <welcome-file-list>
     <welcome-file></welcome-file>

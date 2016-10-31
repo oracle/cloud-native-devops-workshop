@@ -8,7 +8,7 @@ Oracle Cloud is the industry’s broadest and most integrated public cloud. It o
 
 ### Prerequisites ###
 
-The workshop suppposed to work with Oracle PaaS trial account. To get such account look into [here](common/request.for.trial.md). Get the following account details ready to complete the tutorial and replace to your values when it is required:
+The workshop is intended to work with an Oracle PaaS trial account. To get an account look into [here](common/request.for.trial.md). Get the following account details ready to complete the tutorial and replace to your values when it is required:
 
 + Oracle Cloud account **username** and **password**
 + Oracle Cloud **identity domain**
@@ -18,9 +18,9 @@ NOTE: Before you start to use your new Oracle Public Cloud services make sure th
 
 ### Important ###
 
-During the execution you will create several public cloud service instances what will be available on the world wide web. Even if these instances are for demo purposes keep in mind it is not a best practice to use weak or known (stored here in the tutorial) passwords especially in such open environment. Thus this workshop content does not recommend any password so you need to define those. You will be asked to provide password at certain points and please remember them  for  later usage. 
+During the execution you will create several public cloud service instances what will be available on the world wide web. Even if these instances are for demo purposes keep in mind it is not a best practice to use weak or known (stored here in the tutorial) passwords especially in such open environment. Thus this workshop content does not recommend any password so you need to define those. You will be asked to provide password at certain points and please remember them  for  later usage.
 
-The content contains several independent modules that cover different aspects of the application development in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependendent on each other. 
+The content contains several independent modules that cover different aspects of the application development in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependent on each other.
 
 ----
 
@@ -29,7 +29,7 @@ The content contains several independent modules that cover different aspects of
 + [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
 + [Scale up/down Application Container Service using user interface and PaaS Service Manager (PSM) Command Line Interface (CLI) tool](accs-psm/README.md)
 
-####Deploy sample app to lightweight Java container and monitor the application using Oracle Management Cloud Service####
+####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
 + [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
 
 ####Support SpringBoot application development lifecycle using Oracle Developer Cloud Service, Application Container Cloud Service and Oracle Enterprise Pack For Eclipse####
@@ -78,9 +78,9 @@ The content contains several independent modules that cover different aspects of
 + [Delete Application Cloud Container Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](cleanup/cleanup-psm.md)
 
 ---
- 
+
 ####Customizing and personalizing the workshop content####
- 
+
 + [Customize and personalize the workshop materials](customize/README.md)
 
 ---
