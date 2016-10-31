@@ -18,7 +18,7 @@ spApp.controller('mainController', function($scope, $http) {
   }
   
   $scope.doInvokeMessage = function() {
-	  $http.get('/api/message').then(
+	  $http.get('gw/message').then(
 			  function(response) {
 				  $scope.bannerText = response.data.message;
 			  }
@@ -26,7 +26,7 @@ spApp.controller('mainController', function($scope, $http) {
   }
   
   $scope.doInvokeHostname = function() {
-	  $http.get('/api/hostname').then(
+	  $http.get('gw/hostname').then(
 			  function(response) {
 				  $scope.bannerText = "Served from: "+response.data.hostname;
 			  }
@@ -34,7 +34,7 @@ spApp.controller('mainController', function($scope, $http) {
   }
   
   $scope.doInvokeCalcSum = function() {
-	  $http.get('/api/randomsum', {params: {index: $scope.calcIndex}}).then(
+	  $http.get('gw/randomsum', {params: {index: $scope.calcIndex}}).then(
 			  function(response) {
 				  $scope.calcList.push(response.data);
 			  },
@@ -50,7 +50,7 @@ spApp.controller('mainController', function($scope, $http) {
   }
   
   $scope.doQuote = function() {
-	  $http.get('/api/quote', {params: {symbol: $scope.symbol}}).then(
+	  $http.get('gw/quote', {params: {symbol: $scope.symbol}}).then(
 			  function(response) {
 				  $scope.quoteText = response.data;
 			  }
