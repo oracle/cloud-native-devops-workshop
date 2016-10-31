@@ -18,8 +18,8 @@ This tutorial demonstrates how to:
 + Oracle Public Cloud Services account including:
 	+ Database Cloud Service
 	+ Java Cloud Service
-+ [Create Database Cloud Service Instance using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md)
-+ [Create Java Cloud Service Instance using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.jcs.ui.md)
++ [Create Database Cloud Service Instance using user interface](../dbcs-create/README.md)
++ [Create Java Cloud Service Instance using user interface](../jcs-create/README.md)
 
 ### Steps ###
 
