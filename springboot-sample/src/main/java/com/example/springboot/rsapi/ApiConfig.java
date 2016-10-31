@@ -17,8 +17,9 @@ import org.springframework.context.annotation.DependsOn;
 @EnableAutoConfiguration
 @ComponentScan(basePackageClasses = Api.class)
 public class ApiConfig {
+
     @Autowired private Api apiService;
- 
+    
     @Bean(destroyMethod = "shutdown")
     public SpringBus cxf() {
         return new SpringBus();
@@ -43,4 +44,5 @@ public class ApiConfig {
         servletRegistrationBean.setLoadOnStartup(1);
         return servletRegistrationBean;
     }
+    
 }

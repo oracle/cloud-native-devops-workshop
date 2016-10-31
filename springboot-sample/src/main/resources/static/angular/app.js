@@ -1,10 +1,10 @@
 var spApp = angular.module('spApp', []);
 
 spApp.controller('mainController', function($scope, $http) {
-	
+
 	$scope.calcList = [];
 	$scope.symbol = "ORCL"
-	
+
   $scope.doDefaultBanner = function() {
     $scope.bannerText = "Controller Injected Banner Text";
   };
@@ -16,7 +16,7 @@ spApp.controller('mainController', function($scope, $http) {
   $scope.doGibberishBanner = function() {
     $scope.bannerText = "Yoli olacid ogecox aset!"
   }
-  
+
   $scope.doInvokeMessage = function() {
 	  $http.get('gw/message').then(
 			  function(response) {
@@ -24,7 +24,7 @@ spApp.controller('mainController', function($scope, $http) {
 			  }
 	  );
   }
-  
+
   $scope.doInvokeHostname = function() {
 	  $http.get('gw/hostname').then(
 			  function(response) {
@@ -32,9 +32,9 @@ spApp.controller('mainController', function($scope, $http) {
 			  }
 	  )
   }
-  
+
   $scope.doInvokeCalcSum = function() {
-	  $http.get('gw/randomsum', {params: {index: $scope.calcIndex}}).then(
+	  $http.get('api/randomsum', {params: {index: $scope.calcIndex}}).then(
 			  function(response) {
 				  $scope.calcList.push(response.data);
 			  },
@@ -48,7 +48,7 @@ spApp.controller('mainController', function($scope, $http) {
 			  }
 	  )
   }
-  
+
   $scope.doQuote = function() {
 	  $http.get('gw/quote', {params: {symbol: $scope.symbol}}).then(
 			  function(response) {
