@@ -423,7 +423,7 @@ In the detail view scroll down enter new description and change state to Resolve
 
 #### Check changes using Oracle Developer Cloud Service user interface ####
 
-Now change to browser where Oracle Developer Cloud Service is open. If you have closed then [sign in](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com](https://cloud.oracle.com). On the dashboard open the Developer Cloud Service Console.
+Now change to browser where Oracle Developer Cloud Service is open. If you have closed then [sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). On the dashboard open the Developer Cloud Service Console.
 ![](images/change.00.png)
 
 On the Home page you can see the recent activities. Check what has happened with your project. If the page remained opened refresh to get the latest entries. You can see the changes you made on the task assigned. Scroll down and find the log entry related to code changes pushed to master branch in `<projectname>.git` (*springboot.git*) repository. The Git icon ![](images/git.icon.png) can help to find this event. Click on the link named with the identifier of the git changes.

@@ -9,7 +9,7 @@ fi
 
 dbuser=${1}
 dbpassword=${2}
-#Default PDB to PDB1 if not specified
+#Default PDB to PDBORCL if not specified
 if [ -z "$3" ]; then
    pdb="PDBORCL";
 else

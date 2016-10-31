@@ -26,12 +26,13 @@ This tutorial demonstrates how to:
 Open a terminal and change to `GIT_REPO_LOCAL_CLONE/app-2-cloud` folder.
 
 	$ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/app-2-cloud
-	Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareDBCS.sh <db user> <db password> <ssh key file> <db server ip> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:
+	
+Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareDBCS.sh <db user> <db password> <ssh key file> <db server ip> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:
 
     $ [oracle@localhost app-2-cloud]$ ./prepareEnv.sh system welcome1
 	  Oracle database (sid: orcl) is running.
-	  Open pluggable database: PDB2.
-	  PDB2 is already opened
+	  Open pluggable database: PDBORCL.
+    PDBORCL is already opened
 	  ********** CREATING PetStore DB USER **********************************************
 	  
 	  User dropped.
@@ -147,8 +148,8 @@ Open a terminal and change to `GIT_REPO_LOCAL_CLONE/app-2-cloud` folder.
 	  Deployment command type: deploy
 	  Deployment State       : completed
 	  Deployment Message     : [Deployer:149194]Operation 'deploy' on application 'jsf [LibSpecVersion=2.0,LibImplVersion=1.0.0.0_2-0-2]' has succeeded on 'mserver2'
-	  Deploying application from /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war to targets petstore_cluster (upload=false) ...
-	  <Oct 11, 2016 5:57:23 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, Petstore [archive: /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war], to petstore_cluster .> 
+	  Deploying application from /u01/content/cloud-native-devops-workshop/app-2-cloud/petstore.12.war to targets petstore_cluster (upload=false) ...
+    <Oct 11, 2016 5:57:23 AM PDT> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, Petstore [archive: /u01/content/cloud-native-devops-workshop/app-2-cloud/petstore.12.war], to petstore_cluster .> 
 	  ...Completed the deployment of Application with status completed
 	  Current Status of your Deployment:
 	  Deployment command type: deploy
@@ -255,11 +256,11 @@ There are many ways to migrate on-premises database to Database Cloud Service. I
 
 - **Database** Cloud Service's **administrator username**. Typically it is *system* if you have not changed.
 - **Database** Cloud Service's **administrator password**. Password you provided during Database Cloud Service instance creation.
-- **SSH private key file**. Private key belongs to the Database Cloud Service. If you have followed the [Create Database Cloud Service instance using user interface](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md) tutorial the file name must be *privateKey* and the location is the `/u01/content/cloud-native-devops-workshop` folder. If you have different name and location then provide that path and file name.
+- **SSH private key file**. Private key belongs to the Database Cloud Service. If you have followed the [Create Database Cloud Service instance using user interface](../dbcs-create/README.md) tutorial the file name must be *privateKey* and the location is the `/u01/content/cloud-native-devops-workshop` folder. If you have different name and location then provide that path and file name.
 - **Database** Cloud Service's public **IP address**. The public IP address of the instance to access to the service's VM. See next step to determine.
 - **Pluggable database name** is optional. In case Oracle Database Cloud Service the **default** is *PDB1* which will be used. If your instance has different name please specify.
 
-To get the public IP address using the console [Sign in](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/sign.in.to.oracle.cloud.md) to cloud.oracle.com. On the dashboard open the Database Cloud Service Console.
+To get the public IP address using the console [Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). On the dashboard open the Database Cloud Service Console.
 
 ![](images/open.dbcs.console.png)
 Click on your Database Cloud Service which will be associated with Java Cloud Service and host Petstore demo application's schema.
@@ -356,7 +357,7 @@ Using the parameters above run the `a2c-export.sh` to complete the export and up
 	####<Oct 11, 2016 12:30:53 AM> <INFO> <EnvironmentModelBuilder> <populateOrRefreshFromEnvironment> <FMWPLATFRM-08552> <Try to discover a WebLogic Domain in offline mode>
 	####<Oct 11, 2016 12:31:03 AM> <INFO> <EnvironmentModelBuilder> <populateOrRefreshFromEnvironment> <FMWPLATFRM-08550> <End of the Environment discovery>
 	####<Oct 11, 2016 12:31:03 AM> <WARNING> <ModelNotYetImplementedFeaturesScrubber> <transform> <JCSLCM-00579> <Export for Security configuration is not currently implemented and must be manually configured on the target domain.>
-	####<Oct 11, 2016 12:31:03 AM> <INFO> <AppToCloudExport> <archiveApplications> <JCSLCM-02003> <Adding application to the archive: Petstore from /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/petstore.12.war>
+  	####<Oct 11, 2016 12:31:03 AM> <INFO> <AppToCloudExport> <archiveApplications> <JCSLCM-02003> <Adding application to the archive: Petstore from /u01/content/cloud-native-devops-workshop/app-2-cloud/petstore.12.war>
 	####<Oct 11, 2016 12:31:04 AM> <INFO> <AppToCloudExport> <archiveSharedLibraries> <JCSLCM-02003> <Adding library to the archive: jsf#2.0@1.0.0.0_2-0-2 from /u01/wins/wls1036/wlserver_10.3/common/deployable-libraries/jsf-2.0.war>
 	####<Oct 11, 2016 12:31:05 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02009> <Successfully exported model and artifacts to /u01/jcs_a2c_output/petstore_domain.zip. Overrides file written to /u01/jcs_a2c_output/petstore_domain.json>
 	####<Oct 11, 2016 12:31:05 AM> <INFO> <AppToCloudExport> <run> <JCSLCM-02028> <Uploading override file to cloud storage from /u01/jcs_a2c_output/petstore_domain.json>
@@ -398,7 +399,7 @@ Most of the steps that you use to create a service instance with AppToCloud are 
 - You must provide the location of your AppToCloud JSON file on Oracle Storage Cloud Service.
 - You must associate each Data Source in your original WebLogic Server domain with an existing Oracle Database Cloud - Database as a Service database deployment.
 
-[Sign in](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/sign.in.to.oracle.cloud.md) My Services application at `http://cloud.oracle.com`. On the dashboard open the Java Cloud Service Console.
+[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). On the dashboard open the Java Cloud Service Console.
 
 ![](images/10.dashboard.png)
 

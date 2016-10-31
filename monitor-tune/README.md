@@ -21,9 +21,9 @@ This tutorial demonstrates how to:
 
 ### Prerequisites ###
 
-+ [Create Oracle Developer Cloud Service project for Spring Boot sample application](springboot-sample/create.devcs.project.md)
-+ [Create continuous build integration using Oracle Developer Cloud Service and Oracle Application Container Cloud Service](springboot-sample/devcs.accs.ci.md)
-+ [Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service](oepe/setup.oepe.md)
++ [Create Oracle Developer Cloud Service project for Spring Boot sample application](../springboot-sample/create.devcs.project.md)
++ [Create continuous build integration using Oracle Developer Cloud Service and Oracle Application Container Cloud Service](../springboot-sample/devcs.accs.ci.md)
++ [Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service](../oepe/setup.oepe.md)
 
 ### Steps ###
 
@@ -43,7 +43,7 @@ The log basically stored on Oracle Cloud Storage Service belongs to your identit
 
 #### Create and retrieve Java Flight Recorder log using Application Container Cloud Service user interface ####
 
-[Sign in](https://github.com/oracle-weblogic/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com](https://cloud.oracle.com). On the dashboard click Application Container tile and click Instances to open Application Cloud Service Console.
+[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). On the dashboard click Application Container tile and click Instances to open Application Cloud Service Console.
 ![](images/deploy.tomcat.03.monitor.png)
 
 Click on the Application Container Cloud Service instance (springboot-demo).

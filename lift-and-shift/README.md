@@ -88,14 +88,14 @@ Now execute `prepareCloudServices.sh` to prepare Cloud Services:
 	[INFO] 
 	[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ LiftAndShift ---
 	[INFO] Using 'UTF-8' encoding to copy filtered resources.
-	[INFO] skip non existing resourceDirectory /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/src/main/resources
+	[INFO] skip non existing resourceDirectory /u01/content/cloud-native-devops-workshop/lift-and-shift/src/main/resources
 	[INFO] 
 	[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ LiftAndShift ---
 	[INFO] No sources to compile
 	[INFO] 
 	[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ LiftAndShift ---
 	[INFO] Using 'UTF-8' encoding to copy filtered resources.
-	[INFO] skip non existing resourceDirectory /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/src/test/resources
+	[INFO] skip non existing resourceDirectory /u01/content/cloud-native-devops-workshop/lift-and-shift/src/test/resources
 	[INFO] 
 	[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ LiftAndShift ---
 	[INFO] No sources to compile
@@ -105,11 +105,11 @@ Now execute `prepareCloudServices.sh` to prepare Cloud Services:
 	[INFO] 
 	[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ LiftAndShift ---
 	[WARNING] JAR will be empty - no content was marked for inclusion!
-	[INFO] Building jar: /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/target/LiftAndShift.jar
+	[INFO] Building jar: /u01/content/cloud-native-devops-workshop/lift-and-shift/target/LiftAndShift.jar
 	[INFO] 
 	[INFO] --- maven-install-plugin:2.4:install (default-install) @ LiftAndShift ---
-	[INFO] Installing /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/target/LiftAndShift.jar to /home/oracle/.m2/repository/com/oracle/wins/cloud/LiftAndShift/1.0.0-SNAPSHOT/LiftAndShift-1.0.0-SNAPSHOT.jar
-	[INFO] Installing /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/pom.xml to /home/oracle/.m2/repository/com/oracle/wins/cloud/LiftAndShift/1.0.0-SNAPSHOT/LiftAndShift-1.0.0-SNAPSHOT.pom
+	[INFO] Installing /u01/content/cloud-native-devops-workshop/lift-and-shift/target/LiftAndShift.jar to /home/oracle/.m2/repository/com/oracle/wins/cloud/LiftAndShift/1.0.0-SNAPSHOT/LiftAndShift-1.0.0-SNAPSHOT.jar
+	[INFO] Installing /u01/content/cloud-native-devops-workshop/lift-and-shift/pom.xml to /home/oracle/.m2/repository/com/oracle/wins/cloud/LiftAndShift/1.0.0-SNAPSHOT/LiftAndShift-1.0.0-SNAPSHOT.pom
 	[INFO] 
 	[INFO] --- maven-antrun-plugin:1.8:run (replaceJCS) @ LiftAndShift ---
 	Downloading: https://repo.maven.apache.org/maven2/commons-net/commons-net/1.4.1/commons-net-1.4.1.pom
@@ -121,14 +121,14 @@ Now execute `prepareCloudServices.sh` to prepare Cloud Services:
 	[INFO] Executing tasks
 	
 	main:
-	     [copy] Copying 2 files to /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/JCS
+	     [copy] Copying 2 files to /u01/content/cloud-native-devops-workshop/lift-and-shift/JCS
 	[INFO] Executed tasks
 	[INFO] 
 	[INFO] --- maven-antrun-plugin:1.8:run (replaceDBCS) @ LiftAndShift ---
 	[INFO] Executing tasks
 	
 	main:
-	     [copy] Copying 2 files to /u01/content/weblogic-innovation-seminars/WInS_Demos/MT-Workshop/Lab8/DBCS
+	     [copy] Copying 2 files to /u01/content/cloud-native-devops-workshop/lift-and-shift/DBCS
 	[INFO] Executed tasks
 	[INFO] 
 	[INFO] --- maven-antrun-plugin:1.8:run (copy2DBCS) @ LiftAndShift ---

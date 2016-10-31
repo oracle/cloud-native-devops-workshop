@@ -138,7 +138,7 @@ Optionally you may  query Oracle Cloud through REST API about the JCS public IP 
 	[INFO] ------------------------------------------------------------------------
 	[INFO] 
 	[INFO] --- maven-install-plugin:2.4:install (default-install) @ wins-cloud ---
-	[INFO] Installing /u01/content/weblogic-innovation-seminars/cloud.demos/pom.xml to /home/oracle/.m2/repository/com/oracle/wins/cloud/wins-cloud/1.0.0-SNAPSHOT/wins-cloud-1.0.0-SNAPSHOT.pom
+	[INFO] Installing /u01/content/cloud-native-devops-workshop/cloud-utils/pom.xml to /home/oracle/.m2/repository/com/oracle/wins/cloud/wins-cloud/1.0.0-SNAPSHOT/wins-cloud-1.0.0-SNAPSHOT.pom
 	[INFO]                                                                         
 	[INFO] ------------------------------------------------------------------------
 	[INFO] Building cloud-api 1.0.0-SNAPSHOT

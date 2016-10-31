@@ -31,88 +31,64 @@ We have also created Domain1221 in `/u01/wins/wls1221/user_projects/domains/Doma
 Open a terminal window and move to `GIT_REPO_LOCAL_CLONE/dpct` folder.
 
     $ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/dpct
-  
 
-Run prepared script that prepares the environment.
+Run prepared script that prepares the environment. First starts the container and (PDBORCL) pluggable database. Creates the **petstore** user in *pdborcl* database, and populates the database with sample data. Sets the **JAVA\_HOME** to **/usr/java/jdk1.7.0_79/** and **MW\_HOME** to **/u01/wins/wls1036/** then it starts the Admin Server in Domain1036. Finally sets the **JAVA\_HOME** to **/usr/java/latest/** (JDK 8) and **MW_HOME** to **/u01/wins/wls1221/** then it starts the Admin Server in Domain1221.
 
     $ [oracle@localhost dpct]$ ./prepareLocalEnv.sh 
+	Oracle database (sid: orcl) is running.
+    Open pluggable database: PDBORCL.
+    PDBORCL is already opened
+    ********** CREATING PetStore DB USER **********************************************
+    SQL*Plus: Release 12.1.0.2.0 Production on Thu Sep 15 05:43:25 2016
+        
+    Copyright (c) 1982, 2014, Oracle.  All rights reserved.
 
--	It starts the pluggable database **pdborcl**.
--	It creates the **petstore** user in pdborcl database, and populates the database with sample data.
--	It sets the **JAVA\_HOME** to **/usr/java/jdk1.7.0_79/** and **MW\_HOME** to **/u01/wins/wls1036/** then it starts the Admin Server in Domain1036.
--	Then it sets the **JAVA\_HOME** to **/usr/java/latest/** (JDK 8) and **MW_HOME** to **/u01/wins/wls1221/** then it starts the Admin Server in Domain1221.
+    Last Successful login time: Thu Sep 15 2016 05:38:47 -07:00
 
+    Connected to:
+    Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+    With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+    SQL> 
+    drop user petstore cascade
+              *
+    ERROR at line 1:
+    ORA-01918: user 'PETSTORE' does not exist
+
+    SQL> 
+    User created.
+
+    SQL> 
+    Grant succeeded.
+
+    SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+    With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+    ********** CREATING DB ENTRIES FOR PetStore Application ***************************
+	SQL*Plus: Release 12.1.0.2.0 Production on Thu Sep 15 05:43:39 2016
 	
-		********** STARTING DB ************************************************************
-		Proxy NOT SET for Oracle Network!!!
-		Proxy NOT SET for Oracle Network!!!
-		Proxy NOT SET for Oracle Network!!!
-		Default Java: 1.8.0_60
-		
-		Database Information:
-		Oracle CDB SID	: orcl (system/welcome1)
-		Pluggable PDB1:	pdborcl
-		Pluggable PDB2:	pdb2 (systempdb2/welcome1)
-		
-			*** Please note 
-		1) Ensure you have the latest WInS Demos code by running the "Update WInS Demos" command on the desktop!
-		2) Ensure you have configured the proxy for the Oracle network if you are on the Oracle Network or VPN!
-		3) This appliance is for testing purposes only, as such it is unsupported and should not be used as a production environment.
-		
-		
-		Processing Database instance "orcl": log file /u01/app/oracle/product/12.1.0/dbhome_1/startup.log
-		********** CREATING DB ENTRIES FOR PetStore Application ***************************
-		
-		SQL*Plus: Release 12.1.0.2.0 Production on Thu Sep 15 05:43:25 2016
-		
-		Copyright (c) 1982, 2014, Oracle.  All rights reserved.
-		
-		Last Successful login time: Thu Sep 15 2016 05:38:47 -07:00
-		
-		Connected to:
-		Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-		With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-		
-		SQL> 
-		drop user petstore cascade
-		          *
-		ERROR at line 1:
-		ORA-01918: user 'PETSTORE' does not exist
-
-		SQL> 
-		User created.
-		
-		SQL> 
-		Grant succeeded.
-
-		SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-		With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-		
-		SQL*Plus: Release 12.1.0.2.0 Production on Thu Sep 15 05:43:39 2016
-		
-		Copyright (c) 1982, 2014, Oracle.  All rights reserved.
-		
-		
-		Connected to:
-		Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-		With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-		
-		SQL> 
-		Table created.
-		...
-		...
-		...
-		1 row created.
+	Copyright (c) 1982, 2014, Oracle.  All rights reserved.
 	
 	
-		Commit complete.
+	Connected to:
+	Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
 	
-		SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-		With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-		********** STARTING ADMIN (WEBLOGIC 10.3.6 - DOMAIN1036) **************************
-		********** ADMIN SERVER (WEBLOGIC 10.3.6 - DOMAIN1036) HAS BEEN STARTED ***********
-		********** STARTING ADMIN SERVER (WEBLOGIC 12.2.1 - DOMAIN1221) *******************
-		********** ADMIN SERVER (WEBLOGIC 12.2.1 - DOMAIN1221) HAS BEEN STARTED ***********
+	SQL> 
+	Table created.
+	...
+	...
+	...
+	1 row created.
+
+
+	Commit complete.
+
+	SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+	With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+	********** STARTING ADMIN (WEBLOGIC 10.3.6 - DOMAIN1036) **************************
+	********** ADMIN SERVER (WEBLOGIC 10.3.6 - DOMAIN1036) HAS BEEN STARTED ***********
+	********** STARTING ADMIN SERVER (WEBLOGIC 12.2.1 - DOMAIN1221) *******************
+	********** ADMIN SERVER (WEBLOGIC 12.2.1 - DOMAIN1221) HAS BEEN STARTED ***********
 
 Go to browser and access the application URL on [http://localhost:6001/petstore/faces/catalog.jsp](http://localhost:6001/petstore/faces/catalog.jsp) . You can use the Bookmark.
 

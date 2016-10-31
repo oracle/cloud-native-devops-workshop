@@ -2,9 +2,21 @@
 
 ORACLE_HTTP_PROXY="http:\/\/www-proxy.us.oracle.com:80"
 
-echo "Set Maven proxy settings"
-cp /u01/content/weblogic-innovation-seminars/WInS_Demos/control/maven/settings.xml ~/.m2/
+#=========================================================
+MAVENCONF_FILE=~/.m2/settings.xml
 
+mvnresult=$(grep -c "<proxies>" $MAVENCONF_FILE -s)
+
+if [ $mvnresult == 1 ]
+then
+    # maven configured for proxy
+    echo "Maven is already configured for proxy."
+else
+    # maven not configured for proxy, need to uncomment
+    sed "s|<!--proxies>|<proxies>|g" -i $MAVENCONF_FILE
+    sed "s|</proxies-->|</proxies>|g" -i $MAVENCONF_FILE
+    echo "Maven now has been configured for proxy."
+fi
 #=========================================================
 YUMCONF_FILE=/etc/yum.conf
 
@@ -36,18 +48,11 @@ else
 fi
 #=========================================================
 
-ORACLE_HTTP_PROXY="http://www-proxy.us.oracle.com:80"
-PROXY_SCRIPT="/home/oracle/setProxy.sh"
-PROXY_MESSAGE="Proxy Configured for Oracle Network!!!"
-
-echo "#!/bin/sh" > ${PROXY_SCRIPT}
-echo "echo \"${PROXY_MESSAGE}\"" >> ${PROXY_SCRIPT}
-echo "echo \"${PROXY_MESSAGE}\"" >> ${PROXY_SCRIPT}
-echo "echo \"${PROXY_MESSAGE}\"" >> ${PROXY_SCRIPT}
+# remove escape chars ('\') from proxy URL
+ORACLE_HTTP_PROXY=$(echo $ORACLE_HTTP_PROXY|sed "s@\\\\@@g")
 
 sudo git config --system http.proxy ${ORACLE_HTTP_PROXY}
-
-echo -e "export http_proxy=${ORACLE_HTTP_PROXY}\nexport https_proxy=${ORACLE_HTTP_PROXY}" > /home/oracle/setproxy.sh
+sudo git config --global http.proxy ${ORACLE_HTTP_PROXY}
 
 export http_proxy=$ORACLE_HTTP_PROXY
 export https_proxy=$ORACLE_HTTP_PROXY
@@ -55,11 +60,8 @@ export https_proxy=$ORACLE_HTTP_PROXY
 echo "http_proxy set to: [${http_proxy}]"
 echo "https_proxy set to: [${https_proxy}]"
 
-echo ${PROXY_MESSAGE} 
-
-sudo git config --system --get http.proxy
-
-chmod +x ${PROXY_SCRIPT}
+echo "Proxy Configured for Oracle Network!!!"
 
 echo "This window will close automatically/or continue running in 3s..."
 sleep 3
+
