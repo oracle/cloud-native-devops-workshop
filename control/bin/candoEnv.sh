@@ -21,8 +21,7 @@ export PATH=$ORACLE_HOME/bin:$PATH
 
 ##################################################################
 
-export CONTENT_HOME="${USER_BASE}/content"
-export DEMOS_HOME="${CONTENT_HOME}/weblogic-innovation-seminars/WInS_Demos"
+export DEMOS_HOME="/u01/content/cloud-native-devops-workshop"
 export MW_HOME="/u01/wins/wls1221"
 export USER_PROJECTS="${MW_HOME}/user_projects"
 export DOMAINS="${USER_PROJECTS}/domains"
@@ -42,10 +41,19 @@ export PATH=/u01/python/bin:$PATH
 
 ###################################################################
 
-# Source global definitions
-if [ -f /home/oracle/setProxy.sh ]; then
-  . /home/oracle/setProxy.sh
+proxyresult=$(grep -c "export http_proxy" ~/.bashrc -s)
+
+if [ $proxyresult == 1 ]
+then
+    # bashrc configured for proxy
+    echo "Proxy Configured for Oracle Network!!!"
+    echo "Proxy Configured for Oracle Network!!!"
+else
+    # bashrc not configured for proxy
+    echo "Proxy NOT SET for Oracle Network!!!"
+    echo "Proxy NOT SET for Oracle Network!!!"
 fi
+
 
 JAVA_VERSION=`java -version 2>&1 |awk 'NR==1{ gsub(/"/,""); print $3 }'`
 echo "Default Java: $JAVA_VERSION"

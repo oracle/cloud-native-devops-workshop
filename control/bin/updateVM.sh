@@ -32,59 +32,5 @@ else
 fi
 
 echo "========================================"
-echo "Update Firefox TLS setting"
-FFPROFILE_FOLDER=$(cat ~/.mozilla/firefox/profiles.ini | grep Path | sed s/^Path=//)
-
-USERJS_FILE=~/.mozilla/firefox/$FFPROFILE_FOLDER/user.js
-USERJS_CONTENT="user_pref(\"security.tls.version.max\", 3);"
-
-grepresult=$(grep -c "$USERJS_CONTENT" $USERJS_FILE -s)
-
-if [ -f $USERJS_FILE ] && [ $grepresult == 1 ]
-then
-    # property already overrided
-    echo "Firefox TLS setting is correct."
-else
-    # property not yet overrided
-    echo $USERJS_CONTENT >> $USERJS_FILE
-    echo "Firefox TLS setting has been updated."
-fi
-
-echo "========================================"
-
-if [ -d /u01/python/ ] 
-then
-  echo "Python 3.5.2 is already installed. Remove directory (/u01/python) to reinstall."
-else
-  echo "Install Python prerequisites..."
-  
-  sudo /u01/content/weblogic-innovation-seminars/WInS_Demos/control/bin/sudo1.sh
-  
-  echo "Install Python 3.5.2"
-  
-  wget --no-check-certificate  -P /u01/ https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz
-    
-  cd /u01
-  
-  tar -xzf Python-3.5.2.tgz
-
-  mkdir /u01/python
-  cd Python-3.5.2
- 
-  ./configure --prefix=/u01/python
-  make
-  sudo make install
-  
-  sleep 3
-  
-  sudo rm -rf /u01/Python-3.5.2
-  sudo rm -f Python-3.5.2.tgz
-  
-  export PATH=/u01/python/bin:$PATH
-  
-  echo "Python 3.5.2 has been installed"
-fi
-
-echo "========================================"
 
 echo "Everything is up to date!"
