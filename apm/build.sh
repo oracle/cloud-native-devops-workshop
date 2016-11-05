@@ -69,13 +69,9 @@ chmod a+rx ProvisionApmJavaAsAgent.sh
 echo "yes" | ./ProvisionApmJavaAsAgent.sh -no-wallet -d "${APP_HOME}"
 popd
 
-<<<<<<< HEAD
 # Any agent config customizations
 sed 's#\(excludedServletClasses\" \: \[ \)#\1\"org.apache.cxf.transport.servlet.CXFServlet\", #' -i "${APP_HOME}/apmagent/config/Servlet.json"
 
-
-=======
->>>>>>> ae228825c55860fdd5328b2423459a88162754e1
 # Build the project
 pushd .
 cd ${MAVEN_PROJECT_DIR}
