@@ -1,0 +1,93 @@
+<html ng-app="spApp">
+<head>
+  <title>Single Page App Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="angular/app.js"></script>
+</head>
+<body ng-controller="mainController">
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/angular.html">Single Page App</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="#click1"><i class="fa fa-shield"></i> Shield</a></li>
+          <li><a href="#click2"><i class="fa fa-comment"></i> Comment</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT AND INJECTED VIEWS -->
+  <div id="main" class="container">
+  
+    <div class="page-header">
+      <h1>{{bannerText}}</h1>
+    </div>
+    <p>
+      <h3>Update Banner</h3>
+      <button type="button" class="btn btn-lg btn-default" ng-click="doDefaultBanner()">Default</button>
+      <button type="button" class="btn btn-lg btn-primary" ng-click="doAlternateBanner()">Alternate</button>
+      <button type="button" class="btn btn-lg btn-success" ng-click="doGibberishBanner()">Gibberish</button>
+      <button type="button" class="btn btn-lg btn-info" ng-click="doInvokeHostname()">Server Hostname</button>
+      <button type="button" class="btn btn-lg btn-danger" ng-click="doInvokeMessage()">Server Call</button>
+    </p>
+ 
+    <div class="page-header">
+      <h1>JSON Stock Quote (and more)</h1>
+    </div>
+    <p>
+        <p>
+         Make an external call from the server, return back the raw JSON, plus more.
+        </p>
+        <form class="form-inline">
+          <div class="form-group">
+           <label for="symbol">Stock Ticker Symbol</label>
+           <input type="text" class="form-control" id="symbol" value="ORCL" ng-model="symbol">
+          </div>
+          <button type="button" class="btn btn-lg btn-default" ng-click="doQuote()">Get Quote</button>
+        </form>
+        <pre>{{quoteText | json}}</pre>
+    </p>
+ 
+ 
+	  <div class="page-header">
+	    <h1>Sum of Random Integers</h1>
+	  </div>
+	  <p>
+	      <p>
+	       Each click of the Compute button will ask the server to inefficiently sum some random integers, allocating a big array to do so.<br>
+	       Enter a Return Array Index of 1048576 or greater to generate an exception.
+	      </p>
+	      <form class="form-inline">
+	        <div class="form-group">
+	         <label for="calcIndex">Return Array Index</label>
+	         <input type="text" class="form-control" id="calcIndex" placeholder="128" ng-model="calcIndex" pattern="\d+">
+	        </div>
+          <button type="button" class="btn btn-lg btn-default" ng-click="doInvokeCalcSum()">Compute</button>
+	      </form>
+	      <table class="table">
+	        <thead>
+	          <tr>
+	            <th>Size (# ints in array)</th>
+	            <th>Sum</th>
+	            <th>Int at Index</th>
+	          </tr>
+	        </thead>
+	        <tr ng-repeat="calc in calcList">
+	          <td>{{calc.size}}</td>
+	          <td>{{calc.sum}}</td>
+	          <td>{{calc.intAtIndex}}</td>
+	        </tr>
+	      </table>
+	  </p>
+	  
+	</div>
+</body>
+</html>
