@@ -16,7 +16,7 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.3.3.RELEASE</version>
     <relativePath />
-    
+
   </parent>
 
   <properties>
@@ -44,10 +44,20 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-tomcat</artifactId>
         <scope>provided</scope>
-    </dependency>    
+    </dependency>
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+        <version>3.1.7</version>
+    </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-jaxrs</artifactId>
+      <version>1.9.0</version>
     </dependency>
   </dependencies>
 
@@ -67,14 +77,14 @@
         </configuration>
         <executions>
           <execution>
-            <id>make-assembly</id> 
-            <phase>package</phase> 
+            <id>make-assembly</id>
+            <phase>package</phase>
             <goals>
-              <goal>single</goal> 
+              <goal>single</goal>
             </goals>
           </execution>
         </executions>
-      </plugin>      
+      </plugin>
     </plugins>
   </build>
 

@@ -1,0 +1,6 @@
+{
+  "runtime": {
+      "majorVersion": "8"
+  },
+  "command": "./apm_wrapper.sh ./apache-tomcat-*/bin/catalina.sh run"
+}
