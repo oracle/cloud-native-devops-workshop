@@ -27,6 +27,8 @@ The table below describes the meaning of viariables stored in that file
 
 TBD - table with veriables
 
+#### Creation of the Storage DBCS and JCS ###
+
 If your OPC account is just fresh created account - no storage, no DBCS instance, no JCS instance - then modify in the environment.properties only three variables:
 + opc.identity.domain
 + opc.username
@@ -34,10 +36,10 @@ If your OPC account is just fresh created account - no storage, no DBCS instance
 
 and execute the following scripts:
 
-    $ [oracle@localhost Desktop]$ cd /u01/content/weblogic-innovation-seminars/cloud.demos
-    $ [oracle@localhost cloud.demos]$ mvn install -Dgoal=generate-ssh-keypair
+    $ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/cloud.utils
+    $ [oracle@localhost cloud.utils]$ mvn install -Dgoal=generate-ssh-keypair
       (...) 
-    $ [oracle@localhost cloud.demos]$ mvn install -Dgoal=jcs-create-auto
+    $ [oracle@localhost cloud.utils]$ mvn install -Dgoal=jcs-create-auto
       (...)
 
 It would create for you all needed instances on JCS and DBCS
