@@ -9,6 +9,8 @@ Oracle Application Performance Monitoring Cloud Service is a software-as-a servi
 
 ![](images/apm.architecture.png)
 
+By incorporating metrics and telemetry into your DevOps and continuous delivery pipeline,
+
 In this tutorial, we will integrate APM into a continuous delivery flow to automatically incorporate the setup and installation of the APM agent during the build process, to ensure that we have continuous telemetry. Using the Application Performance Monitoring Web User Interface you can monitor all necessary details about the demo application.
 
 ### About this tutorial ###
@@ -26,13 +28,31 @@ This tutorial demonstrates how to:
 + Oracle Public Cloud Services account including:
 	+ Application Performance Monitoring Cloud Service
 	+ Application Container Cloud Service
-	+ Complete the [springboot-sample tutorial](../springboot-sample/) to set up a continuous delivery pipeeline from source control to ACCS deployment
+	+ [springboot-sample Tutorial](../springboot-sample/)
 
 ### Steps ###
 
+#### Complete the springboot-sample tutorial ####
+Complete the [springboot-sample tutorial](../springboot-sample/) to set up a continuous delivery pipeline from source control to ACCS deployment
+
+#### Prepare Notes ####
+There will be a number of keys, urls, and URI strings that you will need to keep track of across the setup process. To keep this clear in your head, create a Snippet (in a separate browser window/tab) or a text file with the following template, which we will fill in as we go along.
+```
+Maven Base URL:
+Agent Install Zip Path:
+
+AGENTINSTALL_ZIP_URL:
+
+AGENT_REGISTRATION_KEY:
+
+URI Prefix:
+WAR_FILE:
+```
+![](images/snippet.png)
+
 #### Download the Oracle Management Cloud Master Installer & Registration Key ####
 
-Download the master installer for your tenant and make note of a valid registration key. We will incorporate thes into our build process to automatically deploy the agent.
+Download the master installer for your tenant and make note of a valid registration key. We will incorporate these into our build process to automatically deploy the agent.
 
 [Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign_in](https://cloud.oracle.com) and go to Dashboard Page. Click **Launch APM**.
 
@@ -46,7 +66,7 @@ On the left menu select **Download** and click on the green download icon.
 
 Save the AgentInstall.zip file.
 
-Locate a *valid* registration key with a large maximum that we will use for agent deployment. Click **Registration Keys** on the left side menu. Copy-paste your Registration Key value into a Snippet (e.g. create one in a new browser window) or a local text file (e.g. Notepad) for reference in the upcoming steps.
+Locate a *valid* registration key with a large maximum that we will use for agent deployment. Click **Registration Keys** on the left side menu. Copy-paste your Registration Key value into your notes for AGENT_REGISTRATION_KEY.
 ![](images/05.read.reg.key.png)
 
 #### Upload Build Artifacts to Maven ####
@@ -64,24 +84,24 @@ Wait for the upload to complete successfully and then proceed to the next step.
 #### Determine the URL for the Maven Artifacts ####
 We will need to supply repository download URLs to the build scripts, which we will collect from the UI in this step.
 
-Return to Browse mode and then make note of the repository URL contained with the Distribution Management XML. Copy-paste this URL into a text file for further use. Then, navigate to our artifact by clicking on the version number in the list of artifact directories.
+Return to Browse mode and then make note of the repository URL contained with the Distribution Management XML. Copy-paste this URL into your notes as *Maven Base URL*. Then, navigate to our artifact by clicking on the version number in the list of artifact directories.
 ![](images/devcs-maven-url.png)
 
-Now we're in the folder for our artifact. Click on the zip file and make note of the repository path. Copy-paste this path into a text file for further use.
+Now we're in the folder for our artifact. Click on the zip file and make note of the repository path. Copy-paste this path into your notes as *Agent Install Zip Path*.
 ![](images/devcs-maven-path.png)
 
-Append the **Repository Path** to the end of the **repository URL** that we just wrote down, correcting for any redundant slashes (/) in the full URL. This will be the full URL to our installer.
+Append the *Agent Install Zip Path* to the end of the *Maven Base URL* that we just wrote down, correcting for any redundant slashes (/) in the full URL. Enter this full URL into your notes as AGENTINSTALL_ZIP_URL.
 
 #### Update the Build ####
 Now we'll return to our previous build and modify its configuration to run our APM-enabled build process. The script we are using here will package up the application as a Tomcat server based application and set up the APM agent automatically.
 
-First, come up with a short string (like perhaps a short combination of first and last names like "jdoe") that will be used as the URI prefix for you application. Save this prefix into a text file for further use. Use the prefix as the name of your war file by appending ".war" to the end, like "jdoe.war". This will be the value you use for the WAR_FILE parameter.
+First, come up with a short unique string (like your name or tenant identity domain) that will be used as the URI prefix for you application. Enter your chosen string as *URI Prefix* in your notes. Use the prefix as the name of your war file by appending ".war" to the end, like "trial021.war". Record this name as WAR_FILE in your notes.
 
 Return to the `springboot_build` build job and navigate to its **Configure** section. Click the (x) marks to delete the existing Maven steps, then add an **Execute shell** build step. Refer back to the full URL to our installer within Maven, the registration key that we collected in the previous steps, and your chose war file name. Substitute them into the appropriate <> within the Command as follows:
 ```
-export AGENTINSTALL_ZIP_URL=<installer Maven URL>
-export AGENT_REGISTRATION_KEY=<Registration Key>
-export WAR_FILE=<WAR file name>
+export AGENTINSTALL_ZIP_URL=<AGENTINSTALL_ZIP_URL from your notes>
+export AGENT_REGISTRATION_KEY=<AGENT_REGISTRATION_KEY from your notes>
+export WAR_FILE=<WAR_FILE from your notes>
 cd apm
 ./build.sh
 ```
@@ -123,27 +143,7 @@ You should land on a sample single-page web app, and see in the Network tab of t
 
 Click on the various samples on this page and then see their result in the APM UI.
 
-#### Generate Load ####
-To generate a reasonable amount of data, do the following about 4-5 times per minute over a period of 5-10 minutes:
- + Click on the different buttons on the page.
- + Try entering `1048576` into **Return Array Index** and see what comes back.
- + Reload the page
-
-#### View the APM UI ####
-Log back into the Oracle Management Cloud and navigate to Application Performance Monitoring.
-
-Click on Session list
- + Can you identify a session with AJAX errors?
- + Can you follow the AJAX error from a session to the server side request that caused the error?
-
-TODO: More stuff
- + identify whether /gw/quote is static data or makes a real call to some data service
- + How much memory does the /gw/randomsum allocate?
-
-
 #### Set Up Application Performance Monitoring ####
-
-TODO: Clarify wrt URI prefix.
 
 [Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign_in](https://cloud.oracle.com) and go to Dashboard Page. Click **Launch APM**.
 
@@ -164,7 +164,7 @@ Click the **Application definitions** menu item.
 Here you can define new application definition. This definition ensures that your application(s) will have a single pane view. Click **Create Application Definition**.
 ![](images/18.apm.app.def.png)
 
-On the Application Specification dialog define the criteria which is unique to your application or environment. In this tutorial you can use the customized context path of your Springboot sample application. In the tutorial this example is `springboot-johnsmith` because of renaming the *war* file. Use the name what you have choosen for your *war* file during the Apache Tomcat preparation. The Application Name can be anything but it is useful to use similar name to context path. Please note the Application Name can not contain '-'. Select **Pages** for criteria and choose **URL**. The pattern for URL can be the whole *war* filename without (!) *.war* extension. Check your application URL in the browser to find the right context path/criteria. Before you click **Save** you have to **Apply** the criteria.
+On the Application Specification dialog define the criteria which is unique to your application or environment. We will use the customized *URI Prefix* that we chose earlier as the identifier for our application. The Application Name can be anything but it is useful to use similar name to context path. Please note the Application Name can not contain '-'. Select **Pages** for criteria and choose **URL**. The pattern for URL should be *URI Prefix* from your notes. Check your application URL in the browser to find the right context path/criteria. Click **OK** for the criteria and then **Save** the Application Definition.
 ![](images/19.app.spec.criteria.png)
 
 Now go back to the Applications page using the left side menu. Click the hamburger icon and select the **Back** arrow then the **Applications** menu item.
@@ -175,7 +175,30 @@ Now go back to the Applications page using the left side menu. Click the hamburg
 Now you should see your newly defined Applications. Create some load (Ctrl+Refresh the applications page) on your applications to get some statistics.
 ![](images/21.applications.png)
 
-#### Installing and Provisioning APM Java Agent on Apache Tomcat Manually ####
+#### Generate Load ####
+To generate a reasonable amount of data, do the following about 4-5 times per minute over a period of 5-10 minutes:
++ Click on the different buttons on the page.
++ Try entering `1048576` into **Return Array Index** and see what comes back.
++ Reload the page
+
+#### Use APM to Understand Application Behavior ####
+Navigate back into your your application in APM, and set the time frame to the last 15 minutes:
+![](images/apm-time.png)
+
+Try use the product and navigate the APM UI answer the following questions:
+
+Can you figure out how much memory is allocated for each execution of the sum of random integers? Does this amount seem correct?
+![](images/apm-randomsum-samples.png)
+
+Can you tell whether the quote functionality uses static data or makes a real external web service call?
+![](images/apm-quote.png)
+
+Can you tell which button clicks result in AJAX calls and which do not?
+![](images/apm-eum-session.png)
+
+This concludes the required parts of this tutorial.
+
+#### (Optional) Installing and Provisioning APM Java Agent on Apache Tomcat (or other Java EE application servers) Manually ####
 
 	[oracle@localhost u01]$ unzip AgentInstall.zip -d /u01/apm_temp
 	Archive:  AgentInstall.zip
@@ -196,7 +219,7 @@ Now run the following command to download the software:
 	[oracle@localhost apm_temp]$
 
 
-After you have downloaded and extracted the installer, install and provision the APM Java Agent in your application server domain running the `./ProvisionApmJavaAsAgent.sh -d ${DESTINATION}` command in the staging directory. Just for sure change te permissions for `ProvisionApmJavaAsAgent.sh`.
+After you have downloaded and extracted the installer, install and provision the APM Java Agent in your application server domain running the `./ProvisionApmJavaAsAgent.sh -d ${DESTINATION}` command in the staging directory. Just for sure change the permissions for `ProvisionApmJavaAsAgent.sh`.
 
 	[oracle@localhost apm_temp]$ cd ${STAGE_DIR}
 	[oracle@localhost apm_staging]$ chmod +x ProvisionApmJavaAsAgent.sh

@@ -3,7 +3,7 @@ package com.example.springboot.rsapi;
 import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.endpoint.Server;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
-import org.apache.cxf.transport.servlet.CXFServlet;
+import org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet;
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -15,7 +15,7 @@ import org.springframework.context.annotation.DependsOn;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan(basePackageClasses = Api.class)
+@ComponentScan
 public class ApiConfig {
 
     @Autowired private Api apiService;
@@ -39,9 +39,11 @@ public class ApiConfig {
 
     @Bean
     public ServletRegistrationBean cxfServlet() {
-        final ServletRegistrationBean servletRegistrationBean = 
-            new ServletRegistrationBean(new CXFServlet(), "/api/*");
+        final ServletRegistrationBean servletRegistrationBean =
+            new ServletRegistrationBean(new CXFNonSpringJaxrsServlet(), "/api/*");
         servletRegistrationBean.setLoadOnStartup(1);
+        servletRegistrationBean.addInitParameter("jaxrs.serviceClasses", "com.example.springboot.rsapi.Api");
+        servletRegistrationBean.addInitParameter("jaxrs.providers", "org.codehaus.jackson.jaxrs.JacksonJsonProvider");
         return servletRegistrationBean;
     }
     
