@@ -130,7 +130,7 @@ Now let's make sure that the application deployment was successful and is return
 
 Point your browser at:
 
-```https://<your ACCS URL>/<URI prefix>```
+```https://<your ACCS URL>/<URI prefix from your notes>```
 
 Verify that the springboot-sample looks the same as it did before.
 
@@ -141,7 +141,7 @@ Next, let's what's going on in the page. In Chrome or Firefox, press Control-Shi
 You should land on a sample single-page web app, and see in the Network tab of the inspector that there are calls to `collector`. Those calls represent browser telemetry being returned to APM.
 ![](images/apm-browser.png)
 
-Click on the various samples on this page and then see their result in the APM UI.
+Click on the various samples on this page to see what they do.
 
 #### Set Up Application Performance Monitoring ####
 
@@ -178,11 +178,12 @@ Now you should see your newly defined Applications. Create some load (Ctrl+Refre
 #### Generate Load ####
 To generate a reasonable amount of data, do the following about 4-5 times per minute over a period of 5-10 minutes:
 + Click on the different buttons on the page.
-+ Try entering `1048576` into **Return Array Index** and see what comes back.
-+ Reload the page
++ Click the **Compute* button a few extra times
++ Try entering `1048576` into **Return Array Index** and see what comes back when you press **Compute**.
++ Reload the page and do the above sequence a few more times
 
 #### Use APM to Understand Application Behavior ####
-Navigate back into your your application in APM, and set the time frame to the last 15 minutes:
+Navigate back into your application in APM, and set the time frame to the last 15 minutes:
 ![](images/apm-time.png)
 
 Try use the product and navigate the APM UI answer the following questions:
@@ -193,7 +194,7 @@ Can you figure out how much memory is allocated for each execution of the sum of
 Can you tell whether the quote functionality uses static data or makes a real external web service call?
 ![](images/apm-quote.png)
 
-Can you tell which button clicks result in AJAX calls and which do not?
+Can you tell which button clicks result in AJAX calls and which do not? Can you determine the cause of the behavior when you click **Compute* with 1048576 in *Return Array Index*?
 ![](images/apm-eum-session.png)
 
 This concludes the required parts of this tutorial.

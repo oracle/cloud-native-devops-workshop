@@ -20,8 +20,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+@Component
 @Path("/")
 public class Api {
 	@Context ServletContext context;
