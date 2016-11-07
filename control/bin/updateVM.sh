@@ -34,5 +34,25 @@ else
 fi
 
 echo "========================================"
+echo "Update Firefox proxy settings"
+FFPROFILE_FOLDER=$(cat ~/.mozilla/firefox/profiles.ini | grep Path | sed s/^Path=//)
+
+USERJS_FILE=~/.mozilla/firefox/$FFPROFILE_FOLDER/user.js
+USERJS_PROXY="user_pref(\"network.proxy.type\", 5);"
+
+grepresult=$(grep -c "$USERJS_PROXY" $USERJS_FILE -s)
+
+if [ -f $USERJS_FILE ] && [ $grepresult == 1 ]
+then
+    # property already overrided
+    echo "Firefox proxy settings (Use system proxy settings) is correct."
+else
+    # property not yet overrided
+    echo $USERJS_PROXY >> $USERJS_FILE
+    echo "Firefox proxy settings (Use system proxy settings) has been updated."
+fi
+
+echo "========================================"
+
 
 echo "Everything is up to date!"
