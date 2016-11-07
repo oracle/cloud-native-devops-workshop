@@ -20,7 +20,7 @@ Domain To Partition  Conversion Tool | /u01/dpct |
 Oracle DataBase 12c | /u01/app/oracle/product/12.1.0/dbhome_1/ | The PDB name: **PDBORCL**
 
 #### Modifying environment.properties file ###
-To operate all scripts agains your own Oracle Public Cloud environment you need to set up file environment.properties in the /u01/content/weblogic-innovation-seminars/cloud.demos folder.
+To operate all scripts agains your own Oracle Public Cloud environment you need to set up file environment.properties in the /u01/content/cloud-native-devops-workshop/cloud-utils folder.
 We have prepared two samples environment.properties.us2 and environment.properties.emea2 that you could customize and copy to environment.properties file.
 
 The table below describes the meaning of viariables stored in that file
