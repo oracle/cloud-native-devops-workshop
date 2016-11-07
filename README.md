@@ -24,14 +24,6 @@ The content contains several independent modules that cover different aspects of
 
 ----
 
-####Run Lightweight Java container in the  Oracle Application Container Cloud Service####
-
-+ [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
-+ [Scale up/down Application Container Service using user interface and PaaS Service Manager (PSM) Command Line Interface (CLI) tool](accs-psm/README.md)
-
-####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
-+ [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
-
 ####Support SpringBoot application development lifecycle using Oracle Developer Cloud Service, Application Container Cloud Service and Oracle Enterprise Pack For Eclipse####
 
 + [Create Oracle Developer Cloud Service project for SpringBoot application](springboot-sample/create.devcs.project.md)
@@ -45,6 +37,15 @@ The content contains several independent modules that cover different aspects of
 ####Perform basic monitoring of application run inside Application Container Cloud thrugh diagnostic capabilities of Java Mission Control and Java Flight Recorder ####
 
 + [Monitor and tune SpringBoot application deployed on Oracle Application Container Cloud Service](monitor-tune/README.md)
+
+
+####Run Lightweight Java container in the  Oracle Application Container Cloud Service####
+
++ [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
++ [Scale up/down Application Container Service using user interface and PaaS Service Manager (PSM) Command Line Interface (CLI) tool](accs-psm/README.md)
+
+####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
++ [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
 
 #### Deploy Java EE application to Oracle Java Cloud Service####
 
