@@ -13,6 +13,8 @@ By incorporating metrics and telemetry into your DevOps and continuous delivery 
 
 In this tutorial, we will integrate APM into a continuous delivery flow to automatically incorporate the setup and installation of the APM agent during the build process, to ensure that we have continuous telemetry. Using the Application Performance Monitoring Web User Interface you can monitor all necessary details about the demo application.
 
+Once this is setup, the APM will be introduced into the application automatically during the build  and we will be able to get telemetry without further thinking about the process of deploying agents.
+
 ### About this tutorial ###
 This tutorial demonstrates how to:
 
@@ -33,7 +35,7 @@ This tutorial demonstrates how to:
 ### Steps ###
 
 #### Complete the springboot-sample tutorial ####
-Complete the [springboot-sample tutorial](../springboot-sample/) to set up a continuous delivery pipeline from source control to ACCS deployment
+Complete the [springboot-sample tutorial](../springboot-sample/) to set up a continuous delivery pipeline from source control to ACCS deployment for our sample application.
 
 #### Prepare Notes ####
 There will be a number of keys, urls, and URI strings that you will need to keep track of across the setup process. To keep this clear in your head, create a Snippet (in a separate browser window/tab) or a text file with the following template, which we will fill in as we go along.
@@ -52,6 +54,8 @@ WAR_FILE:
 
 #### Download the Oracle Management Cloud Master Installer & Registration Key ####
 
+The master installer is the starting point for all client-side Oracle Management Cloud components, such as the gateway, Cloud Agent, and APM Agent. In order to integrate APM into our build, we will need to supply this installer to our build process. To do this, we will start by downloading the tenant-specific master installer.
+
 Download the master installer for your tenant and make note of a valid registration key. We will incorporate these into our build process to automatically deploy the agent.
 
 [Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign_in](https://cloud.oracle.com) and go to Dashboard Page. Click **Launch APM**.
@@ -66,11 +70,11 @@ On the left menu select **Download** and click on the green download icon.
 
 Save the AgentInstall.zip file.
 
-Locate a *valid* registration key with a large maximum that we will use for agent deployment. Click **Registration Keys** on the left side menu. Copy-paste your Registration Key value into your notes for AGENT_REGISTRATION_KEY.
+Locate a **valid** registration key with a large maximum that we will use for agent deployment. Click **Registration Keys** on the left side menu. Copy-paste your Registration Key value into your notes for AGENT_REGISTRATION_KEY.
 ![](images/05.read.reg.key.png)
 
 #### Upload Build Artifacts to Maven ####
-The automated build will need access to APM agent binaries in order to perform the deployment. We will provide this to the build by uploading the necessary binaries to the maven repository.
+Now that we have downloaded the necessary master installer, we will need to make it available to our automated build process. We will use the DevCS Maven repository for this purpose. By uploading the master installer to the Maven repository, our build scripts will be able to download and use it to integrate the necessary agent components into our application.
 
 Log into the Developer Cloud Service and navigate to the Maven repository's **Upload** page
 ![](images/devcs-maven.png)
@@ -93,7 +97,7 @@ Now we're in the folder for our artifact. Click on the zip file and make note of
 Append the *Agent Install Zip Path* to the end of the *Maven Base URL* that we just wrote down, correcting for any redundant slashes (/) in the full URL. Enter this full URL into your notes as AGENTINSTALL_ZIP_URL.
 
 #### Update the Build ####
-Now we'll return to our previous build and modify its configuration to run our APM-enabled build process. The script we are using here will package up the application as a Tomcat server based application and set up the APM agent automatically.
+Now we'll return to our previous build and modify its configuration to run our APM-enabled build process. The script we are using here will package up the application as a Tomcat server based application and set up the APM agent automatically. The script will call maven to execute the springboot-sample code, and will additionally set up a Tomcat server and integrate APM into the Tomcat server. The deployment model in this case will be a WAR file based deployment, which means that our application will be served by Tomcat under a URI prefix derived from the WAR file name.
 
 First, come up with a short unique string (like your name or tenant identity domain) that will be used as the URI prefix for you application. Enter your chosen string as *URI Prefix* in your notes. Use the prefix as the name of your war file by appending ".war" to the end, like "trial021.war". Record this name as WAR_FILE in your notes.
 
