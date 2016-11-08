@@ -11,7 +11,7 @@ APM_PROP_FILE=${APM_AGENT_HOME}/config/AgentStartup.properties
 # Replace properties with hardcoded paths. First delete the "pathTo" properties
 # then add them back in with the correct paths from APM_AGENT_HOME
 
-sed "s#oracle.apmaas.common.pathTo#$APM_AGENT_HOME#d" -i.orig ${APM_PROP_FILE}
+sed "/oracle.apmaas.common.pathTo/d" -i.orig ${APM_PROP_FILE}
 echo "oracle.apmaas.common.pathToCertificate = ${APM_AGENT_HOME}/config/emcs.cer" >> ${APM_PROP_FILE}
 echo "oracle.apmaas.common.pathToCredentials = ${APM_AGENT_HOME}/config/AgentHttpBasic.properties" >> ${APM_PROP_FILE}
 
