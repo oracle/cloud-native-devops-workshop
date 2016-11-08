@@ -38,14 +38,13 @@ The content contains several independent modules that cover different aspects of
 
 + [Monitor and tune SpringBoot application deployed on Oracle Application Container Cloud Service](monitor-tune/README.md)
 
+####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
++ [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
 
-####Run Lightweight Java container in the  Oracle Application Container Cloud Service####
+####Run Lightweight Java container (Tomcat) in the  Oracle Application Container Cloud Service####
 
 + [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
 + [Scale up/down Application Container Service using user interface and PaaS Service Manager (PSM) Command Line Interface (CLI) tool](accs-psm/README.md)
-
-####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
-+ [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
 
 #### Deploy Java EE application to Oracle Java Cloud Service####
 
