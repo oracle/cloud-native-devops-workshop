@@ -60,7 +60,7 @@ The content contains several independent modules that cover different aspects of
 + [Scale-Out Oracle Java Cloud Service using user interface](jcs-scale-ui/README.md)
 + [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](jcs-scale-psm/README.md)
 
-####Making Java Cloud Service elasticly sclable through Policy based Auto-scaling####
+####Making Java Cloud Service elastically scalable through Policy based Auto-scaling####
 
 + [Oracle Java Cloud Service Policy Based Auto Scaling](jcs-autoscale/README.md)
 
@@ -69,7 +69,7 @@ The content contains several independent modules that cover different aspects of
 + [Convert WebLogic 11g domain into the 12cR2 partition using DPCT (Domain to Partition Conversion Tool)](dpct/README.md)
 + [Move partition from WebLogic Server 12cR2 to Oracle Java Cloud Service](lift-and-shift/README.md)
 
-####Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool ####
+####Migrate WebLogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool ####
 
 + [Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool](app-2-cloud/README.md)
 
