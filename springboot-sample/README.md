@@ -79,6 +79,10 @@ Change to the **Source Control** tab and select **Git**. In the git's properties
 
 ![alt text](images/07.job.scm.png "Configure source control")
 
+Click **Triggers** tab to configure *SCM polling*. Select **Based on SCM polling schedule**. This ensures if any files in the source code repository has changed then the build will be fired.
+
+![alt text](images/07.scm.trigger.png "Configure source control")
+
 Change to **Build Steps** tab and add **Maven 3** build step. Enter **clean install** as Goals and **springboot-sample/pom.xml** to POM File field. (In case if Build Steps tab just shows **Loading...** for a long time, save the Build configuration then re-open and continue.)
 
 ![alt text](images/08.job.maven.png "Add build step")
@@ -91,7 +95,7 @@ Click on **Save** to update the new job configurations. To check the build job c
 
 ![alt text](images/10.build.artifacts.png "Build artifacts")
 
-Please note the build job contains an extra build step which packs the default artifact `springbootdemo-0.0.1.war` and `manifest.json` (ACCS descriptor from the *springboot-sample/src/acc.resources* folder) into a zip archive. This archive is the desired format to deploy a Java application to ACCS.
+Please note the build job contains an extra build step which packs the default artifact `springbootdemo-0.0.1.war` and `manifest.json` (ACCS descriptor from the *springboot-sample/src/resources* folder) into a zip archive. This archive is the desired format to deploy a Java application to ACCS.
 
 ### Configure Application Container Cloud service deployment ###
 
