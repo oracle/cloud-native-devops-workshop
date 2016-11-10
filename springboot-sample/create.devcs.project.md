@@ -47,7 +47,7 @@ Enter the name of the project and set the desired properties. Click **Next** and
 ![](images/03.select.template.png)
 
 Click **Next** and on the Properties page select *Import existing repository*.
-Enter or copy the *https://github.com/oracle-weblogic/cloud-native-devops-workshop.git* repository address.
+Enter or copy the *https://github.com/oracle/cloud-native-devops-workshop.git* repository address.
 
 ![](images/04.import.repository.png "Import external repository")
 
