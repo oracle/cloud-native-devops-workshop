@@ -204,4 +204,4 @@ Switch back to the terminal where `top` is running to check the CPU utilization 
 	    7 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kworker/u:0H                                                                                                       
 	    8 root      RT   0     0    0    0 S  0.0  0.0   0:00.04 migration/0                                                                                                        
 
-TODO: check AUTO SCALING completed.
+

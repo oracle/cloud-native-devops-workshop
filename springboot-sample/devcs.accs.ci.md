@@ -67,6 +67,10 @@ Change to the **Source Control** tab and select **Git**. In the git's properties
 
 ![alt text](images/07.job.scm.png "Configure source control")
 
+Click **Triggers** tab to configure *SCM polling*. Select **Based on SCM polling schedule**. This ensures if any files in the source code repository has changed then the build will be fired.
+
+![alt text](images/07.scm.trigger.png "Configure source control")
+
 Change to **Build Steps** tab and add **Maven 3** build step. Enter **clean install** as Goals and **springboot-sample/pom.xml** to POM File field. (In case if Build Steps tab just shows **Loading...** for a long time, save the Build configuration then re-open and continue.)
 
 ![alt text](images/08.job.maven.png "Add build step")
