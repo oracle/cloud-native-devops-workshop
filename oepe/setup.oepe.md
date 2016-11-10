@@ -46,7 +46,6 @@ If you are connecting to Oracle Developer Cloud Service for the first time, clic
 
 In the Oracle Cloud Service Connection dialog, enter the following:
 
-+ **Data Center**: Select the Oracle Cloud data center.
 + **Identity Domain**: Enter the identity domain of Oracle Developer Cloud Service.
 + **Username** and **Password**: Enter the user name and password.
 + **Connection Name**: Enter a name for the service instance, if necessary. By default, the connection name is set to the identity domain name.
