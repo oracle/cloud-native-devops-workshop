@@ -28,7 +28,7 @@ The table below describes the meaning of variables stored in that file:
 Property name|Property Value|Comment
 --- | --- | ---
 **Account properties**||
-opc.base.url|jcs.emea.oraclecloud.com|For EMEA datacenter. For US use: jaas.oraclecloud.com
+opc.base.url|jcs.emea.oraclecloud.com|For **EMEA** datacenter. For **US** use: jaas.oraclecloud.com
 opc.identity.domain|YOUR IDENTITY DOMAIN|Identity domain.
 opc.username|YOUR USERNAME|Cloud username
 opc.password|YOUR PASSWORD|Cloud password
@@ -39,7 +39,7 @@ opc.storage.container|YOUR STORAGE CONTAINER NAME|Container name only.
 ssh.user|opc|
 ssh.public.key||Copy the content of your **publicKey** file generated during Database Cloud Service creation.
 ssh.passphrase||The passphrase belongs to privateKey. Leave empty if there is no passphrase.
-ssh.privatekey||The name of your file contains private key| generated during Database Cloud Service creation. Make sure that the file is in the **YOUR_LOCAL_GIT_REPO_CLONE/cloud-utils** (in case provided VBox it is: /u01/content/cloud-native-devops-workshop/cloud-utils) folder. Most likely its name: **privateKey**
+ssh.privatekey||The name of your file contains private key generated during Database Cloud Service creation. Make sure that the file is in the **YOUR_LOCAL_GIT_REPO_CLONE/cloud-utils** (in case provided VBox it is: /u01/content/cloud-native-devops-workshop/cloud-utils) folder. Most likely its name: **privateKey**
 **Java Cloud Service properties**||
 jcs.base.url|jaas.oraclecloud.com|
 jcs.rest.url|/paas/service/jcs/api/v1.1/instances/|
