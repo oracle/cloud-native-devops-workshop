@@ -51,6 +51,10 @@ else
     echo $USERJS_PROXY >> $USERJS_FILE
     echo "Firefox proxy settings (Use system proxy settings) has been updated."
 fi
+echo "========================================"
+echo "Update Desktop Icon"
+
+sed "s|Update WInS Demos|Update Demos|g" -i ~/Desktop/Update\ Demos.desktop
 
 echo "========================================"
 
