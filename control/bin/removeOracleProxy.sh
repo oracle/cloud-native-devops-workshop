@@ -41,6 +41,14 @@ then
     echo "Proxy has been removed from ~/.bashrc configuration"
 fi
 #=========================================================
+ECLIPSE_NETWORK_CONFIG=~/workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.net.prefs
+rm -f $ECLIPSE_NETWORK_CONFIG
+
+ECLIPSE_NETWORK_CONFIG=/u01/oepe-12.2.1.5.201610051614/configuration/.settings/org.eclipse.core.net.prefs
+rm -f $ECLIPSE_NETWORK_CONFIG
+
+echo "Eclipse proxy configuration ($ECLIPSE_NETWORK_CONFIG) has been deleted."
+#=========================================================
 
 echo "Removing Proxy Settings from GIT!"
 
