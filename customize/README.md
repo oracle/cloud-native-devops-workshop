@@ -14,7 +14,7 @@ Open the browser and login to [https://github.com](https://github.com) In case y
 
 Once you logged in click on top right corner into the context menu marked with sign "+" and select **Import repository**
 
-In the field Old repository type: `https://github.com/oracle/cloud-native-devops-workshop` and in the Name field type `cloud-native-devops-workshop`. Press the button **Begin import**
+In the field Old repository type: `https://github.com/oracle/cloud-native-devops-workshop.git` and in the Name field type `cloud-native-devops-workshop`. Press the button **Begin import**
 
 After the import is done your repository is available at `https://github.com/YOUR_GITHUB_USERNAME/cloud-native-devops-workshop`.
 
