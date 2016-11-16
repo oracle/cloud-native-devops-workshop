@@ -14,6 +14,7 @@ MAVEN_PROJECT_WAR=target/springbootdemo-0.0.1.war.original
 
 TOMCAT_VERSION=8.5.6
 TOMCAT_DIST=apache-tomcat-${TOMCAT_VERSION}
+TOMCAT_DL_URL="http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.6/bin/apache-tomcat-8.5.6.tar.gz"
 
 APP_HOME="`pwd`"
 
@@ -79,18 +80,11 @@ mvn --version
 mvn clean package
 popd
 
-# Download Tomcat distribution if necessary
-if [ ! -r ${TOMCAT_DIST}.tar.gz ]; then
-  # Find the closest mirror
-  MIRROR=`curl ${PROXY_ARG} 'https://www.apache.org/dyn/closer.cgi' |
-      grep -o '<strong>[^<]*</strong>' |
-      sed 's/<[^>]*>//g' |
-      head -1`
-  curl -X GET \
-     ${PROXY_ARG} \
-     -o ${TOMCAT_DIST}.tar.gz \
-     ${MIRROR}/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/${TOMCAT_DIST}.tar.gz
-fi
+# Download Tomcat distribution
+curl -X GET \
+   ${PROXY_ARG} \
+   -o ${TOMCAT_DIST}.tar.gz \
+   "${TOMCAT_DL_URL}"
 
 # Extract Tomcat distribution
 tar -xf ${TOMCAT_DIST}.tar.gz
