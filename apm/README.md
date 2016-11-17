@@ -101,7 +101,7 @@ Now we'll return to our previous build and modify its configuration to run our A
 
 First, come up with a short unique string (like your name or tenant identity domain) that will be used as the URI prefix for you application. Enter your chosen string as *URI Prefix* in your notes. Use the prefix as the name of your war file by appending ".war" to the end, like "trial021.war". Record this name as WAR_FILE in your notes.
 
-Return to the `springboot_build` build job and navigate to its **Configure** section. Click the (x) marks to delete the existing Maven steps, then add an **Execute shell** build step. Refer back to the full URL to our installer within Maven, the registration key that we collected in the previous steps, and your chose war file name. Substitute them into the appropriate <> within the Command as follows:
+Return to the `springboot_build` build job and navigate to its **Configure** section. Add a new **Execute shell** build step. Refer back to the full URL to our installer within Maven, the registration key that we collected in the previous steps, and your chose war file name. Substitute them into the appropriate <> within the Command as follows:
 ```
 export AGENTINSTALL_ZIP_URL=<AGENTINSTALL_ZIP_URL from your notes>
 export AGENT_REGISTRATION_KEY=<AGENT_REGISTRATION_KEY from your notes>
