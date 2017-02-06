@@ -65,7 +65,7 @@ EOF
 echo "********** CREATING DB ENTRIES FOR PetStore Application ***************************"
 
 sqlplus petstore/${dbpassword}@${pdb} <<EOF
- @../dpct/petstore.sql
+ @../dpct/sql/petstore.sql
  exit;
 EOF
 
@@ -135,7 +135,7 @@ cd $DOMAIN_HOME/bin
 
 cd $APP2CLOUD_DIR
 
-$JAVA_HOME/bin/java -Dweblogic.deploy.UploadLargeFile=true weblogic.WLST $APP2CLOUD_DIR/wlst/deployPetstore.py
+$JAVA_HOME/bin/java -Dweblogic.deploy.UploadLargeFile=true -Dweblogic.RootDirectory=$DOMAIN_HOME weblogic.WLST $APP2CLOUD_DIR/wlst/deployPetstore.py
 
 echo "********** OPEN PETSTORE APPLICATION AT http://localhost:7003/petstore/faces/catalog.jsp"
 
