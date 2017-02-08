@@ -5,6 +5,12 @@
         "labs": [
             {
                 "number": "0",
+                "filename": "README.md",
+                "title": "README First",
+                "description": "Step-by-step workshop instructions"
+            },
+            {
+                "number": "10",
                 "filename": "StudentGuide.md",
                 "title": "Student Guide",
                 "description": "Workshop guidance and prerequisites"
