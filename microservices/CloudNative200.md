@@ -515,7 +515,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 - Click on the **Finish button** in the Push Confirmation dialog
 - Click on **Ok** in Push Result dialog
 
-### **STEP 21**: Complete the Create Filter Task
+### **STEP 20**: Complete the Create Filter Task
 
 - In the lower left Eclipse Task List, double click on **Create Filter on Twitter Feed** task
 
@@ -527,7 +527,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 ## Create Merge Request
 
-### **STEP 22**: Review Sprint Status and create Merge Request
+### **STEP 21**: Review Sprint Status and create Merge Request
 
 - Return to the Developer Cloud Service Dashboard in the browser, and select **Agile**. If your default Board is not set to Microservices, then set the Find Board Filter to All, and select the Microservices board.
 
@@ -571,7 +571,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ***NOTE: If you are using a single user environment, you will skip the next step, and go to the following step titled: “Merge Requests”***
 
-### **STEP 23**: Sign Out as Bala Gupta and Sign In as Lisa Jones
+### **STEP 22**: Sign Out as Bala Gupta and Sign In as Lisa Jones
 
 - Click on the **bala.gupta** dropdown located in the top right corner of the screen. Select **Sign Out**.
 
@@ -595,7 +595,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image103.png)  
 
-### **STEP 24**: Merge Requests
+### **STEP 23**: Merge Requests
 
 - Before moving forward, “Lisa Jones” can take a look at the **Burndown** and **Sprint Reports** by clicking on the **Agile** navigation, then the **Reports** button
 
@@ -631,7 +631,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ## Test the JavaTwitterMicroservice in the Cloud
 
-### **STEP 25**: Test Microservice
+### **STEP 24**: Test Microservice
 
 - Once the service has successfully deployed, navigate to **Deployments** and click on the **JavaTwitterMicroservice** link
 
@@ -671,7 +671,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 You have two options for managing this code change in the version control system. If you would like more practice with the multi-user workflow, you can start a new branch for this feature, commit to that branch, create a merge request, and approve the merge. We’ll refer to this in the instructions as **Method A**. If you’re comfortable with that workflow, you can switch to master in your local repository, pull the latest revision from the cloud, and commit and push directly to master for this exercise. This will be **Method B**.
 
-### **STEP 26**: Create New Twitter App
+### **STEP 25**: Create New Twitter App
 
 To generate the unique twitter credentials for our microservices, we need to sign in to twitter and create a new application for this project, then generate access tokens for it.
 
@@ -757,7 +757,7 @@ To generate the unique twitter credentials for our microservices, we need to sig
 
 In this appendix you will download and install Eclipse containing the Oracle Plugin.
 
-### **STEP 27**: Download Eclipse
+### **STEP 26**: Download Eclipse
 
 - Go to the following URL: http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html
 
@@ -768,7 +768,7 @@ In this appendix you will download and install Eclipse containing the Oracle Plu
 - Once you’ve downloaded eclipse, extract the zip file and install.
 Optionally Configure Proxies
 
-### **STEP 28**: Configuring Proxies
+### **STEP 27**: Configuring Proxies
 
 If you are running Eclipse behind a firewall and need to configure the proxy setting, there are several updates to be made. First, you need to ensure that Eclipse’s proxy is set, next you need to update the maven proxy setting, then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -792,7 +792,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/200/image138.png)
 
-### **STEP 29**: Update the Eclipse / Maven proxy
+### **STEP 28**: Update the Eclipse / Maven proxy
 
 - From the **Eclipse > Preference** or **Window > Preferences** panel, enter **Maven** into the search box. Click on the Maven **User Settings**. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings are to be located in the **/home/oracle/.m2** directory
 
