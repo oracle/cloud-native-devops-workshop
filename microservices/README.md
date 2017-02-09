@@ -22,7 +22,7 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 
 ## Lab 100: Agile Project Management
 
-**Documenation**: CloudNative100.md
+**Documenation**: [CloudNative100.md](CloudNative100.md)
 
 ### Objectives
 
@@ -36,7 +36,7 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 
 ## Lab 200: Continuous Delivery of Java Microservices
 
-**Documenation**: CloudNative200.md
+**Documenation**: [CloudNative200.md](CloudNative200.md)
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository
@@ -45,7 +45,7 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 
 ## Lab 300: Cloud Native Rapid Javascript Devlopment with node.js
 
-**Documenation**: CloudNative300.md
+**Documenation**: [CloudNative300.md](CloudNative300.md)
 
 ### Objectives
 
@@ -56,7 +56,7 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 
 ## Lab 400:  Cloud Native Develper Cloud Service Administration
 
-**Documenation**: CloudNative400.md
+**Documenation**: [CloudNative400.md](CloudNative400.md)
 
 ### Objectives
 
