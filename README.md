@@ -1,6 +1,6 @@
 ![](common/images/customer.logo.png)
 ---
-# ORACLE Cloud-Native DevOps workshop #
+# ORACLE Touch the Cloud Workshop #
 
 ## Introduction ##
 
