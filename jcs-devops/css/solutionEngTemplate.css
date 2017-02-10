@@ -167,7 +167,7 @@ body {
   background-color:#E0E8ED;
   font-weight: medium;
   font-family: 'Tahoma', sans-serif;
-  color:#000000;    
+  color:#000000;
     padding: 5px 5px 5px 5px;
     margin-left: 25px;
     position: relative;
@@ -286,7 +286,7 @@ html {
 #labguide h2,
 #labguide h3 {
     text-align: left;
-    
+
 }
 
 #labguide h3 {
@@ -308,7 +308,7 @@ html {
 
 
 div {
-    
+
 }
 
 #introduction {
@@ -319,7 +319,11 @@ div {
 
 @media (max-width: 32rem) {
     #introduction {
-        width: 90%;    
+        width: 90%;
     }
-    
+
+}
+
+.toc-item {
+    margin-top:10px;
 }
