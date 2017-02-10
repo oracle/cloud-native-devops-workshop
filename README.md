@@ -24,15 +24,40 @@ The content contains several independent modules that cover different aspects of
 
 ----
 
-#### A ####
+#### Mobile Cloud Services ####
+##### Developement #####
++ [Creating Mobile API](mcs/create.cloud.services.md)
++ [Utilizing Mobile Accelerator (MAX)](mcs/max.md)
 
-+ [Create Oracle Developer Cloud Service project for SpringBoot application](springboot-sample/create.devcs.project.md)
-+ [Create continuous build integration using Oracle Developer Cloud Service and Oracle Application Container Cloud Service](springboot-sample/devcs.accs.ci.md)
-+ [Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service](oepe/setup.oepe.md)
+##### Interaction #####
++ [Testing Mobile Application on built-in Simulator](mcs/simulator.md)
++ [Testing on Real Device] (mcs/deployment.md)
 
-####Customizing and personalizing the workshop content####
+#### Process Cloud Service ####
 
-+ [Customize and personalize the workshop materials](customize/README.md)
+##### Business Process Definition ##### 
++ [Composer](pcs/process.composer.md)
++ [Process Definition](pcs/process.definition.md)
++ [Process Testing](pcs/process.testing.md)
++ [Process Deployment](pcs/process.deployment.md)
++ [Process Administration](pcs/process.deployment.md)
+
+##### End User Interaction ##### 
++ [Workspace](pcs/process.workspace.md)
++ [Task List](pcs/process.tasklist.md)
++ [Process Owner Tracking](pcs/process.tracking.md)
++ [Administration](pcs/process.admin.md)
++ [Other Cloud Services Integration](pcs/process.admin.md)
+
+#### Integration Cloud Service ####
+
+##### Integration Definition ##### 
++ [Defining Connection](pcs/ics.defining.md)
++ [Creating Integration Flow](ics/ics.creation.md)
+
+##### Monitoring ##### 
++ [Deployment](ics/ics.deployment.md)
++ [Monitoring](ics/ics.monitoring.md)
 
 ---
 
