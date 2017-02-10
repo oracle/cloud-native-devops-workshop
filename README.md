@@ -14,8 +14,6 @@ The workshop is intended to work with an Oracle PaaS trial account. To get an ac
 + Oracle Cloud **identity domain**
 + **Data center/region**
 
-NOTE: Before you start to use your new Oracle Public Cloud services make sure that the replication policy has been set for your account. Otherwise you can not create storage container which is necessary for most of the services. See [Selecting a Replication Policy for Oracle Storage Cloud Service](https://docs.oracle.com/cloud/latest/storagecs_common/CSSTO/GUID-5D53C11F-3D9E-43E4-8D1D-DDBB95DEC715.htm).
-
 ### Important ###
 
 During the execution you will create several public cloud service instances what will be available on the world wide web. Even if these instances are for demo purposes keep in mind it is not a best practice to use weak or known (stored here in the tutorial) passwords especially in such open environment. Thus this workshop content does not recommend any password so you need to define those. You will be asked to provide password at certain points and please remember them  for  later usage.
@@ -31,18 +29,18 @@ The content contains several independent modules that cover different aspects of
 
 ##### Interaction #####
 + [Testing Mobile Application on built-in Simulator](mcs/simulator.md)
-+ [Testing on Real Device] (mcs/deployment.md)
++ [Testing on Real Device](mcs/deployment.md)
 
 #### Process Cloud Service ####
 
-##### Business Process Definition ##### 
+##### Business Process Definition 
 + [Composer](pcs/process.composer.md)
 + [Process Definition](pcs/process.definition.md)
 + [Process Testing](pcs/process.testing.md)
 + [Process Deployment](pcs/process.deployment.md)
 + [Process Administration](pcs/process.deployment.md)
 
-##### End User Interaction ##### 
+##### End User Interaction 
 + [Workspace](pcs/process.workspace.md)
 + [Task List](pcs/process.tasklist.md)
 + [Process Owner Tracking](pcs/process.tracking.md)
@@ -51,11 +49,11 @@ The content contains several independent modules that cover different aspects of
 
 #### Integration Cloud Service ####
 
-##### Integration Definition ##### 
+##### Integration Definition  
 + [Defining Connection](pcs/ics.defining.md)
 + [Creating Integration Flow](ics/ics.creation.md)
 
-##### Monitoring ##### 
+##### Monitoring
 + [Deployment](ics/ics.deployment.md)
 + [Monitoring](ics/ics.monitoring.md)
 
