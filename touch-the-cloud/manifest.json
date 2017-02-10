@@ -1,0 +1,44 @@
+{
+    "workshop": {
+        "title": "Touch The Cloud",
+        "description": "This the TTC blurb",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "README First",
+                "description": "Step-by-step workshop instructions"
+            },
+            {
+                "number": "10",
+                "filename": "StudentGuide.md",
+                "title": "Student Guide",
+                "description": "Workshop guidance and prerequisites"
+            },
+            {
+                "number": "100",
+                "filename": "TouchTheCloud100.md",
+                "title": "Lab 100: Mobile Application Accelerator",
+                "description": "Mobile Application Accelerator (MAX) is a feature of Oracle Mobile Cloud Service that allows anyone to quickly create, test, and publish sophisticated cross-platform mobile apps. No coding required. "
+            },
+            {
+                "number": "200",
+                "filename": "TouchTheCloud200.md",
+                "title": "Lab 200: Process Management",
+                "description": "Oracle Process Cloud Service enables you to rapidly design, automate, and manage business processes in the cloud. "
+            },
+            {
+                "number": "300",
+                "filename": "TouchTheCloud300.md",
+                "title": "Lab 300: Zero Code Integration",
+                "description": "Oracle Integration Cloud Service simplifies how you build integrations in the cloud, letting you connect securely to applications and services both in the cloud and on-premises."
+            },
+            {
+                "number": "400",
+                "filename": "TouchTheCloud400.md",
+                "title": "Lab 400: Business Analytics",
+                "description": "IA blurb - whenever they decided if it is Insight or AI ???"
+            }
+        ]
+    }
+}

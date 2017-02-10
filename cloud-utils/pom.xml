@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.oracle.wins.cloud</groupId>
+  <artifactId>cloud-utils</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <goal>SPECIFY_GOAL</goal>
+    <job.id>SPECIFY_JOB_ID</job.id>
+    <jcs.ip>SPECIFY_IP</jcs.ip>
+    <opc.properties>environment.properties</opc.properties>
+    <skipTests>true</skipTests>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>  
+
+  <name>cloud-utils</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>0.1.53</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <type>maven-plugin</type>
+    </dependency>   
+  </dependencies>
+  
+  <profiles>
+    <profile>
+      <id>cloudAPI</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+        <property>
+          <name>executeCloudUtil</name>
+        </property>
+      </activation>
+      <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+          <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.8</version>
+            <executions>
+              <execution>
+                <id>first</id>
+                <phase>install</phase>
+                <configuration>
+                  <target>
+                    <property name="runtime_classpath" refid="maven.runtime.classpath" />
+                    <java classname="com.oracle.wins.restclient.ExecuteGoal"
+                      fork="true" failonerror="true" maxmemory="512m">
+                      <arg value="${opc.properties}" />
+                      <arg value="${goal}" />
+                      <arg value="${job.id}" />
+                      <classpath>
+                        <pathelement path="${runtime_classpath}" />
+                        <pathelement path="${user.dir}" />
+                      </classpath>
+                    </java>
+                  </target>
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>
