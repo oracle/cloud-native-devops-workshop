@@ -20,64 +20,15 @@ NOTE: Before you start to use your new Oracle Public Cloud services make sure th
 
 During the execution you will create several public cloud service instances what will be available on the world wide web. Even if these instances are for demo purposes keep in mind it is not a best practice to use weak or known (stored here in the tutorial) passwords especially in such open environment. Thus this workshop content does not recommend any password so you need to define those. You will be asked to provide password at certain points and please remember them  for  later usage.
 
-The content contains several independent modules that cover different aspects of the application development in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependent on each other.
+The content contains several independent modules that cover different aspects of the platform as a services (PaaS) in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependent on each other.
 
 ----
 
-####Support SpringBoot application development lifecycle using Oracle Developer Cloud Service, Application Container Cloud Service and Oracle Enterprise Pack For Eclipse####
+#### A ####
 
 + [Create Oracle Developer Cloud Service project for SpringBoot application](springboot-sample/create.devcs.project.md)
 + [Create continuous build integration using Oracle Developer Cloud Service and Oracle Application Container Cloud Service](springboot-sample/devcs.accs.ci.md)
 + [Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service](oepe/setup.oepe.md)
-
-####Bind Frontend Application running on lightweight container in Oracle Appplication Container Cloud with backend resources running on Java Cloud Service####
-
-+ [Implement new function (REST client) in SpringBoot sample application using Service Bindings to access Oracle Java Cloud Services](devops-bind/README.md)
-
-####Perform basic monitoring of application run inside Application Container Cloud thrugh diagnostic capabilities of Java Mission Control and Java Flight Recorder ####
-
-+ [Monitor and tune SpringBoot application deployed on Oracle Application Container Cloud Service](monitor-tune/README.md)
-
-####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
-+ [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
-
-####Run Lightweight Java container (Tomcat) in the  Oracle Application Container Cloud Service####
-
-+ [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
-+ [Scale up/down Application Container Service using user interface and PaaS Service Manager (PSM) Command Line Interface (CLI) tool](accs-psm/README.md)
-
-#### Deploy Java EE application to Oracle Java Cloud Service####
-
-+ [Create Database Cloud Service Instance using user interface](dbcs-create/README.md)
-+ [Create Java Cloud Service Instance using user interface](jcs-create/README.md)
-+ [Prepare Database Cloud Service Instance to store sample application's data](dbcs-prepare/README.md)
-+ [Deploy Java EE sample application to Oracle Java Cloud Service using Admin console](jcs-deploy/README.md)
-
-####Manage Oracle Java Cloud Service using UI and PaaS Service Manager####
-
-+ [Direct access and management of Oracle Java Cloud Service](jcs-direct/README.md)
-+ [Scale-Out Oracle Java Cloud Service using user interface](jcs-scale-ui/README.md)
-+ [Scale-In Oracle Java Cloud Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](jcs-scale-psm/README.md)
-
-####Making Java Cloud Service elastically scalable through Policy based Auto-scaling####
-
-+ [Oracle Java Cloud Service Policy Based Auto Scaling](jcs-autoscale/README.md)
-
-####Upgrade WebLogic Server 11g (10.3.6) running on premise to 12cR2 with Multitenancy and migrate to Java Cloud Service####
-
-+ [Convert WebLogic 11g domain into the 12cR2 partition using DPCT (Domain to Partition Conversion Tool)](dpct/README.md)
-+ [Move partition from WebLogic Server 12cR2 to Oracle Java Cloud Service](lift-and-shift/README.md)
-
-####Migrate WebLogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool ####
-
-+ [Migrate Weblogic 10.3.6 (on premise) Application to Java Cloud Service with App2Cloud tool](app-2-cloud/README.md)
-
-####Clean up the environment####
-
-+ [Delete Java Cloud, Database Cloud and Database Container Services using user interface](cleanup/cleanup-ui.md)
-+ [Delete Application Cloud Container Service using PaaS Service Manager (PSM) Command Line Interface (CLI)](cleanup/cleanup-psm.md)
-
----
 
 ####Customizing and personalizing the workshop content####
 
