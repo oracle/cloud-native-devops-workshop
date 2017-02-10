@@ -22,7 +22,7 @@ The content contains several independent modules that cover different aspects of
 ---
 ## Workshop ##
 
-[Workshop Material](touch-the-cloud/index.html)
+[Workshop Material](https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html)
 ---
 ## Usefull Links ##
 
