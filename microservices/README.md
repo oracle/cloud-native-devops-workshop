@@ -3,7 +3,7 @@
 
 ### **STEP 1** - Review Student Guide
 
-Review the ***Student Guide*** to properly **configure your environment**
+Review the [Student Guide](StudentGuide.md) to properly **configure your environment**
 
 ### **STEP 2** - Optional - Review interactive Workshop Overview 
 
@@ -14,7 +14,7 @@ visit this URL: http://launch.oracle.com/?cloudnative
 
 **To View in Interactive Labguide Format:**  
 
-https://derekoneil.github.io/cloud-native-devops-workshop/microservices/index.html
+https://derekoneil.github.io/cloud-native-devops-workshop/microservices
 
 # DevOps: Cloud Native Microservices Workshops
 
