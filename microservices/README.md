@@ -14,7 +14,7 @@ visit this URL: http://launch.oracle.com/?cloudnative
 
 **To View in Interactive Labguide Format:**  
 
-https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
+https://oracle.derekoneil.io/cloud-native-devops-workshop/microservices/index.html
 
 # DevOps: Cloud Native Microservices Workshops
 
