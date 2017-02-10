@@ -6,14 +6,20 @@
             {
                 "number": "100",
                 "filename": "JCSPipelineStackManager100.md",
-                "title": "Lab 100: Creating the Project",
+                "title": "Lab 100: Agile Project Management",
                 "description": "Use Developer Cloud Service to create issues, tasks, and sprints"
             },
             {
                 "number": "200",
                 "filename": "JCSPipelineStackManager200.md",
-                "title": "Lab 200: Creating the Project 2",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints again"
+                "title": "Lab 200: Infrastructure as Code",
+                "description": "In this lab, you will assume the persona of Operations, who will be tasked with creating an Infrastructure as Code pipeline for the provisioning of Alpha Office Java Cloud Service (JCS) environment."
+            },
+            {
+                "number": "300",
+                "filename": "JCSPipelineStackManager300.md",
+                "title": "Lab 300: Continuous Deliver of Java Struts application",
+                "description": "In this lab, you will assume the persona of Java Developer who will be tasked with making enhancements to the Alpha Office Product Catalog UI."
             }
         ]
     }
