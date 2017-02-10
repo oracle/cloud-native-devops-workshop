@@ -4,7 +4,7 @@ Update: February 2, 2017
 
 ## Introduction
 
-This is the third of several labs that are part of the **Oracle Public Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the third of several labs that are part of the **Oracle Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
 In the previous lab (200), the Java Developer (Bala Gupta) created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
 
@@ -19,7 +19,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Required Artifacts
 
-- The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
+- The following lab requires an Oracle Cloud account that will be supplied by your instructor. You will need to download and install latest version of the Brackets text editor.
 
 
 # Create Initial Twitter Marketing UI Service
@@ -150,7 +150,7 @@ Now that we have an automated build process, we will set up a deployment configu
 
     **Identity Domain**: `<Your Identity Domain>`
 
-    **Username**: `john.dunbar` **(or your appropriate username if running as single user)**
+    **Username**: `<Your User Name>`
 
     **Password**: `<Supplied Password>`
 
@@ -167,7 +167,7 @@ Now that we have an automated build process, we will set up a deployment configu
 
     ![](images/300/image035.png)  
 
-- Click drop down and select **Start**
+- Click the gear drop down and select **Start**
 
     ![](images/300/image036.png)  
 
@@ -207,7 +207,7 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/300/image045.png)  
 
-- Click on URL to bring up the application.
+- Click on URL or copy and paste the URL into the address bar of a new tab to bring up the application.
 
     ![](images/300/image046.png)  
 
@@ -391,7 +391,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image066.png)  
 
-- Replace the existing URL with your URL for the **root variable**. ***Make sure*** there is a '`/`' (backslash) at the **end of the URL**.
+- Replace the existing URL with your URL for the **root variable**. ***Make sure*** there is a '`/`' (front slash) at the **end of the URL**.
 
     ![](images/300/image067.png)  
 
