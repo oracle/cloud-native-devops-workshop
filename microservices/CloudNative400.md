@@ -25,11 +25,13 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Connect to the Develop Cloud Service
 
-### **STEP 1**: Login to your Oracle Cloud Account
+### **STEP 1**: Select the Agile Dashboard
 
-- If not already connected as the project manager **Lisa Jones**, sign in as Lisa Jones (or if running in a domain/account which supports only one user, logically change roles)
+- This Lab assumes that you completed Lab 100 and 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
-- As performed in labs, 100, 200 and 300, open to the **Developer Console**.
+- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Lisa Jones*** as you perform the following steps.
+
+    ![](images/lisa.png)  
 
 - Click on **Agile** on the Microservice Board.
 
@@ -102,6 +104,6 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 - From the Menu options list, select **Branches** to view the repository branches by User or Branch.
 
-    ![](images/400/image014.png)
+    ![](images/400/image014.2.png)
 
 - You have now completed this lab
