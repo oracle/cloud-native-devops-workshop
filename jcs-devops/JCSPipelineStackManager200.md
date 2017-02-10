@@ -100,7 +100,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
 - Enter the following REST call for the **Execute Shell Command:**
 
-    ```
+```
 curl --request POST \
   --user <opc username>:<opc password> \
   --url https://psm.europe.oraclecloud.com/paas/api/v1.1/instancemgmt/<OPC Identity Domain>/templates/cst/instances \
@@ -180,7 +180,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
 - Enter the following REST call for the **Execute Shell Command:**
 
-    ```
+```
 source ./JCSBuild.conf
 curl --request POST \
   --user <OPC username>:<OPC password> \
