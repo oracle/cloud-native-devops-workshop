@@ -143,17 +143,17 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 ### **STEP 6**: Start Brackets and Configure Git
 
-- Create directory **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
+- Create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
     ![](images/studentguide/Picture17.png)
 
 - Select **File -> Extension Manager…**
 
-- In search window enter **GIT**. Click **Install** for Brackets Git
+- In the search field, type **GIT**. Click **Install** for Brackets Git
 
     ![](images/studentguide/Picture18.png)
 
-- After install completes, leave defaults for Git Settings and click **Save**
+- After the install completes, leave the defaults for Git Settings and click **Save**
 
     ![](images/studentguide/Picture19.png)
 

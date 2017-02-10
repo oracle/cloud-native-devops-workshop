@@ -1,6 +1,6 @@
 
 ![](images/100/Picture100-lab.png)  
-Update: January 28, 2017
+Update: February 10, 2017
 
 ## Introduction
 
@@ -47,7 +47,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes as Lisa Jones the Project Manager to other personas.
+  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
 
     ![](images/lisa.png)
 
@@ -106,7 +106,6 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-13.png)
 
-## Add Team Members (Owners) to the Project
 
 
 # Create Product Issues
@@ -115,7 +114,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ### **STEP 4**: Create Issue for the initial GIT Repository Creation
 
-In this step you are still using the identity of the Project Manager, ***Lisa Jones***.
+In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
 
 ![](images/lisa.png)
 
@@ -137,11 +136,11 @@ In this step you are still using the identity of the Project Manager, ***Lisa Jo
 
     **Type:** `Task`
 
-    **Owner:** `Select your account provided in the dropdown [Logical Bala Gupta]`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
 
     **Story Points:** `1`
 
-    Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
+    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 
     ![](images/100/Picture100-17.png)
 
@@ -157,7 +156,7 @@ In this step you are still using the identity of the Project Manager, ***Lisa Jo
 
     **Type:** `Feature`
 
-    **Owner:** `Select your account provided in the dropdown [Logical Bala Gupta]`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
 
     **Story Points:** `2`
 
@@ -175,7 +174,7 @@ In this step you are still using the identity of the Project Manager, ***Lisa Jo
 
     **Type:** `Task`
 
-    **Owner:** `Select your account provided in the dropdown [Logical John Dunbar]`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
 
     **Story Points:** `1`
 
@@ -193,13 +192,13 @@ In this step you are still using the identity of the Project Manager, ***Lisa Jo
 
     **Type:** `Feature`
 
-    **Owner:** `Select account provided in the dropdown [Logical John Dunbar]`
+    **Owner:** `Select account provided in the dropdown [Logical Owner: John Dunbar]`
 
     **Story Points:** `2`
 
     ![](images/100/Picture100-20.png)
 
-- Click ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
+- Click the back arrow ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
 
     ![](images/100/Picture100-22.png)
 
@@ -263,19 +262,19 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
   **Note**: Before we create a new progress state, we want to un-assign some of the conditions that will be used in the new state. You can’t add new conditions or removed conditions, however, you can redefine progress states to suit your project’s needs and move conditions from one state to another. A large number of conditions are assigned to the Completed state by default.
 
-- Click on **:Progress States**: then click **:Completed**: state. In the lower left panel of the window, scroll down the conditions and select all the **:RESOLVED conditions**:.  Click ![](images/100/PictureGreater.png) to move them over to Unassigned Conditions panel
+- Click on **Progress States** then click **Completed** state. In the lower left panel of the window, scroll down the conditions and select all the **RESOLVED conditions**.  Click ![](images/100/PictureGreater.png) to move them over to Unassigned Conditions panel
 
     ![](images/100/Picture100-29.png)
 
-- Click **:New Progress State**:.  Change name to **:Verify Code**:. We will use this new State for performing QA and Testing.
+- Click **New Progress State**.  Change name to **Verify Code**. We will use this new State for performing QA and Testing.
 
     ![](images/100/Picture100-30.png)
 
-- Highlight all the **:RESOLVED**: unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
+- Highlight all the **RESOLVED** unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
 
     ![](images/100/Picture100-31.png)
 
-- With **:Verify Code**: highlighted, click ![](images/100/PictureUpArrow.png) to move **:Verify Code**: above the Completed Process State.
+- With **Verify Code** highlighted, click ![](images/100/PictureUpArrow.png) to move **Verify Code** above the Completed Process State.
 
     ![](images/100/Picture100-32.png)
 

@@ -1,11 +1,11 @@
 ![](images/200/Picture-lab.png)  
-Update: January 28, 2017
+Update: February 10, 2017
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the second of several labs that are part of the **Oracle Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
 
 Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
@@ -18,7 +18,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse. Instructions are found in the Student Guide.
 
 # Create Initial Static Twitter Feed Service
 
@@ -46,7 +46,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ### **STEP 3**: Display the Active Sprint
 
-- Click on the **Microservices** Board **Active Sprint**
+- On the **Microservices** Board, click **Active Sprints**
 
     ![](images/200/Picture13.png)  
 
@@ -120,8 +120,6 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
   **Select**: `Based on SCM polling schedule`
 
-  **Note:** The above expression results in the repository being polled every minute to check for any changes. If there are changes, the build will trigger.
-
     ![](images/200/Picture25.png)  
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke Maven 3**.
@@ -193,10 +191,10 @@ Now that we have successfully built our project, we need to create a deployment 
 
   - **Subscription**: `Hourly`
 
-  - **Job:** `Twitter Feed Build`
-
   - **Type:** `Automatic` and `Deploy stable builds only`
 
+  - **Job:** `Twitter Feed Build`
+  
   - **Artifact:** `target/twitter-microservice-example-dist.zip`
 
     ![](images/200/Picture35.3.png)  
@@ -205,7 +203,7 @@ Now that we have successfully built our project, we need to create a deployment 
 
     ![](images/200/Picture36.2.png)  
 
-- Click drop down and select **Start**
+- Click the gear drop down and select **Start**
 
     ![](images/200/Picture37.2.png)  
 
@@ -245,7 +243,7 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/200/Picture43.png)  
 
-- On the Application Container Cloud Service (ACCS) Service Console you can view all the deployed applications, including our newly created **JavaTwitterMicroservice**. Click on the **URL**, and it will load a new browser tab
+- On the Application Container Cloud Service (ACCS) Service Console you can view all the deployed applications, including our newly created **JavaTwitterMicroservice**. Click on the **URL**, and it will load a new browser tab. Alternatively, copy and paste the URL into the address bar of a new browser tab.
 
     ![](images/200/Picture44.png)  
 
@@ -288,7 +286,7 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 - Right Click and select **Run** on the **Eclipse** Desktop Icon. 
 
-    Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure. 
+    Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure it. 
 
     ![](images/200/Picture50.png)  
 
@@ -337,7 +335,7 @@ Now that we have completed the import, build, deployment, and verification of ou
 
     ![](images/200/Picture58.png)  
 
-- **Expand** the **Code**, and **double click** on the **Git Repo** [**TwitterFeedMicroservice.git**], to cause the Repo to be cloned locally.
+- **Expand** the **Code** section, and **double click** on the **Git Repo** [**TwitterFeedMicroservice.git**], to cause the Repo to be cloned locally.
 
     ![](images/200/Picture59.png)  
 
@@ -352,6 +350,14 @@ Now that we have completed the import, build, deployment, and verification of ou
 - Accept the Import defaults, and **click on Finish**
 
     ![](images/200/Picture62.png)  
+
+- If no projects are imported into your Project Explorer, choose **Import** from the Eclipse **File** menu. Click to expand the **General** category, and click **Existing Projects into Workspace**. Click **Next**.
+
+    ![](images/200/Picture62.2.png)
+
+- In the Import dialog, click **Browse** next to the **Select root directory** input field. Navigate to your **TwitterFeedMicroservice.git-xxxx** folder and click **OK**. Then click **Finish**.
+
+    ![](images/200/Picture62.3.png)
 
 ### **STEP 13**: Select the correct Java JDE
 
@@ -381,9 +387,11 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 - **Navigate** to **usr/java**, select **jdk1.8.0_102**, and **click** on **OK**
 
+    **Note**: On Windows, the JDK Path will differ. It is likely similar to: **C:\Program Files\Java\jdk1.8.0_31**
+
     ![](images/200/Picture69.png)  
 
-- Change the JRE Name to **jdk1.8.0_102**, and click on **Finish**
+- Change the JRE Name to **jdk1.8.0_102** or **jdk1.8.0_31**, and click on **Finish**
 
     ![](images/200/Picture70.png)  
 
@@ -393,9 +401,9 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ### **STEP 14**: Set Feature 2 Status to In Progress
 
-In the previous steps we updated the status of the Tasks assign to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
+In the previous steps we updated the status of the Tasks assigned to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
 
-- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Min**e to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**.
+- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**.
 
     ![](images/200/Picture71.png)  
 
@@ -534,7 +542,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
     ![](images/200/image097.2.png)  
 
-    **Note**: Bala is logically sending this request to the **Lisa**
+    **Note**: **Bala Gupta** is logically sending this request to **Lisa Jones**
 
 - In the **Write box**, enter the following comment and then click on the **Comment** button to save:
 
@@ -546,7 +554,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ### **STEP 20**: Merge Requests
 
-![](images/Lisa.png)  
+![](images/lisa.png)  
 
 - Before moving forward, “Lisa Jones” can take a look at the **Burndown** and **Sprint Reports** by clicking on the **Agile** navigation, then the **Reports** button
 
@@ -584,7 +592,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ### **STEP 21**: Test Microservice
 
-- Once the service has successfully deployed, navigate to **Deployments** and click on the **JavaTwitterMicroservice** link
+- Once the service has successfully deployed, click **Deploy** in the left-hand menu and click on the **JavaTwitterMicroservice** link
 
     ![](images/200/image113.png)  
 
