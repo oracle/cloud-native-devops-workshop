@@ -300,3 +300,64 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 - Expand **AlpahProduct > WebContent** then double click on **displayrecords.jsp**
 
     ![](images/300/Picture300-51.png)
+
+- On line 20 of **displayrecords.jsp** add **$** after the Price and click **Save All** ![](images/SaveAll.png)
+
+    ![](images/300/Picture300-52.png)
+
+### **STEP 12:** Commit and push Code to Developer Cloud Service
+
+- Right click on **AlphaProducts** and select **Team >
+ Commit**
+
+ ![](images/300/Picture300-53.png)
+
+- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**. Enter **Added dollar sign to display of Price** for Commit Message. Click **Commit and Push**
+
+    ![](images/300/Picture300-54.png)
+
+- Accept defaults and click **Next**
+
+    ![](images/300/Picture300-55.png)
+
+- On Push Confirmation click **Finish**
+
+    ![](images/300/Picture300-56.png)
+
+- Click **OK** on Push Results
+
+    ![](images/300/Picture300-57.png)
+
+## Create Merge Request
+
+### **STEP 13:** Create Merge request
+
+- Return to the Developer Cloud Service Dasboard in the browser. Click on **Code**. Select the **Defect4** branch and then click on the **Commits** sub tab. Now view the commit made to the branch from within Eclipse.
+
+    ![](images/300/Picture300-58.png)
+
+- Now that John Dunbar has completed the task of adding dollar sign, a **Merge Request** can be created and assigned to Lisa Jones for review. Click on **Merge Requests** on navigation panel and then click on the **New Merge Request** button.
+
+- Enter the following information into the **New Merge Request and click **Next**
+
+    **Repository:** `AlphaOfficeProductCatalogUI.git`
+
+    **Target Branch:** `master`
+
+    **Review Branch:** `Defect4`
+
+    ![](images/300/Picture300-59.png)
+
+- Enter following information into **Details** and click **Create**
+
+    **Summary:** `Added dollar sign to the display of the price`
+
+    **Reviewers:** `Logical user is Lisa Jones - Select your username`
+
+    ![](images/300/Picture300-60.png)
+
+- In the **Write box**, enter the following comment and then click on the **Comment** button to save:    
+
+    `I have updated the displayrecords.jsp to correctly display the Price.`
+
+    ![](images/300/Picture300-61.png)
