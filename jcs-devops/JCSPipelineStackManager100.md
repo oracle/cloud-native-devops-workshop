@@ -1,12 +1,12 @@
 
 ![](images/100/Picture100-title.png)  
-Update: January 29, 2017
+Update: February 10, 2017
 
 ## Introduction
 
 This is the first of several labs that are part of the **DevOps JCS Pipeline using Oracle Stack Manger workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Java Cloud Service (JCS) project that go through Infrastructure as Code and deployment of Struts application.
 
-You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Operations** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
+You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
 
 
 Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
@@ -34,19 +34,17 @@ For this workshop we will be using a Client Image that will represent your on-pr
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button.
+- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
     ![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor.
+    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
 
     ![](images/100/Picture100-3.png)
 
 - Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
-
-    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. To make things simple we will be using a single login for all 3 roles.
 
     ![](images/100/Picture100-4.png)
 
@@ -117,17 +115,15 @@ For this workshop we will be using a Client Image that will represent your on-pr
 
 - Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. To make things simple we will be using a single login for all 3 roles.
+    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+
+    ![](images/lisa.png)
 
     ![](images/100/Picture100-4.png)
 
 - You will be presented with a Dashboard displaying the various cloud services available to this account.
 
     ![](images/100/Picture100-5.png)
-
-- If all of your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**
-
-    ![](images/100/Picture100-6.png)
 
 ### **STEP 6:** Login to Developer Cloud Service
 
@@ -180,7 +176,9 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ### **STEP 8:** Create and Issue for the initial GIT Repository Creation
 
-In this step you are still connected in the logical role of the Project Manager, ***Lisa Jones***
+In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
+
+![](images/lisa.png)
 
 - Click **Issues** on left hand navigation panel to display the Track Issues page.
 
@@ -188,7 +186,9 @@ In this step you are still connected in the logical role of the Project Manager,
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, Bala Gupta will be the “logical” owner.
+    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issue.
+
+    ![](images/bala.png)
 
     **Summary:** `Create Initial GIT Repository for Infrastructure and configure Build`
 
@@ -200,8 +200,6 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Story Points:** `1`
 
-
-
 Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more, go to this URL:
 https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 
@@ -210,6 +208,8 @@ https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 ### **STEP 9:** Create Issue for Provision New Alpha Office Environment
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    ![](images/bala.png)
 
     **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, ***Bala Gupta*** will be the “logical” owner.
 
@@ -231,6 +231,8 @@ https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
+    ![](images/john.png)
+
     **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, ***John Dunbar*** will be the “logical” owner.
 
     **Summary:** `Create Initial GIT Repository for Alpha Office UI`
@@ -248,6 +250,8 @@ https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 ### **STEP 11:** Create Issue for Displaying Price
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    ![](images/john.png)
 
     **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, ***John Dunbar*** will be the “logical” owner.
 

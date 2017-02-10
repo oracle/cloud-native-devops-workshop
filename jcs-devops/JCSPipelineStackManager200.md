@@ -27,7 +27,9 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Create Initial Git Repository
 
-**Note:** For this lab you will take on the persona of Bala Gupta. Bala is our operations engineer and will be handling all operations issues.
+ Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
+
+![](images/bala.png)  
 
 ### **STEP 1:** Update Issue Status
 - Click on the **AlphaOffice** Board **Active Sprints**.
