@@ -1,4 +1,4 @@
-![](common/images/customer.logo.png)
+![](https://cloud.oracle.com/opc/images/SaaS-category-image-01.png)
 ---
 # ORACLE Touch the Cloud Workshop #
 
