@@ -32,7 +32,7 @@ The content contains several independent modules that cover different aspects of
 
 #### Mobile Cloud Services ####
 ##### Developement #####
-+ [Creating Mobile API](mcs/create.cloud.services.md)
++ [Creating Mobile API](https://docs.oracle.com/en/cloud/paas/mobile-cloud/mcsua/creating-apis-fast-express-api-designer.html)
 + [Utilizing Mobile Accelerator (MAX)](mcs/max.md)
 
 ##### Interaction #####
@@ -73,5 +73,5 @@ The content contains several independent modules that cover different aspects of
 Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## [License](LICENSE.md)
-Copyright (c) 2014, 2016 Oracle and/or its affiliates
+Copyright (c) 2014, 2017 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0
