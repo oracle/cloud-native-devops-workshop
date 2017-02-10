@@ -2,8 +2,6 @@
 ![](images/100/Picture100-lab.png)  
 Update: January 28, 2017
 
-Test on MicroservicesSingleUserBranch 
-
 ## Introduction
 
 This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
@@ -37,19 +35,21 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button.
+- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
     ![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor.
+    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
 
     ![](images/100/Picture100-3.png)
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. If your own Corporate or Trial account does not easily allow you to have multiple users, simply log into the account using your credentials, and when required you can make the “logical” change from Project Manager to other personas, even though you will always be logged in as the same user.
+  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+
+    ![](images/lisa.png)
 
     ![](images/100/Picture100-3.5.png)
 
@@ -108,29 +108,16 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ## Add Team Members (Owners) to the Project
 
-### **STEP 4**: Add Team Owners to the Project
-
-**Note:** As previously mentioned, ***if you are not allowed to have multiple users in your Corporate or Trial accounts, you will skip step 4.*** When in subsequent steps/labs you are asked to log in as different users responsible for different roles, you will physically perform the tasks as the same user, but you should mentally assume the role of a different persona.
-
-- Click on the **Team** icon ![](images/100/TeamIcon.png) found on the far right side of the window.
-
-- To add new Team Members, click **New Member**
-
-    ![](images/100/Picture100-14.png)
-
-- Set the Role to **Owner**, and enter the Username **bala.gupta**, and then click **Add**
-
-- Repeat the process for Username **john.dunbar**. When completed your team should consist of 3 members.
-
-    ![](images/100/Picture100-15.png)
 
 # Create Product Issues
 
 ## Create Issues for Twitter Feed Microservice
 
-### **STEP 5**: Create Issue for the initial GIT Repository Creation
+### **STEP 4**: Create Issue for the initial GIT Repository Creation
 
-In this step you are still connected in the logical role of the Project Manager, ***Lisa Jones***.
+In this step you are still using the identity of the Project Manager, ***Lisa Jones***.
+
+![](images/Lisa.png)
 
 - Click **Issues** on left hand navigation panel to display the Track Issues page.
 
@@ -138,7 +125,9 @@ In this step you are still connected in the logical role of the Project Manager,
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, **Bala Gupta** will be the “logical” owner. The same concept holds true for other assignments made in this lab.
+    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issue.
+
+    ![](images/bala.png)
 
     **Summary:**
     `Create Initial GIT Repository for Twitter Feed Service`
@@ -147,16 +136,20 @@ In this step you are still connected in the logical role of the Project Manager,
     `Create Initial GIT Repository for Twitter Feed Service`
 
     **Type:** `Task`
-    **Owner:** `Bala Gupta (or you, if another user is not available)`
+
+    **Owner:** `Select your account provided in the dropdown [Logical Bala Gupta]`
+
     **Story Points:** `1`
 
     Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 
     ![](images/100/Picture100-17.png)
 
-### **STEP 6**: Create Issue for Update Twitter Credentials
+### **STEP 5**: Create Issue for Update Twitter Credentials
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    ![](images/bala.png)
 
     **Summary:** `Create Filter on Twitter Feed`
 
@@ -164,15 +157,17 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Type:** `Feature`
 
-    **Owner:** `Bala Gupta (or you if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical Bala Gupta]`
 
     **Story Points:** `2`
 
     ![](images/100/Picture100-18.png)
 
-### **STEP 7**: Create Issue for initial GIT Repository creation
+### **STEP 6**: Create Issue for initial GIT Repository creation
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    ![](images/john.png)
 
     **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
 
@@ -180,15 +175,17 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Type:** `Task`
 
-    **Owner:** `John Dunbar (or you if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical John Dunbar]`
 
     **Story Points:** `1`
 
     ![](images/100/Picture100-19.png)
 
-### **STEP 8**: Create Issue for Displaying Twitter Feed
+### **STEP 7**: Create Issue for Displaying Twitter Feed
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    ![](images/john.png)
 
     **Summary:** `Display Twitter Feed in Table Format`
 
@@ -196,7 +193,7 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Type:** `Feature`
 
-    **Owner:** `John Dunbar`
+    **Owner:** `Select account provided in the dropdown [Logical John Dunbar]`
 
     **Story Points:** `2`
 
@@ -223,7 +220,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 - **Active Sprints view** – Lists all active Sprints of the Board and enables you to update an Issue status simply by dragging and dropping it to the respective status columns.
 - **Reports view** – select the Burndown Chart tab to display the amount of work left to do in a Sprint or use the Sprint Report tab to list open and completed Issues of a Sprint.
 
-### **STEP 9**: Create Agile Board
+### **STEP 8**: Create Agile Board
 
 - Click **Agile** on the Left Side Menu to display a page listing all existing Boards
 
@@ -237,7 +234,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-24.png)
 
-### **STEP 10**: Create Sprint
+### **STEP 9**: Create Sprint
 - We will now create our first Sprint. Click **New Sprint**. Enter the following data and click **OK.**
 
     **Name:** `Sprint 1 - Initial Development`
@@ -246,7 +243,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-25.png)
 
-### **STEP 11**:	Add Backlog Issues to Sprint
+### **STEP 10**:	Add Backlog Issues to Sprint
 
 - Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
@@ -256,7 +253,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ## Customize Agile Board
 
-### **STEP 12**: Customize Board
+### **STEP 11**: Customize Board
 
 In the following step you will customize an Agile Board, and add a new Progress State. If you desire more information about States and Conditions, the following link will provide a tutorial: http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/developer/AgileDevelopment/AgileDevelopment.html
 
@@ -286,9 +283,11 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
     ![](images/100/Picture100-33.png)
 
-### **STEP 13**: Start Sprint
+### **STEP 12**: Start Sprint
 
-- Click **Start Sprint.** Leave the defaults and click **Start**
+- Click the **Start Sprint** button.
+
+- Leave the defaults and click **Start**
 
     ![](images/100/Picture100-34.png)
 

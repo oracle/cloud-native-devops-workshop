@@ -5,7 +5,7 @@ Update: January 28, 2017
 
 This is the second of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. In this lab, you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any required front-end or analytics components (one of which you will build in the following lab, lab 300).
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
 
 Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
@@ -24,72 +24,27 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Explore Developer Cloud Service
 
-### **STEP 1**: Login to your Oracle Cloud account as Bala.Gupta
+### **STEP 1**: Review Agile Board
 
-- If you just completed lab 100, or if you are still logged in as Lisa.Jones, you will need to first sign out before continuing this lab. Sign out by clicking on the user’s name (lisa.jones) at the top right corner of the screen, then selecting Sign Out from the dropdown menu.
+- This Lab assumes that you just completed Lab 100 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
-    ![](images/200/Picture1.png)  
+    ![](images/200/Picture10.5.png)  
 
-- Now we can login again. From any browser, **go to the following URL**:
-https://cloud.oracle.com
+- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps.
 
-- Click **Sign In** in the upper right hand corner of the browser.
-
-    ![](images/200/Picture2.png)  
-
-- **IMPORTANT** - Under My Services, ask ***your instructor*** which **Region** to select from the drop down list, and **click** on the **My Services** button.
-
-    ![](images/200/Picture3.png)  
-
-- Enter your identity domain and click **Go**
-
-  ***NOTE***: the **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
-
-    ![](images/200/Picture4.png)  
-
-- Once your Identity Domain is set, enter your **User Name** and **Password** and click **Sign In**
-
-  **NOTE**: For the first part of this lab you will be acting as the Java Developer ***Bala Gupta***. As with the previous lab, if you are not able to support multiple users, login as a supported user, and assume the “logical” identify of Bala Gupta - the Java Developer.
-
-    ![](images/200/Picture5.png)  
-
-- Once connected, you will be presented with a Dashboard displaying the various cloud services available to this account. Note: Based on your browser cookie settings, **it’s possible that once connected you will placed into the Developer Cloud Service dashboard**, and will not need to complete the next few tasks that were performed automatically.
-
-    ![](images/200/Picture6.png)  
-
-### **STEP 2**: Login to Developer Cloud Service
-
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes issue tracking system, agile development dashboards, code versioning and code review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
-
-- From Cloud UI dashboard click on the **Developer** service. In this example the Developer Cloud Service is named **developer99019**.
-
-    ![](images/200/Picture7.png)  
-
-- The Service Details page gives you a quick glance of the service status. Click **Open Service Console** for the Oracle Developer Cloud Service
-
-    ![](images/200/Picture8.png)  
-
-- The Service Console will list all projects that you are currently a member of. Click **Twitter Feed Marketing Project** to access the project
-
-    ![](images/200/Picture9.png)  
-
-- The Twitter Feed Marketing Project dashboard will be displayed.
-
-    ![](images/200/Picture10.png)  
-
-### **STEP 3**: Review Agile Board
+    ![](images/bala.png)  
 
 - Within the **Twitter Feed Marketing Project**, click on **Agile** found on the left hand navigation.
 
     ![](images/200/Picture11.png)  
 
-### **STEP 4**: Show Microservices Board
+### **STEP 2**: Show Microservices Board
 
 - If the **Microservices** list is not displayed as shown below, then click on the **Board Dropdown**, select **All**, and click on **Microservices**.
 
     ![](images/200/Picture12.png)  
 
-### **STEP 5**: Display the Active Sprint
+### **STEP 3**: Display the Active Sprint
 
 - Click on the **Microservices** Board **Active Sprint**
 
@@ -97,19 +52,19 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ## Create Initial Git Repository
 
-### **STEP 6**: Create Initial Git Repository
+### **STEP 4**: Create Initial Git Repository
 
-To begin development on our Twitter feed microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
+To begin development on our Twitter feed microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Bala Gupta) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
 
 - Drag and drop **Task1 - Create Initial GIT Repository for Twitter Feed Service** into the **In Progress** swim-lane.  
 
-    ![](images/200/Picture14.png)  
+    ![](images/200/Picture14.2.png)  
 
 - Click **OK** on the Change Progress popup
 
     ![](images/200/Picture15.png)  
 
-    ![](images/200/Picture16.png)  
+    ![](images/200/Picture16.2.png)  
 
 - In the left hand navigation panel, click **Project**
 
@@ -125,25 +80,25 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
     **Initial content:** `Import existing repository`
 
-    **Enter the URL:** `https://github.com/oraclenassolutionengineering/TwitterFeed.git`
+    **Enter the URL:** `https://github.com/pcdavies/TwitterFeed.git`
 
-    ![](images/200/Picture18.png)  
+    ![](images/200/Picture18.2.png)  
 
 - You have now created a new GIT repository based on an existing repository.
 
     ![](images/200/Picture19.png)  
 
-##Create Default Build and Deployment Process
+## Create Default Build and Deployment Process
 
 ### **STEP 7**: Create Default Build Process
 
 Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
-- On navigation panel click **Build** to access the build page and click **New Job**.
+- On navigation panel, click **Build** to access the build page and click **New Job**.
 
     ![](images/200/Picture20.png)  
 
-- In the New Job popup enter **Twitter Feed Build** for the Job Name, and then click **Save**.
+- In the New Job popup enter `Twitter Feed Build`for the Job Name, and then click **Save**.
 
     ![](images/200/Picture21.png)  
 
@@ -155,7 +110,9 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/200/Picture23.png)  
 
-- Click the **Source Contro**l tab. Click Git and select the **TwitterFeedMicroservice.git** from the drop down.
+- Click the **Source Control** tab.
+
+- Click **Git** and select the **TwitterFeedMicroservice.git** from the drop down.
 
     ![](images/200/Picture24.png)  
 
@@ -177,7 +134,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Post Build** tab and complete the following:
   - Check **Archive the artifacts**.
-  - Enter `**/target/*` for Files to Archive.  
+  - Enter `**/target/*` for **Files to Archive**.  
   - Verify **GZIP** in the Compression Type.
   - Check **Publish JUnit test report**
   - Enter `**/target/surefire-reports/*.xml` for the Test Report XMLs. This will provide a report on the Test Scripts results for each build.
@@ -228,7 +185,7 @@ Now that we have successfully built our project, we need to create a deployment 
 
 - Click **Test Connection**. If Successful, click **Use Connection**:
 
-    ![](images/200/Picture34.png)  
+    ![](images/200/Picture34.3.png)  
 
 - Set the following Properties as follows:
   - **Runtime**: `Java`
@@ -237,7 +194,7 @@ Now that we have successfully built our project, we need to create a deployment 
   - **Type:** `Automatic` and `Deploy stable builds only`
   - **Artifact:** `target/twitter-microservice-example-dist.zip`
 
-    ![](images/200/Picture35.png)  
+    ![](images/200/Picture35.2.png)  
 
 - Click **Save**
 
