@@ -97,19 +97,19 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 ### **STEP 4**: Download Git
 
-- Go to the following URL: https://git-scm.com/downloads http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html
+- Go to the following URL: https://git-scm.com/downloads
 
     ![](images/studentguide/Picture8.png)
 
-- Select you OS. In our example, we will show how to install on Windows. Click **Windows** Download and click **Save File**
+- Select your OS. In our example, we will show how to install on Windows. Click **Windows** Download and click **Save File**
 
     ![](images/studentguide/Picture9.png)
 
-- Select you download location and click **Save**. We will use D:\Software    
+- Select your download location and click **Save**. We will use D:\Software    
 
     ![](images/studentguide/Picture10.png)
 
-- Open Windows Explorer and navigate you where you downloaded the Git executable. Double click on Git executable to start install process.
+- Open Windows Explorer and navigate you where you downloaded the Git executable. Double click on the Git executable to start the install process.
 
     ![](images/studentguide/Picture11.png)
 
@@ -125,7 +125,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture13.png)
 
-- Click **Download Brackets 1.7** then click **Save File**
+- Click **Download Brackets 1.X** then click **Save File**
 
     ![](images/studentguide/Picture14.png)
 
@@ -133,7 +133,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture15.png)
 
-- Open Windows Explorer and navigate you where you downloaded Brackets. Double click on Git executable to start install process.
+- Open Windows Explorer and navigate you where you downloaded Brackets. Double click on the Brackets executable to start the install process.
 
     ![](images/studentguide/Picture16.png)
 
