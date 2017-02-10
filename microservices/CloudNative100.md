@@ -117,7 +117,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 In this step you are still using the identity of the Project Manager, ***Lisa Jones***.
 
-![](images/Lisa.png)
+![](images/lisa.png)
 
 - Click **Issues** on left hand navigation panel to display the Track Issues page.
 
