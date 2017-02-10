@@ -64,7 +64,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Create Default Build for and Deployment Process
 
-### **STEP 3:** Create Template Update Build Process
+### **STEP 3:** Create Alpha Office Product Catalog UI Build Process
 
 Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
@@ -114,12 +114,189 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-17.png)
 
-### **STEP 3:** Retrieve Public IP of JCS Instance for Deloyment
+### **STEP 4:** Retrieve Public IP of JCS Instance for Deployment
 
 Before we can configure deployment of our application we need to make note of the IP for our JCS instance. The **Alpha01A-JCS** instance has already been provisioned.
 
-- Switch over to browser tab for cloud services. Click on the far left navigation icon and select**Oracle Java Cloud Service**.
+- Switch over to browser tab for cloud services. Click on the far left navigation icon and select **Oracle Java Cloud Service**.
 
     ![](images/300/Picture300-18.png)
 
-    
+- The Java Cloud Service console shows all the provisioned instances of JCS.  You should see the instance **Alpha01A-JCS** which has been provisioned in advance.
+
+    ![](images/300/Picture300-19.png)
+
+- Click on **Alpha01A-JCS** to view the details of the service. Copy down the **Public IP** to be used later in the lab.
+
+    ![](images/300/Picture300-20.png)
+
+- Expland the **Load Balancer** section and copy down the **Public IP** to be used later in the lab.
+
+    ![](images/300/Picture300-21.png)
+
+### **STEP 5:** Create Alpha Office Product Catalog UI Deployment Process
+
+- Switch back to **Developer Cloud Service**. On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**
+
+    ![](images/300/Picture300-22.png)
+
+- Enter the following data:
+
+    **Configuration Name:** `AlphaProductsDeploy`
+
+    **Application Name:** `AlphaProducts`
+
+    ![](images/300/Picture300-23.png)
+
+- To the right of the Deployment Target, click **New** and select **Java Cloud Service**    
+
+    ![](images/300/Picture300-24.png)
+
+- Enter the following data:
+
+    **Host:** `Public IP for JCS Service capture in previous step`
+
+    **Username:** `weblogic`
+
+    **Password:** `Alpha2014_`
+
+    ![](images/300/Picture300-25.png)
+
+- Click **Find Targets**. Check **Accept this certificate when connecting to the JCS instance** and click **OK**
+
+    ![](images/300/Picture300-26.png)
+
+- Check **Alpha01A_cluster** to deploy to the entire cluster and click **OK**
+
+    ![](images/300/Picture300-27.png)
+
+- Set the following Properties and click **Save**
+
+    **Type:** `Automatic and check Deploy stable builds only`
+
+    **Job:** `Alpha Office Product Catalog UI`
+
+    ![](images/300/Picture300-28.png)
+
+- Click drop down and select **Start**
+
+    ![](images/300/Picture300-29.png)
+
+- Wait until the message **Starting application** changes to **Last deployment succeeded**
+
+    ![](images/300/Picture300-30.png)
+    ![](images/300/Picture300-31.png)
+
+## Verify Alpha Office Product Catalog UI deployment
+
+### **STEP 6:** Verify deployment in Weblogic Console
+
+- Switch back to the Java Cloud Service Console browser tab. Click the hamburger menu ![](images/menu.png) and select **Open WebLogic Server Console**
+
+    ![](images/300/Picture300-32.png)
+
+- A new browser tab will open. On the security warning click **ADVANCED** and then click **Proceed to ...**
+
+    ![](images/300/Picture300-33.png)
+
+- You will be presented with the **WebLogic Server Console** login. Enter the following and click **Login**
+
+    **Username:** `weblogic`
+
+    **Password:** `Alpha2014_`
+
+    ![](images/300/Picture300-34.png)
+
+- In the **Domain Structure** panel click **Deployments**
+
+    ![](images/300/Picture300-35.png)
+
+- You should see the newly deployed **AlphaProducts** application.
+
+    ![](images/300/Picture300-36.png)
+
+### **STEP 7:** Open UI in browser
+
+- Open a new tab in the browser and enter the following URL:
+
+    **https://<Public IP of Load Balancer/AlphaProducts**
+
+- On the security warning click **ADVANCED** and then click **Proceed to ...**
+
+    ![](images/300/Picture300-37.png)
+
+- You should now see the **Alpha Office Product Catalog UI**
+
+    ![](images/300/Picture300-38.png)
+
+### **STEP 8:** Complete Task
+
+We have now verified that both the build and deployment of the Alpha Office Product Catalog UI is functioning properly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
+
+- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
+
+- Drag and drop **Task 3** from **In Progress** to **Completed**
+
+    ![](images/300/Picture300-39.png)
+
+- In the Change Progress popup click **Next**
+
+- Set number of days to 1 and click **OK**
+
+    ![](images/300/Picture300-40.png)
+
+- Your Sprint should now look like the following:
+
+    ![](images/300/Picture300-41.png)
+
+## Add dollar sign in the display of the price
+
+### **STEP 9:** Import Project into Eclipse
+
+Our next activity is to work on the defect issue that has been assigned to us. We will start by updating the status in the Sprint. We will be performing the majority of work in Eclipse.
+
+- You should already have Eclipse running and be connected to Oracle Cloud. Click back into the **Oracle CLoud** connection tab. Right click on **OracleConnection** and select **Refresh**
+
+    ![](images/300/Picture300-42.png)
+
+- Expand **Developer**, Expand **Alpha Office Product Catalog**, Expand **Code**. Double click on **AlphaOfficeProductCatalogUI.git** to clone the repository.
+
+    ![](images/300/Picture300-43.png)
+
+- **Right Click** on the **AlphaOfficeProductCatalogUI** cloned repository and click on **Import Projects**.
+
+    ![](images/300/Picture300-44.png)
+
+- Accept the Import defaults and click **Finish**
+
+    ![](images/300/Picture300-45.png)
+
+### **STEP 10:** Set Defect 4 Status to In Progress
+
+- click the **Issues** to expand, then d click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Add dollar sign in the display of the price**.
+
+    ![](images/300/Picture300-46.png)   
+
+- Scroll down to the bottom of the **Add dollar sign in the display of the price** window. In the **Actions section**, and change the Actions to **Accept (change status to ASSIGNED)**, then click on **Submit**.
+
+    ![](images/300/Picture300-47.png)
+
+- Optionally, if you return to the Developer Cloud Service web interface, you’ll see that the Eclipse interface caused the **Defect 4** to be moved to the **In Progress** column of the **Agile > Active Sprints**.
+
+    ![](images/300/Picture300-48.png)
+
+### **STEP 11:** Fix the Code
+
+- Before we start making any changes to our code we will want to create a branch that will contain all of our work for this issue. Right click on **AlphaProducts** and select **Team >
+ Switch To > New Branch**
+
+ ![](images/300/Picture300-49.png)
+
+
+- Enter **Defect4** for the Branch name, and click **Finish**
+
+    ![](images/300/Picture300-50.png)
+
+- Expand **AlpahProduct > WebContent** then double click on **displayrecords.jsp**
+
+    ![](images/300/Picture300-51.png)
