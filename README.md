@@ -21,6 +21,15 @@ During the execution you will create several public cloud service instances what
 The content contains several independent modules that cover different aspects of the platform as a services (PaaS) in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependent on each other.
 
 ----
+## Workshop ##
+
+[Workshop Material](touch_the_cloud/index.html)
+----
+## Usefull Links ##
+
+### [Oracle Cloud](cloud.oracel.com) ###
+
+### Product Documentation ###
 
 #### Mobile Cloud Services ####
 ##### Developement #####
@@ -32,6 +41,8 @@ The content contains several independent modules that cover different aspects of
 + [Testing on Real Device](mcs/deployment.md)
 
 #### Process Cloud Service ####
+
+
 
 ##### Business Process Definition 
 + [Composer](pcs/process.composer.md)
