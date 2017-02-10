@@ -19,12 +19,11 @@ The workshop is intended to work with an Oracle PaaS trial account. To get an ac
 During the execution you will create several public cloud service instances what will be available on the world wide web. Even if these instances are for demo purposes keep in mind it is not a best practice to use weak or known (stored here in the tutorial) passwords especially in such open environment. Thus this workshop content does not recommend any password so you need to define those. You will be asked to provide password at certain points and please remember them  for  later usage.
 
 The content contains several independent modules that cover different aspects of the platform as a services (PaaS) in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependent on each other.
-
-----
+---
 ## Workshop ##
 
-[Workshop Material](touch_the_cloud/index.html)
-----
+[Workshop Material](touch-the-cloud/index.html)
+---
 ## Usefull Links ##
 
 ### [Oracle Cloud](cloud.oracel.com) ###
