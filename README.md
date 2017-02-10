@@ -26,7 +26,7 @@ The content contains several independent modules that cover different aspects of
 ---
 ## Usefull Links ##
 
-### [Oracle Cloud](cloud.oracel.com) ###
+### [Oracle Cloud](https://cloud.oracle.com) ###
 
 ### Product Documentation ###
 
