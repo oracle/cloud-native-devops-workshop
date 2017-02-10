@@ -351,6 +351,14 @@ Now that we have completed the import, build, deployment, and verification of ou
 
     ![](images/200/Picture62.png)  
 
+- If no projects are imported into your Project Explorer, choose **Import** from the Eclipse **File** menu. Click to expand the **General** category, and click **Existing Projects into Workspace**. Click **Next**.
+
+    ![](images/200/Picture62.2.png)
+
+- In the Import dialog, click **Browse** next to the **Select root directory** input field. Navigate to your **TwitterFeedMicroservice.git-xxxx** folder and click **OK**. Then click **Finish**.
+
+    ![](images/200/Picture62.3.png)
+
 ### **STEP 13**: Select the correct Java JDE
 
 - **Click** on the **TwitterFeedMicroservice** Project, then from the **top menu**, select **Project > Properties**
@@ -378,7 +386,8 @@ Now that we have completed the import, build, deployment, and verification of ou
     ![](images/200/Picture68.png)  
 
 - **Navigate** to **usr/java**, select **jdk1.8.0_102**, and **click** on **OK**
-**Note**: On Windows, the JDK Path will differ. It is likely similar to: **C:\Program Files\Java\jdk1.8.0_31**
+
+    **Note**: On Windows, the JDK Path will differ. It is likely similar to: **C:\Program Files\Java\jdk1.8.0_31**
 
     ![](images/200/Picture69.png)  
 
