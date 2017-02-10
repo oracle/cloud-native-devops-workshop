@@ -361,3 +361,73 @@ Our next activity is to work on the defect issue that has been assigned to us. W
     `I have updated the displayrecords.jsp to correctly display the Price.`
 
     ![](images/300/Picture300-61.png)
+
+## Merge the Branch as Lisa Jones
+
+In the following steps "Lisa" will merge the breanch created by "John" into the master.
+
+### **STEP 13:** Merge Requests
+
+- on the navigation panel, click **Merge Requests**. Select the **Assigned to Me** search. After the search completes. click on the **Added dollar sign to the display of the price** assigned request.
+
+    ![](images/300/Picture300-62.png)
+
+- Once the request has loaded, select the **Changed FIels** tab. "Lisa" will now the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
+
+    ![](images/300/Picture300-63.png)
+
+- Click on the **Merge** button.
+
+    ![](images/300/Picture300-64.png)
+
+- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+
+    ![](images/300/Picture300-65.png)
+
+### **STEP 14:** Monitor Build and Deloyment
+
+- Now that the code has been commited to the master branch, the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
+
+    ![](images/300/Picture300-66.png)
+
+- Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
+
+    ![](images/300/Picture300-67.png)
+
+- On the navaigation panel click **deploy**. The **Last deployment** will be set to **Just Now** when the deployment completes.
+
+    ![](images/300/Picture300-68.png)
+
+### **STEP 15:** Open UI in browser
+
+- Open a new tab in the browser and enter the following URL:
+
+    **https://<Public IP of Load Balancer/AlphaProducts**
+
+- You should now see the update **Alpha Office Product Catalog UI**
+
+    ![](images/300/Picture300-69.png)
+
+### **STEP 16:** Complete Task
+
+We have now verified that **Alpha Office Product Catalog UI** is now displaying the price corectly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
+
+- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
+
+- Drag and drop **Defect 4** from **In Progress** to **Completed**
+
+    ![](images/300/Picture300-70.png)
+
+- In the Change Progress popup click **Next**
+
+    ![](images/300/Picture300-71.png)
+
+- Set number of days to 1 and click **OK**
+
+    ![](images/300/Picture300-72.png)
+
+- Your Sprint should now look like the following:
+
+    ![](images/300/Picture300-73.png)
+
+- You are now ready to move the the last lab.
