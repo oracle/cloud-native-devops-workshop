@@ -286,7 +286,9 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ### **STEP 10**: Load Eclipse IDE
 
-- Right Click and select **Run** on the **Eclipse** Desktop Icon
+- Right Click and select **Run** on the **Eclipse** Desktop Icon. 
+
+    Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure. 
 
     ![](images/200/Picture50.png)  
 
@@ -696,82 +698,3 @@ To generate the unique twitter credentials for our microservices, we need to sig
 
     ![](images/200/image132.png)
 
-# Appendix 2 – Installing Eclipse
-
-## Download and Install Eclipse
-
-In this appendix you will download and install Eclipse containing the Oracle Plugin.
-
-### **STEP 23**: Download Eclipse
-
-- Go to the following URL: http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html
-
-- Accept the **licensing agreement**, and then select the **Neon** version of Eclipse required for your operating system.
-
-    ![](images/200/image133.png)
-
-- Once you’ve downloaded eclipse, extract the zip file and install.
-Optionally Configure Proxies
-
-### **STEP 24**: Configuring Proxies
-
-If you are running Eclipse behind a firewall and need to configure the proxy setting, there are several updates to be made. First, you need to ensure that Eclipse’s proxy is set, next you need to update the maven proxy setting, then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
-
-- To set configure Eclipse’s proxy, open Eclipse and navigate to the Properties menu. Depending on the operating system, this drop down is found either from the **Eclipse > Preferences**, or **Window > Preferences**
-
-    ![](images/200/image134.png)
-
-- From the preferences panel, enter “**proxy**” into the search window, and click on **Network Connections**. Select **Native** for the Active Provider. This setting works well, but it requires that you have the proxy setting configured correctly on the system running Eclipse – e.g. Windows, MAC OS or Linux. Selecting Manual should also work, but some of the plugins require the underlying operating system’s proxy to be configured.
-
-    ![](images/200/image135.png)
-
-- To test that your connection works, select the menu option **Window > Show View > Other**
-
-    ![](images/200/image136.png)
-
-- Type “**web**” in the search field, select **Internal Web Browser** and click on **OK**
-
-    ![](images/200/image137.png)
-
-- Enter a **URL** into the and **press enter** to test your proxy settings.
-
-    ![](images/200/image138.png)
-
-### **STEP 25**: Update the Eclipse / Maven proxy
-
-- From the **Eclipse > Preference** or **Window > Preferences** panel, enter **Maven** into the search box. Click on the Maven **User Settings**. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings are to be located in the **/home/oracle/.m2** directory
-
-    ![](images/200/image139.png)
-
-- Close Eclipse
-
-- If the directory does not exist where the settings.xml file is to be located, **create the directory**. In this example, we will create the .m2 directory. Also, create the settings.xml file, if it does not exist. Add the following to the settings.xml file (NOTE: you will need to use your correct **Host, Port, nonProxyHosts, username and Password** settings):
-
-    ```
-<?xml version="1.0" encoding="UTF-8"?>
-<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
-  <proxies>
-    <proxy>
-      <active>true</active>
-      <protocol>http</protocol>
-      <username>proxyuser</username>
-      <password>proxypass</password>
-      <host>www-proxy.us.oracle.com</host>
-      <port>80</port>
-      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-    <proxy>
-      <active>true</active>
-      <protocol>https</protocol>
-      <username>proxyuser</username>
-      <password>proxypass</password>
-      <host>www-proxy.us.oracle.com</host>
-      <port>80</port>
-      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-  </proxies>
-</settings>
-```
-
-- Reload Eclipse to use the new maven settings

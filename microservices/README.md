@@ -1,11 +1,11 @@
 
 #Step-by-step Instructions
 
-### STEP 1 - REVIEW STUDENT GUIDE
+### **STEP 1** - Review Student Guide
 
 Review the ***Student Guide*** to properly **configure your environment**
 
-### STEP 2 - Optional - Review interactive Workshop Overview 
+### **STEP 2** - Optional - Review interactive Workshop Overview 
 
 visit this URL: http://launch.oracle.com/?cloudnative
 
@@ -37,6 +37,8 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 ## Lab 200: Continuous Delivery of Java Microservices
 
 **Documenation**: [CloudNative200.md](CloudNative200.md)
+
+### Objectives
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository
