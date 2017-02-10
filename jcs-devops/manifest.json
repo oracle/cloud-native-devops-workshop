@@ -20,6 +20,12 @@
                 "filename": "JCSPipelineStackManager300.md",
                 "title": "Lab 300: Continuous Deliver of Java Struts application",
                 "description": "In this lab, you will assume the persona of Java Developer who will be tasked with making enhancements to the Alpha Office Product Catalog UI."
+            },
+            {
+                "number": "400",
+                "filename": "JCSPipelineStackManager400.md",
+                "title": "Lab 400: Develper Cloud Service Administration",
+                "description": "Access Developer Cloud Service, Complete Sprint, Run Backlog and Sprint Reports and Review Administrative Tasks."
             }
         ]
     }
