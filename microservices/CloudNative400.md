@@ -3,7 +3,7 @@ Update: Feburary 2, 2017
 
 ## Introduction
 
-This is the fourth of several labs that are part of the **Oracle Public Cloud Cloud Native Microservices workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the fourth of several labs that are part of the **Oracle Cloud Cloud Native Microservices workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
 In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view the Agile reports provided by the Oracle Developer Cloud Service
 
@@ -27,7 +27,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ### **STEP 1**: Select the Agile Dashboard
 
-- This Lab assumes that you completed Lab 100 and 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you completed Lab 100, 200, and 300 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Lisa Jones*** as you perform the following steps.
 
@@ -41,7 +41,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/400/image003.png)
 
-- Click on the **Sprint** report.
+- Click on the **Sprint Report**.
 
 
 ### **STEP 2**: Complete the Sprint
