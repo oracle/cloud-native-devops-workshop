@@ -361,6 +361,8 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ### **STEP 13**: Select the correct Java JDE
 
+Depending on your eclipse configuration, you may need to point the project's Java Runtime Environment to a different JRE than the default. (e.g. with the Workshop's companion Virtual Box Image). In this step you will first check to see if your environment is correctly set. If the JRE is not correct, you will configure the Project Settings to point to the correct JRE. 
+
 - **Click** on the **TwitterFeedMicroservice** Project, then from the **top menu**, select **Project > Properties**
 
     ![](images/200/Picture63.png)  
@@ -369,13 +371,17 @@ Now that we have completed the import, build, deployment, and verification of ou
 
     ![](images/200/Picture64.png)  
 
-- **Click** on the **Libraries tab**, then select the **JRE System Library**. Next, **click** on the **Edit** button.
+- **Click** on the **Libraries tab**. Then select the **JRE System Library**. Next, **click** on the **Edit** button.
 
     ![](images/200/Picture65.png)  
 
-- **Click** on the **Installed JREs** button.
+- If your JRE release is **equal to or greater** than **1.8.0\_121**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel and continue to the next step.
 
-    ![](images/200/Picture66.png)  
+    ![](images/200/Picture65.5.png)  
+
+- If the JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
+
+    ![](images/200/Picture66.png)   
 
 - **Select** the Standard VM, which in this case is **java-1.8.0-openjdk**. Then, **click** on **Edit**
 
@@ -385,13 +391,13 @@ Now that we have completed the import, build, deployment, and verification of ou
 
     ![](images/200/Picture68.png)  
 
-- **Navigate** to **usr/java**, select **jdk1.8.0_102**, and **click** on **OK**
+- **Navigate** to **usr/java**, select **jdk1.8.0\_102**, and **click** on **OK**
 
     **Note**: On Windows, the JDK Path will differ. It is likely similar to: **C:\Program Files\Java\jdk1.8.0_31**
 
     ![](images/200/Picture69.png)  
 
-- Change the JRE Name to **jdk1.8.0_102** or **jdk1.8.0_31**, and click on **Finish**
+- Change the JRE Name to **jdk1.8.0\_102** or **jdk1.8.0\_31**, and click on **Finish**
 
     ![](images/200/Picture70.png)  
 
