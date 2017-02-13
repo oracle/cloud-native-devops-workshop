@@ -5,18 +5,19 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 
 ## How to I prepare for this workshop
 
-1. ***Get an Oracle Cloud Account*** 
-    - Oracle provides several methods for gaining Trial accounts for Cloud Workshop. 
-        - For some workshop events cloud environments will be provided. 
-        - For others events, or completing this workshop in a self-service model, you will be required to gain access to Trial account. Trial accounts can be obtained from at [Shop Oracle](http://shop.oracle.com) 
-        - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
+First, ***Get an Oracle Cloud Account*** 
+
+- Oracle provides several methods for gaining Trial accounts for Cloud Workshop. 
+    - For some workshop events cloud environments will be provided. 
+    - For others events, or completing this workshop in a self-service model, you will be required to gain access to Trial account. Trial accounts can be obtained from at [Shop Oracle](http://shop.oracle.com) 
+    - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
         
-2. ***Configure your Client Environment***
-    - Your client enviroment ***must be configured prior*** to attending the Hands on Workshop, or you will not be able to perform the Workshop labs. 
-    - You have two options for configuring your workshop client environment. 
-        - ***Option 1:*** You can install Virtual Box and download and run a pre-configured ***Virtual Box Image***.
-        - ***Option 2:*** You can ***install and configure*** Eclipse, Brackets and Git on your laptop. 
-    - Both Option 1 and 2 are documented in the [Student Guide](StudentGuide.md) Please follow the instruction in this document prior to attending this hands on workshop. 
+Second, ***Configure your Client Environment***
+- Your client enviroment **must be configured prior** to attending the Hands on Workshop, or you will not be able to perform the Workshop labs. 
+- You have two options for configuring your workshop client environment. 
+     - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
+     - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
+- Both Option 1 and 2 are documented in the [Student Guide](StudentGuide.md) Please follow the instruction in this document prior to attending this hands on workshop. 
       
 ## How View the Lab Guides
 
@@ -28,9 +29,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop. 
 
-# Workshop Details
-
-# DevOps: Cloud Native Microservices Workshops
+## Workshop Details
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 
