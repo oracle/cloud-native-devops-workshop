@@ -146,6 +146,21 @@
                 $scope.htmlContent = lab.htmlContent;
                 $scope.selection.lab = true;
             }
+            setTimeout(function() {
+                if(lab.filename === 'README.md') {
+                    $("#labguide a").each(function() {
+                        console.log(this.href);
+                        if(this.href.endsWith('.md')) {
+                            $(this).on("click", function(event) {
+                               console.log('parsing...');
+                                event.preventDefault();
+                                $scope.getLabGuide({filename: this.href});
+                            });
+                        }
+                    })
+                }
+            }, 500)
+            
         }
         $scope.toggleLeft = function() {
             $mdSidenav('left').toggle();
