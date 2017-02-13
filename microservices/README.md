@@ -3,10 +3,9 @@
 
 This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - youwill create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
-## How to I prepare for this workshop
+## IMPORTANT: How to prepare for this workshop
 
 **First**, ***Get an Oracle Cloud Account*** 
-
 - Oracle provides several methods for gaining Oracle Cloud accounts inorder to complete the Labs in this Hands-on-Workshop. 
     - For some workshop events, cloud environments will be provided. 
     - For others events, or completing this workshop in a self-service model, you will be required to gain access to your own Trial account. Trial accounts can be obtained from at [Shop Oracle](http://shop.oracle.com) 
@@ -17,7 +16,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - You have two options for configuring your workshop client environment. 
      - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
      - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both Option 1 and 2 are documented in the [Student Guide](StudentGuide.md) Please follow the instruction in this document prior to attending this hands on workshop. 
+- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md) Please follow the instruction in this document prior to attending this hands on workshop. 
       
 ## How View the Lab Guides
 
