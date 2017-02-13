@@ -23,7 +23,9 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 ## Create Initial Git Repository
 
-**Note:** For this lab you will take on the persona of John Dunbar. John is our Java developer who will be making the enhancements to our product catalog UI.
+Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps. John is our Java developer who will be making the enhancements to our product catalog UI.
+
+![](images/john.png)  
 
 ### **STEP 1:** Update Issue Status
 - Click on the **AlphaOffice** Board **Active Sprints**.
@@ -338,6 +340,9 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 - Now that John Dunbar has completed the task of adding dollar sign, a **Merge Request** can be created and assigned to Lisa Jones for review. Click on **Merge Requests** on navigation panel and then click on the **New Merge Request** button.
 
+    ![](images/300/image084.5.png)
+
+
 - Enter the following information into the **New Merge Request and click **Next**
 
     **Repository:** `AlphaOfficeProductCatalogUI.git`
@@ -364,9 +369,11 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ## Merge the Branch as Lisa Jones
 
-In the following steps "Lisa" will merge the breanch created by "John" into the master.
-
 ### **STEP 13:** Merge Requests
+
+- In the following steps the logical persona “Lisa” will merge the branch created by “John” into the master.
+
+    ![](images/lisa.png)
 
 - on the navigation panel, click **Merge Requests**. Select the **Assigned to Me** search. After the search completes. click on the **Added dollar sign to the display of the price** assigned request.
 
