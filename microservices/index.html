@@ -149,10 +149,8 @@
             setTimeout(function() {
                 if(lab.filename === 'README.md') {
                     $("#labguide a").each(function() {
-                        console.log(this.href);
                         if(this.href.endsWith('.md')) {
                             $(this).on("click", function(event) {
-                               console.log('parsing...');
                                 event.preventDefault();
                                 $scope.getLabGuide({filename: this.href});
                             });
@@ -170,11 +168,6 @@
         };
         
     }]);
-                                       
-    function replaceAll(str, find, replace) {
-        return str.replace(new RegExp(find, 'g'), replace);
-    }
-    
     
 </script>
 </body>
