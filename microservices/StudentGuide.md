@@ -2,7 +2,7 @@
 ![](images/studentguide/Picture-Title.png)  
 Update: January 28, 2017
 
-## Introduction
+## Student Guide
 
 This Student Guide will provide you with the instructions nessesary to install the Client Tools used during this workshop. This Workshop will allow you to gain exposure to the Oracle Developer Cloud Service, the Oracle Application Container Cloud Service, and open source products such as Eclipse, Maven, Git, and Brackets.
 

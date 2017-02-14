@@ -1,5 +1,8 @@
 
-# Devop and Cloud Native Microservices 
+![](images/studentguide/Picture-Title.png)  
+Update: January 28, 2017
+
+## README 
 
 This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - youwill create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
@@ -12,11 +15,11 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
     - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
         
 **Second**, ***Configure your Client Environment***
-- Your client enviroment **must be configured prior** to attending the Hands on Workshop, or you will not be able to perform the Workshop labs. 
+- Your client enviroment **must be configured prior** to attempting the Hands on Workshop labs. 
 - You have two options for configuring your workshop client environment. 
      - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
      - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting this hands on workshop. 
+- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
       
 ## How View the Lab Guides
 
