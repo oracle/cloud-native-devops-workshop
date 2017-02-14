@@ -1,13 +1,13 @@
 ## IMPORTANT: How to prepare for this workshop
 
 **First**, ***Get an Oracle Cloud Account*** 
-- Oracle provides several methods for gaining Oracle Cloud accounts inorder to complete the Labs in this Hands-on-Workshop. 
+- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
     - For some workshop events, cloud environments will be provided. 
-    - For others events, or completing this workshop in a self-service model, you will be required to gain access to your own Trial account. Trial accounts can be obtained from at [Shop Oracle](http://shop.oracle.com) 
+    - For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you will must gain access to your own Trial account. Trial accounts can be obtained at [Shop Oracle](http://shop.oracle.com) 
     - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
         
 **Second**, ***Configure your Client Environment***
-- Your client enviroment **must be configured prior** to attempting the Hands on Workshop labs. 
+- Your client enviroment **must be configured prior** to attempting the Hands-on-Workshop labs. 
 - You have two options for configuring your workshop client environment. 
      - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
      - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
