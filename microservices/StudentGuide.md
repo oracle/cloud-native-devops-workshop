@@ -8,7 +8,7 @@ This Student Guide will provide you with the instructions nessesary to install t
 
 ## Client Enviroment Options
 
-Your client enviroment **must be configured prior** to attending the Hands on Workshop, or you will not be able to perform the Workshop labs. 
+Your client enviroment **must be configured prior** to attempting the Hands on Workshop, or you will not be able to complete the Workshop labs. 
 
 You have two options for configuring your workshop client environment. 
 
