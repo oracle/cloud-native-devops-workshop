@@ -9,8 +9,6 @@ Oracle Application Performance Monitoring Cloud Service is a software-as-a servi
 
 ![](images/apm.architecture.png)
 
-By incorporating metrics and telemetry into your DevOps and continuous delivery pipeline,
-
 In this tutorial, we will integrate APM into a continuous delivery flow to automatically incorporate the setup and installation of the APM agent during the build process, to ensure that we have continuous telemetry. Using the Application Performance Monitoring Web User Interface you can monitor all necessary details about the demo application.
 
 Once this is setup, the APM will be introduced into the application automatically during the build  and we will be able to get telemetry without further thinking about the process of deploying agents.
@@ -202,6 +200,8 @@ Can you tell which button clicks result in AJAX calls and which do not? Can you 
 ![](images/apm-eum-session.png)
 
 This concludes the required parts of this tutorial.
+
+**Scroll down to check your answers!**
 
 #### (Optional) Installing and Provisioning APM Java Agent on Apache Tomcat (or other Java EE application servers) Manually ####
 
@@ -402,3 +402,12 @@ After you have downloaded and extracted the installer, install and provision the
 	[oracle@localhost apm_staging]$
 
 Now the local installation of Apache Tomcat is almost ready to run and includes APM agent. As you can see from the output you have to add `-javaagent:"${CATALINA_HOME}/apmagent/lib/system/ApmAgentInstrumentation.jar` to `CATALINA_OPTS` and restart the server.
+
+#### Answers
+
+1. *Can you figure out how much memory is allocated for each execution of the sum of random integers? Does this amount seem correct?*
+To figure out memory allocated for the sum of random integers, first identify the server request associated with the API, then take a look at an instance sample. Each instance carries the amount of memory allocated during the request. The amount should be correct, in that it should be around 4 megabytes, which would correspond to 1M integers in the array times 4 bytes each (32-bit ints in Java).
+
+2. *Can you tell whether the quote functionality uses static data or makes a real external web service call?* To figure out whether the quote functionality uses static data or makes a real external web service call, identify the server request associated with this API, then look at its diagram. Outbound web service calls are there and you can see (1) that the service does make a web service call and (2) the URL that the web service call is made to, which is a real 3rd party service.
+
+3. *Can you tell which button clicks result in AJAX calls and which do not? Can you determine the cause of the behavior when you click Compute with 1048576 in Return Array Index?* To see which button clicks result in AJAX calls and which do not, take a look at the Session List for one of your sessions and take a look at the ordering of clicks and ajax calls. Based on the path, you can identify which buttons were clicked and which clicks were followed by AJAX calls and which were not.
