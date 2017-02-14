@@ -21,6 +21,8 @@
 
     ![](images/WorkshopMenu.png)  
 
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/derekoneil/cloud-native-devops-workshop/tree/master/microservices) repository.
+
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
 
 ## DevOps and Cloud Native Microservices Workshop
