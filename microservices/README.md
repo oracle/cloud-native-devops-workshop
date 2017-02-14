@@ -13,7 +13,7 @@
      - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
 - Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
       
-## How View the Lab Guides
+## How to View the Lab Guides
 
 - The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://derekoneil.github.io/cloud-native-devops-workshop/microservices) 
 
