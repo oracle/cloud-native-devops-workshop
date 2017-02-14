@@ -300,9 +300,7 @@ We have now verified that the statictweets microservice has been deployed and fu
 
     ![](images/200/Picture46.png)  
 
-- In the Change Progress popup click **Next** and then **OK**.
-
-    ![](images/200/Picture47.png)  
+- In the Change Progress popup click **Next** and then **OK**.  
 
 - Your Sprint should now look like the following:
 
@@ -652,8 +650,6 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
     ![](images/200/image117.png)  
 
 - Set the Status to **VERIFIED – FIXED** and click **Next** and then **OK**
-
-    ![](images/200/image118.png)  
 
 - **Sign Out** as Lisa Jones
 
