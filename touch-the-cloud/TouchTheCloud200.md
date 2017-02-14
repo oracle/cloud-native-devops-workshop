@@ -3,31 +3,24 @@ Update: January 28, 2017
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
-
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. In this lab, you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any required front-end or analytics components (one of which you will build in the following lab, lab 300).
-
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
 ## Objectives
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Eclipse
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- User Experience with Process Cloud
+- Process Modelling and Configuration
 
-## Required Artifacts
+## Requirements for this lab
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse
+A deployed process 'Quote to Order' - see ![Workshop preparation](TouchTheCloud000.md)
 
-# Create Initial Static Twitter Feed Service
+# 
 
-## Explore Developer Cloud Service
+## Process Cloud User Experience
 
-### **STEP 1**: Login to your Oracle Cloud account as Bala.Gupta
+### **STEP 1**: Create a Quote (or follow **STEP 1a** for a manual Quote Capture)
 
-- If you just completed lab 100, or if you are still logged in as Lisa.Jones, you will need to first sign out before continuing this lab. Sign out by clicking on the user’s name (lisa.jones) at the top right corner of the screen, then selecting Sign Out from the dropdown menu.
-
+- On either your mobile phone, or in the Simulator in MCS, go ahead and create a Quote for a customer.
     ![](images/200/Picture1.png)  
 
 - Now we can login again. From any browser, **go to the following URL**:

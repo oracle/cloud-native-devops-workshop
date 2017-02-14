@@ -19,6 +19,9 @@ https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
 # Touch the Cloud
 
 **Reference the following Lab Guides by opening their Documentation Files:**
+## Required pre-work
+
+See **Documentation**: ![Workshop Preparation](TouchTheCloud000.md)
 
 ## Lab 100: Mobile Application Accelerator
 
@@ -40,14 +43,6 @@ The objective of this lab is to expose you to the:
 
 - ***Process Modelling of PCS***
 
-### Required pre-work
-
-- Import the supplied exported Process
-    -   Create a Workspace
-    -   Import Process into your Workspace
-- Configure endpoints
-    -   Configure Integration Cloud
-- Configure roles
 
 ### Process Cloud User Interaction
 ***User experinece***
