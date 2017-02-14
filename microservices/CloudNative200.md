@@ -161,10 +161,8 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Triggers** tab.
 
-  **Select**: `Based on SCM polling schedule`
-
-  **Note:** The above expression results in the repository being polled every minute to check for any changes. If there are changes, the build will trigger.
-
+    **Select**: `Based on SCM polling schedule`
+  
     ![](images/200/Picture25.png)  
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke Maven 3**.
