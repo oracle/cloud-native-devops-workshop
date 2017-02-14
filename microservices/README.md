@@ -16,7 +16,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - You have two options for configuring your workshop client environment. 
      - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
      - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md) Please follow the instruction in this document prior to attending this hands on workshop. 
+- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md) ***Please follow the instruction in the Student Guide*** prior to attending this hands on workshop. 
       
 ## How View the Lab Guides
 

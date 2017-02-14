@@ -13,9 +13,9 @@ Your client enviroment **must be configured prior** to attending the Hands on Wo
 You have two options for configuring your workshop client environment. 
 
 - ***Option 1***: You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
-    - Refer to the **Virtual Box Client Installation** section of this document to use this option
+    - Refer to the ***Virtual Box Client Installation*** section of this document to use this option
 - ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
-    - Refer to the **Configure Client Tools Locally** section of this document to use this option.
+    - Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
 
 # Virtual Box Client Installation
 
