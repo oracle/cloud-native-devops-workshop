@@ -19,23 +19,25 @@
   <script src='https://cdn.rawgit.com/showdownjs/showdown/1.6.2/dist/showdown.min.js'></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link type="text/css" rel="stylesheet" href="css/solutionEngTemplate.css">
+  <link type="text/css" rel="stylesheet" href="css/workshopIndex.css">
+
 
 </head>
 <body ng-cloak ng-controller="labGuideController">
-    <md-toolbar class="md-hue-2" flex="none" layout-padding>
-        <div class="md-toolbar-tools">
-            <md-button class="md-icon-button md-raised md-accent" aria-label="Settings" ng-disabled="false" ng-click="toggleLeft()">
-                <md-icon md-svg-icon="images/menu.svg"></md-icon>
+    <md-toolbar class="md-hue-2 infra" flex="none" layout-padding>
+        <div class="md-toolbar-tools infra">
+            <md-button class="md-icon-button md-raised md-accent infra" aria-label="Settings" ng-disabled="false" ng-click="toggleLeft()">
+                <md-icon class="infra" md-svg-icon="images/menu.svg"></md-icon>
             </md-button>
-            <h2>
-                <span>{{manifest.workshop.title}}</span>
+            <h2 class="infra">
+                <span class="infra">{{manifest.workshop.title}}</span>
             </h2>
 
         </div>
     </md-toolbar>
-    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
-      <md-toolbar class="md-hue-2">
-        <h1 class="md-toolbar-tools">Workshop Contents</h1>
+    <md-sidenav class="md-sidenav-left infra" md-component-id="left" md-whiteframe="4">
+      <md-toolbar class="md-hue-2 infra">
+        <h1 class="md-toolbar-tools infra">Workshop Contents</h1>
       </md-toolbar>
       <md-content>
         <md-list>
@@ -48,17 +50,17 @@
                 <md-divider></md-divider>
             </md-list-item>
 -->
-            <md-list-item class="md-3-line toc-item" ng-repeat="lab in manifest.workshop.labs" ng-click="getLabGuide(lab); close();">
-                <div class="md-list-item-text">
-                    <h3>{{lab.title}}</h3>
-                    <p>{{lab.description}}</p>
+            <md-list-item class="md-3-line toc-item infra" ng-repeat="lab in manifest.workshop.labs" ng-click="getLabGuide(lab); close();">
+                <div class="md-list-item-text infra">
+                    <h3 class="infra">{{lab.title}}</h3>
+                    <p class="infra">{{lab.description}}</p>
                 </div>
                 <md-divider></md-divider>
             </md-list-item>
 
 
         </md-list>
-        <md-button ng-click="close()" class="md-primary">
+        <md-button ng-click="close()" class="md-primary infra">
           Close Menu
         </md-button>
       </md-content>
@@ -88,15 +90,21 @@
     angular.module('labGuide', ['ngMaterial', 'ngSanitize'])
     
     .config(function($mdThemingProvider) {
+        
+    var whiteBackground = $mdThemingProvider.extendPalette('grey', {
+        '50': '#fefefe'
+      });
+
+      // Register the new color palette map with the name <code>neonRed</code>
+      $mdThemingProvider.definePalette('whiteBackground', whiteBackground);
+
       $mdThemingProvider.theme('default')
           //.dark();
           .primaryPalette('blue')
           .accentPalette('orange')
-          .warnPalette('red');
-      $mdThemingProvider.theme('included')
-          .backgroundPalette('blue-grey')
-          .warnPalette('amber')
-          .dark();
+          .warnPalette('red')
+          .backgroundPalette('whiteBackground');
+      
     })
     
     .controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize', 

@@ -29,8 +29,8 @@
     content: "";
   }
 
-  pre,
-  blockquote {
+  pre:not(.infra),
+  blockquote:not(.infra) {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -39,52 +39,52 @@
     display: table-header-group;
   }
 
-  tr,
-  img {
+  tr:not(.infra),
+  img:not(.infra) {
     page-break-inside: avoid;
 
   }
 
-  img {
+  img:not(.infra) {
     max-width: 100% !important;
   }
 
-  p,
-  h2,
-  h3 {
+  p:not(.infra),
+  h2:not(.infra),
+  h3:not(.infra) {
     orphans: 3;
     widows: 3;
   }
 
-  h2,
-  h3 {
+  h2:not(.infra),
+  h3:not(.infra) {
     page-break-after: avoid;
   }
 }
 
-#labguide pre,
-#labguide code {
+pre:not(.infra),
+code:not(.infra) {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
-#labguide pre {
+pre:not(.infra) {
   padding: .5rem;
   line-height: 1.25;
   overflow-x: scroll;
 }
 
-#labguide a,
-#labguide a:visited {
+a,
+a:visited {
   color: #3498db;
 }
 
-#labguide a:hover,
-#labguide a:focus,
-#labguide a:active {
+a:hover,
+a:focus,
+a:active {
   color: #2980b9;
 }
 
-#labguide .modest-no-decoration {
+.modest-no-decoration {
   text-decoration: none;
 }
 
@@ -104,40 +104,34 @@ html {
   }
 }
 
-body {
-  line-height: 1.85;
-  font-family: 'Roboto', sans-serif;
-  background-color: white;
-  height: auto;
-}
 
-#labguide p,
-#labguide .modest-p {
+p:not(.infra),
+.modest-p:not(.infra) {
   font-size: 1rem;
   margin-bottom: 1.3rem;
   margin-left: 25px;
 }
 
-#labguide ul {
+ul:not(.infra) {
     margin-left: 10px;
 }
 
-#labguide h1,
-#labguide .modest-h1,
-#labguide h2,
-#labguide .modest-h2,
-#labguide h3,
-#labguide .modest-h3,
-#labguide h4,
-#labguide .modest-h4 {
+h1:not(.infra),
+.modest-h1:not(.infra),
+h2:not(.infra),
+.modest-h2:not(.infra),
+h3:not(.infra),
+.modest-h3:not(.infra),
+h4:not(.infra),
+.modest-h4:not(.infra) {
   margin: 1.414rem 0rem;
   font-weight: inherit;
   line-height: 1.42;
 }
 
 
-#labguide h1,
-#labguide .modest-h1 {
+h1:not(.infra),
+.modest-h1:not(.infra) {
   margin-top: 2rem;
   line-height: 2.7rem;
   font-size: 2.527rem;
@@ -152,8 +146,8 @@ body {
 
 }
 
-#labguide h2,
-#labguide .modest-h2 {
+h2:not(.infra),
+.modest-h2:not(.infra) {
   font-size: 1.999rem;
   font-weight: bold;
   font-family: 'Tahoma', sans-serif;
@@ -161,8 +155,8 @@ body {
   margin-left: 15px;
 }
 
-#labguide h3,
-#labguide .modest-h3 {
+h3:not(.infra),
+.modest-h3:not(.infra) {
   font-size: 1.4rem;
   background-color:#E0E8ED;
   font-weight: medium;
@@ -175,46 +169,45 @@ body {
 
 }
 
-#labguide h3.plus:before {
+h3.plus:before {
     content: '+';
     position: absolute;
     left: -20px;
 }
-#labguide h3.minus:before {
+h3.minus:before {
     content: '-';
     position: absolute;
     left: -20px;
 }
 
-#labguide h4,
-#labguide .modest-h4 {
+h4:not(.infra),
+.modest-h4:not(.infra) {
   font-size: 1.121rem;
 }
 
-#labguide h5,
-#labguide .modest-h5 {
+h5:not(.infra),
+.modest-h5:not(.infra) {
   font-size: .88rem;
 }
 
-#labguide h6,
-#labguide .modest-h6 {
+h6:not(.infra),
+.modest-h6:not(.infra) {
   font-size: .70rem;
 }
 
-#labguide small,
-#labguide .modest-small {
+small:not(.infra),
+.modest-small:not(.infra) {
   font-size: .70rem;
 }
 
 /* https://github.com/mrmrs/fluidity */
 
-#labguide img,
-#labguide canvas,
-#labguide iframe,
-#labguide video,
-#labguide svg,
-#labguide select,
-#labguide textarea {
+img:not(.infra),
+canvas:not(.infra),
+iframe:not(.infra),
+video:not(.infra),
+select:not(.infra),
+textarea:not(.infra) {
   max-width: 100%;
   padding:1px;
    --border:1px solid #021a40;
@@ -232,10 +225,12 @@ html {
   max-width: 100%;
 }
 
-#labguide  {
+ body {
   color: #444;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  line-height: 1.85;  
+  height: auto;
   margin: 0 auto;
   max-width: 55rem;
   line-height: 1.45;
@@ -244,70 +239,65 @@ html {
 
 }
 
-#labguide strong {
+strong:not(.infra) {
      font-family: 'Veranda', sans-serif ;
      color:#123262;
 }
 
-#labguide em {
+em:not(.infra) {
 
      color:red;
 }
 
 
-#labguide h1,
-#labguide h2,
-#labguide h3,
-#labguide h4,
-#labguide h5,
-#labguide h6 {
+h1:not(.infra),
+h2:not(.infra),
+h3:not(.infra),
+h4:not(.infra),
+h5:not(.infra),
+h6:not(.infra) {
   font-family: Arimo, Helvetica, sans-serif;
 }
 
-#labguide h1,
-#labguide h2
+h1:not(.infra),
+h2:not(.infra)
 {
   margin-bottom: 1.15rem;
   padding-bottom: .5rem;
 }
 
-#labguide h3 {
+h3:not(.infra) {
   margin-bottom: .1rem;
   padding-bottom: .1rem;
 }
 
-#labguide h1 {
+h1:not(.infra) {
     text-align: left;
       border-bottom: 1px solid #fafafa;
       border-top: 1px solid #fafafa;
 /*    cursor: pointer;*/
 }
 
-#labguide h2,
-#labguide h3 {
+h2:not(.infra),
+h3:not(.infra) {
     text-align: left;
 
 }
 
-#labguide h3 {
+h3:not(.infra) {
     cursor: pointer;
 }
 
-#labguide blockquote {
+blockquote:not(.infra) {
   border-left: 8px solid #fafafa;
   padding: 1rem;
 }
 
-#labguide pre,
-#labguide code {
+pre:not(.infra),
+code:not(.infra) {
   background-color: #f3f3f3;
   margin: .4rem;
 
-
-}
-
-
-div {
 
 }
 
