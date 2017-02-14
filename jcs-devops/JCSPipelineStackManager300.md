@@ -221,7 +221,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://<Public IP of Load Balancer/AlphaProducts**
+    **https://** ***\<Public IP of Load Balancer\>*** **/AlphaProducts**
 
 - On the security warning click **ADVANCED** and then click **Proceed to ...**
 
@@ -409,7 +409,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://<Public IP of Load Balancer/AlphaProducts**
+    **https://** ***\<Public IP of Load Balancer\>*** **/AlphaProducts**
 
 - You should now see the update **Alpha Office Product Catalog UI**
 
