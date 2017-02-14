@@ -298,6 +298,8 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ### **STEP 10**: Load Eclipse IDE
 
+In the following task we will provide screen shots taken from the optional virtual box image provided with the workshop. If you are using Eclipse and Brackets on you local hardware, your screens may vary slightly. 
+
 - Right Click and select **Run** on the **Eclipse** Desktop Icon. 
 
     Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure it. 
@@ -357,23 +359,36 @@ Now that we have completed the import, build, deployment, and verification of ou
 
     ![](images/200/Picture60.png)  
 
-- Keep the wizard defaults and **click** on **Next**
+- If the following screen is displayed, Keep the wizard defaults and **click** on **Next**:
 
     ![](images/200/Picture61.png)  
 
-- Accept the Import defaults, and **click on Finish**
 
+- Accept the Import defaults, and **click on Finish**
+ 
     ![](images/200/Picture62.png)  
 
-- If no projects are imported into your Project Explorer, choose **Import** from the Eclipse **File** menu. Click to expand the **General** category, and click **Existing Projects into Workspace**. Click **Next**.
+### **STEP 13**: Import Projects
+
+- ***If no projects are imported*** into your Project Explorer, as is show in the screen capture below, perform this step. If **TwitterFeedMicroService** was imported, go to the next step. 
+
+    ![](images/200/Picture62.5.png)  
+
+- Choose **Import** from the Eclipse **File** menu. 
+
+    ![](images/200/Picture62.1.png)
+
+- In the Import dialog, expand **General** > **Existing Projects into Workspace** and click on **Next**
 
     ![](images/200/Picture62.2.png)
 
-- In the Import dialog, click **Browse** next to the **Select root directory** input field. Navigate to your **TwitterFeedMicroservice.git-xxxx** folder and click **OK**. Then click **Finish**.
+- In the Import dialog, click **Browse** next to the **Select root directory** input field. 
+
+- Navigate to your **Workspace** > **TwitterFeedMicroservice.git-xxxx** folder and click **OK**. Then click **Finish**.
 
     ![](images/200/Picture62.3.png)
 
-### **STEP 13**: Select the correct Java JDE
+### **STEP 14**: Select the correct Java JDE
 
 Depending on your eclipse configuration, you may need to point the project's Java Runtime Environment to a different JRE than the default. (e.g. with the Workshop's companion Virtual Box Image). In this step you will first check to see if your environment is correctly set. If the JRE is not correct, you will configure the Project Settings to point to the correct JRE. 
 
@@ -385,11 +400,15 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
     ![](images/200/Picture64.png)  
 
-- **Click** on the **Libraries tab**. Then select the **JRE System Library**. Next, **click** on the **Edit** button.
+- **Click** on the **Libraries tab**. 
+
+- Select the **JRE System Library**.
+
+- **Click** on the **Edit** button.
 
     ![](images/200/Picture65.png)  
 
-- If your JRE release is **equal to or greater** than **1.8.0\_121**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel and continue to the next step.
+- If your JRE release is **equal to or greater** than **1.8.0\_121**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
 
     ![](images/200/Picture65.5.png)  
 
@@ -419,7 +438,7 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
 ## Test the Local Cloned Services
 
-### **STEP 14**: Set Feature 2 Status to In Progress
+### **STEP 15**: Set Feature 2 Status to In Progress
 
 In the previous steps we updated the status of the Tasks assigned to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
 
@@ -435,7 +454,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture73.2.png)  
 
-### **STEP 15**: Build and test the TwitterFeedMicroservice
+### **STEP 16**: Build and test the TwitterFeedMicroservice
 
 - **Right Click** on the **TwitterFeedMicroservice** project. Select **Maven > Update Project**
 
@@ -449,7 +468,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture76.png)  
 
-- Double Clicking on the **Console tab** will expand The Window. You can minimize the Window by double clicking the tab again. If the TwitterFeedMicroservices test runs successfully, your console window will contain the following – Notice the message with “### Tweets in Static Tweets”. Also, you should see that there were zero Failures.
+- Double Clicking on the **Console tab** will expand The Window. You can minimize the Window by double clicking the tab again. If the TwitterFeedMicroservices test runs successfully, your console window will contain the following – Notice the message with “### Tweets in Static Tweets”. You should see that there were zero Failures. Depending on your installation, you may see an exception as Eclipse's network listner is shutdown. 
 
     ![](images/200/Picture77.png)  
 
@@ -457,7 +476,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
 The Code we cloned locally contains all the source necessary to filter the Static Twitter Feed. In this section of the lab, we will un-comment the code and test the filter.
 
-### **STEP 16**: Add Filter
+### **STEP 17**: Add Filter
 
 - In the Project Explorer, **expand** the **TwitterFeedMicroservice > src/main/java > com.example** and **double click** on **StaticTweets.java** to open the source code.
 
@@ -485,7 +504,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 ## Test the Local Filtered Services
 
-### **STEP 17**: Run Test
+### **STEP 18**: Run Test
 
 - Run the Test by right clicking on **TwitterFeedMicroservice** and selecting **Run As > Maven Test**
 
@@ -515,7 +534,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 - Click on the **Finish button** in the Push Confirmation dialog
 - Click on **Ok** in Push Result dialog
 
-### **STEP 18**: Complete the Create Filter Task
+### **STEP 19**: Complete the Create Filter Task
 
 - In the lower left Eclipse Task List, double click on **Create Filter on Twitter Feed** task
 
@@ -527,7 +546,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 ## Create Merge Request
 
-### **STEP 19**: Review Sprint Status and create Merge Request
+### **STEP 20**: Review Sprint Status and create Merge Request
 
 - Return to the Developer Cloud Service Dashboard in the browser, and select **Agile**. If your default Board is not set to Microservices, then set the Find Board Filter to All, and select the Microservices board.
 
@@ -572,7 +591,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 In the following steps “Lisa” will merge the branch create by “Bala” into the master.
 
-### **STEP 20**: Merge Requests
+### **STEP 21**: Merge Requests
 
 ![](images/lisa.png)  
 
@@ -610,7 +629,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ## Test the JavaTwitterMicroservice in the Cloud
 
-### **STEP 21**: Test Microservice
+### **STEP 22**: Test Microservice
 
 - Once the service has successfully deployed, click **Deploy** in the left-hand menu and click on the **JavaTwitterMicroservice** link
 
@@ -650,7 +669,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 You have two options for managing this code change in the version control system. If you would like more practice with the multi-user workflow, you can start a new branch for this feature, commit to that branch, create a merge request, and approve the merge. We’ll refer to this in the instructions as **Method A**. If you’re comfortable with that workflow, you can switch to master in your local repository, pull the latest revision from the cloud, and commit and push directly to master for this exercise. This will be **Method B**.
 
-### **STEP 22**: Create New Twitter App
+### **STEP 23**: Create New Twitter App
 
 To generate the unique twitter credentials for our microservices, we need to sign in to twitter and create a new application for this project, then generate access tokens for it.
 
