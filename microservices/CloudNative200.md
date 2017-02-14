@@ -30,7 +30,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/200/Picture10.5.png)  
 
-- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps.
+- Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***Bala Gupta*** as you perform the following steps.
 
     ![](images/bala.png)  
 
@@ -60,9 +60,15 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
     ![](images/200/Picture14.2.png)  
 
-- Click **OK** on the Change Progress popup
+- Click on **Next** in the Change Progress popup. 
+
+    ![](images/200/Picture14.5.png)  
+
+- In the **Add Time Spent** popup, enter `1` in the **Time Spent** field, and Click **OK**.
 
     ![](images/200/Picture15.png)  
+
+- Your Sprint progress will appear as shown below.
 
     ![](images/200/Picture16.2.png)  
 
@@ -223,7 +229,11 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/200/Picture39.2.png)  
 
-- In the Change Progress popup, click **OK**
+- In the Change Progress pop up, click on **Next**
+
+    ![](images/200/Picture39.5.png)  
+
+- In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**
 
     ![](images/200/Picture40.png)  
 
@@ -264,9 +274,13 @@ We have now verified that the statictweets microservice has been deployed and fu
 
     ![](images/200/Picture46.2.png)  
 
-- In the Change Progress popup click **Next** and then **OK**.
+- In the Change Progress popup click **Next**.
 
     ![](images/200/Picture47.png)  
+
+- In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**.
+
+    ![](images/200/Picture47.5.png)  
 
 - Your Sprint should now look like the following:
 
@@ -618,9 +632,13 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image117.png)  
 
-- Set the Status to **VERIFIED – FIXED** and click **Next** and then **OK**
+- Set the Status to **VERIFIED – FIXED** and click **Next**.
 
     ![](images/200/image118.png)  
+
+- Set the **Time Spent** to `1` and click on **OK**.
+
+    ![](images/200/image118.5.png)  
 
 - You are now done with this lab.
 

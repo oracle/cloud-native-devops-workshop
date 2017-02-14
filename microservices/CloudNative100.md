@@ -35,7 +35,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
     ![](images/100/Picture100-2.png)
 
@@ -57,23 +57,23 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-4.png)
 
-- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service click **Hide**
+- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
 
     ![](images/100/Picture100-5.png)
 
 ### **STEP 2**: Check/Set Storage Replication Policy
 
-Depending on the state of your Cloud Account, you may need to set the replication policy if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
 
 - Click on the **Storage** Cloud Service
 
     ![](images/100/Picture-01.png)
 
-- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step.
+- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
 
     ![](images/100/Picture-02.png)
 
-- Care must be taking how your replication policy is set, because it cannot be changed. With Trial account, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
 
     ![](images/100/Picture-03.png)
 
@@ -93,13 +93,16 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-7.png)
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will list all projects for which you are currently a member.
+- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will then list all projects for which you are currently a member.
 
-    ![](images/100/Picture100-8.png)
+    ![](images/100/Picture100-7.5.png)
 
 ### **STEP 4**: Create Developer Cloud Service Project
 
 - Click **New Project** to start the project create wizard.
+
+    ![](images/100/Picture100-8.png)
+
 - On Details screen enter the following data and click on **Next**.
 
     **Name:** `Twitter Feed Marketing Project`
@@ -144,7 +147,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issue.
+    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issues.
 
     ![](images/bala.png)
 
@@ -160,7 +163,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story Points:** `1`
 
-    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
+    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information. 
 
     ![](images/100/Picture100-17.png)
 
@@ -184,7 +187,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
 ### **STEP 7**: Create Issue for initial GIT Repository creation
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Note: The next two issues will logically be owned by John Dunbar.
 
     ![](images/john.png)
 
@@ -264,7 +267,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ### **STEP 11**:	Add Backlog Issues to Sprint
 
-- Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
+- Next, we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
     ![](images/100/Picture100-26.png)
 
@@ -286,7 +289,7 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
     ![](images/100/Picture100-29.png)
 
-- Click **New Progress State**.  Change name to **Verify Code**. We will use this new State for performing QA and Testing.
+- Click **New Progress State**.  Change **Name** to **Verify Code**. We will use this new State for performing QA and Testing.
 
     ![](images/100/Picture100-30.png)
 
