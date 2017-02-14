@@ -138,7 +138,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture6.png)
 
-### Update the Eclipse / Maven proxy
+### Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 - From the **Eclipse > Preference or Window > Preferences** panel, enter **Maven** into the search box. Click on the Maven User Settings. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings are to be located in the **/home/oracle/.m2** directory
 
