@@ -16,6 +16,12 @@
                 "description": "Workshop guidance and prerequisites"
             },
             {
+                "number": "000",
+                "filename": "TouchTheCloud000.md",
+                "title": "Required Environment Pre-requisites",
+                "description": "Contains the details of pre-required configuration."
+            },
+            {
                 "number": "100",
                 "filename": "TouchTheCloud100.md",
                 "title": "Lab 100: Mobile Application Accelerator",

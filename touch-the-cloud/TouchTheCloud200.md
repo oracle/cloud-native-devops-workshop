@@ -12,7 +12,7 @@ This is the second of several labs that are part of the **Oracle Public Cloud To
 
 ## Requirements for this lab
 
-A deployed process 'Quote to Order' - see ![Workshop preparation](TouchTheCloud000.md)
+A deployed process 'Quote to Order' - see [Workshop preparation](TouchTheCloud000.md)
 
 # 
 
