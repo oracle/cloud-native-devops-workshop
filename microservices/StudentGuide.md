@@ -13,12 +13,12 @@ Your client enviroment **must be configured prior** to attending the Hands on Wo
 You have two options for configuring your workshop client environment. 
 
 - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
-    - Refer to the [Configuring the Virtual Box Image](#vbox-install) section of this document to use this option
+    - Refer to the **Configuring the Virtual Box Image** section of this document to use this option
 
 - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop.
-    - Refer to the [Configure Client Tools Locally](#configure-locally) section of this document to use this option.
+    - Refer to the **Configure Client Tools Locally** section of this document to use this option.
 
-# <a name="vbox-install">Virtual Box Client Installation</a>
+# Virtual Box Client Installation
 
 As an alternative to installing Eclipse, Brackets and Git on your laptop, you can follow these steps to download a Virtual Box image that will contain all those products pre-integrated together.
 
@@ -71,7 +71,7 @@ As an alternative to installing Eclipse, Brackets and Git on your laptop, you ca
 
     ![](images/studentguide/Picture30.png)
 
-# <a name="configure-locally">Configure Client Tools Locally</a>
+# Configure Client Tools Locally
 
 ## Verify your version of the Java JDK
 
