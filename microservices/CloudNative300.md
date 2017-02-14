@@ -185,9 +185,13 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/300/image039.2.png)  
 
-- In the Change Progress popup, click on **OK**
+- In the Change Progress popup, Click on **Next**
 
     ![](images/300/image040.png)  
+
+- Enter `1` in the **Time Spent** field and click on **OK**.
+
+    ![](images/300/image040.5.png)  
 
 - The code is now ready for verification before moving to Completed
 
@@ -221,9 +225,14 @@ We have now verified that our application has been deployed and is functional. T
 
     ![](images/300/image047.png)  
 
-- In the Change Progress popup click **Next** and then **OK**
+- In the Change Progress popup click **Next**.
 
     ![](images/300/image048.png)  
+
+- Change the **Time Spent** to `1` and click on **OK**.
+
+    ![](images/300/image048.5.png)  
+
 
 - Your Sprint should now look like the following:
 
@@ -457,9 +466,13 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image082.png)
 
-- In the Change Progress popup click **Next** and then **OK**.
+- In the Change Progress popup click **Next**.
 
     ![](images/300/image083.png)
+
+- In the **Time Spent** field enter `1` and click on **OK**.
+
+    ![](images/300/image083.5.png)
 
 ## Create Merge Request
 
@@ -558,9 +571,13 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image104.png)
 
-- Set the Status to **VERIFIED – FIXED** and click **Next** and then **OK**
+- Set the Status to **VERIFIED – FIXED** and click **Next**.
 
     ![](images/300/image105.png)
+
+- Enter '`' into the **Time Spent** field and click on **OK**.
+
+    ![](images/300/image105.5.png)
 
 - You are now ready to move to the next lab.
 

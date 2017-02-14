@@ -370,7 +370,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
 ### **STEP 13**: Import Projects
 
-- ***If no projects are imported*** into your Project Explorer, as is show in the screen capture below, perform this step. If **TwitterFeedMicroService** was imported, go to the next step. 
+- ***If projects were NOT imported*** into your Project Explorer, as is show in the screen capture below, perform this step. If **TwitterFeedMicroService** was imported, go to the next step. 
 
     ![](images/200/Picture62.5.png)  
 
