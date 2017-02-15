@@ -33,20 +33,20 @@
 
         </div>
     </md-toolbar>
-    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="5">
       <md-toolbar class="md-hue-2">
         <h1 class="md-toolbar-tools">Workshop Contents</h1>
       </md-toolbar>
       <md-content>
         <md-list>
-            <md-list-item class="md-3-line toc-item" ng-click="selection.lab = false; close();">
+            <md-list-item class="md-4-line toc-item" ng-click="selection.lab = false; close();">
                 <div class="md-list-item-text">
                     <h3>Introduction</h3>
                     <p>An overview of this workshop</p>
                 </div>
                 <md-divider></md-divider>
             </md-list-item>
-            <md-list-item class="md-3-line toc-item" ng-repeat="lab in manifest.workshop.labs" ng-click="getLabGuide(lab); close();">
+            <md-list-item class="md-2-line toc-item" ng-repeat="lab in manifest.workshop.labs" ng-click="getLabGuide(lab); close();">
                 <div class="md-list-item-text">
                     <h3>{{lab.title}}</h3>
                     <p>{{lab.description}}</p>

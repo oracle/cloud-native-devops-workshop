@@ -1,19 +1,20 @@
-#Process Modelling
-![](images/paas-banner-2.jpg)  
-Update: January 28, 2017
+![](images/200/Accelerate-Process-Cloud.jpg)  
+
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the management, modelling and administration of a typical Quote to Order process.
 
 ## Objectives
 
 - User Experience with Process Cloud
 - Process Modelling and Configuration
 
+# 
+
 ## Requirements for this lab
 
-A deployed process 'Quote to Order' - see [Workshop preparation](TouchTheCloud000.md)
+A deployed process 'Quote to Order' - see Required Environment Setup(TouchTheCloud000.md)
 
 # 
 
@@ -22,7 +23,13 @@ A deployed process 'Quote to Order' - see [Workshop preparation](TouchTheCloud00
 ### **STEP 1**: Create a Quote (or follow **STEP 1a** for a manual Quote Capture)
 
 - On either your mobile phone, or in the Simulator in MCS, go ahead and create a Quote for a customer.
-    ![](images/200/Picture1.png)  
+
+![](images/personas/john_lee_field_sales.png)![](images/actions/capture_quote.png)
+
+**Role: John Lee, Field Sales**
+
+
+
 
 - Now we can login again. From any browser, **go to the following URL**:
 https://cloud.oracle.com
@@ -43,7 +50,7 @@ https://cloud.oracle.com
 
 - Once your Identity Domain is set, enter your **User Name** and **Password** and click **Sign In**
 
-  **NOTE**: For the first part of this lab you will be acting as the Java Developer ***Bala Gupta***. As with the previous lab, if you are not able to support multiple users, login as a supported user, and assume the “logical” identify of Bala Gupta - the Java Developer.
+  **NOTE**: 
 
     ![](images/200/Picture5.png)  
 

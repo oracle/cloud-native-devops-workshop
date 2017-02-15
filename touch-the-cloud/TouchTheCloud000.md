@@ -6,4 +6,5 @@ This workshop require that there are a couple of configurations done before star
 
 *Might have been already implemented, only follow if starting in new cloud environment or you are replicating in your own cloud.*
 
-## First Step
+## First Dependancy
+

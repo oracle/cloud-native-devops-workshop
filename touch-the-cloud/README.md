@@ -21,7 +21,9 @@ https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
 **Reference the following Lab Guides by opening their Documentation Files:**
 ## Required pre-work
 
-See **Documentation**: ![Workshop Preparation](TouchTheCloud000.md)
+***Only required if it is not a pre-configured environment, for example using you rown cloud***
+
+See **Documentation**: TouchTheCloud000.md
 
 ## Lab 100: Mobile Application Accelerator
 
@@ -39,9 +41,9 @@ See **Documentation**: ![Workshop Preparation](TouchTheCloud000.md)
 ### Objectives
 The objective of this lab is to expose you to the:
 
-- ***User Experience of PCS***
+- **User Experience of PCS**
 
-- ***Process Modelling of PCS***
+- **Process Modelling of PCS**
 
 
 ### Process Cloud User Interaction
