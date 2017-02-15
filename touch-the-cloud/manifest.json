@@ -38,12 +38,6 @@
                 "filename": "TouchTheCloud300.md",
                 "title": "Lab 300: Zero Code Integration",
                 "description": "Oracle Integration Cloud Service simplifies how you build integrations in the cloud, letting you connect securely to applications and services both in the cloud and on-premises."
-            },
-            {
-                "number": "400",
-                "filename": "TouchTheCloud400.md",
-                "title": "Lab 400: Business Analytics",
-                "description": "IA blurb - whenever they decided if it is Insight or AI ???"
             }
         ]
     }

@@ -1,4 +1,4 @@
-![](images/200/Picture-lab.png)  
+[](images/200/Cloud1.png)  
 
 ## Introduction
 
