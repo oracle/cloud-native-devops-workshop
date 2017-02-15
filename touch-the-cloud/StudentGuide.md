@@ -15,43 +15,34 @@ This hands-on lab walks you through ...
 
 To install the MAX App from the App Store:
 1. On your iPhone, open the App Store.
-
 2. Search for Oracle MAX App.
-
 3. When prompted, allow MAX to send you notifications.
-
 4. Read through the end user terms and conditions and then tap Agree.
-
 5. Enter your login information:
-
   - Host
   - Username
   - Password
 
-8. Tap Sign In.
+Tap Sign In.
 
 ###Installing the MAX App on Android Devices
 
 To install the MAX App from Google Play:
 1. On your phone, open Google Play.
-
 2. In the Play Store, tap Apps.
-
 3. Search for Oracle MAX App.
-
 4. Tap Install.
-
 5. When prompted, allow MAX to send you notifications.
-
 6. Read through the end user terms and conditions and then tap Agree.
-
 7. Enter your login information:
 
  - Host
  - Username
  - Password
 
-8. Tap Sign In.
+Tap Sign In.
+
+---
 
 ## Oracle Process Mobile app
 
@@ -64,12 +55,15 @@ Download Oracle Process Mobile on Your iOS or Android Device
   * SSL Enabled: Selected by default. Tap to turn off if your organization isn’t using SSL. 
   * In the Port field (if enabled), enter the port number where the Oracle Process Cloud Service is running. 
   * Work Offline: Off by default. Tap to turn on if you want to work in offline mode.
-5. Enter your user name and password to sign in.
+
+Enter your user name and password to sign in.
 
 > **Note:** If SSL Enabled is turned off, the Port field becomes active.
+
+---
 
 # Supported Browsers
 
 Most modern browsers including Chrome, Safari, Internet Explorer, Edge and Firefox are supported.
 
-![](images/Browsers.jpg)
+![](images/browsers.jpeg)
