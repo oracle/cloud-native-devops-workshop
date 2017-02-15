@@ -1,6 +1,5 @@
 
 ![](images/paas-banner-2.jpg)  
-Update: January 28, 2017
 
 ## Introduction
 
@@ -10,7 +9,7 @@ This hands-on lab walks you through ...
 
 *** It is not a requirement to install the Mobile Apps, as all the functionality can be reached through a standard web browser. An embedded simulator is available to preview and interact with the Oracle Mobile Accelarator. 
 
-## Mobile Cloud Service App Acellarator MAX
+## Mobile Cloud Service MAX App
 
 ###Installing the MAX App on iPhones
 
@@ -25,11 +24,9 @@ To install the MAX App from the App Store:
 
 5. Enter your login information:
 
-  Host
-
-  Username
-
-  Password
+  - Host
+  - Username
+  - Password
 
 8. Tap Sign In.
 
@@ -50,11 +47,9 @@ To install the MAX App from Google Play:
 
 7. Enter your login information:
 
-  Host
-
-  Username
-
-  Password
+ - Host
+ - Username
+ - Password
 
 8. Tap Sign In.
 
@@ -75,3 +70,6 @@ Download Oracle Process Mobile on Your iOS or Android Device
 
 # Supported Browsers
 
+Most modern browsers including Chrome, Safari, Internet Explorer, Edge and Firefox are supported.
+
+![](images/Browsers.jpg)
