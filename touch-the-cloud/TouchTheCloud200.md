@@ -22,17 +22,31 @@ A deployed process 'Quote to Order' - see Required Environment Setup(TouchTheClo
 
 ### **STEP 1**: Create a Quote (or follow **STEP 1a** for a manual Quote Capture)
 
-- On either your mobile phone, or in the Simulator in MCS, go ahead and create a Quote for a customer.
-
-![](images/personas/john_lee_field_sales.png)![](images/actions/capture_quote.png)
+---
 
 **Role: John Lee, Field Sales**
 
+![](images/personas/john_lee_field_sales.png)
+
+On either your mobile phone, or in the Simulator in MCS, go ahead and create a Quote for a customer. This will trigger the Quote to Order process in Process Cloud.
+
+---
 
 
+### **STEP 2**: Login to Oracle Cloud
 
-- Now we can login again. From any browser, **go to the following URL**:
-https://cloud.oracle.com
+---
+
+**Role: Julie Jones, Field Sales**
+
+![](images/personas/julie_jones_sales_operations.png)
+
+Since it is Julie's first time signing into Oracle Cloud, she has to figure out how to access Oracle Process Cloud Services.
+
+---
+
+Now we can login as Julie Jones. From any browser, **go to the following URL**:
+[https://cloud.oracle.com](https://cloud.oracle.com)
 
 - Click **Sign In** in the upper right hand corner of the browser.
 
@@ -50,27 +64,64 @@ https://cloud.oracle.com
 
 - Once your Identity Domain is set, enter your **User Name** and **Password** and click **Sign In**
 
-  **NOTE**: 
-
     ![](images/200/Picture5.png)  
 
-- Once connected, you will be presented with a Dashboard displaying the various cloud services available to this account. Note: Based on your browser cookie settings, **it’s possible that once connected you will placed into the Developer Cloud Service dashboard**, and will not need to complete the next few tasks that were performed automatically.
+- Once connected, you will be presented with a Dashboard displaying the various cloud services available to this account. 
 
     ![](images/200/Picture6.png)  
+  
+- Click on the **Oracle Process Cloud Service**
 
-### **STEP 2**: Login to Developer Cloud Service
+    ![](images/200/Picture7.png)
 
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes issue tracking system, agile development dashboards, code versioning and code review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
+- Capture the link displayed **Service Instance URL**, for most browsers right-click ***Copy Link Address***
+>***Note:***
+> Capture this URL, as this is going to be the direct access point to PCS referenced in this Lab document.
 
-- From Cloud UI dashboard click on the **Developer** service. In this example the Developer Cloud Service is named **developer99019**.
+> -The Process Cloud Workspace URL **Copied URL**
 
-    ![](images/200/Picture7.png)  
+> -The Process Cloud Composer URL **Copied URL** with the "/workspace" replaced by "/composer"   
 
-- The Service Details page gives you a quick glance of the service status. Click **Open Service Console** for the Oracle Developer Cloud Service
+### **STEP 3**: Login to Process Cloud Service
+
+---
+
+**Role: Julie Jones, Field Sales**
+
+![](images/personas/julie_jones_sales_operations.png)
+
+There are different ways to access the PCS Workspace. The direct access URL can be embedded on an Intranet page, a full set of REST API's can be used to extract the information programmatically or you can use the mobile application supplied by Oracle. 
+
+Julie prefer to go directly to her PCS Workspace using a browser.
+
+---
+
+Oracle Process Cloud Service is divided as three seperate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Julie on has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
+
+- From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
 
     ![](images/200/Picture8.png)  
 
-- The Service Console will list all projects that you are currently a member of. Click **Twitter Feed Marketing Project** to access the project
+- The  PCS Landing page gives you a quick glance of the available functionality available to you (or in this case Julie Jones).
+
+>![](images/200/workspace_home-_-admin.png)
+
+>The above picture gives an explanation of the full access page and shows the different roles associated with each activity.  
+
+### **STEP 4**: Working on Tasks
+
+---
+
+**Role: Julie Jones, Field Sales**
+
+![](images/personas/julie_jones_sales_operations.png)
+
+Julie wants to look at her outstanding tasks, and approve the incoming Quote request generated in **STEP 1**. (Although so is not aware of it at the moment, but PCS can be configured to send out notifications and reminders to attend to outstanding tasks).
+
+---
+
+
+- Click **Work on Taks** to access the Task List
 
     ![](images/200/Picture9.png)  
 
