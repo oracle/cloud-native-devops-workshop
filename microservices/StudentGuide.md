@@ -14,15 +14,28 @@ You have two options for configuring your workshop client environment.
 
 - ***Option 1***: You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
     - Refer to the ***Virtual Box Client Installation*** section of this document to use this option
+    - This option is best, if you don't want to worry about installing and configuring multiple Open Source Software tools on your laptop. 
 - ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
     - Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
+    - This option is best of you if you want to take the time to configure software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
 
 # Virtual Box Client Installation
 
 As an alternative to installing Eclipse, Brackets and Git on your laptop, you can follow these steps to download a Virtual Box image that will contain all those products pre-integrated together.
 
+### Hardware Requirements
+
+- You will need a machine capable of running the wokrshop image within Oracle Virtual Box (MAC or PC / Minumum of 50GB of free storage / 8GB RAM)
+
+- You will need full Administrator privileges on your machines, and in some cases will need to set Hardware Virtualization in the BIOS.
+
+    - Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
+
+- The latest version of Virtual Box should be installed and tested prior to the workhop.
 
 ### Copy OVA file
+
+**Note**: you will download all 6 zip files. You can then use software such as winzip or 7zip to automatically unzip all 6 files into a single *.ova file that can be imported into virtual box. 
 
 - [Download](https://www.virtualbox.org/wiki/Downloads) and install Virtual box 
 
@@ -104,6 +117,8 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 ## Download and Install Eclipse
 
 ### Download Eclipse
+
+***Note***: If you already have Eclipse installed, you will still want to install and use the version documented below, for this version of Eclipse contains the **Oracle Enterprise Pack for Eclipse**, which will be used during the workshop.
 
 - Got to the [Eclipse](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html) installation website
 
