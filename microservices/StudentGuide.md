@@ -14,10 +14,10 @@ You have two options for configuring your workshop client environment.
 
 - ***Option 1***: You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
     - Refer to the ***Virtual Box Client Installation*** section of this document to use this option
-    - This option is best, if you don't want to worry about installing and configuring multiple Open Source Software tools on your laptop. 
+    - **This option is best**, if you don't want to worry about installing and configuring multiple Open Source Software tools on your laptop. 
 - ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
     - Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
-    - This option is best of you if you want to take the time to configure software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
+    - **This option is best** if you want to install and configure the opensource software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
 
 # Virtual Box Client Installation
 
