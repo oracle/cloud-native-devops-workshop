@@ -111,7 +111,7 @@
         $scope.getLabGuide = function(lab) {
             if(lab.htmlContent == null) {
                 $http.get(lab.filename).then(function(res) {
-
+                    showdown.setOption('tables', 'true');
                     var converter = new showdown.Converter(),
                     text = res.data,
                     html = converter.makeHtml(text);

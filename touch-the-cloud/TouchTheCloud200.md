@@ -36,6 +36,63 @@ On either your mobile phone, or in the Simulator in MCS, go ahead and create a Q
 
 ---
 
+### **STEP 1a**: Create a Quote Manually (***Optional***)
+
+---
+
+**Role: John Lee, Field Sales**
+
+![](images/personas/john_lee_field_sales.png)
+
+PCS supports the use of forms to submit data to be used as input for a process.
+
+---
+
+Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***John's*** credentials instead of Julie's.
+
+- On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
+
+  ![](images/200/Picture11.png)
+
+- Fill in the information requested information on the form
+
+  ![](images/200/Picture12.png)
+
+   For the fields use the following values:
+   
+   Quote Number: 4325
+   
+   Select a customer from the following table:
+   
+   |CustomerNumber| CustomerName                | AddressLine1          | AddressLine2       | Phone        | FirstName | LastName | City     | Country | Zip   | Email                         | 
+   | :----------- | ----------------------------| ----------------------| ------------------ | ------------ | --------- | -------- | -------- | ------- | ----- | ------------------------------|
+   | 1            | ABC Telecommunications      | 1021 Fifth Avenue     | New York, NY 10022 | 917-123-2345 | Vincent   | DiNatale | New York | USA     | 10022 | v.dinatale@abctelecomms.com   |
+   | 2            | MedChoice - IDN             | 333 Lexington Ave     | New York, NY 10000 | 917-123-2346 | Louis     | Wohl     | New York | USA     | 10000 | louis.wohl@medchoice.com      |
+   | 3            | Bronco Drilling Machinery   | 150 East 50th Street  | New York, NY 10023 | 917-123-2347 | Jack      | Thomas   | New York | USA     | 10022 | jack.thomas@broncodrilling.com|
+   | 4            | BHB Technologies            | 522 West 38th Street  | New York, NY 10018 | 917-123-2348 | Robbie    | Hun      | New York | USA     | 10018 | robbie.hun@bhbtech.com        |
+   | 5            | CIC Management Inc.         | 68 Church Street      | New York, NY 10000 | 917-123-2349 | Lucy      | Leu      | New York | USA     | 10000 | lucy.leu@cicmgt.com           |
+   | 6            | ABC Application Software    | 536 Madison Avenue DE | New York, NY 10012 | 917-123-2350 | Lenore    | Soifer   | New York | USA     | 10012 | lenore.soifer@abcsoftware.com |
+   | 7            | Capital Investments Group   | 400 Madison Avenue    | New York, NY 10024 | 917-123-2351 | James     | Roman    | New York | USA     | 10024 | james.roman@capitalinvest.com |
+   | 8            | Carbon Chemical Corporation | 502 East 81st Street  | New York, NY 10028 | 917-123-2352 | Loren     | Gab      | New York | USA     | 10028 | loren.gab@carbon_chem.com     |
+   | 9            | Capp Worldwide Services Inc.| 32 Ave of the Americas| New York, NY 10013 | 917-123-2353 | Paul      | Pub      | New York | USA     | 10013 | paul.pub@cappww.com           |
+   | 10           | Astro-Energy Systems        | 35 East 76th Street   | New York, NY 10021 | 917-123-2354 | Jenny     | Roy      | New York | USA     | 10021 | jenny.roy@astro_energy.com    |
+   
+   For the items, use some of these inventory items, using UOM (unit of measure) as 'each':
+   
+   | ItemNumber | Inventory Item ID | Description                        | List Price Per Unit |
+   | :--------- | ----------------- | ---------------------------------- | -------------------:|
+   | 1          | 155               | Sentinel Deluxe Desktop            |              1969.00|
+   | 2          | 249               | Hard Drive - 250GB SSD             |              899.00 |
+   | 3          | 436               | Lightning Inkjet Printer           |              300.00 |
+   | 4          | 2848              | Vision Pad DX - Mobile Computer    |              249.00 |
+   | 5          | 190878            | Vision Pad X100 - Mobile Computer  |              249.00 |
+   | 6          | 2155              | Sentinel Standard Desktop - Rugged |              1900.00|
+   | 7          | 174762            | 205 Digital Camera                 |              215.00 |
+   | 8          | 12023             | Digital Camera, Professional       |              487.80 |
+   | 9          | 12031             | Television 102"                    |              3749.99|
+   | 10         | 12029             | Television 96"                     |              2608.69|
+
+   - Click on the Submit button to start the Quote to Order process.
 
 ### **STEP 2**: Login to Oracle Cloud
 
