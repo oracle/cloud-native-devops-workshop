@@ -15,13 +15,13 @@
       
 ## How to View the Lab Guides
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://derekoneil.github.io/cloud-native-devops-workshop/microservices) 
+- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/cloud-native-devops-workshop/microservices) 
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
     ![](images/WorkshopMenu.png)  
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/derekoneil/cloud-native-devops-workshop/tree/master/microservices) repository.
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/tree/master/microservices) repository.
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
 
