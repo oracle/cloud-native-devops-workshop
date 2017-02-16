@@ -134,7 +134,7 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 - Select a task by hovering over the task with mouse and clicking on it.
 
     ![](images/200/Picture10.png) 
-    >While we are on the task form, let me take the opportunity to breakdown of a typical task form: 
+    >While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
     >1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionailty allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
     >2. Close Form / Maximize
     >3. Documents Panel Expand, might also include Discussions, if enabled for process
