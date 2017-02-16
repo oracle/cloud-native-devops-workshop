@@ -1,6 +1,6 @@
 
 ![](images/100/Picture100-lab.png)  
-Update: January 28, 2017
+Update: February 10, 2017
 
 ## Introduction
 
@@ -35,19 +35,21 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
     ![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor.
+    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
 
     ![](images/100/Picture100-3.png)
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. If your own Corporate or Trial account does not easily allow you to have multiple users, simply log into the account using your credentials, and when required you can make the “logical” change from Project Manager to other personas, even though you will always be logged in as the same user.
+  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+
+    ![](images/lisa.png)
 
     ![](images/100/Picture100-3.5.png)
 
@@ -55,11 +57,31 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-4.png)
 
-- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**
+- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
 
     ![](images/100/Picture100-5.png)
 
-### **STEP 2**: Login to Developer Cloud Service
+### **STEP 2**: Check/Set Storage Replication Policy
+
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+
+- Click on the **Storage** Cloud Service
+
+    ![](images/100/Picture-01.png)
+
+- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
+
+    ![](images/100/Picture-02.png)
+
+- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+
+    ![](images/100/Picture-03.png)
+
+- Click on the **Dashboard** button
+
+    ![](images/100/Picture-04.png)
+
+### **STEP 3**: Login to Developer Cloud Service
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
@@ -71,13 +93,16 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-7.png)
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will list all projects for which you are currently a member.
+- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will then list all projects for which you are currently a member.
+
+    ![](images/100/Picture100-7.5.png)
+
+### **STEP 4**: Create Developer Cloud Service Project
+
+- Click **New Project** to start the project create wizard.
 
     ![](images/100/Picture100-8.png)
 
-### **STEP 3**: Create Developer Cloud Service Project
-
-- Click **New Project** to start the project create wizard.
 - On Details screen enter the following data and click on **Next**.
 
     **Name:** `Twitter Feed Marketing Project`
@@ -104,23 +129,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-13.png)
 
-## Add Team Members (Owners) to the Project
 
-### **STEP 4**: Add Team Owners to the Project
-
-**Note:** As previously mentioned, ***if you are not allowed to have multiple users in your Corporate or Trial accounts, you will skip step 4.*** When in subsequent steps/labs you are asked to log in as different users responsible for different roles, you will physically perform the tasks as the same user, but you should mentally assume the role of a different persona.
-
-- Click on the **Team** icon ![](images/100/TeamIcon.png) found on the far right side of the window.
-
-- To add new Team Members, click **New Member**
-
-    ![](images/100/Picture100-14.png)
-
-- Set the Role to **Owner**, and enter the Username **bala.gupta**, and then click **Add**
-
-- Repeat the process for Username **john.dunbar**. When completed your team should consist of 3 members.
-
-    ![](images/100/Picture100-15.png)
 
 # Create Product Issues
 
@@ -128,7 +137,9 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ### **STEP 5**: Create Issue for the initial GIT Repository Creation
 
-In this step you are still connected in the logical role of the Project Manager, ***Lisa Jones***.
+In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
+
+![](images/lisa.png)
 
 - Click **Issues** on left hand navigation panel to display the Track Issues page.
 
@@ -136,7 +147,9 @@ In this step you are still connected in the logical role of the Project Manager,
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, **Bala Gupta** will be the “logical” owner. The same concept holds true for other assignments made in this lab.
+    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issues.
+
+    ![](images/bala.png)
 
     **Summary:**
     `Create Initial GIT Repository for Twitter Feed Service`
@@ -145,10 +158,12 @@ In this step you are still connected in the logical role of the Project Manager,
     `Create Initial GIT Repository for Twitter Feed Service`
 
     **Type:** `Task`
-    **Owner:** `Bala Gupta (or you, if another user is not available)`
+
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
+
     **Story Points:** `1`
 
-    Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
+    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information. 
 
     ![](images/100/Picture100-17.png)
 
@@ -156,13 +171,15 @@ In this step you are still connected in the logical role of the Project Manager,
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
+    ![](images/bala.png)
+
     **Summary:** `Create Filter on Twitter Feed`
 
     **Description:** `Create Filter to allow user to supply text to reduce the amount of data returned by the Twitter feed`
 
     **Type:** `Feature`
 
-    **Owner:** `Bala Gupta (or you if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
 
     **Story Points:** `2`
 
@@ -170,7 +187,9 @@ In this step you are still connected in the logical role of the Project Manager,
 
 ### **STEP 7**: Create Issue for initial GIT Repository creation
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Note: The next two issues will logically be owned by John Dunbar.
+
+    ![](images/john.png)
 
     **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
 
@@ -178,7 +197,7 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Type:** `Task`
 
-    **Owner:** `John Dunbar (or you if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
 
     **Story Points:** `1`
 
@@ -188,19 +207,21 @@ In this step you are still connected in the logical role of the Project Manager,
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
+    ![](images/john.png)
+
     **Summary:** `Display Twitter Feed in Table Format`
 
     **Description:** `Display Twitter Feed in Table Format`
 
     **Type:** `Feature`
 
-    **Owner:** `John Dunbar`
+    **Owner:** `Select account provided in the dropdown [Logical Owner: John Dunbar]`
 
     **Story Points:** `2`
 
     ![](images/100/Picture100-20.png)
 
-- Click ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
+- Click the back arrow ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
 
     ![](images/100/Picture100-22.png)
 
@@ -246,7 +267,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ### **STEP 11**:	Add Backlog Issues to Sprint
 
-- Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
+- Next, we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
     ![](images/100/Picture100-26.png)
 
@@ -262,21 +283,21 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
     ![](images/100/Picture100-28.png)
 
-  **Note**: Before we create a new progress state, we want to un-assign some of the conditions that will be used in the new state. You can’t add new conditions or removed conditions, however, you can redefine progress states to suit your project’s needs and move conditions from one state to another. A large number of conditions are assigned to the Completed state by default.
+  **Note**: Before we create a new progress state, we want to un-assign some of the conditions that will be used in the new state. You can’t add new conditions or remove conditions, however, you can redefine progress states to suit your project’s needs and move conditions from one state to another. A large number of conditions are assigned to the Completed state by default.
 
-- Click on **:Progress States**: then click **:Completed**: state. In the lower left panel of the window, scroll down the conditions and select all the **:RESOLVED conditions**:.  Click ![](images/100/PictureGreater.png) to move them over to Unassigned Conditions panel
+- Click on **Progress States** then click **Completed** state. In the lower left panel of the window, scroll down the conditions and select all the **RESOLVED conditions**.  Click ![](images/100/PictureGreater.png) to move them over to Unassigned Conditions panel
 
     ![](images/100/Picture100-29.png)
 
-- Click **:New Progress State**:.  Change name to **:Verify Code**:. We will use this new State for performing QA and Testing.
+- Click **New Progress State**.  Change **Name** to **Verify Code**. We will use this new State for performing QA and Testing.
 
     ![](images/100/Picture100-30.png)
 
-- Highlight all the **:RESOLVED**: unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
+- Highlight all the **RESOLVED** unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
 
     ![](images/100/Picture100-31.png)
 
-- With **:Verify Code**: highlighted, click ![](images/100/PictureUpArrow.png) to move **:Verify Code**: above the Completed Process State.
+- With **Verify Code** highlighted, click ![](images/100/PictureUpArrow.png) to move **Verify Code** above the Completed Process State.
 
     ![](images/100/Picture100-32.png)
 
@@ -286,7 +307,9 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
 ### **STEP 13**: Start Sprint
 
-- Click **Start Sprint.** Leave the defaults and click **Start**
+- Click the **Start Sprint** button.
+
+- Leave the defaults and click **Start**
 
     ![](images/100/Picture100-34.png)
 

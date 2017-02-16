@@ -1,22 +1,35 @@
+## IMPORTANT: How to prepare for this workshop
 
-#Step-by-step Instructions
+**First**, ***Get an Oracle Cloud Account*** 
+- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
+    - For some workshop events, cloud environments will be provided. 
+    - For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Shop Oracle](http://shop.oracle.com) 
+    - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
+        
+**Second**, ***Configure your Client Environment***
+- Your client enviroment **must be configured prior** to attempting the Hands-on-Workshop labs. 
+- You have two options for configuring your workshop client environment. 
+     - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
+     - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
+- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
+      
+## How to View the Lab Guides
 
-### STEP 1 - REVIEW STUDENT GUIDE
+- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://derekoneil.github.io/cloud-native-devops-workshop/microservices) 
 
-Review the ***Student Guide*** to properly **configure your environment**
+- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
-### STEP 2 - Optional - Review interactive Workshop Overview 
+    ![](images/WorkshopMenu.png)  
 
-visit this URL: http://launch.oracle.com/?cloudnative
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/derekoneil/cloud-native-devops-workshop/tree/master/microservices) repository.
 
+- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
 
-# Workshop Overview
+## DevOps and Cloud Native Microservices Workshop
 
-**To View in Interactive Labguide Format:**  
+This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - youwill create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
-https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
-
-# DevOps: Cloud Native Microservices Workshops
+## Workshop Details
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 
@@ -37,6 +50,8 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 ## Lab 200: Continuous Delivery of Java Microservices
 
 **Documenation**: [CloudNative200.md](CloudNative200.md)
+
+### Objectives
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository

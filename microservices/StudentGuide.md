@@ -2,21 +2,110 @@
 ![](images/studentguide/Picture-Title.png)  
 Update: January 28, 2017
 
-## Introduction
+## Student Guide
 
-This hands-on lab walks you through the software development lifecycle (SDLC) for a cloud-native microservices project. As the project manager persona, you will create a project and a backlog, manage tasks and features, define the sprint, and make assignments to developers. Once the sprint has been started, the Java developer will implement a Twitter feed service for retrieval and filtering of Twitter data. The JavaScript developer persona will create a Twitter marketing UI to display the data for analysis. During the session, you will gain exposure to Oracle Developer Cloud Service; Oracle Application Container Cloud; and open source products such as Eclipse, Maven, Git, and Brackets.
+This Student Guide will provide you with the instructions nessesary to install the Client Tools used during this workshop. This Workshop will allow you to gain exposure to the Oracle Developer Cloud Service, the Oracle Application Container Cloud Service, and open source products such as Eclipse, Maven, Git, and Brackets.
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+## Client Enviroment Options
 
-# Installing Eclipse
+Your client enviroment **must be configured prior** to attempting the Hands on Workshop, or you will not be able to complete the Workshop labs. 
+
+You have two options for configuring your workshop client environment. 
+
+- ***Option 1***: You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
+    - Refer to the ***Virtual Box Client Installation*** section of this document to use this option
+- ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
+    - Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
+
+# Virtual Box Client Installation
+
+As an alternative to installing Eclipse, Brackets and Git on your laptop, you can follow these steps to download a Virtual Box image that will contain all those products pre-integrated together.
+
+
+### Copy OVA file
+
+- [Download](https://www.virtualbox.org/wiki/Downloads) and install Virtual box 
+
+- Download this workshops [Virtual box OVA zip files](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFF42D5B385ADB4324B055CBF6C3FF17C1177E4725F3/folder/FA853951DE14FED12E559568F6C3FF17C1177E4725F3/_VM), and unzip.
+
+### Unzip and import OVA File
+
+- Startup **Oracle Virtual Box**
+
+    ![](images/studentguide/Picture22.png)
+
+- From top left menu select **File -> Import Appliance**
+
+    ![](images/studentguide/Picture23.png)
+
+- Click on **browse** icon to select file to import.
+
+- Navigate to the unzipped OVA file, and Click **Open**
+
+    ![](images/studentguide/Picture24.png)
+
+- Once the File is selected click **Next** to continue.
+
+    ![](images/studentguide/Picture25.png)
+
+- Keep all the defaults and click **Import**
+
+    ![](images/studentguide/Picture26.png)
+
+- Wait for import to complete. The time required to import will vary depending on the speed of your hard disk.
+
+    ![](images/studentguide/Picture27.png)
+
+### Start Virtual Box Image
+
+- After completion of the import, you should see the Oracle Public Cloud image in a Powered Off state. The default settings will work, but if you are familiar with Virtual Box, you are welcome to change any of the settings.
+
+    ![](images/studentguide/Picture28.png)
+
+- With the **Oracle Public Cloud** selected, click **Start**.
+
+    ![](images/studentguide/Picture29.png)
+
+- After a few minutes you will have a running image that will be used for all of the labs.
+
+    ![](images/studentguide/Picture30.png)
+
+# Configure Client Tools Locally
+
+## Verify your version of the Java JDK
+
+Eclipse requires that you have the **JDK 8** installed.
+
+### JDK Verification on a MAC
+
+**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed. 
+
+- Open Terminal window and execute the following command: 
+
+```
+ls /Library/java/JavaVirtualMachines/
+```
+
+- If you do not have a JDK 1.8 folder, you will need to download the [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
+
+### JDK Verification on Windows
+
+- On Windows, open a **cmd** window and enter `java -version` 
+
+```
+C:\Users\usr>java -version
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
+```
+
+- If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
 ## Download and Install Eclipse
 
-In this appendix you will download and install Eclipse containing the Oracle Plugin.
+### Download Eclipse
 
-### **STEP 1**: Download Eclipse
-
-- Go to the following URL: http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html
+- Got to the [Eclipse](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html) installation website
 
 - Accept the **licensing agreement**, and then select the **Neon** version of Eclipse required for your operating system.
 
@@ -24,9 +113,8 @@ In this appendix you will download and install Eclipse containing the Oracle Plu
 
 - Once you’ve downloaded eclipse, extract the zip file and install.
 
-## Optionally Configure Proxies
 
-### **STEP 2**: Configuring Proxies
+### Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall and need to configure the proxy setting, there are several updates to be made. First, you need to ensure that Eclipse’s proxy is set, next you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -50,7 +138,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture6.png)
 
-### **STEP 3**:	Update the Eclipse / Maven proxy
+### Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 - From the **Eclipse > Preference or Window > Preferences** panel, enter **Maven** into the search box. Click on the Maven User Settings. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings are to be located in the **/home/oracle/.m2** directory
 
@@ -58,9 +146,11 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 - Close Eclipse    
 
-- If the directory does not exist where the settings.xml file is to be located, **create the directory**. In this example, we will create the .m2 directory. Also, create the settings.xml file, if it does not exist. Add the following to the settings.xml file (NOTE: you will need to use your correct **Host, Port, nonProxyHosts, username and Password settings**):
+- If the directory does not exist where the settings.xml file is to be located, **create the directory**. In this example, we will create the **.m2** directory. 
 
-    ```
+- Also, create the **settings.xml** file, if it does not exist. Add the following to the settings.xml file (NOTE: you will need to use your correct **Host, Port, nonProxyHosts, username and Password settings**):
+
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
@@ -89,25 +179,23 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 - Reload Eclipse to use the new maven settings
 
-# Installing Brackets and Git
+## Download Installing Brackets and Git
 
-## Download and Install Git
+### Download Git
 
-### **STEP 4**: Download Git
-
-- Go to the following URL: https://git-scm.com/downloads http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html
+- Go to the following URL: https://git-scm.com/downloads
 
     ![](images/studentguide/Picture8.png)
 
-- Select you OS. In our example, we will show how to install on Windows. Click **Windows** Download and click **Save File**
+- Select your OS. In our example, we will show how to install on Windows. Click **Windows** Download and click **Save File**
 
     ![](images/studentguide/Picture9.png)
 
-- Select you download location and click **Save**. We will use D:\Software    
+- Select your download location and click **Save**. We will use D:\Software    
 
     ![](images/studentguide/Picture10.png)
 
-- Open Windows Explorer and navigate you where you downloaded the Git executable. Double click on Git executable to start install process.
+- Open Windows Explorer and navigate you where you downloaded the Git executable. Double click on the Git executable to start the install process.
 
     ![](images/studentguide/Picture11.png)
 
@@ -115,15 +203,13 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture12.png)
 
-## Download and Install Brackets Text Editor
-
-### **STEP 5**: Download Brackets Text Editor
+### Download Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
     ![](images/studentguide/Picture13.png)
 
-- Click **Download Brackets 1.7** then click **Save File**
+- Click **Download Brackets 1.X** then click **Save File**
 
     ![](images/studentguide/Picture14.png)
 
@@ -131,27 +217,25 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture15.png)
 
-- Open Windows Explorer and navigate you where you downloaded Brackets. Double click on Git executable to start install process.
+- Open Windows Explorer and navigate you where you downloaded Brackets. Double click on the Brackets executable to start the install process.
 
     ![](images/studentguide/Picture16.png)
 
 - Run through the installation process
 
-## Start Brackets and Configure Git
+### Start Brackets and Configure Git
 
-### **STEP 6**: Start Brackets and Configure Git
-
-- Create directory **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
+- Create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
     ![](images/studentguide/Picture17.png)
 
 - Select **File -> Extension Manager…**
 
-- In search window enter **GIT**. Click **Install** for Brackets Git
+- In the search field, type **GIT**. Click **Install** for Brackets Git
 
     ![](images/studentguide/Picture18.png)
 
-- After install completes, leave defaults for Git Settings and click **Save**
+- After the install completes, leave the defaults for Git Settings and click **Save**
 
     ![](images/studentguide/Picture19.png)
 
@@ -163,54 +247,3 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
     ![](images/studentguide/Picture21.png)
 
-# Alternative – Use Virtual Box Image
-
-As an alternative to installing Eclipse, Brackets and Git on your laptop, you can follow these steps to download a Virtual Box image that will contain all those products pre-integrated together.
-
-## Virtual Box Client Installation
-
-### **STEP 7**: Copy OVA file
-
-- Download and install Virtual box
-https://www.virtualbox.org/wiki/Downloads  
-
-- Download this workshops virtual box OVA zip files, and unzip
-https://publicdocs-corp.documents.us2.oraclecloud.com/documents/folder/FA853951DE14FED12E559568F6C3FF17C1177E4725F3/_VM/nameasc
-
-- Startup **Oracle Virtual Box**
-
-    ![](images/studentguide/Picture22.png)
-
-- From top left menu select **File -> Import Appliance**
-
-    ![](images/studentguide/Picture23.png)
-
-- Click on **browse** icon to select file to import.
-
-- Navigate to the unzipped OVA file, and Click **Open**
-
-    ![](images/studentguide/Picture24.png)
-
-- Once the File is selected click **Next** to continue.
-
-    ![](images/studentguide/Picture25.png)
-
-- Keep all the defaults and click **Import**
-
-    ![](images/studentguide/Picture26.png)
-
-- Wait for import to complete. The time required to import will vary depending on the speed of your hard disk.
-
-    ![](images/studentguide/Picture27.png)
-
-- After completion of the import, you should see the Oracle Public Cloud image in a Powered Off state. The default settings will work, but if you are familiar with Virtual Box, you are welcome to change any of the settings.
-
-    ![](images/studentguide/Picture28.png)
-
-- With the **Oracle Public Cloud** selected, click **Start**.
-
-    ![](images/studentguide/Picture29.png)
-
-- After a few minutes you will have a running image that will be used for all of the labs.
-
-    ![](images/studentguide/Picture30.png)
