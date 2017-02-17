@@ -1,9 +1,8 @@
 {
     "workshop": {
         "title": "Touch The Cloud",
-        "description": "This the TTC blurb",
-        "labs": [
-            {
+        "description": "A hands-on event to explore Oracle’s new cloud services.",
+        "labs": [{
                 "number": "0",
                 "filename": "README.md",
                 "title": "README First",
