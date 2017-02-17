@@ -22,7 +22,7 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
 # Client Image
 
-For this workshop we will be using a Client Image that will represent your on-premises environment. In this image we have installed an Eclipse that will be used during some of the labs. The Client Image is a VM that is running on Oracle’s IaaS Compute service. If you prefer to run Eclipse locally you can download from  http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html
+For this workshop we will be using a Client Image that will represent your on-premises environment. In this image we have installed an Eclipse that will be used during some of the labs. The Client Image is a VM that is running on Oracle’s IaaS Compute service. If you prefer to run Eclipse locally you can download from [Oracle Technology Network](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html)
 
 ## Retrieve Public IP for Client Image
 
@@ -200,8 +200,8 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story Points:** `1`
 
-Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more, go to this URL:
-https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
+Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information.
+
 
 ![](images/100/Picture100-16.png)
 
