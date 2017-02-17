@@ -110,9 +110,12 @@ curl --request POST \
   --header 'content-type: multipart/form-data' \
   --form template=@Alpha-JCS-DBCS-Template.yaml
 ```
-    **Note:** Replace <OPC > with your OPC credentials
 
-    ![](images/200/Picture200-13.png)
+**Note:** Replace <OPC > with your OPC credentials
+
+![](images/200/Picture200-13.5.png)
+
+![](images/200/Picture200-13.png)
 
 - Click **Save** to complete the configuration.
 
@@ -130,7 +133,7 @@ curl --request POST \
 
 ### **STEP 4:** Verify Template Upload to Oracle Cloud
 
-- Now we will navigate to the Oracle Stack Manager console to new the newly uploaded template. Click back on the browser tab that you launched the Developer Console. Click on the far left navigation icon and select **Database**
+- Now we will navigate to the Oracle Stack Manager console to view the newly uploaded template. Click back on the browser tab that you launched the Developer Console. Click on the far left navigation icon ![](images/Menu.png) and select **Database**
 
     ![](images/200/Picture200-18.png)
 
@@ -193,9 +196,12 @@ curl --request POST \
   --form template=Alpha-JCS-DBCS-Template \
   --form 'parameterValues={"commonPwd":"'"$CommonPassword"'", "backupStorageContainer":"'"$BackupStorageContainer"'", "cloudStoragePassword":"<OPC password>"}}'
 ```
-    **Note:** Replace <OPC > with your OPC credentials
 
-    ![](images/200/Picture200-32.png)
+**Note:** Replace <OPC > with your OPC credentials
+
+![](images/200/Picture200-32.5.png)
+
+![](images/200/Picture200-32.png)
 
 - Click **Save** to complete the configuration. We will not a build at this time as we want to trigger the build by updating the **JCSBuild.conf** file.
 

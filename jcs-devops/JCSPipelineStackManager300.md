@@ -275,7 +275,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 10:** Set Defect 4 Status to In Progress
 
-- click the **Issues** to expand, then d click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Add dollar sign in the display of the price**.
+- click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Add dollar sign in the display of the price**.
 
     ![](images/300/Picture300-46.png)   
 
@@ -299,7 +299,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-50.png)
 
-- Expand **AlpahProduct > WebContent** then double click on **displayrecords.jsp**
+- Expand **AlpahProducts > WebContent** then double click on **displayrecords.jsp**
 
     ![](images/300/Picture300-51.png)
 
