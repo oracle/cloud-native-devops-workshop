@@ -267,7 +267,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ### **STEP 11**:	Add Backlog Issues to Sprint
 
-- Next, we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
+- Next, we want to add the backlog issues to the newly created sprint. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
     ![](images/100/Picture100-26.png)
 
