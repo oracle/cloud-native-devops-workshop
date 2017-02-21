@@ -1,6 +1,6 @@
 
 ![](images/100/Picture100-lab.png)  
-Update: February 10, 2017
+Updated: February 10, 2017
 
 ## Introduction
 
