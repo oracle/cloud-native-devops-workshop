@@ -1,4 +1,15 @@
 # Tips for Workshop Developers
+    
+## Steps for creating a new workshop
+
+- To start a new workshop, use git to create a branch from this (workshop-template) branch.
+- Rename the workshop-template folder in your new branch to the title of your new workshop, observing the naming convention of the rest of the folders in the repository
+- Rename the lab guide md files to be more specific to your workshop, if desired.
+- Update manifest.json with the titles and descriptions of your labs (and md filenames if you changed them).
+- Use LabGuide100.md as an example of how to format and structure your lab's markdown.
+- Preview your lab guides by loading index.html in your favorite editor's live view (Brackets - Live Preview, Atom - atom-live-server)
+
+## Supporting Files
 
 - README
     - The README.md file (this file) should give a clear step-by-step overview of what the student should do to complete the workshop, beginning with any prerequisite checks or software installation (detailed in the Student Guide)
@@ -11,15 +22,8 @@
 - Images
     - Store lab images under the images/x00 folder corresponding to the lab number they belong to. 
     - Images that are used in multiple lab guides can be stored directly in the images/ folder.
-- Steps for creating a new workshop
-    - To start a new workshop, use git to create a branch from this (workshop-template) branch.
-    - Rename the workshop-template folder in your new branch to the title of your new workshop, observing the naming convention of the rest of the folders in the repository
-    - Rename the lab guide md files to be more specific to your workshop, if desired.
-    - Update manifest.json with the titles and descriptions of your labs (and md filenames if you changed them).
-    - Use LabGuide100.md as an example of how to format and structure your lab's markdown.
-    
 
-#Example Readme:
+# Example Readme:
 ## IMPORTANT: How to prepare for this workshop
 
 **First**, ***Get an Oracle Cloud Account*** 
