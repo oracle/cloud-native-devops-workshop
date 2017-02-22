@@ -52,7 +52,7 @@ For this workshop we will be using a Client Image that will represent your on-pr
 
     ![](images/100/Picture100-5.png)
 
-- If all of your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**
+- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**
 
     ![](images/100/Picture100-6.png)
 
