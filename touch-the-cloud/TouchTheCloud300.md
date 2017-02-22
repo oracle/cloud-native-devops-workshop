@@ -1,14 +1,14 @@
 ![](images/300/PictureLab.png)  
 
-Update: February 2, 2017
+Update: February 10, 2017
 
 ## Introduction
 
-This is the third of several labs that are part of the **Oracle Public Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the previous lab (200), the Java Developer created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
+In the previous lab (200), the developer created modifications to a process used to see if an approval is necessary for a quote coming in from the mobile application. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 ## Objectives
 
