@@ -98,7 +98,13 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-13.png)
 
-- Leave the default Maven Goals **clean install**. Change the POM File location to **AlphaProducts/pom.xml**
+- In the Maven Build Step set the following:
+
+    **Goal**: `clean -Dmaven.test.skip=true install` 
+    
+    (Note: This new Goal will allow integration tests to be run after the deployment of the application)
+    
+    **POM File**: `AlphaProducts/pom.xml`  
 
     ![](images/300/Picture300-14.png)
 
@@ -112,9 +118,19 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-16.png)
 
-- Once the build has completed you should see a green check.  Wait for the build to complete before continuing to the next step, as we need the build artifact to complete the deployment configuration.
+- Click on the **Jobs Overview** link to return to the jobs dashboard. 
 
-    ![](images/300/Picture300-17.png)
+    ![](images/300/Picture300-16.5.png)
+
+- It is possible that the Job will show in the Queue as shown below. 
+
+    ![](images/300/Picture300-16.6.png)
+
+- Once the build has completed, you should see a green check next to the build name.  Wait for the build to complete before continuing to the next step, as we need the build artifact to complete the deployment configuration.
+
+    ![](images/300/Picture300-16.7.png)
+
+
 
 ### **STEP 4:** Retrieve Public IP of JCS Instance for Deployment
 
