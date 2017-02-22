@@ -114,15 +114,13 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click **Save** to complete the configuration.
 
-- Click the **Build Now** button to start the build. This will trigger for the build to be placed in the queue and should start shortly. Wait, as it may take 30 seconds or more, but the status will change to the following:
-
-    ![](images/300/Picture300-16.png)
+- Click the **Build Now** button to start the build. This will trigger for the build to be placed in the build queue.
 
 - Click on the **Jobs Overview** link to return to the jobs dashboard. 
 
     ![](images/300/Picture300-16.5.png)
 
-- It is possible that the Job will show in the Queue as shown below. 
+- It is possible that the Job will show in the Queue. Wait, as it may take 30 seconds or more, but the status will change indicating that the job is building as is shown below:
 
     ![](images/300/Picture300-16.6.png)
 
