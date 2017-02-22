@@ -12,25 +12,26 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 ## Objectives
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Explore Integration Cloud Service
+- Use Integration Cloud Service to modify an integration
 
 ## Required Artifacts
 
 - The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
 
 
-# Create Initial Twitter Marketing UI Service
+# Explore Integration Cloud Service
 
-## Explore Developer Cloud Service
+## Login to Integration Cloud Service
 
-### **STEP 1**: Login to your Oracle Cloud Account
+### **STEP 1**: Login to your Oracle Cloud account
 
-- If you just completed lab 200, or if you are still logged in as Lisa.Jones, you will need to first sign out before continuing this lab. Sign out by clicking on the user’s name (lisa.jones) at the top right corner of the screen, then selecting **Sign Out** from the dropdown menu.
+- From your browser (Firefox or Chrome recommended) go to the following URL:
+https://cloud.oracle.com
+- Click Sign In in the upper right hand corner of the browser
+- **IMPORTANT** - Under My Services, change Data Center to US Commercial 2 (us2) and click on Sign In to My Services
 
-    ![](images/300/Picture1.png)  
+    ![](images/300/image001.png)
 
 - Now we can login again. From any browser, go to the following URL: https://cloud.oracle.com
 
