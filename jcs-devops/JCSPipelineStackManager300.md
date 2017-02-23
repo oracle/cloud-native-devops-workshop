@@ -170,7 +170,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Enter the following data:
 
-    **Host:** `Public IP for JCS Service capture in previous step`
+    **Host:** `<Public IP for JCS Service capture in previous step>`
 
     **Username:** `weblogic`
 
@@ -207,7 +207,7 @@ Before we can configure deployment of our application we need to make note of th
 
 ### **STEP 6:** Verify deployment in Weblogic Console
 
-- Switch back to the Java Cloud Service Console browser tab. Click the hamburger menu ![](images/menu.png) and select **Open WebLogic Server Console**
+- Switch back to the Java Cloud Service Console browser tab, in which you are viewing **Alpha01A-JCS**. Click the hamburger menu ![](images/menu.png) and select **Open WebLogic Server Console**
 
     ![](images/300/Picture300-32.png)
 
@@ -227,7 +227,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-35.png)
 
-- You should see the newly deployed **AlphaProducts** application.
+- You should see the newly deployed **AlphaProducts** application you deployed in the previous Step.
 
     ![](images/300/Picture300-36.png)
 
@@ -235,7 +235,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://<Public IP of Load Balancer/AlphaProducts**
+    **https://\<Public IP of Load Balancer\>/AlphaProducts**
 
 - On the security warning click **ADVANCED** and then click **Proceed to ...**
 
@@ -257,7 +257,7 @@ We have now verified that both the build and deployment of the Alpha Office Prod
 
 - In the Change Progress popup click **Next**
 
-- Set number of days to 1 and click **OK**
+- Set number of days to **1** and click **OK**
 
     ![](images/300/Picture300-40.png)
 
@@ -271,11 +271,11 @@ We have now verified that both the build and deployment of the Alpha Office Prod
 
 Our next activity is to work on the defect issue that has been assigned to us. We will start by updating the status in the Sprint. We will be performing the majority of work in Eclipse.
 
-- You should already have Eclipse running and be connected to Oracle Cloud. Click back into the **Oracle CLoud** connection tab. Right click on **OracleConnection** and select **Refresh**
+- You should already have Eclipse running and be connected to Oracle Cloud. Click back into the **Oracle Cloud** connection tab. Right click on **OracleConnection** and select **Refresh**
 
     ![](images/300/Picture300-42.png)
 
-- Expand **Developer**, Expand **Alpha Office Product Catalog**, Expand **Code**. Double click on **AlphaOfficeProductCatalogUI.git** to clone the repository.
+- Expand **Developer**, Expand **Alpha Office Product Catalog**, Expand **Code**. Double click on **Git Repo AlphaOfficeProductCatalogUI.git** to clone the repository.
 
     ![](images/300/Picture300-43.png)
 
@@ -309,7 +309,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
  ![](images/300/Picture300-49.png)
 
 
-- Enter **Defect4** for the Branch name, and click **Finish**
+- Enter **Defect4** for the Branch name, and click **Finish**. It may take minute to update the Maven dependencies. 
 
     ![](images/300/Picture300-50.png)
 
@@ -328,7 +328,11 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
  ![](images/300/Picture300-53.png)
 
-- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**. Enter **Added dollar sign to display of Price** for Commit Message. Click **Commit and Push**
+- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**. 
+
+- Enter `Added dollar sign to display of Price` for Commit Message. 
+
+- Click **Commit and Push**
 
     ![](images/300/Picture300-54.png)
 
@@ -352,12 +356,12 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-58.png)
 
-- Now that John Dunbar has completed the task of adding dollar sign, a **Merge Request** can be created and assigned to Lisa Jones for review. Click on **Merge Requests** on navigation panel and then click on the **New Merge Request** button.
+- Now that John Dunbar has completed the task of adding dollar sign, a **Merge Request** can be created and assigned to Lisa Jones for review. Click on **Merge Requests** on the navigation panel, and then click on the **New Merge Request** button.
 
     ![](images/300/image084.5.png)
 
 
-- Enter the following information into the **New Merge Request and click **Next**
+- Enter the following information into the **New Merge Request** and click **Next**
 
     **Repository:** `AlphaOfficeProductCatalogUI.git`
 
@@ -393,7 +397,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-62.png)
 
-- Once the request has loaded, select the **Changed FIels** tab. "Lisa" will now the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
+- Once the request has loaded, select the **Changed Files** tab. "Lisa" will now the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
 
     ![](images/300/Picture300-63.png)
 
@@ -407,7 +411,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 14:** Monitor Build and Deloyment
 
-- Now that the code has been commited to the master branch, the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
+- Now that the code has been commited to the master branch, I may take a minute or two, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
 
     ![](images/300/Picture300-66.png)
 
