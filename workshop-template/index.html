@@ -140,13 +140,11 @@
                         $("#labguide h3").click(function(e) {
                             
                             var fadeOutStep = function(step) {
-//                                console.log('fading out step: '+$(step).text() );
                                 $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
                                 $(step).addClass('plus');
                                 $(step).removeClass('minus');
                             };
                             var fadeInStep = function(step) {
-//                                console.log('fading in step: '+$(step).text() );
                                 $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
                                 $(step).addClass('minus');
                                 $(step).removeClass('plus');
