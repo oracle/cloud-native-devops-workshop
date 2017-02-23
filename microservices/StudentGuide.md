@@ -6,12 +6,12 @@ Update: January 28, 2017
 
 This Student Guide will provide you with the instructions nessesary to install the Client Tools used during this workshop. This Workshop will allow you to gain exposure to the Oracle Developer Cloud Service, the Oracle Application Container Cloud Service, and open source products such as Eclipse, Maven, Git, and Brackets.
 
-## First: Oracle Cloud Environment Setup
+## 1. Oracle Cloud Environment Setup
 
 If you are using an **Oracle Trial/Try It** account, there is an ***Account Configuration** Step you must perform before attempting the Hands on Workshop labs.  
 - You must **Configure Your Storage Replication Policy**. After you receive your account credentials, you can set the replication policy by follow the steps in the ***Setting the Storage Replication*** section of this document. 
 
-## Second: Client Enviroment Options
+## 2. Client Enviroment Options
 
 Your client enviroment ***must be configured prior*** to attempting the Hands on Workshop, or you will not be able to complete the Workshop labs. 
 
