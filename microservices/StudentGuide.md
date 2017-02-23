@@ -6,9 +6,15 @@ Update: January 28, 2017
 
 This Student Guide will provide you with the instructions nessesary to install the Client Tools used during this workshop. This Workshop will allow you to gain exposure to the Oracle Developer Cloud Service, the Oracle Application Container Cloud Service, and open source products such as Eclipse, Maven, Git, and Brackets.
 
+## Oracle Cloud Environment Setup
+
+If you are using an **Oracle Trial/Try It** account, there is an ***Account Configuration Step you must perform*** before attempting the Hands on Workshop labs.  
+
+- You must **Configure Your Storage Replication Policy**. You can set the replication policy by follow the steps in the ***Setting the Storage Replication*** section of this document. 
+
 ## Client Enviroment Options
 
-Your client enviroment **must be configured prior** to attempting the Hands on Workshop, or you will not be able to complete the Workshop labs. 
+Your client enviroment ***must be configured prior*** to attempting the Hands on Workshop, or you will not be able to complete the Workshop labs. 
 
 You have two options for configuring your workshop client environment. 
 
@@ -18,6 +24,56 @@ You have two options for configuring your workshop client environment.
 - ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
     - Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
     - **This option is best** if you want to install and configure the opensource software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
+
+# Configure Your Storage Replication Policy
+
+### Login to your Oracle Cloud Account
+- From any browser, go to the URL:
+    `https://cloud.oracle.com`
+
+- click **Sign In** in the upper right hand corner of the browser
+
+    ![](images/100/Picture100-1.png)
+
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+
+    ![](images/100/Picture100-2.png)
+
+- Enter your identity domain and click **Go**.
+
+    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
+
+    ![](images/100/Picture100-3.png)
+
+- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+
+    ![](images/100/Picture100-3.5.png)
+
+- You will be presented with a Dashboard displaying the various cloud services available to this account.
+
+    ![](images/100/Picture100-4.png)
+
+- If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
+
+    ![](images/100/Picture100-5.png)
+
+### Check/Set Storage Replication Policy
+
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+
+- Click on the **Storage** Cloud Service
+
+    ![](images/100/Picture-01.png)
+
+- If you see a message requesting that you **Set Replication Policy**, as is shown below, click on the message. If the message is not displayed, your replication policy has already been set and your Cloud Account is ready for the Workshop.
+
+    ![](images/100/Picture-02.png)
+
+- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generally set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+
+    ![](images/100/Picture-03.png)
+
+- Your replication policy is now set, and you can close your browser window. 
 
 # Virtual Box Client Installation
 
