@@ -313,7 +313,7 @@ Developer Cloud Service.
 
 5.  Click the **Triggers** tab
 
-    -   Select Archive the artifacts
+    -   Based on SCM polling schedule
 
     <img src="images/3/image31.png" width="391" height="178" />
 
