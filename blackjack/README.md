@@ -44,8 +44,7 @@ the blackjack card game.
 **Reference the following Lab Guides by opening the lab lab guides:**
 
 - PART I – [Pre-work Setup a Local Development Environment](https://github.com/oracle/cloud-native-devops-workshop/blob/master/blackjack/PART%20I%20local-windows-setup.md)
-- PART II - Test and Build Helloworld using Oracle Developer Cloud &lt;add
-URL&gt;
+- PART II - [Test and Build Helloworld using Oracle Developer Cloud](https://github.com/oracle/cloud-native-devops-workshop/blob/master/blackjack/PART%20II%20developer-cloud-hello-world.md)
 - PART III - Test, Build and Deploy the BlackJack WebApp to Oracle
 Cloud&lt;add URL&gt;
 - PART IV - Deploy the BlackJack application directly to Oracle Cloud
@@ -68,7 +67,7 @@ clone your application to Developer Cloud Service.
 3. Create a local Helloworld project using Maven
 4. Push the Helloworld project to the local Git Repository
 
-## PART II –Test and Build Helloworld using Oracle Developer Cloud Service
+## PART II –[Test and Build Helloworld using Oracle Developer Cloud Service](https://github.com/oracle/cloud-native-devops-workshop/blob/master/blackjack/PART%20II%20developer-cloud-hello-world.md)
 
 Set up a Helloworld Project on Oracle Cloud
 
