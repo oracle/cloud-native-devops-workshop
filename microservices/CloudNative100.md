@@ -69,11 +69,11 @@ Depending on the state of your Cloud Account, you may need to set the replicatio
 
     ![](images/100/Picture-01.png)
 
-- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
+- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replication policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
 
     ![](images/100/Picture-02.png)
 
-- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generally set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
 
     ![](images/100/Picture-03.png)
 
