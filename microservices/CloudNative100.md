@@ -35,17 +35,15 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you. For XWeeks we will always use **us2**
 
     ![](images/100/Picture100-2.png)
 
-- Enter your identity domain and click **Go**.
-
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
+- Enter your identity domain and click **Go**. (use **DEVCS_DOMAIN**)
 
     ![](images/100/Picture100-3.png)
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+- Once your Identity Domain is set, enter your User Name and Password and click **Sign In** (use **DEVCS_USER** and **DEVCS_PWD**)
 
   **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
 
@@ -62,6 +60,8 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
     ![](images/100/Picture100-5.png)
 
 ### **STEP 2**: Check/Set Storage Replication Policy
+
+FOR XWEEKS THIS STEP IS NOT NEEDED TO BE PERFORMED.
 
 Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
 
