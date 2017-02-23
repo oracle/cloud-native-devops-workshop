@@ -2,25 +2,29 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="labGuide" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="labGuide" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="labGuide" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="labGuide" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="labGuide" class="no-js">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Oracle Workshops</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-  <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
-  <script src='https://cdn.rawgit.com/showdownjs/showdown/1.6.2/dist/showdown.min.js'></script>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-  <link type="text/css" rel="stylesheet" href="css/solutionEngTemplate.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Oracle Workshops</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src='https://cdn.rawgit.com/showdownjs/showdown/1.6.2/dist/showdown.min.js'></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link type="text/css" rel="stylesheet" href="css/solutionEngTemplate.css">
 
 </head>
+
 <body ng-cloak ng-controller="labGuideController">
     <md-toolbar class="md-hue-2" flex="none" layout-padding>
         <div class="md-toolbar-tools">
@@ -30,137 +34,273 @@
             <h2>
                 <span>{{manifest.workshop.title}}</span>
             </h2>
-
         </div>
     </md-toolbar>
-    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
-      <md-toolbar class="md-hue-2">
-        <h1 class="md-toolbar-tools">Workshop Contents</h1>
-      </md-toolbar>
-      <md-content>
-        <md-list>
-            <md-list-item class="md-3-line toc-item" ng-click="selection.lab = false; close();">
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="5">
+        <md-toolbar class="md-hue-2">
+            <h1 class="md-toolbar-tools">Workshop Contents</h1>
+        </md-toolbar>
+        <md-content>
+            <md-list>
+                <!-- md-list-item class="md-4-line toc-item" ng-click="selection.lab = false; close();">
                 <div class="md-list-item-text">
                     <h3>Introduction</h3>
                     <p>An overview of this workshop</p>
                 </div>
                 <md-divider></md-divider>
-            </md-list-item>
-            <md-list-item class="md-3-line toc-item" ng-repeat="lab in manifest.workshop.labs" ng-click="getLabGuide(lab); close();">
-                <div class="md-list-item-text">
-                    <h3>{{lab.title}}</h3>
-                    <p>{{lab.description}}</p>
-                </div>
-                <md-divider></md-divider>
-            </md-list-item>
+            </md-list-item -->
+                <md-list-item class="md-2-line toc-item" ng-repeat="lab in manifest.workshop.labs" ng-click="getLabGuide(lab); close();">
+                    <div class="md-list-item-text">
+                        <h3>{{lab.title}}</h3>
+                        <p>{{lab.description}}</p>
+                    </div>
+                    <md-divider></md-divider>
+                </md-list-item>
 
 
-        </md-list>
-        <md-button ng-click="close()" class="md-primary">
-          Close Menu
-        </md-button>
-      </md-content>
+            </md-list>
+            <md-button ng-click="close()" class="md-primary">
+                Close Menu
+            </md-button>
+        </md-content>
 
     </md-sidenav>
-    <div id='introduction' ng-show='!selection.lab' layout="column" layout-margin layout-padding layout-align="start center">
-        <p ng-bind-html='manifest.workshop.description'></p>
+    <div layout="row" flex="100" layout-align="center center">
+        <div id='introduction' ng-show='!selection.lab'>
+            <md-content layout-padding>
+                <div layout="row" flex="100">
+                    <div layout="column" flex="70">
+                        <span>
+                            <h1>Touch The Cloud</h1>
+                            <h2>A hands-on event to explore Oracle's new cloud services.</h2>
+                             <h2>
+                                About
+                            </h2>
 
-        <p>Open the navigation menu using the hamburger icon (<md-icon md-svg-icon="images/menu.svg"></md-icon>) in the menu bar to choose a lab guide and get started, or click the menu button below.</p>
-        <div layout="row">
-            <md-button ng-click="toggleLeft()" class="md-accent md-raised">
-                Menu
-            </md-button>
-            <md-button ng-click="getLabGuide(manifest.workshop.labs[0])" class="md-accent md-raised" ng-if="false">
-                Lab {{manifest.workshop.labs[0].number}}
-            </md-button>
-        </div>
-    </div>
-    <div id='labguide' ng-bind-html='htmlContent' ng-show='selection.lab'>
-        <!--   content filled dynamically     -->
-    </div>
-    
-    
-<script type="text/javascript">
-    angular.module('labGuide', ['ngMaterial', 'ngSanitize'])
-    
-    .config(function($mdThemingProvider) {
-      $mdThemingProvider.theme('default')
-          //.dark();
-          .primaryPalette('blue')
-          .accentPalette('orange')
-          .warnPalette('red');
-      $mdThemingProvider.theme('included')
-          .backgroundPalette('blue-grey')
-          .warnPalette('amber')
-          .dark();
-    })
-    
-    .controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize', 
-                                       function($scope, $http, $mdSidenav, $sanitize) {
-                                            
-        $scope.selection = { "lab": false };
-                                           
-        $http.get('manifest.json').then(function(res) {
-           $scope.manifest = res.data; 
-            console.log($scope.manifest);
-        }, function(msg) {
-            console.log('Error getting manifest.json!');
-            console.log(msg);
-        });
-        
-        $scope.getLabGuide = function(lab) {
-            if(lab.htmlContent == null) {
-                $http.get(lab.filename).then(function(res) {
+                            Times are changing and things are getting simpler in the Cloud! At Oracle we have invested in delivering a plethora of new Cloud Services and we want to show you how simple – yet powerful they are. We specifically wanted to focus on low code, high productivity
+                            services that can be used in building enterprise grade solutions. We believe the best way to do this is to showcase a real world business solution comprised of these services. You will build the entire solution during the course
+                            of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete “Quote to Order” solution. This solution will comprise of a mobile application, a process automation workflow,
+                            integration with an ERP and creating dashboards for visibility and business KPIs. No expertise or experience required We will have experienced instructors guide you through the tool’s online screens and explain how each service
+                            works. There is no expertise required from your side, just bring a laptop with a modern web browser and your mobile phone.
+                        </span>
+                    </div>
+                    <div layout="column" flex>
+                        <img src="images/Intro1.png">
+                    </div>
+                </div>
 
-                    var converter = new showdown.Converter(),
-                    text = res.data,
-                    html = converter.makeHtml(text);
-                    $scope.htmlContent = html;
-                    lab.htmlContent = html;
-                    $scope.selection.lab = true;
-                    setTimeout(function() {
-                        $("#labguide h3").nextUntil("#labguide h1, #labguide h2, #labguide h3").hide();
-                        $("#labguide h3").addClass('plus');
-                        $("#labguide h3").click(function() {
+                <div layout="row" flex="100" layout-padding layout-margin layout-fill layout-align="center center">
+                    <div layout="column" flex="60" class="padded">
+                        <md-content flex>
+                            <!--p ng-bind-html='manifest.workshop.description' -->
+                            <span>
                             
-                            if($(this).hasClass('plus')) {
-                              $(this).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
-                              $(this).addClass('minus');
-                              $(this).removeClass('plus');
-                            } 
-                            else if($(this).hasClass('minus')) {
-                              $(this).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
-                              $(this).addClass('plus');
-                              $(this).removeClass('minus');
-                            } 
-                        });
-                        
-                    }, 0);
+                            <h2>Objective</h2>
 
-                }, function(msg) {
-                    console.log('Error getting lab guide markdown!');
-                    console.log(msg);
-                });
+                            Cloud is here to stay but your IT’s center of gravity is your choice. Our goal is to show you how you can mix and match on-premise technologies with tools born in the cloud to achieve a hybrid IT that delivers the best from both worlds.
+
+                            <h2>Summary</h2>
+
+                            This event is designed to help everyone understand what PaaS is and what Oracle’s Cloud Services offer to both business and IT. It is designed to ensure that your organization has the knowledge and understanding of which modern tools you can use to compete:
+                            either disrupt to outperform or rapidly adjust to disruption from competition. We invite you to come and join us to “Touch the Cloud”!
+
+                            <p><img src="images/skills.png" /></p>
+                            <br>
+                            <p><img src="images/explore.png" /></p>
+                            
+                            </br>
+
+                            <h3>Who delivers the workshop?</h3>
+                            Facilitation of the event is provided by Oracle Platform specialists. Each specialist has several years of experience in working in real-life rojects as well as in training and educating a wide audience of technical and non-technical individuals.
+
+                            <h3>Our Commitment</h3>
+                            Oracle is working with a large number of customers in all kinds of organizations and industries to enable the hybrid IT. We can help you address the big picture, evaluate how you compare with your peers and design for the future. During this event, we
+                            will showcase modern services that you can add to your arsenal of business and IT tools needed to compete and excel in today’s aggressive business environments. We commit to making sure that you leave this event with a better
+                            grasp of Oracle’s Cloud Services and general Hybrid IT paradigms.
+                            </span>
+                        </md-content>
+
+                    </div>
+                    <div layout="column" flex="40" layout-padding layout-margin layout-fill layout-align="top center">
+                        <div layout="row" layout-padding layout-wrap layout-fill>
+                            <md-whiteframe class="md-whiteframe-9dp" layout layout-align="center center" layout-padding layout-wrap layout-fill>
+                                <table>
+                                    <caption>
+                                        <h3>Agenda
+                                        </h3>
+                                    </caption>
+                                    <tr>
+                                        <th>Event</th>
+                                        <th>Time</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Registration</td>
+                                        <td>8:30-8:45</td>
+                                        <tr>
+                                            <td>Quote to Order SaaS to On-Premise</td>
+                                            <td>8:45-9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Custom Quote Capture MAX-MCS</td>
+                                            <td>9:00-10:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Break</td>
+                                            <td>10:30-11:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Approval Process Orchestration PCS</td>
+                                            <td>11:00-12:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lunch </td>
+                                            <td>12:30-13:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Integrate with On-Premise ERP ICS</td>
+                                            <td>13:00-14:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>End to End Visibility and Analytics</td>
+                                            <td>14:30-15:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Close & Summary</td>
+                                            <td> 15:30-16:00</td>
+                                        </tr>
+                                </table>
+                            </md-whiteframe>
+                        </div>
+                        <div layout="row" layout-padding layout-wrap layout-fill>
+                            <md-whiteframe class="md-whiteframe-5dp" layout layout-fill layout-align="center center" style="background: #3B0">
+                                <span>
+                                    <h4>What to bring</h4>
+                                    A laptop with a web browser and your mobile phone. That’s it!</span>
+                            </md-whiteframe>
+                        </div>
+                        <div layout="row" layout-padding layout-wrap layout-fill>
+                            <md-whiteframe class="md-whiteframe-5dp" layout layout-fill layout-align="center center" style="background: #F33">
+                                <span><h4>Cloud Services covered in this event are:</h4>
+                               
+                                    <ul>
+                                    <li>Mobile Cloud Service</li>
+                                    <li>Mobile Accelerator</li>
+                                    <li>Process Cloud Service</li>
+                                    <li>Integration Cloud Service</li>
+                                    <ul>
+                                
+                                </span>
+                            </md-whiteframe>
+                        </div>
+                        <div layout="row" layout-padding layout-wrap layout-fill>
+                            <md-whiteframe class="md-whiteframe-4dp" layout layout-fill layout-align="center" style="background: #FB0">
+                                <span><h4>Who is this for?</h4>
+                                This event is for everyone: Business, Application Owners, Architects, IT and Developers. No expertise or experience required.
+                                </span>
+                            </md-whiteframe>
+                        </div>
+
+
+                    </div>
+                </div>
+                <br></br><br></br>
+                <p>Open the navigation menu using the hamburger icon (
+                    <md-icon md-svg-icon="images/menu.svg"></md-icon>) in the menu bar to choose a lab guide and get started, or click the menu button below.</p>
+
+                <md-button ng-click="toggleLeft()" class="md-accent md-raised">
+                    Menu
+                </md-button>
+                <md-button ng-click="getLabGuide(manifest.workshop.labs[0])" class="md-accent md-raised" ng-if="false">
+                    Lab {{manifest.workshop.labs[0].number}}
+                </md-button>
+            </md-content>
+        </div>
+        <div id='labguide' ng-bind-html='htmlContent' ng-show='selection.lab'>
+            <!--   content filled dynamically     -->
+        </div>
+
+
+        <script type="text/javascript">
+            angular.module('labGuide', ['ngMaterial', 'ngSanitize'])
+
+            .config(function($mdThemingProvider) {
+                $mdThemingProvider.theme('default')
+                    //.dark();
+                    .primaryPalette('blue')
+                    .accentPalette('orange')
+                    .warnPalette('red');
+                $mdThemingProvider.theme('included')
+                    .backgroundPalette('blue-grey')
+                    .warnPalette('amber')
+                    .dark();
+            })
+
+            .controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize',
+                function($scope, $http, $mdSidenav, $sanitize) {
+
+                    $scope.selection = {
+                        "lab": false
+                    };
+
+                    $http.get('manifest.json').then(function(res) {
+                        $scope.manifest = res.data;
+                        console.log($scope.manifest);
+                    }, function(msg) {
+                        console.log('Error getting manifest.json!');
+                        console.log(msg);
+                    });
+
+                    $scope.getLabGuide = function(lab) {
+                        if (lab.htmlContent == null) {
+                            $http.get(lab.filename).then(function(res) {
+                                showdown.setOption('tables', 'true');
+                                var converter = new showdown.Converter(),
+                                    text = res.data,
+                                    html = converter.makeHtml(text);
+                                $scope.htmlContent = html;
+                                lab.htmlContent = html;
+                                $scope.selection.lab = true;
+                                setTimeout(function() {
+                                    $("#labguide h3").nextUntil("#labguide h1, #labguide h2, #labguide h3").hide();
+                                    $("#labguide h3").addClass('plus');
+                                    $("#labguide h3").click(function() {
+
+                                        if ($(this).hasClass('plus')) {
+                                            $(this).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
+                                            $(this).addClass('minus');
+                                            $(this).removeClass('plus');
+                                        } else if ($(this).hasClass('minus')) {
+                                            $(this).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
+                                            $(this).addClass('plus');
+                                            $(this).removeClass('minus');
+                                        }
+                                    });
+
+                                }, 0);
+
+                            }, function(msg) {
+                                console.log('Error getting lab guide markdown!');
+                                console.log(msg);
+                            });
+                        } else {
+                            $scope.htmlContent = lab.htmlContent;
+                            $scope.selection.lab = true;
+                        }
+                    }
+                    $scope.toggleLeft = function() {
+                        $mdSidenav('left').toggle();
+                    };
+                    $scope.close = function() {
+                        $mdSidenav('left').close();
+                    };
+
+                }
+            ]);
+
+            function replaceAll(str, find, replace) {
+                return str.replace(new RegExp(find, 'g'), replace);
             }
-            else {
-                $scope.htmlContent = lab.htmlContent;
-                $scope.selection.lab = true;
-            }
-        }
-        $scope.toggleLeft = function() {
-            $mdSidenav('left').toggle();
-        };
-        $scope.close = function() {
-            $mdSidenav('left').close();
-        };
-        
-    }]);
-                                       
-    function replaceAll(str, find, replace) {
-        return str.replace(new RegExp(find, 'g'), replace);
-    }
-    
-    
-</script>
+        </script>
 </body>
+
 </html>

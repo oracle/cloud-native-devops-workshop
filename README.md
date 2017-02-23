@@ -1,4 +1,4 @@
-![](common/images/customer.logo.png)
+![](https://cloud.oracle.com/opc/images/SaaS-category-image-01.png)
 ---
 # ORACLE Touch the Cloud Workshop #
 
@@ -14,25 +14,58 @@ The workshop is intended to work with an Oracle PaaS trial account. To get an ac
 + Oracle Cloud **identity domain**
 + **Data center/region**
 
-NOTE: Before you start to use your new Oracle Public Cloud services make sure that the replication policy has been set for your account. Otherwise you can not create storage container which is necessary for most of the services. See [Selecting a Replication Policy for Oracle Storage Cloud Service](https://docs.oracle.com/cloud/latest/storagecs_common/CSSTO/GUID-5D53C11F-3D9E-43E4-8D1D-DDBB95DEC715.htm).
-
 ### Important ###
 
 During the execution you will create several public cloud service instances what will be available on the world wide web. Even if these instances are for demo purposes keep in mind it is not a best practice to use weak or known (stored here in the tutorial) passwords especially in such open environment. Thus this workshop content does not recommend any password so you need to define those. You will be asked to provide password at certain points and please remember them  for  later usage.
 
 The content contains several independent modules that cover different aspects of the platform as a services (PaaS) in the Oracle Cloud. These modules could be executed independently unless you find in the Prerequisites that they are dependent on each other.
+---
+## Workshop ##
 
-----
+[Workshop Material](https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html)
+---
+## Usefull Links ##
 
-#### A ####
+### [Oracle Cloud](https://cloud.oracle.com) ###
 
-+ [Create Oracle Developer Cloud Service project for SpringBoot application](springboot-sample/create.devcs.project.md)
-+ [Create continuous build integration using Oracle Developer Cloud Service and Oracle Application Container Cloud Service](springboot-sample/devcs.accs.ci.md)
-+ [Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service](oepe/setup.oepe.md)
+### Product Documentation ###
 
-####Customizing and personalizing the workshop content####
+#### Mobile Cloud Services ####
+##### Developement #####
++ [Creating Mobile API](https://docs.oracle.com/en/cloud/paas/mobile-cloud/mcsua/creating-apis-fast-express-api-designer.html)
++ [Utilizing Mobile Accelerator (MAX)](mcs/max.md)
 
-+ [Customize and personalize the workshop materials](customize/README.md)
+##### Interaction #####
++ [Testing Mobile Application on built-in Simulator](mcs/simulator.md)
++ [Testing on Real Device](mcs/deployment.md)
+
+#### Process Cloud Service ####
+
+
+
+##### Business Process Definition 
++ [Composer](pcs/process.composer.md)
++ [Process Definition](pcs/process.definition.md)
++ [Process Testing](pcs/process.testing.md)
++ [Process Deployment](pcs/process.deployment.md)
++ [Process Administration](pcs/process.deployment.md)
+
+##### End User Interaction 
++ [Workspace](pcs/process.workspace.md)
++ [Task List](pcs/process.tasklist.md)
++ [Process Owner Tracking](pcs/process.tracking.md)
++ [Administration](pcs/process.admin.md)
++ [Other Cloud Services Integration](pcs/process.admin.md)
+
+#### Integration Cloud Service ####
+
+##### Integration Definition  
++ [Defining Connection](pcs/ics.defining.md)
++ [Creating Integration Flow](ics/ics.creation.md)
+
+##### Monitoring
++ [Deployment](ics/ics.deployment.md)
++ [Monitoring](ics/ics.monitoring.md)
 
 ---
 
@@ -40,5 +73,5 @@ The content contains several independent modules that cover different aspects of
 Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## [License](LICENSE.md)
-Copyright (c) 2014, 2016 Oracle and/or its affiliates
+Copyright (c) 2014, 2017 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0

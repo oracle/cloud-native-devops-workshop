@@ -14,13 +14,18 @@ visit this URL: http://launch.oracle.com/?TouchTheCloud
 
 **To View in Interactive Labguide Format:**  
 
-https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
+https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
 
 # Touch the Cloud
 
 **Reference the following Lab Guides by opening their Documentation Files:**
+## Required pre-work
 
-## Lab 100: Agile Project Management
+***Only required if it is not a pre-configured environment, for example using you rown cloud***
+
+See **Documentation**: TouchTheCloud000.md
+
+## Lab 100: Mobile Application Accelerator
 
 **Documenation**: TouchTheCloud100.md
 
@@ -28,22 +33,36 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 
 - Create Initial Project
     - Add Users to Project
-- Create Product Issues
-    - Create Issues for Twitter Feed Microservice
-    - Create Issues for Twitter Feed Marketing UI
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
 
-## Lab 200: Continuous Delivery of Java Microservices
+## Lab 200: Process Management
 
 **Documenation**: TouchTheCloud200.md
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Eclipse
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+### Objectives
+The objective of this lab is to expose you to the:
 
-## Lab 300: Cloud Native Rapid Javascript Devlopment with node.js
+- **User Experience of PCS**
+
+- **Process Modelling of PCS**
+
+
+### Process Cloud User Interaction
+***User experinece***
+-   Creating a new process instance - John Lee
+-   Julie's inbox
+-   Roger tracking processes
+-   Jason Approval
+
+### Extend Process
+***Business Process Modelling***
+-   Roger needs to also do an approval 
+    -   Lanes
+    -   Human Tasks
+    -   Rules
+-   Roger wants to see process analytics
+
+
+## Lab 300: Zero Code Integration
 
 **Documenation**: TouchTheCloud300.md
 
@@ -53,14 +72,3 @@ https://oracle.github.io/cloud-native-devops-workshop/microservices/index.html
 - Import Code from external Git Repository
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
-
-## Lab 400:  Cloud Native Develper Cloud Service Administration
-
-**Documenation**: TouchTheCloud400.md
-
-### Objectives
-
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
