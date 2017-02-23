@@ -1,4 +1,4 @@
-# Test and Build Helloworld App using Oracle Developer Cloud Service
+# PART II: Test and Build Helloworld App using Oracle Developer Cloud Service
 
 ## Setting Proxy for Maven
 
@@ -78,7 +78,7 @@ local GIT repository under user’s home directory.
     command to confirm the same. The output of the ls –a command must
     match the output in the following screenshot:
 
-    <img src="./media/image1.png" width="497" height="124" />
+    <img src="images/2/image1.png" width="497" height="124" />
 
     **Note:** Now you should see that a .git directory has been created
     inside the cloud directory and your repository is ready.
@@ -103,12 +103,12 @@ name and email address to identify your commits in the repository.
 3.  To confirm that the values have been set, execute the following
     command:
 
-      git config --global –l
+        git config --global –l
 
 The output of these commands must be similar to the output in the
 following screenshot:
 
-<img src="./media/image2.png" width="420" height="219" />
+<img src="images/2/image2.png" width="420" height="219" />
 
 **Notes:**
 -   This sets your name and email address for all GIT projects.
@@ -148,7 +148,7 @@ Archetypes from GIT Bash.
 
     **Note:** The output of this command must be similar to the output in the following screenshot:
 
-    <img src="./media/image3.png" width="317" height="363" />
+    <img src="images/2/image3.png" width="317" height="363" />
 
 6.  The command creates an empty Maven project named
     **Helloworld-Example**. Examine the directory structure and note
@@ -161,16 +161,16 @@ Archetypes from GIT Bash.
 8.  Open the **Helloworld-Example** Maven project created under
     **cloud/helloworld** directory in Netbeans.
 
-    <img src="./media/image4.png" width="374" height="193" />
+    <img src="images/2/image4.png" width="374" height="193" />
 
 9.  Examine the directory structure of the project, open
     **com.example.App** executable class, and review the code.
 
-    <img src="./media/image5.png" width="384" height="181" />
+    <img src="images/2/image5.png" width="384" height="181" />
 
 10. Right-click the **Project Files > pom.xml** file and click Open.
 
-    <img src="./media/image6.png" width="242" height="242" />
+    <img src="images/2/image6.png" width="242" height="242" />
 
 11. Add the following properties settings to the file before the
     dependencies section. This sets the Java version and encoding for
@@ -247,7 +247,7 @@ Archetypes from GIT Bash.
 
 16. In the source window, right-click the **pom.xml** file and select **Format** to fix the indentation for the file.
 
-    <img src="./media/image7.png" width="276" height="227" />
+    <img src="images/2/image7.png" width="276" height="227" />
 
 17. Save the **pom.xml** file.
 
@@ -256,35 +256,35 @@ Archetypes from GIT Bash.
 
 19. Right-click the **Helloworld-Example** project and click **Run.**
 
-    <img src="./media/image8.png" width="231" height="196" />
+    <img src="images/2/image8.png" width="231" height="196" />
 
 20. Select **com.example.App** from the Available Main Classes list and
     click the **Select Main Class** button.
 
-    <img src="./media/image9.png" width="231" height="225" />
+    <img src="images/2/image9.png" width="231" height="225" />
 
 21. You should see **Hello World!** Output with a BUILD SUCCESS message.
 
-    <img src="./media/image10.png" width="406" height="152" />
+    <img src="images/2/image10.png" width="406" height="152" />
 
 22. Switch to **Git Bash** and change the directory to Helloworld-Example.
 
         cd Helloworld-Example
 
-    <img src="./media/image11.png" width="395" height="100" />
+    <img src="images/2/image11.png" width="395" height="100" />
 
 23. Execute the mvn clean compile command to clean and compile
     the project.
 
-    <img src="./media/image12.png" width="363" height="387" />
+    <img src="images/2/image12.png" width="363" height="387" />
 
 24. Execute the mvn exec:java command to execute the application.
 
-    <img src="./media/image13.png" width="360" height="297" />
+    <img src="images/2/image13.png" width="360" height="297" />
 
 25. Execute the mvn package command to package the application.
 
-    <img src="./media/image14.png" width="435" height="235" />
+    <img src="images/2/image14.png" width="435" height="235" />
 
     **Note:** Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file
     created inside **cloud/helloworld/Helloworld-Example/target**
@@ -293,7 +293,7 @@ Archetypes from GIT Bash.
 26. Execute the java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar
     command to run the packaged application.
 
-    <img src="./media/image15.png" width="454" height="120" />
+    <img src="images/2/image15.png" width="454" height="120" />
 
 ## Checking the Helloworld-Example Project into a GIT Repository
 
@@ -305,29 +305,29 @@ in the local GIT repository.
 2.  Execute the git add –n . command to see the list of files that are
     ready to be added to the repository.
 
-    <img src="./media/image16.png" width="408" height="102" />
+    <img src="images/2/image16.png" width="408" height="102" />
 
     **Note:** Please notice that there is **.** at the end of the command.
 
 3.  Execute the git add . command to add the files to the repository.
 
-    <img src="./media/image17.png" width="408" height="102" />
+    <img src="images/2/image17.png" width="408" height="102" />
 
 4.  Execute the git status command to check the files that are added.
 
-    <img src="./media/image18.png" width="408" height="106" />
+    <img src="images/2/image18.png" width="408" height="106" />
 
 5.  Execute the git commit –m "Initial Commit for Helloworld-Example
     Project" to commit the files to the repository and begin
     version tracking.
 
-    <img src="./media/image19.png" width="415" height="108" />
+    <img src="images/2/image19.png" width="415" height="108" />
 
 6.  Your files are now checked in for version tracking.
 
 7.  Check the status of the repository by executing the git status command.
 
-    <img src="./media/image20.png" width="415" height="84" />
+    <img src="images/2/image20.png" width="415" height="84" />
 
     **Note:** You should get a response similar to the one in the
     screenshot.
@@ -354,33 +354,33 @@ have received from Oracle and keep it handy.
 
 2.  Click the **Sign In** button.
 
-    <img src="./media/image21.png" width="429" height="119" />
+    <img src="images/2/image21.png" width="429" height="119" />
 
 3.  Select the Data Center and click the **My Services** button (the
     Data Center name is available in the email sent by Oracle).
 
-    <img src="./media/image22.png" width="429" height="223" />
+    <img src="images/2/image22.png" width="429" height="223" />
 
 4.  Enter the Identity Domain name and click the **Go** button (the
     Identity Domain name is available in the email sent by Oracle).
 
-    <img src="./media/image23.png" width="347" height="226" />
+    <img src="images/2/image23.png" width="347" height="226" />
 
 5.  In the next screen, enter the username and the password and click
     the **Sign In** button (login credentials are available in the email
     sent by Oracle).
 
-    <img src="./media/image24.png" width="353" height="269" />
+    <img src="images/2/image24.png" width="353" height="269" />
 
 6.  On successfully logging in, we can see the **Identity Domain Name**
     and the **Username** on the Welcome page.
 
-    <img src="./media/image25.png" width="430" height="173" />
+    <img src="images/2/image25.png" width="430" height="173" />
 
 7.  Look for **Storage**
 
 8.  Click **Storage**. Alternatively, select **View Details** from
-    the **Actions** <img src="./media/image26.gif" width="28" height="24" /> menu.
+    the **Actions** <img src="images/2/image26.gif" width="28" height="24" /> menu.
 
     The **Service Details** page appears. You can see the details of your
     Oracle Storage Cloud Service account here.
@@ -388,19 +388,19 @@ have received from Oracle and keep it handy.
     -   If you see the warning, **Set Replication Policy**, you must select
     a replication policy as described here.
 
-        <img src="./media/image27.png" width="380" height="142" />
+        <img src="images/2/image27.png" width="380" height="142" />
 
     -   If you don’t see the **See Replication Policy** warning, skip this
     procedure and proceed with **Activating Developer Cloud Service**.
 
-9.  From the Actions <img src="./media/image26.gif" width="28" height="24" /> menu,
+9.  From the Actions <img src="images/2/image26.gif" width="28" height="24" /> menu,
     select Set Replication Policy.
 
     The **Set Replication Policy** dialog box appears. It displays the
     available data centers and replication policies for your Oracle
     Storage Cloud Service instance. 
 
-    <img src="./media/image28.png" width="415" height="168" />
+    <img src="images/2/image28.png" width="415" height="168" />
 
     **Note:** For your service instance, you may see a list of
     georeplication policies that's different from the list displayed in the
@@ -413,7 +413,7 @@ have received from Oracle and keep it handy.
 
     The **Confirm Replication Policy Selection** dialog box appears.
 
-    <img src="./media/image29.png" width="377" height="150" />
+    <img src="images/2/image29.png" width="377" height="150" />
 
 12. Verify the selected replication policy details in the **Confirm
     Replication Policy Selection** dialog box. Click **Confirm**.
@@ -431,7 +431,7 @@ Oracle Storage Cloud Service,** the details of your Oracle Storage Cloud
 Service instance is displayed. Look for the Replication Policy field, as
 highlighted in the following screenshot.
 
-<img src="./media/image30.png" width="348" height="116" />
+<img src="images/2/image30.png" width="348" height="116" />
 
 ## Activating Developer Cloud Service and Creating a New Project
 
@@ -448,41 +448,41 @@ project.
     the **Customize Dashboard** button and the **Show** button for
     **Application Container** to make it visible on the Dashboard.
 
-    <img src="./media/image31.png" width="378" height="237" />
+    <img src="images/2/image31.png" width="378" height="237" />
 
 2.  Click **Developer Cloud Service** on the Dashboard to go to the
     **ServiceDetails:developer85599 (Oracle Developer
     Cloud Service)** page.
 
-    <img src="./media/image32.png" width="454" height="134" />
+    <img src="images/2/image32.png" width="454" height="134" />
 
 3.  Click the **Open Service Console** button.
 
-    <img src="./media/image33.png" width="399" height="195" />
+    <img src="images/2/image33.png" width="399" height="195" />
 
 4.  Click **New Project**.
 
-    <img src="./media/image34.png" width="399" height="245" />
+    <img src="images/2/image34.png" width="399" height="245" />
 
 5.  Enter the Project Name and Description as shown in the following
     screenshot and click **Next**.
 
-    <img src="./media/image35.png" width="399" height="288" />
+    <img src="images/2/image35.png" width="399" height="288" />
 
 6.  Click the **Empty Project** template and **Next.**
 
-    <img src="./media/image36.png" width="378" height="271" />
+    <img src="images/2/image36.png" width="378" height="271" />
 
 7.  Select **MARKDOWN** from the Wiki Markup drop-down list and click
     **Finish**.
 
-    <img src="./media/image37.png" width="384" height="277" />
+    <img src="images/2/image37.png" width="384" height="277" />
 
 8.  Provisioning HelloworldProject may take several minutes. Wait until
     all the modules are provisioned and redirected to the
     HelloworldProject home screen.
 
-    <img src="./media/image38.png" width="388" height="141" />
+    <img src="images/2/image38.png" width="388" height="141" />
 
 ## Creating a GIT Repository in Developer Cloud Service
 
@@ -491,23 +491,23 @@ Cloud Service.
 
 1.  Click the **New Repository** button in the **REPOSITORIES** section.
 
-    <img src="./media/image39.png" width="360" height="130" />
+    <img src="images/2/image39.png" width="360" height="130" />
 
 2.  In the New Repository window, enter the repository name and
     description as shown in the following screenshot and click **Create**.
 
-    <img src="./media/image40.png" width="351" height="282" />
+    <img src="images/2/image40.png" width="351" height="282" />
 
 3.  It may take a few minutes to create a repository. Wait until the
     HelloworldProjectRepo repository is created and redirected to the
     HelloworldProjectRepo home page.
 
-    <img src="./media/image41.png" width="384" height="103" />
+    <img src="images/2/image41.png" width="384" height="103" />
 
 4.  Click the HTTP tab in the HelloworldProjectRepo home page and copy
     the URL.
 
-    <img src="./media/image42.png" width="384" height="106" />
+    <img src="images/2/image42.png" width="384" height="106" />
 
 ## Cloning a GIT Repository
 
@@ -519,7 +519,7 @@ to a GIT repository on Developer Cloud Service.
 
 2.  Execute `git clone https://ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084_helloworldproject_3753/scm/HelloworldProjectRepo.git`
 
-    <img src="./media/image43.png" width="427" height="111" />
+    <img src="images/2/image43.png" width="427" height="111" />
 
     **Notes:**
     -   Enter your cloud account username and password, if you are prompted.
@@ -539,7 +539,7 @@ to a GIT repository on Developer Cloud Service.
     **Note:** Content of the **HelloworldProjectRepo** directory should
     match with the contents listed below screenshot.
 
-    <img src="./media/image44.png" width="441" height="89" />
+    <img src="images/2/image44.png" width="441" height="89" />
 
 5.  Change to the **HelloworldProjectRepo** directory
 
@@ -562,15 +562,15 @@ to a GIT repository on Developer Cloud Service.
 
 10. In the **HelloworldProject** home page, click on **HelloworldProjectRepo.git**
 
-    <img src="./media/image45.png" width="378" height="150" />
+    <img src="images/2/image45.png" width="378" height="150" />
 
 11. Notice that **Helloworld-Example** project directory has been pushed
     to repository on Developer Cloud Service. Click on it and verify
     its contents.
 
-    <img src="./media/image46.png" width="385" height="153" />
+    <img src="images/2/image46.png" width="385" height="153" />
 
-    <img src="./media/image47.png" width="385" height="158" />
+    <img src="images/2/image47.png" width="385" height="158" />
 
 ## Building a Project on Developer Cloud Service
 
@@ -579,12 +579,12 @@ Developer Cloud Service.
 
 1.  In the left navigation pane, click on **Build** and then **New Job**
 
-    <img src="./media/image48.png" width="457" height="201" />
+    <img src="images/2/image48.png" width="457" height="201" />
 
 2.  In the New Job window, enter **HelloworldProjectBJ** the job name
     field and click on **Save**
 
-    <img src="./media/image49.png" width="457" height="167" />
+    <img src="images/2/image49.png" width="457" height="167" />
 
 3.  In the **Main** tab, enter the following values:
 
@@ -592,14 +592,14 @@ Developer Cloud Service.
     -   Enter a description.
     -   Set the **JDK** to **JDK 8.**
 
-    <img src="./media/image50.png" width="433" height="204" />
+    <img src="images/2/image50.png" width="433" height="204" />
 
 4.  Click the **Source Control** tab
 
     -   Select **Git** as your repository.
     -   For **URL**, select the URL to your Git repository.
 
-    <img src="./media/image51.png" width="433" height="211" />
+    <img src="images/2/image51.png" width="433" height="211" />
 
 5.  Click the **Build Steps** tab.
 
@@ -607,9 +607,9 @@ Developer Cloud Service.
     -   Set the **Goals** to: clean package.
     -   Set the **POM File** location to: Helloworld-Example/pom.xml
 
-    <img src="./media/image52.png" width="441" height="189" />
+    <img src="images/2/image52.png" width="441" height="189" />
 
-    <img src="./media/image53.png" width="441" height="235" />
+    <img src="images/2/image53.png" width="441" height="235" />
 
 6.  Click the **Post Build** tab.
 
@@ -617,7 +617,7 @@ Developer Cloud Service.
     -   Set **Files To Archive** to: Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar
     -   Set Compression Type to NONE.
 
-    <img src="./media/image54.png" width="443" height="184" />
+    <img src="images/2/image54.png" width="443" height="184" />
 
 7.  Click **Save** and then click **Build Now.**
 
@@ -629,7 +629,7 @@ Developer Cloud Service.
     If the build failed then go back to check the build job configuration
     or click **Git Logs** to see more information about the error.
 
-    <img src="./media/image55.png" width="453" height="183" />
+    <img src="images/2/image55.png" width="453" height="183" />
 
     With this you have successfully completed creating a local GIT
     repository, creating a Maven project, storing Maven project in local

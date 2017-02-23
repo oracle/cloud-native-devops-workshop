@@ -1,4 +1,4 @@
-# Setup a Local Development Environment
+# PART I: Local Development Environment Setup
 
 ## Overview
 
@@ -60,7 +60,7 @@ environment variables.
 2.  Click the **Downloads** tab and download the latest version of
     JDK available. In this case, we are downloading JDK-8U121.
 
-    <img src="./media/PartI/image1.png" width="541" height="311" />
+    <img src="images/1/image1.png" width="541" height="311" />
 
 3.  You must accept the “Oracle Binary Code License Agreement for Java
     SE” to download the software. Click the **Accept License
@@ -103,7 +103,7 @@ environment variables.
     **JAVA\_HOME**, enter the Variable value **C:\\Program
     Files\\Java\\jdk1.8.0\_121,** and then click the **OK** button.
 
-    <img src="./media/PartI/image2.png" width="303" height="131" />
+    <img src="images/1/image2.png" width="303" height="131" />
 
 5.  Select **PATH** system variable and click the **Edit** button (If
     PATH system variable is not available, click the **New** button to
@@ -114,7 +114,7 @@ environment variables.
     place the cursor at the starting position and enter **C:\\Program
     Files\\Java\\jdk1.8.0\_121\\bin**; Then click the **OK** button.
 
-    <img src="./media/PartI/image3.png" width="303" height="131" />
+    <img src="images/1/image3.png" width="303" height="131" />
 
 7.  Click the **New** button to create another System Variable.
 
@@ -124,7 +124,7 @@ environment variables.
     semicolon, a period, and a semicolon at the end), and then click the
     **OK** button.
 
-    <img src="./media/PartI/image4.png" width="314" height="136" />.
+    <img src="images/1/image4.png" width="314" height="136" />.
 
 9.  You have created/updated three system variables. Click the **OK**
     button to close the Environment Variables and System
@@ -148,7 +148,7 @@ environment variables.
     **JAVA\_HOME**, enter the Variable value **C:\\Program
     Files\\Java\\jdk1.8.0\_121** and then click the **OK** button.
 
-    <img src="./media/PartI/image5.png" width="363" height="106" />
+    <img src="images/1/image5.png" width="363" height="106" />
 
 5.  Select **PATH** system variable and click the **Edit** button (If
     PATH system variable is not available, click the **New** button to
@@ -159,7 +159,7 @@ environment variables.
     enter **C:\\Program Files\\Java\\jdk1.8.0\_121\\bin** then click the
     **OK** button.
 
-    <img src="./media/PartI/image6.png" width="177" height="194" />
+    <img src="images/1/image6.png" width="177" height="194" />
 
 7.  Click the **New** button to create another System Variable.
 
@@ -169,7 +169,7 @@ environment variables.
     semicolon, a period, and a semicolon at the end), and then click the
     **OK** button.
 
-    <img src="./media/PartI/image7.png" width="326" height="95" />.
+    <img src="images/1/image7.png" width="326" height="95" />.
 
 9.  You have created/updated three system variables. Click the **OK**
     button to close the Environment Variables and System
@@ -182,7 +182,7 @@ environment variables.
     does not verify that the JDK is installed. Verify that the output of
     the `java –version` command shows “1.8.0\_121” or higher.
 
-    <img src="./media/PartI/image8.png" width="570" height="126" />
+    <img src="images/1/image8.png" width="570" height="126" />
 
 ## Installing Netbeans
 
@@ -288,7 +288,7 @@ the GIT Installation** step.
 8.  Select the **Use Git from Git Bash only** option on the **Adjusting
     your PATH environment** screen and click the **Next** button.
 
-    <img src="./media/PartI/image9.png" width="324" height="252" />
+    <img src="images/1/image9.png" width="324" height="252" />
 
 9.  Accept the default selection on the **Configuring the line ending
     conversions** screen and click the **Next** button.
@@ -312,7 +312,7 @@ the GIT Installation** step.
     and run the `git --version` command. Verify that the output of the `git
     --version` command shows “git version 2.11.0.windows.3.”
 
-    <img src="./media/PartI/image10.png" width="574" height="133" />
+    <img src="images/1/image10.png" width="574" height="133" />
 
 ## Installing Maven
 
@@ -336,14 +336,14 @@ setup/verify the required environment variables.
     on to your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
-    <img src="./media/PartI/image11.png" width="501" height="292" />
+    <img src="images/1/image11.png" width="501" height="292" />
 
 3.  Create a directory named **Maven** in C:\\ and unzip the
     distribution archive to **C:\\Maven** directory.
 
     **Note:** You should achieve the directory structure highlighted in the screenshot
 
-    <img src="./media/PartI/image12.png" width="348" height="160" />
+    <img src="images/1/image12.png" width="348" height="160" />
 
 4.  Copy the complete path (**C:\\Maven\\apache-maven-3.3.9**) once the
     extraction is completed; this is required to create
@@ -368,7 +368,7 @@ setup/verify the required environment variables.
     **C:\\Maven\\apache-maven-3.3.9** , and then click the
     **OK** button.
 
-    <img src="./media/PartI/image13.png" width="341" height="147" />
+    <img src="images/1/image13.png" width="341" height="147" />
 
 5.  In the Environment Variables window, under **System Variables**,
     click the **New** button.
@@ -377,7 +377,7 @@ setup/verify the required environment variables.
     enter the Variable value **%M2\_HOME%\\bin** , and then click the
     **OK** button.
 
-    <img src="./media/PartI/image14.png" width="341" height="147" />
+    <img src="images/1/image14.png" width="341" height="147" />
 
 6.  Select the **PATH** system variable and click the **Edit** button.
 
@@ -385,7 +385,7 @@ setup/verify the required environment variables.
     place the cursor at the last position and enter **;%M2%,** and then
     click the **OK** button.
 
-    <img src="./media/PartI/image15.png" width="347" height="149" />
+    <img src="images/1/image15.png" width="347" height="149" />
 
 8.  Click **OK** button twice to to close Edit System Variable and
     System Property windows
@@ -408,7 +408,7 @@ setup/verify the required environment variables.
     **M2\_HOME**, enter the Variable value
     **C:\\Maven\\apache-maven-3.3.9** and then click the **OK** button.
 
-    <img src="./media/PartI/image16.png" width="372" height="110" />
+    <img src="images/1/image16.png" width="372" height="110" />
 
 5.  In the Environment Variables window, under **System Variables**,
     click the **New** button.
@@ -417,7 +417,7 @@ setup/verify the required environment variables.
     enter the Variable value **%M2\_HOME%\\bin** , and then click the
     **OK** button.
 
-    <img src="./media/PartI/image17.png" width="377" height="111" />
+    <img src="images/1/image17.png" width="377" height="111" />
 
 6.  Select the **PATH** system variable and click the **Edit** button.
 
@@ -425,7 +425,7 @@ setup/verify the required environment variables.
     place the cursor at the last position and enter **;%M2%,** and then
     click the **OK** button.
 
-    <img src="./media/PartI/image18.png" width="228" height="251" />
+    <img src="images/1/image18.png" width="228" height="251" />
 
 8.  Click **OK** button twice to to close Edit System Variable and
     System Property windows
@@ -436,4 +436,4 @@ setup/verify the required environment variables.
     the `mvn --version` command. Verify that the output of the `mvn
     -–version` command matches with the following screenshot:
 
-    <img src="./media/PartI/image19.png" width="499" height="143" />
+    <img src="images/1/image19.png" width="499" height="143" />
