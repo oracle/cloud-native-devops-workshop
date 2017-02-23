@@ -8,9 +8,9 @@ This Student Guide will provide you with the instructions nessesary to install t
 
 ## Oracle Cloud Environment Setup
 
-If you are using an **Oracle Trial/Try It** account, there is an ***Account Configuration Step you must perform*** before attempting the Hands on Workshop labs.  
+Along with following the **Client Environment Options**, If you are using an **Oracle Trial/Try It** account, there is an ***Account Configuration Step you must perform*** before attempting the Hands on Workshop labs.  
 
-- You must **Configure Your Storage Replication Policy**. You can set the replication policy by follow the steps in the ***Setting the Storage Replication*** section of this document. 
+- You must **Configure Your Storage Replication Policy**. After you receive receive your account credentials, you can set the replication policy by follow the steps in the ***Setting the Storage Replication*** section of this document. 
 
 ## Client Enviroment Options
 
