@@ -1,0 +1,44 @@
+{
+    "workshop": {
+        "title": "Workshop Title",
+        "description": "Description of this workshop.",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "Read Me First",
+                "description": "Step-by-step workshop instructions"
+            },
+            {
+                "number": "0",
+                "filename": "StudentGuide.md",
+                "title": "Student Guide",
+                "description": "Workshop guidance and prerequisites"
+            },
+            {
+                "number": "100",
+                "filename": "LabGuide100.md",
+                "title": "Lab 100: Agile Project Management",
+                "description": "Use Developer Cloud Service to create issues, tasks, and sprints"
+            },
+            {
+                "number": "200",
+                "filename": "LabGuide200.md",
+                "title": "Lab 200:  Title of Lab 200",
+                "description": "Short description of lab 200"
+            },
+            {
+                "number": "300",
+                "filename": "LabGuide300.md",
+                "title": "Lab 300:  Title of Lab 300",
+                "description": "Short description of lab 300"
+            },
+            {
+                "number": "400",
+                "filename": "LabGuide400.md",
+                "title": "Lab 400: Title of Lab 400",
+                "description": "Short description of lab 400"
+            }
+        ]
+    }
+}
