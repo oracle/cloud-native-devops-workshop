@@ -134,20 +134,42 @@
                     lab.htmlContent = html;
                     $scope.selection.lab = true;
                     setTimeout(function() {
+                        $("#labguide h2").next("h3").addClass("first-in-section");
                         $("#labguide h3").nextUntil("#labguide h1, #labguide h2, #labguide h3").hide();
                         $("#labguide h3").addClass('plus');
-                        $("#labguide h3").click(function() {
+                        $("#labguide h3").click(function(e) {
                             
-                            if($(this).hasClass('plus')) {
-                              $(this).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
-                              $(this).addClass('minus');
-                              $(this).removeClass('plus');
-                            } 
-                            else if($(this).hasClass('minus')) {
-                              $(this).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
-                              $(this).addClass('plus');
-                              $(this).removeClass('minus');
-                            } 
+                            var fadeOutStep = function(step) {
+//                                console.log('fading out step: '+$(step).text() );
+                                $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
+                                $(step).addClass('plus');
+                                $(step).removeClass('minus');
+                            };
+                            var fadeInStep = function(step) {
+//                                console.log('fading in step: '+$(step).text() );
+                                $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
+                                $(step).addClass('minus');
+                                $(step).removeClass('plus');
+                            };
+                            
+                            if(e.offsetY < 0) { //user has clicked above the H3, in the expand/collapse all button
+                                if($(this).hasClass('first-in-section') && $(this).hasClass('plus')) {
+                                  fadeInStep($(this));
+                                  $(this).nextUntil("#labguide h1, #labguide h2", "h3").each(function(i, e) { return fadeInStep(e);} );
+                                }     
+                                else if($(this).hasClass('first-in-section') && $(this).hasClass('minus')) {
+                                  fadeOutStep($(this));
+                                  $(this).nextUntil("#labguide h1, #labguide h2", "h3").each(function(i, e) { return fadeOutStep(e);} );
+                                }
+                            }
+                            else { //user has clicked in the H3, only work on this step
+                                if($(this).hasClass('plus')) {
+                                  fadeInStep($(this));
+                                } 
+                                else if($(this).hasClass('minus')) {
+                                  fadeOutStep($(this));
+                                } 
+                            }
                         });
                         
                     }, 0);
