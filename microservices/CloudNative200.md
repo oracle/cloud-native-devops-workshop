@@ -5,7 +5,7 @@ Update: February 10, 2017
 
 This is the second of several labs that are part of the **Oracle Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
 
 Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
