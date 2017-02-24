@@ -1,4 +1,4 @@
-## IMPORTANT: How to prepare for this workshop
+## IMPORTANT: How to prepare for this Workshop
 
 **First**, ***Get an Oracle Cloud Account*** 
 - Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
