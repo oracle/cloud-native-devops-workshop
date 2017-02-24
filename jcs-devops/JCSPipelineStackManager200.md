@@ -60,9 +60,9 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     **Initial content:** `Import existing repository`
 
-    **Enter the URL:** `https://github.com/oraclenassolutionengineering/JCSStackAlphaInfrastructure`
+    **Enter the URL:** `https://github.com/pcdavies/JCSStackAlphaInfrastructure`
 
-    ![](images/200/Picture200-6.png)
+    ![](images/200/Picture200-6.5.png)
 
 - You have now created a new GIT repository based on an existing repository.
 
@@ -88,7 +88,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-10.png)
 
-- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter **Alpha-JCS-DBCS-Template.yaml**
+- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter `Alpha-JCS-DBCS-Template.yaml`
 
     ![](images/200/Picture200-11.png)
 
@@ -171,7 +171,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-28.png)
 
-- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter **JCSBuild.conf**
+- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter `JCSBuild.conf`
 
     ![](images/200/Picture200-29.png)
 
@@ -203,7 +203,7 @@ curl --request POST \
 
 ![](images/200/Picture200-32.png)
 
-- Click **Save** to complete the configuration. We will not a build at this time as we want to trigger the build by updating the **JCSBuild.conf** file.
+- Click **Save** to complete the configuration. We will execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
 
     ![](images/200/Picture200-33.png)
 
@@ -263,7 +263,7 @@ We have now completed our task. To finish up this part of the lab we will want t
 
     ![](images/200/Picture200-39.png)
 
-- If prompted, enter and confirm a Master Password for the Eclipse Secure Storage. In our example we use the **password** of **oracle**. Next, press **OK**.
+- If prompted, enter and confirm a Master Password for the Eclipse Secure Storage. In our example we use the **password** of `oracle`. Next, press **OK**.
 
     ![](images/200/Picture200-40.png)
 
@@ -315,7 +315,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     **ServiceName=Alpha02**
 
-    **BackupStroageContainer=Storage-OPC identity Domain/Alpha02Backup**
+    **BackupStroageContainer=Storage-\<Your OPC identity Domain\>/Alpha02Backup**
 
     ![](images/200/Picture200-47.png)
 
@@ -327,7 +327,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-48.png)
 
-- Enter **Provision Stack Alpha02** in the Commit Message box and click **Commit and Push**.
+- Enter `Provision Stack Alpha02` in the Commit Message box and click **Commit and Push**.
 
     ![](images/200/Picture200-49.png)
 
@@ -343,13 +343,13 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-51.png)
 
-- Click **Build** on left hand navigation. You should now see that the **Infrastructure Create Stack** build has completed.
+- Click **Build** on left hand navigation. You should now see that the **Infrastructure Create Stack** build is running, or just completed. If it's running, wait for it to complete.
 
     ![](images/200/Picture200-52.png)
 
 ### **STEP 14:** Monitor in Oracle Cloud
 
-- Switch back to browser tab with **Oracle Stack Manager**.  Click on **Stack** and you should see that Alpha02 is creating.
+- Switch back to browser tab with **Oracle Stack Manager**.  Click on **Stack** and you should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service.
 
     ![](images/200/Picture200-53.png)
 
@@ -359,7 +359,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 15:** Set Task 2 Status to In Progress
 
-- From either Eclipse or Developer Cloud Service console update the status of **Task 2** to **Completed**. You sprint should now look like the following.
+- From either Eclipse or Developer Cloud Service console update the status of **Task 2** to **Completed**. Your sprint should now look like the following.
 
 ![](images/200/Picture200-58.png)
 
