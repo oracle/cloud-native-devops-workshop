@@ -6,7 +6,7 @@ Update: February 10, 2017
 
 This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
 
-In this lab, you will acquire a good overview of the next generation Oracle Integration Cloud Service. You will modify an integration to Oracle EBS. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service.
+In this lab, you will acquire a good overview of the next generation Oracle Integration Cloud Service (aka ICS). You will modify an integration to Oracle EBS. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service.
 
 Please direct comments to: John VanSant (john.vansant@oracle.com)
 
@@ -19,7 +19,6 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 - The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
 
-
 # Explore Integration Cloud Service
 
 ## Login to Integration Cloud Service
@@ -29,61 +28,86 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 - From your browser (Firefox or Chrome recommended) go to the following URL:
 https://cloud.oracle.com
 - Click Sign In in the upper right hand corner of the browser
-- **IMPORTANT** - Under My Services, change Data Center to US Commercial 2 (us2) and click on Sign In to My Services
+- **IMPORTANT** - Under My Services, change Data Center to `US Commercial 2 (us2)` and click on Sign In to My Services
 
     ![](images/300/image001.png)
 
-- Now we can login again. From any browser, go to the following URL: https://cloud.oracle.com
+- If your identity domain is not already set, enter it and click **Go** (do not check to box to save it because this will set a cookie in the browser that needs to be cleared if you need to change identity domains later)  
 
-- Click **Sign In** in the upper right hand corner of the browser
+    **NOTE:** the **Identity Domain** values will be given to you from your instructor.
+
+    ![](images/300/image002.png)  
+
+- Once your Identity Domain is set, enter your `User Name` and `Password` and click **Sign In**
+
+    ***NOTE:*** the **User Name and Password** values will be given to you from your instructor.
 
     ![](images/300/image003.png)  
 
-- ***IMPORTANT*** - Under My Services, ***ask your instructor*** which **Region** to select from the drop down list, and **click** on the **My Services** button.
+- You will be presented with a Dashboard displaying the various cloud services available to this account.
 
-    ![](images/300/image004.png)  
+   **NOTE:** The Cloud Services dashboard is intended to be used by the *Cloud Administrator* user role.  The Cloud Administrator is responsible for adding users, service instances, and monitoring usage of the Oracle cloud service account.  Developers and Operations roles will go directly to the service console link, not through the service dashboard.
 
-- Enter your identity domain and click **Go**
+    ![](images/300/image004.png)
 
-    **NOTE:** the **Identity Domain, User Name and Password** values will be given to you from your instructor.
+### **STEP 2:**	Explore Oracle Cloud Dashboard
+
+The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**.
+
+- To look at the details for the Integration Cloud Service (ICS) instance, click on the `Integration` link.  The **Service Details** page will show various important details about the ICS service instances in this identity domain.
+- Select the `Open Service Console` link to go to the ICS Service Console.
 
     ![](images/300/image005.png)  
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
-
-    ***NOTE:*** For this lab you will be acting as the JavaScript Developer ***John Dunbar***. As with the previous lab, if you are not able to support multiple users, login as a supported user, and assume the “logical” identify of John Dunbar, the JavaScript Developer.
+- You will now be presented with the ICS Service Console from which you will be performing the rest of this workshop lab.
 
     ![](images/300/image006.png)  
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+## Explore the ICS Designer User Interface
+
+### STEP 1:	Open ICS Designer
+- **Click** on the `Designer` tab in the upper-right corner of the ICS Service Console to navigate to open the ICS Designer.
 
     ![](images/300/image007.png)  
 
-### **STEP 2:**	Login to Developer Cloud Service
-
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes issue tracking system, agile development dashboards, code versioning and code review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
-
-- From Cloud UI dashboard click on the **Developer** service. In our example the Developer Cloud Service is named **developer71725**.
+- You will be presented with the ICS Designer Portal:
 
     ![](images/300/image008.png)  
 
-- The Service Details page gives you a quick glance of the service status.
+### STEP 2:	Explore ICS Connections
+
+- Select the `Connections` graphic in the designer portal
 
     ![](images/300/image009.png)  
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will list all projects that you are currently a member.
+- Make note of the connections that have been created. Notice that there are three connections, one called *EBS 12cR2*, one called *EBS DB* and the other called *Inbound SOAP*.
 
     ![](images/300/image010.png)  
 
-### **STEP 3**: Review Agile Board
+### STEP 3:	Explore ICS Integrations
 
-- Click **Twitter Feed Marketing Project** to access the project.
+- Select the `Integrations` link from the navigation bar on the left of the Connections designer console
 
     ![](images/300/image011.png)  
 
-- Click on **Agile** on the navigation panel.
+- Make note of the integrations that have been created. We will be working with the integration called *Create EBS Order*.
 
     ![](images/300/image012.png)  
+
+### STEP 4:	Explore ICS Agents
+
+- Select the `Agents` link from the navigation bar on the left of the Integrations designer console
+
+    ![](images/300/image013.png)  
+
+- Make note of the agent that has been created to communicate with the EBS instance, it is called *EBS_ONPREM*
+
+   ![](images/300/image014.png)  
+
+
+***XXXX*** D:\docs\Oracle Docs\FY17_Sales\TouchTheCloudWorkshop\Workshop\Touch-the-Cloud\touch-the-cloud\images\300
+
+    ![](images/300/image011.png)  
 
 - If the **Microservices** is not the default board, click on the current board’s dropdown, select the filter **All**, and click on **Microservices**
 
