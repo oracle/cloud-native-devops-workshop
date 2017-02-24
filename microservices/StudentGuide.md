@@ -18,17 +18,17 @@ Your client enviroment ***must be configured prior*** to attempting the Hands on
 You have two options for configuring your workshop client environment. 
 
 - ***Option 1***: You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
-    - Refer to the ***Virtual Box Client Installation*** section of this document to use this option
-    - **This option is best**, if you don't want to worry about installing and configuring multiple Open Source Software tools on your laptop. 
+- Refer to the ***Virtual Box Client Installation*** section of this document to use this option
+- **This option is best**, if you don't want to worry about installing and configuring multiple Open Source Software tools on your laptop. 
 - ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
-    - Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
-    - **This option is best** if you want to install and configure the opensource software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
+- Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
+- **This option is best** if you want to install and configure the opensource software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
 
 # Configure Your Storage Replication Policy
 
 ### Login to your Oracle Cloud Account
 - From any browser, go to the URL:
-    `https://cloud.oracle.com`
+`https://cloud.oracle.com`
 
 - click **Sign In** in the upper right hand corner of the browser
 
@@ -36,11 +36,11 @@ You have two options for configuring your workshop client environment.
 
 - **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
-    ![](images/100/Picture100-2.png)
+![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
+**NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
 
     ![](images/100/Picture100-3.png)
 
@@ -61,16 +61,15 @@ You have two options for configuring your workshop client environment.
 Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
 
 - Click on the **Storage** Cloud Service
-
     ![](images/100/Picture-01.png)
 
-- If you see a message requesting that you **Set Replication Policy**, as is shown below, click on the message. If the message is not displayed, your replication policy has already been set and your Cloud Account is ready for the Workshop.
+- Click on the **Open Service Console** icon at the top of the screen.
 
-    ![](images/100/Picture-02.png)
+    ![](images/100/Picture-01.5.png)
 
-- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generally set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
 
-    ![](images/100/Picture-03.png)
+    ![](images/100/Picture-02.5.png)
 
 - Your replication policy is now set, and you can close your browser window. 
 
@@ -84,7 +83,7 @@ As an alternative to installing Eclipse, Brackets and Git on your laptop, you ca
 
 - You will need full Administrator privileges on your machines, and in some cases will need to set Hardware Virtualization in the BIOS.
 
-    - Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
+- Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
 
 - The latest version of Virtual Box should be installed and tested prior to the workhop.
 
@@ -128,7 +127,7 @@ As an alternative to installing Eclipse, Brackets and Git on your laptop, you ca
 
 - After completion of the import, you should see the Oracle Public Cloud image in a Powered Off state. The default settings will work, but if you are familiar with Virtual Box, you are welcome to change any of the settings.
 
-    ![](images/studentguide/Picture28.png)
+![](images/studentguide/Picture28.png)
 
 - With the **Oracle Public Cloud** selected, click **Start**.
 
@@ -206,7 +205,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 - Enter a **URL** into the browser and press **enter** to test your proxy settings.
 
-    ![](images/studentguide/Picture6.png)
+![](images/studentguide/Picture6.png)
 
 ### Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
@@ -223,27 +222,27 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
-  <proxies>
-    <proxy>
-      <active>true</active>
-      <protocol>http</protocol>
-      <username>proxyuser</username>
-      <password>proxypass</password>
-      <host>www-proxy.us.oracle.com</host>
-      <port>80</port>
-      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-    <proxy>
-      <active>true</active>
-      <protocol>https</protocol>
-      <username>proxyuser</username>
-      <password>proxypass</password>
-      <host>www-proxy.us.oracle.com</host>
-      <port>80</port>
-      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-    </proxies>
+xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+<proxies>
+<proxy>
+<active>true</active>
+<protocol>http</protocol>
+<username>proxyuser</username>
+<password>proxypass</password>
+<host>www-proxy.us.oracle.com</host>
+<port>80</port>
+<nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+</proxy>
+<proxy>
+<active>true</active>
+<protocol>https</protocol>
+<username>proxyuser</username>
+<password>proxypass</password>
+<host>www-proxy.us.oracle.com</host>
+<port>80</port>
+<nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+</proxy>
+</proxies>
 </settings>
 ```
 
@@ -289,7 +288,7 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 - Open Windows Explorer and navigate you where you downloaded Brackets. Double click on the Brackets executable to start the install process.
 
-    ![](images/studentguide/Picture16.png)
+![](images/studentguide/Picture16.png)
 
 - Run through the installation process
 

@@ -191,6 +191,8 @@ Now that we have successfully built our project, we need to create a deployment 
 
     ![](images/200/Picture34.3.png)  
 
+    Note: If you are not able to connect, double check you credentials. If your connection still does not work, and this is an **Oracle Trial account**, please review the Student Guide for this workshop, and follow the steps outlining how to set your **Storage Replication Policy**.  
+
 - Set the following Properties as follows:
 
   - **Runtime**: `Java`
@@ -409,7 +411,7 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
     ![](images/200/Picture65.png)  
 
-- If your JRE release is **equal to or greater** than **1.8.0\_121**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
+- If your JRE release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
 
     ![](images/200/Picture65.5.png)  
 
@@ -431,7 +433,7 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
     ![](images/200/Picture69.png)  
 
-- Change the JRE Name to **jdk1.8.0\_102** or **jdk1.8.0\_31**, and click on **Finish**
+- Change the JRE Name to **jdk1.8.0\_102**, and click on **Finish**
 
     ![](images/200/Picture70.png)  
 
