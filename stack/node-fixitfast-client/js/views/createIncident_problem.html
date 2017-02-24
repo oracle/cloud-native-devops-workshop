@@ -1,0 +1,65 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-form-layout" data-bind="with: $parent.newIncidentModel">
+	<div class="oj-form">
+		<div class="oj-flex">
+			<div class="oj-flex-item">
+				<label id="problemLabel" class="profileLabel">PROBLEM</label>
+				<input id="problem-input" aria-labelledby="problemLabel" type="text" placeholder="Describe the problem." data-bind="ojComponent: {component: 'ojInputText', value: problem, required: true}"/>
+			</div>
+		</div>
+		<div class="oj-flex">
+			<div class="oj-flex-item">
+				<label id="categoryLabel">CATEGORY</label>
+				<div id="categoryRadioSet" aria-labelledby="categoryLabel" class='oj-radioset-no-chrome' data-bind="ojComponent: { component: 'ojRadioset', value: category, required: true }">
+          <span class="oj-choice-row">
+            <input id="general" type="radio" name="category" value="general">
+            <label for="general">General Home</label>
+          </span>
+
+          <span class="oj-choice-row">
+            <input id="appliance" type="radio" name="category" value="appliance">
+            <label for="appliance">Appliance</label>
+          </span>
+          <span class="oj-choice-row">
+            <input id="electrical" type="radio" name="category" value="electrical">
+            <label for="electrical">Electrical</label>
+          </span>
+          <span class="oj-choice-row">
+            <input id="heatingcooling" type="radio" name="category" value="heatingcooling">
+            <label for="heatingcooling">Heating / Cooling</label>
+          </span>
+          <span class="oj-choice-row">
+            <input id="plumbing" type="radio" name="category" value="plumbing">
+            <label for="plumbing">Plumbing</label>
+          </span>
+				</div>
+			</div>
+		</div>
+		<div class="oj-flex">
+			<div class="oj-flex-item">
+				<label id="priorityLabel">PRIORITY</label>
+				<div id="priorityRadioSet" aria-labelledby="priorityLabel" class='oj-radioset-no-chrome' data-bind="ojComponent: { component: 'ojRadioset', value: priority, required: true }">
+ 	        <span class="oj-choice-row">
+            <input id="high" type="radio" name="priority" value="high">
+            <label for="high">High</label>
+          </span>
+          <span class="oj-choice-row">
+            <input id="normal" type="radio" name="priority" value="normal">
+            <label for="normal">Normal</label>
+          </span>
+          <span class="oj-choice-row">
+            <input id="low" type="radio" name="priority" value="low">
+            <label for="low">Low</label>
+          </span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

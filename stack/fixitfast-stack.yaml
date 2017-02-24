@@ -1,0 +1,108 @@
+---
+  template: 
+    templateName: FixItFast-Stack
+    templateVersion: 1.0.0
+    templateDescription: Stack template to create simple ACCS 
+    parameters: 
+      adminPwd: 
+        label: Admin password
+        description: Generic password for service administrators
+        type: String
+        mandatory: true
+        default: WebLogic1!
+        sensitive: true    
+      appFrontEndURL: 
+        label: Front End App archive cloud URL
+        description: Location inside Storage from where the frontend app archive can be downloaded from
+        type: String
+        mandatory: true
+        default: xweek/fixitfast-client.zip
+      appBackEndNodeURL: 
+        label: Back End Node App archive cloud URL
+        description: Location inside Storage from where the backend node app archive can be downloaded from
+        type: String
+        mandatory: true
+        default: xweek/fixitfast-backend.zip
+      appBackEndJavaURL: 
+        label: Back End Java App archive cloud URL
+        description: Location inside Storage from where the backend java app archive can be downloaded from
+        type: String
+        mandatory: true
+        default: xweek/fixitfast-java-mysql-backend.zip
+      publicKeyText: 
+        label: Public key text
+        description: Public key text for accessing the provisioned vms
+        type: ssh
+        mandatory: true
+        default: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC99Kr9t7GE7IqRE6SSoqB1eNd7kFd5snU086io1/NGIt+/1tFzcNI3R7A2L5wJPkK8EYbOR5Z2cu+vzYsSRSZBVd76lqqln8K7HGazEx73wQuIXuTB7CzbBvf0sxO/33IF8N0iw2BKtVffbf205FPGQJVmQHmfJD8KWCFnrqGt8kD/goN+cLT1SJL6GDaypykxY0AoYhyPbbLAq7YkuptJt2j+fhTD4vyLXjZ2QjykMJVuz0YDfDl07xUbL1/mmIDqtImY5KWPeADBU1rqHD3WDaUvIrbRyHa9E0kT4e7IEwdqFVFABCbxIwcPCRgyAFfxsP9HS1G75zG7VpIeKbpD rsa-key-20161106204053"
+        sensitive: true
+    resources: 
+      mysqlDB: 
+        type: MySQLCS
+        parameters: 
+             serviceParameters: 
+                serviceName: fixitMySQLDB
+                serviceLevel: PAAS
+                subscription: HOURLY
+                serviceDescription: Customer Database for FixItFast application 
+                serviceVersion: 5.7
+                vmPublicKeyText: 
+                    Fn::GetParam: publicKeyText                
+                backupDestination: NONE
+             componentParameters: 
+                mysql: 
+                  shape: oc3
+                  mysqlUserName: root
+                  mysqlUserPassword:
+                    Fn::GetParam: adminPwd
+      backendJavaApp: 
+        type: apaas
+        parameters: 
+            name: backendJava
+            runtime: java
+            subscription: MONTHLY
+            archiveURL:
+                Fn::GetParam: appBackEndJavaURL
+            deployment:
+                memory: 2G
+                instances: 1
+                services: 
+                      - 
+                        identifier: MySQLBinding
+                        name: 
+                          Fn::GetAtt: 
+                            - mysqlDB
+                            - serviceName
+                        type: MySQLCS
+                        username: root
+                        password:
+                          Fn::GetParam: adminPwd
+      backendNodeApp:
+        type: apaas
+        parameters: 
+            name: backendNode
+            runtime: node
+            subscription: MONTHLY
+            archiveURL:
+                Fn::GetParam: appBackEndNodeURL
+            deployment:
+                memory: 1G
+                instances: 1
+                services:
+      clientApp:
+        type: apaas
+        parameters: 
+            name: client
+            runtime: node
+            subscription: MONTHLY
+            archiveURL:
+                Fn::GetParam: appFrontEndURL
+            deployment:
+                memory: 1G
+                instances: 1
+                services:
+                environment:
+                  {
+                    "REST_FIXIT" :  { "Fn::GetAtt" : [ "backendNodeApp", "attributes.webURL.value" ] },
+                    "REST_CUSTOMERS" :  { "Fn::GetAtt" : [ "backendJavaApp", "attributes.webURL.value" ] }
+                  }

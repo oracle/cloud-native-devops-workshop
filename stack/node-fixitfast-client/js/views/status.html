@@ -1,0 +1,32 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div data-bind="with: $parents[1].incidentData" aria-label="status">
+  <div id="statusRadioSet" class="oj-radioset-no-chrome"
+       data-bind="ojComponent: {
+        component: 'ojRadioset',
+        value: status,
+        optionChange: $parents[2].statusChange,
+        disabled: $root.isReadOnlyMode }" >
+    <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+      <span class="demo-icon-32 demo-status-open-icon" aria-hidden="true"></span>
+      <input id="open" type="radio" name="status" value="open">
+      <label for="open">Open</label>
+    </span>
+    <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+      <span class="demo-icon-32 demo-status-accepted-icon" aria-hidden="true"></span>
+      <input id="accepted" type="radio" name="status" value="accepted">
+      <label for="accepted">Accepted</label>
+    </span>
+    <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+      <span class="demo-icon-32 demo-status-closed-icon" aria-hidden="true"></span>
+      <input id="closed" type="radio" name="status" value="closed">
+      <label for="closed">Closed</label>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="demo-tour-container">
+  <div class="demo-filmstrip-container" id="filmStrip" data-bind="ojComponent: {
+         component: 'ojFilmStrip',
+         maxItemsPerPage: 1,
+         arrowVisibility: 'hidden',
+         optionChange: function(event, data) { return $parent.filmStripOptionChange(event, data); } }" aria-label="tour film strip">
+    <!-- ko foreach: steps -->
+    <div class="demo-filmstrip-item oj-hybrid-padding-horizontal" data-bind="style: { display: function() { return getItemInitialDisplay($index());} }">
+      <div>
+        <img data-bind="attr: {src: imgSrc, width: '200px', height: '200px', margin: 'auto' }">
+      </div>
+      <div style="padding-top: 4rem;">
+        <h1 data-bind="text: title.toUpperCase(), style: {color: color}"></h1>
+        <h4 data-bind="text: description" class="demo-tour-content-subtitle"></h4>
+      </div>
+
+    </div>
+    <!-- /ko -->
+  </div>
+
+  <div class="demo-overlaid-paging-control" data-bind="ojComponent: {component: 'ojPagingControl', data: getPagingModel(), pageSize: 0, pageOptions: {type: 'dots'}}"></div>
+</div>

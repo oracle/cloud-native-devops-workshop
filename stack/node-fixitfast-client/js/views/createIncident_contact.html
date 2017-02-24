@@ -1,0 +1,32 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-flex-item oj-flex oj-sm-flex-direction-column" data-bind="with: $parent.allCustomers">
+
+  <div class="demo-flex-zero oj-hybrid-padding">Please select a customer from the list:</div>
+
+  <div class="oj-flex-item" aria-label="customers" style="overflow: auto;">
+    <div id="customerSelectionRadioSet"
+         data-bind="ojComponent: {
+          component: 'ojRadioset',
+          value: $parents[1].newIncidentModel().customerId,
+          optionChange: $parents[1].customerSelectionChange }" >
+      <!-- ko foreach: $data -->
+
+      <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+        <div class="demo-customer-avatar-wrapper oj-flex oj-sm-align-items-center" data-bind="attr: {style: 'border: 1px solid ' + $root.appUtilities.formatAvatarColor('Customer', id)}">
+          <div class="demo-customer-avatar" data-bind="text: $root.appUtilities.formatInitials(firstName, lastName), attr: {style: 'background: ' + $root.appUtilities.formatAvatarColor('Customer', id)}"></div>
+        </div>
+
+        <input type="radio" name="customer" data-bind="attr: {id: id, value: id}">
+        <label data-bind="text: firstName + ' ' + lastName, attr: {for: id}"></label>
+      </span>
+      <!-- /ko -->
+    </div>
+  </div>
+</div>

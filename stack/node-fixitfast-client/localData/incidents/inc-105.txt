@@ -1,0 +1,31 @@
+{
+  "id": "inc-105",
+  "problem": "Dishwasher leaking",
+  "description": "Water leakage observed under kitchen sink and back wall",
+  "category": "appliance",
+  "picture": "/builtin/images/broken-water-heater.png",
+  "status": "accepted",
+  "priority": "normal",
+  "createdOn": "2015-07-25",
+  "lastUpdatedOn": "2015-07-31",
+  "customerId": "cus-103",
+  "_technicianUsername": "hcr",
+  "locationId": "loc-3",
+  "customer": {
+    "id": "cus-103",
+    "username": "rbarkhouse",
+    "firstName": "Rick",
+    "lastName": "Barkhouse",
+    "locationId": "loc-3",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "rbarkhouse@somewhere.com",
+    "role": "Customer"
+  },
+  "location": {
+    "formattedAddress": "200 First Street,\nLivermore, CA 94566 USA",
+    "latitude": "37.660406",
+    "longitude": "-121.876038",
+    "id": "loc-3"
+  }
+}

@@ -1,0 +1,29 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-applayout-fixed-top">
+  <header role="banner" class="oj-flex-bar oj-hybrid-applayout-header oj-sm-align-items-center" data-bind="ojModule: settingsHeaderSettings">
+  </header>
+</div>
+
+<div class="oj-applayout-content">
+  <div role="main" class="oj-hybrid-applayout-content">
+    <div style="padding: 10px;">
+      <h4>CONNECTIONS</h4>
+      <form id="settingsForm">
+        <div class="oj-flex oj-sm-justify-content-space-between">
+          <label id="switchLabel" for="switch" class="oj-label-inline">Mobile Cloud Service</label>
+          <input id="switch" data-bind="ojComponent: {component: 'ojSwitch', value: $root.isOnlineMode}" />
+        </div>
+        <p>When this is on it provides data from Oracle Mobile Cloud Service</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+

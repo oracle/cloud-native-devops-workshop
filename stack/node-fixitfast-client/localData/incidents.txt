@@ -1,0 +1,160 @@
+{
+  "count": 5,
+  "result": [
+    {
+      "id": "inc-105",
+      "problem": "Dishwasher leaking",
+      "description": "Water leakage observed under kitchen sink and back wall",
+      "category": "appliance",
+      "picture": "/builtin/images/broken-water-heater.png",
+      "status": "accepted",
+      "priority": "normal",
+      "createdOn": "2015-07-25",
+      "lastUpdatedOn": "2015-07-31",
+      "customerId": "cus-103",
+      "_technicianUsername": "hcr",
+      "locationId": "loc-3",
+      "customer": {
+        "id": "cus-103",
+        "username": "rbarkhouse",
+        "firstName": "Rick",
+        "lastName": "Barkhouse",
+        "locationId": "loc-3",
+        "mobile": "6505067000",
+        "home": "5105552121",
+        "email": "rbarkhouse@somewhere.com",
+        "role": "Customer"
+      },
+      "location": {
+        "formattedAddress": "200 First Street,\nLivermore, CA 94566 USA",
+        "latitude": "37.660406",
+        "longitude": "-121.876038",
+        "id": "loc-3"
+      }
+    },
+    {
+      "id": "inc-108",
+      "problem": "Pipe burst in cafeteria",
+      "description": "The cafeteria is flooded, and unusable. Situation needs to be fixed soon",
+      "category": "plumbing",
+      "picture": "/builtin/images/broken-water-heater.png",
+      "status": "accepted",
+      "priority": "high",
+      "createdOn": "2015-07-12",
+      "lastUpdatedOn": "2015-07-23",
+      "customerId": "cus-112",
+      "_technicianUsername": "hcr",
+      "locationId": "loc-12",
+      "customer": {
+        "id": "cus-112",
+        "username": "jstevens",
+        "firstName": "Jennifer",
+        "lastName": "Stevens",
+        "locationId": "loc-12",
+        "mobile": "6505067000",
+        "home": "5105552121",
+        "email": "jstevens@somewhere.com",
+        "role": "Customer"
+      },
+      "location": {
+        "formattedAddress": "5655 College Ave,\nOakland, CA 94618 USA",
+        "latitude": "37.843693",
+        "longitude": "-122.251890",
+        "id": "loc-12"
+      }
+    },
+    {
+      "id": "inc-111",
+      "problem": "Carpet not installed properly",
+      "description": "New carpet installed last week is coming apart at the seams",
+      "category": "general",
+      "picture": "/builtin/images/broken-water-heater.png",
+      "status": "accepted",
+      "priority": "normal",
+      "createdOn": "2015-06-11",
+      "lastUpdatedOn": "2015-07-01",
+      "customerId": "cus-113",
+      "_technicianUsername": "hcr",
+      "locationId": "loc-13",
+      "customer": {
+        "id": "cus-113",
+        "username": "skapoor",
+        "firstName": "Srini",
+        "lastName": "Kapoor",
+        "locationId": "loc-13",
+        "mobile": "6505067000",
+        "home": "5105552121",
+        "email": "skapoor@somewhere.com",
+        "role": "Customer"
+      },
+      "location": {
+        "formattedAddress": "4226 Piedmont Ave,\nOakland, CA 94611 USA",
+        "latitude": "37.827911",
+        "longitude": "-122.249982",
+        "id": "loc-13"
+      }
+    },
+    {
+      "id": "inc-114",
+      "problem": "Carpet is shedding",
+      "description": "Newly installed carpet sheds like crazy and is a trip hazard",
+      "picture": "/builtin/images/broken-water-heater.png",
+      "category": "general",
+      "status": "accepted",
+      "priority": "low",
+      "createdOn": "2015-08-01",
+      "lastUpdatedOn": "2015-08-21",
+      "customerId": "cus-113",
+      "_technicianUsername": "hcr",
+      "locationId": "loc-13",
+      "customer": {
+        "id": "cus-113",
+        "username": "skapoor",
+        "firstName": "Srini",
+        "lastName": "Kapoor",
+        "locationId": "loc-13",
+        "mobile": "6505067000",
+        "home": "5105552121",
+        "email": "skapoor@somewhere.com",
+        "role": "Customer"
+      },
+      "location": {
+        "formattedAddress": "4226 Piedmont Ave,\nOakland, CA 94611 USA",
+        "latitude": "37.827911",
+        "longitude": "-122.249982",
+        "id": "loc-13"
+      }
+    },
+    {
+      "id": "inc-121",
+      "problem": "clothes in dryer are scalding hot!",
+      "description": "despite a clean lint filter clothes are coming out too hot. potential liability",
+      "category": "appliance",
+      "picture": "/builtin/images/broken-water-heater.png",
+      "status": "open",
+      "priority": "high",
+      "createdOn": "2015-09-11",
+      "lastUpdatedOn": "",
+      "customerId": "cus-103",
+      "_technicianUsername": "hcr",
+      "locationId": "loc-3",
+      "customer": {
+        "id": "cus-103",
+        "username": "rbarkhouse",
+        "firstName": "Rick",
+        "lastName": "Barkhouse",
+        "locationId": "loc-3",
+        "mobile": "6505067000",
+        "home": "5105552121",
+        "email": "rbarkhouse@somewhere.com",
+        "role": "Customer"
+      },
+      "location": {
+        "formattedAddress": "200 First Street,\nLivermore, CA 94566 USA",
+        "latitude": "37.660406",
+        "longitude": "-121.876038",
+        "id": "loc-3"
+      }
+    }
+  ]
+}

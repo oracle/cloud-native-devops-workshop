@@ -1,0 +1,31 @@
+{
+      "id": "inc-121",
+      "problem": "clothes in dryer are scalding hot!",
+      "description": "despite a clean lint filter clothes are coming out too hot. potential liability",
+      "category": "appliance",
+      "picture": "/builtin/images/broken-water-heater.png",
+      "status": "open",
+      "priority": "high",
+      "createdOn": "2015-09-11",
+      "lastUpdatedOn": "",
+      "customerId": "cus-103",
+      "_technicianUsername": "hcr",
+      "locationId": "loc-3",
+      "customer": {
+        "id": "cus-103",
+        "username": "rbarkhouse",
+        "firstName": "Rick",
+        "lastName": "Barkhouse",
+        "locationId": "loc-3",
+        "mobile": "6505067000",
+        "home": "5105552121",
+        "email": "rbarkhouse@somewhere.com",
+        "role": "Customer"
+      },
+      "location": {
+        "formattedAddress": "200 First Street,\nLivermore, CA 94566 USA",
+        "latitude": "37.660406",
+        "longitude": "-121.876038",
+        "id": "loc-3"
+      }
+    }

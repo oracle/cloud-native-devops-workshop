@@ -1,0 +1,13 @@
+{
+  "memory": "2G",
+  "instances": 1,
+  "services": [
+    {
+      "name": "REPLACE_TO_MYSQL_SERVICE_NAME_TO_BIND",
+      "type": "MySQLCS",
+      "username": "root",
+      "password": "REPLACE_TO_PASSWORD"
+    }
+  ],
+  "environment": {}  
+}

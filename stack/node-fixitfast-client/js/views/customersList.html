@@ -1,0 +1,91 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-applayout-fixed-top">
+  <!-- ko if: !isSearchMode() -->
+  <header role="banner" class="oj-hybrid-applayout-header">
+    <div class="oj-flex-bar-start">
+      <button data-bind="click: $root.toggleDrawer,
+            ojComponent: {component:'ojButton', chroming: 'half',
+            display: 'icons', label: 'Navigation Drawer',
+            icons: {start: 'oj-fwk-icon oj-fwk-icon-hamburger'}}">
+      </button>
+    </div>
+    <div class="oj-hybrid-applayout-bar-title">
+      <h1 class="oj-hybrid-applayout-header-title" data-bind="text: 'Customers'"></h1>
+    </div>
+    <div class="oj-flex-bar-end">
+      <button class="" data-bind="click: goToSearchMode, ojComponent: {component: 'ojButton', chroming: 'half', display: 'icons', label: 'Search', icons: {start: 'oj-fwk-icon oj-fwk-icon-magnifier'}}"></button>
+    </div>
+  </header>
+  <!-- /ko -->
+
+  <!-- ko if: isSearchMode() -->
+  <header role="banner" class="oj-hybrid-applayout-header">
+    <div class="oj-flex-bar-start">
+      <button data-bind="click: exitSearchMode, ojComponent: {component: 'ojButton', chroming: 'half', display: 'icons', label: 'Close Search', icons: {start: 'oj-hybrid-applayout-header-icon-back oj-fwk-icon'}}"></button>
+    </div>
+    <div class="oj-flex-bar-middle">
+      <form id="custSearchForm" class="demo-customer-search-form">
+        <input id="inputSearch" placeholder="Search for customer by name" data-bind="ojComponent: {rawValue: nameSearch, value: nameSearch, component: 'ojInputText', disabled: false, rootAttributes: {style:'margin-bottom: 0;'}}">
+      </form>
+    </div>
+    <div class="oj-flex-bar-end">
+      <button class="" data-bind="click: clearSearch, ojComponent: {component: 'ojButton', chroming: 'half', display: 'icons', label: 'Clear Input', icons: {start: 'oj-fwk-icon oj-fwk-icon-cross'}}"></button>
+    </div>
+  </header>
+  <!-- /ko -->
+</div>
+
+<div class="oj-applayout-content">
+  <div role="main" class="oj-hybrid-applayout-content">
+
+    <!-- ko if: !isSearchMode() -->
+    <button id="addCustomer" class="demo-fab" data-bind="ojComponent: {component:'ojButton',
+              label: 'Add Customer', display: 'icons',  chroming: 'half',
+              icons: {start: 'oj-fwk-icon demo-add-icon'}},
+              click: goToAddCustomer">
+    </button>
+    <!-- /ko -->
+
+    <div id="customerlistviewcontainer" class="oj-flex oj-sm-flex-wrap-nowrap">
+      <ul id="customerlistview" aria-label="customers list"
+         data-bind="ojComponent: {component: 'ojListView', scrollPolicyOptions: { scroller: scrollElem }, data: customers, item: {template: selectTemplate, focusable: itemOnly}, drillMode: 'none', selectionMode: 'single', optionChange: optionChange, rootAttributes: {id: 'customerListViewWrapper', class: 'oj-flex-item'}, translations: {msgNoData: ''}}">
+      </ul>
+
+      <ul id="indexer" style="position: fixed;height:100%;" aria-label="customers list indexer" aria-controls="customerlistview"
+         data-bind="visible: !isSearchMode(), ojComponent: {component: 'ojIndexer', data: getIndexerModel(), rootAttributes: {class: 'demo-contacts-container-portrait oj-sm-flex-initial oj-flex-item'}, rootAttributes: { class: 'oj-flex-item demo-flex-zero', style:'position: relative; height: 100vh;', id:'indexerContainer' } }">
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/html" id="group_template">
+  <li data-bind="attr: {id: id}">
+    <strong data-bind="text: id"></strong>
+  </li>
+</script>
+
+<script type="text/html" id="item_template">
+  <li data-bind="attr: {id: id}">
+    <div class="oj-flex-bar">
+      <div class="oj-flex-bar-start demo-flex-zero">
+        <div class="demo-customer-avatar-wrapper oj-flex oj-sm-align-items-center" data-bind="attr: {style: 'border: 1px solid ' + $root.appUtilities.formatAvatarColor('customer', id)}">
+          <div class="demo-customer-avatar" data-bind="text: $root.appUtilities.formatInitials(firstName, lastName), attr: {style: 'background: ' + $root.appUtilities.formatAvatarColor('customer', id)}"></div>
+        </div>
+      </div>
+      <div class="oj-flex-bar-middle oj-hybrid-padding-start oj-sm-align-items-center">
+        <div data-bind="text: firstName + ' ' + lastName" class="demo-customer-name"></div>
+      </div>
+      <div class="oj-flex-bar-end oj-sm-align-items-center">
+        <div role="presentation" aria-hidden="true" class="oj-fwk-icon oj-listview-drill-icon"></div>
+      </div>
+    </div>
+  </li>
+</script>

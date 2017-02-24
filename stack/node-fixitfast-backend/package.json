@@ -1,0 +1,14 @@
+{
+    "name": "FixItFast-backend",
+    "version": "1.0.0",
+    "scripts": {
+        "prepublish": "zip -r fixitfast-backend.zip node_modules app manifest.json *.js"
+    },
+    "dependencies": {
+        "debug": "<1.0.0",    
+        "express": "^4.13.4"
+    },
+    "engines": {
+        "node": ">=0.12.0"
+    }
+}

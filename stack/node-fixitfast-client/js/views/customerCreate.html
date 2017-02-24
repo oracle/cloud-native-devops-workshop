@@ -1,0 +1,81 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-applayout-fixed-top">
+  <header id="custAddHeader" role="banner" class="oj-flex-bar oj-hybrid-applayout-header oj-sm-align-items-center" data-bind="ojModule: custAddHeaderSettings()"></header>
+</div>
+
+<div class="oj-applayout-content">
+  <div role="main" class="oj-hybrid-applayout-content">
+
+    <input type="file" id="upload-new-customer-pic" class="demo-hide-photo-input" accept="image/*" aria-hidden="true">
+
+    <div class="demo-profile-top-section demo-profile-top-section-gradient-grey">
+      <div class="demo-profile-photo-container">
+        <img id="cust-add-photo" alt="customer photo" class="demo-profile-photo" data-bind="attr: {src: imgSrc}">
+      </div>
+
+      <a href="#" data-bind="click: changePhoto" class="oj-text-sm">Change</a>
+    </div>
+
+    <div class="oj-form-layout">
+      <div class="oj-form oj-hybrid-padding">
+            <div class="oj-form-control-group" role="group" data-bind="with: customer">
+
+              <div class="demo-profile-item-content">
+                <label id="addFirstNameLabel">First Name</label>
+                <input id="text-add-first" autocapitalize=words aria-labelledby="addFirstNameLabel" data-bind="ojComponent: {component: 'ojInputText', value: firstName, readOnly: false}"/>
+              </div>
+
+              <div class="demo-profile-item-content">
+                <label id="addLastNameLabel">Last Name</label>
+                <input id="text-add-last" autocapitalize=words aria-labelledby="addLastNameLabel" data-bind="ojComponent: {component: 'ojInputText', value: lastName, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addMobileLabel">Mobile</label>
+                <input id="text-add-mobile" aria-labelledby="addMobileLabel" data-bind="ojComponent: {component: 'ojInputText', value: mobile, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addHomeLabel">Home</label>
+                <input id="text-add-home" aria-labelledby="addHomeLabel" data-bind="ojComponent: {component: 'ojInputText', value: home, readOnly: false}"/>
+              </div>
+
+              <div class="demo-profile-item-content">
+                <label id="addEmailLabel">Email</label>
+                <input id="text-input-email" aria-labelledby="addEmailLabel" data-bind="ojComponent: {component: 'ojInputText', value:email, readOnly: false}"/>
+              </div>
+
+              <div class="demo-profile-item-content">
+                <label id="addStreet1Label">Street Line 1</label>
+                <input id="text-input-street" aria-labelledby="addStreet1Label" data-bind="ojComponent: {component: 'ojInputText', value: address.street1, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addStreet2Label">Street Line 2</label>
+                <input id="text-input-street" aria-labelledby="addStreet2Label" data-bind="ojComponent: {component: 'ojInputText', value: address.street2, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addCityLabel">City</label>
+                <input id="text-input-city" aria-labelledby="addCityLabel" data-bind="ojComponent: {component: 'ojInputText', value: address.city, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addStateLabel">State</label>
+                <input id="text-input-state" aria-labelledby="addStateLabel" data-bind="ojComponent: {component: 'ojInputText', value: address.state, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addZipLabel">Zip Code</label>
+                <input id="text-input-state" aria-labelledby="addZipLabel" data-bind="ojComponent: {component: 'ojInputText', value: address.zip, readOnly: false}"/>
+              </div>
+              <div class="demo-profile-item-content">
+                <label id="addCountryLabel">Country</label>
+                <input id="text-input-state" aria-labelledby="addCountryLabel" data-bind="ojComponent: {component: 'ojInputText', value: address.country, readOnly: false}"/>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

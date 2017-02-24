@@ -1,0 +1,71 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-applayout-content" style="height:100vh">
+  <div role="main" class="oj-hybrid-applayout-content" style="height:100%;overflow:auto;">
+
+    <div class="demo-dashboard-container oj-flex oj-sm-flex-direction-column oj-sm-flex-wrap-nowrap">
+      <h3 class="demo-flex-zero demo-dashboard-title">Incidents Needing Attention</h3>
+
+    	<div class="oj-sm-flex-1 demo-pie-chart-container">
+    		<div id="pieChart" class="demo-pie-chart" data-bind="ojComponent: {
+    	        component: demoChartComponent,
+    	        type: 'pie',
+    	        series: pieSeriesValue,
+    	        groups: pieGroupsValue,
+              legend: { rendered: 'off' },
+    	        styleDefaults: {pieInnerRadius: ko.toJS(innerRadius), dataLabelPosition: 'none'},
+    	        animationOnDataChange: 'auto',
+    	        pieCenterLabel: labelValue,
+              valueFormats: [{type: 'value', converter: integerConverter}]
+    	        }">
+        </div>
+    	</div>
+
+      <div class="demo-flex-zero">
+        <h5 class="oj-text-sm" style="margin-top:0;">Total Incidents</h5>
+
+        <div class="oj-flex oj-hybrid-padding-bottom">
+          <div class="oj-flex-item">
+            <div data-bind="text: numPriorityHigh" class="demo-highcolor">0</div>
+            <div class="demo-counter-label">HIGH</div>
+          </div>
+          <div class="oj-flex-item">
+            <div data-bind="text: numPriorityNormal" class="demo-normalcolor">0</div>
+            <div class="demo-counter-label">NORMAL</div>
+          </div>
+          <div class="oj-flex-item">
+            <div data-bind="text: numPriorityLow" class="demo-lowcolor">0</div>
+            <div class="demo-counter-label">LOW</div>
+          </div>
+        </div>
+      </div>
+
+    	<div id='chart-container' class="demo-flex-zero demo-bar-chart-container">
+    		<div id="barChart" class="demo-bar-chart" data-bind="ojComponent: {
+    				component: demoChartComponent,
+    				type: 'bar',
+    				orientation: 'vertical',
+    				stack: 'on',
+    				series: barSeriesValue,
+    				groups: barGroupsValue,
+    				animationOnDataChange: 'auto',
+    				animationOnDisplay: 'auto',
+    				legend: {rendered: 'on', position: 'bottom', textStyle: 'color:#C4C2C2' },
+    				title: {text: 'INCIDENTS RESOLVED BY MONTH', halign: 'center', style: 'font-size:1rem; color:#C4C2C2'},
+    				yAxis: {majorTick: {lineColor: '#505252'}, tickLabel: { style: 'color: #C4C2C2' }},
+            xAxis: {tickLabel: { style: 'color: #C4C2C2' }},
+    				styleDefaults: {barGapRatio: 0.25, seriesTooltipType: 'auto'},
+    				valueFormats: [{type: 'value', converter: integerConverter}]
+    			}">
+    		</div>
+    	</div>
+    </div>
+
+  </div>
+</div>

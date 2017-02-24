@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-applayout-fixed-top">
+  <header id="incidentHeader" role="banner" class="oj-flex-bar oj-hybrid-applayout-header oj-sm-align-items-center" data-bind="ojModule: createIncidentHeaderSettings()">
+  </header>
+  <div class="demo-train-container demo-flex-zero oj-hybrid-padding-vertical">
+    <div id="train" class="oj-train-stretch" data-bind="visible: router.currentValue().showTrain, ojComponent:{
+        component: 'ojTrain',
+        selected: router.stateId,
+        steps: stepArray}"></div>
+  </div>
+</div>
+
+<div class="oj-applayout-content">
+  <div role="main" class="oj-hybrid-applayout-content">
+    <div class="demo-create-incident-page" data-bind="ojModule: router.moduleConfig"></div>
+  </div>
+</div>

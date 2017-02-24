@@ -1,0 +1,31 @@
+{
+  "id": "inc-108",
+  "problem": "Pipe burst in cafeteria",
+  "description": "The cafeteria is flooded, and unusable. Situation needs to be fixed soon",
+  "category": "plumbing",
+  "picture": "/builtin/images/broken-water-heater.png",
+  "status": "accepted",
+  "priority": "high",
+  "createdOn": "2015-07-12",
+  "lastUpdatedOn": "2015-07-23",
+  "customerId": "cus-112",
+  "_technicianUsername": "hcr",
+  "locationId": "loc-12",
+  "customer": {
+    "id": "cus-112",
+    "username": "jstevens",
+    "firstName": "Jennifer",
+    "lastName": "Stevens",
+    "locationId": "loc-12",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "jstevens@somewhere.com",
+    "role": "Customer"
+  },
+  "location": {
+    "formattedAddress": "5655 College Ave,\nOakland, CA 94618 USA",
+    "latitude": "37.843693",
+    "longitude": "-122.251890",
+    "id": "loc-12"
+  }
+}

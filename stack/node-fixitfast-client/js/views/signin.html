@@ -1,0 +1,48 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="demo-signin-bg oj-flex oj-sm-justify-content-flex-end">
+  <div class="oj-flex-item oj-sm-9 demo-signin-column oj-flex oj-sm-flex-direction-column oj-sm-flex-wrap-nowrap">
+
+      <div class="oj-flex-item oj-sm-align-self-flex-end oj-flex oj-sm-align-items-flex-end">
+        <div class="demo-circle-logo-container">
+          <div class="demo-circle-logo"></div>
+        </div>
+      </div>
+
+      <div class="oj-flex-item">
+        <div class="oj-hybrid-padding-start">
+          <h1 class="demo-signin-appname">Oracle<div style="font-weight: 400;">FixItFast</div></h1>
+        </div>
+
+        <div class="demo-signin-form-container oj-hybrid-padding">
+          <form class="demo-signin-form oj-hybrid-padding-vertical" method="post" name="signInForm">
+            <input id="MobilePTUsername" placeholder="User Name" autocapitalize=off aria-label="User Name" data-bind="ojComponent: {component: 'ojInputText', value: userName, required: true }">
+
+            <input type="password" id="MobilePTPassword" placeholder="Password" aria-label="password" data-bind="ojComponent: {component: 'ojInputPassword', value: passWord, required: true }"/>
+
+            <div class="oj-hybrid-padding-top">
+              <button id="signInBtn" class="demo-signin-button oj-hybrid-padding-horizontal" data-bind="click: signIn, ojComponent: {component:'ojButton', label: 'Sign In', chroming: 'full'}"></button>
+              <a href="javascript:;" class="forgotLinkM">Can't sign in?</a>
+            </div>
+
+            <div id="rememberUserNameCheckBox" aria-label="Remeber User Name" data-bind="ojComponent: { component: 'ojCheckboxset', value: rememberUserName }" class='oj-checkboxset-no-chrome oj-checkboxset-input-start'>
+              <span class="oj-choice-row">
+                <input id="rememberUserName" type="checkbox" value="remember">
+                <label for="rememberUserName">Remember User Name</label>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <div  class="oj-flex-item oj-sm-align-self-flex-end demo-flex-zero" style="padding: 20px;">
+      <img src="css/images/OracleLogoBLK.png" width="87" height="11" alt="Oracle Logo">
+    </div>
+  </div>
+</div>

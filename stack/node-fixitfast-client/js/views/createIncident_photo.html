@@ -1,0 +1,19 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<p class="oj-hybrid-padding">The following is an optional step. You may attach a photo to this incident</p>
+
+<div style="text-align: center;">
+	<button id="takePhotoBtn" data-bind="click: attachPhoto, ojComponent: { component: 'ojButton', label: 'Attach a Photo' }"></button>
+	<div style="position: relative;">
+		<input type="file" aria-hidden="true" class="demo-hide-photo-input" id="upload-incident-pic" accept="image/*">
+	</div>
+</div>
+<div data-bind="with: $parent.newIncidentModel().picture()" style="position: relative;">
+	<img id="incident-photo" alt="incident photo" data-bind="attr:{src: $data, width:'100%'}">
+</div>

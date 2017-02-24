@@ -1,0 +1,29 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<ul id="aboutListView" aria-label="about content list"
+  data-bind="ojComponent: {component: 'ojListView',
+              data: aboutOptions,
+              item: {template: 'about_item_template'},
+              selectionMode: 'single',
+              rootAttributes: {style: 'border:none;overflow: auto;'},
+              optionChange: $parent.optionChange }" style="border:none">
+</ul>
+
+<script type="text/html" id="about_item_template">
+  <li>
+    <div class="oj-flex-bar demo-about-item-container">
+      <div class="oj-flex-bar-start">
+        <span class="demo-about-item" data-bind="text: label"></span>
+      </div>
+      <div class="oj-flex-bar-end oj-sm-align-items-center">
+        <div role="presentation" aria-hidden="true" class="oj-fwk-icon oj-listview-drill-icon"></div>
+      </div>
+    </div>
+  </li>
+</script>

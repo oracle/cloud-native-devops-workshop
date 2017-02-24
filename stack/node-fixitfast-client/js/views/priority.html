@@ -1,0 +1,32 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div data-bind="with: $parents[1].incidentData" aria-label="priority">
+  <div id="priorityRadioSet" class="oj-radioset-no-chrome"
+       data-bind="ojComponent: {
+        component: 'ojRadioset',
+        value: priority,
+        optionChange: $parents[2].priorityChange,
+        disabled: $root.isReadOnlyMode }" >
+    <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+      <img src="css/images/spacer.gif" class="demo-icon-32 demo-priority-high-icon">
+      <input id="high" type="radio" name="priority" value="high">
+      <label for="high">High</label>
+    </span>
+    <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+      <img src="css/images/spacer.gif" class="demo-icon-32 demo-priority-normal-icon">
+      <input id="normal" type="radio" name="priority" value="normal">
+      <label for="normal">Normal</label>
+    </span>
+    <span class="oj-choice-row oj-hybrid-padding-horizontal demo-incident-radioset-item">
+      <img src="css/images/spacer.gif" class="demo-icon-32 demo-priority-low-icon">
+      <input id="low" type="radio" name="priority" value="low">
+      <label for="low">Low</label>
+    </span>
+  </div>
+</div>

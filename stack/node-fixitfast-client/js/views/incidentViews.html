@@ -1,0 +1,35 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+
+<div class="oj-applayout-fixed-top">
+  <header id="incidentHeader" role="banner" class="oj-hybrid-applayout-header-no-border" data-bind="ojModule: incidentHeaderSettings">
+  </header>
+
+<!-- ko if: router.stateId() !== 'priority' && router.stateId() !== 'status' -->
+  <div role="navigation" class="oj-hybrid-applayout-navbar-page">
+    <div id="incidentTabsNav" class="demo-nav-tabs" data-bind="ojComponent:{component: 'ojNavigationList', navigationLevel: 'page', selection: router.stateId, edge: 'top', drillMode: 'none', optionChange: navBarChange}">
+      <ul>
+        <li id="incidentTabSummary">
+          <a href="#">Summary</a>
+        </li>
+        <li id="incidentTabActivity">
+          <a href="#">Activity</a>
+        </li>
+        <li id="incidentTabMap">
+          <a href="#">Map</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- /ko -->
+</div>
+
+<div id="incident" class="oj-applayout-content" style="height:100vh">
+  <div id="incidentMainPage" role="main" class="oj-hybrid-applayout-content" data-bind="ojModule: moduleConfig" style="height:100%;"></div>
+</div>

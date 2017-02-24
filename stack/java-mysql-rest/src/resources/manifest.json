@@ -1,0 +1,8 @@
+{
+  "runtime": {
+    "majorVersion": "8"
+  },
+  "command": "java -Dserver.port=$PORT -jar springboot-rest-service-1.0.0.war",
+  "notes": "FixItFast Java backend application for MySQL datasource",
+  "startupTime": "300"
+}

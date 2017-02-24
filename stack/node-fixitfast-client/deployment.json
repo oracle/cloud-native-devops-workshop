@@ -1,0 +1,9 @@
+{
+  "memory": "1G",
+  "instances": 1,
+  "services": [],
+  "environment": {
+    "REST_FIXIT": "$NODE_BACKEND_URL",
+    "REST_CUSTOMERS": "$JAVA_BACKEND_URL"
+  }
+}

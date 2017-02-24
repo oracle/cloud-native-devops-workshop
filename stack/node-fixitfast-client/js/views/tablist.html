@@ -1,0 +1,144 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+
+<div class="oj-applayout-content">
+  <div role="main" class="oj-hybrid-applayout-content">
+
+    <button id="addIncident" class="demo-fab" data-bind="ojComponent: {component:'ojButton',
+              label: 'Add Incident', display: 'icons', chroming: 'half',
+              icons: {start: 'oj-fwk-icon demo-add-icon'}},
+              click: goToAddIncident">
+    </button>
+
+    <ul id="incidentsListView" aria-label="incidents list" data-bind="ojComponent: {component: 'ojListView', scrollPolicyOptions: { scroller: scrollElem }, data: incidentsTableData, selectionMode: 'single', item: {template: 'template'}, optionChange: selectHandler, ready: handleReady, destroy: handleDestroy, rootAttributes: {style: 'width:100%;overflow-x:hidden;', id: 'incidentsListViewContainer'}}"></ul>
+
+    <div id="popupWrapper">
+      <div id="filterpopup" class="demo-filter-popup demo-popup" data-bind="ojComponent:{component: 'ojPopup', tail: 'none', chrome: 'none'}">
+        <div class="oj-flex-bar">
+          <div class="oj-flex-bar-end oj-hybrid-padding-end oj-hybrid-padding-top">
+            <a href="#" data-bind="click: $parent.closePopup">Done</a>
+          </div>
+        </div>
+        <div>
+        <form id="formId" class="oj-form demo-filter-form">
+          <label id="priorityLabel" class="demo-filter-form-category-label oj-hybrid-padding-start">PRIORITY</label>
+          <div aria-labelledby="priorityLabel" class="oj-checkboxset-no-chrome" data-bind="ojComponent: {component: 'ojCheckboxset', value: priorityFilterArr}" >
+            <span class="oj-choice-row oj-hybrid-padding-start">
+              <img src="css/images/spacer.gif" class="demo-icon-32 demo-priority-high-icon">
+              <input id="highopt" type="checkbox" value="high">
+              <label for="highopt">High</label>
+            </span>
+            <span class="oj-choice-row oj-hybrid-padding-start">
+              <img src="css/images/spacer.gif" class="demo-icon-32 demo-priority-normal-icon">
+              <input id="normalopt" type="checkbox" value="normal">
+              <label for="normalopt">Normal</label>
+            </span>
+            <span class="oj-choice-row oj-hybrid-padding-start">
+              <img src="css/images/spacer.gif" class="demo-icon-32 demo-priority-low-icon">
+              <input id="lowopt" type="checkbox" value="low">
+              <label for="lowopt">Low</label>
+            </span>
+          </div>
+          <label id="statusLabel" class="demo-filter-form-category-label oj-hybrid-padding-start">STATUS</label>
+          <div aria-labelledby="statusLabel" class="oj-checkboxset-no-chrome" data-bind="ojComponent: {component: 'ojCheckboxset',
+              value: statusFilterArr}" >
+            <span class="oj-choice-row oj-hybrid-padding-start">
+              <img src="css/images/spacer.gif" class="demo-icon-32 demo-status-open-icon">
+              <input id="openopt" type="checkbox" value="open">
+              <label for="openopt">Open</label>
+            </span>
+            <span class="oj-choice-row oj-hybrid-padding-start">
+              <img src="css/images/spacer.gif" class="demo-icon-32 demo-status-accepted-icon">
+              <input id="acceptedopt" type="checkbox" value="accepted">
+              <label for="acceptedopt">Accepted</label>
+            </span>
+            <span class="oj-choice-row oj-hybrid-padding-start">
+              <img src="css/images/spacer.gif" class="demo-icon-32 demo-status-closed-icon">
+              <input id="closeopt" type="checkbox" value="closed">
+              <label for="closeopt">Closed</label>
+            </span>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/html" id="template">
+  <li data-bind="attr: {id: $root.id}" style="padding:0;" class="demo-item-marker">
+    <div class="oj-offcanvas-outer-wrapper demo-overflow-control">
+      <div class="oj-offcanvas-inner-wrapper">
+        <div class="oj-flex-bar oj-sm-flex-wrap-nowrap oj-hybrid-padding">
+          <div class="oj-flex-bar-start demo-incidents-list-item-start oj-sm-justify-content-center oj-sm-align-items-center demo-flex-zero oj-sm-flex-direction-column">
+            <img src="css/images/spacer.gif" data-bind="attr: {class: 'demo-category-' + category + '-' + priority + ' demo-incident-icon svg demo-priority-' + priority, title: priority + ' priority ' + category + ' incident', alt: priority + ' priority ' + category + ' incident'}"/>
+            <div data-bind="text: priority" class="demo-incidents-list-item-priority"></div>
+          </div>
+          <div class="oj-flex-bar-middle oj-flex oj-sm-flex-direction-column oj-sm-flex-wrap-nowrap oj-sm-justify-content-center">
+            <div class="oj-flex-bar">
+              <div class="oj-flex-bar-start demo-incidents-list-item-problem demo-dont-break-out" data-bind="text: problem"></div>
+              <div class="oj-flex-bar-end demo-incidents-list-item-status demo-flex-zero" data-bind="text: statusObservable().toUpperCase()"></div>
+            </div>
+            <div class="oj-flex-bar">
+              <div class="oj-flex-bar-start demo-incidents-list-item-customer" data-bind="text: customer.firstName + ' ' + customer.lastName"></div>
+              <div class="oj-flex-bar-end demo-incidents-list-item-customer demo-flex-zero" data-bind="text: $root.appUtilities.formatTimeStamp(createdOn).date"></div>
+            </div>
+          </div>
+        </div>
+        <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+id, style: 'width:' + '150px'}" class="oj-offcanvas-end">
+          <!-- ko if: statusObservable() === 'accepted' -->
+          <div data-bind="click: $parent._handleReturn" class="oj-swipetoreveal-flag">
+            <div class="oj-flex-bar" style="height:100%">
+              <div class="oj-flex-bar-center-absolute">
+                <div class="oj-flex oj-sm-flex-direction-column">
+                  <div class="oj-flex-item">RETURN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /ko -->
+          <!-- ko if: statusObservable() === 'fixed' -->
+          <div data-bind="click: $parent._handleOpen" class="oj-swipetoreveal-more">
+            <div class="oj-flex-bar" style="height:100%">
+              <div class="oj-flex-bar-center-absolute">
+                <div class="oj-flex oj-sm-flex-direction-column">
+                  <div class="oj-flex-item">OPEN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /ko -->
+          <!-- ko if: statusObservable() === 'accepted' -->
+          <div data-bind="click: $parent._handleTrash" class="oj-swipetoreveal-alert oj-swipetoreveal-default">
+            <div class="oj-flex-bar" style="height:100%">
+              <div class="oj-flex-bar-center-absolute">
+                <div class="oj-flex oj-sm-flex-direction-column">
+                  <div class="oj-flex-item">CLOSE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /ko -->
+          <!-- ko if: statusObservable() === 'open' -->
+          <div data-bind="click: $parent._handleAccept" class="oj-swipetoreveal-action oj-swipetoreveal-default">
+            <div class="oj-flex-bar" style="height:100%">
+              <div class="oj-flex-bar-center-absolute">
+                <div class="oj-flex oj-sm-flex-direction-column">
+                  <div class="oj-flex-item">ACCEPT</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /ko -->
+        </div>
+      </div>
+    </div>
+  </li>
+</script>

@@ -1,0 +1,31 @@
+{
+  "id": "inc-114",
+  "problem": "Carpet is shedding",
+  "description": "Newly installed carpet sheds like crazy and is a trip hazard",
+  "picture": "/builtin/images/broken-water-heater.png",
+  "category": "general",
+  "status": "accepted",
+  "priority": "low",
+  "createdOn": "2015-08-01",
+  "lastUpdatedOn": "2015-08-21",
+  "customerId": "cus-113",
+  "_technicianUsername": "hcr",
+  "locationId": "loc-13",
+  "customer": {
+    "id": "cus-113",
+    "username": "skapoor",
+    "firstName": "Srini",
+    "lastName": "Kapoor",
+    "locationId": "loc-13",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "skapoor@somewhere.com",
+    "role": "Customer"
+  },
+  "location": {
+    "formattedAddress": "4226 Piedmont Ave,\nOakland, CA 94611 USA",
+    "latitude": "37.827911",
+    "longitude": "-122.249982",
+    "id": "loc-13"
+  }
+}

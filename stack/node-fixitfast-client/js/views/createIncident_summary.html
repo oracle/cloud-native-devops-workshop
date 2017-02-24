@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-form-layout" data-bind="with: $parent.newIncidentModel">
+	<div class="oj-form oj-hybrid-padding">
+    <label id="summaryProblemLabel">Problem</label>
+    <input aria-labelledby="summaryProblemLabel" type="text" placeholder="Please enter the problem." data-bind="ojComponent: {component: 'ojInputText', value: problem, readOnly: true }"/>
+    <label id="summaryCategoryLabel">Category</label>
+    <input aria-labelledby="summaryCategoryLabel" type="text" data-bind="ojComponent: {component: 'ojInputText', value: $parent.categoryLabel(category()), readOnly: true}"/>
+    <label id="summaryPriorityLabel">Priority</label>
+    <input aria-labelledby="summaryPriorityLabel" type="text" data-bind="ojComponent: {component: 'ojInputText', value: $parent.priorityLabel(priority()), readOnly: true}"/>
+    <label id="summaryCustomerLabel">Customer</label>
+    <input aria-labelledby="summaryCustomerLabel" type="text" placeholder="Please select a customer." data-bind="ojComponent: {component: 'ojInputText', value: customerName, readOnly: true}"/>
+    <!-- ko if: picture() -->
+    <label id="summaryPhotoLabel">Photo</label>
+    <img aria-labelledby="summaryPhotoLabel" data-bind="attr: {src: picture()}" style="width: 100%;" alt="incident photo">
+    <!-- /ko -->
+	</div>
+</div>

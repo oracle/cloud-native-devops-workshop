@@ -1,0 +1,10 @@
+{
+    "name": "FixItFast-client",
+    "version": "1.0.0",
+    "scripts": {
+        "prepublish": "zip -r fixitfast-client.zip scss css img js localData manifest.json *.js *.html"
+    },
+    "engines": {
+        "node": ">=0.12.0"
+    }
+}

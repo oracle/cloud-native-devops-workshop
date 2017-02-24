@@ -1,0 +1,24 @@
+{
+  "id": "7eabf05b-47f6-43b0-a6fa-27b20a0aed36",
+  "username": "hcr",
+  "firstName": "Harry",
+  "lastName": "Carson",
+  "role": "Field Service",
+  "mobile": "6505067000",
+  "home": "5105552121",
+  "locationId": "loc-0",
+  "email": "harry.carson@fixitfast.com",
+  "photo": "js/data/local/images/user.png",
+  "location": {
+    "id": "loc-0",
+    "formattedAddress": "200 Oracle Parkway,\nRedwood Shores, CA 94065 USA",
+    "street1": "200 Oracle Parkway",
+    "street2": "",
+    "city": "Redwood Shores",
+    "state": "CA",
+    "zip": "94065",
+    "country": "USA",
+    "latitude": "37.530737",
+    "longitude": "-122.265557"
+  }
+}

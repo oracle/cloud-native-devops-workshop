@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+
+<html id="htmldoc" lang="en-us">
+  <head>
+    <title>FixItFast</title>
+    <link rel="icon" sizes="212x212" href="img/FIF_launcher2_icon.png">
+
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, user-scalable=no"/>
+
+    <!-- for Safari on iOS -->
+    <meta name="apple-mobile-web-app-title" content="FixItFast">
+    <link rel="apple-touch-icon" sizes="212x212" href="img/FIF_launcher2_icon_rect.png">
+    <link rel="apple-touch-startup-image" href="img/screen.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- for Chrome on Android -->
+    <link rel="manifest" href="manifest.json">
+
+<!-- injector:theme -->
+<link rel="stylesheet" href="css/alta/oj-alta.css" id="css" />
+<!-- endinjector -->
+
+    <script data-main="js/main" src="js/libs/requirejs/require.js"></script>
+
+  </head>
+  <body>
+    <div id="page" class="oj-offcanvas-outer-wrapper oj-offcanvas-page">
+      <!-- nav drawer -->
+      <div id="navDrawer" role="navigation" class="demo-navdrawer oj-hybrid-applayout-offcanvas oj-offcanvas-start oj-contrast-marker">
+        <!-- User Profile -->
+        <div class="demo-navdrawer-content-wrapper oj-flex oj-sm-flex-direction-column oj-sm-flex-wrap-nowrap">
+          <div class="demo-navdrawer-content">
+            <div class="demo-navdrawer-profile-section" data-bind="with: userProfileModel">
+              <!-- <div class="profile-photo-container"> -->
+                <div class="demo-profile-photo-container">
+                  <img id="profile-photo" class="demo-profile-photo" alt="user profile photo" src='css/images/Add_avatar@2x.png' data-bind="attr: {src: photo}">
+                </div>
+              <!-- </div> -->
+
+              <h2 class="demo-profile-name" data-bind="text: firstName() + ' ' + lastName()"></h2>
+            </div>
+
+            <!-- Navigation -->
+            <div id="appNavList" data-bind="ojComponent:{component: 'ojNavigationList',
+              optionChange: drawerChange, navigationLevel: 'application',
+              selection: router.stateId}" class="semilight oj-navigationlist-stack-icon-label">
+              <ul>
+
+              <li id="incidents">
+                <a href="#">
+                <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24"></span>
+                Incidents
+                </a>
+              </li>
+              <li id="customers">
+                <a href="#">
+                <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24"></span>
+                Customers
+                </a>
+              </li>
+              <li id="profile">
+                <a href="#">
+                <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-person-icon-24"></span>
+                Profile
+                </a>
+              </li>
+              <li id="settings">
+                <a href="#">
+                <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-gear-icon-24"></span>
+                Settings
+                </a>
+              </li>
+              <li id="about" style="margin-bottom: 12px;overflow: visible">
+                <a href="#">
+                <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24"></span>
+                About
+                </a>
+              </li>
+
+              <li id="signin" style="margin-top: 25px">
+                <a href="#">
+                <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-signout-icon-24"></span>
+                Sign Out
+                </a>
+              </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <footer class="oj-margin demo-flex-zero">
+            <div class="demo-ifixitfast-icon"></div>
+          </footer>
+        </div>
+
+      </div>
+
+      <!-- page -->
+      <div class="oj-hybrid-applayout-page" id="pageContent" data-bind="ojModule: moduleConfig">
+      </div>
+
+      <!-- bottom drawer: camera action sheet for hybrid app -->
+      <div id="bottomDrawer" class="demo-bottom-offcanvas oj-offcanvas-bottom">
+        <ul class="demo-camera-capture-list" data-bind="ojComponent: {component: 'ojListView', selectionMode: 'none' }">
+          <li id="takePhoto" data-bind="click:function() { return updateProfilePhoto(1); }">
+            <a href="#">Take a photo</a>
+          </li>
+          <li id="choosePhoto" data-bind="click:function() { return updateProfilePhoto(0); }">
+            <a href="#">Choose a Photo</a>
+          </li>
+          <li id="cancel" data-bind="click: closeBottomDrawer">
+            <a href="#">Cancel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Google Maps API script -->
+    <!-- <script defer async type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script> -->
+
+  </body>
+</html>

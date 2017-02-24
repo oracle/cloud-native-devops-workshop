@@ -1,0 +1,28 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-flex-bar-start">
+  <!-- ko if: startBtn.visible -->
+  <button data-bind="click: startBtn.click,
+        ojComponent: {component:'ojButton', chroming: 'half',
+        display: startBtn.display, label: startBtn.label,
+        icons: startBtn.icons }">
+  </button>
+  <!-- /ko -->
+</div>
+<div class="oj-hybrid-applayout-bar-title">
+  <h1 class="oj-hybrid-applayout-header-title" data-bind="text: title"></h1>
+</div>
+<div class="oj-flex-bar-end">
+  <!-- ko if: endBtn.visible -->
+  <button data-bind="attr: {id: endBtn.id}, ojComponent: {component:'ojButton',
+    label: endBtn.label, display: endBtn.display,  chroming: 'half',
+    icons: endBtn.icons, disabled: endBtn.disabled }, click: endBtn.click">
+  </button>
+  <!-- /ko -->
+</div>

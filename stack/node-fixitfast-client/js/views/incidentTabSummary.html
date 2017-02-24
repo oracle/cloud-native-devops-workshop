@@ -1,0 +1,85 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div data-bind="with: $parents[1].incidentData">
+  <ul id="incidentSummaryList" class="" aria-label="incident summary"
+    data-bind="ojComponent: {component: 'ojListView', selectionMode: 'single', optionChange: $parent.optionChange }">
+
+    <li id="problem">
+      <div class="oj-flex-bar">
+        <div class="oj-flex-bar-start demo-summary-field-name-wrapper">
+          <span class="demo-incident-summary-field-name oj-text-sm">Problem</span>
+        </div>
+        <div class="oj-flex-bar-middle">
+          <span class="demo-incident-summary-content demo-dont-break-out" data-bind="text: problem"></span>
+        </div>
+      </div>
+    </li>
+
+    <li id="priority" data-bind="click: $parents[1].goToPriority">
+      <div class="oj-flex-bar">
+        <div class="oj-flex-bar-start demo-summary-field-name-wrapper">
+          <span class="demo-incident-summary-field-name oj-text-sm">Priority</span>
+        </div>
+        <div class="oj-flex-bar-middle oj-sm-align-items-center">
+          <img src="css/images/spacer.gif" data-bind="attr: {class:'demo-icon-32 demo-priority-' + priority + '-icon'}">
+          <span class="demo-incident-summary-content oj-hybrid-padding-start" data-bind="text: priority.toUpperCase()"></span>
+        </div>
+        <div class="oj-flex-bar-end oj-sm-align-items-center">
+          <div role="presentation" aria-hidden="true" style="position: relative; margin: 0;" class="oj-fwk-icon oj-listview-drill-icon"></div>
+        </div>
+      </div>
+    </li>
+
+    <li id="status" data-bind="click: $parents[1].goToStatus">
+      <div class="oj-flex-bar">
+        <div class="oj-flex-bar-start demo-summary-field-name-wrapper">
+          <span class="demo-incident-summary-field-name oj-text-sm">Status</span>
+        </div>
+        <div class="oj-flex-bar-middle oj-sm-align-items-center">
+          <img src="css/images/spacer.gif" data-bind="attr: {class:'demo-icon-32 demo-status-' + status + '-icon'}">
+          <span class="demo-incident-summary-content oj-hybrid-padding-start" data-bind="text: status.toUpperCase()"></span>
+        </div>
+        <div class="oj-flex-bar-end oj-sm-align-items-center">
+          <div role="presentation" aria-hidden="true" style="position: relative; margin: 0;" class="oj-fwk-icon oj-listview-drill-icon"></div>
+        </div>
+      </div>
+    </li>
+    <li id="customer" data-bind="click: function() { return $root.goToCustomer(customerId) }">
+      <div class="oj-flex-bar">
+        <div class="oj-flex-bar-start demo-summary-field-name-wrapper">
+          <span class="demo-incident-summary-field-name oj-text-sm">Customer</span>
+        </div>
+        <div class="oj-flex-bar-middle">
+          <a href="#" class="demo-incident-summary-content" data-bind="text: customer.firstName + ' ' + customer.lastName"></a>
+        </div>
+      </div>
+    </li>
+    <li id="phone">
+      <div class="oj-flex-bar">
+        <div class="oj-flex-bar-start demo-summary-field-name-wrapper">
+          <span class="demo-incident-summary-field-name oj-text-sm">Mobile</span>
+        </div>
+        <div class="oj-flex-bar-middle">
+          <a href="#" class="demo-incident-summary-content" data-bind="attr: {href: 'tel:' }, text: customer.mobile"></a>
+        </div>
+      </div>
+    </li>
+    <li id="address">
+      <div class="oj-flex-bar">
+        <div class="oj-flex-bar-start demo-summary-field-name-wrapper">
+          <span class="demo-incident-summary-field-name oj-text-sm">Address</span>
+        </div>
+        <div class="oj-flex-bar-middle">
+          <a href="#" class="demo-incident-summary-content" data-bind="attr: {href: 'geo:0,0?q=' + location.formattedAddress }, text: location.formattedAddress"></a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>

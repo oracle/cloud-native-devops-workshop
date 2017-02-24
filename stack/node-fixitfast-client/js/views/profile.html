@@ -1,0 +1,147 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-applayout-fixed-top">
+  <header role="banner" class="oj-hybrid-applayout-header" data-bind="ojModule: profileHeaderSettings()">
+  </header>
+</div>
+
+<div class="oj-applayout-content">
+  <div role="main" class="oj-hybrid-applayout-content">
+
+    <input type="file" id="upload-profile-pic" class="demo-hide-photo-input" aria-label="upload profile photo" accept="image/*" aria-hidden="true">
+
+    <div data-bind="with: $root.userProfileModel">
+      <div class="demo-profile-top-section demo-profile-top-section-gradient-blue">
+        <div class="demo-profile-photo-container">
+          <img id="profilePhoto" class="demo-profile-photo" alt="user profile photo" data-bind="attr: {src: photo}">
+        </div>
+
+        <!-- ko if: !$parent.editMode() -->
+        <h2 data-bind="text: firstName() + ' ' + lastName()" class="demo-profile-name"></h2>
+        <div data-bind="text: role" class="demo-profile-title oj-text-sm"></div>
+        <!-- /ko -->
+
+        <!-- ko if: $parent.editMode() -->
+
+        <a href="#" data-bind="click: $parent.changePhoto" class="demo-change-photo oj-text-sm">Change</a>
+        <!-- /ko -->
+      </div>
+
+      <div class="oj-form-layout">
+        <div class="oj-form oj-hybrid-padding">
+          <div class="oj-form-control-group" role="group">
+            <!-- ko if: $parent.editMode() -->
+            <div class="oj-flex-bar demo-profile-line-wrapper">
+
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="firstNameLabel">First Name</label>
+                <input aria-labelledby="firstNameLabel" data-bind="ojComponent: {component: 'ojInputText', value: firstName}">
+              </div>
+            </div>
+
+            <div class="oj-flex-bar demo-profile-line-wrapper">
+
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="lastNameLabel">Last Name</label>
+                <input aria-labelledby="lastNameLabel" data-bind="ojComponent: {component: 'ojInputText', value: lastName}">
+              </div>
+            </div>
+            <div class="oj-flex-bar demo-profile-line-wrapper">
+
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="titleLabel">Title</label>
+                <input aria-labelledby="titleLabel" data-bind="ojComponent: {component: 'ojInputText', value: role}">
+              </div>
+            </div>
+            <!-- /ko -->
+
+            <div class="oj-flex-bar demo-profile-line-wrapper">
+              <div class="oj-flex-bar-start oj-sm-align-items-center demo-flex-zero">
+                <div class="demo-profile-item-icon-wrapper demo-mobile-icon-wrapper" data-bind="visible: !$parent.editMode()">
+                  <span class="demo-profile-item-icon demo-mobile-icon"></span>
+                </div>
+              </div>
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="mobileLabel">Mobile</label>
+                <!-- ko if: $parent.editMode() -->
+                <input aria-labelledby="mobileLabel" data-bind="ojComponent: {component: 'ojInputText', value: mobile, readOnly: !$parent.editMode() }">
+                <!-- /ko -->
+                <!-- ko if: !$parent.editMode() -->
+                <div>
+                  <a id="mobileAnchor" href="#" data-bind="attr:{href: 'tel:' + mobile()}, text: mobile" aria-label="mobile phone number"></a>
+                </div>
+                <!-- /ko -->
+              </div>
+            </div>
+
+            <div class="oj-flex-bar demo-profile-line-wrapper">
+              <div class="oj-flex-bar-start oj-sm-align-items-center demo-flex-zero">
+                <div class="demo-profile-item-icon-wrapper demo-office-icon-wrapper" data-bind="visible: !$parent.editMode()">
+                  <span class="demo-profile-item-icon demo-office-icon"></span>
+                </div>
+              </div>
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="homeLabel">Home</label>
+
+                <!-- ko if: $parent.editMode() -->
+                <input aria-labelledby="homeLabel" data-bind="ojComponent: {component: 'ojInputText', value: home, readOnly: !$parent.editMode() }">
+                <!-- /ko -->
+                <!-- ko if: !$parent.editMode() -->
+                <div>
+                  <a id="officeAnchor" href="#" data-bind="attr:{href: 'tel:' + home()}, text: home" aria-label="home phone number"></a>
+                </div>
+                <!-- /ko -->
+              </div>
+            </div>
+
+            <div class="oj-flex-bar demo-profile-line-wrapper">
+              <div class="oj-flex-bar-start oj-sm-align-items-center demo-flex-zero">
+                <div class="demo-profile-item-icon-wrapper demo-email-icon-wrapper" data-bind="visible: !$parent.editMode()">
+                  <span class="demo-profile-item-icon demo-email-icon"></span>
+                </div>
+              </div>
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="emailLabel">Email</label>
+                <!-- ko if: $parent.editMode() -->
+                <input aria-labelledby="emailLabel" data-bind="ojComponent: {component: 'ojInputText', value: email, readOnly: !$parent.editMode() }">
+                <!-- /ko -->
+                <!-- ko if: !$parent.editMode() -->
+                <div>
+                  <a id="emailAnchor" href="#" data-bind="attr:{href: 'mailto:' + email()}, text: email" aria-label="email"></a>
+                </div>
+                <!-- /ko -->
+              </div>
+            </div>
+
+            <div class="oj-flex-bar demo-profile-line-wrapper" style="margin-bottom:0">
+              <div class="oj-flex-bar-start oj-sm-align-items-center demo-flex-zero">
+                <div class="demo-profile-item-icon-wrapper demo-address-icon-wrapper" data-bind="visible: !$parent.editMode()">
+                  <span class="demo-profile-item-icon demo-address-icon"></span>
+                </div>
+              </div>
+              <div class="demo-profile-item-content oj-flex-bar-middle">
+                <label id="locationLabel">Location</label>
+                <!-- ko if: $parent.editMode() -->
+                <input aria-labelledby="locationLabel" data-bind="ojComponent: {component: 'ojInputText', value: location.formattedAddress, readOnly: !$parent.editMode() }">
+                <!-- /ko -->
+
+                <!-- ko if: !$parent.editMode() -->
+                <div>
+                  <a id="locationAnchor" href="#" data-bind="attr: {href: 'geo:' + location.latitude() + ', ' + location.longitude()}, text: location.formattedAddress" aria-label="address"></a>
+                </div>
+                <!-- /ko -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

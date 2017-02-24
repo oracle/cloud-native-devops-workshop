@@ -1,0 +1,67 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div id="activityListViewWrapper" style="margin-bottom: 48px;">
+  <ul id="activityListView" class="demo-activity-listview" aria-label="incident activities list" data-bind="ojComponent: {component: 'ojListView', data: dataSource, item: {template: 'item_template'}, rootAttributes: {id: 'activityListViewContainer'}, selectionMode: 'single', scrollPolicyOptions: { scroller: scrollElem }, translations: {msgNoData: 'Loading Incidents...'}}"></ul>
+</div>
+
+<div class="oj-applayout-fixed-bottom">
+  <footer role="contentinfo" class="oj-hybrid-applayout-footer">
+    <div class="oj-hybrid-applayout-toolbar-stretch oj-toolbar-top-border oj-flex-bar" aria-controls="activityListView" data-bind="ojComponent: {component:'ojToolbar'}">
+      <div class="oj-flex-bar-start">
+        <button id="bottom" class="oj-button-half-chrome"
+            data-bind="click: function(){ return changePhoto($root); }, ojComponent: {
+            component:'ojButton',
+            display: 'icons',
+            chroming: 'half',
+            icons: {start:'oj-fwk-icon demo-icon-font-24 demo-camera-icon-24'},
+            label: 'Camera'}"></button>
+        <input type="file" id="upload-activity-pic" accept="image/*" style="display: none;height: 0;width: 0;">
+      </div>
+
+      <div class="oj-flex-bar-middle">
+        <input id="activityTextInput" aria-label="activity message" type="text" placeholder="Enter message to post" data-bind="ojComponent: {component: 'ojInputText', value: textValue, rootAttributes: {style:'margin-bottom:0'}}"/>
+      </div>
+
+      <div class="oj-flex-bar-end">
+        <button id="postBtn" class="oj-button-half-chrome"
+            data-bind="click: function() { return postActivity($data.textValue(), $data.imageSrc()) }, ojComponent: {
+            component:'ojButton',
+            chroming: 'half',
+            label: 'Post', disabled: $root.isReadOnlyMode }"></button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script type="text/html" id="item_template">
+  <li data-bind="attr: {id: $data.id}">
+    <div class="oj-flex-bar">
+      <div class="oj-flex-bar-start oj-sm-align-items-center demo-flex-zero">
+        <div class="demo-customer-avatar-wrapper oj-flex oj-sm-align-items-center" data-bind="attr: {style: 'border: 1px solid ' + $root.appUtilities.formatAvatarColor(role, userId)}">
+          <div class="demo-customer-avatar" data-bind="text: $root.appUtilities.formatInitials(firstName, lastName), attr: {style: 'background: ' + $root.appUtilities.formatAvatarColor(role, userId)}"></div>
+        </div>
+      </div>
+      <div class="oj-flex-bar-middle oj-hybrid-padding-start oj-flex oj-sm-flex-direction-column oj-sm-flex-wrap-nowrap">
+        <div class="oj-flex-bar">
+          <div class="oj-flex-bar-start demo-incidents-list-item-problem" data-bind="text: firstName + ' ' + lastName"></div>
+          <div class="oj-flex-bar-end demo-incidents-list-item-status demo-flex-zero" data-bind="text: $root.appUtilities.formatTimeStamp(createdOn).time" style="white-space: nowrap"></div>
+        </div>
+        <div class="oj-flex-bar">
+          <div class="oj-flex-bar-start demo-incidents-list-item-customer demo-dont-break-out" data-bind="text: comment"></div>
+          <div class="oj-flex-bar-end demo-incidents-list-item-customer demo-flex-zero" data-bind="text: $root.appUtilities.formatTimeStamp(createdOn).date" style="white-space: nowrap"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ko if: $data.picture -->
+    <div style="text-align:center;padding-left:57px;position: relative;">
+      <img data-bind="attr: { id: $data.id + '-pic', src: $data.picture, width:'100%' }" alt="activity photo">
+    </div>
+    <!-- /ko -->
+  </li>
+</script>
