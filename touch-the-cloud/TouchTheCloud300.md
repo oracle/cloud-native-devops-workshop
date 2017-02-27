@@ -25,6 +25,8 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 ### **STEP 1**: Login to your Oracle Cloud account
 
+---
+
 - From your browser (Firefox or Chrome recommended) go to the following URL:
 https://cloud.oracle.com
 - Click Sign In in the upper right hand corner of the browser
@@ -52,6 +54,8 @@ https://cloud.oracle.com
 
 ### **STEP 2:**	Explore Oracle Cloud Dashboard
 
+---
+
 The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**.
 
 - To look at the details for the Integration Cloud Service (ICS) instance, click on the `Integration` link.  The **Service Details** page will show various important details about the ICS service instances in this identity domain.
@@ -77,7 +81,9 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image008.png)  
 
-### STEP 2:	Explore ICS Connections
+### **STEP 2:**	Explore ICS Connections
+
+---
 
 - Select the `Connections` graphic in the designer portal
 
@@ -87,7 +93,9 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image010.png)  
 
-### STEP 3:	Explore ICS Integrations
+### **STEP 3:**	Explore ICS Integrations
+
+---
 
 - Select the `Integrations` link from the navigation bar on the left of the Connections designer console
 
@@ -97,7 +105,9 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image012.png)  
 
-### STEP 4:	Explore ICS Agents
+### **STEP 4:** Explore ICS Agents
+
+---
 
 - Select the `Agents` link from the navigation bar on the left of the Integrations designer console
 
@@ -109,19 +119,25 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 ## Explore the ICS Monitoring User Interface
 
-### STEP 1:	Open ICS Monitoring Console
+### **STEP 1:**	Open ICS Monitoring Console
+
+---
 
 - In the upper right corner of the ICS Portal, click the `Monitoring` tab
 
    ![](images/300/image015.png)
 
-### STEP 2:	Explore ICS Monitoring Console Dashboard
+### **STEP 2:**	Explore ICS Monitoring Console Dashboard
+
+---
 
 - By default, you will be presented with the ICS Monitoring Dashboard.  Observe the various data that is available from this dashboard such as *% of successful messages*, *# of Connection Currently Used*, etc.
 
     ![](images/300/image016.png)  
 
-### STEP 3:	Explore ICS Monitoring Console Tracking
+### **STEP 3:**	Explore ICS Monitoring Console Tracking
+
+---
 
 - Select the `Tracking` link in the navigation bar on the left
 
@@ -131,41 +147,57 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 ## Clone an existing integration
 
-### STEP 1:	Open the ICS Design Console
+### **STEP 1:**	Open the ICS Design Console
+
+---
 
 **XXXX**
 
 ## Edit the mapping to the EBS update service call
 
-### STEP 1:	Deactivate the integration “Create Order EBS”
+### **STEP 1:**	Deactivate the integration “Create Order EBS”
+
+---
 
 **XXXX**
 
-### STEP 2:	Open the integration “Create Order EBS”
+### **STEP 2:**	Open the integration “Create Order EBS”
+
+---
 
 **XXXX**
 
-### STEP 3:	Open the mapping “I don’t know that the mapping name is” for editing
+### **STEP 3:**	Open the mapping “I don’t know that the mapping name is” for editing
+
+---
 
 **XXXX**
 
-### STEP 4:	Test the updated mapping
+### **STEP 4:**	Test the updated mapping
+
+---
 
 **XXXX**
 
 ## Add Tracking to an integration
 
-### STEP 1:	Open the “Tracking” editor
+### **STEP 1:**	Open the “Tracking” editor
+
+---
 
 **XXXX**
 
 ## Save then activate changes
 
-### STEP 1:	Save the integration
+### **STEP 1:**	Save the integration
+
+---
 
 **XXXX**
 
-### STEP 2:	Select the “Activate” switch
+### **STEP 2:**	Select the “Activate” switch
+
+---
 
 **XXXX**
 
