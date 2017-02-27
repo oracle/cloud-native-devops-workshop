@@ -65,7 +65,10 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 ## Explore the ICS Designer User Interface
 
-### STEP 1:	Open ICS Designer
+### **STEP 1:**	Open ICS Designer
+
+---
+
 - **Click** on the `Designer` tab in the upper-right corner of the ICS Service Console to navigate to open the ICS Designer.
 
     ![](images/300/image007.png)  
