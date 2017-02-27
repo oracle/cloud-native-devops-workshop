@@ -64,7 +64,7 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
     ![](images/200/Picture14.5.png)  
 
-- In the **Add Time Spent** popup, enter `1` in the **Time Spent** field, and Click **OK**.
+- Leave the defaults, and Click **OK**.
 
     ![](images/200/Picture15.png)  
 
@@ -580,7 +580,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
   **Summary:** `Merge Feature 2 into master`
 
-  **Reviewers:** Select **<Your Username**>
+  **Reviewers:** `<Your Username>`
 
     ![](images/200/image097.2.png)  
 
