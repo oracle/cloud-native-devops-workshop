@@ -1,4 +1,4 @@
-# List of files included in the samples.zip
+# List of files included in samples.zip
 
 
 C:.
