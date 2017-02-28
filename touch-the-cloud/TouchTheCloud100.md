@@ -19,7 +19,7 @@ Following are the assets that we will be creating during this part of the worksh
     - Create MAX App which will integrate to the MCS API
 
 # 2.	Access Details and Collaterals
-*Workshop Pre-requisites:*
+#### Workshop Pre-requisites:
 
 1.	Chrome Browser
 2.	Access to Internet, so that you can access the MCS / MAX Console running @ https://myservices.us.oraclecloud.com/mycloud/*MCSHOSTNAME*/faces/dashboard.jspx
