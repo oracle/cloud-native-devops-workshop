@@ -22,7 +22,7 @@ Following are the assets that we will be creating during this part of the worksh
 *Workshop Pre-requisites:*
 
 1.	Chrome Browser
-2.	Access to Internet, so that you can access the MCS / MAX Console running @ https://myservices.us.oraclecloud.com/mycloud/<MCSHOSTNAME>/faces/dashboard.jspx
+2.	Access to Internet, so that you can access the MCS / MAX Console running @ https://myservices.us.oraclecloud.com/mycloud/*MCSHOSTNAME*/faces/dashboard.jspx
 3.	Archiving utility (zip / unzip)
 4.	Text Editor
 5.	Android / iOS Mobile Phone (with the “Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore), preferably to test / run the MAX App on your Mobile Phone. 
@@ -33,7 +33,7 @@ If Android / iOS Mobile Phone is not available, you can still test the MAX App u
 
 ![](images/100/Picture2.1.png)  
 
-**2.2**	In Chrome browser incognito window, launch MCS Instance https://myservices.us.oraclecloud.com/mycloud/<MCSHOSTNAME>/faces/dashboard.jspx and login with following credentials.
+**2.2**	In Chrome browser incognito window, launch MCS Instance https://myservices.us.oraclecloud.com/mycloud/*MCSHOSTNAME*/faces/dashboard.jspx and login with following credentials.
 
 Login Username: <USERNAME>@oracle.com
 
