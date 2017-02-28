@@ -83,7 +83,7 @@ In this part of the Workshop, you create an MCS connector to support gathering d
 
 **API Name:** PCS_TTC_XX (should be populated based on the value entered for the Display Name)
 
-**WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
+**WSDL URL:** https://touchthecloudpcs.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
 
 **Short Description:** Exposes All Operations for the Quote Lines in PCS
 
