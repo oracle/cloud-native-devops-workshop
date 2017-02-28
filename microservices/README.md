@@ -32,7 +32,7 @@ This Cloud Native Microservices Workshop is part of a **Free** Sales Program tha
 - Understand your Development Interests and Capabilities
 - Build your personalized Enablement Plan, including Hands-on Technical Enablement.
 - Help you Exercise your acquired knowledges. 
-- If you are interested, simply <a href="https://launch.oracle.com/?developeraccelerate" target="_new">click here</a>, and provide us with your contact information. 
+- If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
 
 ## DevOps and Cloud Native Microservices Workshop
 
