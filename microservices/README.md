@@ -13,17 +13,26 @@
 - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
 - Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
 
-## How to View the Lab Guides
+**Third**, ***How to View the Lab Guides***
 
 - The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/cloud-native-devops-workshop/microservices) 
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
-![](images/WorkshopMenu.png)  
+    ![](images/WorkshopMenu.png)  
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/tree/master/microservices) repository.
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
+
+**Fourth**, ***Cloud Accelerate for the Developer***
+
+This Cloud Native Microservices Workshop is part of a **Free** Sales Program that Oracle offers. The Program is called **Cloud Accelerate for the Developer**. During this program Oracle can work with you to do the following:
+
+- Understand your Development Interests and Capabilities
+- Build your personalized Enablement Plan, including Hands-on Technical Enablement.
+- Help you Exercise your acquired knowledges. 
+- If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
 
 ## DevOps and Cloud Native Microservices Workshop
 
