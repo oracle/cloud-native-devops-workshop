@@ -27,12 +27,12 @@
 
 **Fourth**, ***Cloud Accelerate for the Developer***
 
-This Cloud Native Microservices Workshop is part of a **Free** Sales Program that Oracle offers. The Program is called **Cloud Accelerate for the Developer**. During this program Oracle will work with you to do the following:
+This Cloud Native Microservices Workshop is part of a **Free** Sales Program that Oracle offers. The Program is called **Cloud Accelerate for the Developer**. During this program Oracle can work with you to do the following:
 
 - Understand your Development Interests and Capabilities
 - Build your personalized Enablement Plan, including Hands-on Technical Enablement.
 - Help you Exercise your acquired knowledges. 
-- If you are interested, simply send ![Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
+- If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
 
 ## DevOps and Cloud Native Microservices Workshop
 
