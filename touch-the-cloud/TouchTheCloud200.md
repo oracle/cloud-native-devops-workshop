@@ -3,12 +3,12 @@
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the management, modelling and administration of a typical Quote to Order process.
+This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the management, modeling and administration of a typical Quote to Order process.
 
 ## Objectives
 
 - User Experience with Process Cloud
-- Process Modelling and Configuration
+- Process Modeling and Configuration
 
 # 
 
@@ -157,7 +157,7 @@ Julie prefer to go directly to her PCS Workspace using a browser.
 
 ---
 
-Oracle Process Cloud Service is divided as three seperate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Julie only has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
+Oracle Process Cloud Service is divided as three separate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Julie only has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
 
 - From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
 
@@ -167,7 +167,7 @@ Oracle Process Cloud Service is divided as three seperate functionalities, and d
 
 >![](images/200/workspace_home-_-admin.png)
 
->The above picture gives an explanation of a page, for user with all priviledges granted and shows the different roles associated with each activity.  
+>The above picture gives an explanation of a page, for user with all privileges granted and shows the different roles associated with each activity.  
 
 ### **STEP 4**: Working on Tasks
 
@@ -182,7 +182,7 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 ---
 
 
-- Click **Work on Taks** to access the Task List
+- Click **Work on Tasks** to access the Task List
 
     ![](images/200/Picture9.png)  
 
@@ -192,7 +192,7 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 
     ![](images/200/Picture10.png) 
     >While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
-    >1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionailty allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
+    >1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionality allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
     >2. Close Form / Maximize
     >3. Documents Panel Expand, might also include Discussions, if enabled for process
     >4. Form, or also called the payload for the task. This information is the task specific information required to decide on on an action. Depending on the configuration, information can be updated.
@@ -200,5 +200,30 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
     >6. Task Information, History and Task Metadata
 
 - Lets follow the happy path, and click on the action ***Approve***
-- The page will revert to the task list and you will notice that the task dissapeared from your inbox. In fact, you might also get a green confirmation message that your action was accepted.
+- The page will revert to the task list and you will notice that the task disappeared from your inbox. In fact, you might also get a green confirmation message that your action was accepted.
+
+### **STEP 5**: Tracking Instances
+
+---
+
+**Role: Mr X, Process Owner**
+
+![](images/personas/roger_frezia_sales_director.png)
+
+Roger Frezia, sales director and process owner wants to see what happened to our process we have approved in the previous step. Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
+
+This audit information can also be exported and use for debugging or as input for on-premise systems.
+---
+
+- Logout as Julie Jones, and log into the Process Workspace as Mr X.
+
+- Click **Instance Tracking** to access the List of Instances
+
+    ![](images/200/Picture13.png)  
+
+    ![](images/200/Picture14.png)
+
+    This List displays the active instances. To display completed instances as well, you have to select the **Completed** check box.
+
+    ![](images/200/Picture15.png)
 
