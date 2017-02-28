@@ -2,8 +2,7 @@
 
 ## Downloading BlackJack Project from the Repository
 
-&lt;&lt; Instructions for downloading the BlackJack project will go
-here, Diana or Peter to provide the link&gt;&gt;
+ Download the [blackjack.zip](BlackJack.zip) file to your local machine
 
 ## Deploying the BlackJack Application on a Local Server
 
