@@ -2,7 +2,7 @@
 ![](images/100/Picture-lab.PNG)  
 Update: January 28, 2017
 
-## 1.	Design Considerations for Mobile App
+# 1.	Design Considerations for Mobile App
 
 This Workshop walks you through the process of developing a Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for Touch the Cloud workshop.
 
@@ -18,283 +18,467 @@ Following are the assets that we will be creating during this part of the worksh
 - MAX App
     - Create MAX App which will integrate to the MCS API
 
-## 2.	Access Details and Collaterals
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+# 2.	Access Details and Collaterals
+*Workshop Pre-requisites:*
 
+1.	Chrome Browser
+2.	Access to Internet, so that you can access the MCS / MAX Console running @ https://myservices.us.oraclecloud.com/mycloud/<MCSHOSTNAME>/faces/dashboard.jspx
+3.	Archiving utility (zip / unzip)
+4.	Text Editor
+5.	Android / iOS Mobile Phone (with the “Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore), preferably to test / run the MAX App on your Mobile Phone. 
+If Android / iOS Mobile Phone is not available, you can still test the MAX App using MAX simulator in the browser.
 
-# Create Twitter Feed Marketing Project
+2.1 Launch Chrome browser -> New incognito window 
 
-## Create Developer Cloud Service Project
 
-### **STEP 1**: Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-    `https://cloud.oracle.com`
+![](images/100/Picture2.1.png)  
 
-- click **Sign In** in the upper right hand corner of the browser
+**2.2**	In Chrome browser incognito window, launch MCS Instance https://myservices.us.oraclecloud.com/mycloud/<MCSHOSTNAME>/faces/dashboard.jspx and login with following credentials.
 
-    ![](images/100/Picture100-1.png)
+Login Username: <USERNAME>@oracle.com
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button.
+Login Password: <PASSWORD>
 
-    ![](images/100/Picture100-2.png)
+![](images/100/Picture2.2.png) 
 
-- Enter your identity domain and click **Go**.
+**2.3**	Once at the Oracle Cloud My Services Dashboard click on the Mobile Environment Service
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor.
+![](images/100/Picture2.3.png) 
 
-    ![](images/100/Picture100-3.png)
+**2.4**	Now click on the link provided next to Service Instance URL
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+![](images/100/Picture2.4.png) 
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. If your own Corporate or Trial account does not easily allow you to have multiple users, simply log into the account using your credentials, and when required you can make the “logical” change from Project Manager to other personas, even though you will always be logged in as the same user.
+**2.5**	This opens the MCS Console page
 
-    ![](images/100/Picture100-3.5.png)
+![](images/100/Picture2.5.png)
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+**2.6**	A csf-key is pre-defined on this MCS instance. This csf-key will be used while creating the connector, explained in the later section of this workshop. This is the credential used to connect the PCS process.
 
-    ![](images/100/Picture100-4.png)
+csf-key: **PCS_TTC**
 
-- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**
+**2.7**	A Mobile Backend is pre-defined on this MCS instance for testing the APIs/Connectors you are going to create as part of the workshop.
 
-    ![](images/100/Picture100-5.png)
+Mobile Backend Name: **TTC_MBE**
 
-### **STEP 2**: Login to Developer Cloud Service
+# 3.	Creating an MCS Connector
 
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
+In this section, you create a connector API in Oracle Mobile Cloud Service so that your mobile application can interact with an external web service. Connectors work with either SOAP or REST services to access external cloud services offered by other providers or assets, such as databases.
+Connector APIs provide a bridge between your custom APIs and the enterprise services you want to access from those APIs. Using the REST and SOAP connector types, you create connector APIs for each data source that you want to access.
+You define a connector API by entering info about the target resource, creating rules for the call parameters to "shape" the returned data so that it works well in a mobile context, and specifying security policies
+In this part of the Workshop, you create an MCS connector to support gathering data from a SOAP service. For this workshop, the sample SOAP services that you will use are exposed by an Oracle Process Cloud Service.
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
 
-    ![](images/100/Picture100-6.png)
+**3.1** Select **Applications** from the breadcrumb menu and then click the **Connectors** icon
 
-- The Service Details page gives you a quick glance of the service status overview.
+![](images/100/Picture3.1.png)
 
-    ![](images/100/Picture100-7.png)
+**3.2**	 Click **New Connector** and then select **SOAP** from the drop-down list.
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will list all projects for which you are currently a member.
+![](images/100/Picture3.2.png)
 
-    ![](images/100/Picture100-8.png)
+**3.3**	In the **New SOAP Connection API** dialog, enter the following values:
 
-### **STEP 3**: Create Developer Cloud Service Project
+**API Display Name:** PCS_TTC_XX (where XX is your initials)
 
-- Click **New Project** to start the project create wizard.
-- On Details screen enter the following data and click on **Next**.
+**API Name:** PCS_TTC_XX (should be populated based on the value entered for the Display Name)
 
-    **Name:** `Twitter Feed Marketing Project`
+**WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
 
-    **Description:** `Project to gather and analyze twitter data`
+**Short Description:** Exposes All Operations for the Quote Lines in PCS
 
-    **Note:** A Private project will only be seen by you. A Shared project will be seen by all Developer Cloud users. In either case, users need to be added to a project in order to interact with the project.
+Click **Create**. 
 
-    ![](images/100/Picture100-9.png)
+![](images/100/Picture3.3.png)
 
-- Leave default template set to **Empty Project** and click **Next**
+**3.4**	In the **Configure SOAP API** wizard, click **Save**
 
-    ![](images/100/Picture100-10.png)
+![](images/100/Picture3.4.png)
 
-- Select your **Wiki Markup** preference to **MARKDOWN** and click **Finish**.
+**3.5*	Click the **Next** arrow (“>”) to navigate to the **Port** train stop and observe details about the service operations that are exposed
 
-    ![](images/100/Picture100-11.png)
+![](images/100/Picture3.5.png)
 
-- The Project Creation will take about 1 minute.
+**3.6**	Click the **Next arrow** (“>”) to navigate to the **Security** settings
 
-    ![](images/100/Picture100-12.png)
+![](images/100/Picture3.6.png)
 
-- You now have a new project, in which you can manage your software development.
+By default there are no policies selected in the **Security Configuration**. We will not be adding any policies in this workshop.
 
-    ![](images/100/Picture100-13.png)
+**3.7**	Select http_basic_auth_over_ssl_client_policy and clicking on “>”.
+![](images/100/Picture3.7.png)
 
-## Add Team Members (Owners) to the Project
+**3.8**	On highlighting the csf-key field, you would see a lock icon. Click on the lock icon and select **PCS_TTC**, the one provided in the access details and collaterals section 2.6. Click on **Select** button.
 
-### **STEP 4**: Add Team Owners to the Project
+![](images/100/Picture3.8.png)
 
-**Note:** As previously mentioned, ***if you are not allowed to have multiple users in your Corporate or Trial accounts, you will skip step 4.*** When in subsequent steps/labs you are asked to log in as different users responsible for different roles, you will physically perform the tasks as the same user, but you should mentally assume the role of a different persona.
+Click on **Save** to save the work at this point.
 
-- Click on the **Team** icon ![](images/100/TeamIcon.png) found on the far right side of the window.
+**3.9**	Click the **Next arrow** (“>”) to navigate to the **Test** page. Scroll down to see all the resource methods that the service exposes.
 
-- To add new Team Members, click **New Member**
+![](images/100/Picture3.9.png)
 
-    ![](images/100/Picture100-14.png)
+**3.10**	Let's test it. Invoke TTC PCS process by calling the **POST start**.
 
-- Set the Role to **Owner**, and enter the Username **bala.gupta**, and then click **Add**
+Expand the **Authentication** node and set the Mobile Backend to **TTC_MBE**, the one provided in the access details and collaterals section 2.7. Use this Mobile Backend for testing your Connectors and APIs.
 
-- Repeat the process for Username **john.dunbar**. When completed your team should consist of 3 members.
+![](images/100/Picture3.10.png)
 
-    ![](images/100/Picture100-15.png)
+**3.11**	The response status should show 200
 
-# Create Product Issues
+![](images/100/Picture3.11.png)
 
-## Create Issues for Twitter Feed Microservice
+Click on **Done**. This completes the Create Connector step.
 
-### **STEP 5**: Create Issue for the initial GIT Repository Creation
+# 4.	Creating the MCS API
 
-In this step you are still connected in the logical role of the Project Manager, ***Lisa Jones***.
+In this part of the workshop, you step through the process of creating and defining MCS API using pre-defined artifacts. 
 
-- Click **Issues** on left hand navigation panel to display the Track Issues page.
+**4.1**	Select **Applications** from the breadcrumb menu and then click the **APIs** icon
 
-    ![](images/100/Picture100-16.png)
+![](images/100/Picture4.1.png)
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+**4.2**	Click the **New API** button on the **APIS** page and then Click on **API** to start defining the API
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, **Bala Gupta** will be the “logical” owner. The same concept holds true for other assignments made in this lab.
+![](images/100/Picture4.2.png)
 
-    **Summary:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+**4.3**	In the New API pop-up window, drag and drop the TTCSalesOrderAPI.raml provided as part of the artifacts for the workshop
 
-    **Description:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+![](images/100/Picture4.3.png)
 
-    **Type:** `Task`
-    **Owner:** `Bala Gupta (or you, if another user is not available)`
-    **Story Points:** `1`
+**4.4**	Enter **Short Description** as “Touch the Cloud MCS API”. Then click **Create**
 
-    Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
+![](images/100/Picture4.4.png)
 
-    ![](images/100/Picture100-17.png)
+**4.5**	The API created will looks like this
 
-### **STEP 6**: Create Issue for Update Twitter Credentials
+![](images/100/Picture4.5.png)
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+**4.6**	Disable security to the MCS API by navigating to the **Security** section
 
-    **Summary:** `Create Filter on Twitter Feed`
+![](images/100/Picture4.6.png)
 
-    **Description:** `Create Filter to allow user to supply text to reduce the amount of data returned by the Twitter feed`
+click **Save.**
 
-    **Type:** `Feature`
+Let’s step through the process of defining MCS API.
+An API implementation can call MCS platform APIs (such as Storage and Notifications), other custom APIs, and external REST and SOAP web services through MCS connectors.
+The coding model is based on Node.js, which is a lightweight JavaScript framework that enables you to write and run server-side code. For each API endpoint, which is the URI plus the HTTP request method (such as GET or POST), you write a route definition that specifies how to respond to a client request to that endpoint. After you have written the custom code, you package it as a Node.js module and upload it to MCS.
 
-    **Owner:** `Bala Gupta (or you if another user is not available)`
+**4.7**	Go to **Implementation** to implement the custom API
 
-    **Story Points:** `2`
+![](images/100/Picture4.7.png)
 
-    ![](images/100/Picture100-18.png)
+**4.8**	Unzip the **ttcsalesorderapi.zip** file to ttcsalesorderapi folder. In the ttcsalesorderapi folder that is created locate the **package.json** file and open it in a text editor.
 
-### **STEP 7**: Create Issue for initial GIT Repository creation
+Replace **xx** in API name with your initials. In the connectors section too, modify the name and version of the connector by replacing **XX**. For example: "/mobile/connector/PCS_TTC_**XX**":"1.0"
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+**Refer to the code snippet:**
 
-    **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
+![](images/100/Picture4.8.png)
 
-    **Description:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
+4.9	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
+Edit the methods to include code to access your API **TTCSalesOrderAPI_XX** and Connector **PCS_TTC_XX**.
 
-    **Type:** `Task`
+**Replace all XX with your initials in the file:**
 
-    **Owner:** `John Dunbar (or you if another user is not available)`
+![](images/100/Picture4.9.png)
 
-    **Story Points:** `1`
+**4.10**	After saving all your work, create a zip file that includes all three files of the ttcsalesorderapi folder. Name the file **ttcsalesorderapi.zip**.
 
-    ![](images/100/Picture100-19.png)
+**4.11**	Back in the MCS API implementation page, at the bottom, drag and drop **ttcsalesorderapi.zip** to **Upload an implementation** archive section.
 
-### **STEP 8**: Create Issue for Displaying Twitter Feed
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+Close the dialog window that pops up and you can see that the JavaScript you added is now part of the implementation. Click **Save**.
 
-    **Summary:** `Display Twitter Feed in Table Format`
 
-    **Description:** `Display Twitter Feed in Table Format`
+![](images/100/Picture4.11.png)
 
-    **Type:** `Feature`
+Let’s test the MCS API we just created.
+**4.12**	With the implementation selected, click the **Test** button
 
-    **Owner:** `John Dunbar`
+![](images/100/Picture4.12.png)
 
-    **Story Points:** `2`
+**4.13**	In the **Get customer** Endpoint, select the Mobile Backend **TTC_MBE**, the one provided in the access details and collaterals section 2.7. Click the **Test Endpoint** button.
 
-    ![](images/100/Picture100-20.png)
+![](images/100/Picture4.13.png)
 
-- Click ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
+You should see the list of customers as shown below.	
+Similarly, you can test the other endpoints as well.
 
-    ![](images/100/Picture100-22.png)
+**4.14**	 MCS APIs must be published to be available on MAX App for integration.
 
-# Create Agile Board
+Click on the Hamburger Menu, select **Applications** from the breadcrumb menu and click on APIs. 
 
-## Create Agile Board and Initial Sprint
+Search the API you just created i.e., **TTCSalesOrderAPI_XX** (where XX is your initial) by using the **Filter APIs**. Then select your API and click on **Publish.**
 
-### Developer Cloud Service Agile Page Overview
+![](images/100/Picture4.14.png)
 
-Before you start using the Agile methodology in Oracle Developer Cloud Service, it is important that you know the following key components of the Agile page.
+**4.15**	In the **Confirm Publish API** popup enter the comment **Initial Version**. Then click on **Publish**.
 
-- **Board** – A Board is used to display and update issues of the project. When you create a Board, you associate it with an Issue Query. The Board shows Issues returned by the Query.
-You can either use a Board created by a team member, or create your own Board. You can create as many Boards as you like.
-- **Sprint** – A Sprint is a short duration (usually, a week or two) during which your team members try to implement a product component.
-You add the product component related issues to a Sprint. When you start working on a product component, you start (or activate) the related Sprints. To update issues using a Sprint, you must first activate the Sprint and add the Sprint to the Active Sprints view.
-- **Backlog view** – Lists all Issues returned by the Board’s Query. The view also displays all active and inactive Sprints of the Board, and the sprints from other Boards that contain Issues matching the Board’s Query.
-Each Sprint lists issues that are added to it. The Backlog section (the last section of the Backlog page) lists all open issues that are not part of any Sprint yet. The Backlog view does not show the resolved and closed Issues.
-- **Active Sprints view** – Lists all active Sprints of the Board and enables you to update an Issue status simply by dragging and dropping it to the respective status columns.
-- **Reports view** – select the Burndown Chart tab to display the amount of work left to do in a Sprint or use the Sprint Report tab to list open and completed Issues of a Sprint.
+![](images/100/Picture4.15.1.png)
 
-### **STEP 9**: Create Agile Board
+This will publish the MCS API.
 
-- Click **Agile** on the Left Side Menu to display a page listing all existing Boards
+![](images/100/Picture4.15.2.png)
 
-    ![](images/100/Picture100-23.png)
+# 5.	Creating MAX App
 
-- Click **New Board** and enter the following data. When done click **Create**.
+In this section, you create a new MAX application with dashboard, list of incidents, incident summary and create incident screens.
 
-  **Name:** `Microservices`
+**5.1**	Select **Applications** from the breadcrumb menu and then click the **Mobile Apps** icon
 
-  **Estimation:** `Story Points`
+![](images/100/Picture5.1.png)
 
-    ![](images/100/Picture100-24.png)
+**5.2**	This opens **MAX** in a separate browser. Click on **New Application**.
 
-### **STEP 10**: Create Sprint
-- We will now create our first Sprint. Click **New Sprint**. Enter the following data and click **OK.**
+![](images/100/Picture5.2.png)
 
-    **Name:** `Sprint 1 - Initial Development`
+**5.3**	Enter the MAX App name as **TTC_APP_XX** (where XX is your initials)
 
-    **Story Points:** `6`
+![](images/100/Picture5.3.png)
 
-    ![](images/100/Picture100-25.png)
+**5.4**	Click **Next** from the top right corner to choose **Screen Template**
 
-### **STEP 1**:	Add Backlog Issues to Sprint
+![](images/100/Picture5.4.png)
 
-- Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
+By default **Simple Screen** template is selected. Use the same and click **Next**
 
-    ![](images/100/Picture100-26.png)
+**5.5**	Enter **Screen Title** as **Customers** and click **Next**
 
-    ![](images/100/Picture100-27.png)
+![](images/100/Picture5.5.png)
 
-## Customize Agile Board
+**5.6**	By default **Custom** content is selected. Use the same and click **Next**
 
-### **STEP 12**: Customize Board
+![](images/100/Picture5.6.png)
 
-In the following step you will customize an Agile Board, and add a new Progress State. If you desire more information about States and Conditions, the following link will provide a tutorial: http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/developer/AgileDevelopment/AgileDevelopment.html
+**5.7**	Click **Create** from **Review and Create**
 
-- Now we will show you how you can customize your board. In the right hand side click **Board -> Configure**
+![](images/100/Picture5.7.png)
 
-    ![](images/100/Picture100-28.png)
+**5.8**	Once the MAX application is created, you are taken to the Designer part of the interface where you can refine the layout and content of the pages.
+On the left are a series of components you may drag and drop onto your pages. In the center is a preview of the way the screen will look and on the right is where you can set the properties for the components you add. Collapse the list of components. Do this by clicking **Components** icon (third icon from the top), on the left side of the page.
 
-  **Note**: Before we create a new progress state, we want to un-assign some of the conditions that will be used in the new state. You can’t add new conditions or removed conditions, however, you can redefine progress states to suit your project’s needs and move conditions from one state to another. A large number of conditions are assigned to the Completed state by default.
+![](images/100/Picture5.8.png)
 
-- Click on **:Progress States**: then click **:Completed**: state. In the lower left panel of the window, scroll down the conditions and select all the **:RESOLVED conditions**:.  Click ![](images/100/PictureGreater.png) to move them over to Unassigned Conditions panel
+**5.9**	Scroll down in the **Component** palette and find the **Map**. Then, drag and drop the **Map** onto the **Component**.
 
-    ![](images/100/Picture100-29.png)
+![](images/100/Picture5.9.png)
 
-- Click **:New Progress State**:.  Change name to **:Verify Code**:. We will use this new State for performing QA and Testing.
+**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button.
 
-    ![](images/100/Picture100-30.png)
+![](images/100/Picture5.10.png)
 
-- Highlight all the **:RESOLVED**: unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
+**5.11**	Click on **Add Service**. In the **Service Catalog**, search for the MCS API that you published i.e., **TTCSalesOrderAPI_XX** (XX being your initial) using Filter Services. Then select your API and click **Select** button on the bottom right corner.
 
-    ![](images/100/Picture100-31.png)
+![](images/100/Picture5.11.png)
 
-- With **:Verify Code**: highlighted, click ![](images/100/PictureUpArrow.png) to move **:Verify Code**: above the Completed Process State.
+**5.12**	In the **Select Data Source** Tab select the **Customers List** business object. Then click **Next** button on the top right corner.
 
-    ![](images/100/Picture100-32.png)
+![](images/100/Picture5.12.png)
 
-- Click **Save** to persist change.
+**5.13**	In the **Map Data Fields** to UI Tab map the **address1** and **address2** attributes of **Customers List** business object to **Location Value field**. Click **Live Data Preview** button for preview. Then click **Next** button.
 
-    ![](images/100/Picture100-33.png)
+![](images/100/Picture5.13.png)
 
-### **STEP 13**: Start Sprint
+**5.14**	No Query Parameters to be set in the **Configure Query Parameters** Tab as the **Customers List** endpoint doesn’t need it. Then click **Finish** button.
 
-- Click **Start Sprint.** Leave the defaults and click **Start**
+![](images/100/Picture5.14.png)
 
-    ![](images/100/Picture100-34.png)
+**5.15**	Once complete, preview should look like this. You can **add a detail screen** by clicking on Add a Detail Screen on the right panel.
 
-- Now click on **Active Sprints** to view the Sprint Dashboard
+![](images/100/Picture5.15.png)
 
-    ![](images/100/Picture100-35.png)
+**5.16**	In the **Screen Template** Tab select **Screen with Top Tabs**. Click **Next**.
 
-- Click on the **Reports** button to view the Burndown and Sprint reports.
+![](images/100/Picture5.16.png)
 
-    ![](images/100/Picture100-36.png)
+**5.17**	In the **Screen Title** Tab enter **Customer Summary** as title. Set Top Tabs as **Details** and **Quote Lines**. Click **Next**.
 
-- You are now ready to move to the next lab.
+![](images/100/Picture5.17.png)
+
+**5.18**	In the **Content** Tab select **Form**. Click **Next**.
+
+![](images/100/Picture5.18.png)
+
+**5.19**	In the **Review** Tab click **Finish**.
+
+![](images/100/Picture5.19.png)
+
+**5.20**	Select **Go to Detail Screen** text from right panel.
+
+![](images/100/Picture5.20.png)
+
+**5.21**	Preview should look like this. Click **Add Data** from right panel.
+
+![](images/100/Picture5.21.png)
+
+**5.22**	In **Select Data Source** Tab, select **Customer Summary** business object. Click **Next**.
+
+![](images/100/Picture5.22.png)
+
+**5.23**	In **Map Data Fields to UI** Tab, click **Add All Fields** to add all business object fields.
+
+![](images/100/Picture5.23.png)
+
+**5.24**	Click **Live Preview Data** to observe the changes live. Click **Next**.
+
+![](images/100/Picture5.24.png)
+
+**5.25**	In **Configure Query Parameters** Tab, click on **Parent Screen**, and set the **customerNumber** parameter to the **Parent Screen's id** by dragging and dropping it. Then click **Finish**.
+
+![](images/100/Picture5.25.png)
+
+**5.26**	Once complete **Preview** should look like this.
+
+![](images/100/Picture5.26.png)
+
+**5.27**	Click on **Quote Lines** Tab. Drag and drop **List** component to the content of the Tab. Click on **Add Data**.
+
+![](images/100/Picture5.27.png)
+
+**5.28**	In the **Select Layout** Tab select the layout as shown. Click **Next**.
+
+![](images/100/Picture5.28.png)
+
+**5.29**	In **Select Data Source** Tab, select **Customer Summary** business object. Click **Next**.
+
+![](images/100/Picture5.29.png)
+
+**5.30**	In **Map Data Fields to UI** Tab, map the values as shown in the screenshot below. Click **Live Preview Data** to observe the changes live. Click **Next**.
+
+![](images/100/Picture5.30.png)
+
+**5.31**	In **Configure Query Parameters** Tab, click on **Parent Screen**, and set the **customerNumber parameter to the Parent Screen's id by dragging and dropping it. Then click Finish.
+
+![](images/100/Picture5.31.png)
+
+**5.32**	Once complete **Preview** should look like this. Click on **Add a Create Screen** on right panel
+
+![](images/100/Picture5.32.png)
+
+**5.33**	Click on **Go to Create Screen** text on right panel.
+
+![](images/100/Picture5.33.png)
+
+**5.34**	Create Screen should look like this. No data mapping is required as it is handled internally.
+
+![](images/100/Picture5.34.png)
+
+**5.35**	Change the field type for **ItemDescription** to **Select** (Drop down). 
+
+![](images/100/Picture5.35.png)
+
+Similarly change the field type for **Uom** to **Select**. Data mapping for these fields are predefined in MCS. 
+
+**5.36**	Remove the ItemNumber field by clicking on the bin icon on the bottom right corner. This is automatically generated in the PCS side.
+
+![](images/100/Picture5.36.png)
+
+**5.37**	Now the Create form should look like this.
+
+![](images/100/Picture5.37.png)
+
+**5.38**	Navigate to **Screen Flow** tab by clicking on the left panel. Double click on **Create Summary** screen.
+
+![](images/100/Picture5.38.png)
+
+**5.39**	Select the header of the **Customer Summary** screen and select the **Create Order Line Details** button. Change label of the button to **Create Quote Line** and Modify **Navigation Action Mapper** under **Create Quote Line** button Action to map the parameters as shown in below screen shots. Click **Finish**.
+
+![](images/100/Picture5.39.1.png)
+
+![](images/100/Picture5.39.2.png) ![](images/100/Picture5.39.3.png) ![](images/100/Picture5.39.4.png)
+
+![](images/100/Picture5.39.5.png)
+
+**5.40**	Select the header of the **Customer Summary** screen and add a Header Button **Submit Quote** by clicking **HEADER BUTTONS** on the right panel. Follow the screenshots below.
+
+![](images/100/Picture5.40.1.png)
+
+![](images/100/Picture5.40.2.png) ![](images/100/Picture5.40.3.png)
+
+**5.41**	Add Action to the **Submit Quote** button
+
+![](images/100/Picture5.41.1.png) ![](images/100/Picture5.41.2.png)
+
+**5.42**	Configure Action for **Submit Quote** button as shown below. (Using drag and drop)
+
+![](images/100/Picture5.42.png)
+
+**5.43**	Modify **Business Action Mapper** under **Submit Quote** button Action to map the parameters as shown in below screen shots. Click **Finish**.
+
+![](images/100/Picture5.43.1.png)
+
+![](images/100/Picture5.43.2.png)
+
+Click **Save** on **Configure Action** panel.
+
+Let’s test the MAX app we just created.
+
+**5.44**	You can preview your app in a hosted simulator or on a device at any point after you’ve created its first screen.
+The Test tool lets you use the simulator to see how your UI displays live data. You can also test out screen navigation and the actions that you’ve configured for UI components. Click on **Test** ( ) icon from top right corner.
+
+![](images/100/Picture5.44.png)
+
+**5.45**	You need a test user account to preview your app with live data. To test the app you created use the following credentials
+
+![](images/100/Picture5.45.png)
+
+**5.46**	The MAX App opens up in the Test Console. Click on a Customer on the Map
+
+![](images/100/Picture5.46.png)
+
+**5.47**	Customer Summary screen shows the Details and Quote Lines for the selected customer 
+
+![](images/100/Picture5.47.png)
+
+**5.48**	Navigate to Quote Lines Tab
+
+ ![](images/100/Picture5.48.png)
+
+**5.49**	Create a Quote Line by using the header button **Create Quote Line** on the top right corner
+
+ ![](images/100/Picture5.49.png)
+
+**5.50**	Fill in the Create Quote Line form and then click Save
+
+ ![](images/100/Picture5.50.png)
+
+**5.51**	Once the Quote Line is created successfully, app will navigate back to the previous screen. Now you may continue creating multiple Quote Lines similarly or submit the quote by clicking **Submit Quote** header button
+
+ ![](images/100/Picture5.51.png)
+
+Once the Quote is successfully submitted, app will navigate back to the Map screen.
+
+**5.52**	If you want to test the MAX App on the Mobile Phone, please proceed to the next step.
+
+If you do not want to test the MAX App on Mobile Phone, then click on **Back to Designer** (  ![](images/100/Picture5.52.i1.png) ). This step completes the workshop.
+
+If you want to test the MAX App on Mobile Phone, click Test on Phone (  ![](images/100/Picture5.52.i2.png) ) and then Build Test Application. You need the MAX Container App (“Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore) to run your app on a Mobile Phone.
+
+MAX generates a QR code when the build finishes. Click button next to Show QR Code. This QR code needs to be used to download the app on device
+
+ ![](images/100/Picture5.52.png)
+
+ **Note:** This QR code is for testing apps that are under development. Share it with your test group. When you publish the app later on, MAX will generate a different QR code, one associated with the published (or finished) version of your app. It’s the one that you’ll use to distribute all versions of your app to its users.
+
+**5.53**	On your device, open the MAX App (  ![](images/100/Picture5.53.i1.png)  ). Then Click Scan (  ![](images/100/Picture5.53.i2.png)  ).
+
+![](images/100/Picture5.53.1.png)             ![](images/100/Picture5.53.2.png)
+
+**5.54**	Point your phone at the test QR code to download the app.
+
+ ![](images/100/Picture5.54.png)
+
+**5.55**	Log into the app by entering your user name and password. The test app appears in the MAX App.
+
+![](images/100/Picture5.55.1.png) ![](images/100/Picture5.55.2.png)
+
+**5.56**	You can launch the MAX App, which should look like this.
+
+![](images/100/Picture5.56.png)
+
+You can use the hamburger menu to navigate to log out of the app.
+
+
+
+## THIS COMPLETES THE WORKSHOP
