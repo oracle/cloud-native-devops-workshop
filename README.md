@@ -43,7 +43,7 @@ The content contains several independent modules that cover different aspects of
 + [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
 
 ###Deploy complex cloud environment using Oracle Cloud Stack Manager###
-+[Deploy complex cloud environment using Oracle Cloud Stack Manager](stack/README.md)
++ [Deploy complex cloud environment using Oracle Cloud Stack Manager](stack/README.md)
 
 ####Run Lightweight Java container (Tomcat) in the  Oracle Application Container Cloud Service####
 
