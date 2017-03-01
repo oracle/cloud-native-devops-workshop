@@ -42,6 +42,9 @@ The content contains several independent modules that cover different aspects of
 ####Integrate telemetry into continuous delivery and monitor an application using the Oracle Management Cloud####
 + [Deploying APM Agent on Apache Tomcat based application and setting up Application Performance Monitoring](apm/README.md)
 
+###Deploy complex cloud environment using Oracle Cloud Stack Manager###
++[Deploy complex cloud environment using Oracle Cloud Stack Manager](stack/README.md)
+
 ####Run Lightweight Java container (Tomcat) in the  Oracle Application Container Cloud Service####
 
 + [Deploy Apache Tomcat based application to Oracle Application Container Cloud](accs-tomcat/README.md)
