@@ -382,7 +382,7 @@ setup/verify the required environment variables.
 6.  Select the **PATH** system variable and click the **Edit** button.
 
 7.  In the Edit System Variable window, in the Variable value field,
-    place the cursor at the last position and enter **;%M2%,** and then
+    place the cursor at the last position and enter **;%M2%** and then
     click the **OK** button.
 
     <img src="images/1/image15.png" width="347" height="149" />
