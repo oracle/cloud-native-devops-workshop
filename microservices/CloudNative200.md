@@ -179,7 +179,7 @@ Now that we have successfully built our project, we need to create a deployment 
 
 - Enter the following data:
 
-  - **Data Center**: `<Your Assigned Datacenter>` ***(Ask instructor if needed)***
+  - **Data Center**: `<Your Assigned Datacenter>` 
 
   - **Identity Domain**: `<Your Identity Domain>`
 
@@ -367,7 +367,7 @@ In the following task we will provide screen shots taken from the optional virtu
     ![](images/200/Picture61.png)  
 
 
-- Accept the Import defaults, and **click on Finish**
+- Accept the Import defaults, and **click on Finish**. Note: If nothing imports, that will be resolved in the next step. 
 
     ![](images/200/Picture62.png)  
 
