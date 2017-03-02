@@ -202,6 +202,8 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 - Lets follow the happy path, and click on the action ***Approve***
 - The page will revert to the task list and you will notice that the task disappeared from your inbox. In fact, you might also get a green confirmation message that your action was accepted.
 
+
+
 ### **STEP 5**: Tracking Instances
 
 ---
@@ -210,9 +212,10 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-Roger Frezia, sales director and process owner wants to see what happened to our process we have approved in the previous step. Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
+  Roger Frezia, sales director and process owner wants to see what happened to our process we have approved in the previous step. Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
 
-This audit information can also be exported and use for debugging or as input for on-premise systems.
+  This audit information can also be exported and use for debugging or as input for on-premise systems.
+  
 ---
 
 - Logout as Julie Jones, and log into the Process Workspace as Mr X.
@@ -226,4 +229,30 @@ This audit information can also be exported and use for debugging or as input fo
     This List displays the active instances. To display completed instances as well, you have to select the **Completed** check box.
 
     ![](images/200/Picture15.png)
+
+- Click on the process we started
+
+    ![](images/200/Picture16.png)
+
+    To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
+
+    ![](images/200/Picture18.png)
+
+    Expand the History heading
+
+    ![](images/200/Picture17.png)
+
+    You have the option to view the history as a list, a tree view or diagram, depending on your needs. 
+
+    ![](images/200/Picture19.png)
+
+    - Diagram : See the process as a diagram to quickly see what happened
+    - List: Trace through the steps the process followed
+    - Tree: Expose the capability to drill into specific step to see what happened in a step
+
+    To determine the next step in the process, you can view the diagram and determine what the next step in the process would be. In the test case that will depend on the input you supplied when creating the instance.
+
+    ![](images/200/Picture20.png)
+
+    ** Sample flow where the amount was low and did not require further approval. **
 
