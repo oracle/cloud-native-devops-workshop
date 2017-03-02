@@ -59,9 +59,9 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-5.png)
 
-### **STEP 2**: Check/Set Storage Replication Policy
+### **STEP 2**: OPTIONAL Check/Set Storage Replication Policy
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+If you are using your **own Trial Account**, and you did **not follow** the steps in the **Student Guide** for setting your **replication policy**, you will need to complete this step. If this is an Oracle Workshop account loaned to you, your replication policy is already set, and you can **skip to the next step**. 
 
 - Click on the **Storage** Cloud Service
 
