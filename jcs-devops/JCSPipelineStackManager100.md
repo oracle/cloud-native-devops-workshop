@@ -1,6 +1,6 @@
 
 ![](images/100/Picture100-title.png)  
-Update: February 24, 2017
+Update: March 2, 2017
 
 ## Introduction
 
@@ -174,7 +174,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ## Create Issues for the Opperations Pipeline
 
-### **STEP 8:** Create and Issue for the initial GIT Repository Creation
+### **STEP 8:** Create Issue for the initial GIT Repository Creation
 
 In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
 
