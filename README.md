@@ -28,45 +28,6 @@ The content contains several independent modules that cover different aspects of
 
 ### [Oracle Cloud](https://cloud.oracle.com) ###
 
-### Product Documentation ###
-
-#### Mobile Cloud Services ####
-##### Developement #####
-+ [Creating Mobile API](https://docs.oracle.com/en/cloud/paas/mobile-cloud/mcsua/creating-apis-fast-express-api-designer.html)
-+ [Utilizing Mobile Accelerator (MAX)](mcs/max.md)
-
-##### Interaction #####
-+ [Testing Mobile Application on built-in Simulator](mcs/simulator.md)
-+ [Testing on Real Device](mcs/deployment.md)
-
-#### Process Cloud Service ####
-
-
-
-##### Business Process Definition 
-+ [Composer](pcs/process.composer.md)
-+ [Process Definition](pcs/process.definition.md)
-+ [Process Testing](pcs/process.testing.md)
-+ [Process Deployment](pcs/process.deployment.md)
-+ [Process Administration](pcs/process.deployment.md)
-
-##### End User Interaction 
-+ [Workspace](pcs/process.workspace.md)
-+ [Task List](pcs/process.tasklist.md)
-+ [Process Owner Tracking](pcs/process.tracking.md)
-+ [Administration](pcs/process.admin.md)
-+ [Other Cloud Services Integration](pcs/process.admin.md)
-
-#### Integration Cloud Service ####
-
-##### Integration Definition  
-+ [Defining Connection](pcs/ics.defining.md)
-+ [Creating Integration Flow](ics/ics.creation.md)
-
-##### Monitoring
-+ [Deployment](ics/ics.deployment.md)
-+ [Monitoring](ics/ics.monitoring.md)
-
 ---
 
 ## [Contributing](CONTRIBUTING.md)

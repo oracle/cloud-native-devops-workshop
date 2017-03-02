@@ -220,6 +220,8 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 
 - Logout as Julie Jones, and log into the Process Workspace as Mr X.
 
+#### Tracking instances
+
 - Click **Instance Tracking** to access the List of Instances
 
     ![](images/200/Picture13.png)  
@@ -246,7 +248,7 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 
     ![](images/200/Picture19.png)
 
-    - Diagram : See the process as a diagram to quickly see what happened
+    - Graphical View : See the process as a diagram to quickly see what happened
     - List: Trace through the steps the process followed
     - Tree: Expose the capability to drill into specific step to see what happened in a step
 
@@ -254,5 +256,110 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 
     ![](images/200/Picture20.png)
 
-    ** Sample flow where the amount was low and did not require further approval. **
+    *** Sample flow where the amount was low and did not require further approval. ***
+
+    This is just a high light working with process instances, but keep in mind that there are features embedded in PCS to makes life easier from a process owner's point of view. A good example might be to track instances in an error state and retry or even alter the flow to overcome the error condition.
+
+
+# 
+
+## Process Modeling and Configuration
+
+In this section we are going to experience the power of designing and implementing your own processes. Oracle PCS is based on the well documented BPMN specifications and lots of training, information and books exist around BPMN. A good starting point would be to look at *Object Management Group
+Business Process Model and Notation* [Quick start Guide](http://www.bpmn.org/#tabs-quickguide) 
+
+Don't be alarmed by the notation, it might seem overwhelming at first glance, PCS makes it easy to model and is intuitive in helping you to create a business process. 
+
+---
+
+### **STEP 1**: PCS Composer
+
+---
+
+**Role: Mr X, Process Owner**
+
+![](images/personas/roger_frezia_sales_director.png)
+
+  Roger Frezia, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS. He is also not impressed by the high amount of the rule to determine if he should approve a quote.  We are going through the steps on how to implement a change in the process.
+  
+---
+
+- Follow the steps in the previous section **STEP 3: Login to Process Cloud Service** to sign into PCS, but this time using Roger Frezia sign on details.
+- On the welcome page, click on Develop Processes
+
+![](images/200/Picture21.png)
+
+- You will be presented with the PCS Composer home page
+
+    > The Process Cloud Composer URL display in you browser window can be booked marked, if you want to return to the Process Composer directly **https://process-domain/process.us2.oraclecloud.com/bpm/composer/faces/app/designer/homePage.jspx** (or, if you are a lazy, you can also get back to the process composer by using **https://process-domain/process.us2.oraclecloud.com/bpm/composer/**)
+
+- From this page you will be able to create a new Space, or even use a template to create a new process.
+
+    > An interesting exercise after the workshop, is to come back to the Create functionality and have a look at the QuickStart Apps available. You can also create a process and expose that as a QuickStart App template.
+
+![](images/200/Picture22.png)
+
+### **STEP 2**: Spaces
+
+---
+
+A space groups processes together, and also allows you to share a space with other users. 
+
+---
+
+- Click on the Touch The Cloud Space
+
+![](images/200/Picture23.png)
+
+- At the bottom of the left hand navigation panel, you will see the sharing options.
+
+![](images/200/Picture24.png)
+
+### **STEP 3**: Working with Applications
+
+---
+
+An Application contains all the defined artifacts, for example rules, integrations and processes to support this application.
+
+---
+
+In the next couple of steps we are going to extend the Quote to Order. To be safe, we are going to make a copy and use that to implement our changes.
+
+- Click on the Quote to Order Application hamburger menu and select Clone
+
+![](images/200/Picture25.png)
+
+- Give you clone a new name, by appending your name, and click Create, and leave the 'Open immediately' option on
+
+![](images/200/Picture26.png)
+
+- Now we have our clone ready to be changed, so let us proceed and implement our changes.
+
+![](images/200/Picture27.png)
+
+
+### **STEP 4**: Working with the Process Model
+
+- First step is to add the comment. Click on the process to open up the process model
+
+![](images/200/Picture28.png)
+
+- Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+
+![](images/200/Picture29.png)
+
+- Click on hamburger icon and select *Open Data Association*
+
+![](images/200/Picture30.png) 
+
+![](images/200/Picture31.png)
+
+- Now that we are in the Data Association page, we can assign the comment 
+
+![](images/200/Picture32.png)
+
+### **STEP 5**: Working with Rules
+
+
+
 
