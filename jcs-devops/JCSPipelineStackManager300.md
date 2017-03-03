@@ -1,6 +1,6 @@
 ![](images/300/Picture300-title.png)  
 
-Update: March 02, 2017
+Update: March 03, 2017
 
 ## Introduction
 
@@ -8,7 +8,7 @@ This is the third of several labs that are part of the **DevOps JCS Pipeline usi
 
 In the first lab (100), the Project Manager created a new project in the Developer Cloud Service, created and assigned tasks to the developers of this application. In this lab, you will assume the persona of Java Developer who will be tasked with making enhancements to the Alpha Office Product Catalog UI.
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
 - Access Developer Cloud Service
