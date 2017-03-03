@@ -8,7 +8,7 @@ This is the first of several labs that are part of the **Oracle Public Cloud Dev
 
 You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During this workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
-To log issues, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository.
+To log issues, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
 - Create Initial Project
