@@ -357,7 +357,7 @@ have received from Oracle and keep it handy.
 
 - click **Sign In** in the upper right hand corner of the browser
 
-    <img src="images/100/Picture100-1.png" />
+    <img src="images/100/Picture100-1.png" width="429" height="119" />
     <img src="images/2/image21.png" width="429" height="119" />
 
 - **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
