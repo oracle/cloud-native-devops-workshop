@@ -8,7 +8,7 @@ This is the third of several labs that are part of the **Oracle Cloud Native Mic
 
 In the previous lab (200), the Java Developer (Bala Gupta) created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+To log issues, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository.
 
 ## Objectives
 
