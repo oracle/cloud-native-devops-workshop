@@ -1,5 +1,5 @@
 ![](images/400/Picture400-title.png)  
-Update: Feburary 2, 2017
+Update: March 3, 2017
 
 ## Introduction
 
@@ -7,7 +7,7 @@ This is the fourth of several labs that are part of the **DevOps JCS Pipeline us
 
 In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view the Agile reports provided by the Oracle Developer Cloud Service
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
 - Access Developer Cloud Service

@@ -1,15 +1,15 @@
 
 ![](images/100/Picture100-title.png)  
-Update: February 24, 2017
+Update: March 3, 2017
 
 ## Introduction
 
-This is the first of several labs that are part of the **DevOps JCS Pipeline using Oracle Stack Manger workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Java Cloud Service (JCS) project that go through Infrastructure as Code and deployment of Struts application.
+This is the first of several labs that are part of the **DevOps JCS Pipeline using Oracle Stack Manger workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Java Cloud Service (JCS) project that goes through Infrastructure as Code and deployment of Struts application.
 
-You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
+You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to team memebers.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
 
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
 - Create Initial Project
@@ -174,7 +174,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ## Create Issues for the Opperations Pipeline
 
-### **STEP 8:** Create and Issue for the initial GIT Repository Creation
+### **STEP 8:** Create Issue for the initial GIT Repository Creation
 
 In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
 
