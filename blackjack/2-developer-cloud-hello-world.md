@@ -348,7 +348,7 @@ previous **activity** to Developer Cloud Service.
 this part of the exercise. Gather this information from the email you
 have received from Oracle and keep it handy.
 
-# Configure Your Storage Replication Policy
+## Configure Your Storage Replication Policy
 
 ### Login to your Oracle Cloud Account
 - From any browser, go to the URL:
