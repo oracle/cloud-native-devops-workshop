@@ -367,33 +367,33 @@ have received from Oracle and keep it handy.
 
 **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
 
-<img src="images/100/Picture100-3.png" />
+<img src="images/2/Picture100-3.png" />
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-<img src=images/100/Picture100-3.5.png />
+<img src=images/2/Picture100-3.5.png />
 
 - You will be presented with a Dashboard displaying the various cloud services available to this account.
-<img src=images/100/Picture100-4.png />
+<img src=images/2/Picture100-4.png />
 
 - If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
 
-<img src=images/100/Picture100-5.png />
+<img src=images/2/Picture100-5.png />
 
 ### Check/Set Storage Replication Policy
 
 Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
 
 - Click on the **Storage** Cloud Service
-     <img src=images/100/Picture-01.png />
+     <img src=images/2/Picture-01.png />
 
 - Click on the **Open Service Console** icon at the top of the screen.
 
-     <img src=images/100/Picture-01.5.png />
+     <img src=images/2/Picture-01.5.png />
 
 - If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
 
-    <img src="images/100/Picture-02.5.png />
+    <img src="images/2/Picture-02.5.png />
 
 - Your replication policy is now set, and you can close your browser window.
 
