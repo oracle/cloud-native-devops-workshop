@@ -348,79 +348,54 @@ previous **activity** to Developer Cloud Service.
 this part of the exercise. Gather this information from the email you
 have received from Oracle and keep it handy.
 
-### Selecting a Replication Policy for Your Service Instance
+## Configure Your Storage Replication Policy
 
-1.  In a Firefox browser, navigate to <https://cloud.oracle.com/home>.
+### Login to your Oracle Cloud Account
+- From any browser, go to the URL:
+`https://cloud.oracle.com`
 
-2.  Click the **Sign In** button.
+- click **Sign In** in the upper right hand corner of the browser
 
-    <img src="images/2/image21.png" width="429" height="119" />
+    <img src="images/2/Picture100-1.png" width="429"height="119" />
 
-3.  Select the Data Center and click the **My Services** button (the
-    Data Center name is available in the email sent by Oracle).
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
-    <img src="images/2/image22.png" width="429" height="223" />
+<img src="images/2/Picture100-2.png" />
 
-4.  Enter the Identity Domain name and click the **Go** button (the
-    Identity Domain name is available in the email sent by Oracle).
+- Select your identity domain and click **Go**.
 
-    <img src="images/2/image23.png" width="347" height="226" />
+**NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
 
-5.  In the next screen, enter the username and the password and click
-    the **Sign In** button (login credentials are available in the email
-    sent by Oracle).
+- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-    <img src="images/2/image24.png" width="353" height="269" />
+    <img src="images/2/Picture100-3.5.png" />
 
-6.  On successfully logging in, we can see the **Identity Domain Name**
-    and the **Username** on the Welcome page.
+- You will be presented with a Dashboard displaying the various cloud services available to this account.
 
-    <img src="images/2/image25.png" width="430" height="173" />
+    <img src="images/2/Picture100-4.png" />
 
-7.  Look for **Storage**
+- If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
 
-8.  Click **Storage**. Alternatively, select **View Details** from
-    the **Actions** <img src="images/2/image26.gif" width="28" height="24" /> menu.
+    <img src="images/2/Picture100-5.png" />
 
-    The **Service Details** page appears. You can see the details of your
-    Oracle Storage Cloud Service account here.
+### Check/Set Storage Replication Policy
 
-    -   If you see the warning, **Set Replication Policy**, you must select
-    a replication policy as described here.
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
 
-        <img src="images/2/image27.png" width="380" height="142" />
+- Click on the **Storage** Cloud Service
+    <img src="images/2/Picture-01.png" />
 
-    -   If you don’t see the **See Replication Policy** warning, skip this
-    procedure and proceed with **Activating Developer Cloud Service**.
+- Click on the **Open Service Console** icon at the top of the screen.
 
-9.  From the Actions <img src="images/2/image26.gif" width="28" height="24" /> menu,
-    select Set Replication Policy.
+    <img src="images/2/Picture-01.5.png" />
 
-    The **Set Replication Policy** dialog box appears. It displays the
-    available data centers and replication policies for your Oracle
-    Storage Cloud Service instance. 
+- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
 
-    <img src="images/2/image28.png" width="415" height="168" />
+    <img src="images/2/Picture-02.5.png" />
 
-    **Note:** For your service instance, you may see a list of
-    georeplication policies that's different from the list displayed in the
-    example screenshot.
+- Your replication policy is now set, and you can close your browser window. 
 
-10. Select a replication policy for your service instance as per
-    your requirement.
 
-11. After selecting a replication policy, click **Set**.
-
-    The **Confirm Replication Policy Selection** dialog box appears.
-
-    <img src="images/2/image29.png" width="377" height="150" />
-
-12. Verify the selected replication policy details in the **Confirm
-    Replication Policy Selection** dialog box. Click **Confirm**.
-
-13. The following message is displayed in the **Service Details** page:
-
-    **Set replication policy successfully.**
 
 ### Verifying the Replication Policy Selected for Your Service Instance through the My Services Portal
 
