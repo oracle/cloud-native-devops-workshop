@@ -405,11 +405,11 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
     ![](images/200/Picture65.png)  
 
-- If your JRE release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
+- If your **Execution Environment JRE** release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
 
     ![](images/200/Picture65.5.png)  
 
-- If the JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
+- If the Execution Environment JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
 
     ![](images/200/Picture66.png)   
 
@@ -443,7 +443,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture71.png)  
 
-- Scroll down to the bottom of the **Create Filter on Twitter Feed** window. In the Actions section, and change the Actions to **Accept (change status to ASSIGNED)**, then click on **Submit**.
+- Scroll down to the bottom of the **Create Filter on Twitter Feed** window. In the Actions section, and change the **Actions** to **Accept (change status to ASSIGNED)**, then click on **Submit**.
 
     ![](images/200/Picture72.2.png)  
 
