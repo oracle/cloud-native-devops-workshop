@@ -7,7 +7,7 @@ This is the second of several labs that are part of the **Oracle Cloud DevOps Cl
 
 In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+To log issues, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
 
