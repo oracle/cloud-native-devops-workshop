@@ -347,6 +347,8 @@ previous **activity** to Developer Cloud Service.
 **Note:** The cloud login credentials and link are required to perform
 this part of the exercise. Gather this information from the email you
 have received from Oracle and keep it handy.
+
+
 # Configure Your Storage Replication Policy
 
 ### Login to your Oracle Cloud Account
@@ -394,21 +396,9 @@ Depending on the state of your Cloud Account, you may need to set the replicatio
 
     ![](images/100/Picture-02.5.png)
 
-- Your replication policy is now set, and you can close your browser window. 
+- Your replication policy is now set, and you can close your browser window.
 
-# Virtual Box Client Installation
 
-As an alternative to installing Eclipse, Brackets and Git on your laptop, you can follow these steps to download a Virtual Box image that will contain all those products pre-integrated together.
-
-### Hardware Requirements
-
-- You will need a machine capable of running the wokrshop image within Oracle Virtual Box (MAC or PC / Minumum of 50GB of free storage / 8GB RAM)
-
-- You will need full Administrator privileges on your machines, and in some cases will need to set Hardware Virtualization in the BIOS.
-
-- Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
-
-- The latest version of Virtual Box should be installed and tested prior to the workhop.
 
 ### Selecting a Replication Policy for Your Service Instance
 
