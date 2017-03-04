@@ -38,13 +38,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
     ![](images/200/Picture11.png)  
 
-### **STEP 2**: Show Microservices Board
-
-- If the **Microservices** list is not displayed as shown below, then click on the **Board Dropdown**, select **All**, and click on **Microservices**.
-
-    ![](images/200/Picture12.png)  
-
-### **STEP 3**: Display the Active Sprint
+### **STEP 2**: Display the Active Sprint
 
 - On the **Microservices** Board, click **Active Sprints**
 
@@ -52,7 +46,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Create Initial Git Repository
 
-### **STEP 4**: Create Initial Git Repository
+### **STEP 3**: Create Initial Git Repository
 
 To begin development on our Twitter feed microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Bala Gupta) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
 
@@ -74,7 +68,7 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
 - In the left hand navigation panel, click **Project**
 
-- On the right side under **REPOSITORIES** click on **New Repository** to create a new Git Repository.
+- On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
 
     ![](images/200/Picture17.png)  
 
@@ -90,17 +84,17 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
     ![](images/200/Picture18.2.png)  
 
-- You have now created a new GIT repository based on an existing repository.
+- You have now created a new GIT repository stored within the Developer Cloud Services that is based on an existing repository.
 
     ![](images/200/Picture19.png)  
 
 ## Create Default Build and Deployment Process
 
-### **STEP 5**: Create Default Build Process
+### **STEP 4**: Create Default Build Process
 
 Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
-- On navigation panel, click **Build** to access the build page and click **New Job**.
+- On the left side navigation panel, click **Build** to access the build page and click **New Job**.
 
     ![](images/200/Picture20.png)  
 
@@ -147,19 +141,19 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click **Save** to complete the configuration.
 
-- Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds or more, but the status will change to the following:
+- Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
     ![](images/200/Picture29.png)  
 
-  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. Wait for the build to complete before continuing to the next step, as we need the build artifact to complete the deployment configuration.
+  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
 
 - After the build begins, you can also click on the **Console Icon** to monitor the build log details.
 
     ![](images/200/Picture30.png)  
 
-### **STEP 6**: Create Default Deployment Process
+### **STEP 5**: Create Default Deployment Process
 
-Now that we have successfully built our project, we need to create a deployment configuration that will watch for stable builds and deploy them to a new Application Container Cloud Service instance for testing.
+Now that you have successfully built your project, you need to create a deployment configuration that will watch for stable builds and deploy them to a new Application Container Cloud Service instance for testing.
 
 - On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**.
 
@@ -223,11 +217,13 @@ Now that we have successfully built our project, we need to create a deployment 
 
 ## Verify Twitter Feed Microservice deployment
 
-### **STEP 7**: Change status to Verified
+### **STEP 6**: Change status to Verified
 
 Now that we have successfully deployed the build artifact to the Application Container Cloud Service, we will update our agile board to reflect that status. Although the complexity of the next task (verification) is quite simple, we will still move the task to the “Verify Code” column before manually verifying the new functionality.
 
-- On navigation panel click **Agile**, followed by clicking **Active Sprints**. Drag and drop **Task 1** from **In Progress** to the **Verify Code** column.
+- On navigation panel click **Agile**, followed by clicking **Active Sprints**. 
+
+- Drag and drop **Task 1** from **In Progress** to the **Verify Code** column.
 
     ![](images/200/Picture39.2.png)  
 
@@ -243,15 +239,13 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/200/Picture41.3.png)  
 
-### **STEP 8**: Login to Oracle Application Container Cloud Service
+### **STEP 7**: Login to Oracle Application Container Cloud Service
 
 - Return to the Developer Service Cloud Dashboard tab if it’s still available, then select the Dashboard icon to return to the Oracle Public Cloud Dashboard. Note: It’s possible that you may be required to once again login, if the session has expired.
 
     ![](images/200/Picture42.png)  
 
-- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  
-
-    ![](images/200/PictureHamburger.png) menu to the right of the **Application Container** service. Then select **Open Service** Console
+- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu to the right of the **Application Container** service. Then select **Open Service** Console. Note: If the **Application Container** service is not visible, it can be added using the Customize Dashboard button. 
 
     ![](images/200/Picture43.png)  
 
@@ -266,7 +260,7 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/200/Picture45.png)  
 
-### **STEP 9**: Complete Task
+### **STEP 8**: Complete Task
 
 We have now verified that the statictweets microservice has been deployed and functions properly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
 
@@ -299,7 +293,7 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ## Clone Project to Eclipse IDE
 
-### **STEP 10**: Load Eclipse IDE
+### **STEP 9**: Load Eclipse IDE
 
 In the following task we will provide screen shots taken from the optional virtual box image provided with the workshop. If you are using Eclipse and Brackets on you local hardware, your screens may vary slightly.
 
@@ -313,7 +307,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture51.png)  
 
-### **STEP 11**: Create connection to Oracle Developer Cloud Service
+### **STEP 10**: Create connection to Oracle Developer Cloud Service
 
 - We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options **Window -> Show View ->Other**  
 
@@ -348,7 +342,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture57.png)  
 
-### **STEP 12**: Create a local clone of the repository
+### **STEP 11**: Create a local clone of the repository
 
 - **Expand Developer**, and then **double click** on **Twitter Feed Marketing Project** to activate the project.
 
@@ -371,7 +365,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture62.png)  
 
-### **STEP 13**: Import Projects
+### **STEP 12**: Import Projects
 
 - ***If projects were NOT imported*** into your Project Explorer, as is show in the screen capture below, perform this step. If **TwitterFeedMicroService** was imported, go to the next step.
 
@@ -391,7 +385,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture62.3.png)
 
-### **STEP 14**: Select the correct Java JDE
+### **STEP 13**: Select the correct Java JDE
 
 Depending on your eclipse configuration, you may need to point the project's Java Runtime Environment to a different JRE than the default. (e.g. with the Workshop's companion Virtual Box Image). In this step you will first check to see if your environment is correctly set. If the JRE is not correct, you will configure the Project Settings to point to the correct JRE.
 
@@ -411,11 +405,11 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
     ![](images/200/Picture65.png)  
 
-- If your JRE release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
+- If your **Execution Environment JRE** release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
 
     ![](images/200/Picture65.5.png)  
 
-- If the JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
+- If the Execution Environment JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
 
     ![](images/200/Picture66.png)   
 
@@ -441,7 +435,7 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
 ## Test the Local Cloned Services
 
-### **STEP 15**: Set Feature 2 Status to In Progress
+### **STEP 14**: Set Feature 2 Status to In Progress
 
 In the previous steps we updated the status of the Tasks assigned to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
 
@@ -449,7 +443,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture71.png)  
 
-- Scroll down to the bottom of the **Create Filter on Twitter Feed** window. In the Actions section, and change the Actions to **Accept (change status to ASSIGNED)**, then click on **Submit**.
+- Scroll down to the bottom of the **Create Filter on Twitter Feed** window. In the Actions section, and change the **Actions** to **Accept (change status to ASSIGNED)**, then click on **Submit**.
 
     ![](images/200/Picture72.2.png)  
 
@@ -457,7 +451,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture73.2.png)  
 
-### **STEP 16**: Build and test the TwitterFeedMicroservice
+### **STEP 15**: Build and test the TwitterFeedMicroservice
 
 - **Right Click** on the **TwitterFeedMicroservice** project. Select **Maven > Update Project**
 
@@ -479,7 +473,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
 The Code we cloned locally contains all the source necessary to filter the Static Twitter Feed. In this section of the lab, we will un-comment the code and test the filter.
 
-### **STEP 17**: Add Filter
+### **STEP 16**: Add Filter
 
 - In the Project Explorer, **expand** the **TwitterFeedMicroservice > src/main/java > com.example** and **double click** on **StaticTweets.java** to open the source code.
 
@@ -507,7 +501,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 ## Test the Local Filtered Services
 
-### **STEP 18**: Run Test
+### **STEP 17**: Run Test
 
 - Run the Test by right clicking on **TwitterFeedMicroservice** and selecting **Run As > Maven Test**
 
@@ -537,7 +531,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 - Click on the **Finish button** in the Push Confirmation dialog
 - Click on **Ok** in Push Result dialog
 
-### **STEP 19**: Complete the Create Filter Task
+### **STEP 18**: Complete the Create Filter Task
 
 - In the lower left Eclipse Task List, double click on **Create Filter on Twitter Feed** task
 
@@ -549,7 +543,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 ## Create Merge Request
 
-### **STEP 20**: Review Sprint Status and create Merge Request
+### **STEP 19**: Review Sprint Status and create Merge Request
 
 - Return to the Developer Cloud Service Dashboard in the browser, and select **Agile**. If your default Board is not set to Microservices, then set the Find Board Filter to All, and select the Microservices board.
 
@@ -594,7 +588,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 In the following steps “Lisa” will merge the branch create by “Bala” into the master.
 
-### **STEP 21**: Merge Requests
+### **STEP 20**: Merge Requests
 
 ![](images/lisa.png)  
 
@@ -632,7 +626,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ## Test the JavaTwitterMicroservice in the Cloud
 
-### **STEP 22**: Test Microservice
+### **STEP 21**: Test Microservice
 
 - Once the service has successfully deployed, click **Deploy** in the left-hand menu and click on the **JavaTwitterMicroservice** link
 
@@ -672,7 +666,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 You have two options for managing this code change in the version control system. If you would like more practice with the multi-user workflow, you can start a new branch for this feature, commit to that branch, create a merge request, and approve the merge. We’ll refer to this in the instructions as **Method A**. If you’re comfortable with that workflow, you can switch to master in your local repository, pull the latest revision from the cloud, and commit and push directly to master for this exercise. This will be **Method B**.
 
-### **STEP 23**: Create New Twitter App
+### **STEP 22**: Create New Twitter App
 
 To generate the unique twitter credentials for our microservices, we need to sign in to twitter and create a new application for this project, then generate access tokens for it.
 
