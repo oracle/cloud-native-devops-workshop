@@ -501,7 +501,7 @@ The Code we cloned locally contains all the source necessary to filter the Stati
 
 ## Test the Local Filtered Services
 
-### **STEP 17**: Run Test
+### **STEP 17**: Run Test and Create Branch
 
 - Run the Test by right clicking on **TwitterFeedMicroservice** and selecting **Run As > Maven Test**
 
