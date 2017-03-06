@@ -86,11 +86,11 @@ Each step identify the role, and what the user in the specific role try to achie
 
 - Create a new snapshot to deploy
 
-![](images/400/Pictures9.png)
+![](images/400/Picture9.png)
 
 - Click on Deploy
 
-![](images/400/Pictures10.png)
+![](images/400/Picture10.png)
 
 
 
