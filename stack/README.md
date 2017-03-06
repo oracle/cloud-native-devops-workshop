@@ -46,7 +46,7 @@ Click **Next** and select *Initial Repository* as template.
 
 ![](images/04.select.template.png)
 
-Click **Next** and on the Properties page select *MARKDOWN* as Wiki Markup and select *Import existing repository* to copy existing repository in this new project. Enter or copy the *https://github.com/oracle-weblogic/cloud-native-XWeeks.git* repository address.
+Click **Next** and on the Properties page select *MARKDOWN* as Wiki Markup and select *Import existing repository* to copy existing repository in this new project. Enter or copy the *https://github.com/oracle/cloud-native-devops-workshop.git* repository address.
 
 ![](images/05.import.repository.png)
 
