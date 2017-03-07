@@ -28,7 +28,7 @@ Each step identify the role, and what the user in the specific role try to achie
 
 ---
 
-**Role: John Lee, Field Sales**
+**Role: Bala Gupta, Field Sales**
 
 ![](images/personas/john_lee_field_sales.png)
 
@@ -40,7 +40,7 @@ On either your mobile phone, or in the Simulator in MCS, go ahead and create a Q
 
 ---
 
-**Role: John Lee, Field Sales**
+**Role: Bala Gupta, Field Sales**
 
 ![](images/personas/john_lee_field_sales.png)
 
@@ -48,7 +48,7 @@ PCS supports the use of forms to submit data to be used as input for a process.
 
 ---
 
-Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***John's*** credentials instead of Julie's.
+Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** credentials instead of Julie's.
 
 - On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
 
@@ -98,7 +98,7 @@ Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Ora
 
 ---
 
-**Role: Julie Jones, Field Sales**
+**Role: Lisa Jones, Field Sales**
 
 ![](images/personas/julie_jones_sales_operations.png)
 
@@ -106,7 +106,7 @@ Since it is Julie's first time signing into Oracle Cloud, she has to figure out 
 
 ---
 
-Now we can login as Julie Jones. From any browser, **go to the following URL**:
+Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 [https://cloud.oracle.com](https://cloud.oracle.com)
 
 - Click **Sign In** in the upper right hand corner of the browser.
@@ -147,7 +147,7 @@ Now we can login as Julie Jones. From any browser, **go to the following URL**:
 
 ---
 
-**Role: Julie Jones, Field Sales**
+**Role: Lisa Jones, Field Sales**
 
 ![](images/personas/julie_jones_sales_operations.png)
 
@@ -163,7 +163,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
     ![](images/200/Picture8.png)  
 
-- The  PCS Landing page gives you a quick glance of the functionality available to you (or in this case Julie Jones).
+- The  PCS Landing page gives you a quick glance of the functionality available to you (or in this case Lisa Jones).
 
 >![](images/200/workspace_home-_-admin.png)
 
@@ -173,7 +173,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 ---
 
-**Role: Julie Jones, Field Sales**
+**Role: Lisa Jones, Field Sales**
 
 ![](images/personas/julie_jones_sales_operations.png)
 
@@ -208,17 +208,17 @@ Julie wants to look at her outstanding tasks, and approve the incoming Quote req
 
 ---
 
-**Role: Mr X, Process Owner**
+**Role: Roland Dubois, Process Owner**
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roger Frezia, sales director and process owner wants to see what happened to our process we have approved in the previous step. Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
+  Roland Dubois, sales director and process owner wants to see what happened to our process we have approved in the previous step. Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
 
   This audit information can also be exported and use for debugging or as input for on-premise systems.
   
 ---
 
-- Logout as Julie Jones, and log into the Process Workspace as Mr X.
+- Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois.
 
 #### Tracking instances
 
@@ -276,15 +276,15 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ---
 
-**Role: Mr X, Process Owner**
+**Role: Roland Dubois, Process Owner**
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roger Frezia, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS. He is also not impressed by the high amount of the rule to determine if he should approve a quote.  We are going through the steps on how to implement a change in the process.
+  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS. He is also not impressed by the high amount of the rule to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is higher, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
   
 ---
 
-- Follow the steps in the previous section **STEP 3: Login to Process Cloud Service** to sign into PCS, but this time using Roger Frezia sign on details.
+- Follow the steps in the previous section **STEP 3: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois sign on details.
 - On the welcome page, click on Develop Processes
 
 ![](images/200/Picture21.png)
@@ -359,6 +359,32 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture32.png)
 
 ### **STEP 5**: Working with Rules
+
+- Back on the process model, click on the Approval Decision and select Open Decision
+
+![](images/200/Picture33.png)
+
+- Select the row ApprovalRule.in.limit
+
+![](images/200/Picture34.png)
+
+- Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
+
+![](images/200/Picture35.png)
+
+- Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
+
+![](images/200/Picture36.png)
+
+- Click on Done
+
+- You will see the rules now display a more readable rules set
+
+![](images/200/Picture37.png) 
+
+> Remember that this rule change would only be applied after deployment of the application.
+
+ 
 
 
 
