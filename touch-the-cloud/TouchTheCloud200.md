@@ -329,7 +329,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture25.png)
 
-- Give you clone a new name, by appending your name, and click Create, and leave the 'Open immediately' option on
+- Give you clone a new name, by appending your name (Pieter in this example), and click Create, and leave the 'Open immediately' option on
 
 ![](images/200/Picture26.png)
 
@@ -364,7 +364,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture33.png)
 
-- Select the row ApprovalRule.in.limit
+- Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
 
 ![](images/200/Picture34.png)
 
@@ -384,7 +384,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 > Remember that this rule change would only be applied after deployment of the application.
 
- 
+
 
 
 
