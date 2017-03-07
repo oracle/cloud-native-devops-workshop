@@ -325,7 +325,7 @@ Developer Cloud Service.
 
     -   Click Add Build Step and select Invoke Maven 3.
     -   Set the **Goals** to: clean package.
-    -   Set the **POM File** location to: Helloworld-Example/pom.xml
+    -   Set the **POM File** location to: blackjack-part2/pom.xml
 
     <img src="images/3/image32.png" width="397" height="171" />
     <img src="images/3/image33.png" width="397" height="216" />
