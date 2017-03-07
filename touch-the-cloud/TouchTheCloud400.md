@@ -88,9 +88,34 @@ Each step identify the role, and what the user in the specific role try to achie
 
 ![](images/400/Picture9.png)
 
-- Click on Deploy
+- Click on Test
 
 ![](images/400/Picture10.png)
+
+- Go ahead and do the deployment of your changed application, by clicking on the bottom deploy icon
+
+![](images/400/Picture11.png)
+
+- Add yourself to all the roles, to allow you to act as all the different roles in the process flow.
+
+![](images/400/Picture12.png)
+
+![](images/400/Picture13.png)
+
+- After the deployment completed, go back to the PCS Workspace, and then Dashboards. 
+
+- Select the Business Analytics Tab
+
+- Create a new report, with the following values
+
+![](images/400/Picture14.png)
+
+- Click on Untitled, and change the report name to Total Quotes per Week and click on save
+
+  Under the Reports section, you will see an entry for your report. The last step is to generate some information to be displayed in the report. To do this we have to start a couple of processes. See **Lab 200** **STEP 1 (Optional)** on a sample on how to create a couple of instances of your newly deployed application.
+
+  Go ahead and create a couple of instances, and see how the report reflect the capture metrics in the process.
+
 
 
 
