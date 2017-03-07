@@ -112,6 +112,8 @@ Each step identify the role, and what the user in the specific role try to achie
 
 - Click on Untitled, and change the report name to Total Quotes per Week and click on save
 
+![](images/400/Picture15.png)
+
   Under the Reports section, you will see an entry for your report. The last step is to generate some information to be displayed in the report. To do this we have to start a couple of processes. See **Lab 200** **STEP 1 (Optional)** on a sample on how to create a couple of instances of your newly deployed application.
 
   Go ahead and create a couple of instances, and see how the report reflect the capture metrics in the process.
