@@ -34,7 +34,7 @@ the blackjack card game.
       -  Maven  
       -  JDK 8
 
-2.  Please follow the instruction in [PART I](1-local-windows-setup.md) of the Lab Guides prior to attempting the Labs.
+2.  Please follow the instruction in PART I ([Windows](1-local-windows-setup.md) or [Mac](1-local-mac-setup.md)) of the Lab Guides prior to attempting the Labs.
 
 ## How to View the Lab Guides
 
@@ -43,14 +43,16 @@ the blackjack card game.
 
 **Reference the following Lab Guides by opening the lab guides:**
 
-- [PART I: Local Development Environment Setup](1-local-windows-setup.md)
+- PART I: Local Development Environment Setup [Windows](1-local-windows-setup.md) or [Mac](1-local-mac-setup.md)
 - [PART II : Test and Build Helloworld App on Oracle Developer Cloud](2-developer-cloud-hello-world.md)
 - [PART III: Test, Build and Deploy the BlackJack Web Service App](3-developer-cloud-blackjack.md)
 - [PART IV: Deploy the BlackJack WebService App Directly to Oracle Application Container Cloud](4-acc-deploy.md)
 
 ## Lab Summary
 
-### [PART I: Local Development Environment Setup](1-local-windows-setup.md)
+### PART I: Local Development Environment Setup
+
+Instructions for [Windows](1-local-windows-setup.md) or [Mac](1-local-mac-setup.md).
 
 You must download and create a local development environment on your
 personal device to setup a Git and Maven environment so that you can
