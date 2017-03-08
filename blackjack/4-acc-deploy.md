@@ -110,7 +110,7 @@ local/remote server.
 
 Use the following instructions to test the BlackJack application.
 
-1.  Open Windows Explorer and navigate to the **cloud >
+1.  Open a graphical file explorer and navigate to the **cloud >
     BlackJack > html5-client** directory.
 
 2.  Open the index.html file with a browser.

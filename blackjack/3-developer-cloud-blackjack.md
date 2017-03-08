@@ -9,7 +9,7 @@
 Use the following instructions to deploy the BlackJack application to
 Apache Tomcat Server bundled with the project.
 
-1.  Open Windows Explorer and navigate to the **cloud** directory.
+1.  Open a graphical file explorer and navigate to the **cloud** directory.
 
 2.  Inside the **cloud** directory, create a directory named
     **BlackJack** and copy the **BlackJack.zip** file that you
@@ -69,7 +69,7 @@ local/remote server.
 
 Use the following instructions to test the BlackJack application.
 
-1.  Open Windows Explorer and navigate to the **cloud >
+1.  Open a graphical file explorer and navigate to the **cloud >
     BlackJack > html5-client** directory.
 
 2.  Open the index.html file with a browser.
@@ -109,7 +109,7 @@ Use the following instructions to create an application archive.
 
     <img src="images/3/image8.png" width="165" height="192" />
 
-3.  Open Windows Explorer, navigate to **cloud > BlackJack >
+3.  Open a graphical file explorer, navigate to **cloud > BlackJack >
     blackjack-part2**, and make a note of the directory structure and
     its contents.
 
@@ -413,7 +413,7 @@ local/remote server.
 
 Use the following instructions to test the BlackJack application.
 
-1.  Open Windows Explorer and navigate to the **cloud >
+1.  Open a graphical file explorer and navigate to the **cloud >
     BlackJack > html5-client** directory.
 
 2.  Open the index.html file with a browser.
@@ -435,5 +435,3 @@ Use the following instructions to test the BlackJack application.
 
 This HTML5 Client application interacts with the BlackJack gaming
 application deployed on OACCS on cloud.
-
-

@@ -13,6 +13,9 @@ next activity, **Creating a GIT Repository**.
     8.1\\java\\maven\\conf\\settings.xml file with a text editor
     like Notepad++.
 
+    **Note:** On a Mac the settings.xml file can be found at
+    /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml
+
 2.  Add the following lines under the <proxies> tag:
 
     ```xml
@@ -32,12 +35,14 @@ next activity, **Creating a GIT Repository**.
 **Note:** If you are facing problems in editing the settings.xml file,
 save a copy of the settings.xml file to some other location, modify it,
 and then put it back in to C:\\Program Files\\NetBeans
-8.1\\java\\maven\\conf\\ directory.
+8.1\\java\\maven\\conf\\ (Windows) or /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) directory.
 
 ### Proxy Settings for Maven
 
 1.  Open the C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml file with
     a text editor like Notepad++.
+
+    **Note:** On a Mac the settings.xml can be found at /Applications/apache-maven-3.3.9/conf/settings.xml
 
 2.  Add the following lines under the <proxies> tag:
 
@@ -60,7 +65,7 @@ and then put it back in to C:\\Program Files\\NetBeans
 As part of this activity, you will learn to create and initialize a
 local GIT repository under user’s home directory.
 
-1.  Open Git Bash from the Windows **Start** menu.
+1.  Open Git Bash from the Windows **Start** menu or open a terminal window if using a Mac.
 
 2.  In your home directory, create a **cloud** directory.
 
@@ -74,8 +79,8 @@ local GIT repository under user’s home directory.
 
         git init
 
-5.  The cloud directory is now a Git repository. Execute the ls –a
-    command to confirm the same. The output of the ls –a command must
+5.  The cloud directory is now a Git repository. Execute the `ls –a`
+    command to confirm the same. The output of the `ls –a` command must
     match the output in the following screenshot:
 
     <img src="images/2/image1.png" width="497" height="124" />
@@ -124,10 +129,9 @@ activities to store it in a local GIT repository, creating a project on
 DevCS, clone it with GIT repository on DevCS and then creating a Build
 Job for deployment.
 
-Use the following instructions to create a Maven project using
-Archetypes from GIT Bash.
+Use the following instructions to create a Maven project using Archetypes.
 
-1.  Open Git Bash from the Windows Start menu.
+1.  Open Git Bash from the Windows Start menu or open a terminal window if using a Mac.
 
 2.  Change to the cloud directory where your Git repository is stored.
 
@@ -267,22 +271,23 @@ Archetypes from GIT Bash.
 
     <img src="images/2/image10.png" width="406" height="152" />
 
-22. Switch to **Git Bash** and change the directory to Helloworld-Example.
+22. Switch to Git Bash(Windows) or terminal window(Mac) and change the
+    directory to Helloworld-Example.
 
         cd Helloworld-Example
 
     <img src="images/2/image11.png" width="395" height="100" />
 
-23. Execute the mvn clean compile command to clean and compile
+23. Execute the `mvn clean compile` command to clean and compile
     the project.
 
     <img src="images/2/image12.png" width="363" height="387" />
 
-24. Execute the mvn exec:java command to execute the application.
+24. Execute the `mvn exec:java` command to execute the application.
 
     <img src="images/2/image13.png" width="360" height="297" />
 
-25. Execute the mvn package command to package the application.
+25. Execute the `mvn package command` to package the application.
 
     <img src="images/2/image14.png" width="435" height="235" />
 
@@ -290,7 +295,7 @@ Archetypes from GIT Bash.
     created inside **cloud/helloworld/Helloworld-Example/target**
     directory.
 
-26. Execute the java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar
+26. Execute the `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar`
     command to run the packaged application.
 
     <img src="images/2/image15.png" width="454" height="120" />
@@ -302,30 +307,30 @@ in the local GIT repository.
 
 1.  Change into the cloud/helloworld directory.
 
-2.  Execute the git add –n . command to see the list of files that are
+2.  Execute the `git add –n .` command to see the list of files that are
     ready to be added to the repository.
 
     <img src="images/2/image16.png" width="408" height="102" />
 
     **Note:** Please notice that there is **.** at the end of the command.
 
-3.  Execute the git add . command to add the files to the repository.
+3.  Execute the `git add .` command to add the files to the repository.
 
     <img src="images/2/image17.png" width="408" height="102" />
 
-4.  Execute the git status command to check the files that are added.
+4.  Execute the `git status` command to check the files that are added.
 
     <img src="images/2/image18.png" width="408" height="106" />
 
-5.  Execute the git commit –m "Initial Commit for Helloworld-Example
-    Project" to commit the files to the repository and begin
+5.  Execute the `git commit –m "Initial Commit for Helloworld-Example
+    Project"` to commit the files to the repository and begin
     version tracking.
 
     <img src="images/2/image19.png" width="415" height="108" />
 
 6.  Your files are now checked in for version tracking.
 
-7.  Check the status of the repository by executing the git status command.
+7.  Check the status of the repository by executing the `git status command`.
 
     <img src="images/2/image20.png" width="415" height="84" />
 
@@ -351,49 +356,49 @@ have received from Oracle and keep it handy.
 ## Configure Your Storage Replication Policy
 
 ### Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-`https://cloud.oracle.com`
 
-- click **Sign In** in the upper right hand corner of the browser
+1. From any browser, go to the URL: <https://cloud.oracle.com>
 
-    <img src="images/2/Picture100-1.png" width="429"height="119" />
+2. Click **Sign In** in the upper right hand corner of the browser
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+    <img src="images/2/Picture100-1.png" width="429" height="119" />
 
-<img src="images/2/Picture100-2.png" />
+3. **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
-- Select your identity domain and click **Go**.
+    <img src="images/2/Picture100-2.png" />
 
-**NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
+4. Select your identity domain and click **Go**.
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
+
+5. Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
     <img src="images/2/Picture100-3.5.png" />
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+6. You will be presented with a Dashboard displaying the various cloud services available to this account.
 
     <img src="images/2/Picture100-4.png" />
 
-- If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
+7. If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
 
     <img src="images/2/Picture100-5.png" />
 
 ### Check/Set Storage Replication Policy
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy.
 
-- Click on the **Storage** Cloud Service
+1. Click on the **Storage** Cloud Service
     <img src="images/2/Picture-01.png" />
 
-- Click on the **Open Service Console** icon at the top of the screen.
+2. Click on the **Open Service Console** icon at the top of the screen.
 
     <img src="images/2/Picture-01.5.png" />
 
-- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
+3. If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
 
     <img src="images/2/Picture-02.5.png" />
 
-- Your replication policy is now set, and you can close your browser window. 
+4. Your replication policy is now set, and you can close your browser window.
 
 
 
