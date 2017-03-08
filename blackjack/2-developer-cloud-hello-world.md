@@ -42,7 +42,7 @@ and then put it back in to C:\\Program Files\\NetBeans
 1.  Open the C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml file with
     a text editor like Notepad++.
 
-    **Note:** On a Mac the settings.xml can be found at /Applications/apache-maven-3.3.9/conf/settings.xml
+    **Note:** On a Mac the settings.xml file can be found at /Applications/apache-maven-3.3.9/conf/settings.xml
 
 2.  Add the following lines under the <proxies> tag:
 
