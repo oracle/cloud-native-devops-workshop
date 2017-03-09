@@ -12,8 +12,11 @@ APM_PROP_FILE=${APM_AGENT_HOME}/config/AgentStartup.properties
 # then add them back in with the correct paths from APM_AGENT_HOME
 
 sed "/oracle.apmaas.common.pathTo/d" -i.orig ${APM_PROP_FILE}
+sed "/oracle.apmaas.agent.hostname/d" -i.orig ${APM_PROP_FILE}
+sed "/oracle.apmaas.agent.ignore.hostname/d" -i.orig ${APM_PROP_FILE}
 echo "oracle.apmaas.common.pathToCertificate = ${APM_AGENT_HOME}/config/emcs.cer" >> ${APM_PROP_FILE}
 echo "oracle.apmaas.common.pathToCredentials = ${APM_AGENT_HOME}/config/AgentHttpBasic.properties" >> ${APM_PROP_FILE}
+echo "oracle.apmaas.agent.ignore.hostname = true" >> ${APM_PROP_FILE}
 
 ls -l ${APM_AGENT_HOME}/config
 echo "${APM_PROP_FILE} contents:"
