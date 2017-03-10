@@ -25,7 +25,7 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 # Explore Integration Cloud Service
 
-## Login to Integration Cloud Service
+## Login and Explore the Oracle Cloud Dashboard
 
 ### **STEP 1**: Login to your Oracle Cloud account
 
@@ -88,7 +88,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 ## Explore the ICS Designer User Interface
 
-### **STEP 1:**	Open ICS Designer
+### **STEP 1:**	Open the ICS Designer
 
 ---
 
@@ -108,9 +108,15 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image009.png)  
 
-- Make note of the connections that have been created. Notice that there are three connections, one called *EBS 12cR2*, one called *EBS DB* and the other called *Inbound SOAP*.
+- Make note of the connections that have been created. Notice that there are three connections, one called *eBusiness Suite OPERATIONS*, one called *eBusiness Suite DB APPS* and the other called *Create Order*.
 
     ![](images/300/image010.png)  
+
+- Note that both *eBusiness Suite OPERATIONS*, and *eBusiness Suite DB APPS* are using the ICS Connectivity Agent.  You can identify this by the note that it has an associated agent group.  This agent allows ICS to call on-premise systems.
+
+    ![](images/300/image010a.png) 
+
+*(More information about the ICS Connectivity Agent will be given later)*
 
 ### **STEP 3:**	Explore ICS Integrations
 
