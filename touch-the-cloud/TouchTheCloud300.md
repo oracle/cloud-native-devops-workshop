@@ -1,12 +1,16 @@
 ![](images/300/HeaderImage.png)  
 
-Update: February 27, 2017
+Update: March 10, 2017
+
+# Lab 300 - Integration Cloud Service
+
+---
 
 ## Introduction
 
 This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
 
-In this lab, you will acquire a good overview of the next generation Oracle Integration Cloud Service (aka ICS). You will modify an integration to Oracle EBS. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service.
+In this lab, you will acquire a good overview of the Oracle Integration Cloud Service (ICS), then next generation integration platform. You will modify an integration to Oracle EBS. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service.
 
 Please direct comments to: John VanSant (john.vansant@oracle.com)
 
@@ -58,8 +62,23 @@ https://cloud.oracle.com
 
 The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**.
 
-- To look at the details for the Integration Cloud Service (ICS) instance, click on the `Integration` link.  The **Service Details** page will show various important details about the ICS service instances in this identity domain.
-- Select the `Open Service Console` link to go to the ICS Service Console.
+- To look at the details for the Integration Cloud Service (ICS) instance, first click on the `hamburger` icon, then click on the `View Details` link.
+
+   ![](images/300/image004a.png)
+
+- The `Service Details` pages will show various important details about the ICS service instances in this identity domain such as: uptime, service start and end dates, and your Oracle Cloud subscription ID.
+
+   ![](images/300/image004b.png)
+
+- Access to `Business Metrics` can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
+
+   ![](images/300/image004c.png)
+
+- The `Business Metrics` page will show the total number of messages that ICS has processed and the total number of active connections currently in the subscription.
+
+   ![](images/300/image004d.png)
+
+- After getting familiar with the Business Metrics, select the `Open Service Console` button to go to the ICS Service Console.  
 
     ![](images/300/image005.png)  
 
