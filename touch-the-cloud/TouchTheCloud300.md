@@ -142,7 +142,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image012.png)  
 
-- Open the integration “Create EBS Order” by clicking on the integration name.  We want to see what it looks like.  Since the integration is already active, we’ll be looking at it in “Viewing” mode.
+- Open the integration `Create EBS Order` by clicking on the integration name.  We want to see what it looks like.  Since the integration is already active, we’ll be looking at it in `Viewing` mode.
 
    ![](images/300/image012a.png)
 
@@ -158,7 +158,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image012c.png)
 
-- Try selecting the “Maximize” viewing control on the very right of the view control bar.  This will hide some of the detail on top of the screen to give the designer the most area to work in.  Hitting the “Maximize” button again will toggle that view.
+- Try selecting the `Maximize` viewing control on the very right of the view control bar.  This will hide some of the detail on top of the screen to give the designer the most area to work in.  Hitting the “Maximize” button again will toggle that view.
 
    ![](images/300/image012d.png)
 
