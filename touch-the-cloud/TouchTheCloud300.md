@@ -118,6 +118,18 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 *(More information about the ICS Connectivity Agent will be given later)*
 
+- Click on the `New Connection` button so we can see all the different ICS Connectors that are available.
+
+   ![](images/300/image010b.png)
+
+- Scroll through the list of connection types that are available in ICS:
+
+   ![](images/300/image010c.png)
+
+- Note that the icons with the plug are those that support the ICS Connectivity Agent for those service types which are not in the cloud, but on-premise, behind the company firewall.
+
+- When you are done browsing, select the “Cancel” button to dismiss the “Select an Adapter” dialog.
+
 ### **STEP 3:**	Explore ICS Integrations
 
 ---
@@ -129,6 +141,106 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 - Make note of the integrations that have been created. We will be working with the integration called *Create EBS Order*.
 
     ![](images/300/image012.png)  
+
+- Open the integration “Create EBS Order” by clicking on the integration name.  We want to see what it looks like.  Since the integration is already active, we’ll be looking at it in “Viewing” mode.
+
+   ![](images/300/image012a.png)
+
+- You can see that this orchestration has many steps in it.  The view of the orchestration is *Zoom to Fit* in the browser real estate.  In order to get a closer view of the individual steps, you can either scroll with your mouse wheel to zoom in and out, or you can use the *-/+*” slider in the top right of the designer.
+
+- Try zooming in and out by using both methods.  
+
+- If you get zoomed-in too close and want to pan, you’ll be able to move around the orchestration using the Pan window by clicking on the dark area and moving around.
+
+   ![](images/300/image012b.png)
+
+- Selecting the Home icon (the little house) the drawing gets reset to a zoomed in view with the orchestration trigger at the very top.
+
+   ![](images/300/image012c.png)
+
+- Try selecting the “Maximize” viewing control on the very right of the view control bar.  This will hide some of the detail on top of the screen to give the designer the most area to work in.  Hitting the “Maximize” button again will toggle that view.
+
+   ![](images/300/image012d.png)
+
+- Let’s look at some of the components of the integration.  Select the `Home` view button again to reset the view.
+
+- The component at the very top of the orchestration is the `Trigger`.  The trigger is representative of the connector that’s sending data into the integration.
+
+- If you hover over the Trigger node, you can see the details.  Our trigger is a SOAP connector type.  It is called *CreateOrder* and it is using the connection named *Create Order* that we looked at before in the Connection section of the ICS Designer.
+
+   ![](images/300/image012e.png)
+
+- If you click on the Trigger, a pop-up will appear with a view icon.  Select the little eye on the view icon so we can walk through the wizard that was used to setup the SOAP trigger.
+
+  ![](images/300/image012f.png)
+
+- After the wizard initializes, you’ll be shown the basic information about the trigger – it’s name and description.
+
+   ![](images/300/image012g.png)
+
+- Select the `Next` button to see the `Operations` that were configured for this SOAP Trigger.  Details like the Port Type, Operation, and request and response objects are shown.  In our case, no special SOAP headers were needed so that was set to `No`.
+
+   ![](images/300/image012h.png)
+
+- Select `“Next` again to see the `Summary` of the Trigger’s configuration.  The SOAP WSDL was uploaded to ICS when the connection was first configured, not in the wizard to configure the Trigger.
+
+   ![](images/300/image012i.png)
+
+- Select the `Close` button to dismiss the Trigger view wizard.
+
+- Let’s view the next node down in the integration.  This is an *Assign* node.  The job of this Assign activity is to initialize variables that will be used in the calls to be made to the eBusiness Suite.
+
+   ![](images/300/image012j.png)
+
+- The variables defined in this Assign activity are greyed-out because we are only viewing them.  Later on in this lab, we’ll de-activate the integration and all the values will be changeable.
+
+   ![](images/300/image012k.png)
+
+- Select the `Exit Assignments` button in the upper-left to go back to the view of the orchestration.
+
+- Back in the view of the orchestration we want to explore some of the nodes toward the bottom.  You can pan directly in the design window by clicking & holding the mouse button down in the background of the design palette, then you can pan up and down.
+
+   ![](images/300/image012l.png)
+
+- Pan down to the map called `createEBSOrder`.  Click on this map activity and select the view icon.  We are going to see the values that are mapped into EBS.
+
+   ![](images/300/image012m.png)
+
+- This is the most complex mapping in this integration because the EBS API we’re leveraging has thousands of attributes that can be passed.
+
+- What you’ll see in the mapper is the possible input variables on the left and the EBS inbound variables that can be mapped to on the right.  The values that have been mapped are shown to the right of the EBS inbound variables in the mapper.
+
+- In order to simplify this view, we want to `Filter` the Target variables.  Select the `Filter` button above the Target section and then select the radio button labeled `Mapped`, then select the `Apply` button.
+
+   ![](images/300/image012n.png)
+
+- Now we only see variables in the Target that have been mapped from a Source variable.  If you want to get a visual depiction of where a Target variable has been mapped from, select the little green checkbox to the very left of the Target variable.  This will make a line visible from the Source variable to the Target.
+
+   ![](images/300/image012o.png)
+
+- Note that the icon next to the `P_LINE_TBL_ITEM` has a double bar on top of it.  This indicates that it is a variable that can have multiple values in it (an array).  The ICS mapper automatically adds the `for-each(Lines)` function to that mapping so all possible order lines passed in from the Source will be mapped to the EBS adapter’s invocation.
+
+- Once you are done exploring this complex ICS map, select the `Exit Mapper` button in the upper-left to return back to the ICS orchestration.
+
+- One last orchestration node we want to explore is one of the *Database Adapter* invocations.  Click on the database adapter call just above the `createEBSOrder` which is called `getCustomerShipToInfo`.   When you click on the little eye icon to view it, the DB Connector wizard will initialize.
+
+  ![](images/300/image012p.png)
+
+- Along with the basic information about this invoke activity like the name and description, you can see that this connection is being used to execute a SQL query on the EBS database from ICS.
+
+  ![](images/300/image012q.png)
+
+- The SQL query being run can be examined.  This query is joining together 6 tables to provide the shipping information needed to create the EBS order for the customer.
+
+  ![](images/300/image012r.png)
+
+- Select the `Close` button now that we have seen the SQL used in the Database Adapter invocation to the EBS Oracle Database.
+
+- Note that ICS also has Database adapters for *MySQL*, *DB2*, and *SQL Server*.
+
+- We’ve spent a lot of time exploring the `Create EBS Order` integration.  Let’s move on and explore the Agent setup.  Select the `Exit Integration` button in the upper-left to navigate back to the ICS Designer.
+
+  ![](images/300/image012s.png)
 
 ### **STEP 4:** Explore ICS Agents
 
