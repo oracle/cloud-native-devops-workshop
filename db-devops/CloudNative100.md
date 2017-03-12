@@ -1,12 +1,14 @@
 
-![](images/100/Picture100-lab.png)  
-Update: January 28, 2017
+![](images/100/PictureLab.png)  
+Update: March 1, 2017
 
 # Introduction
 
 This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Java Developer persona** will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **Database Developer persona** will provision a new test/development database and modify it to support the twitter feed.  The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Database Developer persona (Roland Dubois)** will provision a new test/development MySQL database and modify it to support the twitter feed.  The **Java Developer persona (Bala Gupta)** will develop a new twitter feed service that will create REST services to access data in the twitter feed and a MySql database.  The **JavaScript Developer persona (John Dunbar)** will develop a new Twitter Marketing UI that will display the Alphaoffice products with links to tweets related to those products for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.  You will also see how Developer Cloud Service works with open source solutions such as Maven and Flyway (and other open source solutions) to provide a complete development environment.
+
+Note that while we have four personas in this lab we will only by logging in with the userid given to you by the instructor for all four labs, but will assume the role of different users in the different labs.  Normally developers would log in with their own userids.
 
 **Please direct comments to: Derrick Cameron (derrick.cameron@oracle.com).**
 
@@ -14,7 +16,8 @@ You will take on 3 Personas during the workshop. The **Project Manager Persona*
 - Create Initial Project
     - Add Users to Project
 - Create Product Issues
-    - Create Issues for Twitter Feed Microservice
+    - Create Issues for MySQL Database Microservice
+    - Create Issues for REST Service Microservices
     - Create Issues for Twitter Feed Marketing UI
 - Create Agile Board and initial Sprint
 - Add Issues to Sprint
@@ -22,7 +25,7 @@ You will take on 3 Personas during the workshop. The **Project Manager Persona*
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-# Create Twitter Feed Marketing Project
+# Create Alphaoffice Marketing Project
 
 ## Create Developer Cloud Service Project
 
@@ -46,7 +49,7 @@ You will take on 3 Personas during the workshop. The **Project Manager Persona*
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. If your own Corporate or Trial account does not easily allow you to have multiple users, simply log into the account using your credentials, and when required you can make the “logical” change from Project Manager to other personas, even though you will always be logged in as the same user.
+  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. 
 
     ![](images/100/Picture100-3.5.png)
 
@@ -62,7 +65,7 @@ You will take on 3 Personas during the workshop. The **Project Manager Persona*
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
+- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.  Note:  Due to the use of different environments during the development of these labs the screen shots will show different developer instances, but in fact in practice you will only have a single instance.
 
     ![](images/100/Picture100-6.png)
 
@@ -115,17 +118,17 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-14.png)
 
-- Set the Role to **Owner**, and enter the Username **bala.gupta**, and then click **Add**
+- Set the Role to **Owner**, and enter the Username **roland.dubois**, and then click **Add**
 
-- Repeat the process for Username **john.dunbar**. When completed your team should consist of 3 members.
+- Repeat the process for Username **bala.gupta** and **John.dunbar**. When completed your team should consist of 4 members.
 
     ![](images/100/Picture100-15.1.png)
 
 # Create Project Issues
 
-## Create Issues for Twitter Feed Microservice
+## Create Issues for MySQL Database Microservice
 
-### **STEP 5**: Create Issue for the initial Twitter Feed GIT Repository Creation
+### **STEP 5**: Create Issue for the initial MySql Database GIT Repository Creation
 
 In this step you are still connected in the logical role of the Project Manager, ***Lisa Jones***.
 
@@ -135,62 +138,86 @@ In this step you are still connected in the logical role of the Project Manager,
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, **Bala Gupta** will be the “logical” owner. The same concept holds true for other assignments made in this lab.
+    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, **Roland Dubois** will be the “logical” owner of this issue. The same concept holds true for other assignments made in this lab.
 
     **Summary:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+    `Create Initial GIT Repository for MySQL Datbase Changes`
 
     **Description:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+    `Create Initial GIT Repository for MySQL Database Changes`
 
     **Type:** `Task`
-    **Owner:** `Bala Gupta (or you, if another user is not available)`
+    **Owner:** `Roland Dubois (or you, if another user is not available)`
     **Story Points:** `1`
 
     Note: Story point is an arbitrary measure used by Scrum teams. This is used to measure the effort required to implement a story. To learn more: https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/
 
     ![](images/100/Picture100-17.png)
 
-### **STEP 6**: Create Issue for Update Twitter Credentials
+### **STEP 6**: Create Issue for MySQL Database updates
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Summary:** `Create Filter on Twitter Feed`
+    **Summary:** `Update Database`
 
-    **Description:** `Create Filter to allow user to supply text to reduce the amount of data returned by the Twitter feed`
+    **Description:** `Update MySQL Database to add twitter tag and populate this new column.`
 
     **Type:** `Feature`
 
-    **Owner:** `Bala Gupta (or you if another user is not available)`
+    **Owner:** `Roland Dubois (or you if another user is not available)`
 
     **Story Points:** `2`
 
-    ![](images/100/Picture100-18.png)
+## Create Issues for REST Services
 
-## Create Issues for Twitter Feed Marketing UI
-
-### **STEP 7**: Create Issue for Initial Marketing UI GIT Repository Creation
+### **STEP 7**: Create Issue for REST Services GIT Repository Creation
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
+    **Summary:** `Create Initial GIT Repository for REST Services`
 
-    **Description:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
+    **Description:** `Create Initial GIT Repository for REST Services`
 
     **Type:** `Task`
 
-    **Owner:** `John Dunbar (or you if another user is not available)`
+    **Owner:** `Bala Gupta (or you if another user is not available)`
 
     **Story Points:** `1`
 
-    ![](images/100/Picture100-19.png)
-
-### **STEP 8**: Create Issue for Displaying Twitter Feed
+### **STEP 8**: Create Issue for Creating REST Services
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Summary:** `Display Twitter Feed in Table Format`
+    **Summary:** `Create REST Services`
 
-    **Description:** `Display Twitter Feed in Table Format`
+    **Description:** `Create REST Services for Twitter Feed and MySQL Database`
+
+    **Type:** `Feature`
+
+    **Owner:** `Bala Gupta`
+
+    **Story Points:** `2`
+
+## Create Issues for Twitter Marketing UI
+
+### **STEP 9**: Create Issue for initial Twitter Marketing UI GIT Repository
+- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    **Summary:** `Create Initial GIT Repository for Marketing UI`
+
+    **Description:** `Create Initial GIT Repository for Marketing UI`
+
+    **Type:** `Task`
+
+    **Owner:** `John Dunbar`
+
+    **Story Points:** `1`
+
+### **STEP 10**: Create Issue for Twitter Marketing UI Development
+- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+
+    **Summary:** `Create Twitter Marketing UI`
+
+    **Description:** `Create Twitter Marketing UI`
 
     **Type:** `Feature`
 
@@ -198,39 +225,7 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Story Points:** `2`
 
-    ![](images/100/Picture100-20.png)
-
-    ### **STEP 9**: Create Issue for initial Database GIT Repository Creation
-    - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-        **Summary:** `Create Initial GIT Repository for Database changes`
-
-        **Description:** `Create Initial GIT Repository for Database changes`
-
-        **Type:** `Task`
-
-        **Owner:** `Roland Dubois`
-
-        **Story Points:** `1`
-
-        ![](images/100/Picture100-20.1.png)
-
-        ### **STEP 10**: Create Issue for Database Changes
-        - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-            **Summary:** `Update Database`
-
-            **Description:** `Update Database`
-
-            **Type:** `Feature`
-
-            **Owner:** `Roland Dubois`
-
-            **Story Points:** `2`
-
-            ![](images/100/Picture100-20.2.png)
-
-- Click ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
+- Click on the **Issues** menu option (left menu) to view all newly created issues.  It should look like this.
 
     ![](images/100/Picture100-22.png)
 
@@ -251,7 +246,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 - **Active Sprints view** – Lists all active Sprints of the Board and enables you to update an Issue status simply by dragging and dropping it to the respective status columns.
 - **Reports view** – select the Burndown Chart tab to display the amount of work left to do in a Sprint or use the Sprint Report tab to list open and completed Issues of a Sprint.
 
-### **STEP 9**: Create Agile Board
+### **STEP 11**: Create Agile Board
 
 - Click **Agile** on the Left Side Menu to display a page listing all existing Boards
 
@@ -265,7 +260,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-24.png)
 
-### **STEP 10**: Create Sprint
+### **STEP 12**: Create Sprint
 - We will now create our first Sprint. Click **New Sprint**. Enter the following data and click **OK.**
 
     **Name:** `Sprint 1 - Initial Development`
@@ -274,9 +269,9 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-25.png)
 
-### **STEP 11**:	Add Backlog Issues to Sprint
+### **STEP 13**:	Add Backlog Issues to Sprint
 
-- Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **5 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
+- Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **6 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
     ![](images/100/Picture100-26.png)
 
@@ -284,7 +279,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ## Customize Agile Board
 
-### **STEP 12**: Customize Board
+### **STEP 14**: Customize Board
 
 In the following step you will customize an Agile Board, and add a new Progress State. If you desire more information about States and Conditions, the following link will provide a tutorial: http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/developer/AgileDevelopment/AgileDevelopment.html
 
@@ -314,7 +309,7 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
     ![](images/100/Picture100-33.png)
 
-### **STEP 13**: Start Sprint
+### **STEP 15**: Start Sprint
 
 - Click **Start Sprint.** Leave the defaults and click **Start**
 
