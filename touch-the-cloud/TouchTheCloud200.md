@@ -280,7 +280,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS. He is also not impressed by the high amount of the rule to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is higher, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
+  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS. He is also not impressed by the high amount of the rule to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is high risk, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
   
 ---
 
@@ -338,7 +338,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture27.png)
 
 
-### **STEP 4**: Working with the Process Model
+### **STEP 4**: Process Model
 
 - First step is to add the comment. Click on the process to open up the process model
 
@@ -358,7 +358,9 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture32.png)
 
-### **STEP 5**: Working with Rules
+
+
+### **STEP 5**: Editing with Rules
 
 - Back on the process model, click on the Approval Decision and select Open Decision
 
@@ -383,6 +385,57 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture37.png) 
 
 > Remember that this rule change would only be applied after deployment of the application.
+
+
+### **STEP 6**: Adding Approval
+
+- First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
+
+![](images/200/Picture38.png)
+
+- Click on the newly created swimlane and select the pencil icon to edit the properties
+
+![](images/200/Picture39.png)
+
+![](images/200/Picture40.png)
+
+- Click on the plus sign next to Role to add Sales Director
+
+![](images/200/Picture41.png)
+
+- Next drag an Approve from the BPM Palette to the newly created **Sales Director** swimlane
+
+![](images/200/Picture42.png)
+
+- Drag the existing connection from **Approve** to the **User Task**
+
+![](images/200/Picture43.png)
+
+- Change the name, by double click on the text **User Task**
+
+![](images/200/Picture44.png)
+
+- Next we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
+
+![](images/200/Picture45.png)
+
+![](images/200/Picture46.png)
+
+- Drag an exclusive gateway into the model, connect the human task with the gateway, then the gateway to the Capture Order, using the connector icon to create the connections
+
+![](images/200/Picture47.png)
+
+![](images/200/Picture48.png)
+
+- Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
+
+![](images/200/Picture49.png)
+
+- With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
+
+![](images/200/Picture50.png)
+
+
 
 
 
