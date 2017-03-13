@@ -436,9 +436,84 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture50.png)
 
 
+### **STEP 7**: Validating Changes
 
+- Before we can go ahead and deploy the newly created application, we first have to validate if it is correct. Click on the **Check mark** in the right hand side of the screen.
 
+![](images/200/Picture51.png)
 
+![](images/200/Picture52.png)
 
+- You should see the following message, if not, look at the error codes and fix them.
 
+![](images/200/Picture53.png)
+
+### **STEP 8**: Deployment
+
+- To deploy we need to create a snapshot
+
+![](images/200/Picture54.png)
+
+- Supply information and name for snapshot
+
+![](images/200/Picture55.png)
+
+- Click on Management at top right hand of page
+
+![](images/200/Picture56.png)
+
+- Click on the hamburger icon next to My Server, and select deploy
+
+![](images/200/Picture57.png)
+
+- Follow the **Deployment Application to My Server** wizard
+
+![](images/200/Picture58.png)
+
+Username and password will be supplied by instructor, and remember to select your **Quote to Order -** ***YUORNAME*** Application to deploy:
+
+![](images/200/Picture59.png)
+
+![](images/200/Picture60.png)
+
+![](images/200/Picture61.png)
+
+![](images/200/Picture62.png)
+
+![](images/200/Picture63.png)
+
+Click on **Finish**
+
+### **STEP 9**: Role Assignment
+
+Now we have to assign physical users to the new **Sales Director** Role we have created.
+
+- Click the PCS Home icon at top of page
+
+![](images/200/Picture64.png)
+
+- On the Workspace home page, click on **Configure**
+
+![](images/200/Picture65.png)
+
+- In left hand side, click on **Manage Roles**
+
+![](images/200/Picture66.png)
+
+- Add ***Roland Dubois*** to the **Sales Director** role 
+
+![](images/200/Picture67.png)
+
+Click OK
+
+Repeat the process for each of the roles in your application.
+
+Here a list of users and allocated roles:
+
+|Person        | Role            |
+|:--------------|:-----------------:|
+|Bala Gupta    | Sales Person    |
+|John Dunbar   | Sales Manager   |
+|Lisa Jones    | Sales Operations|
+|Roland Dubois | Sales Director  |
 
