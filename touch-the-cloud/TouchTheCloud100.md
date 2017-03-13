@@ -12,7 +12,7 @@ Following are the assets that we will be creating during this part of the worksh
 
 - MCS Connector
     - Create MCS Connector which connects to PCS
-- mcs API
+- MCS API
     - Create MCS API using pre-defined artifacts
     - Configure MCS Connector
 - MAX App
