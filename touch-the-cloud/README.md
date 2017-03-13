@@ -1,3 +1,7 @@
+![](images/300/HeaderImage.png)  
+
+Update: March 10, 2017
+
 
 #Step-by-step Instructions
 
