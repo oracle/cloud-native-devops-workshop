@@ -407,7 +407,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture42.png)
 
-- Drag the existing connection from **Approve** to the **User Task**
+- Drag the existing connection from **Approval** to the **User Task**
 
 ![](images/200/Picture43.png)
 
@@ -421,7 +421,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture46.png)
 
-- Drag an exclusive gateway into the model, connect the human task with the gateway, then the gateway to the Capture Order, using the connector icon to create the connections
+- Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
 
 ![](images/200/Picture47.png)
 
