@@ -1,5 +1,6 @@
+![](images/300/HeaderImage.png)  
 
-![](images/paas-banner-2.jpg)  
+Update: March 10, 2017
 
 ## Introduction
 
