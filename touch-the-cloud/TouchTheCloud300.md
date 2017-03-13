@@ -146,7 +146,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image012a.png)
 
-- You can see that this orchestration has many steps in it.  The view of the orchestration is *Zoom to Fit* in the browser real estate.  In order to get a closer view of the individual steps, you can either scroll with your mouse wheel to zoom in and out, or you can use the *-/+*” slider in the top right of the designer.
+- You can see that this orchestration has many steps in it.  The view of the orchestration is *Zoom to Fit* in the browser real estate.  In order to get a closer view of the individual steps, you can either scroll with your mouse wheel to zoom in and out, or you can use the *-/+* slider in the top right of the designer.
 
 - Try zooming in and out by using both methods.  
 
@@ -158,7 +158,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image012c.png)
 
-- Try selecting the `Maximize` viewing control on the very right of the view control bar.  This will hide some of the detail on top of the screen to give the designer the most area to work in.  Hitting the “Maximize” button again will toggle that view.
+- Try selecting the `Maximize` viewing control on the very right of the view control bar.  This will hide some of the detail on top of the screen to give the designer the most area to work in.  Hitting the `Maximize` button again will toggle that view.
 
    ![](images/300/image012d.png)
 
@@ -192,7 +192,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image012j.png)
 
-- The variables defined in this Assign activity are greyed-out because we are only viewing them.  Later on in this lab, we’ll de-activate the integration and all the values will be changeable.
+- The variables defined in this Assign activity are greyed-out because we are only viewing them.  Later on in this lab, we’ll de-activate the integration and all the values will be changeable.  These variables are constants that are needed for the EBS API call for creating an order.  You can see that variables such as the *EBS responsibility*, *application*, *security group*, and *OrgId* are needed.  Using variable rather than hard-coding these in the mapping for the adapter is preferable because they can be re-used across multiple EBS adapter invocations if necessary.
 
    ![](images/300/image012k.png)
 
@@ -250,9 +250,31 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image013.png)  
 
-- Make note of the agent that has been created to communicate with the EBS instance, it is called *EBS_ONPREM*
+- Make note of the agent that has been created to communicate with the EBS instance called *EBS Agent*.
 
    ![](images/300/image014.png)  
+
+- Selecting the `1` shows the on-premise connectivity agent that is registered with the *EBS Agent* agent group.
+
+   ![](images/300/image014a.png)
+
+- The agent identifier along with the ICS version is shown in the details.  You can also remove the agent by selecting the `X` to the right of the dialog. Click on the `X` so you can see the connections that are currently associated with this agent.
+
+   ![](images/300/image014b.png)
+
+- You can see that both the *eBusiness Suite DB APPS* and *eBusiness Suite OPERATIONS* ICS Connectors are both using this agent so you can’t just remove it without first removing the references to it in those connections.
+
+- Select the `Close` button twice to dismiss the `“Agent Is In Use` and `Agent` dialogs.
+
+- This Connectivity Agent was installed on the EBS system so it could have access to the on-premise EBS APIs.  EBS Business Events and XML Gateway messages are available for inbound integrations in Oracle Integration Cloud Service when adding the Oracle E-Business Suite Adapter as a trigger (source) connection in an integration. If the Oracle E-Business Suite Adapter is added as an invoke (target) connection, PL/SQL APIs and Concurrent Programs are available as REST services for invocation from Oracle Integration Cloud Service. In this workshop we are using an EBS PL/SQL API as a target connection.  The architecture of the ICS Connectivity Agent as used by the EBS Adapter is shown below:
+
+   ![](images/300/image014c.png)
+
+- The Connectivity Agent is available from the `Download` pull-down on the Agent page shown below:
+
+   ![](images/300/iamge014d.png)
+
+- The `Execution Agent` is a version of ICS that can run on-premise behind the customer firewall.  You can use ICS both in the cloud and on-premise for creating integrations.
 
 ## Explore the ICS Monitoring User Interface
 
