@@ -1,6 +1,6 @@
+![](images/300/HeaderImage.png)  
 
-![](images/100/Picture-lab.PNG)  
-Update: January 28, 2017
+Update: March 13, 2017
 
 # 1.	Design Considerations for Mobile App
 
