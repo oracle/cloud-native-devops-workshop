@@ -1,6 +1,6 @@
 ![](../common/images/customer.logo.png)
 ---
-# ORACLE Cloud-Native DevOps workshop #
+# ORACLE Touch the Cloud workshop #
 
 ## Customization ##
 
@@ -14,13 +14,13 @@ Open the browser and login to [https://github.com](https://github.com) In case y
 
 Once you logged in click on top right corner into the context menu marked with sign "+" and select **Import repository**
 
-In the field Old repository type: `https://github.com/oracle/cloud-native-devops-workshop.git` and in the Name field type `cloud-native-devops-workshop`. Press the button **Begin import**
+In the field Old repository type: `https://github.com/oracle/touch-the-cloud-workshop.git` and in the Name field type `touch-the-cloud-workshop`. Press the button **Begin import**
 
-After the import is done your repository is available at `https://github.com/YOUR_GITHUB_USERNAME/cloud-native-devops-workshop`.
+After the import is done your repository is available at `https://github.com/YOUR_GITHUB_USERNAME/touch-the-cloud-workshop`.
 
 #### Modify the content in personalized workshop ####
 
-The easiest possibility to customize is available through deleting not needed content. So if you would like to deliver that content only with a subset of tutorials then modify the Table of Content file. To do so open your repository in the browser `https://github.com/YOUR_GITHUB_USERNAME/cloud-native-devops-workshop`.
+The easiest possibility to customize is available through deleting not needed content. So if you would like to deliver that content only with a subset of tutorials then modify the Table of Content file. To do so open your repository in the browser `https://github.com/YOUR_GITHUB_USERNAME/touch-the-cloud-workshop`.
 
 Select the file **README.md**.
 
@@ -28,4 +28,4 @@ Click on the icon **Edit this file**.
 
 You will open the metadata editor of table of the content. Customize it to your needs (for example by removing not needed tutorials). Click on **Commit changes** at the end.
 
-We allow also to customize the tutorial and make it more personalized by modifying `cloud-native-devops-workshop/images/customer.logo.png` image. This image is presented on top of every tutorial page.
+We allow also to customize the tutorial and make it more personalized by modifying `touch-the-cloud-workshop/images/customer.logo.png` image. This image is presented on top of every tutorial page.
