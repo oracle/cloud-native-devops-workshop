@@ -1,4 +1,4 @@
-![](images/200/Accelerate-Process-Cloud.jpg)  
+![](images/300/HeaderImage.png)  
 
 
 ## Introduction
