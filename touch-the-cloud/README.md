@@ -47,24 +47,21 @@ The objective of this lab is to expose you to the:
 
 
 ### Process Cloud User Interaction
-***User experinece***
--   Creating a new process instance - John Lee
--   Julie's inbox
--   Roger tracking processes
--   Jason Approval
+***User experience***
+-   Creating a new process instance - Bala Gupta
+-   Lisa's inbox
+-   Roland tracking processes
 
 ### Extend Process
-***Business Process Modelling***
--   Roger needs to also do an approval 
-    -   Lanes
-    -   Human Tasks
+***Business Process Modeling***
+-   Roland wants to extend process and rules 
     -   Rules
--   Roger wants to see process analytics
-
+    -   Human Tasks
+    -   Lanes
 
 ## Lab 300: Zero Code Integration
 
-**Documenation**: TouchTheCloud300.md
+**Documentation**: TouchTheCloud300.md
 
 ### Objectives
 
@@ -72,3 +69,9 @@ The objective of this lab is to expose you to the:
 - Import Code from external Git Repository
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+
+## Lab 400: Analytics
+
+### Objectives
+
+- Adding Business Analytics to Processes

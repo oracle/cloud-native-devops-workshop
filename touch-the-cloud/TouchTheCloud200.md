@@ -1,4 +1,6 @@
-![](images/200/Accelerate-Process-Cloud.jpg)  
+![](images/300/HeaderImage.png)  
+
+Update: March 13, 2017
 
 
 ## Introduction
@@ -280,7 +282,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS. He is also not impressed by the high amount of the rule to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is higher, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
+  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. He is also not impressed by the high amount of the rule to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is high risk, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
   
 ---
 
@@ -338,7 +340,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture27.png)
 
 
-### **STEP 4**: Working with the Process Model
+### **STEP 4**: Process Model
 
 - First step is to add the comment. Click on the process to open up the process model
 
@@ -358,7 +360,10 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture32.png)
 
-### **STEP 5**: Working with Rules
+- Click **Apply**
+
+
+### **STEP 5**: Editing with Rules
 
 - Back on the process model, click on the Approval Decision and select Open Decision
 
@@ -385,7 +390,133 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 > Remember that this rule change would only be applied after deployment of the application.
 
 
+### **STEP 6**: Adding Approval
+
+- First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
+
+![](images/200/Picture38.png)
+
+- Click on the newly created swimlane and select the pencil icon to edit the properties
+
+![](images/200/Picture39.png)
+
+![](images/200/Picture40.png)
+
+- Click on the plus sign next to Role to add Sales Director
+
+![](images/200/Picture41.png)
+
+- Next drag an Approve from the BPM Palette to the newly created **Sales Director** swimlane
+
+![](images/200/Picture42.png)
+
+- Drag the existing connection from **Approval** to the **User Task**
+
+![](images/200/Picture43.png)
+
+- Change the name, by double click on the text **User Task**
+
+![](images/200/Picture44.png)
+
+- Next we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
+
+![](images/200/Picture45.png)
+
+![](images/200/Picture46.png)
+
+- Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
+
+![](images/200/Picture47.png)
+
+![](images/200/Picture48.png)
+
+- Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
+
+![](images/200/Picture49.png)
+
+- With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
+
+![](images/200/Picture50.png)
 
 
+### **STEP 7**: Validating Changes
 
+- Before we can go ahead and deploy the newly created application, we first have to validate if it is correct. Click on the **Check mark** in the right hand side of the screen.
+
+![](images/200/Picture51.png)
+
+![](images/200/Picture52.png)
+
+- You should see the following message, if not, look at the error codes and fix them.
+
+![](images/200/Picture53.png)
+
+### **STEP 8**: Deployment
+
+- To deploy we need to create a snapshot
+
+![](images/200/Picture54.png)
+
+- Supply information and name for snapshot
+
+![](images/200/Picture55.png)
+
+- Click on Management at top right hand of page
+
+![](images/200/Picture56.png)
+
+- Click on the hamburger icon next to My Server, and select deploy
+
+![](images/200/Picture57.png)
+
+- Follow the **Deployment Application to My Server** wizard
+
+![](images/200/Picture58.png)
+
+Username and password will be supplied by instructor, and remember to select your **Quote to Order -** ***YUORNAME*** Application to deploy:
+
+![](images/200/Picture59.png)
+
+![](images/200/Picture60.png)
+
+![](images/200/Picture61.png)
+
+![](images/200/Picture62.png)
+
+![](images/200/Picture63.png)
+
+Click on **Finish**
+
+### **STEP 9**: Role Assignment
+
+Now we have to assign physical users to the new **Sales Director** Role we have created.
+
+- Click the PCS Home icon at top of page
+
+![](images/200/Picture64.png)
+
+- On the Workspace home page, click on **Configure**
+
+![](images/200/Picture65.png)
+
+- In left hand side, click on **Manage Roles**
+
+![](images/200/Picture66.png)
+
+- Add ***Roland Dubois*** to the **Sales Director** role 
+
+![](images/200/Picture67.png)
+
+Click OK
+
+Repeat the process for each of the roles in your application.
+
+Here a list of users and allocated roles:
+
+|Person        | Role            |
+|:--------------|:-----------------:|
+|Bala Gupta    | Sales Person    |
+|John Dunbar   | Sales Manager   |
+|Lisa Jones    | Sales Operations|
+|Roland Dubois | Sales Director  |
 
