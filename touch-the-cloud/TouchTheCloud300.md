@@ -25,6 +25,12 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 # Explore Integration Cloud Service
 
+In this first part of the lab, we will explore the main parts of Integration Cloud Service (ICS).  We’ll look at the following:
+1.	Cloud Services Dashboard
+2.	ICS Designer User Interface
+3.	ICS Monitoring User Interface
+Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
+
 ## Login and Explore the Oracle Cloud Dashboard
 
 ### **STEP 1**: Login to your Oracle Cloud account
@@ -282,11 +288,11 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 ---
 
-- In the upper right corner of the ICS Portal, click the `Monitoring` tab
+- In the upper right corner of the ICS Portal, click the `Monitoring` tab.  The `Monitoring Tab` is where you go to see how your activated integrations are working at runtime. 
 
    ![](images/300/image015.png)
 
-### **STEP 2:**	Explore ICS Monitoring Console Dashboard
+### **STEP 2:**	Explore ICS Monitoring Console - Dashboard
 
 ---
 
@@ -294,7 +300,96 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image016.png)  
 
-### **STEP 3:**	Explore ICS Monitoring Console Tracking
+- On the right side of the `Dashboard` there are links where you can view the `Activity Stream`, Download the logs, and Download an Incident if a service request needs to be raised.
+
+- Click on the Activity Stream link
+
+   ![](images/300/image017.png)
+
+- You will be directed to the `Runtime Health` screen where you can view a summary of all messages that have passed through ICS in both chart form and numerical rollup form.
+
+   ![](images/300/image018.png)
+
+- In the `Activity Stream` at the bottom of the page you can see the steps in the *Create EBS Order* integration that were executed and whether or not they were successful.
+
+### **STEP 3:**	Explore ICS Monitoring Console - Logfiles
+
+---
+
+- In order to see the details of the payload that passed through the ICS integration, you need to download the Activity Stream Log from the `Download Logs` link on the right of the Activity Stream.
+
+- Select the `Download Activity Stream` link and then save the zipfile to a location on your workstation such as *C:\temp* (Windows path)
+
+   ![](images/300/image019.png)
+   ![](images/300/image020.png)
+
+- Extract the zipfile and you’ll see that there are 2 directories of logfiles – this is because the ICS instance is running on a cluster of 2 servers for high availability.
+
+   ![](images/300/image021.png)
+
+- Navigate into one of the server directories and examine the `ics-flow.log` file in your favorite text editor.
+
+- Here is a view of the end of the *ics-flow.log* file in the *Notepad++* text editor showing the response given by EBS of the order payload after a successful execution of the create order API call:
+
+   ![](images/300/image022.png)
+
+- This logfile is helpful for investigation during development or runtime analysis.  The capture of the runtime payloads can be turned on or off during activation of the ICS integration where you are prompted whether or not you want to save the payloads.
+
+### **STEP 4:**	Explore ICS Monitoring Console - Integrations & Errors
+
+---
+
+- Back in the ICS Monitoring console, select “Integrations” from the left-hand navigation.
+
+- Note that all the statistics of the “Create EBS Order” are shown.
+
+   ![](images/300/image023.png)
+
+- We are wondering why there were 4 errors in the integration?  (**Note:** during the lab there may not be any errors in the integration flows like there were when this lab was written.  If not, just review the documentation below to see how the ICS monitoring can be used to pinpoint the error)
+
+- Click on the `Errors` link beneath the red letter 4 to drill into the error details.
+
+   ![](images/300/image024.png)
+
+- You are directed to the ICS `Error Message Details` screen where all 4 of the failed ICS instances are listed.
+
+- Click on the grey warning icon 
+
+   ![](images/300/image025.png)
+
+ on the right of the instance error description to see the details of the error.
+
+- You can see that there was a timeout in this integration of 120 seconds.
+
+- We want to see which step the timeout occurred on.  Click on the integration instance name so you can see the flow of this instance and where it failed.
+
+   ![](images/300/image026.png)
+
+- This leads us to a graphical view of that particular integration flow instance detail.
+
+- Zooming in, we can see that everything was fine with the flow until the *createEBSOrder* API was called – this is where the flow line turns red.
+
+  ![](images/300/image027.png)
+
+- This shows us that the API call was timing out.
+
+- On investigation with the EBS system, it was found that the API was down because the EBS HTTP server (Oracle HTTP Server, OHS) was not running.  Starting OHS up on EBS made the API available and now the integration is up and running again.
+
+- Select the `Exit Instance` button to go back to the ICS Error Message Details Monitoring console.
+
+  ![](images/300/image028.png)
+
+### **STEP 5:**	Explore ICS Monitoring Console - Agents
+
+---
+
+- Now, select `Agents` from the left-hand navigation.
+
+- From the `Agents` monitoring console, you’ll be able to see if the ICS Connectivity Agent is up or down.  The green *sun* or *light* icon indicates that the Connectivity Agent is running fine.
+
+  ![](images/300/image029.png)
+
+### **STEP 6:**	Explore ICS Monitoring Console - Tracking
 
 ---
 
