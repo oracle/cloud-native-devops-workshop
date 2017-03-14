@@ -1,6 +1,6 @@
 ![](images/300/HeaderImage.png)  
 
-Update: March 10, 2017
+Update: March 14, 2017
 
 # Lab 300 - Integration Cloud Service
 
@@ -274,7 +274,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/iamge014d.png)
 
-- The `Execution Agent` is a version of ICS that can run on-premise behind the customer firewall.  You can use ICS both in the cloud and on-premise for creating integrations.
+- The `Execution Agent` that you see in the download dropdown is a version of ICS that can run on-premise behind the customer firewall.  You can use ICS both in the cloud and on-premise for creating integrations.
 
 ## Explore the ICS Monitoring User Interface
 
