@@ -395,7 +395,27 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - Select the `Tracking` link in the navigation bar on the left
 
-**XXXX**
+  ![](images/300/image030.png)
+
+- The ICS `Tracking` monitor page shows all integration flows that have been executed.
+
+- Select the chevron just to the right of the *Tracking* label at the top of the page to change the granularity of the Tracking report to `Last 6 Hours`
+
+   ![](images/300/image31.png)
+
+- Next, drill into a `COMPLETED` integration flow by selecting the integration name like we did while tracking down the Error earlier.
+
+   ![](images/300/image32.png)
+
+- We can now see that all steps in the this ICS integration flow were successful because the arrow is green highlighting all the orchestration flow steps.
+
+   ![](images/300/image33.png)
+
+- Select the `Exit Instance` button to go back to the ICS monitoring page.
+
+   ![](images/300/image34.png)
+
+- We are now done exploring the ICS monitoring features.
 
 # Use Integration Cloud Service to Modify an Integration
 
