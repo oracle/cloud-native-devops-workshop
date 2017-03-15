@@ -63,12 +63,12 @@ Although you will login as a single user, you will take on 3 Personas during the
 
 ***Skip this step if any of the following are true:***
 
-- You are at an Oracle Sponsored event, and your **Instructor provided you with an Account*** - your Replication Policy is already set.
+- You are at an Oracle Sponsored event, and your **Instructor provided you with an Account**. These accounts already have the Policy set. 
 
-- You signed up for your **personal Trial Account**, and you completed the **Trail Account Student Guide**, during which you already set your replication policy.
+- You signed up for your **personal Trial Account**, and you completed the **Trial Account Student Guide**, during which you already set your replication policy.
 
-Since none of the above are true, you will need to follow these steps to set your Storage Replication Policy:
- 
+***If none of the above are true***, you will need to follow these steps to set your Storage Replication Policy:
+
 - Click on the **Storage** Cloud Service
 
     ![](images/100/Picture-01.png)
