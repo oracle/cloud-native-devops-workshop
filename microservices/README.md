@@ -11,7 +11,7 @@
 - You have two options for configuring your workshop client environment. 
 - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
 - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
+- Both **Option 1 and 2 are documented** in the [Trial Account Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
 
 **Third**, ***How to View the Lab Guides***
 
