@@ -478,11 +478,11 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - The *createEBSOrder* mapping orchestration step is just above the corresponding *createEBSOrder* API invocation.
 
-   ![](images/300/image041.png)
-
 - Click on the double arrow mapping symbol to pop-up the edit pencil.
 
 - Click on the little pencil to edit the mapping.
+
+   ![](images/300/image041.png)
 
 ### **STEP 3:**	Map the new *Comment* field
 
@@ -490,7 +490,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Once the mapping is displayed, we need to expand the target node that we will map the inbound `Comment` field to.
 
-- We are going to map `Comment` source to the target called `ATTRIBUTE1` which is the `P_HEADER_REC` section of the Target payload.
+- We are going to map `Comment` source to the target called `ATTRIBUTE1` which is in the `P_HEADER_REC` section of the Target payload.
 
 - Select the little arrow icon ![](images/300/image042.png) just to the left of the `P_HEADER_REC` in the Target payload to expand it and expose `ATTRIBUTE1`.
 
@@ -498,7 +498,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Now that the `ATTRIBUTE1` variable can be seen, we can map the `Comment` source variable to it by dragging the little circle just to the right of the `Comment` variable over to the `ATTRIBUTE1` circle.
 
-- Click and hold on the circle just to the right of the `Comment` Source variable.
+- Click and hold on the circle just to the right of the `Comment` Source variable then drag on top of the little circle just to the left of the `ATTRIBUTE1` Target variable.
 
    ![](images/300/image044.png)
 
@@ -510,7 +510,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image046.png)
 
-- Now we need to select the `Save` button to save our changes
+- Now we need to select the `Save` button to save our mapping changes
 
    ![](images/300/image047.png)
 
