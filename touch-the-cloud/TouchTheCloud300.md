@@ -604,21 +604,50 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 ## Activate Changes to the Integration
 
-### **STEP 1:**	Save the integration
+### **STEP 1:**	Select the “Activate” switch
 
 ---
 
-**XXXX**
+- Click on the *Activate* switch/slider on the right of the cloned `Create EBS Order` integration.
 
-### **STEP 2:**	Select the “Activate” switch
+   ![](images/300/image062.png)
 
----
+- The `Activate Integration?` dialog will be displayed
 
-**XXXX**
+- Select the *Enable tracing* button since this isn’t a production deployment.  This checkbox will tell ICS that the payloads for each instance of the integration will be saved in the logfiles as explored in the first part of this lab earlier.
+
+- Now select the *Activate* button to begin activation of the integration.
+
+   ![](images/300/image063.png)
+
+- The progress bar of the integration activation will move across the `Activate Integration?` dialog box.
+
+   ![](images/300/image064.png)
+
+- Once the integration is activated you will see that the activation slider now is colored green with a checkmark in it.
+
+- A message will appear on the top of the ICS Designer Portal indicating that the integration activation was successful.  The WSDL for the service endpoint will also be displayed.
+
+   ![](images/300/image065.png)
+
+- Click on the WSDL link so we can ensure that this integration has an available service endpoint.
+
+   ![](images/300/image066.png)
+
+- The WSDL for you new ICS integration will now be displayed in your browser.
+
+   ![](images/300/image067.png)
+
+- Now that we have a modified integration with a new service endpoint, we need to update PCS so that the comment sent in from the mobile application can be passed into ICS.
 
 # Testing the End to End Application
-***XXXX*** D:\docs\Oracle Docs\FY17_Sales\TouchTheCloudWorkshop\Workshop\Touch-the-Cloud\touch-the-cloud\images\300
 
-    ![](images/300/image011.png)  
+### **STEP 1:**	Modifying PCS with the New ICS Service
+
+---
+- You now have used Oracle Integration Cloud Service to explore and modify an integration to Oracle EBS. 
+
+- This Lab is completed.
+
 
 
