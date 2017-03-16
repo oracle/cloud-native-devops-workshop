@@ -498,7 +498,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Now that the `ATTRIBUTE1` variable can be seen, we can map the `Comment` source variable to it by dragging the little circle just to the right of the `Comment` variable over to the `ATTRIBUTE1` circle.
 
-- Click and hold on the circle just to the right of the `Comment` Source variable then drag on top of the little circle just to the left of the `ATTRIBUTE1` Target variable.
+- Click and hold on the circle just to the right of the `Comment` Source variable then drag it on top of the little circle just to the left of the `ATTRIBUTE1` Target variable.
 
    ![](images/300/image044.png)
 
@@ -514,13 +514,53 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image047.png)
 
-### **STEP 4:**	Test the updated mapping
+### **STEP 4:**	Testing the Updated Mapping
 
 ---
 
-**XXXX**
+- ICS has a built-in test harness so that you can see if the changes you made to your mapping actually work.
 
-## Add Tracking to an integration
+- First, select the `Test` button just below the `Save` button just pressed.
+
+   ![](images/300/image048.png)
+
+- Next, select the `Generate Inputs` button in the upper-right of the testing window.
+
+   ![](images/300/image049.png)
+
+- We want to put some interesting comment in the input `<ns0:Comment>` element in the `Input: createOrderRequest` incoming payload.
+
+- Edit the data in the generated inbound payload to something custom.  In this example it was set to *This is my Comment!*
+
+   ![](images/300/image050.png)
+
+- Now that the input data is ready, select the `Execute` button in the upper-right of the test window.
+
+   ![](images/300/image051.png)
+
+- The mapping will be applied to the generated input data and the result will be shown in the `Output: PROCESS_ORDER_Input` section on the right side of the test window.
+
+- Look for your custom comment and note that it has been mapped to the `P_HEADER_REC` -> `ATTRIBUTE1` element.
+
+   ![](images/300/image052.png)
+
+- Now that we have seen that our mapping has been successfully modified, we can close the test window.
+
+- Select the `Close` button in the lower-right of the test window.
+
+   ![](images/300/image053.png)
+
+- Now we can close the Mapping Editor because our changes have been made and tested.
+
+- Click on the `Exit Mapper` button in the upper-right of the Mapping Editor.
+
+   ![](images/300/image054.png)
+
+- Save your changes made to the cloned integration by pushing the `Save` button in the upper-right of the integration.
+
+   ![](images/300/image055.png)
+
+## Add Tracking to the Integration
 
 ### **STEP 1:**	Open the “Tracking” editor
 
