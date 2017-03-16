@@ -353,11 +353,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - You are directed to the ICS `Error Message Details` screen where all 4 of the failed ICS instances are listed.
 
-- Click on the grey warning icon 
-
-   ![](images/300/image025.png)
-
- on the right of the instance error description to see the details of the error.
+- Click on the grey warning icon ![](images/300/image025.png) on the right of the instance error description to see the details of the error.
 
 - You can see that there was a timeout in this integration of 120 seconds.
 
@@ -419,33 +415,102 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 # Use Integration Cloud Service to Modify an Integration
 
+In this second part of the lab, we will change the *Create EBS Order* ICS integration in order to support the new requirement of adding a comment to the EBS order from the mobile application.  The following steps will be followed in this part of the lab:
+1.	Clone an existing ICS integration
+2.	Modify the integration to support the new comment field
+3.	Update ICS tracking to include the comment
+4.	Re-Activate and Test the updated orchestration
+Let’s start by logging into ICS and cloning an existing integration.
+
 ## Clone an existing integration
 
 ### **STEP 1:**	Open the ICS Design Console
 
 ---
 
-**XXXX**
+- Open the ICS Service Console.  (Steps to do this were outlined in the first part of this lab when we were exploring ICS)
+
+- Select the `Designer` tab on top of the ICS Service Console to go to the `ICS Designer Portal`.
+
+- Select the `Integrations` icon
+
+   ![](images/300/image035.png)
+
+### **STEP 2:**	Clone the integration
+
+---
+
+- Click the `Hamburger` icon ![](images/300/image036.png)  just to the right of the *Create Order EBS* integration.
+
+- Drop down to the `Clone` menu selection so we can make a working copy of the current working *Create Order EBS* integration.
+
+   ![](images/300/image037.png)
+
+- In the `Clone` dialog that comes up, enter the new name of the cloned integration.  Since there may be multiple participants in this lab, use your assigned user # as a prefix with *Create EBS Order* at the end.  In the following example, *User 01* was assigned so the name of the cloned integration is *User 01 Create EBS Order*
+
+   ![](images/300/image038.png)
+
+- After entering the name, select the `Clone` button in the lower-right of the dialog.
+
+- You will now see that your new cloned integration is ready to edit as it’s in the `de-activated` state.
+
+   ![](images/300/image039.png)
+
+- Select the integration name in order to edit it.  In the image above `User 01 Create EBS Order` is the hot-link to select.
 
 ## Edit the mapping to the EBS update service call
 
-### **STEP 1:**	Deactivate the integration “Create Order EBS”
+### **STEP 1:**	Navigate to the mapping *createEBSOrder*
 
 ---
 
-**XXXX**
+- Since there are many steps in this orchestration style integration the text on each step is difficult to read.  In order to quickly zoom-in, select the `Home` icon in the view control bar in the upper-right.
 
-### **STEP 2:**	Open the integration “Create Order EBS”
+   ![](images/300/image040.png)
 
----
+- The *createEBSOrder* mapping step is toward the bottom of the orchestration.  As shown in the first part of the lab, by clicking and dragging your mouse in the background you can pan down the orchestration steps.
 
-**XXXX**
-
-### **STEP 3:**	Open the mapping “I don’t know that the mapping name is” for editing
+### **STEP 2:**	Open the mapping *createEBSOrder* for editing
 
 ---
 
-**XXXX**
+- The *createEBSOrder* mapping orchestration step is just above the corresponding *createEBSOrder* API invocation.
+
+   ![](images/300/image041.png)
+
+- Click on the double arrow mapping symbol to pop-up the edit pencil.
+
+- Click on the little pencil to edit the mapping.
+
+### **STEP 3:**	Map the new *Comment* field
+
+---
+
+- Once the mapping is displayed, we need to expand the target node that we will map the inbound `Comment` field to.
+
+- We are going to map `Comment` source to the target called `ATTRIBUTE1` which is the `P_HEADER_REC` section of the Target payload.
+
+- Select the little arrow icon ![](images/300/image042.png) just to the left of the `P_HEADER_REC` in the Target payload to expand it and expose `ATTRIBUTE1`.
+
+   ![](images/300/image043.png)
+
+- Now that the `ATTRIBUTE1` variable can be seen, we can map the `Comment` source variable to it by dragging the little circle just to the right of the `Comment` variable over to the `ATTRIBUTE1` circle.
+
+- Click and hold on the circle just to the right of the `Comment` Source variable.
+
+   ![](images/300/image044.png)
+
+- Release the mouse on the little circle just to the left of the `ATTRIBUTE1` Target variable.
+
+   ![](images/300/image045.png)
+
+- You will now be able to see the two variables mapped together by the green line connecting them.  Also note that the `Comment` field is shown as the mapping to the right of the `ATTRIBUTE1` variable.
+
+   ![](images/300/image046.png)
+
+- Now we need to select the `Save` button to save our changes
+
+   ![](images/300/image047.png)
 
 ### **STEP 4:**	Test the updated mapping
 
