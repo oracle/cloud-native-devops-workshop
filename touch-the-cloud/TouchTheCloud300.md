@@ -566,9 +566,43 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 ---
 
-**XXXX**
+- We want to add the *Comment* we just mapped as a `Business Identifier`.  Business Identifiers enable runtime tracking on messages.  These identifiers will be saved in ICS’s monitoring tab for each instance of the integration that is run.
 
-## Save then activate changes
+- Click on the `Tracking` button next to the *Save* button to bring up the business identifier editor.
+
+   ![](images/300/image056.png)
+
+### **STEP 2:**	Add a “Business Identifier”
+
+---
+
+- The `Business Identifiers For Tracking` editor will be opened up
+
+   ![](images/300/image057.png)
+
+- Click on the *Comment* variable in the Source variable section.  The editor will show the metadata for this variable such as type, path, etc.
+
+- Next, click on the `Shuttle Icon` to move the *Comment* variable over to be a new `Tracking Field`.
+
+   ![](images/300/image058.png)
+
+- Observe that the *Comment* variable has now been added as a `Tracking Field`.  The source variable name is also added as the `Tracking Name` by default – since *Comment* means something and is suitable for people to read in the monitoring tab we’ll keep it. If the comment variable was something random like *C2EF*, we would want to change it and give it a human-readable tracking name.
+
+- Select the `Done` button now that the new `Business Identifier` has been added.
+
+   ![](images/300/image059.png)
+
+- Once again, click on the `Save` button to save the tracking changes.
+
+   ![](images/300/image060.png)
+
+- All modifications have now been made to the cloned integration.
+
+- Select the `Exit Integration` button to go back to the ICS Designer Portal.
+
+   ![](images/300/image061.png)
+
+## Activate Changes to the Integration
 
 ### **STEP 1:**	Save the integration
 
