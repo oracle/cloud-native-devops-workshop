@@ -470,6 +470,8 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - The *createEBSOrder* mapping step is toward the bottom of the orchestration.  As shown in the first part of the lab, by clicking and dragging your mouse in the background you can pan down the orchestration steps.
 
+   ![](images/300/image012l.png)
+
 ### **STEP 2:**	Open the mapping *createEBSOrder* for editing
 
 ---
