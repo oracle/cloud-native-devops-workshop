@@ -3,7 +3,7 @@
 **First**, ***Get an Oracle Cloud Account*** 
 - Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
 - For some workshop events, cloud environments will be provided. 
-- For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](http://cloud.oracle.com/tryit) 
+- For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](https://shop.oracle.com/r/promo?sc=codeny_hol2_cloudpromotion) 
 - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
 
 **Second**, ***Configure your Client Environment***
