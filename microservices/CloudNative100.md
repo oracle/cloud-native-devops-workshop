@@ -281,7 +281,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ### **STEP 12**: Customize Board
 
-In the following step you will customize an Agile Board, and add a new Progress State. If you desire more information about States and Conditions, the following link will provide a tutorial: http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/developer/AgileDevelopment/AgileDevelopment.html
+In the following step you will customize an Agile Board, and add a new Progress State. If you desire more information about States and Conditions, this [Link](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/developer/AgileDevelopment/AgileDevelopment.html) will provide a tutorial: 
 
 - Now we will show you how you can customize your board. In the right hand side click **Board -> Configure**
 
