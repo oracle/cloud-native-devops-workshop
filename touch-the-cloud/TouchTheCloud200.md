@@ -471,7 +471,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture58.png)
 
-Username and password will be supplied by instructor, and remember to select your **Quote to Order -** ***YUORNAME*** Application to deploy:
+Username and password will be supplied by instructor, and remember to select your **Quote to Order -** ***YOUR USER NAME*** Application to deploy:
 
 ![](images/200/Picture59.png)
 
