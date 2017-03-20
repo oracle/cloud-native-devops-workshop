@@ -329,7 +329,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture25.png)
 
-- Give you clone a new name, by appending your user name (User01..User10), and click Create, and leave the 'Open immediately' option on
+- Give your clone a new name, by appending your user name (User01..User10), and click Create, and leave the 'Open immediately' option on
 
 ![](images/200/Picture26.png)
 
@@ -361,7 +361,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 - Click **Apply**
 
 
-### **STEP 5**: Editing with Rules
+### **STEP 5**: Editing Rules
 
 - Back on the process model, click on the Approval Decision and select Open Decision
 
@@ -388,7 +388,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 > Remember that this rule change would only be applied after deployment of the application.
 
 
-### **STEP 6**: Adding Approval
+### **STEP 6**: Adding Approvals
 
 - First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
 
