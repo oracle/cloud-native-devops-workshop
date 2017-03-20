@@ -22,7 +22,7 @@ Following are the assets that we will be creating during this part of the worksh
 #### Workshop Pre-requisites:
 
 1.	Chrome Browser
-2.	Access to Internet, so that you can access the MCS / MAX Console running @ https://myservices.us.oraclecloud.com/mycloud/*MCSHOSTNAME*/faces/dashboard.jspx
+2.	Access to Internet, so that you can access the MCS / MAX Console 
 3.	Archiving utility (zip / unzip)
 4.	Text Editor
 5.	Android / iOS Mobile Phone (with the “Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore), preferably to test / run the MAX App on your Mobile Phone. 
@@ -33,9 +33,9 @@ If Android / iOS Mobile Phone is not available, you can still test the MAX App u
 
 ![](images/100/Picture2.1.png)  
 
-**2.2**	In Chrome browser incognito window, launch MCS Instance https://myservices.us.oraclecloud.com/mycloud/*MCSHOSTNAME*/faces/dashboard.jspx and login with following credentials.
+**2.2**	In Chrome browser incognito window, launch OPC Instance https://myservices.us2.oraclecloud.com/mycloud/faces/dashboard.jspx and login with following credentials.
 
-Login Username: <USERNAME>@oracle.com
+Login Username: demo.user[01-10]
 
 Login Password: <PASSWORD>
 
@@ -79,11 +79,11 @@ In this part of the Workshop, you create an MCS connector to support gathering d
 
 **3.3**	In the **New SOAP Connection API** dialog, enter the following values:
 
-**API Display Name:** PCS_TTC_XX (where XX is your initials)
+**API Display Name:** PCS_TTC_XX (where XX is the postfix of your user id, it should be 01 thru 10)
 
 **API Name:** PCS_TTC_XX (should be populated based on the value entered for the Display Name)
 
-**WSDL URL:** https://touchthecloudpcs.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
+**WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
 
 **Short Description:** Exposes All Operations for the Quote Lines in PCS
 
@@ -179,7 +179,7 @@ Replace **xx** in API name with your initials. In the connectors section too, mo
 4.9	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
 Edit the methods to include code to access your API **TTCSalesOrderAPI_XX** and Connector **PCS_TTC_XX**.
 
-**Replace all XX with your initials in the file:**
+**Replace all XX with the postfix of your assigned user id [01 thru 10] in the file:**
 
 ![](images/100/Picture4.9.png)
 
