@@ -455,7 +455,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture54.png)
 
-- Supply information and name for snapshot
+- Provide Comment and Name for snapshot (Other Options - check Make Snapshot)
 
 ![](images/200/Picture55.png)
 
