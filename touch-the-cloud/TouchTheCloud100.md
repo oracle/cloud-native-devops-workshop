@@ -170,7 +170,7 @@ The coding model is based on Node.js, which is a lightweight JavaScript framewor
 
 **4.8**	Unzip the **ttcsalesorderapi.zip** file to ttcsalesorderapi folder. In the ttcsalesorderapi folder that is created locate the **package.json** file and open it in a text editor.
 
-Replace **xx** in API name with your initials. In the connectors section too, modify the name and version of the connector by replacing **XX**. For example: "/mobile/connector/PCS_TTC_**XX**":"1.0"
+Replace **xx** in API name with the postfix of your user id (it should be 01 thru 10). In the connectors section too, modify the name and version of the connector by replacing **XX**. For example: "/mobile/connector/PCS_TTC_**XX**":"1.0"
 
 **Refer to the code snippet:**
 
