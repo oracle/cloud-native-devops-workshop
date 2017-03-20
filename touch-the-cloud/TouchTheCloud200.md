@@ -313,9 +313,7 @@ A space groups processes together, and also allows you to share a space with oth
 
 ![](images/200/Picture23.png)
 
-- At the bottom of the left hand navigation panel, you will see the sharing options.
 
-![](images/200/Picture24.png)
 
 ### **STEP 3**: Working with Applications
 
@@ -331,7 +329,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture25.png)
 
-- Give you clone a new name, by appending your name (Pieter in this example), and click Create, and leave the 'Open immediately' option on
+- Give you clone a new name, by appending your user name (User01..User10), and click Create, and leave the 'Open immediately' option on
 
 ![](images/200/Picture26.png)
 
