@@ -3,22 +3,10 @@
         "title": "Touch The Cloud",
         "description": "A hands-on event to explore Oracle’s new cloud services.",
         "labs": [{
-                "number": "0",
-                "filename": "README.md",
-                "title": "README First",
-                "description": "Step-by-step workshop instructions"
-            },
-            {
                 "number": "10",
                 "filename": "StudentGuide.md",
-                "title": "Student Guide",
+                "title": "Prerequisites",
                 "description": "Workshop guidance and prerequisites"
-            },
-            {
-                "number": "000",
-                "filename": "TouchTheCloud000.md",
-                "title": "Required Environment Setup",
-                "description": "Contains the details for workshop configuration."
             },
             {
                 "number": "100",
