@@ -209,7 +209,7 @@ Similarly, you can test the other endpoints as well.
 
 Click on the Hamburger Menu, select **Applications** from the breadcrumb menu and click on APIs. 
 
-Search the API you just created i.e., **TTCSalesOrderAPI_XX** (where XX is your initial) by using the **Filter APIs**. Then select your API and click on **Publish.**
+Search the API you just created i.e., **TTCSalesOrderAPI_XX** (where XX is the postfix of your user id, it should be 01 thru 10) by using the **Filter APIs**. Then select your API and click on **Publish.**
 
 ![](images/100/Picture4.14.png)
 
@@ -223,7 +223,7 @@ This will publish the MCS API.
 
 # 5.	Creating MAX App
 
-In this section, you create a new MAX application with dashboard, list of incidents, incident summary and create incident screens.
+In this section, you create a new MAX application.
 
 **5.1**	Select **Applications** from the breadcrumb menu and then click the **Mobile Apps** icon
 
@@ -233,7 +233,7 @@ In this section, you create a new MAX application with dashboard, list of incide
 
 ![](images/100/Picture5.2.png)
 
-**5.3**	Enter the MAX App name as **TTC_APP_XX** (where XX is your initials)
+**5.3**	Enter the MAX App name as **TTC_APP_XX** (where XX is the postfix of your user id, it should be 01 thru 10)
 
 ![](images/100/Picture5.3.png)
 
@@ -268,7 +268,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.10.png)
 
-**5.11**	Click on **Add Service**. In the **Service Catalog**, search for the MCS API that you published i.e., **TTCSalesOrderAPI_XX** (XX being your initial) using Filter Services. Then select your API and click **Select** button on the bottom right corner.
+**5.11**	Click on **Add Service**. In the **Service Catalog**, search for the MCS API that you published i.e., **TTCSalesOrderAPI_XX** (where XX is the postfix of your user id, it should be 01 thru 10) using Filter Services. Then select your API and click **Select** button on the bottom right corner.
 
 ![](images/100/Picture5.11.png)
 
