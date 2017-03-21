@@ -380,7 +380,7 @@ Similarly change the field type for **Uom** to **Select**. Data mapping for thes
 
 ![](images/100/Picture5.37.png)
 
-**5.38**	Navigate to **Screen Flow** tab by clicking on the left panel. Double click on **Create Summary** screen.
+**5.38**	Navigate to **Screen Flow** tab by clicking on the left panel. Double click on **Customer Summary** screen.
 
 ![](images/100/Picture5.38.png)
 
