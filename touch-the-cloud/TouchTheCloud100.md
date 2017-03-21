@@ -437,7 +437,7 @@ password: W3lcome1*
 
 ![](images/100/Picture5.47.png)
 
-**5.48**	Navigate to Quote Lines Tab
+**5.48**	Navigate to Quote Lines Tab, next to Details tab
 
  ![](images/100/Picture5.48.png)
 
