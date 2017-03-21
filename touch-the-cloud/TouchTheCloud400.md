@@ -14,29 +14,29 @@ This is the analytics part of the  **Oracle Public Cloud Touch the Cloud worksho
 
 ## Requirements for this lab
 
-A deployed process 'Quote to Order' - see Required Environment Setup(TouchTheCloud000.md)
+A deployed process 'Quote to Order' 
 
 # 
 
 ## Process Cloud Business Analytics
 
-In this section we are going to configure the Quote to Order process to gather statics while in flight.
+In this section we are going to configure the Quote to Order process to gather statistics while in flight.
 
-Each step identify the role, and what the user in the specific role try to achieve. 
+Each step identify the role, and what the user in that specific role is trying to achieve. 
 
 ### **STEP 1**: Instance Analytics
 
 ---
 
-**Role: Mr X, Process Owner**
+**Role: Mr Roland Dubois, Process Owner**
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roger Frezia, sales director and process owner wants to see what is happening to his Quote to Order processes, in a summarized customized view. 
+  Roland Dubois, sales director and process owner wants to see what is happening to his Quote to Order processes, in a summarized customized view. 
   
 ---
 
-- Logout of PCS, if not already logged in as Mr. X, and log into the Process Workspace as Mr X.
+- Log into the Process Workspace using your .
 
 - On the Process home page click the View Dashboards
 
@@ -58,15 +58,15 @@ Each step identify the role, and what the user in the specific role try to achie
 
 ---
 
-**Role: Mr X, Process Owner**
+**Role: Mr Roland Dubois, Process Owner**
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roger Frezia, sales director and process owner wants extract the value of quotes per date
+  Roland Dubois, sales director and process owner wants extract the value of quotes per date
 
 ---
 
-- Open your Space and Application in PCS Composer. If unsure look at **Lab 200** - **STEP 3** and **STEP 4** how to get to your clonred application from **Lab 200**.
+- Open your Space and Application in PCS Composer. If unsure look at **Lab 200** - **STEP 3** and **STEP 4** how to get to your cloned PCS application from **Lab 200**.
 
 - Click on the Indicators tab
 
