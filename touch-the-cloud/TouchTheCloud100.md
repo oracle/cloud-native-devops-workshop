@@ -481,4 +481,4 @@ You can use the hamburger menu to navigate to log out of the app.
 
 
 
-## THIS COMPLETES THE WORKSHOP
+## This Completes LAB 100
