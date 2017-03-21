@@ -421,6 +421,10 @@ The Test tool lets you use the simulator to see how your UI displays live data. 
 
 **5.45**	You need a test user account to preview your app with live data. To test the app you created use the following credentials
 
+username: maxtester
+
+password: W3lcome1*
+
 ![](images/100/Picture5.45.png)
 
 **5.46**	The MAX App opens up in the Test Console. Click on a Customer on the Map
