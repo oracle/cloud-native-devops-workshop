@@ -85,7 +85,7 @@ In this part of the Workshop, you create an MCS connector to support gathering d
 
 **WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
 
-**Short Description:** Exposes All Operations for the Quote Lines in PCS
+**Short Description:** Endpoint of PCS Approval Workflow
 
 Click **Create**. 
 
