@@ -35,9 +35,11 @@ If Android / iOS Mobile Phone is not available, you can still test the MAX App u
 
 **2.2**	In Chrome browser incognito window, launch OPC Instance https://myservices.us2.oraclecloud.com/mycloud/faces/dashboard.jspx and login with following credentials.
 
+Enter yoour Identity Domain: gse00003021
+
 Login Username: demo.user[01-10]
 
-Login Password: <PASSWORD>
+Login Password: <PASSWORD> will be provided by the lead trainer
 
 ![](images/100/Picture2.2.png) 
 
