@@ -50,7 +50,7 @@ PCS supports the use of forms to submit data to be used as input for a process.
 
 ---
 
-Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** credentials instead of Julie's.
+Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** credentials instead of Lisa's.
 
 - On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
 
@@ -104,7 +104,7 @@ Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Ora
 
 ![](images/personas/julie_jones_sales_operations.png)
 
-Since it is Julie's first time signing into Oracle Cloud, she has to figure out how to access Oracle Process Cloud Services.
+Since it is Lisa's first time signing into Oracle Cloud, she has to figure out how to access Oracle Process Cloud Services.
 
 ---
 
@@ -155,11 +155,11 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 There are different ways to access the PCS Workspace. The direct access URL can be embedded on an Intranet page, a full set of REST API's can be used to extract the information programmatically or you can use the mobile application supplied by Oracle. 
 
-Julie prefer to go directly to her PCS Workspace using a browser.
+Lisa prefer to go directly to her PCS Workspace using a browser.
 
 ---
 
-Oracle Process Cloud Service is divided as three separate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Julie only has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
+Oracle Process Cloud Service is divided as three separate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Lisa only has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
 
 - From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
 
@@ -179,7 +179,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 ![](images/personas/julie_jones_sales_operations.png)
 
-Julie wants to look at her outstanding tasks, and approve the incoming Quote request generated in **STEP 1**. (Although she is not aware of it at the moment, PCS can be configured to send out notifications and reminders to attend to outstanding tasks).
+Lisa wants to look at her outstanding tasks, and approve the incoming Quote request generated in **STEP 1**. (Although she is not aware of it at the moment, PCS can be configured to send out notifications and reminders to attend to outstanding tasks).
 
 ---
 
