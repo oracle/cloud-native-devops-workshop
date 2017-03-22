@@ -266,7 +266,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.9.png)
 
-**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button.
+**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button. Click next.
 
 ![](images/100/Picture5.10.png)
 
