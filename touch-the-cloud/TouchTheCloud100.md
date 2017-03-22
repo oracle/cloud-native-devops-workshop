@@ -179,7 +179,7 @@ Replace **xx** in API name with the postfix of your user id (it should be 01 thr
 ![](images/100/Picture4.8.png)
 
 4.9	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
-Edit the methods to include code to access your API **TTCSalesOrderAPI_XX** and Connector **PCS_TTC_XX**.
+Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and Connector **PCS_TTC_XX**.
 
 **Replace all XX with the postfix of your assigned user id [01 thru 10] in the file:**
 
@@ -211,7 +211,7 @@ Similarly, you can test the other endpoints as well.
 
 Click on the Hamburger Menu, select **Applications** from the breadcrumb menu and click on APIs. 
 
-Search the API you just created i.e., **TTCSalesOrderAPI_XX** (where XX is the postfix of your user id, it should be 01 thru 10) by using the **Filter APIs**. Then select your API and click on **Publish.**
+Search the API you just created i.e., **TTCSalesOrderAPI\_XX** (where XX is the postfix of your user id, it should be 01 thru 10) by using the **Filter APIs**. Then select your API and click on **Publish.**
 
 ![](images/100/Picture4.14.png)
 
@@ -270,7 +270,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.10.png)
 
-**5.11**	Click on **Add Service**. In the **Service Catalog**, search for the MCS API that you published i.e., **TTCSalesOrderAPI_XX** (where XX is the postfix of your user id, it should be 01 thru 10) using Filter Services. Then select your API and click **Select** button on the bottom right corner.
+**5.11**	Click on **Add Service**. In the **Service Catalog**, search for the MCS API that you published i.e., **TTCSalesOrderAPI\_XX** (where XX is the postfix of your user id, it should be 01 thru 10) using Filter Services. Then select your API and click **Select** button on the bottom right corner.
 
 ![](images/100/Picture5.11.png)
 
