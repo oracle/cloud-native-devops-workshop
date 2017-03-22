@@ -439,7 +439,7 @@ password: W3lcome1*
 
 **5.48**	Navigate to Quote Lines Tab, next to Details tab
 
- ![](images/100/Picture5.47.png)
+ ![](images/100/Picture5.48.png)
 
 **5.49**	Create a Quote Line by using the header button **Create Quote Line** on the top right corner
 
