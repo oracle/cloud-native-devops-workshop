@@ -185,7 +185,7 @@ Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and
 
 ![](images/100/Picture4.9.png)
 
-**4.10**	After saving all your work, create a zip file that includes all three files of the ttcsalesorderapi folder. Name the file **ttcsalesorderapi.zip**.
+**4.10**	After saving all your work, create a zip file that includes all the files of the ttcsalesorderapi folder. Name the file **ttcsalesorderapi.zip**.
 
 **4.11**	Back in the MCS API implementation page, at the bottom, drag and drop **ttcsalesorderapi.zip** to **Upload an implementation** archive section.
 
