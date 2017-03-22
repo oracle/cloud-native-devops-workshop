@@ -148,11 +148,11 @@ In this part of the workshop, you step through the process of creating and defin
 
 ![](images/100/Picture4.3.png)
 
-**4.4**	Enter **Short Description** as “Touch the Cloud MCS API”. Then click **Create**
+**4.4**	Change XX to your user id suffix and enter **Short Description** as “Touch the Cloud MCS API”. Then click **Create**
 
 ![](images/100/Picture4.4.png)
 
-**4.5**	The API created will looks like this
+**4.5**	The API created will looks like this (Please make sure that it reflects 01-10 and not XX)
 
 ![](images/100/Picture4.5.png)
 
