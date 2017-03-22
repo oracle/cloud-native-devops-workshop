@@ -107,7 +107,7 @@ Click **Create**.
 
 By default there are no policies selected in the **Security Configuration**. We will not be adding any policies in this workshop.
 
-**3.7**	Select http_basic_auth_over_ssl_client_policy and clicking on “>”.
+**3.7**	Select http\_basic\_auth\_over\_ssl\_client\_policy and clicking on “>”.
 ![](images/100/Picture3.7.png)
 
 **3.8**	On highlighting the csf-key field, you would see a lock icon. Click on the lock icon and select **PCS_TTC**, the one provided in the access details and collaterals section 2.6. Click on **Select** button.
