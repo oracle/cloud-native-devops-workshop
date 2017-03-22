@@ -81,9 +81,9 @@ In this part of the Workshop, you create an MCS connector to support gathering d
 
 **3.3**	In the **New SOAP Connection API** dialog, enter the following values:
 
-**API Display Name:** PCS_TTC_XX (where XX is the postfix of your user id, it should be 01 thru 10)
+**API Display Name:** PCS\_TTC\_XX (where XX is the postfix of your user id, it should be 01 thru 10)
 
-**API Name:** PCS_TTC_XX (should be populated based on the value entered for the Display Name)
+**API Name:** PCS\_TTC\_XX (should be populated based on the value entered for the Display Name)
 
 **WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote\_to\_Order!1.0/QuoteToOrderProcess.service?WSDL
 
