@@ -235,7 +235,7 @@ In this section, you create a new MAX application.
 
 ![](images/100/Picture5.2.png)
 
-**5.3**	Enter the MAX App name as **TTC_APP_XX** (where XX is the postfix of your user id, it should be 01 thru 10)
+**5.3**	Enter the MAX App name as **TTC\_APP\_XX** (where XX is the postfix of your user id, it should be 01 thru 10)
 
 ![](images/100/Picture5.3.png)
 
