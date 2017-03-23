@@ -90,7 +90,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 **2.1** From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
 
-    ![](images/200/Picture8.png)  
+![](images/200/Picture8.png)  
 
 - The  PCS Landing page gives you a quick glance of the functionality available to you (or in this case Lisa Jones).
 
@@ -171,13 +171,14 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
 
 **4.1** Click **Work on Tasks** to access the Task List
 
-    ![](images/200/Picture9.png)  
+![](images/200/Picture9.png)  
 
-    In the list we can see the outstanding tasks allocated. You also have the capability to sort, do filtering and peek at task related to 'me'.
+In the list we can see the outstanding tasks allocated. You also have the capability to sort, do filtering and peek at task related to 'me'.
 
 **4.2** Select a task by hovering over the task with mouse and clicking on it.
 
-    ![](images/200/Picture10.png) 
+![](images/200/Picture10.png) 
+
     >While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
     >1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionality allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
     >2. Close Form / Maximize
@@ -187,6 +188,7 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
     >6. Task Information, History and Task Metadata
 
 **4.2** Lets follow the happy path, and click on the action ***Approve***
+
 - The page will revert to the task list and you will notice that the task disappeared from your inbox. In fact, you might also get a green confirmation message that your action was accepted.
 
 
