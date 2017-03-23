@@ -26,7 +26,7 @@ In this section we are going to experience the interaction possible from an end 
 
 Each step identify the role, and what the user in the specific role try to achieve. 
 
-### **STEP 1**: Create a Quote (or follow **STEP 1a** for a manual Quote Capture)
+### **STEP 1**: Create a Quote (***Optional***)
 
 ---
 
@@ -34,7 +34,9 @@ Each step identify the role, and what the user in the specific role try to achie
 
 ![](images/personas/john_lee_field_sales.png)
 
-On either your mobile phone, or in the Simulator in MCS, go ahead and create a Quote for a customer. This will trigger the Quote to Order process in Process Cloud.
+On either your mobile phone, or in the Simulator in MCS, go ahead and create a Quote for a customer. This will trigger the Quote to Order process in Process Cloud. 
+
+>If you completed the Lab 100, then there should be a couple of items already in the worklist and it should not be required to create a new quote request.
 
 ---
 
@@ -48,9 +50,10 @@ On either your mobile phone, or in the Simulator in MCS, go ahead and create a Q
 
 PCS supports the use of forms to submit data to be used as input for a process.
 
+>If you completed the Lab 100, then there should be a couple of items already in the worklist and it should not be required to create a new quote request.
 ---
 
-Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** credentials instead of Lisa's.
+Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** (bala.gupta) credentials instead of Lisa's.
 
 - On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
 
@@ -121,7 +124,7 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 - Enter your identity domain and click **Go**
 
-  ***NOTE***: the **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
+  ***NOTE***: the **Identity Domain, lisa.jones** and **Password** values will be given to you from your instructor.
 
     ![](images/200/Picture4.png)  
 
@@ -282,7 +285,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. He is also not impressed by the high amount of the rule to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is high risk, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
+  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. He is also not impressed by the high amount of the rules to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is high risk, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
   
 ---
 
@@ -518,3 +521,10 @@ Here a list of users and allocated roles:
 |Lisa Jones    | Sales Operations|
 |Roland Dubois | Sales Director  |
 
+
+
+Setup MCS to use your new deployed PCS process
+
+1. Delete your ... Connector
+2. PCS -> Designer -> Admin -> Copy your deployed WSDL (Click on Hamburger next to deployment)
+3. Recreate your connector in MCS, using the WSDL URL obtained in 2

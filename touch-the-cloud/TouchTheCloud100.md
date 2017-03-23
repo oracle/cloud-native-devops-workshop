@@ -179,7 +179,7 @@ Replace **xx** in API name with the postfix of your user id (it should be 01 thr
 ![](images/100/Picture4.8.png)
 
 4.9	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
-Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and Connector **PCS_TTC_XX**.
+Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and Connector **PCS\_TTC\_XX**.
 
 **Replace all XX with the postfix of your assigned user id [01 thru 10] in the file:**
 
@@ -258,7 +258,7 @@ By default **Simple Screen** template is selected. Use the same and click **Next
 ![](images/100/Picture5.7.png)
 
 **5.8**	Once the MAX application is created, you are taken to the Designer part of the interface where you can refine the layout and content of the pages.
-On the left are a series of components you may drag and drop onto your pages. In the center is a preview of the way the screen will look and on the right is where you can set the properties for the components you add. Collapse the list of components. Do this by clicking **Components** icon (third icon from the top), on the left side of the page.
+On the left are a series of components you may drag and drop onto your pages. In the center is a preview of the way the screen will look and on the right is where you can set the properties for the components you add.
 
 ![](images/100/Picture5.8.png)
 
@@ -342,7 +342,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.28.png)
 
-**5.29**	In **Select Data Source** Tab, select **Customer Summary** business object. Click **Next**.
+**5.29**	In **Select Data Source** Tab, select **Order Line** business object. Click **Next**.
 
 ![](images/100/Picture5.29.png)
 
