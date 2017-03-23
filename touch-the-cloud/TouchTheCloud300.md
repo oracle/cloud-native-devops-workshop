@@ -23,7 +23,7 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 - The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
 
-# Explore Integration Cloud Service
+# Part 1: Explore Integration Cloud Service
 
 In this first part of the lab, we will explore the main parts of Integration Cloud Service (ICS).  We’ll look at the following:
 1.	Cloud Services Dashboard
@@ -413,7 +413,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - We are now done exploring the ICS monitoring features.
 
-# Use Integration Cloud Service to Modify an Integration
+# Part 2: Use Integration Cloud Service to Modify an Integration
 
 In this second part of the lab, we will change the *Create EBS Order* ICS integration in order to support the new requirement of adding a comment to the EBS order from the mobile application.  The following steps will be followed in this part of the lab:
 1.	Clone an existing ICS integration
@@ -640,7 +640,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Now that we have a modified integration with a new service endpoint, we need to update PCS so that the comment sent in from the mobile application can be passed into ICS.
 
-# Testing the New ICS Integration from PCS
+# Part 3: Testing the New ICS Integration from PCS
 
 Now that we have a new ICS integration mapping the *Comment* field to the EBS order, we need to update the PCS process with the new ICS endpoint.
 Using the PCS Process from the previous lab we’ll now go through the steps necessary to do this.
