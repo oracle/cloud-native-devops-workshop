@@ -53,7 +53,7 @@ PCS supports the use of forms to submit data to be used as input for a process.
 >If you completed the Lab 100, then there should be a couple of items already in the worklist and it should not be required to create a new quote request.
 ---
 
-Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** credentials instead of Lisa's.
+Follow the steps explained in steps **STEP 2**, **STEP 3** to login into the Oracle Cloud, or directly into the PCS Workspace using ***Bala's*** (bala.gupta) credentials instead of Lisa's.
 
 - On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
 
