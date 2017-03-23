@@ -207,48 +207,46 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
 
 **5.1** Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois.
 
-#### Tracking instances
-
 **5.2** Click **Instance Tracking** to access the List of Instances
 
-    ![](images/200/Picture13.png)  
+![](images/200/Picture13.png)  
 
-    ![](images/200/Picture14.png)
+![](images/200/Picture14.png)
 
-    This List displays the active instances. To display completed instances as well, you have to select the **Completed** check box.
+This List displays the active instances. To display completed instances as well, you have to select the **Completed** check box.
 
-    ![](images/200/Picture15.png)
+![](images/200/Picture15.png)
 
 **5.3** Click on any process in the list
 
-    ![](images/200/Picture16.png)
+![](images/200/Picture16.png)
 
-    To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
+To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
 
-    ![](images/200/Picture18.png)
+![](images/200/Picture18.png)
 
-    Expand the History heading
+Expand the History heading
 
-    ![](images/200/Picture17.png)
+![](images/200/Picture17.png)
 
-    You have the option to view the history as a list, a tree view or diagram, depending on your needs. 
+You have the option to view the history as a list, a tree view or diagram, depending on your needs. 
 
-    ![](images/200/Picture19.png)
+![](images/200/Picture19.png)
 
     - Graphical View : See the process as a diagram to quickly see what happened
     - List: Trace through the steps the process followed
     - Tree: Expose the capability to drill into specific step to see what happened in a step
 
-    To determine the next step in the process, you can view the diagram and determine what the next step in the process would be. 
+To determine the next step in the process, you can view the diagram and determine what the next step in the process would be. 
 
-    ![](images/200/Picture20.png)
+![](images/200/Picture20.png)
 
-    *** Sample flow where the amount was low and did not require further approval. ***
+*** Sample flow where the amount was low and did not require further approval. ***
 
     This is just a high light working with process instances, but keep in mind that there are features embedded in PCS to makes life easier from a process owner's point of view. A good example might be to track instances in an error state and retry or even alter the flow to overcome the error condition.
 
 
-# 
+#
 
 ## Process Modeling and Configuration
 
