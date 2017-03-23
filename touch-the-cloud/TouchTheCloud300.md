@@ -31,7 +31,7 @@ In this first part of the lab, we will explore the main parts of Integration Clo
 3.	ICS Monitoring User Interface
 Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
 
-## Login and Explore the Oracle Cloud Dashboard
+## Explore the Oracle Cloud Dashboard
 
 ### **STEP 1**: Login to your Oracle Cloud account
 
@@ -52,7 +52,7 @@ https://cloud.oracle.com
 
 - Once your Identity Domain is set, enter your `User Name` and `Password` and click **Sign In**
 
-    ***NOTE:*** the **User Name and Password** values will be given to you from your instructor.
+    ***NOTE:*** the **User Name and Password** values will be given to you by your instructor.
 
     ![](images/300/image003.png)  
 
@@ -446,7 +446,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image037.png)
 
-- In the `Clone` dialog that comes up, enter the new name of the cloned integration.  Since there may be multiple participants in this lab, use your assigned user # as a prefix with *Create EBS Order* at the end.  In the following example, *User 01* was assigned so the name of the cloned integration is *User 01 Create EBS Order*
+- In the `Clone` dialog that comes up, enter the new name of the cloned integration.  Since there may be multiple participants in this lab, use your assigned user # as a prefix with *Create EBS Order* at the end.  In the following example, *demo.user01* was assigned so the name of the cloned integration is *User 01 Create EBS Order*
 
    ![](images/300/image038.png)
 
@@ -640,14 +640,258 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Now that we have a modified integration with a new service endpoint, we need to update PCS so that the comment sent in from the mobile application can be passed into ICS.
 
-# Testing the End to End Application
+# Testing the New ICS Integration from PCS
 
-### **STEP 1:**	Modifying PCS with the New ICS Service
+Now that we have a new ICS integration mapping the *Comment* field to the EBS order, we need to update the PCS process with the new ICS endpoint.
+Using the PCS Process from the previous lab we’ll now go through the steps necessary to do this.
+
+### **STEP 1:**	Update PCS Process with the New ICS Service
 
 ---
+
+- First, get back into the PCS Composer and open up the PCS process you created in Lab 200 by clicking on the PCS Application name.
+
+- In the screenshot below, we are using the process created with user `demo.user03`:
+
+   ![](images/300/image068.png)
+
+- Open up the *Quote to Order Process* process by clicking on it:
+
+   ![](images/300/image069.png)
+
+- Ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
+
+   ![](images/300/image070.png)
+
+- Pan over to the *Capture Order* service call, click on that activity and then select the *Open Properties*:
+
+   ![](images/300/image071.png)
+
+- Edit the service call by clicking on the small pencil icon on the right of the *Service Call* dropbox.
+
+   ![](images/300/image072.png)
+
+- Select the `Plus` (`+`) icon to the right of the ICS integration endpoint:
+
+   ![](images/300/image073.png)
+
+- Now select the new ICS integration that was created in the previous part of this lab, then select the *Next* button.  In the screenshot below, the integration for the *demo.user03* user is shown:
+
+   ![](images/300/image074.png)
+
+- In the Advanced service configuration dialog, select *APP Id – Username Token* for the Security.
+
+- Select *[New Key]* for the Keystore Credential and give it a name that matches the user you have been given for the lab… something like *demo.user03.key*
+
+- Input the username/password given to you for the workshop.  In the screenshot below, the user *demo.user03* is shown.
+
+- After inputting all this info, click on the *Create* button:
+
+   ![](images/300/image075.png)
+
+- Select the *OK* button back in the *Configuration* dialog:
+
+   ![](images/300/image076.png)
+
+- Collapse the properties window at the bottom of the PCS Composer by selecting the small down-arrow at the right hand side of the properties section:
+
+   ![](images/300/image077.png)
+
+- Now we need to map some data to the new ICS *Comment* field.
+
+- Click on the *Capture Order* service activity and then select *Open Data Association*
+
+   ![](images/300/image078.png)
+
+- Drag-and-Drop the *comment* field from the new service endpoint’s *Capture Order* input to the empty textbox at the bottom of the *Capture Order* section of the *Transformations* Data Association.
+
+   ![](images/300/image079.png)
+
+- For now, enter the hard-coded text *Comment from PCS* in the corresponding empty textbox at the bottom of the *Quote To Order Process* section of the *Transformations* Data Association.
+
+- After that data association has been made, select the *Apply* button in the upper-right of the *Data Association* window.
+
+   ![](images/300/image080.png)
+
+- Save the changes made to the PCS process by clicking on the diskette icon in the middle of the top blue header bar:
+
+   ![](images/300/image081.png)
+
+- You are now ready to publish your changes
+
+### **STEP 2:**	Deploy the Updated PCS Process
+
+---
+
+- The first step in deploying is to publish the process.
+
+- Select the little *globe + arrow* icon in the middle of the top blue header bar:
+
+   ![](images/300/image082.png)
+
+- Select the *Make Snapshot* checkbox and enter the comment *Added New ICS Service Endpoint*.  Add the same comment to the free-form textarea at the bottom of the *Publish Application* dialog.
+
+- After making these changes, select the *Publish* button on the bottom of the dialog:
+
+   ![](images/300/image083.png)
+
+- After the application has been published, it needs to be deployed.
+
+- Select the *Management* link in the top right of the PCS Composer screen:
+
+   ![](images/300/image084.png)
+
+- In the upper left side of the PCS Management window, click on the `hamburger` icon then select the *Deploy* menu item:
+
+   ![](images/300/image085.png)
+
+- Select your *Touch the Cloud* Space in the *Select Space* dropdown
+
+- Select your PCS application *Quote to Order – UserXX* in the *Select Application* dropdown (where `XX` is your workshop user number, ie: 01, 02, etc.)
+
+- Select your snapshot name in the *Select a snapshot* dropdown. In the example below, the snapshot was given the name *Added New ICS Service Endpoint*
+
+- After you have configured the application in the *Deploy Application to My Server* dialog, select the *Customize* button.
+
+   ![](images/300/image086.png)
+
+- Select the *Use design-time credentials and certificates* checkbox in the upper right of the *Customize* page of the wizard.
+
+- In the *Keystore Credential* dropdown box, select the security key created during design time.  In the example shown below, we created the key called *demo.user03.key*.
+
+- The username/password will automatically be filled in based on the key which was already created during design time.
+
+- After customizing the new service call, select the *Validate* button:
+
+   ![](images/300/image087.png)
+
+- After the validation is shown to be successful, select the *Options* button:
+
+   ![](images/300/image088.png)
+
+- We are going to create a new process revision because of this fairly-major change… so enter the id *2.0* in the *Revision id* textbox.
+
+- Select the *Override* checkbox
+
+- Select the *Force default* checkbox
+
+- Finally, select the *Deploy* button
+
+   ![](images/300/image089.png)
+
+- The *Deploying* modal-dialog will pop-up and spin while this new revision is deployed.  This could take a minute or two depending on how many other participants are deploying at the same time
+
+   ![](images/300/image090.png)
+
+- Select the *Finish* button once the application deployment is complete
+
+   ![](images/300/image091.png)
+
+- The updated PCS application is now ready to test
+
+### **STEP 3:**	Test the Updated PCS Process
+
+---
+
+- Select the *PCS Home* icon on the upper right of the PCS Management window
+
+   ![](images/300/image092.png)
+
+- If your PCS user (in this example, *demo.user03*) was already added in the roles for this PCS application in the PCS lab, you should see the *Submit Quote (v2.0)* icon on the left hand side of the PCS workspace home.
+
+- If you don’t see the *Submit Quote (v2.0)* icon on the left hand navigation of the PCS workspace home, you’ll either need to add your user to the roles for this application or use the other PCS users such as `lisa.jones`, and `bala.gupta` to test out the new PCS process. This is documented in Lab 200, `Process Modeling and Configuration` section -> `Step 9: Role Assignment` section.
+
+   ![](images/300/image093.png)
+
+- The form created for the *Submit Quote* will be displayed.  Only a couple fields are necessary for testing.
+  - Order Lines:
+  - Item No = *2155*
+  - Qty = *1*
+  - UOM = *each*
+  - Price = *$6000.00*
+  - Account Name = *Imaging Innovations, Inc.*
+  - After filling out the form, select the *Submit* button:
+
+   ![](images/300/image094.png)
+
+- A dialog will pop-up showing that the application has been started successfully with the input from the form you just filled out:
+
+   ![](images/300/image095.png)
+
+- Select the *Tasks* button on the top of the PCS Workspace:
+
+   ![](images/300/image096.png)
+
+- Since this order was greater than $5000, it will have been routed to the *Sales Director* role in the PCS process.
+
+- In the Tasks window, you should see a new PCS process for the *Sales Director*
+
+- Select the arrow at the right of the PCS instance to see the details of the form while deciding whether to approve this quote or not.
+
+   ![](images/300/image097.png)
+
+- Review the quote as shown in the form.  Since this seems to be reasonable, select the *Approve* button on the top of the form
+
+   ![](images/300/image098.png)
+
+- This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
+
+- Select the *Tracking* icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
+
+   ![](images/300/image099.png)
+
+- Select the *Completed* checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
+
+   ![](images/300/image100.png)
+
+- Look near the top of the list for your process instance since it was just executed.
+
+- Select the arrow at the right of the instance to see the details:
+
+   ![](images/300/image101.png)
+
+- Select the chevron icon just to the right of the *History* section so you can see a graphical representation of the process history.  The green line highlights the path that the process took.
+
+   ![](images/300/image102.png)
+	
+### **STEP 4:**	Ensure PCS called the new ICS Integration
+
+---
+
+- Login to ICS and visit the *Monitoring* window
+
+   ![](images/300/image103.png)
+
+- Select “Tracking” from the left-hand navigation
+
+   ![](images/300/image104.png)
+
+- Select your ICS integration name from the tracking list – this will probably be the first one in the list
+
+   ![](images/300/image105.png)
+
+- Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
+
+   ![](images/300/image106.png)
+
+### **STEP 5:**	Verify the Order in EBS
+
+---
+
+- Login to EBS using the endpoint and credentials provided to you by the workshop organizer.  You will use the user *operations*.
+
+- *NOTE:* For the EBS instance used in this workshop, the Oracle Single Sign-On system is used to regulate access.  Unless individual users are explicitly added to have access to the EBS system, they will not be able to access the following EBS login page.  If you can't access the login page with your Oracle SSO login, then you can look at the following screenshots to see how you would be able to see your Order in an EBS R12.2 system.
+
+   ![](images/300/image107.png)
+
+- Select the EBS Responsibility *Order Management, HTML User Interface*:
+
+   ![](images/300/image108.png)
+
+- Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
+
+   ![](images/300/image109.png)
+
 - You now have used Oracle Integration Cloud Service to explore and modify an integration to Oracle EBS. 
 
-- This Lab is completed.
-
-
-
+- This Lab is now completed.
