@@ -518,3 +518,10 @@ Here a list of users and allocated roles:
 |Lisa Jones    | Sales Operations|
 |Roland Dubois | Sales Director  |
 
+
+
+Setup MCS to use your new deployed PCS process
+
+1. Delete your ... Connector
+2. PCS -> Designer -> Admin -> Copy your deployed WSDL (Click on Hamburger next to deployment)
+3. Recreate your connector in MCS, using the WSDL URL obtained in 2
