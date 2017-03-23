@@ -342,7 +342,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.28.png)
 
-**5.29**	In **Select Data Source** Tab, select **Customer Summary** business object. Click **Next**.
+**5.29**	In **Select Data Source** Tab, select **Order Line** business object. Click **Next**.
 
 ![](images/100/Picture5.29.png)
 
