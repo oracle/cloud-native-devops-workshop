@@ -42,29 +42,29 @@ Since it is Lisa's first time signing into Oracle Cloud, she has to figure out h
 Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 [https://cloud.oracle.com](https://cloud.oracle.com)
 
-- Click **Sign In** in the upper right hand corner of the browser.
+**1.1** Click **Sign In** in the upper right hand corner of the browser.
 
     ![](images/200/Picture2.png)  
 
-- **IMPORTANT** - Under My Services, ask ***your instructor*** which **Region** to select from the drop down list, and **click** on the **My Services** button.
+**1.2** **IMPORTANT** - Under My Services, ask ***your instructor*** which **Region** to select from the drop down list, and **click** on the **My Services** button.
 
     ![](images/200/Picture3.png)  
 
-- Enter your identity domain and click **Go**
+**1.3** Enter your identity domain and click **Go**
 
   ***NOTE***: the **Identity Domain, lisa.jones** and **Password** values will be given to you from your instructor.
 
     ![](images/200/Picture4.png)  
 
-- Once your Identity Domain is set, enter your **User Name** and **Password** and click **Sign In**
+**1.4** Once your Identity Domain is set, enter your **User Name** and **Password** and click **Sign In**
 
     ![](images/200/Picture5.png)  
 
-- Once connected, you will be presented with a Dashboard displaying the various cloud services available to this account. 
+**1.5** Once connected, you will be presented with a Dashboard displaying the various cloud services available to this account. 
 
     ![](images/200/Picture6.png)  
   
-- Click on the **Oracle Process Cloud Service**
+**1.6** Click on the **Oracle Process Cloud Service**
 
     ![](images/200/Picture7.png)
 
@@ -88,7 +88,7 @@ Lisa prefer to go directly to her PCS Workspace using a browser.
 
 Oracle Process Cloud Service is divided as three separate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Lisa only has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
 
-- From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
+**2.1** From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
 
     ![](images/200/Picture8.png)  
 
@@ -106,16 +106,16 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 ![](images/personas/john_lee_field_sales.png)
 
 
-In this step we are going to create some tasks to work on, if you have completed Lab 100, there should be a couple of task available.
+In this step we are going to create some tasks to work on, if you have completed Lab 100, there should be a couple of task already available.
 
 
 Login into the PCS Workspace as ***Bala*** (bala.gupta).
 
-- On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
+**3.1** On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
 
   ![](images/200/Picture11.png)
 
-- Fill in the information requested information on the form
+**3.2** Fill in the information requested information on the form
 
   ![](images/200/Picture12.png)
 
@@ -153,7 +153,7 @@ Login into the PCS Workspace as ***Bala*** (bala.gupta).
    | 9          | 12031             | Television 102"                    |              3749.99|
    | 10         | 12029             | Television 96"                     |              2608.69|
 
-   - Click on the Submit button to start the Quote to Order process.
+**3.3** Click on the Submit button to start the Quote to Order process.
 
 
 ### **STEP 4**: Working on Tasks
@@ -169,13 +169,13 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
 ---
 
 
-- Click **Work on Tasks** to access the Task List
+**4.1** Click **Work on Tasks** to access the Task List
 
     ![](images/200/Picture9.png)  
 
     In the list we can see the outstanding tasks allocated. You also have the capability to sort, do filtering and peek at task related to 'me'.
 
-- Select a task by hovering over the task with mouse and clicking on it.
+**4.2** Select a task by hovering over the task with mouse and clicking on it.
 
     ![](images/200/Picture10.png) 
     >While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
@@ -186,7 +186,7 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
     >5. Comments
     >6. Task Information, History and Task Metadata
 
-- Lets follow the happy path, and click on the action ***Approve***
+**4.2** Lets follow the happy path, and click on the action ***Approve***
 - The page will revert to the task list and you will notice that the task disappeared from your inbox. In fact, you might also get a green confirmation message that your action was accepted.
 
 
@@ -205,11 +205,11 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
   
 ---
 
-- Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois.
+**5.1** Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois.
 
 #### Tracking instances
 
-- Click **Instance Tracking** to access the List of Instances
+**5.2** Click **Instance Tracking** to access the List of Instances
 
     ![](images/200/Picture13.png)  
 
@@ -219,7 +219,7 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
 
     ![](images/200/Picture15.png)
 
-- Click on the process we started
+**5.3** Click on any process in the list
 
     ![](images/200/Picture16.png)
 
@@ -239,7 +239,7 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
     - List: Trace through the steps the process followed
     - Tree: Expose the capability to drill into specific step to see what happened in a step
 
-    To determine the next step in the process, you can view the diagram and determine what the next step in the process would be. In the test case that will depend on the input you supplied when creating the instance.
+    To determine the next step in the process, you can view the diagram and determine what the next step in the process would be. 
 
     ![](images/200/Picture20.png)
 
@@ -271,8 +271,9 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
   
 ---
 
-- Follow the steps in the previous section **STEP 1: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois sign on details.
-- On the welcome page, click on Develop Processes
+**1.1** Follow the steps in the previous section **STEP 1: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois (roland.dubois) sign on details.
+
+**1.2** On the welcome page, click on Develop Processes
 
 ![](images/200/Picture21.png)
 
@@ -290,11 +291,11 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ---
 
-A space groups processes together, and also allows you to share a space with other users. 
+A space groups processes together, and also allows you to share a space with other users. As a space owner it allows you to give specific roles: viewer, owner and editor roles.
 
 ---
 
-- Click on the Touch The Cloud Space
+**2.1** Click on the Touch The Cloud Space
 
 ![](images/200/Picture23.png)
 
@@ -310,11 +311,11 @@ An Application contains all the defined artifacts, for example rules, integratio
 
 In the next couple of steps we are going to extend the Quote to Order. To be safe, we are going to make a copy and use that to implement our changes.
 
-- Click on the Quote to Order Application hamburger menu and select Clone
+**3.1** Click on the Quote to Order Application hamburger menu and select Clone
 
 ![](images/200/Picture25.png)
 
-- Give your clone a new name, by appending your user name (User01..User10), and click Create, and leave the 'Open immediately' option on
+**3.2** Give your clone a new name, by appending your user name (User01..User10), and click Create, and leave the 'Open immediately' option on
 
 ![](images/200/Picture26.png)
 
@@ -329,42 +330,42 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture28.png)
 
-- Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**4.1** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
 
-- Click on hamburger icon and select *Open Data Association*
+**4.2** Click on hamburger icon and select *Open Data Association*
 
 ![](images/200/Picture30.png) 
 
 ![](images/200/Picture31.png)
 
-- Now that we are in the Data Association page, we can assign the comment 
+**4.3** Now that we are in the Data Association page, we can assign the comment 
 
 ![](images/200/Picture32.png)
 
-- Click **Apply**
+**4.4** Click **Apply**
 
 
 ### **STEP 5**: Editing Rules
 
-- Back on the process model, click on the Approval Decision and select Open Decision
+**5.1** Back on the process model, click on the Approval Decision and select Open Decision
 
 ![](images/200/Picture33.png)
 
-- Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
+**5.2** Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
 
 ![](images/200/Picture34.png)
 
-- Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
+**5.3** Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
 
 ![](images/200/Picture35.png)
 
-- Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
+**5.4** Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
 
 ![](images/200/Picture36.png)
 
-- Click on Done
+**5.5** Click on Done
 
 - You will see the rules now display a more readable rules set
 
@@ -375,88 +376,88 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ### **STEP 6**: Adding Approvals
 
-- First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
+**6.1** First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
 
 ![](images/200/Picture38.png)
 
-- Click on the newly created swimlane and select the pencil icon to edit the properties
+**6.2** Click on the newly created swimlane and select the pencil icon to edit the properties
 
 ![](images/200/Picture39.png)
 
 ![](images/200/Picture40.png)
 
-- Click on the plus sign next to Role to add Sales Director
+**6.3** Click on the plus sign next to Role to add Sales Director
 
 ![](images/200/Picture41.png)
 
-- Next drag an Approve from the BPM Palette to the newly created **Sales Director** swimlane
+**6.4** Next drag an Approve from the BPM Palette to the newly created **Sales Director** swimlane
 
 ![](images/200/Picture42.png)
 
-- Drag the existing connection from **Approval** to the **User Task**
+**6.5** Drag the existing connection from **Approval** to the **User Task**
 
 ![](images/200/Picture43.png)
 
-- Change the name, by double click on the text **User Task**
+**6.6** Change the name, by double click on the text **User Task**
 
 ![](images/200/Picture44.png)
 
-- Next we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
+**6.7** Next we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
 
 ![](images/200/Picture45.png)
 
 ![](images/200/Picture46.png)
 
-- Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
+**6.8** Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
 
 ![](images/200/Picture47.png)
 
 ![](images/200/Picture48.png)
 
-- Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
+**6.9** Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
 
 ![](images/200/Picture49.png)
 
-- With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
+**6.10** With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
 
 ![](images/200/Picture50.png)
 
 
 ### **STEP 7**: Validating Changes
 
-- Before we can go ahead and deploy the newly created application, we first have to validate if it is correct. Click on the **Check mark** in the right hand side of the screen.
+**7.1** Before we can go ahead and deploy the newly created application, we first have to validate if it is correct. Click on the **Check mark** in the right hand side of the screen.
 
 ![](images/200/Picture51.png)
 
 ![](images/200/Picture52.png)
 
-- You should see the following message, if not, look at the error codes and fix them.
+**7.2** You should see the following message, if not, look at the error codes and fix them.
 
 ![](images/200/Picture53.png)
 
 ### **STEP 8**: Deployment
 
-- To deploy we need to create a snapshot
+**8.1** To deploy we need to create a snapshot
 
 ![](images/200/Picture54.png)
 
-- Provide Comment and Name for snapshot (Other Options - check Make Snapshot)
+**8.2** Provide Comment and Name for snapshot (Other Options - check Make Snapshot)
 
 ![](images/200/Picture55.png)
 
-- Click on Management at top right hand of page
+**8.3** Click on Management at top right hand of page
 
 ![](images/200/Picture56.png)
 
-- Click on the hamburger icon next to My Server, and select deploy
+**8.4** Click on the hamburger icon next to My Server, and select deploy
 
 ![](images/200/Picture57.png)
 
-- Follow the **Deployment Application to My Server** wizard
+**8.5** Follow the **Deployment Application to My Server** wizard
 
 ![](images/200/Picture58.png)
 
-Username and password will be supplied by instructor, and remember to select your **Quote to Order -** ***YOUR USER NAME*** Application to deploy:
+- Use cloud.admin and supplied password. Also remember to select your **Quote to Order -** ***USER(1-10)*** Application to deploy:
 
 ![](images/200/Picture59.png)
 
@@ -468,31 +469,31 @@ Username and password will be supplied by instructor, and remember to select you
 
 ![](images/200/Picture63.png)
 
-Click on **Finish**
+**8.6** Click on **Finish**
 
 ### **STEP 9**: Role Assignment
 
 Now we have to assign physical users to the new **Sales Director** Role we have created.
 
-- Click the PCS Home icon at top of page
+**9.1** Click the PCS Home icon at top of page
 
 ![](images/200/Picture64.png)
 
-- On the Workspace home page, click on **Configure**
+**9.2** On the Workspace home page, click on **Configure**
 
 ![](images/200/Picture65.png)
 
-- In left hand side, click on **Manage Roles**
+**9.3** In left hand side, click on **Manage Roles**
 
 ![](images/200/Picture66.png)
 
-- Add ***Roland Dubois*** to the **Sales Director** role 
+**9.4** Add ***Roland Dubois*** to the **Sales Director** role 
 
 ![](images/200/Picture67.png)
 
-Click OK
+**9.5** Click OK
 
-Repeat the process for each of the roles in your application.
+**9.6** Repeat the process for each of the roles in your application.
 
 Here a list of users and allocated roles:
 
@@ -504,6 +505,11 @@ Here a list of users and allocated roles:
 |Roland Dubois | Sales Director  |
 
 
+## Mobile Cloud Service 
+
+In this section we are going to hook up our new changed process to the mobile application we have created in Lab 100.
+
+---
 
 Setup MCS to use your new deployed PCS process
 
