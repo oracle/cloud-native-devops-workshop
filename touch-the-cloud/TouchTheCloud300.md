@@ -29,6 +29,7 @@ In this first part of the lab, we will explore the main parts of Integration Clo
 1.	Cloud Services Dashboard
 2.	ICS Designer User Interface
 3.	ICS Monitoring User Interface
+
 Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
 
 ## Explore the Oracle Cloud Dashboard
