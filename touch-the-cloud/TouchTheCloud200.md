@@ -27,7 +27,7 @@ In this section we are going to experience the interaction possible from an end 
 Each step identify the role, and what the user in the specific role try to achieve. 
 
 
-### **STEP 1**: Login to Oracle Cloud
+### **1**: Login to Oracle Cloud
 
 ---
 
@@ -72,7 +72,7 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 > -The Process Cloud Composer URL can be derived by replacing the "/workspace" replaced by "/composer", which results in https://pcsinstance-domain.process.us2.oraclecloud.com/bpm/composer if applied to the sample above 
 
-### **STEP 2**: Login to Process Cloud Service
+### **2**: Login to Process Cloud Service
 
 ---
 
@@ -98,7 +98,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 >The above picture gives an explanation of a page, for user with all privileges granted and shows the different roles associated with each activity.  
 
-### **STEP 3**: Create a Quote (***Optional, if you have not completed Lab 100***)
+### **3**: Create a Quote (***Optional, if you have not completed Lab 100***)
 
 ---
 
@@ -156,7 +156,7 @@ Login into the PCS Workspace as ***Bala*** (bala.gupta).
 **3.3** Click on the Submit button to start the Quote to Order process.
 
 
-### **STEP 4**: Working on Tasks
+### **4**: Working on Tasks
 
 ---
 
@@ -193,7 +193,7 @@ In the list we can see the outstanding tasks allocated. You also have the capabi
 
 
 
-### **STEP 5**: Tracking Instances
+### **5**: Tracking Instances
 
 ---
 
@@ -247,7 +247,6 @@ _Sample flow where the amount was low and did not require further approval._
 
     This was just a highlight working with process instances, but keep in mind that there are features embedded in PCS to make life easier from a process owner's point of view. A good example might be to track instances in an error state and retry or even alter the flow to overcome the error condition.
 
-
 #
 
 ## Process Modeling and Configuration
@@ -259,7 +258,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ---
 
-### **STEP 1**: PCS Composer
+### **1**: PCS Composer
 
 ---
 
@@ -271,7 +270,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
   
 ---
 
-**1.1** Follow the steps in the previous section **STEP 1: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois (roland.dubois) sign on details.
+**1.1** Follow the steps in the previous section **1: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois (roland.dubois) sign on details.
 
 **1.2** On the welcome page, click on Develop Processes
 
@@ -287,7 +286,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/200/Picture22.png)
 
-### **STEP 2**: Spaces
+### **2**: Spaces
 
 ---
 
@@ -301,7 +300,7 @@ A space groups processes together, and also allows you to share a space with oth
 
 
 
-### **STEP 3**: Working with Applications
+### **3**: Working with Applications
 
 ---
 
@@ -324,30 +323,30 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture27.png)
 
 
-### **STEP 4**: Process Model
+### **4**: Process Model
 
-- First step is to add the comment. Click on the process to open up the process model
+**4.1** First step is to add the comment. Click on the process to open up the process model
 
 ![](images/200/Picture28.png)
 
-**4.1** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**4.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
 
-**4.2** Click on hamburger icon and select *Open Data Association*
+**4.3** Click on hamburger icon and select *Open Data Association*
 
 ![](images/200/Picture30.png) 
 
 ![](images/200/Picture31.png)
 
-**4.3** Now that we are in the Data Association page, we can assign the comment 
+**4.4** Now that we are in the Data Association page, we can assign the comment 
 
 ![](images/200/Picture32.png)
 
-**4.4** Click **Apply**
+**4.5** Click **Apply**
 
 
-### **STEP 5**: Editing Rules
+### **5**: Editing Rules
 
 **5.1** Back on the process model, click on the Approval Decision and select Open Decision
 
@@ -374,7 +373,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 > Remember that this rule change would only be applied after deployment of the application.
 
 
-### **STEP 6**: Adding Approvals
+### **6**: Adding Approvals
 
 **6.1** First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
 
@@ -423,7 +422,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 ![](images/200/Picture50.png)
 
 
-### **STEP 7**: Validating Changes
+### **7**: Validating Changes
 
 **7.1** Before we can go ahead and deploy the newly created application, we first have to validate if it is correct. Click on the **Check mark** in the right hand side of the screen.
 
@@ -435,7 +434,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture53.png)
 
-### **STEP 8**: Deployment
+### **8**: Deployment
 
 **8.1** To deploy we need to create a snapshot
 
@@ -471,7 +470,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 **8.6** Click on **Finish**
 
-### **STEP 9**: Role Assignment
+### **9**: Role Assignment
 
 Now we have to assign physical users to the new **Sales Director** Role we have created.
 
@@ -504,9 +503,7 @@ Here a list of users and allocated roles:
 |Lisa Jones    | Sales Operations|
 |Roland Dubois | Sales Director  |
 
-
-
-#
+# 
 
 ## Mobile Cloud Service 
 
