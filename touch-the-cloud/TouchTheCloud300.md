@@ -804,13 +804,13 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
    ![](images/300/image093.png)
 
 - The form created for the *Submit Quote* will be displayed.  Only a couple fields are necessary for testing.
-  - Order Lines:
-  - Item No = *2155*
-  - Qty = *1*
-  - UOM = *each*
-  - Price = *$6000.00*
-  - Account Name = *Imaging Innovations, Inc.*
-  - After filling out the form, select the *Submit* button:
+  * Order Lines:
+  * Item No = *2155*
+  * Qty = *1*
+  * UOM = *each*
+  * Price = *$6000.00*
+  * Account Name = *Imaging Innovations, Inc.*
+  * After filling out the form, select the *Submit* button:
 
    ![](images/300/image094.png)
 
