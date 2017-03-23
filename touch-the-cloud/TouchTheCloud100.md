@@ -258,7 +258,7 @@ By default **Simple Screen** template is selected. Use the same and click **Next
 ![](images/100/Picture5.7.png)
 
 **5.8**	Once the MAX application is created, you are taken to the Designer part of the interface where you can refine the layout and content of the pages.
-On the left are a series of components you may drag and drop onto your pages. In the center is a preview of the way the screen will look and on the right is where you can set the properties for the components you add. Collapse the list of components. Do this by clicking **Components** icon (third icon from the top), on the left side of the page.
+On the left are a series of components you may drag and drop onto your pages. In the center is a preview of the way the screen will look and on the right is where you can set the properties for the components you add.
 
 ![](images/100/Picture5.8.png)
 
