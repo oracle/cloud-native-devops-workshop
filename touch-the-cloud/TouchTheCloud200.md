@@ -44,29 +44,29 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 **1.1** Click **Sign In** in the upper right hand corner of the browser.
 
-    ![](images/200/Picture2.png)  
+![](images/200/Picture2.png)  
 
 **1.2** **IMPORTANT** - Under My Services, ask ***your instructor*** which **Region** to select from the drop down list, and **click** on the **My Services** button.
 
-    ![](images/200/Picture3.png)  
+![](images/200/Picture3.png)  
 
 **1.3** Enter your identity domain and click **Go**
 
   ***NOTE***: the **Identity Domain, lisa.jones** and **Password** values will be given to you from your instructor.
 
-    ![](images/200/Picture4.png)  
+![](images/200/Picture4.png)  
 
 **1.4** Once your Identity Domain is set, enter your **User Name** and **Password** and click **Sign In**
 
-    ![](images/200/Picture5.png)  
+![](images/200/Picture5.png)  
 
 **1.5** Once connected, you will be presented with a Dashboard displaying the various cloud services available to this account. 
 
-    ![](images/200/Picture6.png)  
+![](images/200/Picture6.png)  
   
 **1.6** Click on the **Oracle Process Cloud Service**
 
-    ![](images/200/Picture7.png)
+![](images/200/Picture7.png)
 
 > -The Process Cloud Workspace URL https://pcsinstance-domain.process.us2.oraclecloud.com/bpm/workspace
 
