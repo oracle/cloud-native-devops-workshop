@@ -148,11 +148,11 @@ In this part of the workshop, you step through the process of creating and defin
 
 ![](images/100/Picture4.3.png)
 
-**4.4**	Enter **Short Description** as “Touch the Cloud MCS API”. Then click **Create**
+**4.4**	Change XX to your user id suffix and enter **Short Description** as “Touch the Cloud MCS API”. Then click **Create**
 
 ![](images/100/Picture4.4.png)
 
-**4.5**	The API created will looks like this
+**4.5**	The API created will looks like this (Please make sure that it reflects 01-10 and not XX)
 
 ![](images/100/Picture4.5.png)
 
@@ -266,7 +266,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.9.png)
 
-**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button.
+**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button. Click next.
 
 ![](images/100/Picture5.10.png)
 
