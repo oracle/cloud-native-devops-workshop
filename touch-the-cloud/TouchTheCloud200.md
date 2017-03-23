@@ -164,7 +164,7 @@ Login into the PCS Workspace as ***Bala*** (bala.gupta).
 
 ![](images/personas/julie_jones_sales_operations.png)
 
-Lisa wants to look at her outstanding tasks, and approve the incoming Quote request generated in **STEP 1**. (Although she is not aware of it at the moment, PCS can be configured to send out notifications and reminders to attend to outstanding tasks).
+Lisa wants to look at her outstanding tasks, and approve the incoming Quote requests. (Although she is not aware of it at the moment, PCS can be configured to send out notifications and reminders to attend to outstanding tasks).
 
 ---
 
@@ -271,7 +271,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
   
 ---
 
-- Follow the steps in the previous section **STEP 3: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois sign on details.
+- Follow the steps in the previous section **STEP 1: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois sign on details.
 - On the welcome page, click on Develop Processes
 
 ![](images/200/Picture21.png)
