@@ -31,7 +31,7 @@ In this first part of the lab, we will explore the main parts of Integration Clo
 3.	ICS Monitoring User Interface
 Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
 
-## Login and Explore the Oracle Cloud Dashboard
+## Explore the Oracle Cloud Dashboard
 
 ### **STEP 1**: Login to your Oracle Cloud account
 
@@ -52,7 +52,7 @@ https://cloud.oracle.com
 
 - Once your Identity Domain is set, enter your `User Name` and `Password` and click **Sign In**
 
-    ***NOTE:*** the **User Name and Password** values will be given to you from your instructor.
+    ***NOTE:*** the **User Name and Password** values will be given to you by your instructor.
 
     ![](images/300/image003.png)  
 
@@ -446,7 +446,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image037.png)
 
-- In the `Clone` dialog that comes up, enter the new name of the cloned integration.  Since there may be multiple participants in this lab, use your assigned user # as a prefix with *Create EBS Order* at the end.  In the following example, *User 01* was assigned so the name of the cloned integration is *User 01 Create EBS Order*
+- In the `Clone` dialog that comes up, enter the new name of the cloned integration.  Since there may be multiple participants in this lab, use your assigned user # as a prefix with *Create EBS Order* at the end.  In the following example, *demo.user01* was assigned so the name of the cloned integration is *User 01 Create EBS Order*
 
    ![](images/300/image038.png)
 
@@ -640,11 +640,43 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Now that we have a modified integration with a new service endpoint, we need to update PCS so that the comment sent in from the mobile application can be passed into ICS.
 
-# Testing the End to End Application
+# Testing the New ICS Integration from PCS
 
-### **STEP 1:**	Modifying PCS with the New ICS Service
+Now that we have a new ICS integration mapping the *Comment* field to the EBS order, we need to update the PCS process with the new ICS endpoint.
+Using the PCS Process from the previous lab we’ll now go through the steps necessary to do this.
+
+### **STEP 1:**	Update PCS Process with the New ICS Service
 
 ---
+
+- First, get back into the PCS Composer and open up the PCS process you created in Lab 200 by clicking on the PCS Application name.
+
+- In the screenshot below, we are using the process created with user `demo.user03`:
+
+   ![](images/300/image068.png)
+
+- Open up the *Quote to Order Process* process by clicking on it:
+
+   ![](images/300/image069.png)
+
+- Ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
+
+   ![](images/300/image070.png)
+
+- Pan over to the *Capture Order* service call, click on that activity and then select the *Open Properties*:
+
+   ![](images/300/image071.png)
+
+- Edit the service call by clicking on the small pencil icon on the right of the *Service Call* dropbox.
+
+   ![](images/300/image072.png)
+
+- Select the `Plus` (`+`) icon to the right of the ICS integration endpoint:
+
+   ![](images/300/image073.png)
+
+- 
+
 - You now have used Oracle Integration Cloud Service to explore and modify an integration to Oracle EBS. 
 
 - This Lab is completed.
