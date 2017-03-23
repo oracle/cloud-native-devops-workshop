@@ -21,7 +21,7 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 ## Required Artifacts
 
-- The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
+- The following lab and an Oracle Public Cloud account that will be supplied by your instructor.
 
 # Part 1: Explore Integration Cloud Service
 
