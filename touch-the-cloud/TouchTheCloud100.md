@@ -179,7 +179,7 @@ Replace **xx** in API name with the postfix of your user id (it should be 01 thr
 ![](images/100/Picture4.8.png)
 
 4.9	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
-Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and Connector **PCS_TTC_XX**.
+Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and Connector **PCS\_TTC\_XX**.
 
 **Replace all XX with the postfix of your assigned user id [01 thru 10] in the file:**
 
