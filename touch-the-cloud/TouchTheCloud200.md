@@ -179,13 +179,13 @@ In the list we can see the outstanding tasks allocated. You also have the capabi
 
 ![](images/200/Picture10.png) 
 
-    >While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
-    >1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionality allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
-    >2. Close Form / Maximize
-    >3. Documents Panel Expand, might also include Discussions, if enabled for process
-    >4. Form, or also called the payload for the task. This information is the task specific information required to decide on on an action. Depending on the configuration, information can be updated.
-    >5. Comments
-    >6. Task Information, History and Task Metadata
+>While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
+>1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionality allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
+>2. Close Form / Maximize
+>3. Documents Panel Expand, might also include Discussions, if enabled for process
+>4. Form, or also called the payload for the task. This information is the task specific information required to decide on on an action. Depending on the configuration, information can be updated.
+>5. Comments
+>6. Task Information, History and Task Metadata
 
 **4.2** Lets follow the happy path, and click on the action ***Approve***
 
@@ -207,9 +207,9 @@ In the list we can see the outstanding tasks allocated. You also have the capabi
   
 ---
 
-**5.1** Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois.
+**5.1** Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois (roland.dubois).
 
-**5.2** Click **Instance Tracking** to access the List of Instances
+**5.2** Click **Track Instances** to access the List of Instances
 
 ![](images/200/Picture13.png)  
 
@@ -223,11 +223,11 @@ This List displays the active instances. To display completed instances as well,
 
 ![](images/200/Picture16.png)
 
-To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
+**5.4** To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
 
 ![](images/200/Picture18.png)
 
-Expand the History heading
+**5.4** Expand the History heading
 
 ![](images/200/Picture17.png)
 
@@ -243,9 +243,9 @@ To determine the next step in the process, you can view the diagram and determin
 
 ![](images/200/Picture20.png)
 
-*** Sample flow where the amount was low and did not require further approval. ***
+_Sample flow where the amount was low and did not require further approval._
 
-    This is just a high light working with process instances, but keep in mind that there are features embedded in PCS to makes life easier from a process owner's point of view. A good example might be to track instances in an error state and retry or even alter the flow to overcome the error condition.
+    This was just a highlight working with process instances, but keep in mind that there are features embedded in PCS to make life easier from a process owner's point of view. A good example might be to track instances in an error state and retry or even alter the flow to overcome the error condition.
 
 
 #
@@ -279,11 +279,11 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 - You will be presented with the PCS Composer home page
 
-    > The Process Cloud Composer URL display in you browser window can be booked marked, if you want to return to the Process Composer directly **https://process-domain/process.us2.oraclecloud.com/bpm/composer/faces/app/designer/homePage.jspx** (or, if you are a lazy, you can also get back to the process composer by using **https://process-domain/process.us2.oraclecloud.com/bpm/composer/**)
+> The Process Cloud Composer URL display in you browser window can be booked marked, if you want to return to the Process Composer directly **https://process-domain/process.us2.oraclecloud.com/bpm/composer/faces/app/designer/homePage.jspx** (or, if you are a lazy, you can also get back to the process composer by using **https://process-domain/process.us2.oraclecloud.com/bpm/composer/**)
 
 - From this page you will be able to create a new Space, or even use a template to create a new process.
 
-    > An interesting exercise after the workshop, is to come back to the Create functionality and have a look at the QuickStart Apps available. You can also create a process and expose that as a QuickStart App template.
+> An interesting exercise after the workshop, is to come back to the Create functionality and have a look at the QuickStart Apps available. You can also create a process and expose that as a QuickStart App template.
 
 ![](images/200/Picture22.png)
 
@@ -504,6 +504,9 @@ Here a list of users and allocated roles:
 |Lisa Jones    | Sales Operations|
 |Roland Dubois | Sales Director  |
 
+
+
+#
 
 ## Mobile Cloud Service 
 
