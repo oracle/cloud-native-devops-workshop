@@ -16,12 +16,13 @@ Please direct comments to: John VanSant (john.vansant@oracle.com)
 
 ## Objectives
 
-- Explore Integration Cloud Service
-- Use Integration Cloud Service to modify an integration
+- Part 1: Explore Integration Cloud Service (ICS)
+- Part 2: Use ICS to modify an integration
+- Part 3: Modify Process Cloud Service (PCS) process from Lab 200 to call new ICS integration
 
 ## Required Artifacts
 
-- The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
+- The following lab and an Oracle Public Cloud account that will be supplied by your instructor.
 
 # Part 1: Explore Integration Cloud Service
 
