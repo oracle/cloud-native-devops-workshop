@@ -1,6 +1,6 @@
 ![](images/300/HeaderImage.png)  
 
-Update: March 14, 2017
+Update: March 23, 2017
 
 # Lab 300 - Integration Cloud Service
 
