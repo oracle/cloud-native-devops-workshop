@@ -87,7 +87,7 @@ Since Lisa only has access defined as a End-User, she will only see the task rel
 
 ![](images/200/Picture8.png)  
 
-### **4**: Working on Tasks
+### **3**: Working on Tasks
 
 ---
 
@@ -100,13 +100,13 @@ Lisa wants to look at her outstanding tasks, and approve the incoming Quote requ
 ---
 
 
-**4.1** Click **Work on Tasks** to access the Task List
+**3.1** Click **Work on Tasks** to access the Task List
 
 ![](images/200/Picture9.png)  
 
-In the list we can see the outstanding tasks allocated. You also have the capability to sort, do filtering and peek at task related to 'me'.
+In the list we can see the outstanding tasks allocated to Lisa. You also have the capability to sort, do filtering and peek at task related to 'me'.
 
-**4.2** Select a task by hovering over the task with mouse and clicking on it.
+**3.2** Select a task by hovering over the task with mouse and clicking on it. The task you select should be one of the tasks you created in Lab 100, with a **XX:** in fornt of it, (where XX is the postfix of your user id, it should be 01 thru 10).
 
 ![](images/200/Picture10.png) 
 
@@ -118,13 +118,13 @@ In the list we can see the outstanding tasks allocated. You also have the capabi
 >5. Comments
 >6. Task Information, History and Task Metadata
 
-**4.2** Lets follow the happy path, and click on the action ***Approve***
+**3.2** Lets follow the happy path, and click on the action ***Approve***
 
 - The page will revert to the task list and you will notice that the task disappeared from your inbox. In fact, you might also get a green confirmation message that your action was accepted.
 
 
 
-### **5**: Tracking Instances
+### **4**: Tracking Instances
 
 ---
 
@@ -132,7 +132,9 @@ In the list we can see the outstanding tasks allocated. You also have the capabi
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roland Dubois, sales director and process owner wants to see what happened to our process we have approved in the previous step. Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
+  Roland Dubois, sales director and process owner wants to see what happened to our process we have approved in the previous step. 
+  
+  Since a process can be configured to follow different paths depending on rules and the way the process was modeled, it might be sometimes required for a process owner to look at a process instance to see what happened. 
 
   This audit information can also be exported and use for debugging or as input for on-premise systems.
   
@@ -176,7 +178,6 @@ To determine the next step in the process, you can view the diagram and determin
 
 _Sample flow where the amount was low and did not require further approval._
 
-
 #
 
 ## Process Modeling and Configuration
@@ -196,7 +197,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-You,as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk, it should be approved by sales director. 
+You, as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk, it should be approved by sales director. 
   
 We are going through the steps on how to implement these changes in the process.
   
@@ -254,9 +255,9 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ### **4**: Editing Rules
 
-**4.1** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**4.1** Click on the process to open up the process model
 
-![](images/200/Picture29.png)
+![](images/200/Picture28.png)
 
 **4.2** Back on the process model, click on the Approval Decision and select Open Decision
 
