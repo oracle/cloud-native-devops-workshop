@@ -18,9 +18,6 @@ This is the second of several labs that are part of the **Oracle Public Cloud To
 
 In this section we are going to experience the interaction possible from an end user of the PCS interface.
 
-Each step identify the role, and what the user in the specific role try to achieve. 
-
-
 ### **1**: Login to Oracle Cloud
 
 ---
@@ -62,9 +59,7 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 ![](images/200/Picture7.png)
 
-> -The Process Cloud Workspace URL https://pcsinstance-domain.process.us2.oraclecloud.com/bpm/workspace
-
-> -The Process Cloud Composer URL can be derived by replacing the "/workspace" replaced by "/composer", which results in https://pcsinstance-domain.process.us2.oraclecloud.com/bpm/composer if applied to the sample above 
+**1.7** Click on the **Service Instance URL** link to open PCS
 
 ### **2**: Login to Process Cloud Service
 
@@ -74,17 +69,9 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 ![](images/personas/julie_jones_sales_operations.png)
 
-There are different ways to access the PCS Workspace. The direct access URL can be embedded on an Intranet page, a full set of REST API's can be used to extract the information programmatically or you can use the mobile application supplied by Oracle. 
-
-Lisa prefer to go directly to her PCS Workspace using a browser.
-
 ---
 
-Oracle Process Cloud Service is divided as three separate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. Since Lisa only has access defined as a End-User, so will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
-
-**2.1** From Cloud UI dashboard click on the **Service Instance URL** link. ***Or,*** using the captured URL open your browser to the **Copied URL**
-
-![](images/200/Picture8.png)  
+Oracle Process Cloud Service is divided as three separate functionalities, and depending on you role, you would be able to access these functionalities. The functionalities is divided in Administrator Tasks, End-User Tasks and Developer Tasks. 
 
 - The  PCS Landing page gives you a quick glance of the functionality available to you (or in this case Lisa Jones).
 
@@ -92,7 +79,11 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 >The above picture gives an explanation of a page, for user with all privileges granted and shows the different roles associated with each activity.  
 
+**2.1** From Cloud UI dashboard click on the **Service Instance URL** link.
 
+Since Lisa only has access defined as a End-User, she will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
+
+![](images/200/Picture8.png)  
 
 ### **4**: Working on Tasks
 
@@ -102,7 +93,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 ![](images/personas/julie_jones_sales_operations.png)
 
-Lisa wants to look at her outstanding tasks, and approve the incoming Quote requests. (Although she is not aware of it at the moment, PCS can be configured to send out notifications and reminders to attend to outstanding tasks).
+Lisa wants to look at her outstanding tasks, and approve the incoming Quote requests.
 
 ---
 
@@ -117,7 +108,7 @@ In the list we can see the outstanding tasks allocated. You also have the capabi
 
 ![](images/200/Picture10.png) 
 
->While we are on the task form, let me take the opportunity to give you a breakdown of a typical task form: 
+> Breakdown of a typical task form: 
 >1. Action Items - In this instance we have two actions defined, Approve and Reject. The Save functionality allows you to make some changes, save the state of the task and at a later stage come back to the task to complete. 
 >2. Close Form / Maximize
 >3. Documents Panel Expand, might also include Discussions, if enabled for process
@@ -173,17 +164,15 @@ You have the option to view the history as a list, a tree view or diagram, depen
 
 ![](images/200/Picture19.png)
 
-    - Graphical View : See the process as a diagram to quickly see what happened
-    - List: Trace through the steps the process followed
-    - Tree: Expose the capability to drill into specific step to see what happened in a step
+- Graphical View : See the process as a diagram to quickly see what happened
+- List: Trace through the steps the process followed
+- Tree: Expose the capability to drill into specific step to see what happened in a step
 
 To determine the next step in the process, you can view the diagram and determine what the next step in the process would be. 
 
 ![](images/200/Picture20.png)
 
 _Sample flow where the amount was low and did not require further approval._
-
-    This was just a highlight working with process instances, but keep in mind that there are features embedded in PCS to make life easier from a process owner's point of view. A good example might be to track instances in an error state and retry or even alter the flow to overcome the error condition.
 
 #
 
@@ -200,23 +189,23 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ---
 
-**Role: Roland Dubois, Process Owner (roland.dubois)**
+**Role: YOU, Process Owner (user01-10)**
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-  Roland Dubois, sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. He is also not impressed by the high amount of the rules to determine if sales operations should approve a quote. On top of these changes, Roland also feels the need that if the amount is high risk, it should be approved by sales director as well. We are going through the steps on how to implement a change in the process.
+You,as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk, it should be approved by sales director. 
+  
+We are going through the steps on how to implement these changes in the process.
   
 ---
 
-**1.1** Follow the steps in the previous section **1: Login to Process Cloud Service** to sign into PCS, but this time using Roland Dubois (roland.dubois) sign on details.
+**1.1** Follow the steps in the previous section **1: Login to Process Cloud Service** to sign into PCS, but this time using (demo.user01-10) sign on details.
 
 **1.2** On the welcome page, click on Develop Processes
 
 ![](images/200/Picture21.png)
 
 - You will be presented with the PCS Composer home page
-
-> The Process Cloud Composer URL display in you browser window can be booked marked, if you want to return to the Process Composer directly **https://process-domain/process.us2.oraclecloud.com/bpm/composer/faces/app/designer/homePage.jspx** (or, if you are a lazy, you can also get back to the process composer by using **https://process-domain/process.us2.oraclecloud.com/bpm/composer/**)
 
 - From this page you will be able to create a new Space, or even use a template to create a new process.
 
@@ -260,31 +249,11 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture27.png)
 
-
-### **4**: Process Model
-
-**4.1** First step is to add the comment. Click on the process to open up the process model
-
-![](images/200/Picture28.png)
+### **5**: Editing Rules
 
 **4.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
-
-**4.3** Click on hamburger icon and select *Open Data Association*
-
-![](images/200/Picture30.png) 
-
-![](images/200/Picture31.png)
-
-**4.4** Now that we are in the Data Association page, we can assign the comment 
-
-![](images/200/Picture32.png)
-
-**4.5** Click **Apply**
-
-
-### **5**: Editing Rules
 
 **5.1** Back on the process model, click on the Approval Decision and select Open Decision
 
@@ -308,12 +277,37 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture37.png) 
 
-> Remember that this rule change would only be applied after deployment of the application.
+
+### **4**: Process Model
+
+**4.1** Next step is to add the comment. Click on the process to open up the process model
+
+![](images/200/Picture28.png)
+
+**4.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+
+![](images/200/Picture29.png)
+
+**4.3** Click on hamburger icon and select *Open Data Association*
+
+![](images/200/Picture30.png) 
+
+![](images/200/Picture31.png)
+
+**4.4** Now that we are in the Data Association page, we can assign the comment 
+
+![](images/200/Picture32.png)
+
+Add steps to assocciation ......
+
+**4.5** Click **Apply**
+
+
 
 
 ### **6**: Adding Approvals
 
-**6.1** First step is to add a swimlane to the process. A swimlane indicate the responsibility which will execute the action define within the lane. Click on the white plus sign at the bottom of BPM model.
+**6.1** A swimlane indicates the role which will execute the action defined within the lane. Click on the white plus sign at the bottom of model.
 
 ![](images/200/Picture38.png)
 
@@ -335,13 +329,15 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture43.png)
 
-**6.6** Change the name, by double click on the text **User Task**
+**6.6** Select the new activity, and change the name, by double clicking on the text **User Task**
 
 ![](images/200/Picture44.png)
 
 **6.7** Next we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
 
 ![](images/200/Picture45.png)
+
+Fill in Form, Presentation, Action and Title
 
 ![](images/200/Picture46.png)
 
@@ -382,6 +378,8 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture55.png)
 
+**8.4** Click on Publish
+
 **8.3** Click on Management at top right hand of page
 
 ![](images/200/Picture56.png)
@@ -394,13 +392,13 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture58.png)
 
-- Use cloud.admin and supplied password. Also remember to select your **Quote to Order -** ***USER(1-10)*** Application to deploy:
+- Select your **Quote to Order -** ***USER(1-10)*** Application to deploy:
 
-![](images/200/Picture59.png)
+![](images/200/Picture59.png) -- Use ICSKey
 
 ![](images/200/Picture60.png)
 
-![](images/200/Picture61.png)
+![](images/200/Picture61.png) -- replace with demo.userXX + highlights
 
 ![](images/200/Picture62.png)
 
@@ -439,21 +437,27 @@ Here a list of users and allocated roles:
 |Bala Gupta    | Sales Person    |
 |John Dunbar   | Sales Manager   |
 |Lisa Jones    | Sales Operations|
-|Roland Dubois | Sales Director  |
+|Roland Dubois, YOU (demo.User01-10) | Sales Director  |
 
 # 
 
-## Mobile Cloud Service 
+## Testing new Process flow using Mobile Application 
 
-In this section we are going to hook up our new changed process to the mobile application we have created in Lab 100.
+In this section we are going to hook up our new process to the mobile application we have created in Lab 100.
 
 ---
+
+PCS
+
+Capture End point
+2. PCS -> Designer -> Admin -> Copy your deployed WSDL (Click on Hamburger next to deployment)
+
+MCS
 
 Setup MCS to use your new deployed PCS process
 
 1. Delete your ... Connector
-2. PCS -> Designer -> Admin -> Copy your deployed WSDL (Click on Hamburger next to deployment)
-3. Recreate your connector in MCS, using the WSDL URL obtained in 2
+2. Recreate your connector in MCS, using the WSDL URL obtained in PCS 
 
 
 
