@@ -14,12 +14,6 @@ This is the second of several labs that are part of the **Oracle Public Cloud To
 
 # 
 
-## Requirements for this lab
-
-A deployed process 'Quote to Order' - see Required Environment Setup(TouchTheCloud000.md)
-
-# 
-
 ## Process Cloud User Experience
 
 In this section we are going to experience the interaction possible from an end user of the PCS interface.
