@@ -92,62 +92,6 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 >The above picture gives an explanation of a page, for user with all privileges granted and shows the different roles associated with each activity.  
 
-### **3**: Create a Quote (***Optional, if you have not completed Lab 100***)
-
----
-
-**Role: Bala Gupta, Field Sales (bala.gupta)**
-![](images/personas/john_lee_field_sales.png)
-
-
-In this step we are going to create some tasks to work on, if you have completed Lab 100, there should be a couple of task already available.
-
-
-Login into the PCS Workspace as ***Bala*** (bala.gupta).
-
-**3.1** On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
-
-  ![](images/200/Picture11.png)
-
-**3.2** Fill in the information requested information on the form
-
-  ![](images/200/Picture12.png)
-
-   For the fields use the following values:
-   
-   Quote Number: 4325
-   
-   Select a customer from the following table:
-   
-   |CustomerNumber| CustomerName                | AddressLine1          | AddressLine2       | Phone        | FirstName | LastName | City     | Country | Zip   | Email                         | 
-   | :----------- | ----------------------------| ----------------------| ------------------ | ------------ | --------- | -------- | -------- | ------- | ----- | ------------------------------|
-   | 1            | ABC Telecommunications      | 1021 Fifth Avenue     | New York, NY 10022 | 917-123-2345 | Vincent   | DiNatale | New York | USA     | 10022 | v.dinatale@abctelecomms.com   |
-   | 2            | MedChoice - IDN             | 333 Lexington Ave     | New York, NY 10000 | 917-123-2346 | Louis     | Wohl     | New York | USA     | 10000 | louis.wohl@medchoice.com      |
-   | 3            | Bronco Drilling Machinery   | 150 East 50th Street  | New York, NY 10023 | 917-123-2347 | Jack      | Thomas   | New York | USA     | 10022 | jack.thomas@broncodrilling.com|
-   | 4            | BHB Technologies            | 522 West 38th Street  | New York, NY 10018 | 917-123-2348 | Robbie    | Hun      | New York | USA     | 10018 | robbie.hun@bhbtech.com        |
-   | 5            | CIC Management Inc.         | 68 Church Street      | New York, NY 10000 | 917-123-2349 | Lucy      | Leu      | New York | USA     | 10000 | lucy.leu@cicmgt.com           |
-   | 6            | ABC Application Software    | 536 Madison Avenue DE | New York, NY 10012 | 917-123-2350 | Lenore    | Soifer   | New York | USA     | 10012 | lenore.soifer@abcsoftware.com |
-   | 7            | Capital Investments Group   | 400 Madison Avenue    | New York, NY 10024 | 917-123-2351 | James     | Roman    | New York | USA     | 10024 | james.roman@capitalinvest.com |
-   | 8            | Carbon Chemical Corporation | 502 East 81st Street  | New York, NY 10028 | 917-123-2352 | Loren     | Gab      | New York | USA     | 10028 | loren.gab@carbon_chem.com     |
-   | 9            | Capp Worldwide Services Inc.| 32 Ave of the Americas| New York, NY 10013 | 917-123-2353 | Paul      | Pub      | New York | USA     | 10013 | paul.pub@cappww.com           |
-   | 10           | Astro-Energy Systems        | 35 East 76th Street   | New York, NY 10021 | 917-123-2354 | Jenny     | Roy      | New York | USA     | 10021 | jenny.roy@astro_energy.com    |
-   
-   For the items, use some of these inventory items, using UOM (unit of measure) as 'each':
-   
-   | ItemNumber | _Inventory Item ID_ | Description                        | List Price Per Unit |
-   | :--------- | ----------------- | ---------------------------------- | -------------------:|
-   | 1          | 155               | Sentinel Deluxe Desktop            |              1969.00|
-   | 2          | 249               | Hard Drive - 250GB SSD             |              899.00 |
-   | 3          | 436               | Lightning Inkjet Printer           |              300.00 |
-   | 4          | 2848              | Vision Pad DX - Mobile Computer    |              249.00 |
-   | 5          | 190878            | Vision Pad X100 - Mobile Computer  |              249.00 |
-   | 6          | 2155              | Sentinel Standard Desktop - Rugged |              1900.00|
-   | 7          | 174762            | 205 Digital Camera                 |              215.00 |
-   | 8          | 12023             | Digital Camera, Professional       |              487.80 |
-   | 9          | 12031             | Television 102"                    |              3749.99|
-   | 10         | 12029             | Television 96"                     |              2608.69|
-
-**3.3** Click on the Submit button to start the Quote to Order process.
 
 
 ### **4**: Working on Tasks
@@ -510,3 +454,63 @@ Setup MCS to use your new deployed PCS process
 1. Delete your ... Connector
 2. PCS -> Designer -> Admin -> Copy your deployed WSDL (Click on Hamburger next to deployment)
 3. Recreate your connector in MCS, using the WSDL URL obtained in 2
+
+
+
+---------
+### **3**: Create a Quote (***Optional, if you have not completed Lab 100***)
+
+---
+
+**Role: Bala Gupta, Field Sales (bala.gupta)**
+![](images/personas/john_lee_field_sales.png)
+
+
+In this step we are going to create some tasks to work on, if you have completed Lab 100, there should be a couple of task already available.
+
+
+Login into the PCS Workspace as ***Bala*** (bala.gupta).
+
+**3.1** On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
+
+  ![](images/200/Picture11.png)
+
+**3.2** Fill in the information requested information on the form
+
+  ![](images/200/Picture12.png)
+
+   For the fields use the following values:
+   
+   Quote Number: 4325
+   
+   Select a customer from the following table:
+   
+   |CustomerNumber| CustomerName                | AddressLine1          | AddressLine2       | Phone        | FirstName | LastName | City     | Country | Zip   | Email                         | 
+   | :----------- | ----------------------------| ----------------------| ------------------ | ------------ | --------- | -------- | -------- | ------- | ----- | ------------------------------|
+   | 1            | ABC Telecommunications      | 1021 Fifth Avenue     | New York, NY 10022 | 917-123-2345 | Vincent   | DiNatale | New York | USA     | 10022 | v.dinatale@abctelecomms.com   |
+   | 2            | MedChoice - IDN             | 333 Lexington Ave     | New York, NY 10000 | 917-123-2346 | Louis     | Wohl     | New York | USA     | 10000 | louis.wohl@medchoice.com      |
+   | 3            | Bronco Drilling Machinery   | 150 East 50th Street  | New York, NY 10023 | 917-123-2347 | Jack      | Thomas   | New York | USA     | 10022 | jack.thomas@broncodrilling.com|
+   | 4            | BHB Technologies            | 522 West 38th Street  | New York, NY 10018 | 917-123-2348 | Robbie    | Hun      | New York | USA     | 10018 | robbie.hun@bhbtech.com        |
+   | 5            | CIC Management Inc.         | 68 Church Street      | New York, NY 10000 | 917-123-2349 | Lucy      | Leu      | New York | USA     | 10000 | lucy.leu@cicmgt.com           |
+   | 6            | ABC Application Software    | 536 Madison Avenue DE | New York, NY 10012 | 917-123-2350 | Lenore    | Soifer   | New York | USA     | 10012 | lenore.soifer@abcsoftware.com |
+   | 7            | Capital Investments Group   | 400 Madison Avenue    | New York, NY 10024 | 917-123-2351 | James     | Roman    | New York | USA     | 10024 | james.roman@capitalinvest.com |
+   | 8            | Carbon Chemical Corporation | 502 East 81st Street  | New York, NY 10028 | 917-123-2352 | Loren     | Gab      | New York | USA     | 10028 | loren.gab@carbon_chem.com     |
+   | 9            | Capp Worldwide Services Inc.| 32 Ave of the Americas| New York, NY 10013 | 917-123-2353 | Paul      | Pub      | New York | USA     | 10013 | paul.pub@cappww.com           |
+   | 10           | Astro-Energy Systems        | 35 East 76th Street   | New York, NY 10021 | 917-123-2354 | Jenny     | Roy      | New York | USA     | 10021 | jenny.roy@astro_energy.com    |
+   
+   For the items, use some of these inventory items, using UOM (unit of measure) as 'each':
+   
+   | ItemNumber | _Inventory Item ID_ | Description                        | List Price Per Unit |
+   | :--------- | ----------------- | ---------------------------------- | -------------------:|
+   | 1          | 155               | Sentinel Deluxe Desktop            |              1969.00|
+   | 2          | 249               | Hard Drive - 250GB SSD             |              899.00 |
+   | 3          | 436               | Lightning Inkjet Printer           |              300.00 |
+   | 4          | 2848              | Vision Pad DX - Mobile Computer    |              249.00 |
+   | 5          | 190878            | Vision Pad X100 - Mobile Computer  |              249.00 |
+   | 6          | 2155              | Sentinel Standard Desktop - Rugged |              1900.00|
+   | 7          | 174762            | 205 Digital Camera                 |              215.00 |
+   | 8          | 12023             | Digital Camera, Professional       |              487.80 |
+   | 9          | 12031             | Television 102"                    |              3749.99|
+   | 10         | 12029             | Television 96"                     |              2608.69|
+
+**3.3** Click on the Submit button to start the Quote to Order process.
