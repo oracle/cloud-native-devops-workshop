@@ -176,6 +176,7 @@ To determine the next step in the process, you can view the diagram and determin
 
 _Sample flow where the amount was low and did not require further approval._
 
+
 #
 
 ## Process Modeling and Configuration
@@ -251,61 +252,58 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture27.png)
 
-### **5**: Editing Rules
+### **4**: Editing Rules
 
-**4.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**4.1** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
 
-**5.1** Back on the process model, click on the Approval Decision and select Open Decision
+**4.2** Back on the process model, click on the Approval Decision and select Open Decision
 
 ![](images/200/Picture33.png)
 
-**5.2** Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
+**4.3** Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
 
 ![](images/200/Picture34.png)
 
-**5.3** Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
+**4.4** Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
 
 ![](images/200/Picture35.png)
 
-**5.4** Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
+**4.5** Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
 
 ![](images/200/Picture36.png)
 
-**5.5** Click on Done
+**4.6** Click on Done
 
 - You will see the rules now display a more readable rules set
 
 ![](images/200/Picture37.png) 
 
 
-### **4**: Process Model
+### **5**: Process Model
 
-**4.1** Next step is to add the comment. Click on the process to open up the process model
+**5.1** Next step is to add the comment. Click on the process to open up the process model
 
 ![](images/200/Picture28.png)
 
-**4.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**5.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
 
-**4.3** Click on hamburger icon and select *Open Data Association*
+**5.3** Click on hamburger icon and select *Open Data Association*
 
 ![](images/200/Picture30.png) 
 
 ![](images/200/Picture31.png)
 
-**4.4** Now that we are in the Data Association page, we can assign the comment 
+**5.4** Now that we are in the Data Association page, we can assign the comment 
 
 ![](images/200/Picture32.png)
 
 Add steps to assocciation ......
 
-**4.5** Click **Apply**
-
-
-
+**5.5** Click **Apply**
 
 ### **6**: Adding Approvals
 
