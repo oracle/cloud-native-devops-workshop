@@ -5,7 +5,9 @@ Update: March 13, 2017
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the management, modeling and administration of a typical Quote to Order process.
+This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** 
+
+We are going to look at the process approval workflow that had being kicked off from Lab 100's Mobile Application.
 
 ## Objectives
 
