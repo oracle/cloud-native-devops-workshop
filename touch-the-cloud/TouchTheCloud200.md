@@ -203,7 +203,7 @@ We are going through the steps on how to implement these changes in the process.
   
 ---
 
-**1.1** Follow the steps in the previous section **1: Login to Process Cloud Service** to sign into PCS, but this time using (demo.user01-10) sign on details.
+**1.1** Follow the steps in the previous section **1: Login to Process Cloud Service** to sign into PCS, but this time using ***(demo.user01-10)*** sign on details.
 
 **1.2** On the welcome page, click on Develop Processes
 
@@ -245,7 +245,7 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ![](images/200/Picture25.png)
 
-**3.2** Give your clone a new name, by appending your user name (User01..User10), and click Create, and leave the 'Open immediately' option on
+**3.2** Give your clone a new name, by appending your user name ***(User01..User10)***, and click Create, and leave the ***Open immediately*** option on. Make sure you select ***Touch the Cloud*** space to clone to.
 
 ![](images/200/Picture26.png)
 
@@ -280,7 +280,6 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 - You will see the rules now display a more readable rules set
 
 ![](images/200/Picture37.png) 
-
 
 ### **5**: Process Model
 
