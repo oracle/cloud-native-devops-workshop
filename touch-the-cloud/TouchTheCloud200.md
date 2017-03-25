@@ -306,6 +306,10 @@ Drag ***mcs_id*** in the first open slot in the left hand side, and drag ***comm
 
 ![](images/200/Picture32.png)
 
+For clarity :
+
+![](images/200/Picture73.png)
+
 **5.5** Click **Apply**
 
 ### **6**: Adding Approvals
