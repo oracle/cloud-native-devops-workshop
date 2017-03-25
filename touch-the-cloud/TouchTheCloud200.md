@@ -269,6 +269,8 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 **4.4** Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
 
+![](images/200/Picture68.png)
+
 ![](images/200/Picture35.png)
 
 **4.5** Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
@@ -283,15 +285,15 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ### **5**: Process Model
 
-**5.1** Next step is to add the comment. Click on the process to open up the process model
+**5.1** Next step is to add the comment. Click on the process to open up the process model, if not already open.
 
 ![](images/200/Picture28.png)
 
-**5.2** Click on the Capture Order - the blue activity at the bottom right of the model. If needed, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**5.2** Click on the Capture Order - the blue activity at the bottom right of the model. If nerequired, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
 
-**5.3** Click on hamburger icon and select *Open Data Association*
+**5.3** Click on hamburger icon and select ***Open Data Association***
 
 ![](images/200/Picture30.png) 
 
@@ -299,9 +301,10 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 **5.4** Now that we are in the Data Association page, we can assign the comment 
 
-![](images/200/Picture32.png)
+Expand the ***Process Data***, ***CreateOrderRequest*** and also the ***header***,  elements. 
+Drag ***mcs_id*** in the first open slot in the left hand side, and drag ***comment*** next to ***mcs_id*** to complete the assignment  
 
-Add steps to assocciation ......
+![](images/200/Picture32.png)
 
 **5.5** Click **Apply**
 
@@ -374,27 +377,29 @@ Fill in Form, Presentation, Action and Title
 
 ![](images/200/Picture54.png)
 
-**8.2** Provide Comment and Name for snapshot (Other Options - check Make Snapshot)
+**8.2** Provide ***Comment*** and ***Name*** for snapshot. Other Options - check ***Make Snapshot***
 
 ![](images/200/Picture55.png)
 
-**8.4** Click on Publish
+**8.3** Click on ***Publish***
 
-**8.3** Click on Management at top right hand of page
+**8.4** Click on Management at top right hand of page
 
 ![](images/200/Picture56.png)
 
-**8.4** Click on the hamburger icon next to My Server, and select deploy
+**8.5** Click on the hamburger icon next to My Server, and select deploy
 
 ![](images/200/Picture57.png)
 
-**8.5** Follow the **Deployment Application to My Server** wizard
+**8.6** Follow the **Deployment Application to My Server** wizard
+
+In Space ***Touch the Cloud***, select your ***Quote to Order - USER(1-10)*** Application, with the same ***New Approval*** snapshot, we have create earlier, to deploy:
 
 ![](images/200/Picture58.png)
 
-- Select your **Quote to Order -** ***USER(1-10)*** Application to deploy:
+ Make sure you select the ***ICSKEY*** is selected as **Keystore Credential** and confirm that **Security Option** is set to ***APP Id - Username Token***. _Username and password will be filled in automatically after ***ICSKEY*** was selected._ 
 
-![](images/200/Picture59.png) -- Use ICSKey
+![](images/200/Picture59.png)
 
 ![](images/200/Picture60.png)
 
@@ -439,7 +444,9 @@ Here a list of users and allocated roles:
 |Lisa Jones    | Sales Operations|
 |Roland Dubois, YOU (demo.User01-10) | Sales Director  |
 
+
 # 
+
 
 ## Testing new Process flow using Mobile Application 
 
@@ -447,22 +454,69 @@ In this section we are going to hook up our new process to the mobile applicatio
 
 ---
 
-PCS
+### PCS
 
-Capture End point
-2. PCS -> Designer -> Admin -> Copy your deployed WSDL (Click on Hamburger next to deployment)
+#### Capture WSDL End point
 
-MCS
+**1** Click on Management at top right hand of page
 
-Setup MCS to use your new deployed PCS process
+![](images/200/Picture56.png)
 
-1. Delete your ... Connector
-2. Recreate your connector in MCS, using the WSDL URL obtained in PCS 
+![](images/200/Picture69.png)
+
+**2** Click on the ***hamburger menu*** next to your deployed application and select ***Web Services***
+
+![](images/200/Picture70.png)
+
+**3** Click on the ***link*** to open ***URL*** in new browser window
+
+![](images/200/Picture71.png)
+
+**4** Copy the **URL**
+
+**5** Change the URL as follows, to ensure we are working with a verrsion, and not a specific deployed instance. The deployed instance might change if you redeploy the process, but the version will be the same :
+
+Original URL -  https://touchthecloudpcs.process.us2.oraclecloud.com/soa-infra/services/default/Quote_To_Order_-_demo.user03!1.0*soa_aaf80f85-d04b-4ad5-8655-31622cb766ec/QuoteToOrderProcess.service?WSDL
+
+Changed URL - https://touchthecloudpcs.process.us2.oraclecloud.com/soa-infra/services/default/Quote_To_Order_-_demo.user03!1.0/QuoteToOrderProcess.service?WSDL
+
+To summarize, drop everything after the ***!1.0*** and before ***/QuoteToOrder***
+
+Keep this URL handy to use in the MCS configuration.
+
+### MCS
+
+#### Setup MCS to use your new deployed PCS process
+
+**1** Delete your ***PTC\_TTC\_XX** Connector
+
+![](images/200/Picture72.png)
+
+**2** Recreate your connector in MCS, using the WSDL URL obtained in PCS by following Lab 100 - 3.1 through 3.11. Replace the **WSDL URL:** referenced in 3.3 with the **WSDL** captured in previous PCS step.
+
+**3** No need to change the API, as it reference the new Connector, which has the same name as the original
+
+### Testing
+
+You are now ready to trigger your own process using the already deployed Mobile Application, as only backend configuration changed.
+
+---------
+*End of Lab 200*
+---------
+
+
+#
 
 
 
 ---------
-### **3**: Create a Quote (***Optional, if you have not completed Lab 100***)
+
+# Appendix
+_________
+
+
+
+### Create a Quote, if you have not completed Lab 100
 
 ---
 
@@ -475,11 +529,11 @@ In this step we are going to create some tasks to work on, if you have completed
 
 Login into the PCS Workspace as ***Bala*** (bala.gupta).
 
-**3.1** On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
+**1** On the PCS Workspace home page, click on the application **Submit Quote(1.0)**
 
   ![](images/200/Picture11.png)
 
-**3.2** Fill in the information requested information on the form
+**2** Fill in the information requested information on the form
 
   ![](images/200/Picture12.png)
 
@@ -517,4 +571,4 @@ Login into the PCS Workspace as ***Bala*** (bala.gupta).
    | 9          | 12031             | Television 102"                    |              3749.99|
    | 10         | 12029             | Television 96"                     |              2608.69|
 
-**3.3** Click on the Submit button to start the Quote to Order process.
+**3** Click on the Submit button to start the Quote to Order process.
