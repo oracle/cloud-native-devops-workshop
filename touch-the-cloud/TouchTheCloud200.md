@@ -397,13 +397,13 @@ In Space ***Touch the Cloud***, select your ***Quote to Order - USER(1-10)*** Ap
 
 ![](images/200/Picture58.png)
 
- Make sure you select the ***ICSKEY*** is selected as **Keystore Credential** and confirm that **Security Option** is set to ***APP Id - Username Token***. _Username and password will be filled in automatically after ***ICSKEY*** was selected._ 
+ Select the ***ICSKEY*** as **Keystore Credential** and confirm that **Security Option** is set to ***APP Id - Username Token***. _Username and password will be filled in automatically after ***ICSKEY*** was selected._ 
 
 ![](images/200/Picture59.png)
 
 ![](images/200/Picture60.png)
 
-![](images/200/Picture61.png) -- replace with demo.userXX + highlights
+![](images/200/Picture61.png) 
 
 ![](images/200/Picture62.png)
 
