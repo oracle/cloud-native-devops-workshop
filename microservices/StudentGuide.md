@@ -58,7 +58,7 @@ You have two options for configuring your workshop client environment.
 
 ### Check/Set Storage Replication Policy
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will go to the Storage Cloud Service to check on the status of the Replicaton Policy. 
 
 - Click on the **Storage** Cloud Service
     ![](images/100/Picture-01.png)
@@ -174,7 +174,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 ***Note***: If you already have Eclipse installed, you will still want to install and use the version documented below, for this version of Eclipse contains the **Oracle Enterprise Pack for Eclipse**, which will be used during the workshop.
 
-- Got to the [Eclipse](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html) installation website
+- Go to the [Eclipse](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html) installation website
 
 - Accept the **licensing agreement**, and then select the **Neon** version of Eclipse required for your operating system.
 
