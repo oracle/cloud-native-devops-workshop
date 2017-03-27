@@ -457,14 +457,11 @@ Here a list of users and allocated roles:
 
 |Person        | Role            |
 |:--------------|:-----------------:|
-|Bala Gupta    | Sales Person    |
-|John Dunbar  | Sales Manager   |
+|Bala Gupta, YOU (demo.User01-10)    | Sales Person    |
+|John Dunbar, YOU (demo.User01-10)  | Sales Manager   |
 |Lisa Jones, YOU (demo.User01-10)    | Sales Operations|
 |Roland Dubois, YOU (demo.User01-10) | Sales Director  |
-
-
-# 
-
+ 
 
 ## Testing new Process flow using Mobile Application 
 
@@ -518,9 +515,11 @@ Keep this URL handy to use in the MCS configuration.
 
 You are now ready to trigger your own process using the already deployed Mobile Application, as only backend configuration changed.
 
-From the Mobile Application created in Lab 100, create a new Quote, and then login in as Lisa again to see the created tasks. 
+From the Mobile Application created in Lab 100, create a new Quote.
 
-To see full flow, you can use the process owner (User01..10), then use the task tracking option to expedite to process through all the steps. Remember to refresh the page after each action. 
+Since YOU (User01-10), have all the roles assigned, you can use your user to step through the different approvals in the PCS task list.
+
+After the Director Approval, then you can have a look at the full flow of the workflow process, using tracking screen, with the completed filter applied to the instances list.
 
 ---------
 *End of Lab 200*
