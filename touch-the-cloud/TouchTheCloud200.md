@@ -7,7 +7,7 @@ Update: March 13, 2017
 
 This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** 
 
-We are going to look at the process approval workflow that had being kicked off from Lab 100's Mobile Application.
+We are going to look at the process approval workflow that had being kicked off from Lab 100's Mobile Application. If Lab 200 is your starting point, then you can have a look at the appendix at the end of this lab, to create a couple of tasks to work on.
 
 ## Objectives
 
