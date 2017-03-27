@@ -519,7 +519,9 @@ From the Mobile Application created in Lab 100, create a new Quote.
 
 Since YOU (User01-10), have all the roles assigned, you can use your user to step through the different approvals in the PCS task list.
 
-After the Director Approval, then you can have a look at the full flow of the workflow process, using tracking screen, with the completed filter applied to the instances list.
+After the Director Approval, then you can have a look at the full flow of the quote to order process, using the tracking screen, with the completed filter applied to the instances list.
+
+![](images/200/Picture78.png)
 
 ---------
 *End of Lab 200*
