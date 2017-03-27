@@ -7,7 +7,9 @@ Update: March 13, 2017
 
 This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** 
 
-We are going to look at the process approval workflow that had being kicked off from Lab 100's Mobile Application. If Lab 200 is your starting point, then you can have a look at the appendix at the end of this lab, to create a couple of tasks to work on.
+We are going to look at the process approval workflow process that had being kicked off from Lab 100's Mobile Application. 
+
+>If Lab 200 is your starting point, then you can have a look at the appendix at the end of this lab, to create a couple of tasks to work on.
 
 ## Objectives
 
@@ -433,19 +435,31 @@ Now we have to assign physical users to the new **Sales Director** Role we have 
 
 **9.4** Add ***Roland Dubois*** to the **Sales Director** role 
 
-![](images/200/Picture67.png)
+Find and select your app specific Sales Director (in the example user03, yours will be User01..10)
 
-**9.5** Click OK
+![](images/200/Picture74.png)
 
-**9.6** Repeat the process for each of the roles in your application.
+Then click on Add Member button
+
+![](images/200/Picture75.png)
+
+Search for the user 'roland' and add by selecting and clicking on OK
+
+![](images/200/Picture76.png)
+
+Click on Save to update the user assignment.
+
+![](images/200/Picture77.png)
+
+**9.5** Repeat the process for each of the roles in your application.
 
 Here a list of users and allocated roles:
 
 |Person        | Role            |
 |:--------------|:-----------------:|
 |Bala Gupta    | Sales Person    |
-|John Dunbar   | Sales Manager   |
-|Lisa Jones    | Sales Operations|
+|John Dunbar  | Sales Manager   |
+|Lisa Jones, YOU (demo.User01-10)    | Sales Operations|
 |Roland Dubois, YOU (demo.User01-10) | Sales Director  |
 
 
@@ -503,6 +517,10 @@ Keep this URL handy to use in the MCS configuration.
 ### Testing
 
 You are now ready to trigger your own process using the already deployed Mobile Application, as only backend configuration changed.
+
+From the Mobile Application created in Lab 100, create a new Quote, and then login in as Lisa again to see the created tasks. 
+
+To see full flow, you can use the process owner (User01..10), then use the task tracking option to expedite to process through all the steps. Remember to refresh the page after each action. 
 
 ---------
 *End of Lab 200*
