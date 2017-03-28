@@ -360,11 +360,11 @@ Go back to the  FixItFast-application's Stack detail page find the *backendCache
 
 ![](images/40.backendjava.url.cache.png)
 
-The *backendCacheJava* application's home page is displayed. Basically this components just provides REST access to customer and location data stored in Application Container Cloud Cache  Service. These pages are just for demo purposes. Click **Edit Customers** link.
+The *backendCacheJava* application's home page is displayed. Basically this component just provides REST access to customer and location data stored in Application Container Cloud Cache  Service. These pages are just for demo purposes. Click **Edit Customers** link.
 
 ![](images/41.cache.app.png)
 
-Using this page you can modify any customer data. Select *Bobby Smith* customer and click **Edit**.
+Using this page you can modify any customer data. Select *Bob Smith* customer and click **Edit**.
 
 ![](images/42.edit.customer.png)
 
