@@ -23,9 +23,9 @@ https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
 **Documenation**: TouchTheCloud100.md
 
 ### Objectives
-The objective of this lab is to expose you to the:
+The objective of this lab is to expose you to:
 
-- **Creating APIs to Backend Systems**
+- **Creating mobile APIs to Backend Systems**
 
 - **Rapid Mobile Application Creation**
     
