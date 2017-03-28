@@ -12,7 +12,7 @@ Oracle Cloud is the industry’s broadest and most integrated public cloud. It o
 
 [Workshop Material](https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html)
 ---
-## Usefull Links ##
+## Useful Links ##
 
 ### [Oracle Cloud](https://cloud.oracle.com) ###
 
