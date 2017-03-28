@@ -13,7 +13,7 @@ The FixItFast Cloud Native Application requires the following services:
 - NodeJS REST Service to persist FixItFast application's data
 - NodeJS Server to host front end (JavaScript) application
 
-![](images/stack.environment.png)
+![](images/stack.environment.cache.png)
 
 This tutorial demonstrates how to:
 
