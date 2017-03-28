@@ -1,0 +1,81 @@
+---
+  template: 
+    templateName: FixItFast-Cache-Stack
+    templateVersion: 1.0.0
+    templateDescription: Stack template to create simple ACCS 
+    parameters: 
+      appFrontEndURL: 
+        label: Front End App archive cloud URL
+        description: Location inside Storage from where the frontend app archive can be downloaded from
+        type: String
+        mandatory: true
+        default: xweek/fixitfast-client.zip
+      appBackEndNodeURL: 
+        label: Back End Node App archive cloud URL
+        description: Location inside Storage from where the backend node app archive can be downloaded from
+        type: String
+        mandatory: true
+        default: xweek/fixitfast-backend.zip
+      appBackEndJavaURL: 
+        label: Back End Java App archive cloud URL
+        description: Location inside Storage from where the backend java app archive can be downloaded from
+        type: String
+        mandatory: true
+        default: xweek/fixitfast-java-cache-backend.zip
+    resources: 
+      customerCache: 
+        type: caching
+        parameters: 
+             serviceParameters: 
+                serviceName: customerCache
+                serviceLevel: PAAS
+                subscription: HOURLY
+                serviceDescription: Customer Cache for FixItFast application 
+      backendCacheJavaApp: 
+        type: apaas
+        parameters: 
+            name: backendCacheJava
+            runtime: java
+            subscription: MONTHLY
+            archiveURL:
+                Fn::GetParam: appBackEndJavaURL
+            deployment:
+                memory: 1G
+                instances: 1
+                services: 
+                      - 
+                        identifier: CacheBinding
+                        name: 
+                          Fn::GetAtt: 
+                            - customerCache
+                            - serviceName
+                        type: caching
+      backendNodeApp:
+        type: apaas
+        parameters: 
+            name: backendNode
+            runtime: node
+            subscription: MONTHLY
+            archiveURL:
+                Fn::GetParam: appBackEndNodeURL
+            deployment:
+                memory: 1G
+                instances: 1
+                services:
+      clientApp:
+        type: apaas
+        parameters: 
+            name: client
+            runtime: node
+            subscription: MONTHLY
+            archiveURL:
+                Fn::GetParam: appFrontEndURL
+            deployment:
+                memory: 1G
+                instances: 1
+                services:
+                environment:
+                  {
+                    "REST_FIXIT" :  { "Fn::GetAtt" : [ "backendNodeApp", "attributes.webURL.value" ] },
+                    "REST_CUSTOMERS" :  { "Fn::GetAtt" : [ "backendCacheJavaApp", "attributes.webURL.value" ] }
+                  }

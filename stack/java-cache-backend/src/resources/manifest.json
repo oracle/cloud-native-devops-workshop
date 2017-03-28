@@ -1,0 +1,9 @@
+{
+  "runtime": {
+    "majorVersion": "8"
+  },
+  "command": "java -Dserver.port=$PORT -jar springboot-accs_cache-rest-service-1.0.0.war",
+  "notes": "FixItFast cache based Java backend application for Customer and Location data",
+  "startupTime": "300",
+  "isClustered" : true
+}

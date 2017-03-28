@@ -1,0 +1,152 @@
+[
+  {
+    "id": "cus-101",
+    "username": "bsmith",
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "bsmith@somewhere.com",
+    "locationid": "loc-1"
+  },
+  {
+    "id": "cus-102",
+    "username": "djones",
+    "firstName": "Dan",
+    "lastName": "Jones",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "djones@somewhere.com",
+    "locationid": "loc-2"
+  },
+  {
+    "id": "cus-103",
+    "username": "rbarkhouse",
+    "firstName": "Rick",
+    "lastName": "Barkhouse",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "rbarkhouse@somewhere.com",
+    "locationid": "loc-3"
+  },
+  {
+    "id": "cus-104",
+    "username": "lsmith",
+    "firstName": "Lynn",
+    "lastName": "Smith",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "lsmith@somewhere.com",
+    "locationid": "loc-4"
+  },
+  {
+    "id": "cus-105",
+    "username": "jtaylor",
+    "firstName": "Julia",
+    "lastName": "Taylor",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "jtaylor@somewhere.com",
+    "locationid": "loc-5"
+  },
+  {
+    "id": "cus-106",
+    "username": "bwilliams",
+    "firstName": "Bruce",
+    "lastName": "Williams",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "bwilliams@somewhere.com",
+    "locationid": "loc-6"
+  },
+  {
+    "id": "cus-107",
+    "username": "kbrown",
+    "firstName": "Kent",
+    "lastName": "Brown",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "kbrown@somewhere.com",
+    "locationid": "loc-7"
+  },
+  {
+    "id": "cus-108",
+    "username": "ldavies",
+    "firstName": "Larry",
+    "lastName": "Davies",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "ldavies@somewhere.com",
+    "locationid": "loc-8"
+  },
+  {
+    "id": "cus-109",
+    "username": "tthomas",
+    "firstName": "Ted",
+    "lastName": "Thomas",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "tthomas@somewhere.com",
+    "locationid": "loc-9"
+  },
+  {
+    "id": "cus-110",
+    "username": "bthompson",
+    "firstName": "Bruce",
+    "lastName": "Thompson",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "bthompson@somewhere.com",
+    "locationid": "loc-10"
+  },
+  {
+    "id": "cus-111",
+    "username": "jling",
+    "firstName": "Jini",
+    "lastName": "Ling",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "jling@somewhere.com",
+    "locationid": "loc-11"
+  },
+  {
+    "id": "cus-112",
+    "username": "jstevens",
+    "firstName": "Jennifer",
+    "lastName": "Stevens",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "jstevens@somewhere.com",
+    "locationid": "loc-12"
+  },
+  {
+    "id": "cus-113",
+    "username": "skapoor",
+    "firstName": "Srini",
+    "lastName": "Kapoor",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "skapoor@somewhere.com",
+    "locationid": "loc-13"
+  },
+  {
+    "id": "cus-114",
+    "username": "mdsouza",
+    "firstName": "Mark",
+    "lastName": "DSouza",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "mdsouza@somewhere.com",
+    "locationid": "loc-14"
+  },
+  {
+    "id": "cus-115",
+    "username": "jjackson",
+    "firstName": "Jamal",
+    "lastName": "Jackson",
+    "mobile": "6505067000",
+    "home": "5105552121",
+    "email": "jjackson@somewhere.com",
+    "locationid": "loc-15"
+  }
+]
