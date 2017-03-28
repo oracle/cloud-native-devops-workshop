@@ -68,4 +68,6 @@ The objective of this lab is to expose you to the:
 
 ### Objectives
 
-- Adding Business Analytics to Processes
+- Review out of box Analytics and Dashboards 
+- Create custom measures 
+- Create custom analytics reports
