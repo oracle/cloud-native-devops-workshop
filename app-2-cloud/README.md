@@ -27,7 +27,7 @@ Open a terminal and change to `GIT_REPO_LOCAL_CLONE/app-2-cloud` folder.
 
 	$ [oracle@localhost Desktop]$ cd /u01/content/cloud-native-devops-workshop/app-2-cloud
 	
-Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareDBCS.sh <db user> <db password> <ssh key file> <db server ip> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:
+Run the `prepareEnv.sh` script which starts the database, creates Weblogic 10.3.6 domain, starts Weblogic servers and deploys the Petstore demo application. The script usage is: `prepareEnv.sh <db user> <db password> [<PDB name>]`. In the provided virtualbox environment run the script with the following parameters:
 
     $ [oracle@localhost app-2-cloud]$ ./prepareEnv.sh system welcome1
 	  Oracle database (sid: orcl) is running.
