@@ -7,7 +7,7 @@ Update: March 10, 2017
 
 ## Mobile Cloud Service MAX App
 
-###Installing the MAX App on iPhones
+### Installing the MAX App on iPhones
 
 To install the MAX App from the App Store:
 
@@ -24,7 +24,7 @@ To install the MAX App from the App Store:
 
 Tap Sign In.
 
-###Installing the MAX App on Android Devices
+### Installing the MAX App on Android Devices
 
 To install the MAX App from Google Play:
 1. On your phone, open Google Play.
