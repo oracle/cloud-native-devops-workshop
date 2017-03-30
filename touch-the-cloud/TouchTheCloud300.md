@@ -33,9 +33,9 @@ In this first part of the lab, we will explore the main parts of Integration Clo
 
 Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
 
-## Explore the Oracle Cloud Dashboard
+## 1.1: Explore the Oracle Cloud Dashboard
 
-### **STEP 1**: Login to your Oracle Cloud account
+### **1.1.1**: Login to your Oracle Cloud account
 
 ---
 
@@ -64,7 +64,7 @@ https://cloud.oracle.com
 
     ![](images/300/image004.png)
 
-### **STEP 2:**	Explore Oracle Cloud Dashboard
+### **1.1.2:**	Explore Oracle Cloud Dashboard
 
 ---
 
@@ -94,9 +94,9 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image006.png)  
 
-## Explore the ICS Designer User Interface
+## 1.2: Explore the ICS Designer User Interface
 
-### **STEP 1:**	Open the ICS Designer
+### **1.2.1:**	Open the ICS Designer
 
 ---
 
@@ -108,7 +108,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
     ![](images/300/image008.png)  
 
-### **STEP 2:**	Explore ICS Connections
+### **1.2.2:**	Explore ICS Connections
 
 ---
 
@@ -138,7 +138,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - When you are done browsing, select the “Cancel” button to dismiss the “Select an Adapter” dialog.
 
-### **STEP 3:**	Explore ICS Integrations
+### **1.2.3:**	Explore ICS Integrations
 
 ---
 
@@ -250,7 +250,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
   ![](images/300/image012s.png)
 
-### **STEP 4:** Explore ICS Agents
+### **1.2.4:** Explore ICS Agents
 
 ---
 
@@ -284,9 +284,9 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - The `Execution Agent` that you see in the download dropdown is a version of ICS that can run on-premise behind the customer firewall.  You can use ICS both in the cloud and on-premise for creating integrations.
 
-## Explore the ICS Monitoring User Interface
+## 1.3: Explore the ICS Monitoring User Interface
 
-### **STEP 1:**	Open ICS Monitoring Console
+### **1.3.1:**	Open ICS Monitoring Console
 
 ---
 
@@ -294,7 +294,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image015.png)
 
-### **STEP 2:**	Explore ICS Monitoring Console - Dashboard
+### **1.3.2:**	Explore ICS Monitoring Console - Dashboard
 
 ---
 
@@ -314,7 +314,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - In the `Activity Stream` at the bottom of the page you can see the steps in the *Create EBS Order* integration that were executed and whether or not they were successful.
 
-### **STEP 3:**	Explore ICS Monitoring Console - Logfiles
+### **1.3.3:**	Explore ICS Monitoring Console - Logfiles
 
 ---
 
@@ -337,7 +337,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
 - This logfile is helpful for investigation during development or runtime analysis.  The capture of the runtime payloads can be turned on or off during activation of the ICS integration where you are prompted whether or not you want to save the payloads.
 
-### **STEP 4:**	Explore ICS Monitoring Console - Integrations & Errors
+### **1.3.4:**	Explore ICS Monitoring Console - Integrations & Errors
 
 ---
 
@@ -377,7 +377,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
   ![](images/300/image028.png)
 
-### **STEP 5:**	Explore ICS Monitoring Console - Agents
+### **1.3.5:**	Explore ICS Monitoring Console - Agents
 
 ---
 
@@ -387,7 +387,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
   ![](images/300/image029.png)
 
-### **STEP 6:**	Explore ICS Monitoring Console - Tracking
+### **1.3.6:**	Explore ICS Monitoring Console - Tracking
 
 ---
 
@@ -424,9 +424,9 @@ In this second part of the lab, we will change the *Create EBS Order* ICS integr
 4.	Re-Activate and Test the updated orchestration
 Let’s start by logging into ICS and cloning an existing integration.
 
-## Clone an existing integration
+## 2.1: Clone an existing integration
 
-### **STEP 1:**	Open the ICS Design Console
+### **2.1.1:**	Open the ICS Design Console
 
 ---
 
@@ -438,7 +438,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image035.png)
 
-### **STEP 2:**	Clone the integration
+### **2.1.2:**	Clone the integration
 
 ---
 
@@ -460,9 +460,9 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 - Select the integration name in order to edit it.  In the image above `User 01 Create EBS Order` is the hot-link to select.
 
-## Edit the mapping to the EBS update service call
+## 2.2: Edit the mapping to the EBS update service call
 
-### **STEP 1:**	Navigate to the mapping *createEBSOrder*
+### **2.2.1:**	Navigate to the mapping *createEBSOrder*
 
 ---
 
@@ -474,7 +474,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image012l.png)
 
-### **STEP 2:**	Open the mapping *createEBSOrder* for editing
+### **2.2.2:**	Open the mapping *createEBSOrder* for editing
 
 ---
 
@@ -486,7 +486,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image041.png)
 
-### **STEP 3:**	Map the new *Comment* field
+### **2.2.3:**	Map the new *Comment* field
 
 ---
 
@@ -516,7 +516,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image047.png)
 
-### **STEP 4:**	Testing the Updated Mapping
+### **2.2.4:**	Testing the Updated Mapping
 
 ---
 
@@ -562,9 +562,9 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image055.png)
 
-## Add Tracking to the Integration
+## 2.3: Add Tracking to the Integration
 
-### **STEP 1:**	Open the “Tracking” editor
+### **2.3.1:**	Open the “Tracking” editor
 
 ---
 
@@ -574,7 +574,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image056.png)
 
-### **STEP 2:**	Add a “Business Identifier”
+### **2.3.2:**	Add a “Business Identifier”
 
 ---
 
@@ -604,9 +604,9 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image061.png)
 
-## Activate Changes to the Integration
+## 2.4: Activate Changes to the Integration
 
-### **STEP 1:**	Select the “Activate” switch
+### **2.4.1:**	Select the “Activate” switch
 
 ---
 
@@ -632,6 +632,10 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image065.png)
 
+### **2.4.2:**	Check the Service Endpoint
+
+---
+
 - Click on the WSDL link so we can ensure that this integration has an available service endpoint.
 
    ![](images/300/image066.png)
@@ -647,7 +651,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 Now that we have a new ICS integration mapping the *Comment* field to the EBS order, we need to update the PCS process with the new ICS endpoint.
 Using the PCS Process from the previous lab we’ll now go through the steps necessary to do this.
 
-### **STEP 1:**	Update PCS Process with the New ICS Service
+### **3.1:**	Update PCS Process with the New ICS Service
 
 ---
 
@@ -721,7 +725,7 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
 
 - You are now ready to publish your changes
 
-### **STEP 2:**	Deploy the Updated PCS Process
+### **3.2:**	Deploy the Updated PCS Process
 
 ---
 
@@ -791,7 +795,7 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
 
 - The updated PCS application is now ready to test
 
-### **STEP 3:**	Test the Updated PCS Process
+### **3.3:**	Test the Updated PCS Process
 
 ---
 
@@ -856,7 +860,7 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
 
    ![](images/300/image102.png)
 	
-### **STEP 4:**	Ensure PCS called the new ICS Integration
+### **3.4:**	Ensure PCS called the new ICS Integration
 
 ---
 
@@ -876,7 +880,7 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
 
    ![](images/300/image106.png)
 
-### **STEP 5:**	Verify the Order in EBS
+### **3.5:**	Verify the Order in EBS
 
 ---
 
