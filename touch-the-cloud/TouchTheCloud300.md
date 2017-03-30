@@ -38,13 +38,13 @@ Let’s start by logging into the Oracle Cloud account and explore the Services 
 ---
 
 - From your browser (Firefox or Chrome recommended) go to the following URL:
-https://cloud.oracle.com
+<https://cloud.oracle.com>
 - Click Sign In in the upper right hand corner of the browser
 - **IMPORTANT** - Under My Services, change Data Center to `US Commercial 2 (us2)` and click on Sign In to My Services
 
     ![](images/300/image001.png)
 
-- If your identity domain is not already set, enter it and click **Go** (do not check to box to save it because this will set a cookie in the browser that needs to be cleared if you need to change identity domains later)  
+- If your identity domain is not already set, enter it and click **Go**
 
     **NOTE:** the **Identity Domain** values will be given to you from your instructor.
 
@@ -66,7 +66,7 @@ https://cloud.oracle.com
 
 ---
 
-The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**.
+The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**. The dashboard can be customized by selecting the `Customize Dashboard` button.
 
 - To look at the details for the Integration Cloud Service (ICS) instance, first click on the `hamburger` icon, then click on the `View Details` link.
 
@@ -76,7 +76,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image004b.png)
 
-- Access to `Business Metrics` can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
+- Access to `Business Metrics`, `Resource Quotas`, etc.  can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
 
    ![](images/300/image004c.png)
 
@@ -84,7 +84,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image004d.png)
 
-- After getting familiar with the Business Metrics, select the `Open Service Console` button to go to the ICS Service Console.  
+- After getting familiar with the Business Metrics, go back to the “Overview” tab and select the `Open Service Console` link to go to the ICS Service Console.  
 
     ![](images/300/image005.png)  
 
