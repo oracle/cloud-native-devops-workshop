@@ -21,15 +21,15 @@
                 "description": "In this Lab we are going to build a 'hello world' echo service. "
             },
             {
-                "number": "200",
-                "filename": "ics200.md",
-                "title": "Lab 200: Adapters",
+                "number": "300",
+                "filename": "ics300.md",
+                "title": "Lab 200: Working with Adapters",
                 "description": "In this Lab we are going to explore the integration into backend systems"
             },
             {
-                "number": "300",
-                "filename": "ics300.md",
-                "title": "Lab 300: Orchestrations",
+                "number": "400",
+                "filename": "ics400.md",
+                "title": "Lab 400: Orchestrations",
                 "description": "This lab will do an integration orchestration"
             }
         ]
