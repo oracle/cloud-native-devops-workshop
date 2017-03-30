@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Deep Dive ICS",
+        "title": "ICS Development Workshop",
         "description": "A hands-on event to explore Oracle’s Integration Cloud Servicce.",
         "labs": [{
                 "number": "10",
