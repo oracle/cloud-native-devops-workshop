@@ -16,58 +16,35 @@ https://pmalan.github.io/Touch-the-Cloud/deep-dive-ics/index.html
 **Reference the following Lab Guides by opening their Documentation Files:**
 ## Required pre-work
 
-**Documentation**: TouchTheCloud000.md
+**Documentation**: ics000.md
 
 ## Lab 100: Building Mobile Applications
 
-**Documenation**: TouchTheCloud100.md
+**Documenation**: ics100.md
 
 ### Objectives
 The objective of this lab is to expose you to:
 
-- **Creating mobile APIs to Backend Systems**
+- **Getting familiar with ICS**
 
-- **Rapid Mobile Application Creation**
+- **Build your first 'hello world' integration**
     
-## Lab 200: Process Automation
+## Lab 200: Adapters
 
-**Documenation**: TouchTheCloud200.md
+**Documenation**: ics200.md
 
 ### Objectives
 The objective of this lab is to expose you to the:
 
-- **User Experience of PCS**
+- **Integration into backend systems**
 
-- **Process Modelling in PCS**
+- **Database adapter**
 
+## Lab 300: Orchestration
 
-### Process Cloud User Interaction
-***User experience***
--   Creating a new process instance - Bala Gupta
--   Lisa's inbox
--   Roland tracking processes
-
-### Extend Process
-***Business Process Modeling***
--   Process Owner wants to extend process and rules 
-    -   Rules
-    -   Human Tasks
-    -   Lanes
-
-## Lab 300: Zero Code Integration
-
-**Documentation**: TouchTheCloud300.md
+**Documentation**: ics300.md
 
 ### Objectives
 
-- Review Integration to E-business suite
-- Edit integration to add additional fields
-- Edit Process Workflow to call customized integration
+- **Use the previous labs experiences to build a integration into Oracle's eBusiness Suite**
 
-## Lab 400: Analytics
-
-### Objectives
-
-- Review out of box Analytics and Dashboards 
-- Create custom measures 
-- Create custom analytics reports
