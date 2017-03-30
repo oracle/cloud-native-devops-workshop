@@ -25,9 +25,7 @@ https://pmalan.github.io/Touch-the-Cloud/deep-dive-ics/index.html
 ### Objectives
 The objective of this lab is to expose you to:
 
-- **Getting familiar with ICS**
-
-- **Build your first 'hello world' integration**
+- **Getting familiar with ICS concepts**
 
 ## Lab 200: Mappings
 
@@ -35,8 +33,6 @@ The objective of this lab is to expose you to:
 
 ### Objectives
 The objective of this lab is to expose you to:
-
-- **Getting familiar with ICS**
 
 - **Build your first 'hello world' integration**
 
