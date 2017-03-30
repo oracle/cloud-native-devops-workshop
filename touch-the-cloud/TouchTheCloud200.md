@@ -63,9 +63,9 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 ![](images/200/Picture7.png)
 
-**1.7** Click on the **Service Instance URL** link to open PCS
+**1.7** The  **Service Instance URL** is the link to open PCS
 
-### **2**: Login to Process Cloud Service
+### **2**: Process Cloud Service Console Overview
 
 ---
 

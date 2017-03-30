@@ -1,0 +1,37 @@
+{
+    "workshop": {
+        "title": "Deep Dive ICS",
+        "description": "A hands-on event to explore Oracle’s Integration Cloud Servicce.",
+        "labs": [{
+                "number": "10",
+                "filename": "StudentGuide.md",
+                "title": "Prerequisites",
+                "description": "Workshop guidance and prerequisites"
+            },
+            {
+                "number": "100",
+                "filename": "ics100.md",
+                "title": "Lab 100: Getting started",
+                "description": "This lab will expose you to the navigation in ICS"
+            },
+            {
+                "number": "200",
+                "filename": "ics200.md",
+                "title": "Lab 200: Mappings",
+                "description": "In this Lab we are going to build a 'hello world' echo service. "
+            },
+            {
+                "number": "300",
+                "filename": "ics300.md",
+                "title": "Lab 300: Working with Adapters",
+                "description": "In this Lab we are going to explore the integration into backend systems"
+            },
+            {
+                "number": "400",
+                "filename": "ics400.md",
+                "title": "Lab 400: Orchestrations",
+                "description": "This lab will do an integration orchestration"
+            }
+        ]
+    }
+}
