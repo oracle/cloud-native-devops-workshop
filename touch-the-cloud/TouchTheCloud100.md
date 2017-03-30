@@ -85,7 +85,7 @@ In this part of the Workshop, you create an MCS connector to support gathering d
 
 **API Name:** PCS\_TTC\_XX (should be populated based on the value entered for the Display Name)
 
-**WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order_-_New_Gold!1.0/QuoteToOrderProcess.service?WSDL
+**WSDL URL:** https://touchthecloudpcs-gse00003021.process.us2.oraclecloud.com/soa-infra/services/default/Quote_to_Order!1.0/QuoteToOrderProcess.service?WSDL
 
 **Short Description:** Endpoint of PCS Approval Workflow
 
