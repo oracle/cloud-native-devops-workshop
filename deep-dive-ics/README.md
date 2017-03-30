@@ -9,9 +9,9 @@ Update: March 10, 2017
 
 **To View in Interactive Labguide Format:**  
 
-https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
+https://pmalan.github.io/Touch-the-Cloud/deep-dive-ics/index.html
 
-# Touch the Cloud
+# Deep Dive ICS
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 ## Required pre-work
