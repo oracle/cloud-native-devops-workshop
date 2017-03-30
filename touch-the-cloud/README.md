@@ -5,15 +5,6 @@ Update: March 10, 2017
 
 #Step-by-step Instructions
 
-### STEP 1 - REVIEW STUDENT GUIDE
-
-Review the ***Student Guide*** to properly **configure your environment**
-
-### STEP 2 - Optional - Review interactive Workshop Overview 
-
-visit this URL: http://launch.oracle.com/?TouchTheCloud
-
-
 # Workshop Overview
 
 **To View in Interactive Labguide Format:**  
@@ -25,20 +16,20 @@ https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
 **Reference the following Lab Guides by opening their Documentation Files:**
 ## Required pre-work
 
-***Only required if it is not a pre-configured environment, for example using you rown cloud***
+**Documentation**: TouchTheCloud000.md
 
-See **Documentation**: TouchTheCloud000.md
-
-## Lab 100: Mobile Application Accelerator
+## Lab 100: Building Mobile Applications
 
 **Documenation**: TouchTheCloud100.md
 
 ### Objectives
+The objective of this lab is to expose you to:
 
-- Create Initial Project
-    - Add Users to Project
+- **Creating mobile APIs to Backend Systems**
 
-## Lab 200: Process Management
+- **Rapid Mobile Application Creation**
+    
+## Lab 200: Process Automation
 
 **Documenation**: TouchTheCloud200.md
 
@@ -47,7 +38,7 @@ The objective of this lab is to expose you to the:
 
 - **User Experience of PCS**
 
-- **Process Modelling of PCS**
+- **Process Modelling in PCS**
 
 
 ### Process Cloud User Interaction
@@ -58,7 +49,7 @@ The objective of this lab is to expose you to the:
 
 ### Extend Process
 ***Business Process Modeling***
--   Roland wants to extend process and rules 
+-   Process Owner wants to extend process and rules 
     -   Rules
     -   Human Tasks
     -   Lanes
@@ -69,13 +60,14 @@ The objective of this lab is to expose you to the:
 
 ### Objectives
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Review Integration to E-business suite
+- Edit integration to add additional fields
+- Edit Process Workflow to call customized integration
 
 ## Lab 400: Analytics
 
 ### Objectives
 
-- Adding Business Analytics to Processes
+- Review out of box Analytics and Dashboards 
+- Create custom measures 
+- Create custom analytics reports

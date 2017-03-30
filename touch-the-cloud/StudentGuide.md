@@ -2,13 +2,8 @@
 
 Update: March 10, 2017
 
-## Introduction
-
-This hands-on lab walks you through ...
 
 # Installing Mobile Tools
-
-*** It is not a requirement to install the Mobile Apps, as all the functionality can be reached through a standard web browser. An embedded simulator is available to preview and interact with the Oracle Mobile Accelarator. 
 
 ## Mobile Cloud Service MAX App
 
