@@ -29,6 +29,14 @@ In this first part of the lab, we will explore the main parts of Integration Clo
 2.	ICS Designer User Interface
 3.	ICS Monitoring User Interface
 
+The ICS integration that we'll be working with is shown in the following picture:
+
+![](images/300/image000.png)
+
+Here is a description of what is happening with this integration:
+
+Process Cloud Service (PCS) will be used to call the exposed Web Service endpoint of the ICS integration called *Create EBS Order*.  This integration has 3 connections.  The incoming message is received by the incoming *Create Order* Soap Connection.  The *Create EBS Order* orchestration makes 2 queries into the EBS database using the *eBusiness Suite DB APPS* connection to get details needed to create an order.  The orchestration finally uses the *eBusiness Suite OPERATIONS* EBS Adapter connection for creating the order in EBS.  After the order is created in EBS, the Order Number is returned to PCS.
+
 Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
 
 ## 1.1: Explore the Oracle Cloud Dashboard
