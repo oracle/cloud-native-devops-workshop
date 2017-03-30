@@ -1,49 +1,32 @@
 ![](images/300/HeaderImage.png)  
 
-Update: March 10, 2017
+Update: March 30, 2017
 
+# Installing 3rd Party Testing Tools
 
-# Installing Mobile Tools
+## SoapUI
 
-## Mobile Cloud Service MAX App
+We will use SoapUI to test an ICS Soap Web Service integration.
 
-### Installing the MAX App on iPhones
+If you don't already have SoapUI installed on your workstation, you'll need to install it.
 
-To install the MAX App from the App Store:
+To install SoapUI for testing the ICS integration follow these instructions:
 
-![](images/studentguide/max_app_store1.png)
+1. Download the SoapUI OpenSource application for your desktop/laptop from the URL: https://www.soapui.org/downloads/soapui.html
 
-1. On your iPhone, open the App Store.
-2. Search for Oracle MAX App.
-3. When prompted, allow MAX to send you notifications.
-4. Read through the end user terms and conditions and then tap Agree.
-5. Enter your login information:
-  - Host
-  - Username
-  - Password
+![](images/studentguide/image001.png)
 
-Tap Sign In.
+2. Save the download file to a temporary directory on your workstation.
 
-### Installing the MAX App on Android Devices
+![](images/studentguide/image002.png)
 
-To install the MAX App from Google Play:
-1. On your phone, open Google Play.
-2. In the Play Store, tap Apps.
-3. Search for Oracle MAX App.
-4. Tap Install.
-5. When prompted, allow MAX to send you notifications.
-6. Read through the end user terms and conditions and then tap Agree.
-7. Enter your login information:
+3. Run the installer from the temporary directory
 
- - Host
- - Username
- - Password
+![](images/studentguide/image003.png)
 
-Tap Sign In.
+4. Install SoapUI on your workstation following the directions provided by SmartBear here: https://www.soapui.org/getting-started/installing-soapui.html 
 
 ---
-
-
 
 # Supported Browsers
 
