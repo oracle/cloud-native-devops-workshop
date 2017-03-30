@@ -12,19 +12,19 @@ If you don't already have SoapUI installed on your workstation, you'll need to i
 
 To install SoapUI for testing the ICS integration follow these instructions:
 
-1. Download the SoapUI OpenSource application for your desktop/laptop from the URL: <https://www.soapui.org/downloads/soapui.html>
+- Download the SoapUI OpenSource application for your desktop/laptop from the URL: <https://www.soapui.org/downloads/soapui.html>
 
 ![](images/studentguide/image001.png)
 
-2. Save the download file to a temporary directory on your workstation.
+- Save the download file to a temporary directory on your workstation.
 
 ![](images/studentguide/image002.png)
 
-3. Run the installer from the temporary directory
+- Run the installer from the temporary directory
 
 ![](images/studentguide/image003.png)
 
-4. Install SoapUI on your workstation following the directions provided by SmartBear here: <https://www.soapui.org/getting-started/installing-soapui.html> 
+- Install SoapUI on your workstation following the directions provided by SmartBear here: <https://www.soapui.org/getting-started/installing-soapui.html> 
 
 ---
 
