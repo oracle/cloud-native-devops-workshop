@@ -12,6 +12,12 @@
                 "number": "100",
                 "filename": "ics100.md",
                 "title": "Lab 100: Getting started",
+                "description": "This lab will expose you to the navigation in ICS"
+            },
+            {
+                "number": "200",
+                "filename": "ics200.md",
+                "title": "Lab 200: Mappings",
                 "description": "In this Lab we are going to build a 'hello world' echo service. "
             },
             {
