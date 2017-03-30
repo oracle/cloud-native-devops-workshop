@@ -6,28 +6,26 @@ Update: March 23, 2017
 
 ---
 
-## Introduction
-
-This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
-
-In this lab, you will acquire a good overview of the Oracle Integration Cloud Service (ICS), then next generation integration platform. You will modify an integration to Oracle EBS. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service.
-
-Please direct comments to: John VanSant (john.vansant@oracle.com)
-
 ## Objectives
 
 - Part 1: Explore Integration Cloud Service (ICS)
 - Part 2: Use ICS to modify an integration
-- Part 3: Modify Process Cloud Service (PCS) process from Lab 200 to call new ICS integration
+- Part 3: Modify PCS Process from Lab 200 to Call New ICS Integration
 
 ## Required Artifacts
 
 - The following lab and an Oracle Public Cloud account that will be supplied by your instructor.
 
+## Introduction
+
+This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
+
+In this lab, you will acquire a good overview of the Oracle Integration Cloud Service (ICS), the next generation integration platform. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service. You will then modify an integration to Oracle EBS, then update a PCS application to call to the updated ICS endpoint.
+
 # Part 1: Explore Integration Cloud Service
 
 In this first part of the lab, we will explore the main parts of Integration Cloud Service (ICS).  We’ll look at the following:
-1.	Cloud Services Dashboard
+1.	Oracle Cloud Services Dashboard
 2.	ICS Designer User Interface
 3.	ICS Monitoring User Interface
 
