@@ -33,7 +33,7 @@ Let’s start by logging into the Oracle Cloud account and explore the Services 
 
 ## 1.1: Explore the Oracle Cloud Dashboard
 
-### **1.1.1**: Login to your Oracle Cloud account
+### **1.1.1**: Login to your Oracle Cloud Account
 
 ---
 
@@ -72,11 +72,11 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image004a.png)
 
-- The `Service Details` pages will show various important details about the ICS service instances in this identity domain such as: uptime, service start and end dates, and your Oracle Cloud subscription ID.
+- The `Service Details` pages will show various important details about the ICS service instances in this identity domain such as service start date, end date, and your Oracle Cloud subscription ID.
 
    ![](images/300/image004b.png)
 
-- Access to `Business Metrics`, `Resource Quotas`, etc.  can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
+- Access to `Billing Metrics`, `Resource Quotas`, etc.  can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
 
    ![](images/300/image004c.png)
 
