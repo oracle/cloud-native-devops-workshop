@@ -18,7 +18,7 @@ https://pmalan.github.io/Touch-the-Cloud/deep-dive-ics/index.html
 
 **Documentation**: ics000.md
 
-## Lab 100: Building Mobile Applications
+## Lab 100: Getting Started
 
 **Documenation**: ics100.md
 
@@ -28,10 +28,22 @@ The objective of this lab is to expose you to:
 - **Getting familiar with ICS**
 
 - **Build your first 'hello world' integration**
-    
-## Lab 200: Adapters
+
+## Lab 200: Mappings
 
 **Documenation**: ics200.md
+
+### Objectives
+The objective of this lab is to expose you to:
+
+- **Getting familiar with ICS**
+
+- **Build your first 'hello world' integration**
+
+
+## Lab 300: Adapters
+
+**Documenation**: ics300.md
 
 ### Objectives
 The objective of this lab is to expose you to the:
@@ -40,9 +52,9 @@ The objective of this lab is to expose you to the:
 
 - **Database adapter**
 
-## Lab 300: Orchestration
+## Lab 400: Orchestration
 
-**Documentation**: ics300.md
+**Documentation**: ics400.md
 
 ### Objectives
 
