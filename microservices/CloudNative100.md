@@ -1,6 +1,6 @@
 
 ![](images/100/Picture100-lab.png)  
-Update: March 3rd, 2017
+Update: March 31, 2017
 
 ## Introduction
 
@@ -45,7 +45,7 @@ Although you will login as a single user, you will take on 3 Personas during the
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In** 
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical User" changes from Lisa Jones the Project Manager to other personas.
+  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identity of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical User" changes from Lisa Jones the Project Manager to other personas.
 
     ![](images/lisa.png)
 

@@ -7,7 +7,7 @@
 - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
 
 **Second**, ***Configure your Client Environment***
-- Your client enviroment **must be configured prior** to attempting the Hands-on-Workshop labs. 
+- Your client environment **must be configured prior** to attempting the Hands-on-Workshop labs. 
 - You have two options for configuring your workshop client environment. 
 - ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
 - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
@@ -31,12 +31,12 @@ This Cloud Native Microservices Workshop is part of a **Free** Sales Program tha
 
 - Understand your Development Interests and Capabilities
 - Build your personalized Enablement Plan, including Hands-on Technical Enablement.
-- Help you Exercise your acquired knowledges. 
+- Help you Exercise your acquired knowledge. 
 - If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
 
 ## DevOps and Cloud Native Microservices Workshop
 
-This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - youwill create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - you will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
 ## Workshop Details
 
@@ -44,7 +44,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 
 ## Lab 100: Agile Project Management
 
-**Documenation**: [CloudNative100.md](CloudNative100.md)
+**Documentation**: [CloudNative100.md](CloudNative100.md)
 
 ### Objectives
 
@@ -58,7 +58,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 
 ## Lab 200: Continuous Delivery of Java Microservices
 
-**Documenation**: [CloudNative200.md](CloudNative200.md)
+**Documentation**: [CloudNative200.md](CloudNative200.md)
 
 ### Objectives
 
@@ -67,9 +67,9 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - Import Project into Eclipse
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 300: Cloud Native Rapid Javascript Devlopment with node.js
+## Lab 300: Cloud Native Rapid JavaScript Development with node.js
 
-**Documenation**: [CloudNative300.md](CloudNative300.md)
+**Documentation**: [CloudNative300.md](CloudNative300.md)
 
 ### Objectives
 
@@ -78,9 +78,9 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 400:  Cloud Native Develper Cloud Service Administration
+## Lab 400:  Cloud Native Developer Cloud Service Administration
 
-**Documenation**: [CloudNative400.md](CloudNative400.md)
+**Documentation**: [CloudNative400.md](CloudNative400.md)
 
 ### Objectives
 

@@ -1,5 +1,5 @@
 ![](images/200/Picture-lab.png)  
-Update: February 10, 2017
+Update: March 31, 2017
 
 ## Introduction
 
@@ -295,7 +295,7 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ### **STEP 9**: Load Eclipse IDE
 
-In the following task we will provide screen shots taken from the optional virtual box image provided with the workshop. If you are using Eclipse and Brackets on you local hardware, your screens may vary slightly.
+In the following task we will provide screen shots taken from the optional virtual box image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
 
 - Right Click and select **Run** on the **Eclipse** Desktop Icon.
 
@@ -325,7 +325,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
   - **Identity Domain**: `<your identity domain>`
 
-  - **User name**: `<yourUsername>`
+  - **User name**: `<your Username>`
 
   - **Password**: `<your Identity domain password>`
 
@@ -465,13 +465,13 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture76.png)  
 
-- Double Clicking on the **Console tab** will expand The Window. You can minimize the Window by double clicking the tab again. If the TwitterFeedMicroservices test runs successfully, your console window will contain the following – Notice the message with “### Tweets in Static Tweets”. You should see that there were zero Failures. Depending on your installation, you may see an exception as Eclipse's network listner is shutdown.
+- Double Clicking on the **Console tab** will expand The Window. You can minimize the Window by double clicking the tab again. If the TwitterFeedMicroservices test runs successfully, your console window will contain the following – Notice the message with “### Tweets in Static Tweets”. You should see that there were zero Failures. Depending on your installation, you may see an exception as Eclipse's network listener is shutdown.
 
     ![](images/200/Picture77.png)  
 
 ## Add the Filter to the Service
 
-The Code we cloned locally contains all the source necessary to filter the Static Twitter Feed. In this section of the lab, we will un-comment the code and test the filter.
+The Code we cloned locally contains the entire source necessary to filter the Static Twitter Feed. In this section of the lab, we will un-comment the code and test the filter.
 
 ### **STEP 16**: Add Filter
 
