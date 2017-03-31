@@ -36,4 +36,4 @@ The Docker Engine environment **needs to be completed prior to starting the Hand
 
 ***
 
-> *Note - after you have your Docker environment built, you will be ready to start the [Participant Guide](../master/Participant-Guide.md)* 
+> *Note - after you have your Docker environment built, you will be ready to start the [Participant Guide](Participant-Guide.md)* 
