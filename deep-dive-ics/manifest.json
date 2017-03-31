@@ -11,26 +11,26 @@
             {
                 "number": "100",
                 "filename": "ics100.md",
-                "title": "Lab 100: Getting Started",
+                "title": "Lab 100: Exploring ICS",
                 "description": "This lab will expose you to the navigation in ICS"
             },
             {
                 "number": "200",
                 "filename": "ics200.md",
-                "title": "Lab 200: Mappings",
+                "title": "Lab 200: Developing a basic ICS Integration",
                 "description": "In this Lab we are going to build a 'hello world' echo service. "
             },
             {
                 "number": "300",
                 "filename": "ics300.md",
-                "title": "Lab 300: Working with Adapters",
-                "description": "In this Lab we are going to explore the integration into backend systems"
+                "title": "Lab 300: Integrating with an On-Prem Database",
+                "description": "In this Lab we are going to develop an integration into an on-premesis backend database system using an ICS orchestration"
             },
             {
                 "number": "400",
                 "filename": "ics400.md",
-                "title": "Lab 400: Orchestrations",
-                "description": "This lab will do an integration orchestration"
+                "title": "Lab 400: Integrating with On-Prem ERP system",
+                "description": "In this Lab we are going to create an integration into an on-premesis backend EBS system using an ICS orchestration"
             }
         ]
     }
