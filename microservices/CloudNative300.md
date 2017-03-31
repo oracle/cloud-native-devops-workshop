@@ -1,6 +1,6 @@
 ![](images/300/PictureLab.png)  
 
-Update: February 10, 2017
+Update: March 31, 2017
 
 ## Introduction
 
@@ -304,7 +304,7 @@ To start this part of the lab we will want to mark the Issue as In Progress in o
 
 - Before we make our code changes lets first run the code locally.
 
-- Expand **doc_root** and select i**ndex.html**
+- Expand **doc_root** and select **index.html**
 
     ![](images/300/image060.png)  
 
