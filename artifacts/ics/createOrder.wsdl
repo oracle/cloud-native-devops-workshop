@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions targetNamespace="http://example.com/order" name="OrderService" xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:wsp="http://www.w3.org/ns/ws-policy"
+             xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+             xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://example.com/order"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+    
+  <types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://example.com/order"
+            targetNamespace="http://example.com/order" elementFormDefault="qualified">
+  <xsd:element name="createOrderRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Header">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AccountName" type="xsd:string"/>
+              <xsd:element name="Comment" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Lines" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ItemID" type="xsd:string"/>
+              <xsd:element name="Qty" type="xsd:int"/>
+              <xsd:element name="Price" type="xsd:double"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="createOrderResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="OrderNumber" type="xsd:string"/>
+        <xsd:element name="Status" type="xsd:string"/>
+        <xsd:element name="ErrorMsgs">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Message" type="xsd:string"  maxOccurs="unbounded" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+  </types>
+    
+  <message name="createOrderRequest">
+        
+    <part name="parameters" element="tns:createOrderRequest"/>
+      
+  </message>
+    
+  <message name="createOrderResponse">
+        
+    <part name="parameters" element="tns:createOrderResponse"/>
+      
+  </message>
+    
+  <portType name="createOrder">
+    <operation name="createOrder">
+      <input wsam:Action="http://example.com/orderGetCustomers/createOrderRequest" message="tns:createOrderRequest"/>
+      <output wsam:Action="http://example.com/orderGetCustomers/createOrderResponse" message="tns:createOrderResponse"/>
+    </operation>
+      
+  </portType>
+    
+  <binding name="createOrderPortBinding" type="tns:createOrder">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="createOrder">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+    
+  <service name="OrderService">
+  
+    <port name="createOrderPort" binding="tns:createOrderPortBinding">
+            
+      <soap:address location="http://localhost:7101/Application19-Model-context-root/createOrderPort"/>
+          
+    </port>
+      
+  </service>
+</definitions>
