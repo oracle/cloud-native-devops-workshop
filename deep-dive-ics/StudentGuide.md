@@ -2,9 +2,11 @@
 
 Update: March 30, 2017
 
-# Installing 3rd Party Testing Tools
+# ICS Development Workshop Prerequisites
 
-## SoapUI
+## 3rd Party Testing Tools
+
+### SoapUI
 
 We will use SoapUI to test an ICS Soap Web Service integration.
 
@@ -28,7 +30,7 @@ To install SoapUI for testing the ICS integration follow these instructions:
 
 ---
 
-# Supported Browsers
+## Supported Browsers
 
 Most modern browsers including Chrome, Safari, Internet Explorer, Edge and Firefox are supported.
 
