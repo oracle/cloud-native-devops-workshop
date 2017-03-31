@@ -3,20 +3,20 @@
 This Hands on Lab (HOL) will take the participant through the basics of containerization, explore its advantages and introduce Docker technology with entry level exercises.  The topics to be covered in this 2 hour session are:
 
 1.  [Intro to Basic Container Concepts](Participant-Guide.md#intro-to-basic-container-concepts)
-2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
-3.  [Hello Helloworld](../master/Participant-Guide.md#hello-helloworld)
-5.  [Create a Dockerfile and Docker Image](../master/Participant-Guide.md#create-a-dockerfile-and-docker-image)
-6.  [Push an Image to your Docker Hub Account](../master/Participant-Guide.md#push-an-image-to-your-docker-hub-account)
-7.  [Install Docker Compose](../master/Participant-Guide.md#install-docker-compose)
-8.  [Create Wordpress "stack"](../master/Participant-Guide.md#create-a-wordpress-stack)
-9.  [Basics of Persistent storage](../master/Participant-Guide.md#basics-of-persistent-storage)
-10. [Use Github and Docker Hub together to build an Image and Run the Container](../master/Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container)
-11. [Demo of Oracle Container Cloud Service Showing Participant's Containers](../master/Participant-Guide.md#demo-of-oracle-container-cloud-service-showing-participants-containers)
+2.  [Verify Docker Engine Hands on Lab Environment](Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
+3.  [Hello Helloworld](Participant-Guide.md#hello-helloworld)
+5.  [Create a Dockerfile and Docker Image](Participant-Guide.md#create-a-dockerfile-and-docker-image)
+6.  [Push an Image to your Docker Hub Account](Participant-Guide.md#push-an-image-to-your-docker-hub-account)
+7.  [Install Docker Compose](Participant-Guide.md#install-docker-compose)
+8.  [Create Wordpress "stack"](Participant-Guide.md#create-a-wordpress-stack)
+9.  [Basics of Persistent storage](Participant-Guide.md#basics-of-persistent-storage)
+10. [Use Github and Docker Hub together to build an Image and Run the Container](Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container)
+11. [Demo of Oracle Container Cloud Service Showing Participant's Containers](Participant-Guide.md#demo-of-oracle-container-cloud-service-showing-participants-containers)
 
 
 ### Requirements to Complete this HOL:
 
-* A pre-configured Docker-Engine environment - See [Prerequisites](../master/Prerequisites.md)
+* A pre-configured Docker-Engine environment - See [Prerequisites](Prerequisites.md)
 
 * Access to the Internet
 
@@ -97,9 +97,9 @@ All of this is part of a transformation of technologies along a number of fronts
 
 ## Verify Docker Engine Hands on Lab Environment
 
-In this first section you are going to verify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
+In this first section you are going to verify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
-> *Note - if you are using one of the Worker Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](../master/supplemental/Access-OCCS-VM-SSH.md)
+> *Note - if you are using one of the Worker Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](supplemental/Access-OCCS-VM-SSH.md)
 
 **Optional** - for convenience, run as root, so that you do not have to preface everything with sudo (not applicable if you are running Docker for Windows):
 
