@@ -6,47 +6,53 @@ Update: March 23, 2017
 
 ---
 
-## Introduction
-
-This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
-
-In this lab, you will acquire a good overview of the Oracle Integration Cloud Service (ICS), then next generation integration platform. You will modify an integration to Oracle EBS. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service.
-
-Please direct comments to: John VanSant (john.vansant@oracle.com)
-
 ## Objectives
 
 - Part 1: Explore Integration Cloud Service (ICS)
 - Part 2: Use ICS to modify an integration
-- Part 3: Modify Process Cloud Service (PCS) process from Lab 200 to call new ICS integration
+- Part 3: Modify PCS Process from Lab 200 to Call New ICS Integration
 
 ## Required Artifacts
 
 - The following lab and an Oracle Public Cloud account that will be supplied by your instructor.
 
+## Introduction
+
+This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
+
+In this lab, you will acquire a good overview of the Oracle Integration Cloud Service (ICS), the next generation integration platform. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service. You will then modify an integration to Oracle EBS, then update a PCS application to call to the updated ICS endpoint.
+
 # Part 1: Explore Integration Cloud Service
 
 In this first part of the lab, we will explore the main parts of Integration Cloud Service (ICS).  We’ll look at the following:
-1.	Cloud Services Dashboard
+1.	Oracle Cloud Services Dashboard
 2.	ICS Designer User Interface
 3.	ICS Monitoring User Interface
+
+The ICS integration that we'll be working with is shown in the following picture:
+
+![](images/300/image000.png)
+
+Here is a description of what is happening with this integration:
+
+Process Cloud Service (PCS) will be used to call the exposed Web Service endpoint of the ICS integration called *Create EBS Order*.  This integration has 3 connections.  The incoming message is received by the incoming *Create Order* Soap Connection.  The *Create EBS Order* orchestration makes 2 queries into the EBS database using the *eBusiness Suite DB APPS* connection to get details needed to create an order.  The orchestration finally uses the *eBusiness Suite OPERATIONS* EBS Adapter connection for creating the order in EBS.  After the order is created in EBS, the Order Number is returned to PCS.
 
 Let’s start by logging into the Oracle Cloud account and explore the Services Dashboard
 
 ## 1.1: Explore the Oracle Cloud Dashboard
 
-### **1.1.1**: Login to your Oracle Cloud account
+### **1.1.1**: Login to your Oracle Cloud Account
 
 ---
 
 - From your browser (Firefox or Chrome recommended) go to the following URL:
-https://cloud.oracle.com
+<https://cloud.oracle.com>
 - Click Sign In in the upper right hand corner of the browser
 - **IMPORTANT** - Under My Services, change Data Center to `US Commercial 2 (us2)` and click on Sign In to My Services
 
     ![](images/300/image001.png)
 
-- If your identity domain is not already set, enter it and click **Go** (do not check to box to save it because this will set a cookie in the browser that needs to be cleared if you need to change identity domains later)  
+- If your identity domain is not already set, enter it and click **Go**
 
     **NOTE:** the **Identity Domain** values will be given to you from your instructor.
 
@@ -68,17 +74,17 @@ https://cloud.oracle.com
 
 ---
 
-The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**.
+The Cloud Dashboard is the launching pad for all the cloud services in your account. You have access to the following Cloud service: **Oracle Integration Cloud Service, Oracle Process Cloud Service, Oracle Database Cloud Service, Oracle Database Backup Service, Oracle Storage Cloud Service, Oracle Compute Cloud Service, Oracle Java Cloud Service and Oracle SOA Cloud Service**. The dashboard can be customized by selecting the `Customize Dashboard` button.
 
 - To look at the details for the Integration Cloud Service (ICS) instance, first click on the `hamburger` icon, then click on the `View Details` link.
 
    ![](images/300/image004a.png)
 
-- The `Service Details` pages will show various important details about the ICS service instances in this identity domain such as: uptime, service start and end dates, and your Oracle Cloud subscription ID.
+- The `Service Details` pages will show various important details about the ICS service instances in this identity domain such as service start date, end date, and your Oracle Cloud subscription ID.
 
    ![](images/300/image004b.png)
 
-- Access to `Business Metrics` can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
+- Access to `Billing Metrics`, `Resource Quotas`, etc.  can be found in the left-hand navigation.  Select the `Business Metrics` tab as shown below:
 
    ![](images/300/image004c.png)
 
@@ -86,7 +92,7 @@ The Cloud Dashboard is the launching pad for all the cloud services in your acco
 
    ![](images/300/image004d.png)
 
-- After getting familiar with the Business Metrics, select the `Open Service Console` button to go to the ICS Service Console.  
+- After getting familiar with the Business Metrics, go back to the “Overview” tab and select the `Open Service Console` link to go to the ICS Service Console.  
 
     ![](images/300/image005.png)  
 

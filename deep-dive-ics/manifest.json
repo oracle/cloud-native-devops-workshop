@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Deep Dive ICS",
+        "title": "ICS Development Workshop",
         "description": "A hands-on event to explore Oracle’s Integration Cloud Servicce.",
         "labs": [{
                 "number": "10",
@@ -11,26 +11,26 @@
             {
                 "number": "100",
                 "filename": "ics100.md",
-                "title": "Lab 100: Getting Started",
-                "description": "This lab will expose you to the navigation in ICS"
+                "title": "Lab 100: Exploring ICS",
+                "description": "This lab will expose you to the functionality in ICS."
             },
             {
                 "number": "200",
                 "filename": "ics200.md",
-                "title": "Lab 200: Mappings",
-                "description": "In this Lab we are going to build a 'hello world' echo service. "
+                "title": "Lab 200: Basic ICS Development",
+                "description": "In this Lab we are going to build a 'hello world' echo service."
             },
             {
                 "number": "300",
                 "filename": "ics300.md",
-                "title": "Lab 300: Working with Adapters",
-                "description": "In this Lab we are going to explore the integration into backend systems"
+                "title": "Lab 300: Database Integration",
+                "description": "In this Lab we are going to develop an integration into an on-premesis backend database system using an ICS orchestration."
             },
             {
                 "number": "400",
                 "filename": "ics400.md",
-                "title": "Lab 400: Orchestrations",
-                "description": "This lab will do an integration orchestration"
+                "title": "Lab 400: EBS Integration",
+                "description": "In this Lab we are going to create an integration into an on-premesis backend EBS system using an ICS orchestration."
             }
         ]
     }
