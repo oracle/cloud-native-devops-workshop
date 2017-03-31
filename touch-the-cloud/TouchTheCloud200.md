@@ -79,10 +79,6 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 - The  PCS Landing page gives you a quick glance of the functionality available to you (or in this case Lisa Jones).
 
->![](images/200/workspace_home-_-admin.png)
-
->The above picture gives an explanation of a page, for user with all privileges granted and shows the different roles associated with each activity.  
-
 **2.1** From Cloud UI dashboard click on the **Service Instance URL** link.
 
 Since Lisa only has access defined as a End-User, she will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
