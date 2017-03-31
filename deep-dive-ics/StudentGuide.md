@@ -4,9 +4,9 @@ Update: March 30, 2017
 
 # ICS Development Workshop Prerequisites
 
-## 3rd Party Testing Tools
+## Required 3rd Party Testing Tools
 
-### SoapUI
+### Install SoapUI
 
 We will use SoapUI to test an ICS Soap Web Service integration.
 
