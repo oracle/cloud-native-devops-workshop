@@ -668,145 +668,129 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
 
    ![](images/300/image068.png)
 
-- Open up the *Quote to Order Process* process by clicking on it:
+**3.1.2** Open up the *Quote to Order Process* process by clicking on it:
 
    ![](images/300/image069.png)
 
-- Ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
+**3.1.3** Ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
 
    ![](images/300/image070.png)
 
-- Pan over to the *Capture Order* service call, click on that activity and then select the *Open Properties*:
+**3.1.4** Pan over to the *Capture Order* service call, click on that activity and then select the *Open Properties*:
 
    ![](images/300/image071.png)
 
-- Edit the service call by clicking on the small pencil icon on the right of the *Service Call* dropbox.
+**3.1.5** Edit the service call by clicking on the small pencil icon on the right of the *Service Call* dropbox.
 
    ![](images/300/image072.png)
 
-- Select the `Plus` (`+`) icon to the right of the ICS integration endpoint:
+**3.1.6** Select the `Plus` (`+`) icon to the right of the ICS integration endpoint:
 
    ![](images/300/image073.png)
 
-- Now select the new ICS integration that was created in the previous part of this lab, then select the *Next* button.  In the screenshot below, the integration for the *demo.user03* user is shown:
+**3.1.7** Now select the new ICS integration that was created in the previous part of this lab, then select the *Next* button.  In the screenshot below, the integration for the *demo.user03* user is shown:
 
    ![](images/300/image074.png)
 
-- In the Advanced service configuration dialog, select *APP Id – Username Token* for the Security.
+**3.1.8** In the Advanced service configuration dialog, select *APP Id – Username Token* for the Security.
 
-- Select *[New Key]* for the Keystore Credential and give it a name that matches the user you have been given for the lab… something like *demo.user03.key*
+**3.1.9** Select *[New Key]* for the Keystore Credential and give it a name that matches the user you have been given for the lab… something like *demo.user03.key*
 
-- Input the username/password given to you for the workshop.  In the screenshot below, the user *demo.user03* is shown.
+**3.1.10** Input the username/password given to you for the workshop.  In the screenshot below, the user *demo.user03* is shown.
 
-- After inputting all this info, click on the *Create* button:
+**3.1.11** After inputting all this info, click on the *Create* button:
 
    ![](images/300/image075.png)
 
-- Select the *OK* button back in the *Configuration* dialog:
+**3.1.12** Select the *OK* button back in the *Configuration* dialog:
 
    ![](images/300/image076.png)
 
-- Collapse the properties window at the bottom of the PCS Composer by selecting the small down-arrow at the right hand side of the properties section:
+**3.1.13** Collapse the properties window at the bottom of the PCS Composer by selecting the small down-arrow at the right hand side of the properties section:
 
    ![](images/300/image077.png)
 
-- Now we need to map some data to the new ICS *Comment* field.
-
-- Click on the *Capture Order* service activity and then select *Open Data Association*
-
-   ![](images/300/image078.png)
-
-- Drag-and-Drop the *comment* field from the new service endpoint’s *Capture Order* input to the empty textbox at the bottom of the *Capture Order* section of the *Transformations* Data Association.
-
-   ![](images/300/image079.png)
-
-- For now, enter the hard-coded text *Comment from PCS* in the corresponding empty textbox at the bottom of the *Quote To Order Process* section of the *Transformations* Data Association.
-
-- After that data association has been made, select the *Apply* button in the upper-right of the *Data Association* window.
-
-   ![](images/300/image080.png)
-
-- Save the changes made to the PCS process by clicking on the diskette icon in the middle of the top blue header bar:
+**3.1.14** Save the changes made to the PCS process by clicking on the diskette icon in the middle of the top blue header bar:
 
    ![](images/300/image081.png)
 
-- You are now ready to publish your changes
+You are now ready to publish and deploy your changes
 
 ### **3.2:**	Deploy the Updated PCS Process
 
 ---
 
-- The first step in deploying is to publish the process.
+**3.2.1** The first step in deploying is to publish the process.
 
-- Select the little *globe + arrow* icon in the middle of the top blue header bar:
+**3.2.2** Select the little *globe + arrow* icon in the middle of the top blue header bar:
 
    ![](images/300/image082.png)
 
-- Select the *Make Snapshot* checkbox and enter the comment *Added New ICS Service Endpoint*.  Add the same comment to the free-form textarea at the bottom of the *Publish Application* dialog.
+**3.2.3** Select the *Make Snapshot* checkbox and enter the comment *Added New ICS Service Endpoint*.  Add the same comment to the free-form textarea at the bottom of the *Publish Application* dialog.
 
-- After making these changes, select the *Publish* button on the bottom of the dialog:
+**3.2.4** After making these changes, select the *Publish* button on the bottom of the dialog:
 
    ![](images/300/image083.png)
 
-- After the application has been published, it needs to be deployed.
+**3.2.5** After the application has been published, it needs to be deployed.
 
-- Select the *Management* link in the top right of the PCS Composer screen:
+**3.2.6** Select the *Management* link in the top right of the PCS Composer screen:
 
    ![](images/300/image084.png)
 
-- In the upper left side of the PCS Management window, click on the `hamburger` icon then select the *Deploy* menu item:
+**3.2.7** In the upper left side of the PCS Management window, click on the `hamburger` icon then select the *Deploy* menu item:
 
    ![](images/300/image085.png)
 
-- Select your *Touch the Cloud* Space in the *Select Space* dropdown
+**3.2.8** Select your *Touch the Cloud* Space in the *Select Space* dropdown
 
-- Select your PCS application *Quote to Order – UserXX* in the *Select Application* dropdown (where `XX` is your workshop user number, ie: 01, 02, etc.)
+**3.2.9** Select your PCS application *Quote to Order – UserXX* in the *Select Application* dropdown (where `XX` is your workshop user number, ie: 01, 02, etc.)
 
-- Select your snapshot name in the *Select a snapshot* dropdown. In the example below, the snapshot was given the name *Added New ICS Service Endpoint*
+**3.2.10** Select your snapshot name in the *Select a snapshot* dropdown. In the example below, the snapshot was given the name *Added New ICS Service Endpoint*
 
-- After you have configured the application in the *Deploy Application to My Server* dialog, select the *Customize* button.
+**3.2.11** After you have configured the application in the *Deploy Application to My Server* dialog, select the *Customize* button.
 
    ![](images/300/image086.png)
 
-- Select the *Use design-time credentials and certificates* checkbox in the upper right of the *Customize* page of the wizard.
+**3.2.12** Select the *Use design-time credentials and certificates* checkbox in the upper right of the *Customize* page of the wizard.
 
-- In the *Keystore Credential* dropdown box, select the security key created during design time.  In the example shown below, we created the key called *demo.user03.key*.
+**3.2.13** In the *Keystore Credential* dropdown box, select the security key created during design time.  In the example shown below, we created the key called *demo.user03.key*.
 
-- The username/password will automatically be filled in based on the key which was already created during design time.
+**3.2.14** The username/password will automatically be filled in based on the key which was already created during design time.
 
-- After customizing the new service call, select the *Validate* button:
+**3.2.15** After customizing the new service call, select the *Validate* button:
 
    ![](images/300/image087.png)
 
-- After the validation is shown to be successful, select the *Options* button:
+**3.2.16** After the validation is shown to be successful, select the *Options* button:
 
    ![](images/300/image088.png)
 
-- We are going to create a new process revision because of this fairly-major change… so enter the id *2.0* in the *Revision id* textbox.
+**3.2.17** Enter the id *1.0* in the *Revision id* textbox (we'll be overwriting the version currently deployed because we don't need 2 out there)
 
-- Select the *Override* checkbox
+**3.2.18** Select the *Override* checkbox
 
-- Select the *Force default* checkbox
+**3.2.19** Select the *Force default* checkbox
 
-- Finally, select the *Deploy* button
+**3.2.20** Finally, select the *Deploy* button
 
    ![](images/300/image089.png)
 
-- The *Deploying* modal-dialog will pop-up and spin while this new revision is deployed.  This could take a minute or two depending on how many other participants are deploying at the same time
+**3.2.21** The *Deploying* modal-dialog will pop-up and spin while this new revision is deployed.  This could take a minute or two depending on how many other participants are deploying at the same time
 
    ![](images/300/image090.png)
 
-- Select the *Finish* button once the application deployment is complete
+**3.2.22** Select the *Finish* button once the application deployment is complete
 
    ![](images/300/image091.png)
 
-- The updated PCS application is now ready to test
+The updated PCS application is now ready to test
 
-### **3.3:**	Test the Updated PCS Process
+### **3.3:**	Test the End-to-End Application with the Updated PCS Process
 
 ---
 
-- Select the *PCS Home* icon on the upper right of the PCS Management window
+**3.3.1** Select the *PCS Home* icon on the upper right of the PCS Management window
 
    ![](images/300/image092.png)
 
