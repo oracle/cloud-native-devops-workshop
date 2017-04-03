@@ -721,7 +721,7 @@ https://github.com/login
 
 In your browser, navigate to this GitHub repository: 
 
-https://github.com/oracle/cloud-native-devops-workshop/docker001 
+https://github.com/oracle/cloud-native-devops-workshop/tree/master/containers/docker001
 
 
 Select the "Fork" button in for the particular GitHub repository:
@@ -777,9 +777,9 @@ Select Create Auto-build:
 
 ***
 
-Select the "docker001" repository:
+Select the "cloud-native-devops-workshop" repository:
 
-<img src=images/github-dockerhub_4.jpg />
+<img src=images/github-dockerhub-21.jpg />
 
 ***
 
@@ -791,15 +791,15 @@ Make the repository name "hello-earth" and add a Short Description and press Sav
 
 ***
 
-Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and press the "Save Changes" button: 
+Within the Build Settings tab, enter "/containers/docker001/lab1" for the Dockerfile Location and press the "Save Changes" button: 
 
-<img src=images/2017-03-15_11-20-24-2.jpg />
+<img src=images/github-dockerhub-20.jpg />
 
 ***
 
 Back in your GitHub account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your GitHub username in the below URL.
 
-https://github.com/*username*/docker001/tree/master/lab1
+https://github.com/*username*/cloud-native-devops-workshop/tree/master/containers/docker001/lab1
 
 On the GitHub page, click on the link for "Index.html":
 
