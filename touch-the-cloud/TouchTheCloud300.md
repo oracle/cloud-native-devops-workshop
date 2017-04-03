@@ -855,19 +855,19 @@ The updated PCS application is now ready to test
 
 ---
 
-- Login to ICS and visit the *Monitoring* window
+**3.4.1** Login to ICS and visit the *Monitoring* window
 
    ![](images/300/image103.png)
 
-- Select “Tracking” from the left-hand navigation
+**3.4.2** Select “Tracking” from the left-hand navigation
 
    ![](images/300/image104.png)
 
-- Select your ICS integration name from the tracking list – this will probably be the first one in the list
+**3.4.3** Select your ICS integration name from the tracking list – this will probably be the first one in the list
 
    ![](images/300/image105.png)
 
-- Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
+**3.4.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
 
    ![](images/300/image106.png)
 
@@ -875,20 +875,20 @@ The updated PCS application is now ready to test
 
 ---
 
-- Login to EBS using the endpoint and credentials provided to you by the workshop organizer.  You will use the user *operations*.
+**3.5.1** Login to EBS using the endpoint and credentials provided to you by the workshop organizer.  You will use the user *operations*.
 
 - *NOTE:* For the EBS instance used in this workshop, the Oracle Single Sign-On system is used to regulate access.  Unless individual users are explicitly added to have access to the EBS system, they will not be able to access the following EBS login page.  If you can't access the login page with your Oracle SSO login, then you can look at the following screenshots to see how you would be able to see your Order in an EBS R12.2 system.
 
    ![](images/300/image107.png)
 
-- Select the EBS Responsibility *Order Management, HTML User Interface*:
+**3.5.2** Select the EBS Responsibility *Order Management, HTML User Interface*:
 
    ![](images/300/image108.png)
 
-- Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
+**3.5.3** Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
 
    ![](images/300/image109.png)
 
-- You now have used Oracle Integration Cloud Service to explore and modify an integration to Oracle EBS. 
+You now have used Oracle Integration Cloud Service to explore and modify an integration to Oracle EBS. 
 
-- This Lab is now completed.
+This Lab is now completed.
