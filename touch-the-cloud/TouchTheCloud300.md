@@ -662,7 +662,7 @@ Using the PCS Process from the previous lab we’ll now go through the steps nec
 
 ---
 
-- First, get back into the PCS Composer and open up the PCS process you created in Lab 200 by clicking on the PCS Application name.
+**3.1.1** First, get back into the PCS Composer and open up the PCS process you created in Lab 200 by clicking on the PCS Application name.
 
 - In the screenshot below, we are using the process created with user `demo.user03`:
 
