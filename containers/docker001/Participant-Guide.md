@@ -777,7 +777,7 @@ Select Create Auto-build:
 
 ***
 
-Select the "docker001" repository:
+Select the "cloud-native-devops-workshop" repository:
 
 <img src=images/github-dockerhub_4.jpg />
 
