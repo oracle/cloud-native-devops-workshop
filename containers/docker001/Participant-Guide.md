@@ -791,7 +791,7 @@ Make the repository name "hello-earth" and add a Short Description and press Sav
 
 ***
 
-Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and press the "Save Changes" button: 
+Within the Build Settings tab, enter "/containers/docker001/lab1" for the Dockerfile Location and press the "Save Changes" button: 
 
 <img src=images/2017-03-15_11-20-24-2.jpg />
 
