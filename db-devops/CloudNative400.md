@@ -1,4 +1,4 @@
-![](images/300_orig/PictureLab.png)  
+![](images/300_orig/PictureLab400.png)  
 
 Update: February 2, 2017
 
