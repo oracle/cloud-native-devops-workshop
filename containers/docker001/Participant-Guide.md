@@ -721,7 +721,7 @@ https://github.com/login
 
 In your browser, navigate to this GitHub repository: 
 
-https://github.com/oracle/cloud-native-devops-workshop/docker001 
+https://github.com/oracle/cloud-native-devops-workshop/tree/master/containers/docker001
 
 
 Select the "Fork" button in for the particular GitHub repository:
