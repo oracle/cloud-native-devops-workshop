@@ -766,7 +766,7 @@ You are now ready to publish and deploy your changes
 
    ![](images/300/image088.png)
 
-**3.2.17** Enter the id *1.0* in the *Revision id* textbox (we'll be overwriting the version currently deployed because we don't need 2 out there)
+**3.2.17** Enter the id *1.0* in the *Revision id* textbox (we'll be overwriting the version currently deployed because we don't need two out there)
 
 **3.2.18** Select the *Override* checkbox
 
