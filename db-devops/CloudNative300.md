@@ -1,4 +1,5 @@
-![](images/200/Picture-lab.png)  
+![](images/200/PictureLab300.png)  
+
 Update: January 28, 2017
 
 # Introduction

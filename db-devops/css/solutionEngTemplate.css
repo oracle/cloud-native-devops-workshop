@@ -155,10 +155,14 @@ h2:not(.infra),
   margin-left: 15px;
 }
 
+h3.first-in-section {
+    margin-top: 50px;
+}
+
 h3.first-in-section::after {
     content: '+ Expand All Steps';
     position: absolute;
-    top: -35px;
+    top: -45px;
     left: -9px;
     border: 1px solid darkgrey;
 /*    border-radius: 25px;*/
