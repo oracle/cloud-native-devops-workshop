@@ -25,7 +25,7 @@
                 "number": "200",
                 "filename": "CloudNative200.md",
                 "title": "Lab 200: Agile Database Development",
-                "description": "Access Developer Cloud Service, import external GIT Repository, create test and development MySQL databases, import project into Eclipse, and update the database using Flyway to version chagnes."
+                "description": "Access Developer Cloud Service, import external GIT Repository, create test and development MySQL databases, import project into Eclipse, and update the database using Flyway to version changes."
             },
             {
                 "number": "300",
