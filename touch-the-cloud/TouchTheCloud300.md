@@ -786,106 +786,170 @@ You are now ready to publish and deploy your changes
 
 The updated PCS application is now ready to test
 
-### **3.3:**	Test the End-to-End Application with the Updated PCS Process
+### **3.3:**	Test the Updated End-to-End Application Using MAX Mobile Application
 
 ---
 
-**3.3.1** Select the *PCS Home* icon on the upper right of the PCS Management window
+**3.3.1** Login to the Mobile Cloud Service (MCS) Console as described in Lab 100 using your assigned username (ie: demo.userXX).
+
+**3.3.2** Once you have logged into MCS, click on the **hamburger menu** in the upper left of the screen.
 
    ![](images/300/image092.png)
 
-- If your PCS user (in this example, *demo.user03*) was already added in the roles for this PCS application in the PCS lab, you should see the *Submit Quote (v2.0)* icon on the left hand side of the PCS workspace home.
+**3.3.3** Select the **Applications** link in the left-hand navigation - this will bring up a bunch of colorful icons in the main window for various MCS capabilities.
 
-- If you don’t see the *Submit Quote (v2.0)* icon on the left hand navigation of the PCS workspace home, you’ll either need to add your user to the roles for this application or use the other PCS users such as `lisa.jones`, and `bala.gupta` to test out the new PCS process. This is documented in Lab 200, `Process Modeling and Configuration` section -> `Step 9: Role Assignment` section.
+![](images/300/image093.png)
 
-   ![](images/300/image093.png)
+**3.3.4** Click on the **Mobile Apps** icon to launch the MAX application editor
 
-- The form created for the *Submit Quote* will be displayed.  Only a couple fields are necessary for testing.
-  * Order Lines:
-  * Item No = *2155*
-  * Qty = *1*
-  * UOM = *each*
-  * Price = *$6000.00*
-  * Account Name = *Imaging Innovations, Inc.*
-  * After filling out the form, select the *Submit* button:
+![](images/300/image094.png)
 
-   ![](images/300/image094.png)
+**3.3.5** Select the mobile application you developed in Lab 100, labeled with your assigned user number.  In the screenshot below, `TTC_APP_03` is selected because the user was assigned **demo.user03** as their username.
 
-- A dialog will pop-up showing that the application has been started successfully with the input from the form you just filled out:
+![](images/300/image095.png)
 
-   ![](images/300/image095.png)
+**3.3.6** The mobile application will be displayed with a map of the "Customers".
 
-- Select the *Tasks* button on the top of the PCS Workspace:
+**3.3.7** Select the **Test** button in the upper right to launch the mobile phone simulator.
 
-   ![](images/300/image096.png)
+![](images/300/image096.png)
 
-- Since this order was greater than $5000, it will have been routed to the *Sales Director* role in the PCS process.
+**3.3.8** Login with the test user's credentials.  Remember that this mobile application is for a sales rep that is checking for his list of customers to visit in his area from whom he can take quotes for computer equipment orders.
 
-- In the Tasks window, you should see a new PCS process for the *Sales Director*
+- **Username**: `maxtester`
+- **Password**: `W3lcome1*`
+- **Save test user**: check the box so you will only have to login once for the simulator per browser session
 
-- Select the arrow at the right of the PCS instance to see the details of the form while deciding whether to approve this quote or not.
+**3.3.9** Click on the **Sign In** button
 
-   ![](images/300/image097.png)
+![](images/300/image097.png)
 
-- Review the quote as shown in the form.  Since this seems to be reasonable, select the *Approve* button on the top of the form
+**3.3.10** Click on one of the orange dots representing a customer visit that the sales rep will be making.
 
-   ![](images/300/image098.png)
+![](images/300/image098.png)
 
-- This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
+**3.3.11** In the screenshot below, the customer selected is _Bigmart_.  You can see their address and the main contact's information.
 
-- Select the *Tracking* icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
+**3.3.12** After the sales rep has had a discussion with his contact, Paul Pub, he needs to order them one `Sentinel Standard Desktop - Rugged` because it is needed in the warehouse where conditions are rough.  
 
-   ![](images/300/image099.png)
+**3.3.13** Click on the elipses in the upper right of the mobile application to initiate creating a quote.
 
-- Select the *Completed* checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
+![](images/300/image099.png)
 
-   ![](images/300/image100.png)
+**3.3.14** Select the **Create Quote Line** menu item
 
-- Look near the top of the list for your process instance since it was just executed.
+![](images/300/image100.png)
 
-- Select the arrow at the right of the instance to see the details:
+**3.3.15** Click on the pulldown on the right side of the `ItemDescription` item and select `Sentinel Standard Desktop - Rugged` from the pulldown menu.
 
-   ![](images/300/image101.png)
+![](images/300/image101.png)
 
-- Select the chevron icon just to the right of the *History* section so you can see a graphical representation of the process history.  The green line highlights the path that the process took.
+**3.3.16** Fill in the rest of the quote line with the following information:
 
-   ![](images/300/image102.png)
+  * **Item Number** = *2155*
+  * **Price** = *6666*
+  * **Qty** = *1*
+  * **UOM** = *Each*
+
+**3.3.17** After finishing filling out the information for the quote line, select the **Save** button in the upper right of the mobile app
+
+![](images/300/image102.png)
+
+**3.3.18** Select `Tab 2` in the **Customer Summary** page to see the quote line just saved
+
+![](images/300/image111.png)
+
+**3.3.19** You can now submit the quote.  Select the elipses in the upper right of the mobile app.
+
+**3.3.20** Select `Submit Quote` from the menu list.
+
+**3.3.21** Wait for 5-10 seconds while the mobile application creates a process instance in PCS and initiates the approval workflow with the quote just created on the mobile application.
+
+Now we will check in PCS to ensure that the process workflow was initiated.
 	
-### **3.4:**	Ensure PCS called the new ICS Integration
+### **3.4:**	Ensure the Mobile Application created the PCS Workflow Instance
 
 ---
 
-**3.4.1** Login to ICS and visit the *Monitoring* window
+**3.4.1** Navigate back to the PCS Composer window from section 3.2 of this lab
+
+**3.4.2** Select the `PCS Home` icon on the upper right of the PCS Management window
+
+![](images/300/image113.png)
+
+**3.4.3** Select the Tasks button on the top of the PCS Workspace
+
+![](images/300/image114.png)
+
+**3.4.4** Since this order was more than $5000, it will have been routed to the Sales Director role in the PCS process.
+
+**3.4.5** In the Tasks window, you should see a new PCS process for the Sales Director
+
+**3.4.6** Select the arrow at the right of the PCS instance to see the details of the form while deciding whether to approve this quote or not.
+
+![](images/300/image115.png)
+
+**3.4.7** Review the quote as shown in the form. Since this seems to be reasonable, select the Approve button on the top of the form
+
+![](images/300/image116.png)
+
+**3.4.8** This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
+
+**3.4.9** Select the **Tracking** icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
+
+![](images/300/image117.png)
+
+**3.4.10** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
+
+![](images/300/image118.png)
+
+**3.4.11** Look near the top of the list for your process instance since it was just executed.
+
+**3.4.12** Select the arrow at the right of the instance to see the details:
+
+![](images/300/image119.png)
+
+**3.4.13** Select the chevron icon just to the right of the History section so you can see a graphical representation of the process history. The green line highlights the path that the process took.
+
+![](images/300/image120.png)
+
+Now we want to be sure that the callout made by PCS to ICS worked and that the payload for creating the new order was sent to EBS.
+
+### **3.5:**	Ensure that PCS called the new ICS Integration
+
+---
+
+**3.5.1** Login to ICS and visit the *Monitoring* window
 
    ![](images/300/image103.png)
 
-**3.4.2** Select “Tracking” from the left-hand navigation
+**3.5.2** Select “Tracking” from the left-hand navigation
 
    ![](images/300/image104.png)
 
-**3.4.3** Select your ICS integration name from the tracking list – this will probably be the first one in the list
+**3.5.3** Select your ICS integration name from the tracking list – this will probably be the first one in the list
 
    ![](images/300/image105.png)
 
-**3.4.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
+**3.5.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
 
    ![](images/300/image106.png)
 
-### **3.5:**	Verify the Order in EBS
+### **3.6:**	Verify the Order was Created in EBS
 
 ---
 
-**3.5.1** Login to EBS using the endpoint and credentials provided to you by the workshop organizer.  You will use the user *operations*.
+**3.6.1** Login to EBS using the endpoint and credentials provided to you by the workshop organizer.  You will use the user *operations*.
 
 - *NOTE:* For the EBS instance used in this workshop, the Oracle Single Sign-On system is used to regulate access.  Unless individual users are explicitly added to have access to the EBS system, they will not be able to access the following EBS login page.  If you can't access the login page with your Oracle SSO login, then you can look at the following screenshots to see how you would be able to see your Order in an EBS R12.2 system.
 
    ![](images/300/image107.png)
 
-**3.5.2** Select the EBS Responsibility *Order Management, HTML User Interface*:
+**3.6.2** Select the EBS Responsibility *Order Management, HTML User Interface*:
 
    ![](images/300/image108.png)
 
-**3.5.3** Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
+**3.6.3** Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
 
    ![](images/300/image109.png)
 
