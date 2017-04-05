@@ -176,8 +176,6 @@ To determine the next step in the process, you can view the diagram and determin
 
 _Sample flow where the amount was low and did not require further approval._
 
-#
-
 ## Process Modeling and Configuration
 
 In this section we are going to experience the power of designing and implementing your own processes. Oracle PCS is based on the well documented BPMN specifications and lots of training, information and books exist around BPMN. A good starting point would be to look at *Object Management Group
@@ -253,29 +251,33 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ### **4**: Editing Rules
 
-**4.1** Click on the process to open up the process model
+**4.1** Since we are going to edit this process, ensure that it is in **Edit** mode by selecting the `pencil icon` in the blue header at the top of the page
+
+![](images/200/Picture27a.png)
+
+**4.2** Click on the process to open up the process model
 
 ![](images/200/Picture28.png)
 
-**4.2** Back on the process model, click on the Approval Decision and select Open Decision
+**4.3** Back on the process model, click on the Approval Decision and select Open Decision
 
 ![](images/200/Picture33.png)
 
-**4.3** Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
+**4.4** Select the row ApprovalRule.in.limit, by clicking in the cell - the cursor will change to a right pointing arrow.
 
 ![](images/200/Picture34.png)
 
-**4.4** Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
+**4.5** Click on the Pencil Icon above table, then click on the Local Range Value Set	Pencil on the Add/Modify Page
 
 ![](images/200/Picture68.png)
 
 ![](images/200/Picture35.png)
 
-**4.5** Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
+**4.6** Let's change the value to a lower limit, 5000 and also add human understandable aliases for the rule. To edit a cell, click in the cell and apply the changes as indicated.
 
 ![](images/200/Picture36.png)
 
-**4.6** Click on Done
+**4.7** Click on Done
 
 - You will see the rules now display a more readable rules set
 
