@@ -354,7 +354,7 @@ For clarity :
 
 ![](images/200/Picture46.png)
 
-**6.9** Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
+**6.9** Drag an exclusive gateway into the model just after the **Sales Director Approval**, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
 
 ![](images/200/Picture47.png)
 
