@@ -285,23 +285,27 @@ In the next couple of steps we are going to extend the Quote to Order. To be saf
 
 ### **5**: Process Model
 
-**5.1** Next step is to add the comment. Click on the process to open up the process model, if not already open.
+**5.1** Next step is to add the comment. Go back to the **Quote to Order Process** process by selecting the tab next to the **ApprovalRule** that you just worked on.
+
+![](images/200/Picture37a.png)
+
+**5.2** Now, click on the process to open up the process model, if not already open.
 
 ![](images/200/Picture28.png)
 
-**5.2** Click on the Capture Order - the blue activity at the bottom right of the model. If nerequired, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
+**5.3** Click on the Capture Order - the blue activity at the bottom right of the model. If nerequired, you can drag the model by clicking on any open space and drag the model to the left, to see the activity.
 
 ![](images/200/Picture29.png)
 
-**5.3** Click on hamburger icon and select ***Open Data Association***
+**5.4** Click on hamburger icon and select ***Open Data Association***
 
 ![](images/200/Picture30.png) 
 
 ![](images/200/Picture31.png)
 
-**5.4** Now that we are in the Data Association page, we can assign the comment 
+**5.5** Now that we are in the Data Association page, we can assign the comment 
 
-Expand the ***Process Data***, ***CreateOrderRequest*** and also the ***header***,  elements. 
+On the source side of the mapping, expand the ***Process Data*** element.  On the target side, expand the ***CreateOrderRequest*** and also the ***header***,  elements. 
 Drag ***mcs_id*** in the first open slot in the left hand side, and drag ***comment*** next to ***mcs_id*** to complete the assignment  
 
 ![](images/200/Picture32.png)
@@ -310,7 +314,9 @@ For clarity :
 
 ![](images/200/Picture73.png)
 
-**5.5** Click **Apply**
+**5.6** Click **Apply** in the upper right of the Data Association window.
+
+![](images/200/Picture73a.png)
 
 ### **6**: Adding Approvals
 
@@ -332,9 +338,9 @@ For clarity :
 
 ![](images/200/Picture42.png)
 
-**6.5** Drag the existing connection from **Approval** to the **User Task**
+**6.5** Create a new connection from **Approval** to the **User Task**.  Create a new condition from the Approval gateway and drag it on top of the new **User task**
 
-![](images/200/Picture43.png)
+![](images/200/Picture42a.png)
 
 **6.6** Select the new activity, and change the name, by double clicking on the text **User Task**
 
@@ -344,21 +350,21 @@ For clarity :
 
 ![](images/200/Picture45.png)
 
-Fill in Form, Presentation, Action and Title
+**6.8** Fill in `Form`, `Presentation`, `Action` and `Title`
 
 ![](images/200/Picture46.png)
 
-**6.8** Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
+**6.9** Drag an exclusive gateway into the model, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
 
 ![](images/200/Picture47.png)
 
 ![](images/200/Picture48.png)
 
-**6.9** Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
+**6.10** Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
 
 ![](images/200/Picture49.png)
 
-**6.10** With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
+**6.11** With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
 
 ![](images/200/Picture50.png)
 
