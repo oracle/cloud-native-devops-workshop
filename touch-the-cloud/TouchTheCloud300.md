@@ -865,6 +865,8 @@ The updated PCS application is now ready to test
 
 **3.3.21** Wait for 5-10 seconds while the mobile application creates a process instance in PCS and initiates the approval workflow with the quote just created on the mobile application.
 
+![](images/300/image112.png)
+
 Now we will check in PCS to ensure that the process workflow was initiated.
 	
 ### **3.4:**	Ensure the Mobile Application created the PCS Workflow Instance
@@ -880,6 +882,10 @@ Now we will check in PCS to ensure that the process workflow was initiated.
 **3.4.3** Select the Tasks button on the top of the PCS Workspace
 
 ![](images/300/image114.png)
+
+**3.4.4** First, the quote needs to be approved by the "Sales Operations" role
+
+`PUT THE IMAGE HERE, etc...`
 
 **3.4.4** Since this order was more than $5000, it will have been routed to the Sales Director role in the PCS process.
 

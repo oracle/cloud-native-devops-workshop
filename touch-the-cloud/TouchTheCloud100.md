@@ -67,8 +67,9 @@ Mobile Backend Name: **TTC_MBE**
 
 In this section, you create a connector API in Oracle Mobile Cloud Service so that your mobile application can interact with an external web service. Connectors work with either SOAP or REST services to access external cloud services offered by other providers or assets, such as databases.
 Connector APIs provide a bridge between your custom APIs and the enterprise services you want to access from those APIs. Using the REST and SOAP connector types, you create connector APIs for each data source that you want to access.
-You define a connector API by entering info about the target resource, creating rules for the call parameters to "shape" the returned data so that it works well in a mobile context, and specifying security policies
-In this part of the Workshop, you create an MCS connector to support gathering data from a SOAP service. For this workshop, the sample SOAP services that you will use are exposed by an Oracle Process Cloud Service.
+You define a connector API by entering info about the target resource, creating rules for the call parameters to "shape" the returned data so that it works well in a mobile context, and specifying security policies.
+
+In this part of the Workshop, you create an MCS connector to support interacting with a SOAP service. For this workshop, the sample SOAP services that you will use are exposed by an Oracle Process Cloud Service.
 
 
 **3.1** Select **Applications** from the breadcrumb menu and then click the **Connectors** icon
@@ -105,9 +106,9 @@ Click **Create**.
 
 ![](images/100/Picture3.6.png)
 
-By default there are no policies selected in the **Security Configuration**. We will not be adding any policies in this workshop.
+By default there are no policies selected in the **Security Configuration**. For this workshop we need to add a security policy to interact with the PCS SOAP Endpoint.
 
-**3.7**	Select http\_basic\_auth\_over\_ssl\_client\_policy and clicking on “>”.
+**3.7**	Select `oracle/http_basic_auth_over_ssl_client_policy` and click on “>”.
 ![](images/100/Picture3.7.png)
 
 **3.8**	On highlighting the csf-key field, you would see a lock icon. Click on the lock icon and select **PCS_TTC**, the one provided in the access details and collaterals section 2.6. Click on **Select** button.
@@ -170,7 +171,7 @@ The coding model is based on Node.js, which is a lightweight JavaScript framewor
 
 ![](images/100/Picture4.7.png)
 
-**4.8**	Unzip the **ttcsalesorderapi.zip** file to ttcsalesorderapi folder. In the ttcsalesorderapi folder that is created locate the **package.json** file and open it in a text editor.
+**4.8**	On your desktop, unzip the **ttcsalesorderapi.zip** file to ttcsalesorderapi folder. In the ttcsalesorderapi folder that is created locate the **package.json** file and open it in a text editor.
 
 Replace **xx** in API name with the postfix of your user id (it should be 01 thru 10). In the connectors section too, modify the name and version of the connector by replacing **XX**. For example: "/mobile/connector/PCS\_TTC\_**XX**":"1.0"
 
@@ -196,6 +197,7 @@ Close the dialog window that pops up and you can see that the JavaScript you add
 ![](images/100/Picture4.11.png)
 
 Let’s test the MCS API we just created.
+
 **4.12**	With the implementation selected, click the **Test** button
 
 ![](images/100/Picture4.12.png)
@@ -266,7 +268,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.9.png)
 
-**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button. Click next.
+**5.10**	Click on **Add Data** from the **Data** section. This opens the page **Add Data to Map Component**. Then, select **I want to use an Address** radio button. Click **Next >**.
 
 ![](images/100/Picture5.10.png)
 
@@ -286,7 +288,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.14.png)
 
-**5.15**	Once complete, preview should look like this. You can **add a detail screen** by clicking on Add a Detail Screen on the right panel.
+**5.15**	Once complete, preview should look like this. We will now add a detail screen by clicking on **Add a Detail Screen** on the right panel.
 
 ![](images/100/Picture5.15.png)
 
@@ -350,7 +352,7 @@ On the left are a series of components you may drag and drop onto your pages. In
 
 ![](images/100/Picture5.30.png)
 
-**5.31**	In **Configure Query Parameters** Tab, click on **Parent Screen**, and set the **customerNumber parameter to the Parent Screen's id by dragging and dropping it. Then click Finish.
+**5.31**	In **Configure Query Parameters** Tab, click on **Parent Screen**, and set the **customerNumber** parameter to the Parent Screen's id by dragging and dropping it. Then click Finish.
 
 ![](images/100/Picture5.31.png)
 
