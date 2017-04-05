@@ -330,7 +330,7 @@ For clarity :
 
 ![](images/200/Picture40.png)
 
-**6.3** Click on the plus sign next to Role to add Sales Director
+**6.3** Click on the plus sign next to Role to add `Sales Director`
 
 ![](images/200/Picture41.png)
 
@@ -342,15 +342,35 @@ For clarity :
 
 ![](images/200/Picture42a.png)
 
-**6.6** Select the new activity, and change the name, by double clicking on the text **User Task**
+**6.6** With the new connection highlighted, edit the properties by clicking on the little pencil icon
+
+![](images/200/Picture42b.png)
+
+**6.7** Enter the condition `approvalRequired and quoteTotal > 10000` then select the **Validate** button to ensure it was copied correctly.
+
+**6.8** After validating the condition, select the `OK` button to save the condition
+
+![](images/200/Picture42c.png)
+
+**6.9** When the quote total is between $5000 and $10000 we still want the Sales Manager to approve the order.  In order to implement this behavior, we only have to make a slight adjustment to the conditional branch to the Sales Manager.  Click on the line between **Approval** and **Approve Order** then select the pencil icon so we can modify the condition.
+
+![](images/200/Picture42d.png)
+
+**6.10** Modify the condition so that it is `approvalRequired and quoteTotal <= 10000` then select the **Validate** button to ensure it was copied correctly.
+
+**6.11** After validating the condition, select the `OK` button to save the condition
+
+![](images/200/Picture42e.png)
+
+**6.12** Next, select the new activity, and change the name, by double clicking on the text **User Task**
 
 ![](images/200/Picture44.png)
 
-**6.7** Next we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
+**6.13** Now we have to supply the properties for the **Sales Director Approval** task, as supplied in the screenshot below
 
 ![](images/200/Picture45.png)
 
-**6.8** Fill in `Form`, `Presentation`, `Action` and `Title`
+**6.14** Fill in `Form`, `Presentation`, `Action` and `Title`
 
 ![](images/200/Picture46.png)
 
