@@ -352,7 +352,7 @@ For clarity :
 
 ![](images/200/Picture42c.png)
 
-**6.9** When the quote total is between $5000 and $10000 we still want the Sales Manager to approve the order.  In order to implement this behavior, we only have to make a slight adjustment to the conditional branch to the Sales Manager.  Click on the line between **Approval** and **Approve Order** then select the pencil icon so we can modify the condition.
+**6.9** When the quote total is between $5000 and $10000 we still want the Sales Manager to approve the order.  In order to implement this behavior, we only have to make a slight adjustment to the conditional branch to the Sales Manager's approval **Approve Order**.  Click on the line between **Approval** and **Approve Order** then select the pencil icon so we can modify the condition.
 
 ![](images/200/Picture42d.png)
 
@@ -362,7 +362,7 @@ For clarity :
 
 ![](images/200/Picture42e.png)
 
-**6.12** Next, select the new activity, and change the name, by double clicking on the text **User Task**
+**6.12** Next, select the new activity in the **Sales Manager** swim lane and change the name by double clicking on the text **User Task**
 
 ![](images/200/Picture44.png)
 
@@ -370,21 +370,35 @@ For clarity :
 
 ![](images/200/Picture45.png)
 
-**6.14** Fill in `Form`, `Presentation`, `Action` and `Title`
+**6.14** Fill in `Form`, `Presentation`, and `Action` as shown in the picture below.
+
+In order to set the `Form`, select the magnifying glass icon, then select the already existing _WebForm_
+
+Note that the `Presentation` will probably already be set to _Main_ and that the `Action` will probably already be set to _APPROVE,REJECT_
+
+**6.15** For the `Title` property, select the pulldown just to the right of the textbox and select `Expression Editor`
 
 ![](images/200/Picture46.png)
 
-**6.9** Drag an exclusive gateway into the model just after the **Sales Director Approval**, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
+**6.16** In the textarea for the expression, enter `WebForm.mcs_id + " - Sales Director Approval"`
+
+**6.17** After entering the expression, select the **Validate** button to ensure it was copied correctly.
+
+**6.18** After validating the condition, select the `OK` button to save the condition
+
+![](images/200/Picture46a.png)
+
+**6.19** Next, drag an exclusive gateway into the model just after the **Sales Director Approval**, connect the human task **Sales Director Approval** with the gateway, then the gateway to the **Capture Order**, using the connector icon to create the connections
 
 ![](images/200/Picture47.png)
 
 ![](images/200/Picture48.png)
 
-**6.10** Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
+**6.20** Connect the gateway to the **Not Approved end** activity. Feel free to move the activities around to make it more readable
 
 ![](images/200/Picture49.png)
 
-**6.11** With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
+**6.21** With Connection highlighted, edit the properties and supply the following information, to test if the approval was rejected, by setting the condition to be **TaskOutcomeDataObject == "REJECT"**.
 
 ![](images/200/Picture50.png)
 
