@@ -11,30 +11,23 @@ application to Oracle Application Container Cloud Service.
 The result is you will learn to take an application developed locally
 and deploy it to Oracle Cloud.
 
-You must use your Oracle Cloud trial account to perform the lab and run
-the blackjack card game.
+You use your laptop and your Oracle Cloud trial account to perform the lab and run the blackjack card game.
 
 ## First, Get an Oracle Cloud Account
 
--   Prior to arriving at the event, you must obtain access to your own
-    Trial account. Trial accounts can be obtained at [Try
+-   •	Prior to arriving at the event, please obtain access to your own Trial account. Trial accounts can be obtained at [Try
     It](http://cloud.oracle.com/tryit)
 
 ## Second, Configure your Client Environment
 
-1.  Your client environment **must be configured prior** to attempting
-    the Hands-on-labs.
+1. Your computer’s environment must be configured prior to attempting the Hands-on-labs.
 
-    You must download and create a local development environment on
-    your personal device to setup a Git and Maven environment so
-    that you can clone this to your Oracle Developer Cloud Service
-    instance.  
-      -  Download Netbeans or your favorite IDE  
-      -  Git  
-      -  Maven  
-      -  JDK 8
+Please follow the instruction in the linked documents  ([Windows](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Windows-HOL-setup.pdf) or [Mac](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Mac-HOL-setup.pdf)) of the Lab Guides prior to attempting the Labs.
 
-2.  Please follow the instruction in PART I ([Windows](1-local-windows-setup.md) or [Mac](1-local-mac-setup.md)) of the Lab Guides prior to attempting the Labs.
+2. Download the following files from GitHub (they are in the list on [this page](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack)
+-   •	Blackjack.zip
+-   •	Helloworld-Example.zip
+-   •	pom.xml
 
 ## How to View the Lab Guides
 
