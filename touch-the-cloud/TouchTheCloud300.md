@@ -449,23 +449,23 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 ---
 
-**2.1.2.1** Click the `Hamburger` icon ![](images/300/image036.png)  just to the right of the *Create Order EBS* integration.
+**2.1.2.1** Click the `Hamburger` icon ![](images/300/image036.png)  just to the right of the *Create EBS Order* integration.
 
-**2.1.2.2** Drop down to the `Clone` menu selection so we can make a working copy of the current working *Create Order EBS* integration.
+**2.1.2.2** Drop down to the `Clone` menu selection so we can make a working copy of the current working *Create EBS Order* integration.
 
    ![](images/300/image037.png)
 
 **2.1.2.3** In the `Clone` dialog that comes up, enter the new name of the cloned integration.  Since there may be multiple participants in this lab, use your assigned user # as a prefix with *Create EBS Order* at the end.  In the following example, *demo.user01* was assigned so the name of the cloned integration is *User 01 Create EBS Order*
 
-   ![](images/300/image038.png)
-
 **2.1.2.4** After entering the name, select the `Clone` button in the lower-right of the dialog.
+
+   ![](images/300/image038.png)
 
 **2.1.2.5** You will now see that your new cloned integration is ready to edit as it’s in the `de-activated` state.
 
    ![](images/300/image039.png)
 
-**2.1.2.6** Select the integration name in order to edit it.  In the image above `User 01 Create EBS Order` is the hot-link to select.
+**2.1.2.6** Click on the integration name so that we can go to the integration editor.  In the image above `User 01 Create EBS Order` is the hot-link to select.
 
 ## 2.2: Edit the mapping to the EBS update service call
 
@@ -473,11 +473,11 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 ---
 
-**2.2.1.1** Since there are many steps in this orchestration style integration the text on each step is difficult to read.  In order to quickly zoom-in, select the `Home` icon in the view control bar in the upper-right.
+**2.2.1.1** Since there are many steps in this orchestration style integration the text on each step may be difficult to read.  In order to quickly zoom-in, select the `Home` icon in the view control bar in the upper-right.
 
    ![](images/300/image040.png)
 
-**2.2.1.2** The *createEBSOrder* mapping step is toward the bottom of the orchestration.  As shown in the first part of the lab, by clicking and dragging your mouse in the background you can pan down the orchestration steps.
+**2.2.1.2** The *createEBSOrder* mapping step we are going to change is toward the bottom of the orchestration.  As shown in the first part of the lab, by clicking and dragging your mouse in the background you can pan down the orchestration steps to the *createEBSOrder* mapping step.
 
    ![](images/300/image012l.png)
 
@@ -519,7 +519,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image046.png)
 
-**2.2.3.8** Now we need to select the `Save` button to save our mapping changes
+**2.2.3.8** Now we need to select the `Save` button in the upper right to save our mapping changes
 
    ![](images/300/image047.png)
 
@@ -561,7 +561,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
 **2.2.4.11** Now we can close the Mapping Editor because our changes have been made and tested.
 
-**2.2.4.12** Click on the `Exit Mapper` button in the upper-right of the Mapping Editor.
+**2.2.4.12** Click on the `Exit Mapper` button in the upper-left of the Mapping Editor.
 
    ![](images/300/image054.png)
 
@@ -592,6 +592,8 @@ Let’s start by logging into ICS and cloning an existing integration.
 **2.3.2.2** Click on the *Comment* variable in the Source variable section.  The editor will show the metadata for this variable such as type, path, etc.
 
 **2.3.2.3** Next, click on the `Shuttle Icon` to move the *Comment* variable over to be a new `Tracking Field`.
+
+_(Note that you can also click and drag variables from the Source to the Tracking Field instead of using the shuttle icon)_
 
    ![](images/300/image058.png)
 
@@ -651,7 +653,7 @@ Let’s start by logging into ICS and cloning an existing integration.
 
    ![](images/300/image067.png)
 
-**2.4.2.3** Now that we have a modified integration with a new service endpoint, we need to update PCS so that the comment sent in from the mobile application can be passed into ICS.
+**2.4.2.3** Now that we have a modified integration with a new service endpoint, we need to update PCS so that the comment sent in from the mobile application can be passed through ICS into EBS.
 
 # Part 3: Testing the New ICS Integration from PCS
 
@@ -738,49 +740,53 @@ You are now ready to publish and deploy your changes
 
    ![](images/300/image084.png)
 
-**3.2.7** In the upper left side of the PCS Management window, click on the `hamburger` icon then select the *Deploy* menu item:
+**3.2.7** If this is the first time you've published in this browser session, you may be prompted to login with your username/password for publishing.  If this is the case, enter your assigned username/password (ie: `demo.userXX`)
+
+![](images/200/Picture55a.png)
+
+**3.2.8** In the upper left side of the PCS Management window, click on the `hamburger` icon then select the *Deploy* menu item:
 
    ![](images/300/image085.png)
 
-**3.2.8** Select your *Touch the Cloud* Space in the *Select Space* dropdown
+**3.2.9** Select your *Touch the Cloud* Space in the *Select Space* dropdown
 
-**3.2.9** Select your PCS application *Quote to Order – UserXX* in the *Select Application* dropdown (where `XX` is your workshop user number, ie: 01, 02, etc.)
+**3.2.10** Select your PCS application *Quote to Order – UserXX* in the *Select Application* dropdown (where `XX` is your workshop user number, ie: 01, 02, etc.)
 
-**3.2.10** Select your snapshot name in the *Select a snapshot* dropdown. In the example below, the snapshot was given the name *Added New ICS Service Endpoint*
+**3.2.11** Select your snapshot name in the *Select a snapshot* dropdown. In the example below, the snapshot was given the name *Added New ICS Service Endpoint*
 
-**3.2.11** After you have configured the application in the *Deploy Application to My Server* dialog, select the *Customize* button.
+**3.2.12** After you have configured the application in the *Deploy Application to My Server* dialog, select the *Customize* button.
 
    ![](images/300/image086.png)
 
-**3.2.12** Select the *Use design-time credentials and certificates* checkbox in the upper right of the *Customize* page of the wizard.
+**3.2.13** Select the *Use design-time credentials and certificates* checkbox in the upper right of the *Customize* page of the wizard.
 
-**3.2.13** In the *Keystore Credential* dropdown box, select the security key created during design time.  In the example shown below, we created the key called *demo.user03.key*.
+**3.2.14** In the *Keystore Credential* dropdown box, select the security key created during design time.  In the example shown below, we created the key called *demo.user03.key*.
 
-**3.2.14** The username/password will automatically be filled in based on the key which was already created during design time.
+**3.2.15** The username/password will automatically be filled in based on the key which was already created during design time.
 
-**3.2.15** After customizing the new service call, select the *Validate* button:
+**3.2.16** After customizing the new service call, select the *Validate* button:
 
    ![](images/300/image087.png)
 
-**3.2.16** After the validation is shown to be successful, select the *Options* button:
+**3.2.17** After the validation is shown to be successful, select the *Options* button:
 
    ![](images/300/image088.png)
 
-**3.2.17** Enter the id *1.0* in the *Revision id* textbox (we'll be overwriting the version currently deployed because we don't need two out there)
+**3.2.18** Enter the id *1.0* in the *Revision id* textbox (we'll be overwriting the version currently deployed because we don't need two out there)
 
-**3.2.18** Select the *Override* checkbox
+**3.2.19** Select the *Override* checkbox
 
-**3.2.19** Select the *Force default* checkbox
+**3.2.20** Select the *Force default* checkbox
 
-**3.2.20** Finally, select the *Deploy* button
+**3.2.21** Finally, select the *Deploy* button
 
    ![](images/300/image089.png)
 
-**3.2.21** The *Deploying* modal-dialog will pop-up and spin while this new revision is deployed.  This could take a minute or two depending on how many other participants are deploying at the same time
+**3.2.22** The *Deploying* modal-dialog will pop-up and spin while this new revision is deployed.  This could take about a minute depending on how many other participants are deploying at the same time.
 
    ![](images/300/image090.png)
 
-**3.2.22** Select the *Finish* button once the application deployment is complete
+**3.2.23** Select the *Finish* button once the application deployment is complete
 
    ![](images/300/image091.png)
 
@@ -814,7 +820,9 @@ The updated PCS application is now ready to test
 
 ![](images/300/image096.png)
 
-**3.3.8** Login with the test user's credentials.  Remember that this mobile application is for a sales rep that is checking for his list of customers to visit in his area from whom he can take quotes for computer equipment orders.
+**3.3.8** Login with the test user's credentials.  Note that if you have previously logged in with the **Save test user** checkbox selected you may not be prompted to login again.
+
+Remember that this mobile application is for a sales rep that is checking for his list of customers to visit in his area from whom he can take quotes for computer equipment orders.
 
 - **Username**: `maxtester`
 - **Password**: `W3lcome1*`
