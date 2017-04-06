@@ -85,7 +85,7 @@ You define a connector API by entering info about the target resource, creating 
 
 In this part of the Workshop, you create an MCS connector to support interacting with a SOAP service. For this workshop, the sample SOAP services that you will use are exposed by an Oracle Process Cloud Service.
 
-**3.0** From the MCS console page click on the hamburger icon next to Oracle in the top left corner of your screen
+**3.0** From the MCS console page click on the **hamburger icon** next to Oracle in the top left corner of your screen
 
 **3.1** Select **Applications** from the breadcrumb menu and then click the **Connectors** icon
 
