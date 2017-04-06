@@ -24,7 +24,7 @@ You use your laptop and your Oracle Cloud trial account to perform the lab and r
 
 Please follow the instruction in the linked documents [Windows](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Windows-HOL-setup.pdf) or [Mac](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Mac-HOL-setup.pdf) of the Lab Guides prior to attempting the Labs.
 
-2. Download the following files from [GitHub](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack))
+2. Download the following files from [GitHub](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack)
 -   Blackjack.zip
 -   Helloworld-Example.zip
 -   pom.xml
