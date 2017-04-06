@@ -158,7 +158,7 @@ This List displays the active instances. To display completed instances as well,
 
 ![](images/200/Picture18.png)
 
-**4.4** Expand the History heading
+**4.5** Expand the History heading
 
 ![](images/200/Picture17.png)
 
