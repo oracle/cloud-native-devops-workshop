@@ -18,7 +18,6 @@ Following are the assets that we will be creating during this part of the worksh
 - MAX App
     - Create MAX App which will integrate to the MCS API
 
-### 2.	Access Details and Collaterals
 #### Workshop Pre-requisites:
 
 1.	Chrome Browser
@@ -28,8 +27,9 @@ Following are the assets that we will be creating during this part of the worksh
 5.	Android / iOS Mobile Phone (with the “Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore), preferably to test / run the MAX App on your Mobile Phone. 
 If Android / iOS Mobile Phone is not available, you can still test the MAX App using MAX simulator in the browser.
 
-**2.1** Launch Chrome browser -> New incognito window 
+### 2.	Access Details and Collaterals
 
+**2.1** Launch Chrome browser -> New incognito window 
 
 ![](images/100/Picture2.1.png)  
 
