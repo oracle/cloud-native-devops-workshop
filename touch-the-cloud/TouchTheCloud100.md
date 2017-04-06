@@ -501,6 +501,4 @@ MAX generates a QR code when the build finishes. Click button next to Show QR Co
 
 You can use the hamburger menu to navigate to log out of the app.
 
-
-
-## This Completes LAB 100
+#### This Completes LAB 100
