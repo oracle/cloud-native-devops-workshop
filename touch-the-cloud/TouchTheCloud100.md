@@ -466,7 +466,7 @@ password: W3lcome1*
 
  ![](images/100/Picture5.50.png)
 
-**5.51**	Once the Quote Line is created successfully, app will navigate back to the previous screen. Now you may continue creating multiple Quote Lines similarly or submit the quote by clicking **Submit Quote** header button
+**5.51**	Once the Quote Line is created successfully, app will navigate back to the previous screen. Now you may continue creating multiple Quote Lines similarly or submit the quote by clicking **Submit Quote** header button. after submitting the quote please wait 5 to 10 seconds for the screen to refresh and return to the home page.
 
  ![](images/100/Picture5.51.png)
 
@@ -476,9 +476,11 @@ Once the Quote is successfully submitted, app will navigate back to the Map scre
 
 If you do not want to test the MAX App on Mobile Phone, then click on **Back to Designer** (  ![](images/100/Picture5.52.i1.png) ). This step completes the workshop.
 
-If you want to test the MAX App on Mobile Phone, click Test on Phone (  ![](images/100/Picture5.52.i2.png) ) and then Build Test Application. You need the MAX Container App (“Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore) to run your app on a Mobile Phone.
+If you want to test the MAX App on Mobile Phone, click Test on Phone (  ![](images/100/Picture5.52.i2.png) ) and then Build Test Application. You need the MAX Container App (“Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore) to run your app on a Mobile Phone. 
 
 MAX generates a QR code when the build finishes. Click button next to Show QR Code. This QR code needs to be used to download the app on device
+
+**Please do NOT publish the app**
 
  ![](images/100/Picture5.52.png)
 
@@ -496,10 +498,10 @@ MAX generates a QR code when the build finishes. Click button next to Show QR Co
 
 ![](images/100/Picture5.55.1.png) ![](images/100/Picture5.55.2.png)
 
-**5.56**	You can launch the MAX App, which should look like this.
+**5.56**	You can launch the MAX App, which should look like this. 
 
 ![](images/100/Picture5.56.png)
 
-You can use the hamburger menu to navigate to log out of the app.
+You can now create and submit a quote from your phone. Please remember to wait 5 to 10 seconds after you hit the submit button for the page to refresh. You can use the hamburger menu to navigate to log out of the app.
 
 **This Completes LAB 100**
