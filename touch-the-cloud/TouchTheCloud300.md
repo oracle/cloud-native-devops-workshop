@@ -854,7 +854,6 @@ Remember that this mobile application is for a sales rep that is checking for hi
 
 **3.3.16** Fill in the rest of the quote line with the following information:
 
-  * **Item Number** = *2155*
   * **Price** = *6666*
   * **Qty** = *1*
   * **UOM** = *Each*
@@ -863,7 +862,7 @@ Remember that this mobile application is for a sales rep that is checking for hi
 
 ![](images/300/image102.png)
 
-**3.3.18** Select `Tab 2` in the **Customer Summary** page to see the quote line just saved
+**3.3.18** Select `Quote Lines` tab in the **Customer Summary** page to see the quote line just saved
 
 ![](images/300/image111.png)
 
@@ -891,21 +890,33 @@ Now we will check in PCS to ensure that the process workflow was initiated.
 
 ![](images/300/image114.png)
 
-**3.4.4** First, the quote needs to be approved by the "Sales Operations" role
+**3.4.4** First, the quote needs to be approved by the "Sales Operations" role.  In Lab 200, we had added our user (`demo.userXX`) to all 3 of the roles in our PCS process: "Sales Operations", "Sales Manager", and "Sales Director".
 
-`PUT THE IMAGE HERE, etc...`
+Click on the task so we can see the approval form.
 
-**3.4.4** Since this order was more than $5000, it will have been routed to the Sales Director role in the PCS process.
+![](images/300/image121.png)
 
-**3.4.5** In the Tasks window, you should see a new PCS process for the Sales Director
+**3.4.5** The Quote form will be shown so you can review that the data from the mobile application came through.  Note the _Account Name_ and _Price_ match what you put into the mobile application.
 
-**3.4.6** Select the arrow at the right of the PCS instance to see the details of the form while deciding whether to approve this quote or not.
+**3.4.6** After reviewing the quote, select the **Approve** button to send this process further down the workflow.
 
-![](images/300/image115.png)
+![](images/300/image122.png)
 
-**3.4.7** Review the quote as shown in the form. Since this seems to be reasonable, select the Approve button on the top of the form
+**3.4.7** The previous task (Sales Operations Approval) will disappear from the tasklist.  Click on the **Refresh** icon in order to update the tasklist.  
 
-![](images/300/image116.png)
+![](images/300/image123.png)
+
+**3.4.8** Since this order was more than $10000, it will have been routed to the Sales Director role in the PCS process.
+
+**3.4.9** Since you have "Sales Director" role, you should see another task show up in the tasklist for a secondary large quote order approval.
+
+![](images/300/image124.png)
+
+**3.4.10** Just like you did as "Sales Operations", the Quote form will be shown so you can review that the data from the previous approval came through.
+
+**3.4.11** After reviewing the quote, select the **Approve** button to send this quote over to EBS to create an order.
+
+![](images/300/image125.png)
 
 **3.4.8** This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
 
