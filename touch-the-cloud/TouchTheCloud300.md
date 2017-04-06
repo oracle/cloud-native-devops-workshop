@@ -964,7 +964,7 @@ Now we want to be sure that the callout made by PCS to ICS worked and that the p
 
    ![](images/300/image105.png)
 
-**3.5.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
+**3.5.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment was sent over to ICS from PCS - this comment was the `mcs_id` variable from the MCS API which should be `UserXX` where XX is your user number.
 
    ![](images/300/image106.png)
 
