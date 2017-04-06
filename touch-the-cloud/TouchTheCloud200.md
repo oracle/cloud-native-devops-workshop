@@ -63,7 +63,7 @@ Now we can login as Lisa Jones. From any browser, **go to the following URL**:
 
 ![](images/200/Picture7.png)
 
-**1.7** The  **Service Instance URL** is the link to open PCS
+**1.7** Click on the **Service Instance URL**  Service Instance URL link. This will open Process Cloud Service Console page.
 
 ### **2**: Process Cloud Service Console Overview
 
@@ -81,7 +81,7 @@ Oracle Process Cloud Service is divided as three separate functionalities, and d
 
 **2.1** From Cloud UI dashboard click on the **Service Instance URL** link.
 
-Since Lisa only has access defined as a End-User, she will only see the task relevant to her, **Work on Tasks** and **Track Instances**.
+Lisa will see the task relevant to her, for example, **Work on Tasks** and **Track Instances**.
 
 ![](images/200/Picture8.png)  
 
@@ -138,9 +138,9 @@ In the list we can see the outstanding tasks allocated to Lisa. You also have th
   
 ---
 
-**5.1** Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois (roland.dubois).
+**4.1** Logout as Lisa Jones, and log into the Process Workspace as Roland Dubois (roland.dubois).
 
-**5.2** Click **Track Instances** to access the List of Instances
+**4.2** Click **Track Instances** to access the List of Instances
 
 ![](images/200/Picture13.png)  
 
@@ -150,15 +150,15 @@ This List displays the active instances. To display completed instances as well,
 
 ![](images/200/Picture15.png)
 
-**5.3** Click on any process in the list
+**4.3** Click on any process in the list
 
 ![](images/200/Picture16.png)
 
-**5.4** To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
+**4.4** To make it easier, you can expand the task to fill the browser page, by click on the expand task icon in the top left hand corner
 
 ![](images/200/Picture18.png)
 
-**5.4** Expand the History heading
+**4.5** Expand the History heading
 
 ![](images/200/Picture17.png)
 
@@ -193,7 +193,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-You, as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk, it should be approved by sales director. 
+You, as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk and the amount is bigger than $ 10000, it should be approved by sales director. Else if high risk and the amount is under $10000, then the sales manager should approve the quote. 
   
 We are going through the steps on how to implement these changes in the process.
   
@@ -515,7 +515,7 @@ In this section we are going to hook up our new process to the mobile applicatio
 
 #### Capture WSDL End point
 
-**1** Click on Management at top right hand of page
+**1** From the PCS Composer Home Page, Click on Management at top right hand of page
 
 ![](images/200/Picture56.png)
 
