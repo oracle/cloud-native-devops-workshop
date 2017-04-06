@@ -22,9 +22,9 @@ You use your laptop and your Oracle Cloud trial account to perform the lab and r
 
 1. Your computer’s environment must be configured prior to attempting the Hands-on-labs.
 
-Please follow the instruction in the linked documents  ([Windows(http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Windows-HOL-setup.pdf) or [Mac(http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Mac-HOL-setup.pdf)) of the Lab Guides prior to attempting the Labs.
+Please follow the instruction in the linked documents  ([Windows](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Windows-HOL-setup.pdf)) or [Mac](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Mac-HOL-setup.pdf)) of the Lab Guides prior to attempting the Labs.
 
-2. Download the following files from GitHub (they are in the list on [this page](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack)
+2. Download the following files from GitHub (they are in the list on [this page](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack))
 -   Blackjack.zip
 -   Helloworld-Example.zip
 -   pom.xml
