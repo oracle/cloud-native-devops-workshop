@@ -1,6 +1,6 @@
 ![](images/300/HeaderImage.png)  
 
-Update: March 13, 2017
+Update: April 6, 2017
 
 
 ## Introduction
@@ -423,19 +423,23 @@ Note that the `Presentation` will probably already be set to _Main_ and that the
 
 **8.2** Provide ***Comment*** and ***Name*** for snapshot. Other Options - check ***Make Snapshot***
 
-![](images/200/Picture55.png)
+**8.3** After filling in the comments and a name for the snapshot, click on ***Publish***
 
-**8.3** Click on ***Publish***
+![](images/200/Picture55.png)
 
 **8.4** Click on Management at top right hand of page
 
 ![](images/200/Picture56.png)
 
-**8.5** Click on the hamburger icon next to My Server, and select deploy
+**8.5** If this is the first time you've published in this browser session, you may be prompted to login with your username/password for publishing.  If this is the case, enter your assigned username/password (ie: `demo.userXX`)
+
+![](images/200/Picture55a.png)
+
+**8.6** From the **Manage Deployed Applications** screen, click on the hamburger icon next to My Server, and select deploy
 
 ![](images/200/Picture57.png)
 
-**8.6** Follow the **Deployment Application to My Server** wizard
+**8.7** Follow the **Deployment Application to My Server** wizard
 
 In Space ***Touch the Cloud***, select your ***Quote to Order - USER(1-10)*** Application, with the same ***New Approval*** snapshot, we have create earlier, to deploy:
 
@@ -453,7 +457,7 @@ In Space ***Touch the Cloud***, select your ***Quote to Order - USER(1-10)*** Ap
 
 ![](images/200/Picture63.png)
 
-**8.6** Click on **Finish**
+**8.8** Click on **Finish**
 
 ### **9**: Role Assignment
 
