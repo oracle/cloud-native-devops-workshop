@@ -36,17 +36,17 @@ Each step identify the role, and what the user in that specific role is trying t
   
 ---
 
-- Log into the Process Workspace using your user id [01-10].
+**1.1** Log into the Process Workspace using your user id [01-10].
 
-- On the Process home page click the View Dashboards
+**1.2** On the Process home page click the View Dashboards
 
    ![](images/400/Picture1.png)
 
-- On the following page, you will see two categories, Process Monitoring and Business Analytics.
+**1.3** On the following page, you will see two categories, Process Monitoring and Business Analytics.
 
     ![](images/400/Picture2.png)
 
-    Feel free to look at your current Processes, by clicking on the Open, Workload, Trend and Close graphs.
+**1.4** Feel free to look at your current Processes, by clicking on the Open, Workload, Trend and Close graphs.
 
     Sample Trend Graph:
 
@@ -66,52 +66,89 @@ Each step identify the role, and what the user in that specific role is trying t
 
 ---
 
-- Open your custom PCS Application in PCS Composer. 
+**2.1** Open your custom PCS Application in PCS Composer. 
 
-- Click on the Indicators tab
+**2.2** Ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
+
+   ![](images/300/image070.png)
+
+**2.3** Click on the Indicators tab
 
     ![](images/400/Picture4.png)
 
-- In this step we are going to create a measure and dimension.
-   - Click on the white plus sign, next to Search, and create a Measure (quoteTotal on quoteTotal) and Dimension (quoteDate on quoteDate)
+**2.4** In this step we are going to create a measure and dimension.
+
+**2.5** Click on the white plus sign, next to Search, and select Measure from the list
 
      ![](images/400/Picture5.png)
 
-     ![](images/400/Picture6.png)
+**2.6** Next, enter the name for the measure `quoteTotal` then select the _magnifying glass_ icon so we can select a data object where the measure will be taken from.
+
+![](images/400/Picture6.png)
+
+**2.7** Select the `quoteTotal` variable from the list, the select the **OK** button
+
+![](images/400/Picture6a.png)
+
+**2.8** Select the **OK** button in the Measure definition dialog to complete the definition.
+
+![](images/400/Picture6b.png)
+
+**2.9** Next, create a Dimension by clicking on the white plus sign again
 
      ![](images/400/Picture7.png)
 
-- Next step is deploy the changed application. Click on Publish
+**2.10** Next, enter the name for the dimension `quoteDate` then select the _magnifying glass_ icon so we can select a data object where the measure will be taken from.
+
+![](images/400/Picture7a.png)
+
+**2.11** Select the `quoteDate` variable from the list, the select the **OK** button
+
+![](images/400/Picture7b.png)
+
+**2.12** Select the **OK** button in the Dimension definition dialog to complete the definition.
+
+![](images/400/Picture7c.png)
+
+**2.6** Next step is deploy the changed application. Click on the **Save** button, then **Publish**
 
 ![](images/400/Picture8.png)
 
-- Create a new snapshot to deploy
+**2.7** Create a new snapshot to deploy
 
 ![](images/400/Picture9.png)
 
-- Click on Test
+**2.8** Click on Test
 
 ![](images/400/Picture10.png)
 
-- Go ahead and do the deployment of your changed application, by clicking on the bottom deploy icon
+**2.9** Once again, ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
+
+   ![](images/400/Picture16.png)
+
+**2.10** Go ahead and do the deployment of your changed application, by clicking on the bottom deploy icon
 
 ![](images/400/Picture11.png)
 
-- Add yourself to all the roles, to allow you to act as all the different roles in the process flow.
+**2.11** Add yourself to all the roles, to allow you to act as all the different roles in the process flow.
 
 ![](images/400/Picture12.png)
 
+**2.13** Wait for the deployment to finish, then select the **OK** button on the _Application Deployed Successfully_ dialog.
+
 ![](images/400/Picture13.png)
 
-- After the deployment completed, go back to the PCS Workspace, and then Dashboards. 
+**2.12** After the deployment completed, go back to the PCS Workspace, and then Dashboards. 
 
-- Select the Business Analytics Tab
+**2.13** Select the Business Analytics Tab, then select the big green `Get Started` button in the middle of the screen.  Note that if this isn't your first query you won't get the big green button.
 
-- Create a new report, with the following values
+![](images/400/Picture17.png)
+
+**2.14** Create a new report, with the following values
 
 ![](images/400/Picture14.png)
 
-- Click on Untitled, and change the report name to Total Quotes per Week and click on save
+**2.15** Click on Untitled, and change the report name to Total Quotes per Week and click on save
 
 ![](images/400/Picture15.png)
 
