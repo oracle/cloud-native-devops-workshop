@@ -1,0 +1,441 @@
+#%RAML 0.8
+title: TTCSalesOrderAPI_03
+version: 1.0
+baseUri: /mobile/custom/TTCSalesOrderAPI_03
+protocols: [HTTPS]
+mediaType: "application/json"
+schemas:
+  - customers: |
+      {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "id": "customers",
+        "title": "List of Customers",
+        "type": "array",
+        "items": {
+          "$ref": "customer"
+        },
+        "links": [
+          {
+            "rel": "canonical",
+            "title": "Customer Summary by id",
+            "href": "/customer/{id}",
+            "method": "GET",
+            "targetSchema": {
+              "$ref": "customer"
+            }
+          },
+          {
+            "rel": "self",
+            "title": "List of Customers",
+            "href": "/customer",
+            "method": "GET"
+          }
+        ]
+      }
+      
+  - customer: |
+      {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "id": "customer",
+        "title": "Customer Summary by id",
+        "type": "object",
+        "properties": {
+          "customerNumber": {
+            "type": "string"
+          },
+          "customerName": {
+            "type": "string"
+          },
+          "customerFirstname": {
+            "type": "string"
+          },
+          "customerLastname": {
+            "type": "string"
+          },    
+          "address1": {
+            "type": "string"
+          },
+          "address2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "customerEmail": {
+            "type": "string"
+          }
+        },
+        "links": [
+          {
+            "rel": "self",
+            "title": "Customer Summary by id",
+            "href": "/customer/{id}",
+            "method": "GET",
+            "targetSchema": {
+              "$ref": "customer"
+            }
+          },
+          {
+            "rel": "parent",
+            "title": "List of Customers",
+            "href": "/customer",
+            "method": "GET",
+            "mediaType": "application/json",
+            "targetSchema": {
+              "$ref": "customers"
+            }
+          },
+          {
+            "rel": "canonical",
+            "title": "List of Order Lines for a Customer",
+            "href": "/customer/{id}/line",
+            "method": "GET",
+            "targetSchema": {
+              "$ref": "lines"
+            }
+          },
+          {
+            "rel": "submit",
+            "title": "Submit Quote",
+            "href": "/customer/{id}/submit",
+            "method": "POST"
+          }
+        ]
+      }
+      
+  - lines: |
+      {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "id": "lines",
+        "title": "List of Order Lines for a Customer",
+        "type": "array",
+        "items": {
+          "$ref": "line"
+        },
+        "links": [
+          {
+            "rel": "parent",
+            "title": "Customer Summary by id",
+            "href": "/customer/{id}",
+            "method": "GET",
+            "mediaType": "application/json",
+            "targetSchema": {
+              "$ref": "customer"
+            }
+          },
+          {
+            "rel": "self",
+            "title": "List of Order Lines for a Customer",
+            "href": "/customer/{id}/line",
+            "method": "GET"
+          },
+          {
+            "rel": "create",
+            "title": "Create a New Line",
+            "href": "/customer/{id}/line",
+            "method": "POST",
+            "schema": {
+              "$ref": "newline"
+            },
+            "targetSchema": {
+              "$ref": "line"
+            }
+          }
+        ]
+      }
+      
+  - newline: |
+      {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "id": "newline",
+        "title": "Create a New Line",
+        "type": "object",
+        "properties": {
+          "itemNumber": {
+            "type": "string"
+          },
+          "itemDescription": {
+            "type": "string",
+            "enum": [
+              "Please Select",
+              "Sentinel Standard Desktop - Rugged",
+              "Sentinel Custom Desktop",
+              "205 Digital Camera",
+              "Digital Camera",
+              "Vision Pad ZX - Mobile Computer",
+              "Motherboard, 450 Services"
+            ]
+          },
+          "qty": {
+            "type": "integer"
+          },
+          "uom": {
+            "type": "string",
+            "enum": [
+              "Please Select",
+              "Each",
+              "Dozen",
+              "Pound"
+            ]
+          },
+          "price": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+      
+  - line: |
+      {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "id": "line",
+        "title": "Order Line Details",
+        "type": "object",
+        "properties": {
+          "itemNumber": {
+            "type": "string"
+          },
+          "itemDescription": {
+            "type": "string",
+            "enum": [
+              "Please Select",
+              "Sentinel Standard Desktop - Rugged",
+              "Sentinel Custom Desktop",
+              "205 Digital Camera",
+              "Digital Camera",
+              "Vision Pad ZX - Mobile Computer",
+              "Motherboard, 450 Services"
+            ]
+          },
+          "qty": {
+            "type": "integer"
+          },
+          "uom": {
+            "type": "string",
+            "enum": [
+              "Please Select",
+              "Each",
+              "Dozen",
+              "Pound"
+            ]
+          },
+          "price": {
+            "type": "number"
+          }
+        },
+        "links": [
+          {
+            "rel": "parent",
+            "title": "List of Lines for a Customer",
+            "href": "/customer/{id}/line",
+            "method": "GET",
+            "targetSchema": {
+              "$ref": "lines"
+            }
+          },
+          {
+            "rel": "self",
+            "title": "Order Line Details",
+            "href": "/customer/{id}/line/{lineid}",
+            "method": "GET"
+          }
+        ]
+      }
+      
+/customer:
+  displayName: Customers List
+  get:
+    protocols: [HTTPS]
+    responses:
+      200:
+        body:
+          application/json:
+            schema: customers
+            example: |
+              [
+                {
+                  "customerNumber":"1"
+                  ,"customerName":"Imaging Innovations, Inc."
+                  ,"address1":"1021 Fifth Avenue"
+                  ,"address2":"New York, NY 10022"
+                  ,"customerFirstname":"Vincent"
+                  ,"customerLastname":"DiNatale"
+                  ,"city":"New York"
+                  ,"state":"NY"
+                  ,"country":"USA"
+                  ,"zip":"10022"
+                  ,"customerEmail":"vincent.dinatale@imageinno.com"
+                  ,"lines":[]
+                },
+                {
+                  "customerNumber":"2"
+                  ,"customerName":"CDS, Inc"
+                  ,"address1":"333 Lexington Ave"
+                  ,"address2":"New York, NY 10000"
+                  ,"customerFirstname":"Louis"
+                  ,"customerLastname":"Wohl"
+                  ,"city":"New York"
+                  ,"state":"NY"
+                  ,"country":"USA"
+                  ,"zip":"10000"
+                  ,"customerEmail":"louis.wohl@cds.com"
+                  ,"lines":[]
+                },
+                {
+                  "customerNumber":"3"
+                  ,"customerName":"Hilman and Associates"
+                  ,"address1":"150 East 50th Street"
+                  ,"address2":"New York, NY 10023"
+                  ,"customerFirstname":"Jack"
+                  ,"customerLastname":"Thomas"
+                  ,"city":"New York"
+                  ,"state":"NY"
+                  ,"country":"USA"
+                  ,"zip":"10022"
+                  ,"customerEmail":"jack.thomas@hilman.com"
+                  ,"lines":[]
+                },
+                {
+                  "customerNumber":"4"
+                  ,"customerName":"Federal Parts"
+                  ,"address1":"522 West 38th Street"
+                  ,"address2":"New York, NY 10018"
+                  ,"customerFirstname":"Robbie"
+                  ,"customerLastname":"Hun"
+                  ,"city":"New York"
+                  ,"state":"NY"
+                  ,"country":"USA"
+                  ,"zip":"10018"
+                  ,"customerEmail":"robbie.hun@fedparts.com"
+                  ,"lines":[]
+                },
+                {
+                  "customerNumber":"5"
+                  ,"customerName":"Computer Service and Rentals"
+                  ,"address1":"68 Church Street"
+                  ,"address2":"New York, NY 10000"
+                  ,"customerFirstname":"Lucy"
+                  ,"customerLastname":"Leu"
+                  ,"city":"New York"
+                  ,"state":"NY"
+                  ,"country":"USA"
+                  ,"zip":"10000"
+                  ,"customerEmail":"lucy.leu@csr.com"
+                  ,"lines":[]
+                }
+              ]
+              
+  /{id}:
+    displayName: Customer Summary
+    uriParameters:
+      id:
+        displayName: id
+        type: string
+        required: true
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: customer
+              example: |
+                {
+                  "customerNumber":"1"
+                  ,"customerName":"Imaging Innovations, Inc."
+                  ,"address1":"1021 Fifth Avenue"
+                  ,"address2":"New York, NY 10022"
+                  ,"customerFirstname":"Vincent"
+                  ,"customerLastname":"DiNatale"
+                  ,"city":"New York"
+                  ,"state":"NY"
+                  ,"country":"USA"
+                  ,"zip":"10022"
+                  ,"customerEmail":"vincent.dinatale@imageinno.com"
+                  ,"lines":[]
+                }
+                
+    /line:
+      displayName: Order Line
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                schema: lines
+                example: |
+                  [
+                    {
+                      "itemNumber": "2155",
+                      "itemDescription": "Sentinel Deluxe Desktop - Rugged",
+                      "qty": 10,
+                      "uom": "Each",
+                      "price": 1969
+                    },
+                    {
+                      "itemNumber": "174762",
+                      "itemDescription": "205 Digital Camera",
+                      "qty": 2,
+                      "uom": "Each",
+                      "price": 699
+                    },
+                    {
+                      "itemNumber": "4816",
+                      "itemDescription": "Vision Pad ZX - Mobile Computer",
+                      "qty": 1,
+                      "uom": "Dozen",
+                      "price": 300
+                    }
+                  ]
+                  
+      post:
+        body:
+          application/json:
+            schema: newline
+            example: |
+              {  
+                "itemDescription": "Sentinel Deluxe Desktop",
+                "qty": 10,
+                "uom": "Each",
+                "price": 1969
+              }
+              
+        responses:
+          200:
+            body:
+              application/json:
+      /{lineid}:
+        displayName: Order Line Details
+        uriParameters:
+          lineid:
+            displayName: lineid
+            type: string
+            required: true
+        get:
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: line
+                  example: |
+                    {
+                      "itemNumber": "155",
+                      "itemDescription": "Sentinel Deluxe Desktop",
+                      "qty": 10,
+                      "uom": "Each",
+                      "price": 1969
+                    }
+                    
+    /submit:
+      displayName: Submit Quote
+      post:
+        responses:
+          204:
