@@ -466,7 +466,7 @@ password: W3lcome1*
 
  ![](images/100/Picture5.50.png)
 
-**5.51**	Once the Quote Line is created successfully, app will navigate back to the previous screen. Now you may continue creating multiple Quote Lines similarly or submit the quote by clicking **Submit Quote** header button. after submitting the quote please wait 5 to 10 seconds for the screen to refresh and return to the home page.
+**5.51**	Once the Quote Line is created successfully, app will navigate back to the previous screen. Now you may continue creating multiple Quote Lines similarly or submit the quote by clicking **Submit Quote** header button. After submitting the quote please wait 5 to 10 seconds for the screen to refresh and return to the home page.
 
  ![](images/100/Picture5.51.png)
 
