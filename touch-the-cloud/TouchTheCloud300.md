@@ -924,7 +924,7 @@ Click on the task so we can see the approval form.
 
 ![](images/300/image117.png)
 
-**3.4.14** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
+**3.4.14** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown by default.
 
 ![](images/300/image118.png)
 
@@ -942,7 +942,7 @@ Click on the task so we can see the approval form.
 
 ![](images/300/image126.png)
 
-**3.4.19** Observe the entire PCS process flow.  The _green highlighted lines_ indicate the path of the successful process flow.
+**3.4.19** Observe the entire PCS process flow.  Note again that the _green highlighted lines_ indicate the path of the successful process flow.
 
 ![](images/300/image127.png)
 
@@ -983,6 +983,8 @@ Now we want to be sure that the callout made by PCS to ICS worked and that the p
    ![](images/300/image108.png)
 
 **3.6.3** Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
+
+Note that the _Order Amount_ shown is larger than that of the quote because of shipping costs and taxes that were added automatically by EBS .
 
    ![](images/300/image109.png)
 
