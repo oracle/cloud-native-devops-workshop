@@ -1,10 +1,10 @@
 ![](images/300/HeaderImage.png)  
 
-Update: March 13, 2017
+Update: April 6, 2017
 
-# 1.	Design Considerations for Mobile App
+This Workshop walks you through the process of developing Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for Touch the Cloud workshop.
 
-This Workshop walks you through the process of developing a Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for Touch the Cloud workshop.
+### 1.	Design Considerations for Mobile App
 
 Following are the assets that we will be creating during this part of the workshop.
 
@@ -18,7 +18,6 @@ Following are the assets that we will be creating during this part of the worksh
 - MAX App
     - Create MAX App which will integrate to the MCS API
 
-# 2.	Access Details and Collaterals
 #### Workshop Pre-requisites:
 
 1.	Chrome Browser
@@ -28,42 +27,57 @@ Following are the assets that we will be creating during this part of the worksh
 5.	Android / iOS Mobile Phone (with the “Oracle Mobile Application Accelerator” App installed from iOS AppStore / Google PlayStore), preferably to test / run the MAX App on your Mobile Phone. 
 If Android / iOS Mobile Phone is not available, you can still test the MAX App using MAX simulator in the browser.
 
-2.1 Launch Chrome browser -> New incognito window 
+### 2.	Access Details and Collaterals
 
+**2.1** Launch Chrome browser -> New incognito window 
 
 ![](images/100/Picture2.1.png)  
 
-**2.2**	In Chrome browser incognito window, launch OPC Instance https://myservices.us2.oraclecloud.com/mycloud/faces/dashboard.jspx and login with following credentials.
+**2.2** From your Chrome browser incognito window go to the following URL:
+<https://cloud.oracle.com>
 
-Enter your Identity Domain: gse00003021
+**2.3** Click Sign In in the upper right hand corner of the browser
+- **IMPORTANT** - Under My Services, change Data Center to `US Commercial 2 (us2)` and click on Sign In to My Services
 
-Login Username: demo.user[01-10]
+![](images/300/image001.png)
 
-Login Password: the PASSWORD --will be provided by the lead trainer--
+**2.4** If your identity domain is not already set, enter it and click **Go**
 
-![](images/100/Picture2.2.png) 
+**NOTE:** the **Identity Domain** values will be given to you from your instructor.
 
-**2.3**	Once at the Oracle Cloud My Services Dashboard click on the Mobile Environment Service
+![](images/300/image002.png)  
 
-![](images/100/Picture2.3.png) 
+**2.5**  Once your Identity Domain is set, enter your `User Name` and `Password` and click **Sign In**
 
-**2.4**	Now click on the link provided next to Service Instance URL
+***NOTE:*** the **User Name and Password** values will be given to you by your instructor.
+
+![](images/300/image003.png)  
+
+**2.6**  You will be presented with a Dashboard displaying the various cloud services available to this account.
+
+**NOTE:** The Cloud Services dashboard is intended to be used by the *Cloud Administrator* user role.  The Cloud Administrator is responsible for adding users, service instances, and monitoring usage of the Oracle cloud service account.  Developers and Operations roles will go directly to the service console link, not through the service dashboard.
+
+**2.7**	Once at the Oracle Cloud My Services Dashboard click on the **Mobile Environment Service**
+
+![](images/100/image004.png) 
+
+**2.8**	Now click on the link provided next to Service Instance URL
 
 ![](images/100/Picture2.4.png) 
 
-**2.5**	This opens the MCS Console page
+**2.9**	This opens the MCS Console page
 
 ![](images/100/Picture2.5.png)
 
-**2.6**	A csf-key is pre-defined on this MCS instance. This csf-key will be used while creating the connector, explained in the later section of this workshop. This is the credential used to connect the PCS process.
+**2.10**	A csf-key is pre-defined on this MCS instance. This csf-key will be used while creating the connector, explained in the later section of this workshop. This is the credential used to connect the PCS process.
 
 csf-key: **PCS_TTC**
 
-**2.7**	A Mobile Backend is pre-defined on this MCS instance for testing the APIs/Connectors you are going to create as part of the workshop.
+**2.11**	A Mobile Backend is pre-defined on this MCS instance for testing the APIs/Connectors you are going to create as part of the workshop.
 
 Mobile Backend Name: **TTC_MBE**
 
-# 3.	Creating an MCS Connector
+### 3.	Creating an MCS Connector
 
 In this section, you create a connector API in Oracle Mobile Cloud Service so that your mobile application can interact with an external web service. Connectors work with either SOAP or REST services to access external cloud services offered by other providers or assets, such as databases.
 Connector APIs provide a bridge between your custom APIs and the enterprise services you want to access from those APIs. Using the REST and SOAP connector types, you create connector APIs for each data source that you want to access.
@@ -133,7 +147,7 @@ Expand the **Authentication** node and set the Mobile Backend to **TTC_MBE**, th
 
 Click on **Done**. This completes the Create Connector step.
 
-# 4.	Creating the MCS API
+### 4.	Creating the MCS API
 
 In this part of the workshop, you step through the process of creating and defining MCS API using pre-defined artifacts. 
 
@@ -179,7 +193,7 @@ Replace **xx** in API name with the postfix of your user id (it should be 01 thr
 
 ![](images/100/Picture4.8.png)
 
-4.9	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
+**4.9**	Next, from the ttcsalesorderapi folder, open the **ttcsalesorderapi.js** file in a text editor. 
 Edit the methods to include code to access your API **TTCSalesOrderAPI\_XX** and Connector **PCS\_TTC\_XX**.
 
 **Replace all XX with the postfix of your assigned user id [01 thru 10] in the file:**
@@ -225,7 +239,7 @@ This will publish the MCS API.
 
 ![](images/100/Picture4.15.2.png)
 
-# 5.	Creating MAX App
+### 5.	Creating MAX App
 
 In this section, you create a new MAX application.
 
@@ -487,6 +501,4 @@ MAX generates a QR code when the build finishes. Click button next to Show QR Co
 
 You can use the hamburger menu to navigate to log out of the app.
 
-
-
-## This Completes LAB 100
+**This Completes LAB 100**
