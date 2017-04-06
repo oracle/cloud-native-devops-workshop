@@ -854,7 +854,7 @@ Remember that this mobile application is for a sales rep that is checking for hi
 
 **3.3.16** Fill in the rest of the quote line with the following information:
 
-  * **Price** = *6666*
+  * **Price** = *13000*  (We want this to be above $10000 so it trigger Sales Director approval in the PCS workflow)
   * **Qty** = *1*
   * **UOM** = *Each*
 
@@ -918,25 +918,33 @@ Click on the task so we can see the approval form.
 
 ![](images/300/image125.png)
 
-**3.4.8** This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
+**3.4.12** This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
 
-**3.4.9** Select the **Tracking** icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
+**3.4.13** Select the **Tracking** icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
 
 ![](images/300/image117.png)
 
-**3.4.10** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
+**3.4.14** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
 
 ![](images/300/image118.png)
 
-**3.4.11** Look near the top of the list for your process instance since it was just executed.
+**3.4.15** Look near the top of the list for your process instance since it was just executed.
 
-**3.4.12** Select the arrow at the right of the instance to see the details:
+**3.4.16** Select the arrow at the right of the instance to see the details:
 
 ![](images/300/image119.png)
 
-**3.4.13** Select the chevron icon just to the right of the History section so you can see a graphical representation of the process history. The green line highlights the path that the process took.
+**3.4.17** Select the chevron icon just to the right of the History section so you can see a graphical representation of the process history. The green line highlights the path that the process took.
 
 ![](images/300/image120.png)
+
+**3.4.18** Select the **Maximize Instance Details** button in the upper right so we can see the entire process flow graph
+
+![](images/300/image126.png)
+
+**3.4.19** Observe the entire PCS process flow.  The _green highlighted lines_ indicate the path of the successful process flow.
+
+![](images/300/image127.png)
 
 Now we want to be sure that the callout made by PCS to ICS worked and that the payload for creating the new order was sent to EBS.
 
