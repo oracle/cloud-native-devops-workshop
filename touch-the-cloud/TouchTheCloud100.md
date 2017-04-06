@@ -2,9 +2,9 @@
 
 Update: April 6, 2017
 
-### 1.	Design Considerations for Mobile App
+This Workshop walks you through the process of developing Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for Touch the Cloud workshop.
 
-This Workshop walks you through the process of developing a Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for Touch the Cloud workshop.
+### 1.	Design Considerations for Mobile App
 
 Following are the assets that we will be creating during this part of the workshop.
 
