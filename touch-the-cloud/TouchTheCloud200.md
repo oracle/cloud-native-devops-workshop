@@ -193,7 +193,7 @@ Don't be alarmed by the notation, it might seem overwhelming at first glance, PC
 
 ![](images/personas/roger_frezia_sales_director.png)
 
-You, as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk, it should be approved by sales director. 
+You, as sales director and process owner wants to change the process to add a comment to the Quote to Order process, to be able to distinguish an order placed in EBS by PCS. We want to change the amount of the implemented rule to determine if sales operations should approve a quote. If the amount is high risk and the amount is bigger than $ 10000, it should be approved by sales director. Else if high risk and the amount is under $10000, then the sales manager should approve the quote. 
   
 We are going through the steps on how to implement these changes in the process.
   
