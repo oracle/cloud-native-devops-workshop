@@ -854,8 +854,7 @@ Remember that this mobile application is for a sales rep that is checking for hi
 
 **3.3.16** Fill in the rest of the quote line with the following information:
 
-  * **Item Number** = *2155*
-  * **Price** = *6666*
+  * **Price** = *13000*  (We want this to be above $10000 so it trigger Sales Director approval in the PCS workflow)
   * **Qty** = *1*
   * **UOM** = *Each*
 
@@ -863,7 +862,7 @@ Remember that this mobile application is for a sales rep that is checking for hi
 
 ![](images/300/image102.png)
 
-**3.3.18** Select `Tab 2` in the **Customer Summary** page to see the quote line just saved
+**3.3.18** Select `Quote Lines` tab in the **Customer Summary** page to see the quote line just saved
 
 ![](images/300/image111.png)
 
@@ -891,41 +890,61 @@ Now we will check in PCS to ensure that the process workflow was initiated.
 
 ![](images/300/image114.png)
 
-**3.4.4** First, the quote needs to be approved by the "Sales Operations" role
+**3.4.4** First, the quote needs to be approved by the "Sales Operations" role.  In Lab 200, we had added our user (`demo.userXX`) to all 3 of the roles in our PCS process: "Sales Operations", "Sales Manager", and "Sales Director".
 
-`PUT THE IMAGE HERE, etc...`
+Click on the task so we can see the approval form.
 
-**3.4.4** Since this order was more than $5000, it will have been routed to the Sales Director role in the PCS process.
+![](images/300/image121.png)
 
-**3.4.5** In the Tasks window, you should see a new PCS process for the Sales Director
+**3.4.5** The Quote form will be shown so you can review that the data from the mobile application came through.  Note the _Account Name_ and _Price_ match what you put into the mobile application.
 
-**3.4.6** Select the arrow at the right of the PCS instance to see the details of the form while deciding whether to approve this quote or not.
+**3.4.6** After reviewing the quote, select the **Approve** button to send this process further down the workflow.
 
-![](images/300/image115.png)
+![](images/300/image122.png)
 
-**3.4.7** Review the quote as shown in the form. Since this seems to be reasonable, select the Approve button on the top of the form
+**3.4.7** The previous task (Sales Operations Approval) will disappear from the tasklist.  Click on the **Refresh** icon in order to update the tasklist.  
 
-![](images/300/image116.png)
+![](images/300/image123.png)
 
-**3.4.8** This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
+**3.4.8** Since this order was more than $10000, it will have been routed to the Sales Director role in the PCS process.
 
-**3.4.9** Select the **Tracking** icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
+**3.4.9** Since you have "Sales Director" role, you should see another task show up in the tasklist for a secondary large quote order approval.
+
+![](images/300/image124.png)
+
+**3.4.10** Just like you did as "Sales Operations", the Quote form will be shown so you can review that the data from the previous approval came through.
+
+**3.4.11** After reviewing the quote, select the **Approve** button to send this quote over to EBS to create an order.
+
+![](images/300/image125.png)
+
+**3.4.12** This was the last approval needed in the process so you won’t see any more tasks for that process showing up in the tasklist.
+
+**3.4.13** Select the **Tracking** icon on the top of the PCS Workspace so we can see the details of the entire process just completed.
 
 ![](images/300/image117.png)
 
-**3.4.10** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown.
+**3.4.14** Select the **Completed** checkbox - by default because only the `In Progress`, `Suspended`, and `Completed` are shown by default.
 
 ![](images/300/image118.png)
 
-**3.4.11** Look near the top of the list for your process instance since it was just executed.
+**3.4.15** Look near the top of the list for your process instance since it was just executed.
 
-**3.4.12** Select the arrow at the right of the instance to see the details:
+**3.4.16** Select the arrow at the right of the instance to see the details:
 
 ![](images/300/image119.png)
 
-**3.4.13** Select the chevron icon just to the right of the History section so you can see a graphical representation of the process history. The green line highlights the path that the process took.
+**3.4.17** Select the chevron icon just to the right of the History section so you can see a graphical representation of the process history. The green line highlights the path that the process took.
 
 ![](images/300/image120.png)
+
+**3.4.18** Select the **Maximize Instance Details** button in the upper right so we can see the entire process flow graph
+
+![](images/300/image126.png)
+
+**3.4.19** Observe the entire PCS process flow.  Note again that the _green highlighted lines_ indicate the path of the successful process flow.
+
+![](images/300/image127.png)
 
 Now we want to be sure that the callout made by PCS to ICS worked and that the payload for creating the new order was sent to EBS.
 
@@ -945,7 +964,7 @@ Now we want to be sure that the callout made by PCS to ICS worked and that the p
 
    ![](images/300/image105.png)
 
-**3.5.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment *Comment from PCS* was sent over to ICS from PCS
+**3.5.4** Select the *Business Identifiers* icon on the upper right of the integration and make sure that the comment was sent over to ICS from PCS - this comment was the `mcs_id` variable from the MCS API which should be `UserXX` where XX is your user number.
 
    ![](images/300/image106.png)
 
@@ -964,6 +983,8 @@ Now we want to be sure that the callout made by PCS to ICS worked and that the p
    ![](images/300/image108.png)
 
 **3.6.3** Examine the list in the *Open Orders* report and verify that your new order shows up in the list.
+
+Note that the _Order Amount_ shown is larger than that of the quote because of shipping costs and taxes that were added automatically by EBS .
 
    ![](images/300/image109.png)
 
