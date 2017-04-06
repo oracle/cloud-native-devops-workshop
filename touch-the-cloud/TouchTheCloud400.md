@@ -46,7 +46,7 @@ Each step identify the role, and what the user in that specific role is trying t
 
 ![](images/400/Picture2.png)
 
-**1.4** Feel free to look at your current Processes, by clicking on the Open, Workload, Trend and Close graphs.
+**1.4** Feel free to look at your current Processes, by clicking on the `Open`, `Workload`, `Trend` and `Close` graphs.
 
 Sample Trend Graph:
 
@@ -78,7 +78,7 @@ In the next section we are going to define what should be capture for each proce
 
 **2.4** In this step we are going to create a measure and dimension.
 
-**2.5** Click on the white plus sign, next to Search, and select Measure from the list
+**2.5** Click on the white plus sign, next to Search, and select _Measure_ from the list
 
 ![](images/400/Picture5.png)
 
@@ -110,45 +110,45 @@ In the next section we are going to define what should be capture for each proce
 
 ![](images/400/Picture7c.png)
 
-**2.6** Next step is deploy the changed application. Click on the **Save** button, then **Publish**
+**2.13** Next step is deploy the changed application. Click on the **Save** button, then **Publish**
 
 ![](images/400/Picture8.png)
 
-**2.7** Create a new snapshot to deploy
+**2.14** Create a new snapshot to deploy
 
 ![](images/400/Picture9.png)
 
-**2.8** Click on Test
+**2.15** Click on Test
 
 ![](images/400/Picture10.png)
 
-**2.9** Once again, ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
+**2.16** Once again, ensure that the process is in *Edit* mode by selecting the pencil icon in the top middle of the editor window.  If the process is not in edit mode, it will be shown in *Viewing* mode as shown below:
 
 ![](images/400/Picture16.png)
 
-**2.10** Go ahead and do the deployment of your changed application, by clicking on the bottom deploy icon
+**2.17** Go ahead and do the deployment of your changed application, by clicking on the bottom deploy icon
 
 ![](images/400/Picture11.png)
 
-**2.11** Add yourself to all the roles, to allow you to act as all the different roles in the process flow.
+**2.18** Add yourself to all the roles, to allow you to act as all the different roles in the process flow.
 
 ![](images/400/Picture12.png)
 
-**2.13** Wait for the deployment to finish, then select the **OK** button on the _Application Deployed Successfully_ dialog.
+**2.19** Wait for the deployment to finish, then select the **OK** button on the _Application Deployed Successfully_ dialog.
 
 ![](images/400/Picture13.png)
 
-**2.12** After the deployment completed, go back to the PCS Workspace, and then Dashboards. 
+**2.20** After the deployment completed, go back to the PCS Workspace, and then Dashboards. 
 
-**2.13** Select the Business Analytics Tab, then select the big green `Get Started` button in the middle of the screen.  Note that if this isn't your first query you won't get the big green button.
+**2.21** Select the Business Analytics Tab, then select the big green `Get Started` button in the middle of the screen.  Note that if this isn't your first query you won't get the big green button.
 
 ![](images/400/Picture17.png)
 
-**2.14** Create a new report, with the following values
+**2.22** Create a new report, with the following values
 
 ![](images/400/Picture14.png)
 
-**2.15** Click on Untitled, and change the report name to Total Quotes per Week and click on save
+**2.23** Click on Untitled, and change the report name to Total Quotes per Week and click on save
 
 ![](images/400/Picture15.png)
 
