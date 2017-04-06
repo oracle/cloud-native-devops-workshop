@@ -52,7 +52,7 @@ Sample Trend Graph:
 
 ![](images/400/Picture3.png)
 
-    In the next section we are going to define what should be capture for each process instance, to be used in the business analytics graphs/reports.
+In the next section we are going to define what should be capture for each process instance, to be used in the business analytics graphs/reports.
 
 ### **STEP 2**: Defining Analytics Measures
 
