@@ -9,7 +9,7 @@ Update: March 10, 2017
 
 **To View in Interactive Labguide Format:**  
 
-https://pmalan.github.io/Touch-the-Cloud/deep-dive-ics/index.html
+https://pmalan.github.io/Touch-the-Cloud/ics-dev-workshop/index.html
 
 # Deep Dive ICS
 
