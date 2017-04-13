@@ -39,7 +39,7 @@ Although you will login as a single user, you will take on 3 Personas during the
 
     ![](images/100/Picture100-2.png)
 
-- Enter your identity domain and click **Go**. (use **DEVCS_DOMAIN**)
+- Enter your identity domain and click **Go**.
 
     ![](images/100/Picture100-3.png)
 
