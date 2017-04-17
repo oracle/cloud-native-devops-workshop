@@ -82,13 +82,3 @@ The Oracle Public Cloud Cloud Native Microservices workshop is a one day worksho
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 500: Create Marketing Application to View Alphaoffice and Twitter Data
-
-**Documentation**: [CloudNative500.md](CloudNative500.md)
-
-### Objectives
-
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
