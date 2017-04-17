@@ -1,700 +1,552 @@
-![](images/300_orig/PictureLab400.png)  
+![](images/lab400/400_00_01_Lab300TopImage.png)  
 
-Update: February 2, 2017
 
-## Introduction
+Update: April 30, 2017
 
-This is the third of several labs that are part of the **Oracle Public Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+# Introduction
 
-In the previous lab (200), the Java Developer created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
+This is the fourth of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices Workshop**. This workshop walks you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several microservices.
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+In the first lab (100), Lisa the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. The second lab (200) focused on deploying a MySQL database instance in the Oracle Cloud. Lab 300 developed and deployed two microservices to access MySQL database data and to access Twitter feed data. In this fourth lab, you will assume the persona of the UI developer (John Dunbar) who will build a Node.js UI front end application that consumes and displays the data from the two microservices created in Lab 300.
+
+**Please direct comments to: John Hennen ([john.hennen@oracle.com](mailto:john.hennen@oracle.com)).**
 
 ## Objectives
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Access the Oracle Developer Cloud Service
+- Import code from an external Git Repository
+- Import the project into the Brackets code editor, perform edits and push the edits to the repository in the Oracle Cloud
+- Build and deploy the project using the Oracle Developer Cloud Service and the Oracle Application Container Cloud Service
+- Follow the Git methodology for source code control
+- Follow the Agile methodology for project management
 
 ## Required Artifacts
 
-- The following lab an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Brackets text editor.
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. Included in this account is an Oracle Compute Cloud Service that will simulate a client workstation with all necessary client software pre-installed for local code editing.  You will need to install VNC viewer on your personal workstation to access this Compute Cloud Service client. 
 
+# Create Initial Marketing UI Service
 
-# Create Initial Twitter Marketing UI Service
+## Create the initial Git Repository
 
-## Explore Developer Cloud Service
+### **STEP 1**: Review and update the Agile Board
 
-### **STEP 1**: Login to your Oracle Cloud Account
+- This Lab assumes that you completed Lab 100, 200 and 300 and are still connected to the Oracle Cloud, that you're still in the Developer Cloud Service Dashboard, and you're viewing the "Alphaoffice Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
-- If you just completed lab 200, or if you are still logged in as Lisa.Jones, you will need to first sign out before continuing this lab. Sign out by clicking on the user’s name (lisa.jones) at the top right corner of the screen, then selecting **Sign Out** from the dropdown menu.
+    ![](images/lab400/400_01_01_project_console.png)  
 
-    ![](images/300_orig/Picture1.png)  
+- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** (UI developer) as you perform the following steps.
 
-- Now we can login again. From any browser, go to the following URL: https://cloud.oracle.com
+    ![](images/lab400/400_01_02_johndunbar.png) 
 
-- Click **Sign In** in the upper right hand corner of the browser
+- Click on **Agile** on the navigation panel.
 
-    ![](images/300_orig/image003.png)  
-
-- ***IMPORTANT*** - Under My Services, ***ask your instructor*** which **Region** to select from the drop down list, and **click** on the **My Services** button.
-
-    ![](images/300_orig/image004.png)  
-
-- Enter your identity domain and click **Go**
-
-    **NOTE:** the **Identity Domain, User Name and Password** values will be given to you from your instructor.
-
-    ![](images/300_orig/image005.png)  
-
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
-
-    ***NOTE:*** For this lab you will be acting as the JavaScript Developer ***John Dunbar***. As with the previous lab, if you are not able to support multiple users, login as a supported user, and assume the “logical” identify of John Dunbar, the JavaScript Developer.
-
-    ![](images/300_orig/image006.png)  
-
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
-
-    ![](images/300_orig/image007.png)  
-
-### **STEP 2:**	Login to Developer Cloud Service
-
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes issue tracking system, agile development dashboards, code versioning and code review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
-
-- From Cloud UI dashboard click on the **Developer** service. In our example the Developer Cloud Service is named **developer71725**.
-
-    ![](images/300_orig/image008.png)  
-
-- The Service Details page gives you a quick glance of the service status.
-
-    ![](images/300_orig/image009.png)  
-
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will list all projects that you are currently a member.
-
-    ![](images/300_orig/image010.png)  
-
-### **STEP 3**: Review Agile Board
-
-- Click **Twitter Feed Marketing Project** to access the project.
-
-    ![](images/300_orig/image011.png)  
-
-- Click on **Agile** in navigation panel.
-
-    ![](images/300_orig/image012.png)  
-
-- If the **Microservices** is not the default board, click on the current board’s dropdown, select the filter **All**, and click on **Microservices**
-
-    ![](images/300_orig/image013.png)  
+    ![](images/lab400/400_01_03_agilemenuchoice.png)  
 
 - Click on the **Microservices** Board **Active Sprints**.
 
-    ![](images/300_orig/image014.png)  
+    ![](images/lab400/400_01_04_activesprints.png)
 
-## Create Initial Git Repository
+- Focus on the sprints for John Dunbar.
 
-### **STEP 4**: Create Initial Git Repository
+    ![](images/lab400/400_01_05_activesprints0.png)
 
-As in the previous lab, we could start coding this application from scratch at this point. However, one of our colleagues has already begun working on the shell for our web application outside of the Developer Cloud Service. We want to use his work as a starting point and extend it to incorporate our twitter microservices. To pull his code into the Developer Cloud Service, we will clone his external GIT repository. First let’s update our agile board to show that we are working on this task:
+- Designate that Task 5 has moved to **In Progress** by dragging the Task 5 panel into the **In Progress** column.
 
-- Drag and drop **Task 3 - Create Initial GIT Repository for Twitter Marketing UI** into the **In Progress** swim-lane.  Click **OK** on Change Progress popup.
+    ![](images/lab400/400_01_06_sprint31.png)
 
-    ![](images/300_orig/image015.png)  
+- Leave the default values and click **Next**.
 
-    ![](images/300_orig/image016.png)  
+    ![](images/lab400/400_01_07_sprint32.png)
 
-- Click on **Project**.
+- Set the **Time Spent** value to 1 day and click **OK**.
 
-- Click on **New Repository** to create a new Git Repository
+    ![](images/lab400/400_01_08_sprint33.png)
 
-    ![](images/300_orig/image017.png)  
+- The **Active Sprints** screen shows the change.
 
-- In the New Repository wizard enter the following information and click **Create**.
+    ![](images/lab400/400_01_09_sprint34.png)
 
-    **Name:** `TwitterMarketingUIMicroservice`
+### **STEP 2**: Create the new Git repository for the UI code
 
-    **Description:** `Twitter Marketing UI Microservice`
+- Click on **Code** on the navigation panel.
 
-    **Initial content:** Import existing repository and enter the URL: `https://github.com/oraclenassolutionengineering/JETTwitterQuickStart.git`
+    ![](images/lab400/400_02_01_repository1.png)
 
-    ![](images/300_orig/image018.png)  
+- Click the **New Repository** button.
 
-- You have now created a new GIT repository based on an existing repository.
+    ![](images/lab400/400_02_02_repository2.png)
 
-    ![](images/300_orig/image019.png)  
+- In the **New Repository** popup, enter `AlphaofficeUI` and enter a description. Select **Import existing repository**, and enter `https://github.com/johnhennen/AlphaofficeUI` for the outside repository location.  Then click **Create**.
+
+    ![](images/lab400/400_02_03_repository3.png)
+
+- Once all the code files are imported, you will have the file and folder structure below in the **AlphaofficeUI** repository.
+
+    ![](images/lab400/400_02_04_repository4.png)
 
 ## Create Default Build and Deployment Process
 
-### **STEP 5**: Create Default Build Process
+### **STEP 3**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a shell script build process in this section.
+Now that you have the source code in your managed Git repository, you will need to create a build process that will be triggered whenever a commit is made to the master branch. In this step you wil set up a shell script build process.
 
-- Click **Build** to access the build page and click **New Job**.
+- Click **Build** on the navigation panel to access the build page, and then click the **New Job** button.
 
-    ![](images/300_orig/image020.png)  
+    ![](images/lab400/400_03_01_build1.png)
 
-- In the New Job popup enter **Twitter Marketing UI Build** for Job Name and click **Save**.
+- In the New Job popup, enter `BuildUI` for Job Name. Select **Create a free-style job** and click **Save**.
 
-    ![](images/300_orig/image021.png)  
+    ![](images/lab400/400_03_02_build2.png)
 
 - You are now placed into the job configuration screen.
 
-    ![](images/300_orig/image022.png)  
+    ![](images/lab400/400_03_03_build3.png)
 
-- Click the **Source Control** tab. Click Git and select **TwitterMarketingUIMicroservice.git** from the URL drop down.
+- Click the **Source Control** tab. Select **Git** and select **AlphaofficeUI.git** from the dropdown.
 
-    **Note:** Make sure you select the Git repository for the Twitter Marketing UI Microservice.
+    ![](images/lab400/400_03_04_build4.png)
 
-    ![](images/300_orig/image023.png)  
+- Click the **Triggers** tab. Select **Based on SCM polling schedule**.
 
-- Click the **Triggers** tab.  Select Based on **SCM polling schedule**.
+    ![](images/lab400/400_03_05_build5.png)
 
-    ![](images/300_orig/image024.png)  
+- Click the **Build Step** tab. Click the **Add Build Steps** dropdown and select **Execute shell**.
 
-- Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
+    ![](images/lab400/400_03_06_build6.png)
 
-    ![](images/300_orig/image025.png)  
+- For the shell script command enter `npm install`.
 
-- For **Command** enter: `npm install`
+    ![](images/lab400/400_03_07_build7.png)
 
-    ![](images/300_orig/image026.png)  
+- Click the **Post Build** tab. Here select **Archive the artifacts** and select **GZIP** for the Compression Type. Then enter `**/target/*` for the Files To Archive value.
 
-- Click the **Post Build** tab. Check **Archive the artifacts** and enter `**/target/*` for Files to Archive.  Verify **GZIP** in the Compression Type.
+    ![](images/lab400/400_03_08_build8.png)
 
-    ![](images/300_orig/image027.png)  
+- Click the **Save** button in the upper right of the job configuration screen. 
 
-- Click **Save** to complete the configuration. A build should start automatically within a minute or two.  If it does not start automatically, click on the **Build Now** button. The status will change to the following:
+    ![](images/lab400/400_03_09_build9.png)
 
-    ![](images/300_orig/image028.png)  
+- The build process should immediately queue to begin. If not, you can always initiate a build with the **Build Now** button.
 
-- Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Wait for the build to complete before continuing on to the next step, as we need the build artifact to create the deployment configuration.
+    ![](images/lab400/400_03_10_build10.png)
 
-    ![](images/300_orig/image029.png)  
+- After the build, the success status is shown with a check mark in a green circle.
 
-### **STEP 6**: Create Default Deployment Process
+    ![](images/lab400/400_03_11_build11.png)
 
-Now that we have an automated build process, we will set up a deployment configuration that will push our build artifacts to a node.js environment running on the Application Container Cloud Service whenever a successful build occurs.
+### **STEP 4**: Create Default Deploy Process
 
-- Click Deploy to access the Deployment page and click **New Configuration**.
+- Click **Deploy** on the navigation panel to access the Deployments page, and then click the **New Configuration** button.
 
-    ![](images/300_orig/image030.png)  
+    ![](images/lab400/400_04_01_deploy1.png)
 
-- Enter the following data:
+- On the **New Deployment Configuration** popup, Enter `DeployUI` for the **Configuration Name**. Then enter `AlphaofficeUI` as the **Application Name**. The latter will be the name for the application in the Oracle Application Container Cloud Service, and this string will be incorporated into the URL for the deployed application. Select **On Demand** for the Type. And make sure **BuildUI** is selected for Job and **target/msdbw-microserviceui.zip** is selected for Artifact. Click on the **New** button and select **Application Container Cloud** from the dropdown. Then click **Save and Deploy**.
 
-    **Configuration Name:** `TwitterMarketingUIDeploy`
+    ![](images/lab400/400_04_02_deploy2.png)
 
-    **Application Name:** `JETFrontEndApp`
+- Enter the Data Center, Identity Domain, Username and Password you were provided for the Oracle Cloud Service, and then click **Test Connection**.
 
-    ![](images/300_orig/image031.png)  
+    ![](images/lab400/400_04_03_deploy3.png)
 
-- Right of Deployment Target click **New** and select **Application Container Cloud**
+- When this comes back with a **Succssful** status, click **Use Connection**.
 
-    ![](images/300_orig/image032.png)  
+    ![](images/lab400/400_04_04_deploy4.png)
 
-- Enter the following data and click Test Connection. If Successful click Use Connection
+- Make sure you have chosen **Node** for **ACCS Properties**, and then click **Save and Deploy**.
 
-    **Data Center**: `<Your Assigned Datacenter>` ***(Ask instructor if needed)***
+    ![](images/lab400/400_04_05_deploy5.png)
 
-    **Identity Domain**: `<Your Identity Domain>`
+- The Panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
 
-    **Username**: `john.dunbar` **(or your appropriate username if running as single user)**
+    ![](images/lab400/400_04_06_deploy6.png)
 
-    **Password**: `<Supplied Password>`
+- If the arrow is not green but is orange and pointed down ![](images/lab400/400_04_07_deploy7.png), this means the application has not been started.
 
-    ![](images/300_orig/image033.png)  
+- To manually start, stop or redeploy the application in Oracle Application Container Cloud Service, go to the gear dropdown icon for the application, and select the appropriate action.
 
-- Set ACCS Properties to Runtime **Node** and Subscription **Hourly**. Click Type **Automatic**. Select Job **Twitter Marketing UI** Build and select **target/jet-quickstart-client-dist.zip** for Artifact.
+    ![](images/lab400/400_04_08_deploy8.png)
 
-    ![](images/300_orig/image034.png)  
+### **STEP 5**: Update the Agile Active Sprints screen
 
-- Click **Save**
+- Click **Agile** on the navigation panel, and then drag the Task 5 panel from **In Progress** to the **Verify Code** column to signal Lisa, the project manager, that it's time to verify completion of Task 5.
 
-    ![](images/300_orig/image035.png)  
+    ![](images/lab400/400_05_01_sprint34.png)
 
-- Click drop down and select **Start**
+- Leave the default values and click **Next**.
 
-    ![](images/300_orig/image036.png)  
+    ![](images/lab400/400_05_02_sprint35.png)
 
-- Wait until the message **Starting application** changes to **Last deployment succeeded**
+- Set the **Time Spent** value to 1 day and click **OK**.
 
-    ![](images/300_orig/image037.png)  
+    ![](images/lab400/400_05_03_sprint36.png)
 
-## Verify default deployment of Twitter Marketing UI
+- The **Active Sprints** screen shows the change.
 
-### **STEP 7**: Change status to Verified
+    ![](images/lab400/400_05_04_sprint37.png)
 
-Now that we have successfully deployed the build artifact to the Application Container Cloud Service, we will update our agile board to reflect that status. Although the complexity of the next task (verification) is quite simple, we will still move the task to the “Verify Code” column before manually verifying the new functionality.
+### **STEP 6**: Test the New Cloud UI Application
 
-- Click on **Agile**, followed by clicking **Active Sprints**. Drag and drop **Task 3** from **In Progress** to the **Verify Code** column.
+- While still in the **Deploy** screen, right click on the application name **AlphaofficeUI**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
 
-    ![](images/300_orig/image039.png)  
+    ![](images/lab400/400_06_01_getappurl.png) 
 
-- In the Change Progress popup, click on **OK**
+- Paste this URL into the address bar of any browser (such as on your personal workstation), and then navigate to the UI application in the Oracle Application Container Cloud Service. Note that there is no data displayed, because the UI code must be edited to consume and display the microservices data.
 
-    ![](images/300_orig/image040.png)  
+    ![](images/lab400/400_06_02_testclouduiapp.png)  
 
-- The code is now ready for verification before moving to Completed
+### **STEP 7**: Designate That Repository Creation is Completed
 
-    ![](images/300_orig/image041.png)  
+- Briefly assume the persona of Lisa (the project manager) to verify the completion of the repository for the UI application. Drag the Task 5 panel from **Verify Code** to the **Completed** column.
 
-### **STEP 8**: Login to Oracle Application Container Cloud Service
+    ![](images/lab400/400_07_01_sprint37.png)  
 
-- Navigate back to the Oracle Public Cloud tab. Click **Dashboard** to return back to main Cloud Service Dashboard.
+- Leave the default values and click **Next**.
 
-    ![](images/300_orig/image042.png)  
+    ![](images/lab400/400_07_02_sprint38.png)  
 
-- On the Application Container Cloud Service (ACCS) click ![](images/300_orig/image043.png)  and select **Open Service Console**
+- Set the **Time Spent** value to 1 day and click **OK**.
 
-    ![](images/300_orig/image044.png)  
+    ![](images/lab400/400_07_03_sprint39.png)  
 
-- On the ACCS Service Console you can view all the deployed applications including our newly create **JETFrontEndApp**.
+- The **Active Sprints** screen shows the change.
 
-    ![](images/300_orig/image045.png)  
+    ![](images/lab400/400_07_04_sprint40.png)  
 
-- Click on URL to bring up the application.
+# Edit the UI Code to Consume and Display the Microservices Data
 
-    ![](images/300_orig/image046.png)  
+### **STEP 8**: Designate Feature 6 is **In Progress**
 
-### **STEP 9**: Complete Task
+- At this point you will return to the persona of UI developer John Dunbar to designate that Feature 6 (Create Twitter Marketing UI) has been moved to **In Progress**. Do this by dragging the Feature 6 panel from **To Do** to the **In Progress** column.
 
-We have now verified that our application has been deployed and is functional. To finish up this part of the lab we will want to mark the Issue as completed in our Sprint.
+    ![](images/lab400/400_08_01_sprint41.png)  
 
-- Back in the Developer Cloud Service, click **Agile**, followed by clicking **Active Sprints**.
+- Leave the default values and click **Next**.
 
-- Drag and drop **Task 3** from **Verify Code** to **Completed**.
+    ![](images/lab400/400_08_02_sprint42.png)  
 
-    ![](images/300_orig/image047.png)  
+- Set the **Time Spent** value to 1 day and click **OK**.
 
-- In the Change Progress popup click **OK**
+    ![](images/lab400/400_08_03_sprint43.png) 
 
-    ![](images/300_orig/image048.png)  
+## Edit the UI Code on the Client Workstation
 
-- Your Sprint should now look like the following:
+### **STEP 9**: Open the Brackets Code Editor
 
-    ![](images/300_orig/image049.png)  
+At this point you will be moving to the client workstation. (This is the Oracle Compute Cloud Service with pre-installed client software that simulates a client workstation.) 
 
-# Extend default application to Display Twitter Feed
+- Start the VNC Viewer software on your personal workstation, and enter the URL you have been provided (including ":" with the port number at the end). Also enter the username and password provided to you when prompted. After login, you are a user on a UNIX client workstation. 
 
-Now that we have our default application we want to extend this application to add the display of the twitter feed. For this task we will use Brackets text editor to pull down the code from Developer Cloud Service and add in our modifications. Once the new code is ready for deployment we will check the code in on a branch so that it can go through a code review prior to build and deployment.
+    ![](images/lab400/400_09_01_vncviewer.png)
 
-### **STEP 10**: Move Task to In Progress
+- First open a terminal session on the workstation.
 
-To start this part of the lab we will want to mark the Issue as In Progress in our Sprint.
+    ![](images/lab400/400_09_02_startterminal.png)
 
-- Back in the Developer Cloud Service, click **Agile**, followed by clicking **Active Sprints**.
+Your first task is to create (or locate) a working folder for the local AlphaofficeUI repository. This is similar to what you did in Lab 300 for the AlphaofficeMySQLREST repository. Once an empty folder is created or located, you can move on to the next step.
 
-- Drag and drop **Feature 4** from **To Do** to **In Progress**.
+- Click the Brackets icon on the workstation desktop to start the Brackets code editor.
 
-    ![](images/300_orig/image050.png)  
+    ![](images/lab400/400_09_03_bracketsicon.png)
 
-- In the Change Progress popup click **OK**
+- In the upper left, click on the dropdown for folder location and then select **Open Folder** from the dropdown.
 
-    ![](images/300_orig/image051.png)  
+    ![](images/lab400/400_09_04_bracketsopenfolder1.png)
 
-## Clone Project to Brackets Text Editor
+- Navigate the ensuing popups to select the correct folder (the folder you just created or located).
 
-### **STEP 11**:	Start Brackets Text Editor
+    ![](images/lab400/400_09_05_bracketsopenfolder2.png)
 
-- Start **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
+- In the end you will have the correct folder displayed in the upper left.
 
-**Note**: If you do not have Brackets installed please follow the appendix.
+    ![](images/lab400/400_09_06_bracketsrightfolder.png)
 
-- Right click **Brackets** desktop icon and select **Open**
+### **STEP 10**: Clone a repository from the Oracle Developer Cloud Service repository
 
-    ![](images/300_orig/image052.png)  
+- Click the Git icon to make sure the Git panel is open at the bottom of the Brackets screen.
 
-- Brackets should open with the **TwitterMarketingUI** folder already loaded.
+    ![](images/lab400/400_10_01_giticon.png)
 
-    ![](images/300_orig/image053.png)  
+- Click the **Clone** button at the top of the Git panel.
 
-### **STEP 12**: Copy GIT URL
+    ![](images/lab400/400_10_02_bracketsgitopen.png)
 
-- Back in Developer Cloud Service, click on **Project**. On right side, select the URL for **TwitterMarketingUIMicroservice.git**. Right click and select **Copy**
+At this point you will be returning very briefly to the Oracle Developer Cloud Service console. 
 
-    ![](images/300_orig/image054.png)  
+- Click **Code** on the navigation panel.
 
-### **STEP 13**: Clone GIT Repository
+    ![](images/lab400/400_10_03_codemenuchoice.png)
 
-- Back in the Brackets editor, on the right hand side, click ![](images/300_orig/image055.png) GIT icon.
+- In the **Repositories** panel, navigate to the URL for the AlphaofficeUI.git repository. Copy this URL 
 
-  ![](images/300_orig/image056.png)  
+    ![](images/lab400/400_10_04_getDCSgiturl.png)
 
-- Click **Clone** and paste in Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
+At this point you will be returning to the Brackets code editor on the client workstation.
 
-    ![](images/300_orig/image057.png)  
+- Since you just clicked the **Clone** button in the Brackets editor, the **Clone repository** popup is displayed. Paste the Oracle Cloud repository URL into the field labeled **Enter Git URL of the repository you want to clone:**. Enter the Username and Password for your Oracle Cloud account. Then click **OK**.
 
-- While the clone is running a dialog box will show you the progress.
+    ![](images/lab400/400_10_05_clone1.png) 
 
-    ![](images/300_orig/image058.png)  
+- Note the cloning **in progress** message.
 
-- You now have a local copy of the repository.
+    ![](images/lab400/400_10_06_clone2.png)
 
-    ![](images/300_orig/image059.png)  
+- When the cloning is successfully completed, the code files and folders for the local repository will be displayed in the Brackets editor.
 
-### **STEP 14**: Run Live Preview.
+    ![](images/lab400/400_10_07_clone3.png)
 
-- Before we make our code changes lets first run the code locally.
+### **STEP 11**: Test the Local Code
 
-- Expand **doc_root** and select i**ndex.html**
+At this point you will be testing the code running on the client workstation.
 
-    ![](images/300_orig/image060.png)  
+- Open a terminal session on the client workstation.
 
-- On right hand panel, click ![](images/300_orig/image061.png) Live Preview. This will start your JavaScript application in a browser. Once you verify the application is working you can close the browser.
+    ![](images/lab400/400_11_01_startterminal.png)
 
-![](images/300_orig/image062.png)  
+- Navigate to the folder where the **server.js** file is located in the local AlphaofficeUI repository. Then enter the command `node server.js` and press **Enter**.
 
-## Add Code to display Twitter Feed in Table Format
+    ![](images/lab400/400_11_02_startnode.png)
 
-### **STEP 15**:	Modify graphics.html
+The terminal session will appear to suspend without returning a new command prompt. At this point you may minimize the terminal window because the Node.js listener for server.js is running in the background.
 
-- Expand **doc_root -> js -> views** and click **graphics.html**.
+- Enter the url `localhost:8001` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**.
 
-    ![](images/300_orig/image063.png)  
+    ![](images/lab400/400_11_03_testlocal.png)
 
-- Replace the existing code with the code block below:
+Again note that there is no data displayed because the UI code must be edited to consume and display the microservices data.
 
-```
-<h1>Graphics Content</h1>
+## Edit and Test the Local Version of the Code
 
-<table id="table" summary="Tweet List" data-bind="ojComponent:{component:'ojTable',
-        data: tweets,
-        columns: [
-               {headerText: 'User Name', field: 'User', id: 'name', sortable: 'enabled'},
-               {headerText: 'User Location', field: 'Location', id: 'location', sortable: 'enabled'},
-               {headerText: 'Source', field: 'Source', id: 'source', sortable: 'enabled'},
-               {headerText: 'Tweet', field: 'Text', id: 'text'}
-               ],
-        rootAttributes: {'style':'width: 100%; height:100%;'},
-        scrollPolicy: 'loadMoreOnScroll',
-        scrollPolicyOptions: {'fetchSize': 10}}">
-</table>
-```
+### **STEP 12**: Edit the Local Version of the Code
 
-![](images/300_orig/image064.png)  
+- In the left code repository panel, click on the **microserviceui.js** file in the **doc_root** folder.
 
-### **STEP 16**: Modify graphics.js
+    ![](images/lab400/400_12_01_editnode1.png)
 
-- Expand **doc_root -> js -> viewModels** and click **graphics.js**.
+In the section highlighted within the red rectangle, notice the two variables **dbServiceURL** and **tweetServiceBaseURL**. These variables are currently pointing to localhost URLs for microservices that would run on the client workstation. These values must be updated to the working URLs for the Oracle Application Container Cloud Service applications for the two microservices. To obtain these, go back to the Oracle Developer Cloud Service services console. Then click **Deploy** on the navigation panel.
 
-    ![](images/300_orig/image065.png)  
+- Right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the MySQL microservice. Repeat this step for the application named **AlphaofficeTwitterREST**.
 
-- Add the code block below to the bottom on the **graphics.js** file:
+    ![](images/lab400/400_12_02_editnode2.png)
 
-```
-/*global $, define, console*/
-/*jslint sloppy:true*/
+- Paste these copied URLs as values for the variables in the microserviceui.js code. Paste the URL for **AlphaofficeMySQLREST** into the value for the variable **dbServiceURL**. Paste the URL for **AlphaofficeTwitterREST** into the value for the variable **tweetServiceBaseURL**. 
 
-define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
+    ![](images/lab400/400_12_03_editnode3.png)
 
-    function mainContentViewModel() {
+- Note the code section with critical code commented out.
 
-        // change this root variable to point to YOUR environment
-        var root = 'https://javatwittermicroservice-metcsgse00210.apaas.em2.oraclecloud.com/',
-            self = this,
-            uri = 'statictweets/',
-            prettySource = function (source) {
-                return source.substring(source.indexOf('>') + 1, source.lastIndexOf('<'));
-            },
-            url = root + uri;
+    ![](images/lab400/400_12_04_editnode4.png)
 
-        self.items = ko.observableArray([]);
-        self.tweets = new oj.ArrayTableDataSource(self.items, {
-            idAttribute: 'Id'
-        });
+- Remove the `/*` and `*/` strings from the code to uncomment the code section.
 
-        $.ajax({
-            url: url,
-            method: 'GET'
-        }).success(function (result) {
-            console.log(result.tweets);
-            var items = self.items();
-            ko.utils.arrayForEach(result.tweets, function (value) {
-                // make sure this is a creation tweet
-                if (!!value.user) {
-                    items.push({
-                        Id: value.id,
-                        Location: value.user.location,
-                        Text: value.text,
-                        Source: prettySource(value.source),
-                        User: value.user.name
-                    });
-                }
-            });
-            self.items.valueHasMutated();
-        });
-    }
-    return mainContentViewModel;
-});
-```
+    ![](images/lab400/400_12_05_editnode5.png)
 
-- Back in the browser; navigate back to the Application Container Cloud Service service console. Copy URL for **JavaTwitterMicroservice** that was created in Lab 200.
+- From the Brackets **File** menu, click **Save** to save your edits to **microserviceui.js**.
 
-    ![](images/300_orig/image066.png)  
+    ![](images/lab400/400_12_06_editnode6.png)
 
-- Replace existing URL with your URL for the **root variable**. You must **append** a '`/`' (backslash) to the **end of the URL**.
+### **STEP 13**: Test the Edited Code
 
-    ![](images/300_orig/image067.png)  
+- Close the terminal session that you just opened in **Step 11**. You must close this in order to start the Node.js code with the new edits.
 
-- Completed graphics should look something like the image below:
+- Open a terminal session on the client workstation.
 
-    ![](images/300_orig/image068.png)  
+    ![](images/lab400/400_13_01_startterminal.png)
 
-- Save all files by clicking **File -> Save All**
+- Restart the Node.js module. To do this, navigate to the folder where the **server.js** file is located in the local AlphaofficeUI repository. Then enter the command `node server.js` and press **Enter**.
 
-![](images/300_orig/image069.png)  
+    ![](images/lab400/400_13_02_startnode.png)
 
-### **STEP 17**: Test new changes
+The terminal session will appear to suspend without returning a new command prompt. At this point you may minimize the terminal window because the Node.js listener for server.js is running in the background.
 
-- Click ![](images/300_orig/image070.png) Live Preview to test out the new changes.
+- Enter the url `localhost:8001` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**.
 
-- Click ![](images/300_orig/image071.png) and select **Graphics**
+    ![](images/lab400/400_13_03_testnodeafteredit.png)
 
-    ![](images/300_orig/image072.png)
+Notice that after the edit, the local version of the UI application displays all the data from the two Oracle Cloud microservices. (If you do not see this data, make sure both microservices are running in the Oracle Application Container Cloud Service.)
 
-- In the graphics sections you can now see all the twitter feed data:
+# Create a New Branch and Push the Edits to the Cloud
 
-    ![](images/300_orig/image073.png)
+## Create and Commit a New Branch
 
-# Create a new Branch and Commit Code
+### **STEP 14**: Create a new Branch and Commit the Changes
 
-## Create a Branch and Commit Code
+- Click on the **master** branch dropdown in the upper left panel of Brackets.  Then select **Create New Branch**.
 
-### **STEP 18**: Create a new Branch and Commit Code
+    ![](images/lab400/400_14_01_createbranch1.png)
 
-- First we need to create a new branch to check in all of our changes for this feature. In the left hand navigation panel, select **master** and click **Create new branch**.
+- In the **Create new branch...** popup, enter the branch name `microserviceuijsV2` and click **OK**.
 
-    ![](images/300_orig/image074.png)
+    ![](images/lab400/400_14_02_createbranch2.png)
 
-- In popup window, **enter** `Feature4` for branch name and click **OK**.
+- You may need to click the Git icon ![](images/lab400/400_14_03_giticon.png) to display the Git panel at the bottom of the Brackets editor.
 
-    ![](images/300_orig/image075.png)
+- Select the **Staged, Modified** entry for **doc_root/microserviceui.js** and click **Commit**.
 
-- Click  Git ![](images/300_orig/image076.png) icon. Check the box next to **Commit** to select all modified files.
+    ![](images/lab400/400_14_04_createbranch4.png)
 
-    ![](images/300_orig/image077.png)
+- Enter a comment for the commit and click **OK**.
 
-- Click **Commit**.
+    ![](images/lab400/400_14_05_createbranch5.png)
 
-- In popup enter the **comment** `Added code to display twitter feed in table format` and click **OK**. This will commit the changes to your local Git repository.
+- May need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.)
 
-    ![](images/300_orig/image078.png)
+    ![](images/lab400/400_14_06_createbranch6.png)
 
-- Click ![](images_orig/300/image079.png) Git Push icon.
+## Push the Edited Branch to the Cloud
 
-- In popup window leave all defaults and click **OK**
+### **STEP 15**: Push the Branch Commits
 
-    ![](images/300_orig/image080.png)
+- Click on the **Git Push Icon**.
 
-- Once Git Push completes click **OK**.
+    ![](images/lab400/400_15_01_gitpushicon.png)
 
-    ![](images/300_orig/image081.png)
+- Enter your cloud username and password that you were given, and click **OK**.
 
-### **STEP 19**: Complete the Display Twitter Feed Task
+    ![](images/lab400/400_15_02_createbranch9.png)
 
-- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
+- The edited branch within the local Git repository has been successfully pushed to the repository in the Oracle Developer Cloud Service. Click **OK**.
 
-- Drag and drop **Feature 4** from **In Progress** to **Verify Code**.
+    ![](images/lab400/400_15_03_createbranch10.png)
 
-    ![](images/300_orig/image082.png)
+### **STEP 16**: Designate That the UI Code is Ready for Verification
 
-- In the Change Progress popup click **OK**.
+- Return to the Developer Cloud Service services console, and click **Agile** on the navigation panel.
 
-    ![](images/300_orig/image083.png)
+    ![](images/lab400/400_16_01_agilemenuchoice.png) 
 
-## Create Merge Request
+- Drag the Feature 6 panel from **In Progress** to the **Verify Code** column to designate to the project manager (Lisa) that the code is ready for verification.
 
-### **STEP 20**: Review Sprint Status and create Merge Request
+    ![](images/lab400/400_16_02_sprint44.png)  
 
-- Click on the **Code** tab, select the **Feature4** branch and then click on the **Commits** sub tab. Now view the recent commit that we made to branch from Brackets.
+- Leave the default values and click **Next**.
 
-    ![](images/300_orig/image084.png)
+    ![](images/lab400/400_16_03_sprint45.png)
 
-- Now that John Dunbar has completed the task of displaying twitter feed in table format, a Merge Request can be created by John and assigned to Lisa Jones. Click on **Merge Requests**, and then click on the **New Request button**.
+- Set the **Time Spent** value to 1 day and click **OK**.
 
-    ![](images/300_orig/image085.png)
+    ![](images/lab400/400_16_04_sprint46.png) 
 
-- Enter the following information into the New Merge Request and click **Next**
+# Merge the Code Edits and Rebuild and Redeploy the UI Application
 
-    **Repository:** `TwitterMarketingUIMicroservice.git`
+## Merge the Code Edits
 
-    **Target Branch:** `master`
+### **STEP 17**: Create a Merge Request as John Dunbar to Merge the Code Edits
 
-    **Review Branch:** `Feature4`
+It's time to follow the code repository push to the Oracle Developer Cloud Service.
 
-    ![](images/300_orig/image086.png)
+- Click **Code** on the navigation panel.
 
-- Enter the following information into Details and click **Create**
+    ![](images/lab400/400_17_01_codemenuchoice.png) 
 
-    **Summary:** `Merge Feature 4 into master`
+- Choose **AlphaofficeUI.git** as the repository.
 
-    **Reviewers:**  `Lisa Jones` (or current user in non-multi user env)
+    ![](images/lab400/400_17_02_merge1.png) 
 
-    ![](images/300_orig/image087.png)
+- Choose **microserviceuijsV2** as the branch. (This is the branch that has the code edits which we wish to merge with the master branch.)
 
-- In the **Write** box, enter the following comment and then click on the **Comment** button to save
+    ![](images/lab400/400_17_03_merge2.png) 
 
-    **Comment:** `I added table of Twitter feed to graphics tab`
+- Click the **Commits** button to view recent commits. Here we again see that the push we made from the Brackets code editor on the client workstation has succeeded. The edited files are now in the **microserviceuijsV2** branch of the DCS repository. They're all ready to be merged into the **master** branch. 
 
-    ![](images/300_orig/image088.png)
+    ![](images/lab400/400_17_04_merge3.png)
 
-## Merge the Branch as Lisa Jones
+But remember, we are following a rigorous Git-based source control methodology. We cannot have developers like John Dunbar make changes to the main branch of the code. 
 
-In the following steps “Lisa” will merge the branch created by “John” into the master.
+- Instead John must make a **merge request** to Lisa the project manager.
 
-***NOTE: If you are using a single user environment, you will skip the next step, and go to the following step titled: “Merge Requests”***
+    ![](images/lab400/400_17_05_johnlisa.png)
 
-### **STEP 21**: Sign Out as John Dunbar and Sign In as Lisa Jones
+- Click **Merge Request** on the navigation panel, and then click the **New Merge Request** button.
 
-- Click on the **john.dunbar** dropdown located in the top right corner of the screen. Select **Sign Out**.
+    ![](images/lab400/400_17_06_merge4.png)
 
-    ![](images/300_orig/image089.png)
+- On the **New Merge Request** popup, choose the **Repository**, **Target Branch** and **Review Branch**. Then click **Next**.
 
-- Following the previously documented steps, go to the URL: http://cloud.oracle.com, click on **Sign In** found on the Top Right corner of the window. As previously performed, select your **correct Data Center**, click on the **My Services** button, enter the correct **Identity Domain** and click on **Go**.
+    ![](images/lab400/400_17_07_merge5.png)
 
+- On the second popup, add a summary description and select a reviewer. Then click **Next**. 
 
-- Enter `lisa.jones` for the username, and enter your password. Click on **Sign In**.
+    ![](images/lab400/400_17_08_merge6.png)
 
-    ![](images/300_orig/image090.png)
+- On the third popup, click **Create**.
 
-- When the Dashboard is displayed, click on the **Developer Cloud Service**.
+    ![](images/lab400/400_17_09_merge7.png)
 
-    ![](images/300_orig/image091.png)
+### **STEP 18**: Perform the Merge as Lisa the Project Manager
 
-- From the Developer Cloud Service Dashboard, click on the **Open Service Console** button
+- For this step, you will briefly assume the persona of Lisa, the project manager.
 
-    ![](images/300_orig/image092.png)
+    ![](images/lab400/400_18_01_lisa.png)
 
-- Select the **Twitter Feed Marketing Project**
+- As Lisa, click the **Assigned To Me** button. Then click the merge request just submitted by John Dunbar.
 
-    ![](images/300_orig/image093.png)
+    ![](images/lab400/400_18_02_merge8.png)
 
-### **STEP 22**: Merge Requests
+- Review the changed code, and note how the changes reflect the edits John Dunbar made in the Brackets code editor on the client workstation. As Lisa, approve and process the merge by clicking the **Merge** button.
 
-- Click on **Merge Requests**. Select the **Assigned to Me** search. After the search completes, click on the **Merge Feature 4 into master** assigned request.
+    ![](images/lab400/400_18_03_merge10.png)
 
-    ![](images/300_orig/image094.png)
+- On the popup click **Merge**.
 
-- Once the request has loaded, select the **Changed Files tab**. As the persona Lisa, you will now have the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
+    ![](images/lab400/400_18_04_merge11.png)
 
-    ![](images/300_orig/image095.png)
+- Click **Build** on the navigation panel. Processing the merge automatically initiates a rebuild process. Note how the **BuildUI** job has been placed in the queue.
 
-- Click on the **Merge** button.
+    ![](images/lab400/400_18_05_merge12.png)
 
-    ![](images/300_orig/image096.png)
+- The rebuild begins.
 
-- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+    ![](images/lab400/400_18_06_merge13.png)
 
-    ![](images/300_orig/image097.png)
+- The rebuild has successfully completed.
 
-- Now that the code has been committed to the Developer Cloud Service repository, the build and deployment will automatically start. Click on **Build**, and you should see a **Twitter Marketing UI Build** in the Queue
+    ![](images/lab400/400_18_07_merge14.png)
 
-    ![](images/300_orig/image098.png)
+- Click **Deploy** on the navigation panel. Once the rebuild is complete, a redeploy will also automatically start. The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
 
-- Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
+    ![](images/lab400/400_18_08_merge15.png)
 
-    ![](images/300_orig/image099.png)
+- If the arrow is not green but is orange and pointed down ![](images/lab400/400_18_09_merge16.png), this means the application has not been started.
 
-- Click on Deploy. Wait for the **Deploy** Status to change to **Deployment update in progress**, and then change to **Last deployment succeeded** – **Just now**.
+- To manually start, stop or redeploy the application in Oracle Application Container Cloud Service, go to the gear dropdown icon for the application, and select the appropriate action.
 
-    ![](images/300_orig/image100.png)
+    ![](images/lab400/400_18_10_merge17.png)
 
-## Test the JETFrontEndAPP UI in the Cloud
+## Test the Edited Code, and Designate the Edits and Merge Have Been Completed
 
-### **STEP 23**: Merge Requests
+### **STEP 19**: Test the Completed Code
 
-- Once the service has successfully deployed, click on the **JETFrontEndApp** link
+- Click **Code** on the navigation panel.
 
-    ![](images/300_orig/image101.png)
+    ![](images/lab400/400_19_01_codemenuchoice.png) 
 
-- When the new browser tab loads, click **Graphics** to display twitter feed data.
+- Right click on the application name **AlphaofficeUI**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
 
-    ![](images/300_orig/image102.png)
+    ![](images/lab400/400_19_02_getappurl.png)
 
-- To complete the Sprint Feature, click on **Agile** in the Twitter Feed Marketing Project Dashboard. Then click on the **Active Sprints** button.
+- Paste this URL into the address bar of any browser (such as on your personal workstation), and then navigate to the UI application in the Oracle Application Container Cloud Service. Note that all data from the microservices is now displayed. The application is fully operational.
 
-    ![](images/300_orig/image103.png)
+    ![](images/lab400/400_19_03_cloudtestbrowser.png)
 
-- Complete the feature request by Dragging and Dropping **Feature 4** (Display Twitter Feed in Table Format) from the **Verify** Column to the **Completed** Column.
+### **STEP 20**: Designate the Edits are Complete
 
-    ![](images/300_orig/image104.png)
+- Again assume the persona of Lisa, the project manager. As Lisa you will verify that the UI code has been completed. Click **Agile** on the navigation panel.
 
-- Set the Status to **VERIFIED – FIXED** and click **OK**
+    ![](images/lab400/400_20_01_agilemenuchoice.png)
 
-    ![](images/300_orig/image105.png)
+- Drag the Feature 6 panel from **In Progress** to the **Completed** column.
 
-- You are now ready to move to the next lab.
+    ![](images/lab400/400_20_02_sprint47.png)
 
-# Appendix 1 – Installing Brackets and Git
+- Leave the default values and click **Next**.
 
-Download and Install Git
+    ![](images/lab400/400_20_03_sprint48.png)
 
-### **STEP 24**: Download Git
+- Set the **Time Spent** value to 1 day and click **OK**.
 
-- Go to the following URL: https://git-scm.com/downloads
+    ![](images/lab400/400_20_04_sprint49.png)
 
-    ![](images/300_orig/image106.png)
+- The UI edits have been completed and merged, and the Agile board has been updated. You have successfully completed Lab 400!
 
-- Select you OS. In our example we will show how to install on Windows. Click **Windows** Download and click **Save File**
+    ![](images/lab400/400_20_05_sprint50.png)
 
-    ![](images/300_orig/image107.png)
-
-- Select you download location and click **Save**. We will use D:\Software
-
-    ![](images/300_orig/image108.png)
-
-- Open Windows Explorer and navigate you where you downloaded the Git executable. Double click on Git executable to start install process.
-
-    ![](images/300_orig/image109.png)
-
-- Run through the installation process
-
-    ![](images/300_orig/image110.png)
-
-## Download and Install Brackets Text Editor
-
-### **STEP 25**: Download Brackets Text Editor
-
-- Go to the following URL: http://brackets.io
-
-    ![](images/300_orig/image111.png)
-
-- Click **Download Brackets 1.7** then click **Save File**
-
-    ![](images/300_orig/image112.png)
-
-- Select you download location and click **Save**. We will use D:\Software
-
-    ![](images/300_orig/image113.png)
-
-- Open Windows Explorer and navigate you where you downloaded Brackets. Double click on Git executable to start install process.
-
-    ![](images/300_orig/image114.png)
-
-- Run through the installation process
-
-## Start Brackets and Configure Git
-
-### **STEP 26**: Start Brackets and Configure Git
-
-- Create directory T**witterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
-
-    ![](images/300_orig/image115.png)
-
-- Select **File -> Extension Manager...**
-
-- In search window enter `GIT`. Click **Install** for **Brackets Git**
-
-    ![](images/300_orig/image116.png)
-
-- After install completes, leave defaults for Git Settings and click **Save**
-
-    ![](images/300_orig/image117.png)
-
-- Click **OK** to restart Brackets
-
-    ![](images/300_orig/image118.png)
-
-- You will now see the Git icon on the right hand panel
-
-    ![](images/300_orig/image119.png)
