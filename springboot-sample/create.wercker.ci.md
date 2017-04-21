@@ -25,8 +25,6 @@ The key components of Wercker:
 + All Wercker pipelines execute inside a **Docker container** and every build artefact can be a Docker container.
 + With Wercker you can **push your images to any container registry** public or private such as Docker.
 
-Wercker is available as a web interface accessible from a web browser and from CLI.
-
 This tutorial demonstrates how to:
 
 - create Wercker application (CI/CD) to build and push Spring Boot sample included image to Docker repository
