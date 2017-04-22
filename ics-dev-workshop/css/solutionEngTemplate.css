@@ -49,6 +49,10 @@
     }
 }
 
+.brd { 
+  border: 2px solid black;
+}
+
 #labguide pre,
 #labguide code {
     font-family: Menlo, Monaco, "Courier New", monospace;
