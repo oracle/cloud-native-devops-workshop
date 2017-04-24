@@ -1,4 +1,4 @@
-![](images/lab400/400_00_01_Lab300TopImage.png)  
+![](images/lab400/400_00_01_Lab400TopImage.png)  
 
 
 Update: April 30, 2017
@@ -7,14 +7,14 @@ Update: April 30, 2017
 
 This is the fourth of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices Workshop**. This workshop walks you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several microservices.
 
-In the first lab (100), Lisa the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. The second lab (200) focused on deploying a MySQL database instance in the Oracle Cloud. Lab 300 developed and deployed two microservices to access MySQL database data and to access Twitter feed data. In this fourth lab, you will assume the persona of the UI developer (John Dunbar) who will build a Node.js UI front end application that consumes and displays the data from the two microservices created in Lab 300.
+In the first lab (100) Lisa Jones, the project manager, created a new project in the Developer Cloud Service. She then added team members to the project, and created and assigned tasks to the developers of this application. The second lab (200) focused on deploying a MySQL database instance in the Oracle Cloud. Lab 300 developed and deployed two microservices to access MySQL database data and to access Twitter feed data. In this fourth lab, you will assume the persona of the UI developer (John Dunbar) who will build a Node.js UI front end application that consumes and displays the data from the two microservices created in Lab 300.
 
 **Please direct comments to: John Hennen ([john.hennen@oracle.com](mailto:john.hennen@oracle.com)).**
 
 ## Objectives
 
 - Access the Oracle Developer Cloud Service
-- Import code from an external Git Repository
+- Import code from an external Git repository
 - Import the project into the Brackets code editor, perform edits and push the edits to the repository in the Oracle Cloud
 - Build and deploy the project using the Oracle Developer Cloud Service and the Oracle Application Container Cloud Service
 - Follow the Git methodology for source code control
@@ -22,15 +22,15 @@ In the first lab (100), Lisa the Project Manager created a new project in the De
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. Included in this account is an Oracle Compute Cloud Service that will simulate a client workstation with all necessary client software pre-installed for local code editing.  You will need to install VNC viewer on your personal workstation to access this Compute Cloud Service client. 
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. Included in this account is an Oracle Compute Cloud Service that will simulate a client workstation with all necessary client software pre-installed for local code editing.  You will need to install VNC Viewer on your personal workstation to access this Compute Cloud Service client. 
 
-# Create Initial Marketing UI Service
+# Create the Initial Marketing UI Service
 
-## Create the initial Git Repository
+## Create the Initial Git Repository
 
-### **STEP 1**: Review and update the Agile Board
+### **STEP 1**: Review and Update the Agile Board
 
-- This Lab assumes that you completed Lab 100, 200 and 300 and are still connected to the Oracle Cloud, that you're still in the Developer Cloud Service Dashboard, and you're viewing the "Alphaoffice Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you completed Labs 100, 200 and 300. It also assumes you and are still connected to the Oracle Cloud, that you're still in the Developer Cloud Service Dashboard, and that you're viewing the "Alphaoffice Marketing Project". If for some reason that is not the case, follow the first several steps of Lab 100 to once again view the Developer Cloud Service Console.
 
     ![](images/lab400/400_01_01_project_console.png)  
 
@@ -66,7 +66,7 @@ In the first lab (100), Lisa the Project Manager created a new project in the De
 
     ![](images/lab400/400_01_09_sprint34.png)
 
-### **STEP 2**: Create the new Git repository for the UI code
+### **STEP 2**: Create the New Git Repository for the UI code
 
 - Click on **Code** on the navigation panel.
 
@@ -84,7 +84,7 @@ In the first lab (100), Lisa the Project Manager created a new project in the De
 
     ![](images/lab400/400_02_04_repository4.png)
 
-## Create Default Build and Deployment Process
+## Create Default Build and Deployment Processes
 
 ### **STEP 3**: Create Default Build Process
 
@@ -156,7 +156,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab400/400_04_05_deploy5.png)
 
-- The Panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
+- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
 
     ![](images/lab400/400_04_06_deploy6.png)
 
@@ -166,7 +166,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab400/400_04_08_deploy8.png)
 
-### **STEP 5**: Update the Agile Active Sprints screen
+### **STEP 5**: Update the Agile Active Sprints Screen
 
 - Click **Agile** on the navigation panel, and then drag the Task 5 panel from **In Progress** to the **Verify Code** column to signal Lisa, the project manager, that it's time to verify completion of Task 5.
 
@@ -186,11 +186,11 @@ Now that you have the source code in your managed Git repository, you will need 
 
 ### **STEP 6**: Test the New Cloud UI Application
 
-- While still in the **Deploy** screen, right click on the application name **AlphaofficeUI**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
+- While still in the **Deployment** screen, right click on the application name **AlphaofficeUI**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
 
     ![](images/lab400/400_06_01_getappurl.png) 
 
-- Paste this URL into the address bar of any browser (such as on your personal workstation), and then navigate to the UI application in the Oracle Application Container Cloud Service. Note that there is no data displayed, because the UI code must be edited to consume and display the microservices data.
+- Paste this URL into the address bar of any browser (such as on your personal workstation), and then press **Enter** to navigate to the UI application in the Oracle Application Container Cloud Service. Note that there is no data displayed, because the UI code must be edited to consume and display the microservices data.
 
     ![](images/lab400/400_06_02_testclouduiapp.png)  
 
@@ -212,7 +212,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab400/400_07_04_sprint40.png)  
 
-# Edit the UI Code to Consume and Display the Microservices Data
+# Edit the UI Code to Consume and Display the Microservices Data and Push the Edits to the Cloud
 
 ### **STEP 8**: Designate Feature 6 is **In Progress**
 
@@ -228,11 +228,15 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab400/400_08_03_sprint43.png) 
 
-## Edit the UI Code on the Client Workstation
+- The **Active Sprints** screen shows the change.
+
+    ![](images/lab400/400_08_04_sprint43b.png)
+
+## Clone the UI Code and Test it on the Client Workstation
 
 ### **STEP 9**: Open the Brackets Code Editor
 
-At this point you will be moving to the client workstation. (This is the Oracle Compute Cloud Service with pre-installed client software that simulates a client workstation.) 
+***At this point you will be moving to the client workstation. (This is the Oracle Compute Cloud Service with pre-installed client software that simulates a client workstation.)*** 
 
 - Start the VNC Viewer software on your personal workstation, and enter the URL you have been provided (including ":" with the port number at the end). Also enter the username and password provided to you when prompted. After login, you are a user on a UNIX client workstation. 
 
@@ -242,7 +246,7 @@ At this point you will be moving to the client workstation. (This is the Oracle 
 
     ![](images/lab400/400_09_02_startterminal.png)
 
-Your first task is to create (or locate) a working folder for the local AlphaofficeUI repository. This is similar to what you did in Lab 300 for the AlphaofficeMySQLREST repository. Once an empty folder is created or located, you can move on to the next step.
+Your first task is to create (or locate) a working folder for the local AlphaofficeUI repository. This is similar to what you did in Lab 300 for the AlphaofficeMySQLREST repository. If you were not given a specific folder location, any appropriate location in the UNIX folder structure will work as long as it is easy for you to access and organize this folder. Also make sure permissions are sufficiently open for your work (chmod). Once an empty folder is created or located, you can move on to the next step.
 
 - Click the Brackets icon on the workstation desktop to start the Brackets code editor.
 
@@ -260,7 +264,7 @@ Your first task is to create (or locate) a working folder for the local Alphaoff
 
     ![](images/lab400/400_09_06_bracketsrightfolder.png)
 
-### **STEP 10**: Clone a repository from the Oracle Developer Cloud Service repository
+### **STEP 10**: Clone a Repository From the Oracle Developer Cloud Service Repository
 
 - Click the Git icon to make sure the Git panel is open at the bottom of the Brackets screen.
 
@@ -270,7 +274,7 @@ Your first task is to create (or locate) a working folder for the local Alphaoff
 
     ![](images/lab400/400_10_02_bracketsgitopen.png)
 
-At this point you will be returning very briefly to the Oracle Developer Cloud Service console. 
+***At this point you will be returning very briefly to the Oracle Developer Cloud Service console.***
 
 - Click **Code** on the navigation panel.
 
@@ -280,7 +284,7 @@ At this point you will be returning very briefly to the Oracle Developer Cloud S
 
     ![](images/lab400/400_10_04_getDCSgiturl.png)
 
-At this point you will be returning to the Brackets code editor on the client workstation.
+***At this point you will be returning to the Brackets code editor on the client workstation.***
 
 - Since you just clicked the **Clone** button in the Brackets editor, the **Clone repository** popup is displayed. Paste the Oracle Cloud repository URL into the field labeled **Enter Git URL of the repository you want to clone:**. Enter the Username and Password for your Oracle Cloud account. Then click **OK**.
 
@@ -308,13 +312,13 @@ At this point you will be testing the code running on the client workstation.
 
 The terminal session will appear to suspend without returning a new command prompt. At this point you may minimize the terminal window because the Node.js listener for server.js is running in the background.
 
-- Enter the url `localhost:8001` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**.
+- Enter the url `localhost:8001` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter** to navigate to the local UI application.
 
     ![](images/lab400/400_11_03_testlocal.png)
 
 Again note that there is no data displayed because the UI code must be edited to consume and display the microservices data.
 
-## Edit and Test the Local Version of the Code
+## Edit the Code and Test the Local Edited Version
 
 ### **STEP 12**: Edit the Local Version of the Code
 
@@ -358,17 +362,15 @@ In the section highlighted within the red rectangle, notice the two variables **
 
 The terminal session will appear to suspend without returning a new command prompt. At this point you may minimize the terminal window because the Node.js listener for server.js is running in the background.
 
-- Enter the url `localhost:8001` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**.
+- Enter the url `localhost:8001` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**. Then after the initial product screen is displayed, click on one of the products such as the **#FranklinCovey** hashtag to see Twitter data.
 
     ![](images/lab400/400_13_03_testnodeafteredit.png)
 
-Notice that after the edit, the local version of the UI application displays all the data from the two Oracle Cloud microservices. (If you do not see this data, make sure both microservices are running in the Oracle Application Container Cloud Service.)
+Notice that after the edits, the local version of the UI application displays all the data from the two Oracle Cloud microservices. (If you do not see this data, make sure both microservices are running in the Oracle Application Container Cloud Service.)
 
-# Create a New Branch and Push the Edits to the Cloud
+## Create a New Branch and Push the Edits to the Cloud
 
-## Create and Commit a New Branch
-
-### **STEP 14**: Create a new Branch and Commit the Changes
+### **STEP 14**: Create a New Branch and Commit the Changes
 
 - Click on the **master** branch dropdown in the upper left panel of Brackets.  Then select **Create New Branch**.
 
@@ -388,13 +390,11 @@ Notice that after the edit, the local version of the UI application displays all
 
     ![](images/lab400/400_14_05_createbranch5.png)
 
-- May need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.)
+- You may need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.)
 
     ![](images/lab400/400_14_06_createbranch6.png)
 
-## Push the Edited Branch to the Cloud
-
-### **STEP 15**: Push the Branch Commits
+### **STEP 15**: Push the Branch Commits to the Cloud
 
 - Click on the **Git Push Icon**.
 
@@ -408,145 +408,68 @@ Notice that after the edit, the local version of the UI application displays all
 
     ![](images/lab400/400_15_03_createbranch10.png)
 
-### **STEP 16**: Designate That the UI Code is Ready for Verification
+## Submit a Merge Request for the Branch With the Code Edits and Designate the Edited Code is Ready for Verification
 
-- Return to the Developer Cloud Service services console, and click **Agile** on the navigation panel.
+### **STEP 16**: Create a Merge Request as John Dunbar to Merge the Code Edits
 
-    ![](images/lab400/400_16_01_agilemenuchoice.png) 
-
-- Drag the Feature 6 panel from **In Progress** to the **Verify Code** column to designate to the project manager (Lisa) that the code is ready for verification.
-
-    ![](images/lab400/400_16_02_sprint44.png)  
-
-- Leave the default values and click **Next**.
-
-    ![](images/lab400/400_16_03_sprint45.png)
-
-- Set the **Time Spent** value to 1 day and click **OK**.
-
-    ![](images/lab400/400_16_04_sprint46.png) 
-
-# Merge the Code Edits and Rebuild and Redeploy the UI Application
-
-## Merge the Code Edits
-
-### **STEP 17**: Create a Merge Request as John Dunbar to Merge the Code Edits
-
-It's time to follow the code repository push to the Oracle Developer Cloud Service.
+It's time to follow the code repository push to the Oracle Developer Cloud Service. Return to the Oracle Developer Cloud Service Services Console.
 
 - Click **Code** on the navigation panel.
 
-    ![](images/lab400/400_17_01_codemenuchoice.png) 
+    ![](images/lab400/400_16_01_codemenuchoice.png) 
 
 - Choose **AlphaofficeUI.git** as the repository.
 
-    ![](images/lab400/400_17_02_merge1.png) 
+    ![](images/lab400/400_16_02_merge1.png) 
 
 - Choose **microserviceuijsV2** as the branch. (This is the branch that has the code edits which we wish to merge with the master branch.)
 
-    ![](images/lab400/400_17_03_merge2.png) 
+    ![](images/lab400/400_16_03_merge2.png) 
 
 - Click the **Commits** button to view recent commits. Here we again see that the push we made from the Brackets code editor on the client workstation has succeeded. The edited files are now in the **microserviceuijsV2** branch of the DCS repository. They're all ready to be merged into the **master** branch. 
 
-    ![](images/lab400/400_17_04_merge3.png)
+    ![](images/lab400/400_16_04_merge3.png)
 
 But remember, we are following a rigorous Git-based source control methodology. We cannot have developers like John Dunbar make changes to the main branch of the code. 
 
 - Instead John must make a **merge request** to Lisa the project manager.
 
-    ![](images/lab400/400_17_05_johnlisa.png)
+    ![](images/lab400/400_16_05_johnlisa.png)
 
 - Click **Merge Request** on the navigation panel, and then click the **New Merge Request** button.
 
-    ![](images/lab400/400_17_06_merge4.png)
+    ![](images/lab400/400_16_06_merge4.png)
 
 - On the **New Merge Request** popup, choose the **Repository**, **Target Branch** and **Review Branch**. Then click **Next**.
 
-    ![](images/lab400/400_17_07_merge5.png)
+    ![](images/lab400/400_16_07_merge5.png)
 
 - On the second popup, add a summary description and select a reviewer. Then click **Next**. 
 
-    ![](images/lab400/400_17_08_merge6.png)
+    ![](images/lab400/400_16_08_merge6.png)
 
 - On the third popup, click **Create**.
 
-    ![](images/lab400/400_17_09_merge7.png)
+    ![](images/lab400/400_16_09_merge7.png)
 
-### **STEP 18**: Perform the Merge as Lisa the Project Manager
+### **STEP 17**: Designate That the UI Code is Ready for Verification
 
-- For this step, you will briefly assume the persona of Lisa, the project manager.
+- Click **Agile** on the navigation panel.
 
-    ![](images/lab400/400_18_01_lisa.png)
+    ![](images/lab400/400_17_01_agilemenuchoice.png) 
 
-- As Lisa, click the **Assigned To Me** button. Then click the merge request just submitted by John Dunbar.
+- Drag the Feature 6 panel from **In Progress** to the **Verify Code** column to designate to the project manager (Lisa) that the code is ready for verification.
 
-    ![](images/lab400/400_18_02_merge8.png)
-
-- Review the changed code, and note how the changes reflect the edits John Dunbar made in the Brackets code editor on the client workstation. As Lisa, approve and process the merge by clicking the **Merge** button.
-
-    ![](images/lab400/400_18_03_merge10.png)
-
-- On the popup click **Merge**.
-
-    ![](images/lab400/400_18_04_merge11.png)
-
-- Click **Build** on the navigation panel. Processing the merge automatically initiates a rebuild process. Note how the **BuildUI** job has been placed in the queue.
-
-    ![](images/lab400/400_18_05_merge12.png)
-
-- The rebuild begins.
-
-    ![](images/lab400/400_18_06_merge13.png)
-
-- The rebuild has successfully completed.
-
-    ![](images/lab400/400_18_07_merge14.png)
-
-- Click **Deploy** on the navigation panel. Once the rebuild is complete, a redeploy will also automatically start. The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
-
-    ![](images/lab400/400_18_08_merge15.png)
-
-- If the arrow is not green but is orange and pointed down ![](images/lab400/400_18_09_merge16.png), this means the application has not been started.
-
-- To manually start, stop or redeploy the application in Oracle Application Container Cloud Service, go to the gear dropdown icon for the application, and select the appropriate action.
-
-    ![](images/lab400/400_18_10_merge17.png)
-
-## Test the Edited Code, and Designate the Edits and Merge Have Been Completed
-
-### **STEP 19**: Test the Completed Code
-
-- Click **Code** on the navigation panel.
-
-    ![](images/lab400/400_19_01_codemenuchoice.png) 
-
-- Right click on the application name **AlphaofficeUI**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
-
-    ![](images/lab400/400_19_02_getappurl.png)
-
-- Paste this URL into the address bar of any browser (such as on your personal workstation), and then navigate to the UI application in the Oracle Application Container Cloud Service. Note that all data from the microservices is now displayed. The application is fully operational.
-
-    ![](images/lab400/400_19_03_cloudtestbrowser.png)
-
-### **STEP 20**: Designate the Edits are Complete
-
-- Again assume the persona of Lisa, the project manager. As Lisa you will verify that the UI code has been completed. Click **Agile** on the navigation panel.
-
-    ![](images/lab400/400_20_01_agilemenuchoice.png)
-
-- Drag the Feature 6 panel from **In Progress** to the **Completed** column.
-
-    ![](images/lab400/400_20_02_sprint47.png)
+    ![](images/lab400/400_17_02_sprint44.png)  
 
 - Leave the default values and click **Next**.
 
-    ![](images/lab400/400_20_03_sprint48.png)
+    ![](images/lab400/400_17_03_sprint45.png)
 
 - Set the **Time Spent** value to 1 day and click **OK**.
 
-    ![](images/lab400/400_20_04_sprint49.png)
+    ![](images/lab400/400_17_04_sprint46.png) 
 
-- The UI edits have been completed and merged, and the Agile board has been updated. You have successfully completed Lab 400!
+- The **Active Sprints** screen shows the change. You have successfully completed Lab 400!
 
-    ![](images/lab400/400_20_05_sprint50.png)
-
+    ![](images/lab400/400_17_05_sprint46b.png)

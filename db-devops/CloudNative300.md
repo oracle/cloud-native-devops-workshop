@@ -6,14 +6,14 @@ Update: April 30, 2017
 
 This is the third of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices Workshop**. This workshop walks you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several microservices.
 
-In the first lab (100), Lisa the Project Manager created a new project in the Developer Cloud Service, added team members to the project, and created and assigned tasks to the developers of this application. The second lab (200) focused on deploying a MySQL database instance in the Oracle Cloud. In this third lab, you will assume the persona of microservices developer Bala Gupta, who will build two Node.js REST services. One of these REST services will extract Alphaoffice product data from the MySQL database that you built in Lab 200. The second REST service will extract data from a Twitter feed.
+In the first lab (100) Lisa Jones, the project manager, created a new project in the Developer Cloud Service. She then added team members to the project, and created and assigned tasks to the developers of this application. The second lab (200) focused on deploying a MySQL database instance in the Oracle Cloud. In this third lab, you will assume the persona of microservices developer Bala Gupta, who will build two Node.js REST services. One of these REST services will extract Alphaoffice product data from the MySQL database that you built in Lab 200. The second REST service will extract data from a Twitter feed.
 
 **Please direct comments to: John Hennen ([john.hennen@oracle.com](mailto:john.hennen@oracle.com)).**
 
 ## Objectives
 
 - Access the Oracle Developer Cloud Service
-- Import code from an external Git Repository
+- Import code from an external Git repository
 - Import the project into the Brackets code editor, perform edits and push the edits to the repository in the Oracle Cloud
 - Build and deploy the project using the Oracle Developer Cloud Service and the Oracle Application Container Cloud Service
 - Follow the Git methodology for source code control
@@ -25,11 +25,9 @@ In the first lab (100), Lisa the Project Manager created a new project in the De
 
 # Create Initial REST Microservices
 
-## Update the Agile Board
-
 ### **STEP 1**: Review and Update the Agile Board
 
-- This Lab assumes that you completed Lab 100 and 200 and are still connected to the Oracle Cloud, that you're still in the Developer Cloud Service Dashboard, and you're viewing the "Alphaoffice Marketing Project". If for some reason that is not the case, follow the first several steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you completed Labs 100 and 200. It also assumes you and are still connected to the Oracle Cloud, that you're still in the Developer Cloud Service Dashboard, and that you're viewing the "Alphaoffice Marketing Project". If for some reason that is not the case, follow the first several steps of Lab 100 to once again view the Developer Cloud Service Console.
 
     ![](images/lab300/300_01_01_project_console.png)   
 
@@ -41,7 +39,7 @@ In the first lab (100), Lisa the Project Manager created a new project in the De
 
     ![](images/lab300/300_01_03_agilemenuchoice.png)
 
-- Click on the **Microservices** Board **Active Sprints** and focus on the scripts for Bala Gupta.
+- Click on the **Microservices** Board **Active Sprints** and focus on the sprints for Bala Gupta.
 
     ![](images/lab300/300_01_04_activesprints0.png)
 
@@ -151,7 +149,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_S04_05_deploy5.png)
 
-- The Panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
+- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
 
     ![](images/lab300/300_02_S04_06_deploy6.png)
 
@@ -161,9 +159,11 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_S04_08_deploy8.png)
 
-## Create the Twitter Microservice Repository, and the Default Twitter Microservice Build and Deploy Processes
+## Transition From the MySQL Microservice to the Twitter Microservice
 
-You have just completed steps **MySQL REST STEP 2**, **MySQL REST STEP 3** and **MySQL REST STEP 4**.  These cover the initial build and deployment of the MySQL microservice. The next 3 steps (**Twitter REST STEP 2**, **Twitter REST STEP 3** and **Twitter REST STEP 4**) are very similar to the MySQL REST steps. They cover the build and deployment of the Twitter microservice.
+ ***You have just completed steps MySQL REST STEP 2, MySQL REST STEP 3 and MySQL REST STEP 4.  These cover the initial build and deployment of the MySQL microservice. The next 3 steps (Twitter REST STEP 2, Twitter REST STEP 3 and Twitter REST STEP 4) are very similar to the MySQL REST steps. They cover the build and deployment of the Twitter microservice.***
+
+## Create the Twitter Microservice Repository, and the Default Twitter Microservice Build and Deploy Processes
 
 ### **Twitter REST STEP 2**: Create the New Git Repository for the Twitter Microservice Code
 
@@ -253,7 +253,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_T04_05_deploy5.png)
 
-- The Panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
+- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
 
     ![](images/lab300/300_02_T04_06_deploy6.png)
 
@@ -262,6 +262,8 @@ Now that you have the source code in your managed Git repository, you will need 
 - To manually start, stop or redeploy the application in Oracle Application Container Cloud Service, go to the gear dropdown icon for the application, and select the appropriate action.
 
     ![](images/lab300/300_02_T04_08_deploy8.png)
+
+## Test the Initial Microservice Deployments and Update the Agile Board
 
 ### **STEP 5**: Update the Agile Active Sprints Screen
 
@@ -283,11 +285,11 @@ Now that you have the source code in your managed Git repository, you will need 
 
 ### **STEP 6**: Test the New Cloud Microservice Applications
 
-- While still in the **Deploy** screen, right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the MySQLREST application in the Application Container Cloud Service.
+- While still in the **Deployments** screen, right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the MySQLREST application in the Application Container Cloud Service.
 
     ![](images/lab300/300_06_01_getappurl.png) 
 
-- Paste this URL into the address bar of any browser (such as on your personal workstation), and then press **Enter** to navigate to the MySQLREST application in the Oracle Application Container Cloud Service. Note that there is no data displayed (only the JSON structure), because the code must be edited to access and return the MySQL data.
+- Paste this URL into the address bar of any browser (such as on your personal workstation), and then press **Enter** to navigate to the MySQLREST application in the Oracle Application Container Cloud Service. Note that there is no data displayed (only the JSON structure) because the code must be edited to access and return the MySQL data.
 
     ![](images/lab300/300_06_02_testcloudmysqlapp.png) 
 
@@ -297,7 +299,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
 ### **STEP 7**: Designate That Repository Creation is Completed
 
-- Briefly assume the persona of Lisa (the project manager) to verify the completion of the repositories for the microservice applications. Drag the Task 3 panel from **Verify Code** to the **Completed** column.
+- Briefly assume the persona of Lisa Jones (the project manager) to verify the completion of the repositories for the microservice applications. Drag the Task 3 panel from **Verify Code** to the **Completed** column.
 
     ![](images/lab300/300_07_01_sprint17.png)  
 
@@ -313,7 +315,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_07_04_sprint20.png)  
 
-# Edit the MySQL Microservice Code to Access the MySQL Data
+# Edit the MySQL Microservice Code to Access the MySQL Data and Push the Edits to the Cloud
 
 ### **STEP 8**: Designate Feature 4 is **In Progress**
 
@@ -329,7 +331,11 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_08_03_sprint23.png) 
 
-## Edit the MySQL Microservice Code on the Client Workstation
+- The **Active Sprints** screen shows the change.
+
+    ![](images/lab300/300_08_04_sprint23b.png)
+
+## Clone the MySQL Microservice Code and Test it on the Client Workstation
 
 ### **STEP 9**: Open the Brackets Code Editor
 
@@ -409,17 +415,17 @@ At this point you will be testing the code running on the client workstation.
 
 The terminal session will appear to suspend without returning a new command prompt. At this point you may minimize the terminal window because the Node.js listener for server.js is running in the background.
 
-- Enter the url `localhost:8002` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**.
+- Enter the url `localhost:8002` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter** to navigate to the local MySQLREST application.
 
     ![](images/lab300/300_11_03_testlocal.png)
 
 Again note that there is no data displayed because the microservice code must be edited to access and return the MySQL data.
 
-## Edit and Test the Local Version of the Code
+## Edit the Code and Test the Local Edited Version
 
 ### **STEP 12**: Edit the Local Version of the Code
 
-- In the left code repository panel, click on the **server.js** file.
+- In the left code repository panel of the Brackets code editor, click on the **server.js** file.
 
     ![](images/lab300/300_12_01_editnode1.png)
 
@@ -451,15 +457,13 @@ In the section highlighted within the red rectangle, notice a number of values r
 
 The terminal session will appear to suspend without returning a new command prompt. At this point you may minimize the terminal window because the Node.js listener for server.js is running in the background.
 
-- Enter the url `localhost:8002` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter**.
+- Enter the url `localhost:8002` in the address bar of the browser provided on the client workstation (with the icon displayed on the desktop) and press **Enter** to navigate to the edited local MySQLREST application.
 
     ![](images/lab300/300_13_03_testnodeafteredit.png)
 
-Notice that after the edit, the local version of the MySQL microservice application displays all the data from the MySQL database in JSON format. (If you do not see this data, make sure the MySQL database you deployed in Lab 200 is still accessible.)
+Notice that after the edits, the local version of the MySQL microservice application displays all the data from the Oracle Cloud MySQL database in JSON format. (If you do not see this data, make sure the MySQL database you deployed in Lab 200 is still accessible.)
 
-# Create a New Branch and Push the Edits to the Cloud
-
-## Create and Commit a New Branch
+## Create a New Branch and Push the Edits to the Cloud
 
 ### **STEP 14**: Create a New Branch and Commit the Changes
 
@@ -485,9 +489,7 @@ Notice that after the edit, the local version of the MySQL microservice applicat
 
     ![](images/lab300/300_14_06_createbranch6.png)
 
-## Push the Edited Branch to the Cloud
-
-### **STEP 15**: Push the Branch Commits
+### **STEP 15**: Push the Branch Commits to the Cloud
 
 - Click on the **Git Push Icon** in the Brackets code editor.
 
@@ -501,73 +503,79 @@ Notice that after the edit, the local version of the MySQL microservice applicat
 
     ![](images/lab300/300_15_03_createbranch10.png)
 
-### **STEP 16**: Designate That the UI Code is Ready for Verification
-
-- Return to the Developer Cloud Service services console, and click **Agile** on the navigation panel.
-
-    ![](images/lab300/300_16_01_agilemenuchoice.png) 
-
-- Drag the Feature 4 panel from **In Progress** to the **Verify Code** column to designate to the project manager (Lisa) that the code is ready for verification.
-
-    ![](images/lab300/300_16_02_sprint24.png)  
-
-- Leave the default values and click **Next**.
-
-    ![](images/lab300/300_16_03_sprint25.png)
-
-- Set the **Time Spent** value to 1 day and click **OK**.
-
-    ![](images/lab300/300_16_04_sprint26.png) 
-
 # Merge the Code Edits and Rebuild and Redeploy the MySQLREST Application
 
-## Merge the Code Edits
+## Submit a Merge Request for the Branch With the Code Edits and Designate the Edited Code is Ready for Verification
 
-### **STEP 17**: Create a Merge Request as Bala Gupta to Merge the Code Edits
+### **STEP 16**: Create a Merge Request as Bala Gupta to Merge the Code Edits
 
-It's time to follow the code repository push to the Oracle Developer Cloud Service.
+It's time to follow the code repository push to the Oracle Developer Cloud Service. Return to the Oracle Developer Cloud Service Services Console.
 
 - Click **Code** on the navigation panel.
 
-    ![](images/lab300/300_17_01_codemenuchoice.png) 
+    ![](images/lab300/300_16_01_codemenuchoice.png) 
 
 - Choose **AlphaofficeMySQLREST.git** as the repository.
 
-    ![](images/lab300/300_17_02_merge1.png) 
+    ![](images/lab300/300_16_02_merge1.png) 
 
 - Choose **serverjsV2** as the branch. (This is the branch that has the code edits which we wish to merge with the master branch.)
 
-    ![](images/lab300/300_17_03_merge2.png) 
+    ![](images/lab300/300_16_03_merge2.png) 
 
-- Click the **Commits** button to view recent commits. Here we again see that the push we made from the Brackets code editor on the client workstation has succeeded. The edited files are now in the **servicerjsV2** branch of the DCS repository. They're all ready to be merged into the **master** branch. 
+- Click the **Commits** button to view recent commits. Here we again see that the push we made from the Brackets code editor on the client workstation has succeeded. The edited files are now in the **servicerjsV2** branch of the Developer Cloud Service repository. They're all ready to be merged into the **master** branch. 
 
-    ![](images/lab300/300_17_04_merge3.png)
+    ![](images/lab300/300_16_04_merge3.png)
 
 But remember, we are following a rigorous Git-based source control methodology. We cannot have developers like Bala Gupta make changes to the main branch of the code. 
 
 - Instead Bala must make a **merge request** to Lisa the project manager.
 
-    ![](images/lab300/300_17_05_guptalisa.png)
+    ![](images/lab300/300_16_05_guptalisa.png)
 
 - Click **Merge Request** on the navigation panel, and then click the **New Merge Request** button.
 
-    ![](images/lab300/300_17_06_merge4.png)
+    ![](images/lab300/300_16_06_merge4.png)
 
 - On the **New Merge Request** popup, choose the **Repository**, **Target Branch** and **Review Branch**. Then click **Next**.
 
-    ![](images/lab300/300_17_07_merge5.png)
+    ![](images/lab300/300_16_07_merge5.png)
 
 - On the second popup, add a summary description and select a reviewer. Then click **Next**. 
 
-    ![](images/lab300/300_17_08_merge6.png)
+    ![](images/lab300/300_16_08_merge6.png)
 
 - On the third popup, click **Create**.
 
-    ![](images/lab300/300_17_09_merge7.png)
+    ![](images/lab300/300_16_09_merge7.png)
+
+### **STEP 17**: Designate That the UI Code is Ready for Verification
+
+- Click **Agile** on the navigation panel.
+
+    ![](images/lab300/300_17_01_agilemenuchoice.png) 
+
+- Drag the Feature 4 panel from **In Progress** to the **Verify Code** column to designate to the project manager (Lisa) that the code is ready for verification.
+
+    ![](images/lab300/300_17_02_sprint24.png)  
+
+- Leave the default values and click **Next**.
+
+    ![](images/lab300/300_17_03_sprint25.png)
+
+- Set the **Time Spent** value to 1 day and click **OK**.
+
+    ![](images/lab300/300_17_04_sprint26.png) 
+
+- The **Active Sprints** screen shows the change.
+
+    ![](images/lab300/300_17_05_sprint26b.png) 
+
+## As Lisa Jones (Project Manager) Merge the Edits, Test the Edited Code, and Designate the Edits and Merge Have Been Completed
 
 ### **STEP 18**: Perform the Merge as Lisa the Project Manager
 
-- For this step, you will briefly assume the persona of Lisa, the project manager.
+- For this step, you will assume the persona of Lisa, the project manager.
 
     ![](images/lab300/300_18_01_lisa.png)
 
@@ -595,7 +603,7 @@ But remember, we are following a rigorous Git-based source control methodology. 
 
     ![](images/lab300/300_18_07_merge13.png)
 
-- Click **Deploy** on the navigation panel to navigate to the **Deploy** screen. Once the rebuild is complete, a redeploy will also automatically start. The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
+- Click **Deploy** on the navigation panel to navigate to the **Deployments** screen. Once the rebuild is complete, a redeploy will also automatically start. The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
 
     ![](images/lab300/300_18_08_merge14.png)
 
@@ -605,25 +613,23 @@ But remember, we are following a rigorous Git-based source control methodology. 
 
     ![](images/lab300/300_18_10_merge16.png)
 
-## Test the Edited Code, and Designate the Edits and Merge Have Been Completed
-
 ### **STEP 19**: Test the Completed Code
 
 - Click **Code** on the navigation panel.
 
     ![](images/lab300/300_19_01_codemenuchoice.png) 
 
-- Right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
+- As Lisa Jones, test the code edits. Right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
 
     ![](images/lab300/300_19_02_getappurl.png)
 
-- Paste this URL into the address bar of any browser (such as on your personal workstation), and then navigate to the MySQLREST application in the Oracle Application Container Cloud Service. Note that all data from the database is now displayed in JSON format. The application is fully operational.
+- Paste this URL into the address bar of any browser (such as on your personal workstation), and then press **Enter** to navigate to the MySQLREST application in the Oracle Application Container Cloud Service. Note that all data from the database is now displayed in JSON format. The application is fully operational.
 
     ![](images/lab300/300_19_03_cloudtestbrowser.png)
 
 ### **STEP 20**: Designate the Edits are Complete
 
-- Again assume the persona of Lisa, the project manager. As Lisa you will verify that the MySQL microservice code has been completed. Click **Agile** on the navigation panel.
+- Again you have assumed the persona of Lisa, the project manager. As Lisa you will verify that the MySQL microservice code has been completed. Click **Agile** on the navigation panel.
 
     ![](images/lab300/300_20_01_agilemenuchoice.png)
 
