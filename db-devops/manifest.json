@@ -39,6 +39,12 @@
                 "title": "Lab 400: Cloud Native Rapid Javascript Devlopment with node.js",
                 "description": "Access Developer Cloud Service, Import Code from external Git Repository, Import Project into Brackets, then aBuild and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service"
             }
+                        {
+                "number": "500",
+                "filename": "CloudNative500.md",
+                "title": "Lab 500: Cloud Native Rapid Javascript Devlopment with node.js",
+                "description": "Complete all the final processes necessary to publish the completed microservices application, and make all the final updates on the Agile board. Lastly, review several administrative screens relevant to the project."
+            }
         ]
     }
 }
