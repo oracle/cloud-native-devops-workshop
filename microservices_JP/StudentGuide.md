@@ -4,7 +4,7 @@ Update: January 28, 2017
 
 ## ハンズオンセットアップガイド
 
-このハンズオンセットアップガイドではハンズオンで使用するOracle Cloud環境の取得手順、クライアント環境の設定手順を説明します。このハンズオンではOracleが提供するCloudサービスである[**Oracle Developer Cloud Service**](https://cloud.oracle.com/ja_JP/developer_service), [**Oracle Application Container Cloud Service**](https://cloud.oracle.com/ja_JP/acc)に加えてEclipse, Maven, Git, Bracket等のOSSを使用します。
+このハンズオンセットアップガイドではハンズオンで使用するOracle Cloud環境の取得手順、クライアント環境の設定手順を説明します。このハンズオンではOracleが提供するクラウドサービスである[**Oracle Developer Cloud Service**](https://cloud.oracle.com/ja_JP/developer_service), [**Oracle Application Container Cloud Service**](https://cloud.oracle.com/ja_JP/acc)に加えてEclipse, Maven, Git, Bracket等のOSSを使用します。
 
 **<font color="Red">ハンズオン参加者の方は事前に下記Step1,2を完了させてください。環境の準備が整っていない場合、ハンズオンに参加していただけない可能性があります。</font>**
 
@@ -15,8 +15,8 @@ Update: January 28, 2017
 
 ### ストレージレプリケーションポリシーの設定
 
-#### Oracleクラウドアカウントへログイン
-1. 右記リンクからOracleクラウドホームページへ移動します。:`https://cloud.oracle.com`
+#### Oracle Cloudアカウントへログイン
+1. [**こちら**](https://cloud.oracle.com)からOracle Cloudホームページへ移動します。
 1. 右上の**Sigin In**をクリックします。
 
     ![](images/100/Picture100-1.png)
@@ -108,7 +108,7 @@ Update: January 28, 2017
 
 1. インポートが正常に完了すると、Virutal Boxの画面に**Oracle Public Cloud** が電源OFFの状態で表示されます。
 
-![](images/studentguide/Picture28.png)
+    ![](images/studentguide/Picture28.png)
 
 1. **Oracle Public Cloud** を選択し、画面左上の**Start**をクリックします。
 
