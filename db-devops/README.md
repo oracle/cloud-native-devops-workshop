@@ -84,7 +84,7 @@ The Oracle Public Cloud Cloud Native Microservices workshop is a one day worksho
 
 ## Lab 500: Cloud Native Developer Cloud Service Administration
 
-**Documentation**: [CloudNative400.md](CloudNative500.md)
+**Documentation**: [CloudNative500.md](CloudNative500.md)
 
 ### Objectives
 
