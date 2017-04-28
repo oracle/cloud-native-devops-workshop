@@ -51,25 +51,25 @@ Let’s start by logging into the Oracle Cloud account and explore the Services 
 **1.1.1.2** Click Sign In in the upper right hand corner of the browser
 - **IMPORTANT** - Under My Services, change Data Center to `US Commercial 2 (us2)` and click on Sign In to My Services
 
-    ![](images/300/image001.png)
+![](images/300/image001.png)
 
 **1.1.1.3** If your identity domain is not already set, enter it and click **Go**
 
-    **NOTE:** the **Identity Domain** values will be given to you from your instructor.
+**NOTE:** the **Identity Domain** values will be given to you from your instructor.
 
-    ![](images/300/image002.png)  
+![](images/300/image002.png)  
 
 **1.1.1.4**  Once your Identity Domain is set, enter your `User Name` and `Password` and click **Sign In**
 
-    ***NOTE:*** the **User Name and Password** values will be given to you by your instructor.
+***NOTE:*** the **User Name and Password** values will be given to you by your instructor.
 
-    ![](images/300/image003.png)  
+![](images/300/image003.png)  
 
 **1.1.1.5**  You will be presented with a Dashboard displaying the various cloud services available to this account.
 
-   **NOTE:** The Cloud Services dashboard is intended to be used by the *Cloud Administrator* user role.  The Cloud Administrator is responsible for adding users, service instances, and monitoring usage of the Oracle cloud service account.  Developers and Operations roles will go directly to the service console link, not through the service dashboard.
+**NOTE:** The Cloud Services dashboard is intended to be used by the *Cloud Administrator* user role.  The Cloud Administrator is responsible for adding users, service instances, and monitoring usage of the Oracle cloud service account.  Developers and Operations roles will go directly to the service console link, not through the service dashboard.
 
-    ![](images/300/image004.png)
+![](images/300/image004.png)
 
 ### **1.1.2:**	Explore Oracle Cloud Dashboard
 
