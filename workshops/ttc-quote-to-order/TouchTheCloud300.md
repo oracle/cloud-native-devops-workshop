@@ -1,4 +1,4 @@
-![](images/300/HeaderImage.png)  
+<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center> 
 
 Update: March 23, 2017
 
@@ -18,7 +18,7 @@ Update: March 23, 2017
 
 ## Introduction
 
-This is the third of several labs that are part of the **Oracle Touch the Cloud** workshop. 
+This is the third of several labs that are part of the **iPaaS - Build a Quote to Order Process Workshop**. 
 
 In this lab, you will acquire a good overview of the Oracle Integration Cloud Service (ICS), the next generation integration platform. You will explore various consoles and tools available to interact with your integration. The exercise will get your familiar with all the tooling available to work with this cloud service. You will then modify an integration to Oracle EBS, then update a PCS application to call to the updated ICS endpoint.
 

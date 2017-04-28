@@ -1,8 +1,9 @@
-![](images/300/HeaderImage.png)  
+<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center>  
 
 Update: April 6, 2017
 
-This Workshop walks you through the process of developing Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for Touch the Cloud workshop.
+# Lab 100
+This Lab walks you through the process of developing Mobile Cloud Service (MCS) Assets and Mobile Application Accelerator (MAX) App for the workshop.
 
 ### 1.	Design Considerations for Mobile App
 

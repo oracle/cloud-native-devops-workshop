@@ -1,4 +1,6 @@
-![](images/HeaderImage.png)  
+<center>
+<img src="https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png" />
+</center>
 
 Update: March 10, 2017
 
@@ -11,7 +13,7 @@ Update: March 10, 2017
 
 https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
 
-# Touch the Cloud
+# Using iPaaS to Build a Quote to Order Process
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 ## Required pre-work

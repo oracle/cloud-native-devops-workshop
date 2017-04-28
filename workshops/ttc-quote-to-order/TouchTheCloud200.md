@@ -1,11 +1,12 @@
-![](images/300/HeaderImage.png)  
+<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center>  
 
 Update: April 6, 2017
 
+# Lab 200 - Process cloud Service
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Public Cloud Touch the Cloud workshop.** 
+This is the second of several labs that are part of the **iPaaS - Build a Quote to Order Process Workshop** 
 
 We are going to look at the process approval workflow process that had being kicked off from Lab 100's Mobile Application. 
 

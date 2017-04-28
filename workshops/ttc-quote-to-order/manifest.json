@@ -1,8 +1,13 @@
 {
     "workshop": {
-        "title": "Touch The Cloud",
+        "title": "Cloud Accelerate: iPaaS - Build a Quote to Order Process Workshop",
         "description": "A hands-on event to explore Oracle’s new cloud services.",
         "labs": [{
+                "number": "1",
+                "filename": "Home.md",
+                "title": "Home",
+                "description": "Welcome to the workshop"
+            },{
                 "number": "10",
                 "filename": "StudentGuide.md",
                 "title": "Prerequisites",

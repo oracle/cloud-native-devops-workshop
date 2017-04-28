@@ -1,10 +1,10 @@
-![](images/300/HeaderImage.png)  
+<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center> 
 
 Update: March 13, 2017
 
 ## Introduction
 
-This is the analytics part of the  **Oracle Public Cloud Touch the Cloud workshop.** This workshop will walk you through the analytics of the  of a typical Quote to Order process.
+This is the analytics part of the  **iPaaS - Build a Quote to Order Process Workshop.** This workshop will walk you through the analytics of the  of a typical Quote to Order process.
 
 ## Objectives
 

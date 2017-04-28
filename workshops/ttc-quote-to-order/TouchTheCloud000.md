@@ -1,4 +1,4 @@
-![](images/300/HeaderImage.png)  
+<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center> 
 
 Update: March 13, 2017
 
