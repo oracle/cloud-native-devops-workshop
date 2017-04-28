@@ -54,6 +54,6 @@ Most modern browsers including Chrome, Safari, Internet Explorer, Edge and Firef
 ---
 # Download files needed for LAB 100. 
 
-Each participant needs a copy of these 2 files. The files are located under the Touch-the-Cloud/artifacts/mcs/ directory. The 2 files are TTCSalesOrderAPI.raml and ttcsalesorderapi.zip. Users are going to be assigned demo.user[01-10] as their user ids. As a backup in the same directory you will also find the final modified files TTCSalesOrderAPI[01-10].raml and ttcsalesorderapi[01-10].zip for each respective participant. These respective backup files can be used in case of participants running into errors calling the MCS APIs or MCS connectors.
+Each participant needs a copy of these 2 files. The files can be downloaded from the [Artifact GitHub repository](https://rebrand.ly/ttcqtooartifacts) and are under the mcs/ directory. The 2 files are TTCSalesOrderAPI.raml and ttcsalesorderapi.zip. Users are going to be assigned demo.user[01-10] as their user ids. As a backup in the same directory you will also find the final modified files TTCSalesOrderAPI[01-10].raml and ttcsalesorderapi[01-10].zip for each respective participant. These respective backup files can be used in case of participants running into errors calling the MCS APIs or MCS connectors.
 
-
+> It is suggested to download the artifacts as a zip from the "clone or download" button
