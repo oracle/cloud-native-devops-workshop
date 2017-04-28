@@ -16,9 +16,7 @@ Cloud is here to stay but your IT’s center of gravity is your choice. Our goal
 
 This event is designed to help everyone understand what PaaS is and what Oracle’s Cloud Services offer to both business and IT. It is designed to ensure that your organization has the knowledge and understanding of which modern tools you can use to compete: either disrupt to outperform or rapidly adjust to disruption from competition. We invite you to come and join us to “Touch the Cloud”!
 
-![](images/skills.png)
-
-![](images/explore.png)
+<center>![](images/skills.png)![](images/explore.png)</center>
 
 ## Who Delivers the workshop?
 
@@ -29,46 +27,45 @@ Facilitation of the event is provided by Oracle Platform specialists. Each speci
 Oracle is working with a large number of customers in all kinds of organizations and industries to enable the hybrid IT. We can help you address the big picture, evaluate how you compare with your peers and design for the future. During this event, we will showcase modern services that you can add to your arsenal of business and IT tools needed to compete and excel in today’s aggressive business environments. We commit to making sure that you leave this event with a better grasp of Oracle’s Cloud Services and general Hybrid IT paradigms.
 
 ## Agenda
-
-<table data-brackets-id='504'>
+<table>
     <tr>
         <th>Event</th>
         <th>Time</th>
     </tr>
-    <tr data-brackets-id='510'>
-        <td data-brackets-id='511'>Registration</td>
-        <td data-brackets-id='512'>8:30-8:45</td>
-        <tr data-brackets-id='513'>
-            <td data-brackets-id='514'>Quote to Order SaaS to On-Premise</td>
-            <td data-brackets-id='515'>8:45-9:00</td>
+    <tr>
+        <td>Registration</td>
+        <td>8:30-8:45</td>
+        <tr>
+            <td>Quote to Order SaaS to On-Premise</td>
+            <td>8:45-9:00</td>
         </tr>
-        <tr data-brackets-id='516'>
-            <td data-brackets-id='517'>Custom Quote Capture MAX-MCS</td>
-            <td data-brackets-id='518'>9:00-10:30</td>
+        <tr>
+            <td>Custom Quote Capture MAX-MCS</td>
+            <td>9:00-10:30</td>
         </tr>
-        <tr data-brackets-id='519'>
-            <td data-brackets-id='520'>Break</td>
-            <td data-brackets-id='521'>10:30-11:00</td>
+        <tr>
+            <td>Break</td>
+            <td>10:30-11:00</td>
         </tr>
-        <tr data-brackets-id='522'>
-            <td data-brackets-id='523'>Approval Process Orchestration PCS</td>
-            <td data-brackets-id='524'>11:00-12:30</td>
+        <tr>
+            <td>Approval Process Orchestration PCS</td>
+            <td>11:00-12:30</td>
         </tr>
-        <tr data-brackets-id='525'>
-            <td data-brackets-id='526'>Lunch </td>
-            <td data-brackets-id='527'>12:30-13:00</td>
+        <tr>
+            <td>Lunch </td>
+            <td>12:30-13:00</td>
         </tr>
-        <tr data-brackets-id='528'>
-            <td data-brackets-id='529'>Integrate with On-Premise ERP ICS</td>
-            <td data-brackets-id='530'>13:00-14:30</td>
+        <tr>
+            <td>Integrate with On-Premise ERP ICS</td>
+            <td>13:00-14:30</td>
         </tr>
-        <tr data-brackets-id='531'>
-            <td data-brackets-id='532'>End to End Visibility and Analytics</td>
-            <td data-brackets-id='533'>14:30-15:30</td>
+        <tr>
+            <td>End to End Visibility and Analytics</td>
+            <td>14:30-15:30</td>
         </tr>
-        <tr data-brackets-id='534'>
-            <td data-brackets-id='535'>Close & Summary</td>
-            <td data-brackets-id='536'> 15:30-16:00</td>
+        <tr>
+            <td>Close &amp; Summary</td>
+            <td>15:30-16:00</td>
         </tr>
 </table>
 
