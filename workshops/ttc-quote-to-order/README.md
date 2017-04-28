@@ -11,7 +11,7 @@ Update: March 10, 2017
 
 **To View in Interactive Labguide Format:**  
 
-https://pmalan.github.io/Touch-the-Cloud/touch-the-cloud/index.html
+[GitHub IO Pages](https://rebrand.ly/ttcqtoolab)
 
 # Using iPaaS to Build a Quote to Order Process
 
