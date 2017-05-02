@@ -290,13 +290,15 @@ $ cd mydockerbuild
 
 In Step 1.3, use VI or editor of your choice, like nano.  
 
-To use VI, if you are on Oracle Linux:
+Use VI, if you are on Oracle Linux:
+
+> *Note - case is important in the file name "Dockerfile".  Use a capital D and lower case for the rest of the letters.*
 
 ```
 $ vi Dockerfile
 ```
 
-Create a text file name Dockerfile with these 3 lines:
+Create a text file named Dockerfile with these 3 lines:
 
 > *Note - if you are using VI, press the "i" key first to enter insert mode, before you paste.
 
@@ -433,37 +435,45 @@ $ docker rm $(docker ps -a -q)
 
 ## Install Docker Compose
 
-> *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely Docker Compose is already installed.  To check if it is installed:*
-
-```
-$ docker-compose --version
-```
-
 
 **Introduction to Docker Compose**
 
 What is Docker Compose, why use it?
 
-According to Docker: Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.
+According to Docker: *Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.*
 
-**Install Docker compose.**
+**Install Docker Compose.**
 
-> *Note - the docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
+> *For simplicity, you will install Docker Compose v1.12 in the a directory called "compose", under the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose locally in that directory and create your first docker-compose.yml file.*
 
-Here is a synopsis of the steps in the above URL:
-
-> *For simplicity, you will install Docker Compose in the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose and create your first docker-compose.yml file.*
-
+Change to root home directory:
 
 ```
 $ cd ~
+```
 
+Verify that you are in the root home directory:
+
+```
 $ pwd
 ```
 
-Then, use this curl command to install Docker Compose:
+Make a new directory called "compose":
+
 ```
-$ curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
+$ mkdir compose
+```
+
+Change into this new directory:
+
+```
+$ cd compose
+```
+
+Then, use this curl command to install Docker Compose v1.12:
+
+```
+$ curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
 ```
 
 Change the executable permissions:
@@ -478,6 +488,7 @@ Verify and check which version of Docker Compose was installed:
 $ ./docker-compose --version
 ```
 
+> *Note - for further information, please refer to these Docker docs at a later time: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
 ***
 
 ## Create a Wordpress "stack"
@@ -489,6 +500,8 @@ Follow these steps to create a simple Wordpress stack referenced here:
 Here is a synopsis of the steps in the above URL:
 
 Use an editor or VI to create a file named "docker-compose.yml":
+
+> *Note - just as with the Dockerfile above, case of the file name is important.  Use all lower case for "docker-compose.yml"*
 
 ```
 $ vi docker-compose.yml
