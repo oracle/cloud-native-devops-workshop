@@ -470,7 +470,7 @@ Change into this new directory:
 $ cd compose
 ```
 
-Then, use this curl command to install Docker Compose v1.12:
+Then, use this curl command to install Docker Compose v1.12 locally, in that directory:
 
 ```
 $ curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
