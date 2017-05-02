@@ -592,13 +592,13 @@ So let's explore how data is persisted in the Wordpress stack we just used.
 
 Most importantly, in the Docker Compose YAML file, we used 2 volume statements, one for Wordpress and one for the DB.  
 
-For example, this statement in the YAML for Wordpress, allows for images to be retained in blog posts:
+For example, this statement in the YAML for Wordpress, allows for images to be retained in blog posts.  In this example, we are explicitly stating where the data is store on the host volume.
 ```
      volumes:
        - /var/www/html:/var/www/html:rw
 ```
 
-Plus this volume statement for the database:
+Plus this volume statement for the database.  In this example, we are letting Docker map where "db_data" is stored on the host volume:
 
 ```
      volumes:
