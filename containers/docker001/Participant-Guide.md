@@ -552,6 +552,12 @@ If you are using  VI, save the file by typing the Esc key - colon - w (for write
 esc : w q 
 ```
 
+Verify the docker-compose.yml file has the correct content:
+
+```
+cat docker-compose.yml
+```
+
 Run the Wordpress stack by this command:
 
 ```
