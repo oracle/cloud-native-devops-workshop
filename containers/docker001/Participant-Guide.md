@@ -266,13 +266,9 @@ A Dockerfile is a recipe that starts with a base image, typically a thin Linux O
 
 **Build the Docker image**
 
-Use the [Docker Whale](https://docs.docker.com/engine/getstarted/step_three/) example to build our first image.  
+Use the [Docker Whalesay](https://hub.docker.com/r/docker/whalesay/) example to build your first image.  
 
-Follow Steps 1 and 2 from this exercise:
-
-[https://docs.docker.com/engine/getstarted/step_four/](https://docs.docker.com/engine/getstarted/step_four/)
-
-Here is a synopsis of the steps in the above URL:
+Follow these steps:
 
 From your home directory, make a directory to store your Dockerfile:
 
@@ -315,6 +311,12 @@ In Step 1.8, after you are done adding the 3 lines to your Dockerfile with VI, s
 	
 ```
 esc : w q 
+```
+
+Verify the Dockerfile has the correct content:
+
+```
+cat Dockerfile
 ```
 
 > *Note - the docs for VI are here: [https://www.cs.colostate.edu/helpdocs/vi.html](https://www.cs.colostate.edu/helpdocs/vi.html)*
@@ -840,7 +842,7 @@ Scroll down and Commit your Changes.  Add a description and press the "Commit Ch
 
 ***
 
-This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in Index.html as part of the build process:  
+This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in Index.html as part of the build process.  Status is seen in the "Build Details" tab.  You need to refresh the browser to see updates to the build status:  
 
 > *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Docker Hub - Build Settings tab to manually start an image build.*
 
