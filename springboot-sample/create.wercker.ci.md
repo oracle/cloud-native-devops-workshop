@@ -135,7 +135,7 @@ Now the default *build* pipeline starts to run which is a simple maven build -de
 
 ![alt text](images/wercker/17.wercker.first.build.png)
 
-Before you move forward please inspect the *wercker.yml*. The source is available under your github repository. Open a new browser (tab) and go directly to *https://github.com/<YOUR_GITHUB_USERNAME>/wercker-springboot/blob/master/wercker.yml*. You should find the same configuration like below:
+Before you move forward please inspect the *wercker.yml*. The source is available under your github repository. Open a new browser (tab) and go directly to *https://github.com/<YOUR_GITHUB_USERNAME>/wercker-springboot/blob/master/wercker.yml*. Now focus on the first two steps in the configuration what should be the same like below:
 
 	box: combient/java-mvn
 	build:

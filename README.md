@@ -28,6 +28,7 @@ The content contains several independent modules that cover different aspects of
 #### Container based application development lifecycle using Wercker and Container Cloud Service ####
 
 + [Build Spring Boot container packaged application using Wercker and deploy to Oracle Container Cloud Service](springboot-sample/create.wercker.ci.md)
++ [Build Spring Boot application using Wercker and deploy to Oracle Application Container Cloud Service using custom Wercker Step](springboot-sample/wercker.step.accs.md)
 
 #### Support SpringBoot application development lifecycle using Oracle Developer Cloud Service, Application Container Cloud Service and Oracle Enterprise Pack For Eclipse ####
 
