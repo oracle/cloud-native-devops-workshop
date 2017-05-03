@@ -892,9 +892,11 @@ Check out running your container in the Oracle Container Cloud Service:
 
 * [Oracle GitHub](https://github.com/oracle/docker-images)
 
+* [Oracle Images on the Docker Store](https://store.docker.com/search?q=oracle&source=verified&type=image)
+
 * [Oracle Container Registry](https://container-registry.oracle.com)
 
-* [Oracle Container Registry Docs](http://docs.oracle.com/en/cloud/iaas/container-cloud/index.html)
+* [Oracle Container Cloud Service Docs](http://docs.oracle.com/en/cloud/iaas/container-cloud/index.html)
 
 Oracle Blogs:
 
