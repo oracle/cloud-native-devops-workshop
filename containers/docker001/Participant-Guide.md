@@ -316,7 +316,7 @@ esc : w q
 Verify the Dockerfile has the correct content:
 
 ```
-cat Dockerfile
+$ cat Dockerfile
 ```
 
 > *Note - the docs for VI are here: [https://www.cs.colostate.edu/helpdocs/vi.html](https://www.cs.colostate.edu/helpdocs/vi.html)*
@@ -555,7 +555,7 @@ esc : w q
 Verify the docker-compose.yml file has the correct content:
 
 ```
-cat docker-compose.yml
+$ cat docker-compose.yml
 ```
 
 Run the Wordpress stack by this command:
