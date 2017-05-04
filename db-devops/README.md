@@ -16,7 +16,7 @@
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/tree/master/db-devops) repository.
 
-- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnativeDB) for a visual overview of the workshop content. 
+- Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?mysql) for a visual overview of the workshop content. 
 
 **Third**, ***Cloud Accelerate for the Developer***
 

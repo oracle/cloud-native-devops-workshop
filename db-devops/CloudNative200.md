@@ -46,7 +46,7 @@ The following lab an Oracle Public Cloud account that will be supplied by your i
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-    ***NOTE:*** For this lab you will be acting as the Database Developer ***Roland Dubois***. As with the previous lab, if you are not able to support multiple users, login as a supported user, and assume the “logical” identify of Roland Dubois, the Datbase Developer.
+    ***NOTE:*** For this lab you will be **acting as** the Database Developer ***Roland Dubois***. As with the previous lab, if you are not able to support multiple users, login as a supported user, and assume the “logical” identify of Roland Dubois, the Database Developer.
 
     ![](images/200/image006.png)  
 
@@ -98,9 +98,9 @@ As in the previous lab, we maintain a separate repository for database related u
 
     ![](images/200/image015.png)  
 
-- Click on **Project**.
+- Click on **Project** on upper left screen.
 
-- Click on **New Repository** to create a new Git Repository
+- Click on **New Repository** to create a new Git Repository (upper right)
 
     ![](images/200/image017.png)  
 
@@ -110,7 +110,7 @@ As in the previous lab, we maintain a separate repository for database related u
 
     **Description:** `Alphaoffice Database`
 
-    **Initial content:** Import existing repository and enter the URL: `https://github.com/dgcameron/alphaoffice.git`
+    **Initial content:** Import existing repository and enter the URL: `https://github.com/dgcameron/AlphaofficeDB.git` 
 
     ![](images/200/image018.png)  
 
@@ -120,7 +120,7 @@ As in the previous lab, we maintain a separate repository for database related u
 
 ## Create New MySQL Database Service
 
-### **STEP 5**: Create new MySQL Service
+### **STEP 5**: Create new MySQL Service:  Option A - Scripted Build Job **(Note Step 6 Option B uses the Cloud Console)**
 
 Now that we have the source code in our managed GIT repository, we need to create a new MySQL Database Service.
 
@@ -128,7 +128,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/200/image020.png)
 
-- In the New Job popup enter **Twitter Marketing UI Build** for Job Name and click **Save**.
+- In the New Job popup enter **Alphaoffice Marketing UI Build** for Job Name and click **Save**.
 
     ![](images/200/image021.png)  
 
@@ -136,7 +136,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/200/image022.png)
 
-- Click on the **Build Parameters** tab.  We will add four parameters.
+- Click on the **Build Parameters** tab.  We will add four string parameters.
 
     ![](images/200/image023.png)  
 
@@ -155,6 +155,10 @@ Now that we have the source code in our managed GIT repository, we need to creat
     ![](images/200/image027.png)
 
 - Select **Save** and then **Build Now**.
+    - **USER_ID:** `<your assigned cloud user account>`
+    - **USER_PASSWORD:** `<your assigned cloud password>`
+    - **ID_DOMAIN:** `<your assigned identity domain>`
+    - **PAAS_HOST:** `your assigned PAAS Host (eg psm.us.oraclecloud.com or psm.em.oraclecloud.com)
 
     ![](images/200/image028.png)
 
@@ -166,7 +170,90 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/200/image031.png)
 
-### **STEP 6**: Instantiate data to Version 1
+### **STEP 6:**  Create MySQL Cloud Service Option B - use the Cloud Console
+
+As an alternative to scripting the creation of the MySQL Database you can use the Cloud Console.
+
+- Log into the Cloud Console and select the MySQL Service, and then select Open Service Console.
+
+    ![](images/200/image031.1.1.png)
+
+- Then select Create Service.
+
+    ![](images/200/image031.1.2.png)
+
+- Enter the following:
+    - **Service Name:**  `AlphaofficeDB`
+    - **Service Description:**  `Test MYSQL DB for Microservices DB Workshop`
+
+    ![](images/200/image031.1.3.png)
+
+- On the next screen enter the following:
+    - **Compute Shape:**  `OC3`
+    - **SSH Public Key:**  `mysqlkey.pub`
+    - **Password:**  `Alpha2014_`
+    - **Backkup Destination:**  `None`
+
+    ![](images/200/image031.1.4.png)
+
+- Confirm your choices and submit.  Note the create process will take 10 - 20 minutes.
+
+    ![](images/200/image031.1.5.png)
+
+- We need to open port 1521 now.  Go to Access Rules.  Note - this will take a few minutes to be enabled.
+
+    ![](images/200/image031.1.6.png)
+
+-  Create new Rule:
+    - **Rule Name:**  `MySQL_1521`
+    - **Source:**  `PUBLIC-INTERNET`
+    - **Destination:**  `mysql_MASTER`
+    - **Destination Port:**  `1521`1
+
+    ![](images/200/image031.1.7.png)
+
+### **STEP 7:**  Switch MySQL From Port 3306 to 1521
+
+Currently traffic is blocked on 3305 to Developer Cloud Service so we need to switch the port to 1521 (or somewhere in the 1520 to 1530 range) in MySQL.
+
+- Select the new MySQL Service AlphaofficeDB.
+
+    ![](images/200/image031.1.8.png)
+
+- Note the public IP address (you will need this later)
+
+    ![](images/200/image031.1.9.png)
+
+- Log into the Client VM, open a terminal window and enter the following:
+
+```
+ssh -i mysqlkey opc@129.144.152.131
+********************************************************************************
+*                                 Welcome to                                   *
+*                             MySQL Cloud Service                              *
+*                                     by                                       *
+*                                   Oracle                                     *
+*       If you are an unauthorised user please disconnect IMMEDIATELY          *
+********************************************************************************
+******************************* MySQL Information ******************************
+* Status:  RUNNING                                                             *
+* Version:   5.7.17                                                            *
+********************************************************************************
+************************** Storage Volume Information **************************
+* Volume      Used             Use%           Available   Size     Mounted on  *
+* MySQLlog    6.1G ---- 11%                         50G    59G   /u01/translog *
+* bin         2.6G ------- 28%                     6.7G   9.8G   /u01/bin      *
+* data        122M -- 1%                            24G    25G   /u01/data     *
+********************************************************************************
+sudo su
+[root@alphaofficedb-mysql-1 opc]# echo 'port=1521'>>/u01/bin/mysql-5.7.17/my.cnf
+/etc/init.d/mysqlcsopr stop 
+/etc/init.d/mysqlcsoper start
+exit
+exit
+```
+
+### **STEP 8**: Instantiate data to Version 1
 
 We now have an empty database.  We need to populate it with baseline data.  We will use Flyway to version the data and create a baseline set of data.  Oracle Developer Cloud Service supports and encourages the use of Open Source solutions such as Flyway.
 
@@ -181,7 +268,8 @@ We now have an empty database.  We need to populate it with baseline data.  We w
     - Create schema_version tables in the schemas
     - Execute the SQL Scripts sequentially starting at V01__ (default for Flyway)
 
-- Review Script **V01__AlphaofficeDB_init.sql** - go to code, and then drill down to the migration folder and select the file.
+- Review Script **V01__AlphaofficeDB_init.sql** - go to code, and then drill down to the migration folder and select the file:
+    - **Path:** `/src/main/resources/db/migration/V01__AlphaofficeDB_init.sql`
 
     ![](images/200/image031.3.png)  
 
@@ -198,42 +286,30 @@ We now have an empty database.  We need to populate it with baseline data.  We w
         - **JDK:** 'JDK 8'
     - **Build Parameters:**   
         - **flyway_user:** `root`
-        - **USER_PASSWORD:** `<your assigned password>`
-        - **flyway_password:** `<your assigned MySQL Database password>`
+        - **flyway_password:** `Alpha2014_`
         - **flyway_driver:** `com.mysql.cj.jdbc.Driver`
         - **flyway_url_prefix:** `jdbc:mysql://`
         - **flyway_schemas:** `AlphaofficeDB`
         - **db_ip:** `<your MySQL Database public IP>`
         - **db_port:** `1521`
-
-    - **Source Control:** git repository `AlphaofficeDB.git`
-
+    - **Source Control:** `git repository AlphaofficeDB.git`
+    - **Trigger:** `Based on SCM polling` (leave other fields blank)
     - **Build Steps:** `Execute Shell`
 
-        mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas} flyway:migrate &
-
-        pid=$!
-
-        sleep 120
-
-        kill $pid
-
-        mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas}_Dev flyway:migrate &
-
-        pid=$!
-
-        sleep 120
-
-        kill $pid
+        `mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas} flyway:migrate`
+        
+        `mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas}_Dev flyway:migrate`
 
 - This is how the Build Step should look:
+
+- **THESE SCREEN SHOTS NEED TO BE REPLACED:**
 
     ![](images/200/image031.5.1.png)
 
     ![](images/200/image031.5.2.png)
 
 - Note this actually runs Maven/Flyway twice - once to create the test database AlphaofficeDB, and again to create/simulate a local development database AlphaofficeDB_Dev.
-- Run the Build Job:
+- Run the Build Job (should take no more than a minute or two):
 
     ![](images/200/image031.6.png)
 
@@ -247,7 +323,8 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
 ## Clone Project to Eclipse IDE
 
-### **STEP 7**: Load Eclipse IDE
+### **STEP 9**: Load Eclipse IDE
+
 - VNC/Login into the client image and double click on the Eclipse IDE icon on the desktop.
 
     ![](images/200/image032.png)
@@ -256,7 +333,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
     ![](images/200/image032.1.png)
 
-### **STEP 8**: Create Connection to Developer Cloud Service
+### **STEP 10**: Create Connection to Developer Cloud Service
 - We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options Window -> Show View ->Other
 
     ![](images/200/image034.png)
@@ -281,7 +358,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
     ![](images/200/image033.png)
 
-### **STEP 9**: Create a local clone of the repository
+### **STEP 11**: Create a local clone of the repository
 - Expand Developer, and then double click on Twitter Feed Marketing
 Project to activate the project.
 
@@ -314,7 +391,7 @@ Project to activate the project.
 
 ## Test the Local Cloned Services
 
-### **STEP 10**: Set Feature 1 Status to In Progress
+### **STEP 12**: Set Feature 1 Status to In Progress
 
 In the previous steps we updated the status of the Tasks assign to Roland Dubois using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Roland’s tasks.
 
@@ -330,7 +407,7 @@ In the previous steps we updated the status of the Tasks assign to Roland Dubois
 
 ## Update Database
 
-### **STEP 11**: Create Database Connection
+### **STEP 13**: Create Database Connection
 
 - Open perspective Database
 
@@ -375,7 +452,7 @@ In the previous steps we updated the status of the Tasks assign to Roland Dubois
 
     ![](images/200/image053.png)
 
-### **STEP 12**: Apply Updates
+### **STEP 14**: Apply Updates
 
 The required updates are sitting in a versioned Flyway file in a backup directory in the git repository.  We will apply these updates to the AlphaofficeDB_Dev database, confirm the changes are correct, and later apply them to the AlphaofficeDB test database.
 
@@ -423,7 +500,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
 ## Create a Branch and Commit Code
 
-### **STEP 13**: Create a new Branch and Commit Code
+### **STEP 15**: Create a new Branch and Commit Code
 
 - To create a new branch in the Git repository, right click on AlphaofficeDB.git and then Select Team > Switch To > New Branch.
 
@@ -456,7 +533,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
     ![](images/200/image066.2.png)
 
-### **STEP 14**: Complete the Database Updates Task
+### **STEP 16**: Complete the Database Updates Task
 
 - In the Eclipse Task List, double click on Update Database task.
 
@@ -466,7 +543,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
     ![](images/200/image071.png)
 
-### **STEP 15**: Review Sprint Status and create Merge Request
+### **STEP 17**: Review Sprint Status and create Merge Request
 
 - Return to the Developer Cloud Service Dashboard in the browser, and select Agile. If your default Board is not set to Microservices, then set the Find Board Filter to All, and select the Microservices board.
 
@@ -503,7 +580,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
 In the following steps “Lisa” will merge the branch created by "Roland" into the master.
 
-### **STEP 16**: Merge Requests
+### **STEP 18**: Merge Requests
 
 - Before moving forward, “Lisa Jones” can take a look at the Burndown and Sprint Reports by clicking on the Agile navigation, Microservices Sprint, then the Reports button.
 
@@ -537,7 +614,7 @@ In the following steps “Lisa” will merge the branch created by "Roland" into
 
     ![](images/200/image085.png)
 
-### **STEP 17**: Optional - review data Eclipse
+### **STEP 19**: Optional - review data Eclipse
 
 - Open Eclipse in your client image.  Select the Database Development perspective and edit the existing database connection to switch from AlphaofficeDB_Dev to AlphaofficeDB.  This is the test instance that was updated when you commited the branch to master.
 
