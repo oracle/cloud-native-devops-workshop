@@ -218,7 +218,7 @@ When the build and push-docker is done go back to the browser (tab) where you lo
 
 ![alt text](images/wercker/25.docker.repositories.png)
 
-Now you should see a new image called <YOUR\_DOCKER\_USERNAME>/wercker-springboot. This image based on the box defined in *wercker.yml* but Wercker backed the Spring Boot sample application into this image during the workflow. Which results a production ready container.
+Now you should see a new image called <YOUR\_DOCKER\_USERNAME>/wercker-springboot. This image based on the box defined in *wercker.yml* but Wercker baked the Spring Boot sample application into this image during the workflow. Which results a production ready container.
 
 ![alt text](images/wercker/26.docker.repo.image.png)
 
