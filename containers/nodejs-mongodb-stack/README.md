@@ -142,7 +142,7 @@ Before you move forward please inspect the *wercker.yml*. The source is availabl
 	    - internal/docker-push:
 	        username: $DOCKER_USERNAME
 	        password: $DOCKER_PASSWORD
-	        tag: 0.0.1
+	        tag:  $DOCKER_TAG
 	        repository: $DOCKER_REPOSITORY
 	        registry: https://index.docker.io/v1/
 	        cmd: node pipeline/source/app.js
