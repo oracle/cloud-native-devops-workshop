@@ -20,7 +20,7 @@ This tutorial demonstrates how to:
 
 - create Wercker application (CI/CD) to build, package and push Node.js sample application to Docker public repository
 - create Oracle Container Cloud Service based on containerized Node.js sample application
-- create Oracle Container Cloud Stack which encapsulates the Node.js sample application and MongoDB services.
+- create Oracle Container Cloud Stack which contains the Node.js sample application and MongoDB services.
 - deploy stack to Oracle Container Cloud Service
 
 ### Prerequisites ###
