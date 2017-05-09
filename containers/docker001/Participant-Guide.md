@@ -385,7 +385,7 @@ Do you see the image that you pushed?
 
 ***
 
-Now, remove the local image and run the image from the Docker Hub registry.
+Now, remove the local image and force the image to be pulled and run from the Docker Hub registry.
 
 To do this, you must first remove the stopped container by using its short id, not its name.  Find the short id:
 
@@ -425,7 +425,7 @@ $ docker run username/docker-whale
 
 ***
 
-**At this point please stop and remove all containers.  To do this for all containers, uses these commands:**
+**At this point please stop and remove all containers.  To do this for all containers, use these commands:**
 
 ```
 $ docker stop $(docker ps -a -q)
@@ -446,7 +446,7 @@ According to Docker: *Docker Compose is a tool for defining and running multi-co
 
 **Install Docker Compose.**
 
-> *For simplicity, you will install Docker Compose v1.12 in the a directory called "compose", under the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose locally in that directory and create your first docker-compose.yml file.*
+> *For simplicity, you will install Docker Compose v1.12 in a directory called "compose", under the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose locally in that directory and create your first docker-compose.yml file.*
 
 Change to root home directory:
 
@@ -495,11 +495,7 @@ $ ./docker-compose --version
 
 ## Create a Wordpress "stack"
 
-Follow these steps to create a simple Wordpress stack referenced here:
-
-[https://docs.docker.com/compose/wordpress/](https://docs.docker.com/compose/wordpress/) 
-
-Here is a synopsis of the steps in the above URL:
+Follow these steps to create a simple Wordpress stack:
 
 Use an editor or VI to create a file named "docker-compose.yml":
 
@@ -583,6 +579,8 @@ See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
 ```
 
 **Congratulations, you have successfully launched your first Wordpress app in Docker!**
+
+For further info on this stack, see: [https://docs.docker.com/compose/wordpress/](https://docs.docker.com/compose/wordpress/) 
 
 ***
 
@@ -867,7 +865,7 @@ The build will take a few minutes to complete in Docker Hub.  When it does, Succ
 When you have a successful built, go back into your Docker CLI environment, run the new container.  Replace your Docker Hub name for "username" in the below command:
 
 ```
-$ docker run -d -p80:80 "username/hello-earth"
+$ docker run -d -p 80:80 "username/hello-earth"
 ```
 
 Once the container is running, visit the docker host’s IP and observe your changes for a new hello-earth container that you just built and ran!
