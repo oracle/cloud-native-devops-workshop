@@ -44,11 +44,11 @@ In this brief final lab, you will assume the persona of Lisa Jones, the project 
 
     ![](images/lab500/500_01_04_merge8.png)
 
-- Review the changed code, and note how the changes reflect the edits John Dunbar made in the Brackets code editor on the client workstation. Because you are the project manager and have access privileges and responsibilities above those of developers such as Bala Gupta and John Dunbar, you are the one who must initiate the merge. Approve and process the merge by clicking the **Merge** button.
+- Click on the **Changed Files** tab to review the changed code, and note how the changes reflect the edits John Dunbar made in the Brackets code editor on the client workstation. Because you are the project manager and have access privileges and responsibilities above those of developers such as Bala Gupta and John Dunbar, you are the one who must initiate the merge. Approve and process the merge by clicking the **Merge** button.
 
     ![](images/lab500/500_01_05_merge10.png)
 
-- On the popup click **Merge**.
+- On the popup uncheck **Squash commits** and click **Merge**.
 
     ![](images/lab500/500_01_06_merge11.png)
 
@@ -72,15 +72,17 @@ In this brief final lab, you will assume the persona of Lisa Jones, the project 
 
 - To manually start, stop or redeploy the application in Oracle Application Container Cloud Service, go to the gear dropdown icon for the application, and select the appropriate action.
 
+- ***If you must manually redeploy, make sure you deploy the latest build with the latest build number.***
+
     ![](images/lab500/500_01_12_merge17.png)
 
 ## Test the Edited Code, and Designate the Edits and Merge Have Been Completed
 
 ### **STEP 2**: Test the Completed Code
 
-- Click **Code** on the navigation panel.
+- Click **Deploy** on the navigation panel.
 
-    ![](images/lab500/500_02_01_codemenuchoice.png) 
+    ![](images/lab500/500_02_01_deploymenuchoice.png) 
 
 - Right click on the application name **AlphaofficeUI**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service. It is the URL you would publish to users of the application.
 

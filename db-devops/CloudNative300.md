@@ -63,7 +63,7 @@ In the first lab (100) Lisa Jones, the project manager, created a new project in
 
 ### **MySQL REST STEP 2**: Create the New Git Repository for the MySQL Microservice Code
 
-- Click on **Code** on the navigation panel.
+- Click on **Project** on the navigation panel.
 
     ![](images/lab300/300_02_S02_01_repository1.png)
 
@@ -71,9 +71,14 @@ In the first lab (100) Lisa Jones, the project manager, created a new project in
 
     ![](images/lab300/300_02_S02_02_repository2.png)
 
-- In the **New Repository** popup, enter `AlphaofficeMySQLREST` and enter a description. Select **Import existing repository**, and enter `https://github.com/johnhennen/AlphaofficeMySQLREST` for the outside repository location.  Then click **Create**.
+- In the **New Repository** popup, enter the following:
+    - **Name** `AlphaofficeMySQLREST` 
+    - **Description** (any)
+    - Select **Import existing repository** 
+    - Enter `https://github.com/johnhennen/AlphaofficeMySQLREST` for the existing repository location.  
+    - Finally, click **Create**.
 
-    ![](images/lab300/300_02_S02_03_repository3.png)
+   ![](images/lab300/300_02_S02_03_repository3.png)
 
 - Once all the code files are imported, you will have the file and folder structure below in the **AlphaofficeMySQLREST** repository.
 
@@ -111,7 +116,10 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_S03_07_build7.png)
 
-- Click the **Post Build** tab. Here select **Archive the artifacts** and select **GZIP** for the Compression Type. Then enter `**/target/*` for the Files To Archive value.
+- Click the **Post Build** tab and enter the following:
+    - Select **Archive the artifacts**
+    - **Files To Archive:** `**/target/*`
+    - **Compression Type:** **GZIP**
 
     ![](images/lab300/300_02_S03_08_build8.png)
 
@@ -133,9 +141,15 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_S04_01_deploy1.png)
 
-- On the **New Deployment Configuration** popup, Enter `DeployMySQLREST` for the **Configuration Name**. Then enter `AlphaofficeMySQLREST` as the **Application Name**. The latter will be the name for the application in the Oracle Application Container Cloud Service, and this string will be incorporated into the URL for the deployed application. Select **On Demand** for the Type. And make sure **BuildMySQLREST** is selected for Job and **target/msdbw-mysqlmicroservice.zip** is selected for Artifact. Click on the **New** button and select **Application Container Cloud** from the dropdown. Then click **Save and Deploy**.
+- On the **New Deployment Configuration** popup, enter the following:
+    - **Configuration Name:** `DeployMySQLREST` 
+    - **Application Name:** `AlphaofficeMySQLREST` (This will be the name for the application in the Oracle Application Container Cloud Service, and this string will be incorporated into the URL for the deployed application.)
+    - **Type:** **Automatic** 
+    - **Job:** **BuildMySQLREST** 
+    - **Artifact:** **target/msdbw-mysqlmicroservice.zip** 
+    - Finally, click on the **New** button and select **Application Container Cloud** from the dropdown.
 
-    ![](images/lab300/300_02_S04_02_deploy2.png)
+   ![](images/lab300/300_02_S04_02_deploy2.png)
 
 - Enter the Data Center, Identity Domain, Username and Password you were provided for the Oracle Cloud Service, and then click **Test Connection**.
 
@@ -145,11 +159,14 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_S04_04_deploy4.png)
 
-- Make sure you have chosen **Node** for **ACCS Properties**, and then click **Save and Deploy**.
+- Make sure you have chosen the following:
+    - **ACCS Properties:** **Node**
+    - **Type:** **Automatic** with **Deploy stable builds only** checked
+    - Finally, click **Save and Deploy**.
 
     ![](images/lab300/300_02_S04_05_deploy5.png)
 
-- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
+- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.  ***Note: this may take several minutes.***
 
     ![](images/lab300/300_02_S04_06_deploy6.png)
 
@@ -167,7 +184,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
 ### **Twitter REST STEP 2**: Create the New Git Repository for the Twitter Microservice Code
 
-- Click on **Code** on the navigation panel.
+- Click on **Project** on the navigation panel.
 
     ![](images/lab300/300_02_T02_01_repository1.png)
 
@@ -175,7 +192,12 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_T02_02_repository2.png)
 
-- In the **New Repository** popup, enter `AlphaofficeTitterREST` and enter a description. Select **Import existing repository**, and enter `https://github.com/johnhennen/AlphaofficeTwitterREST` for the outside repository location.  Then click **Create**.
+- In the **New Repository** popup, enter the following:
+    - **Name** `AlphaofficeTitterREST` 
+    - **Description** (any)
+    - Select **Import existing repository** 
+    - Enter `https://github.com/johnhennen/AlphaofficeTwitterREST` for the existing repository location.  
+    - Finally, click **Create**.
 
     ![](images/lab300/300_02_T02_03_repository3.png)
 
@@ -215,7 +237,10 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_T03_07_build7.png)
 
-- Click the **Post Build** tab. Here select **Archive the artifacts** and select **GZIP** for the Compression Type. Then enter `**/target/*` for the Files To Archive value.
+- Click the **Post Build** tab and enter the following:
+    - Select **Archive the artifacts**
+    - **Files To Archive:** `**/target/*`
+    - **Compression Type:** **GZIP**
 
     ![](images/lab300/300_02_T03_08_build8.png)
 
@@ -237,7 +262,13 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_T04_01_deploy1.png)
 
-- On the **New Deployment Configuration** popup, Enter `DeployTwitterREST` for the **Configuration Name**. Then enter `AlphaofficeTwitterREST` as the **Application Name**. The latter will be the name for the application in the Oracle Application Container Cloud Service, and this string will be incorporated into the URL for the deployed application. Select **On Demand** for the Type. And make sure **BuildTwitterREST** is selected for Job and **target/msdbw-twittermicroservice.zip** is selected for Artifact. Click on the **New** button and select **Application Container Cloud** from the dropdown. Then click **Save and Deploy**.
+- On the **New Deployment Configuration** popup, enter the following:
+    - **Configuration Name:** `DeployTwitterREST` 
+    - **Application Name:** `AlphaofficeTwitterREST` (This will be the name for the application in the Oracle Application Container Cloud Service, and this string will be incorporated into the URL for the deployed application.)
+    - **Type:** **Automatic** 
+    - **Job:** **BuildTwitterREST** 
+    - **Artifact:** **target/msdbw-twittermicroservice.zip** 
+    - Finally, click on the **New** button and select **Application Container Cloud** from the dropdown.
 
     ![](images/lab300/300_02_T04_02_deploy2.png)
 
@@ -249,11 +280,14 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_02_T04_04_deploy4.png)
 
-- Make sure you have chosen **Node** for **ACCS Properties**, and then click **Save and Deploy**.
+- Make sure you have chosen the following:
+    - **ACCS Properties:** **Node**
+    - **Type:** **Automatic** with **Deploy stable builds only** checked
+    - Finally, click **Save and Deploy**.
 
     ![](images/lab300/300_02_T04_05_deploy5.png)
 
-- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.
+- The panel will first show the deployment in process, and then will show that the **Last deployment succeeded**.  ***Note: this may take several minutes.***
 
     ![](images/lab300/300_02_T04_06_deploy6.png)
 
@@ -285,17 +319,21 @@ Now that you have the source code in your managed Git repository, you will need 
 
 ### **STEP 6**: Test the New Cloud Microservice Applications
 
-- While still in the **Deployments** screen, right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the MySQLREST application in the Application Container Cloud Service.
+- Click **Deploy** on the navigation panel. 
 
-    ![](images/lab300/300_06_01_getappurl.png) 
+    ![](images/lab300/300_06_01_deploymenuchoice.png)
+
+- Right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the MySQLREST application in the Application Container Cloud Service.
+
+    ![](images/lab300/300_06_02_getappurl.png) 
 
 - Paste this URL into the address bar of any browser (such as on your personal workstation), and then press **Enter** to navigate to the MySQLREST application in the Oracle Application Container Cloud Service. Note that there is no data displayed (only the JSON structure) because the code must be edited to access and return the MySQL data.
 
-    ![](images/lab300/300_06_02_testcloudmysqlapp.png) 
+    ![](images/lab300/300_06_03_testcloudmysqlapp.png) 
 
 - In the same way, right click on the application name **AlphaofficeTwitterREST**, and paste this URL into the address bar of any browser. Note that this shows an unfiltered listing of Twitter data in JSON format.
 
-    ![](images/lab300/300_06_03_testcloudtwitterapp.png) 
+    ![](images/lab300/300_06_04_testcloudtwitterapp.png) 
 
 ### **STEP 7**: Designate That Repository Creation is Completed
 
@@ -349,7 +387,7 @@ Now that you have the source code in your managed Git repository, you will need 
 
     ![](images/lab300/300_09_02_startterminal.png)
 
-Your first task is to create (or locate) a working folder for the local AlphaofficeMySQLREST repository. If you were not given a specific folder location, any appropriate location in the UNIX folder structure will work as long as it is easy for you to access and organize this folder. Also make sure permissions are sufficiently open for your work (chmod). Once an empty folder is created or located, you can move on to the next step.
+Your first task is to create (or locate) a working folder for the local AlphaofficeMySQLREST repository. If you were not given a specific folder location, any appropriate location in the UNIX folder structure will work as long as it is easy for you to access and organize this folder. (Perhaps name the folder **AlphaofficeMySQLREST**.) Also make sure permissions are sufficiently open for your work (chmod). Once an empty folder is created or located, you can move on to the next step.
 
 - Click the Brackets icon on the workstation desktop to start the Brackets code editor.
 
@@ -369,7 +407,7 @@ Your first task is to create (or locate) a working folder for the local Alphaoff
 
 ### **STEP 10**: Clone a Repository from the Oracle Developer Cloud Service Repository
 
-- Click the Git icon to make sure the Git panel is open at the bottom of the Brackets screen.
+- Click the Git icon on the right side of the Brackets screen to make sure the Git panel is open at the bottom of the Brackets screen.
 
     ![](images/lab300/300_10_01_giticon.png)
 
@@ -379,9 +417,9 @@ Your first task is to create (or locate) a working folder for the local Alphaoff
 
 ***At this point you will be returning very briefly to the Oracle Developer Cloud Service console.*** 
 
-- Click **Code** on the navigation panel.
+- Click **Project** on the navigation panel.
 
-    ![](images/lab300/300_10_03_codemenuchoice.png)
+    ![](images/lab300/300_10_03_projectmenuchoice.png)
 
 - In the **Repositories** panel, navigate to the URL for the **AlphaofficeMySQLREST.git** repository. Copy this URL 
 
@@ -389,7 +427,11 @@ Your first task is to create (or locate) a working folder for the local Alphaoff
 
 ***At this point you will be returning to the Brackets code editor on the client workstation.***
 
-- Since you just clicked the **Clone** button in the Brackets editor, the **Clone repository** popup is displayed. Paste the Oracle Cloud repository URL for **AlphaofficeMySQLREST.git** into the field labeled **Enter Git URL of the repository you want to clone:**. Enter the Username and Password for your Oracle Cloud account. Then click **OK**.
+- Since you just clicked the **Clone** button in the Brackets editor, the **Clone repository** popup is displayed. 
+    - Paste the Oracle Cloud repository URL for **AlphaofficeMySQLREST.git** into the field labeled **Enter Git URL of the repository you want to clone:**.
+    - Enter the Username and Password for your Oracle Cloud account.
+    - Check **Save credentials to remote url (in plain text)**.
+    - Finally, click **OK**.
 
     ![](images/lab300/300_10_05_clone1.png) 
 
@@ -409,7 +451,7 @@ At this point you will be testing the code running on the client workstation.
 
     ![](images/lab300/300_11_01_startterminal.png)
 
-- Navigate to the folder where the **server.js** file is located in the local AlphaofficeMySQLREST repository. Then enter the command `node server.js` and press **Enter**.
+- Navigate to the folder where the **server.js** file is located in the local AlphaofficeMySQLREST repository. (The server.js file is in the root folder of the repository folder you opened in Step 9.) Then enter the command `node server.js` and press **Enter**.
 
     ![](images/lab300/300_11_02_startnode.png)
 
@@ -425,7 +467,7 @@ Again note that there is no data displayed because the microservice code must be
 
 ### **STEP 12**: Edit the Local Version of the Code
 
-- In the left code repository panel of the Brackets code editor, click on the **server.js** file.
+- In the left code repository panel of the Brackets code editor, click on the **server.js** file. ***Note: there are a number of formatting and other non-fatal warnings that will be reported when you open the server.js file. Ignore these.***
 
     ![](images/lab300/300_12_01_editnode1.png)
 
@@ -445,9 +487,9 @@ In the section highlighted within the red rectangle, notice a number of values r
 
 ### **STEP 13**: Test the Edited Code
 
-- Close the terminal session that you just opened in **Step 11**. You must close this in order to start the Node.js code with the new edits.
+- You must terminate the Node.js session you started in **Step 11**. You must do this in order to execute the `node server.js` command again with the new edits to the server.js file. To do this, return to the terminal session you used in **Step 11** and press the **CTRL** and **C** keys simultaneously.
 
-- Open a terminal session on the client workstation.
+- Alternatively you can close the terminal session that you opened in **Step 11** and then open a new terminal session on the client workstation.
 
     ![](images/lab300/300_13_01_startterminal.png)
 
@@ -475,17 +517,21 @@ Notice that after the edits, the local version of the MySQL microservice applica
 
     ![](images/lab300/300_14_02_createbranch2.png)
 
-- You may need to click the Git icon ![](images/lab300/300_14_03_giticon.png) to display the Git panel at the bottom of the Brackets editor.
+- You may need to click the Git icon ![](images/lab300/300_14_03_giticon.png) on the right side of the Brackets editor screen in order to display the Git panel at the bottom of the Brackets screen.
 
-- Select the **Staged, Modified** entry for **server.js** and click **Commit**.
+- Make sure both check boxes are checked at the bottom left of the Brackets screen. (One checkbox is on the same line as the **Commit** button, and one is on the same line as **server.js** and the label **Modified** or **Staged, Modified**.)
+
+- Then click **Commit**.
 
     ![](images/lab300/300_14_04_createbranch4.png)
+
+- ***Note: there are a number of formatting and other non-fatal warnings that will be reported for the server.js file. Ignore these.***
 
 - Enter a comment for the commit and click **OK**.
 
     ![](images/lab300/300_14_05_createbranch5.png)
 
-- You may need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.)
+- You may need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.) Finally, click **OK**.
 
     ![](images/lab300/300_14_06_createbranch6.png)
 
@@ -495,7 +541,7 @@ Notice that after the edits, the local version of the MySQL microservice applica
 
     ![](images/lab300/300_15_01_gitpushicon.png)
 
-- Enter your cloud username and password that you were given, and click **OK**.
+- Enter your cloud username and password that you were given. Make sure **Save credentials to remote url (in plain text)** is checked. Finally, click **OK**.
 
     ![](images/lab300/300_15_02_createbranch9.png)
 
@@ -541,7 +587,7 @@ But remember, we are following a rigorous Git-based source control methodology. 
 
     ![](images/lab300/300_16_07_merge5.png)
 
-- On the second popup, add a summary description and select a reviewer. Then click **Next**. 
+- On the second popup, add a summary description and select a reviewer. (In real life, Bala might designate several reviewers. In this exercise the only option may be **Cloud Admin**.)  Finally, click **Next**. 
 
     ![](images/lab300/300_16_08_merge6.png)
 
@@ -583,11 +629,11 @@ But remember, we are following a rigorous Git-based source control methodology. 
 
     ![](images/lab300/300_18_02_merge8.png)
 
-- Review the changed code, and note how the changes reflect the edits Bala Gupta made in the Brackets code editor on the client workstation. As Lisa, approve and process the merge by clicking the **Merge** button.
+- Click on the **Changed Files** tab to review the changed code, and note how the changes reflect the edits Bala Gupta made in the Brackets code editor on the client workstation. As Lisa, approve and process the merge by clicking the **Merge** button.
 
     ![](images/lab300/300_18_03_merge9.png)
 
-- On the popup click **Merge**.
+- On the popup uncheck **Squash commits** and click **Merge**.
 
     ![](images/lab300/300_18_04_merge10.png)
 
@@ -611,13 +657,15 @@ But remember, we are following a rigorous Git-based source control methodology. 
 
 - To manually start, stop or redeploy the application in Oracle Application Container Cloud Service, go to the gear dropdown icon for the application, and select the appropriate action.
 
+- ***If you must manually redeploy, make sure you deploy the latest build with the latest build number.***
+
     ![](images/lab300/300_18_10_merge16.png)
 
 ### **STEP 19**: Test the Completed Code
 
-- Click **Code** on the navigation panel.
+- Click **Deploy** on the navigation panel.
 
-    ![](images/lab300/300_19_01_codemenuchoice.png) 
+    ![](images/lab300/300_19_01_deploymenuchoice.png) 
 
 - As Lisa Jones, test the code edits. Right click on the application name **AlphaofficeMySQLREST**, and choose **Copy link address** in the dropdown. This is the URL for the application in the Application Container Cloud Service.
 
