@@ -3,76 +3,76 @@ Update: March 31, 2017
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+このハンズオンラボは**クラウド･ネイティブ･マイクロサービス ハンズオン**の二つ目のラボです。このハンズオンではソフトウェア開発ライフサイクル(Software Development Lifecycle (SDLC))の流れを複数のマイクロサービスを作成・利用するクラウドネイティブプロジェクト通して理解していきます。
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
+Lab 100ではプロジェクト管理者がDeveloper Cloud Serviceを利用して新規プロジェクト・タスクを作成し、各アプリケーション開発者を担当者として割り当てました。このラボでは**Java開発者**のロールとして、フロントエンドや分析用アプリケーションにデータを提供するマイクロサービスアプリケーションを開発していきます。
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+## ゴール
 
-## Objectives
+- Developer Cloud Serviceへアクセス
+- 外部Gitリポジトリからのソースコードのインポート
+- プロジェクトのEclipseへのインポート
+- Developer Cloud Service, Application Container Cloud Serviceを使用したプロジェクトのビルド&デプロイ
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Eclipse
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+## 前提条件
 
-## Required Artifacts
+- Lab 100が完了していること
+- Oracle Public Cloud環境にアクセスが出来ること
+- 最新版のEclipseがインストールされていること(Virtual Box内に予め設定済です。)
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse. Instructions are found in the Student Guide.
+# Twitterフィードサービスの作成
 
-# Create Initial Static Twitter Feed Service
+## Developer Cloud Service
 
-## Explore Developer Cloud Service
+### **STEP 1**: Agile Boardの確認
 
-### **STEP 1**: Review Agile Board
-
-- This Lab assumes that you just completed Lab 100 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- Developer Cloud Serviceを開き、Lab 100で作成した**Twitter Feed Marketing Project**を開いた状態で始めてください。
 
     ![](images/200/Picture10.5.png)  
 
-- Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***Bala Gupta*** as you perform the following steps.
+- Trial登録時に作成したユーザアカウントを使用してハンズオンを進めますが、下記のSTEPは**Bala Gupta**の手順として進めます。
 
     ![](images/bala.png)  
 
-- Within the **Twitter Feed Marketing Project**, click on **Agile** found on the left hand navigation.
+- **Twitter Feed Marketing Project**の左側のナビゲーションパネルで**Agile** をクリックします。
 
     ![](images/200/Picture11.png)  
 
-### **STEP 2**: Display the Active Sprint
+### **STEP 2**: アクティブなSprintの表示
 
-- On the **Microservices** Board, click **Active Sprints**
+- **Microservices**ボードで**Active Sprints** をクリックします。
 
     ![](images/200/Picture13.png)  
 
-## Create Initial Git Repository
+## Gitリポジトリの作成
 
-### **STEP 3**: Create Initial Git Repository
+### **STEP 3**: 初期Gitリポジトリの作成
 
-To begin development on our Twitter feed microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Bala Gupta) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
+Twitterフィードマイクロサービスの開発に先立って、**あなた(Bala Gupta)**は事前に機能確認も含めたPoCを行っています。そのため、このハンズオンでは一からコーディングを行なうのではなく、外部Gitリポジトリに配置されているソースコードをDeveloper Cloud Serviceにcloneして開発を行います。まず初めにAgile Boardを使用してタスクを開始します。
 
-- Drag and drop **Task1 - Create Initial GIT Repository for Twitter Feed Service** into the **In Progress** swim-lane.  
+- **Task1 - Create Initial GIT Repository for Twitter Feed Service**を**In Progress**のエリアにドラッグ&ドロップします。
 
     ![](images/200/Picture14.2.png)  
 
-- Click on **Next** in the Change Progress popup.
+- **Change Progress**のポップアップが表示されたら、**Next** をクリックします。
 
     ![](images/200/Picture14.5.png)  
 
-- Leave the defaults, and Click **OK**.
+- 内容はデフォルトのまま、**OK** をクリックします。
 
     ![](images/200/Picture15.png)  
 
-- Your Sprint progress will appear as shown below.
+- 下記のように**Task 1**が**In Progress**の下に表示されている事を確認します。
 
     ![](images/200/Picture16.2.png)  
 
-- In the left hand navigation panel, click **Project**
+- 左側のナビゲーションパネルで**Project**をクリックします。
 
-- On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
+- 右側の**REPOSITORIES**セクションで**New Repository**をクリックして、新しいGitリポジトリを作成します。
 
     ![](images/200/Picture17.png)  
 
-- In the New Repository wizard enter the following information and click **Create**.
+- **New Repository**ウィザードが作成されたら、下記のデータを入力し、**Create**をクリックします。
 
     **Name:** `TwitterFeedMicroservice`
 
@@ -84,82 +84,86 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
     ![](images/200/Picture18.2.png)  
 
-- You have now created a new GIT repository stored within the Developer Cloud Services that is based on an existing repository.
+- これで外部リポジトリからcloneしたDeveloper Cloud Service上のGitリポジトリの作成が完了しました。
 
     ![](images/200/Picture19.png)  
 
-## Create Default Build and Deployment Process
+## デフォルトビルド、デプロイジョブの作成
 
-### **STEP 4**: Create Default Build Process
+### **STEP 4**: デフォルトビルドジョブの作成
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
+Gitリポジトリにソースコードを取り込めたので、masterブランチへのpushをトリガーにしたビルドジョブの作成を行います。このハンズオンではMavenビルドジョブの設定を行います。
 
-- On the left side navigation panel, click **Build** to access the build page and click **New Job**.
+- 左側のナビゲーションパネルで**Build**をクリックしてビルドページを表示し、**New Job** をクリックします。
 
     ![](images/200/Picture20.png)  
 
-- In the New Job popup enter `Twitter Feed Build` for the Job Name, and then click **Save**.
+- **New Job**のポップアップでJob Nameに`Twitter Feed Build`と入力し、**Save** をクリックします。
 
     ![](images/200/Picture21.png)  
 
-- You are now placed into the job configuration screen.
+- 正常にジョブが作成されると、設定画面に移動します。
 
     ![](images/200/Picture22.png)  
 
-- On the Main tab of the Configure Build screen change the **JDK** drop down to **JDK8**.
+- **Main**タブをクリックします。
+
+- **JDK**のプルダウンから**JDK8** を選択します。
 
     ![](images/200/Picture23.png)  
 
-- Click the **Source Control** tab.
+- **Source Control**タブをクリックします。
 
-- Click **Git** and select the **TwitterFeedMicroservice.git** from the drop down.
+- **Git** のラジオボタンを選択し、Repositoryのプルダウンから**TwitterFeedMicroservice.git**を選択します。
 
     ![](images/200/Picture24.png)  
 
-- Click the **Triggers** tab.
+- **Triggers**タブをクリックします。
 
-  **Select**: `Based on SCM polling schedule`
+- **Based on SCM polling schedule** にチェックを入れます。
 
     ![](images/200/Picture25.png)  
 
-- Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke Maven 3**.
+- **Build Steps**タブをクリックします。
+
+- **Add Build Step**をクリックし、**Invoke Maven 3** を選択します。
 
     ![](images/200/Picture26.png)  
 
-- Change **Goals** to `clean assembly:assembly`
+- **Goal**に**clean assembly:assembly** を設定します。
 
     ![](images/200/Picture27.png)  
 
-- Click the **Post Build** tab and complete the following:
-  - Check **Archive the artifacts**.
-  - Enter `**/target/*` for **Files to Archive**.  
-  - Verify **GZIP** in the Compression Type.
-  - Check **Publish JUnit test report**
-  - Enter `**/target/surefire-reports/*.xml` for the Test Report XMLs. This will provide a report on the Test Scripts results for each build.
+- **Post Build**タブをクリックして、下記の設定を行います。
+  - **Archive the artifacts**にチェックを入れます。
+  - **Files to Archive**に** \*\*/target/\***と入力します。
+  - **Compression Type**のプルダウンで**GZIP**を選択します。
+  - **Publish JUnit test report**にチェックを入れます。
+  - **Test Report XMLs**に**\*\*/target/surefire-reports/\*.xml** と入力します。この設定をすることでビルド毎にテストスクリプトの実行結果の取得が出来ます。
 
     ![](images/200/Picture28.png)  
 
-- Click **Save** to complete the configuration.
+- 右上の**Save**をクリックして設定を保存します。
 
-- Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
+- **Build Now** をクリックし、ビルドの即時実行を行います。30秒から数分でキューされたジョブが実行され、下記のような状態に遷移します。
 
     ![](images/200/Picture29.png)  
 
-  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
+  **NOTE:** ビルドは数分で完了します。ビルドが完了すると成功したジョブの回数が**Test Result Trend**セクションに表示されます。ビルドで作成されたファイルをビルドジョブの設定で使用するため、***ビルドが完了するまで次のSTEPには進まないでください。***
 
-- After the build begins, you can also click on the **Console Icon** to monitor the build log details.
+- ビルド開始後に**Consoleアイコン**をクリックするとビルドジョブの詳細なログを確認することが出来ます。
 
     ![](images/200/Picture30.png)  
 
-### **STEP 5**: Create Default Deployment Process
+### **STEP 5**: デフォルトデプロイジョブの作成
 
-Now that you have successfully built your project, you need to create a deployment configuration that will watch for stable builds and deploy them to a new Application Container Cloud Service instance for testing.
+プロジェクトのビルドが正常に完了したので、Application Container Cloud Serviceのインスタンスにビルドされたアプリケーションをデプロイするためのジョブを作成します。
 
-- On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**.
+- 左側のナビゲーションパネルの**Deploy**をクリックして、**Deployments**ページに移動し、右上の**New Configuration** をクリックします。
 
     ![](images/200/Picture31.png)  
 
-- Enter the following data:
+- **New Deployemnt Configuration**ウィザードに下記のデータを入力します。
 
   **Configuration Name**: `TwitterFeedMicroserviceDeploy`
 
@@ -167,13 +171,13 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture32.png)  
 
-- To the Right of Deployment Target, click **New** and select **Application Container Cloud**
+- **Deployment Target**の右側にある**New**をクリックして、プルダウンから**Application Container Cloud** を選択します。
 
     ![](images/200/Picture33.png)  
 
-- Enter the following data:
+- **Deploy to Application Container Cloud**のポップアップに下記のデータを入力します。
 
-  - **Data Center**: `<Your Assigned Datacenter>` 
+  - **Data Center**: `<Your Assigned Datacenter>`
 
   - **Identity Domain**: `<Your Identity Domain>`
 
@@ -181,13 +185,13 @@ Now that you have successfully built your project, you need to create a deployme
 
   - **Password**: `<Supplied Password>`
 
-- Click **Test Connection**. If Successful, click **Use Connection**:
+- データ入力後、**Test Connection**をクリックします。接続が成功したら、**Use Connection** をクリックします。
 
     ![](images/200/Picture34.3.png)  
 
-    Note: If you are not able to connect, double check you credentials. If your connection still does not work, and this is an **Oracle Trial account**, please review the Student Guide for this workshop, and follow the steps outlining how to set your **Storage Replication Policy**.  
+    Note: 接続できない場合は入力した内容を確認してください。入力した内容が間違っていない場合、ストレージ・レプリケーション・ポリシーの設定が正常に行われていない可能性があるので、**Lab 100 - STEP 2: ストレージレプリケーションポリシーの確認・設定**を参考にレプリケーション・ポリシーの設定を行ってください。
 
-- Set the following Properties as follows:
+- ウィザードで下記のデータを入力します。
 
   - **Runtime**: `Java`
 
@@ -201,127 +205,125 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture35.3.png)  
 
-- Click **Save**
+- **Save** をクリックします。
 
     ![](images/200/Picture36.2.png)  
 
-- Click the gear drop down and select **Start**
+- 右上の歯車をクリックして、プルダウンから**Start**を選択します。
 
     ![](images/200/Picture37.2.png)  
 
-- Wait until the message **Starting application** changes to **Last deployment succeeded**
+- メッセージが**Starting application**から**Last deployment succeeded**に変わるまで待ちます。
 
     ![](images/200/Picture38.2.png)  
 
     ![](images/200/Picture38.3.png)  
 
-## Verify Twitter Feed Microservice deployment
+## Twitterフィードマイクロサービスのデプロイの確認
 
-### **STEP 6**: Change status to Verified
+### **STEP 6**: Issueステータスの変更
 
-Now that we have successfully deployed the build artifact to the Application Container Cloud Service, we will update our agile board to reflect that status. Although the complexity of the next task (verification) is quite simple, we will still move the task to the “Verify Code” column before manually verifying the new functionality.
+Application Container Cloud Serviceへのアプリケーションのデプロイが完了したので、Agile Boardのステータスの変更を行います。デプロイしたアプリケーションの機能確認を行なう前にAgile Board内のタスクのステータスを**Veryfy Code**に変更します。
 
-- On navigation panel click **Agile**, followed by clicking **Active Sprints**. 
+- 左側のナビゲーションパネルで**Agile**をクリックして、**Active Sprints**をクリックします。
 
-- Drag and drop **Task 1** from **In Progress** to the **Verify Code** column.
+- **Task 1** from **In Progress** をドラッグ&ドロップして**Verify Code**エリアに移動します。
 
     ![](images/200/Picture39.2.png)  
 
-- In the Change Progress pop up, click on **Next**
+- **Change Progress**ポップアップで**Next** をクリックします。
 
     ![](images/200/Picture39.5.png)  
 
-- In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/200/Picture40.png)  
 
-- The code is now ready for verification before moving to Completed
+- これでコードが**Completed**へ移動する前の**Verification**のステータスとなりました。
 
     ![](images/200/Picture41.3.png)  
 
-### **STEP 7**: Login to Oracle Application Container Cloud Service
+### **STEP 7**: Oracle Application Container Cloud Serviceへログイン
 
-- Return to the Developer Service Cloud Dashboard tab if it’s still available, then select the Dashboard icon to return to the Oracle Public Cloud Dashboard. Note: It’s possible that you may be required to once again login, if the session has expired.
+- Developer Cloud Serviceのサービス概要画面に戻り、右上の**Dashboard**からOracle Public Cloudダッシュボードへ移動します。サービスコンソールが残っていない場合、直接Oracle Public Cloudダッシュボードへ移動します。Note: セッションが切れている場合、再度ログインが必要な場合があります。
 
     ![](images/200/Picture42.png)  
 
-- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu to the right of the **Application Container** service. Then select **Open Service** Console. Note: If the **Application Container** service is not visible, it can be added using the Customize Dashboard button. 
+- Oracle Public Cloudダッシュボードが表示されたら、**Application Container **の右上にある![](images/200/PictureHamburger.png)をクリックし、プルダウンから**Open Service Console**を選択します。Note: **Application Container**が表示されていない場合、右上の**Customize Dashboard** から表示させる事が出来ます。
 
-    ![](images/200/Picture43.png)  
+    ![](images/200/Picture43.png)
 
-- On the Application Container Cloud Service (ACCS) Service Console you can view all the deployed applications, including our newly created **JavaTwitterMicroservice**. Click on the **URL**, and it will load a new browser tab. Alternatively, copy and paste the URL into the address bar of a new browser tab.
+- Application Container Cloud Service(ACCS)のサービスコンソールでは、先ほどデプロイした**JavaTwitterMicroservice**を含め、全てのデプロイメントの一覧が表示されます。**URL** をクリックもしくは**URL** をコピーしてアドレスバーに入力するとデプロイされたアプリケーションが開きます。
 
     ![](images/200/Picture44.png)  
 
-- Append `/statictweets` to the end of the URL in the browser, and press return (e.g.):
+- 表示されているURLの最後に`/statictweets`を追加してページを開きます。下記はサンプルのURLです。
 `https://javatwittermicroservice-.apaas.em2.oraclecloud.com/statictweets`
 
-    Note: The URL should return a JSON array containing a Static Twitter feed. Note: If you desire to see a formatted view of the JSON, and you are using Chrome, open a new tab and search Google for “JSONViewer chrome plugin” – After you install the Chrome Plugin and re-submit the URL, you will be able to view the JSON in a more readable format.
+    Note: このURLにアクセスするとTwitterフィードのJSON形式のデータが表示されます。整形された状態でデータを見たい場合、クロームであれば“JSONViewer chrome plugin”を使用することで整形されたJSONデータを確認できます。
 
     ![](images/200/Picture45.png)  
 
-### **STEP 8**: Complete Task
+### **STEP 8**: タスクの完了
 
-We have now verified that the statictweets microservice has been deployed and functions properly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
+これでTwitterフィードマイクロサービスのデプロイと正常に稼働していることの確認が完了しました。最後にSprintでこのIssueのステータスを**Completed**に変更します。
 
-- Back in the Developer Cloud Service window, click **Agile**, followed by clicking Active Sprints.
+- Developer Cloud Serviceのダッシュボード画面に戻り、左側のナビゲーションパネルで**Agile**をクリックして、**Active Sprints**をクリックします。
 
-- Drag and drop **Task 1** from **Verify Code** to **Completed**.
+- **Task 1**をドラッグ&ドロップし、**Verify Code**から**Completed** に移動します。
 
     ![](images/200/Picture46.2.png)  
 
 
-- In the Change Progress popup click **Next**.
+- **Change Progress**ポップアップで**Next** をクリックします。
 
     ![](images/200/Picture47.png)  
 
-- In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**.
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/200/Picture47.5.png)  
 
-- Your Sprint should now look like the following:
+- Sprintが下記のようになった事を確認します。
 
     ![](images/200/Picture48.2.png)  
 
-- You can also click on the **Reports** button and view your progress in the **Burndown Chart** and **Sprint Report**.
+- 右上の**Report**ボタンをクリックすると、進捗を**Burndown Chart**と**Sprint Report**の形式で確認出来ます。
 
     ![](images/200/Picture49.png)  
 
-# Add Filter to Static Twitter Feed Service
+# Twitterフィードサービスへのフィルターの追加
 
-Now that we have completed the import, build, deployment, and verification of our initial static twitter microservice, it is time to extend the project by adding a new microservice that allows us to dynamically filter the incoming tweets based on their contents. We will use the Eclipse IDE to clone the managed GIT repository to our local workstation, test the local copy, and add the filtering feature to the local copy. We will test the new feature in Eclipse, create a new code branch for it, and commit the branch. Then we will create a merge request and switch to the Project Manager persona to approve that request. We will also see how we can manage our agile task status directly from Eclipse.
+これまでの作業でソースコードのインポート、ビルド、デプロイ、稼働確認が完了したので、フィードを動的にフィルタリング出来る機能を追加で実装します。この機能の実装ではローカル環境にリポジトリをクローンし、Eclipseからコーディングを行います。ローカル端末のExlipseで追加機能を確認したあと、修正版のコードをコミットするブランチを作成し、ソースコードのコミットを行います。コミットが完了したら、masterブランチへのマージリクエストを作成します。また、EclipseからのAgile Boardのタスクのステータスの管理方法も併せて確認します。
 
-## Clone Project to Eclipse IDE
+## Eclipseへのプロジェクトのクローン
 
-### **STEP 9**: Load Eclipse IDE
+### **STEP 9**: Eclipseの起動
 
-In the following task we will provide screen shots taken from the optional virtual box image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
+これからの作業はVirtualBox環境内のEclipseを使用して行います。
 
-- Right Click and select **Run** on the **Eclipse** Desktop Icon.
-
-    Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure it.
+- デスクトップの**Eclipse**アイコンを右クリックし、**Run** を選択します。
 
     ![](images/200/Picture50.png)  
 
-- Once Eclipse loads, **close** the **Welcome Window** if it is visible.
+- Eclipse起動後、**Welcome Window** が表示される場合、ウィンドウを閉じます。
 
     ![](images/200/Picture51.png)  
 
-### **STEP 10**: Create connection to Oracle Developer Cloud Service
+### **STEP 10**: Oracle Developer Cloud Serviceへの接続
 
-- We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options **Window -> Show View ->Other**  
+- EclipseからDeveloper Cloud Serviceへの接続設定を行います。まず、メニューバーの**Window**をクリックし、プルダウンから**Show View ->Other**を選択します。
 
     ![](images/200/Picture52.png)  
 
-- Enter `oracle` in the search field. Select **Oracle Cloud**, and click on **OK**.  
+- 検索フォームに`oracle`と入力し、**Oracle Cloud**を選択して**OK** をクリックします。
 
     ![](images/200/Picture53.png)  
 
-- Click on **Connect** in the Oracle Cloud tab
+- Oracle Cloudタブの**Connect**をクリックします。
 
     ![](images/200/Picture54.png)  
 
-- Enter the following information:
+- 下記のデータを入力します。
 
   - **Identity Domain**: `<your identity domain>`
 
@@ -333,233 +335,231 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture55.2.png)  
 
-- If prompted, enter and confirm a Master Password for the Eclipse Secure Storage.
-  - In our example we use the **password:**  `oracle`. Press **OK**.
+- Eclipse Secure Storageのマスタパスワードが求められた場合、`oracle`と入力します。
 
     ![](images/200/Picture56.png)  
 
-  - If prompted to enter a Password Hint, click on **No**
+  - パスワードヒントを求められた場合、**No** をクリックします。
 
     ![](images/200/Picture57.png)  
 
-### **STEP 11**: Create a local clone of the repository
+### **STEP 11**: リポジトリのローカルクローンの作成
 
-- **Expand Developer**, and then **double click** on **Twitter Feed Marketing Project** to activate the project.
+- **Developer**のツリーを展開し、**Twitter Feed Marketing Project** をダブルクリックして有効化します。
 
     ![](images/200/Picture58.png)  
 
-- **Expand** the **Code** section, and **double click** on the **Git Repo** [**TwitterFeedMicroservice.git**], to cause the Repo to be cloned locally.
+- **Code**セクションを展開し、**Git Repo** [**TwitterFeedMicroservice.git**]をダブルクリックして、ローカルにリポジトリのクローンを作成します。
 
     ![](images/200/Picture59.png)  
 
-- **Right Click** on the **TwitterFeedMicroservice** cloned repository and **click** on **Import Projects**.
+- **TwitterFeedMicroservice**のクローンリポジトリで右クリックを行い、プルダウンから**Import Projects** を選択します。
 
     ![](images/200/Picture60.png)  
 
-- If the following screen is displayed, Keep the wizard defaults and **click** on **Next**:
+- 下記の画面が表示されたら、デフォルトのまま**Next**をクリックします。
 
     ![](images/200/Picture61.png)  
 
-
-- Accept the Import defaults, and **click on Finish**. Note: If nothing imports, that will be resolved in the next step. 
+- デフォルト設定のまま、**Finish** をクリックします。Note: 何もインポートされない場合、次のステップでインポートが行われます。
 
     ![](images/200/Picture62.png)  
 
-### **STEP 12**: Import Projects
+### **STEP 12**: プロジェクトのインポート
 
-- ***If projects were NOT imported*** into your Project Explorer, as is show in the screen capture below, perform this step. If **TwitterFeedMicroService** was imported, go to the next step.
+- ***リポジトリがインポートされなかった場合、*** 下記の手順を行ってください。**TwitterFeedMicroService** のインポートがすでにされている場合、次のSTEPに進んでください。
 
     ![](images/200/Picture62.5.png)  
 
-- Choose **Import** from the Eclipse **File** menu.
+- メニューバーの**File**をクリックして、プルダウンから**Import**を選択します。
 
     ![](images/200/Picture62.1.png)
 
-- In the Import dialog, expand **General** > **Existing Projects into Workspace** and click on **Next**
+- インポートダイアログで**General** > **Existing Projects into Workspace**を選択し、**Next** をクリックします。**Import Prtojects**のウィンドウに戻ったら、**Finish** をクリックします。
 
     ![](images/200/Picture62.2.png)
 
-- In the Import dialog, click **Browse** next to the **Select root directory** input field.
+- インポートダイアログで**Select root directory**の右にある**Browse**をクリックします。
 
-- Navigate to your **Workspace** > **TwitterFeedMicroservice.git-xxxx** folder and click **OK**. Then click **Finish**.
+- **Browse for Folder**のポップアップで**Workspace** > **TwitterFeedMicroservice.git-xxxx**を選択し、**OK** をクリックします。
 
     ![](images/200/Picture62.3.png)
 
-### **STEP 13**: Select the correct Java JDE
+### **STEP 13**: Java JREを設定
 
-Depending on your eclipse configuration, you may need to point the project's Java Runtime Environment to a different JRE than the default. (e.g. with the Workshop's companion Virtual Box Image). In this step you will first check to see if your environment is correctly set. If the JRE is not correct, you will configure the Project Settings to point to the correct JRE.
+JREの設定が正しく行われているかの確認を行います。正しく設定されていない場合、**Project Setting**から正しいJREの設定を行います。
 
-- **Click** on the **TwitterFeedMicroservice** Project, then from the **top menu**, select **Project > Properties**
+- **TwitterFeedMicroservice**をクリックして、メニューバーの**Projectをクリックして**Properties** を選択します。
 
     ![](images/200/Picture63.png)  
 
-- Select the **Java Build Path** option.
+- **Java Build Path** を選択します。
 
     ![](images/200/Picture64.png)  
 
-- **Click** on the **Libraries tab**.
+- **Libraries tab** をクリックします。
 
-- Select the **JRE System Library**.
+- **JRE System Library**を選択します。
 
-- **Click** on the **Edit** button.
+- **Edit** をクリックします。
 
     ![](images/200/Picture65.png)  
 
-- If your **Execution Environment JRE** release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
+- 下記の例のように**Execution Environment JRE**が**1.8.0\_102もしくはそれ以上**の場合、***次のSTEPに進んでください。***
 
     ![](images/200/Picture65.5.png)  
 
-- If the Execution Environment JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
+- 下記の例のように**Execution Environment JRE**が**1.8.0\_102未満**の場合,**Installed JREs** をクリックします。
 
     ![](images/200/Picture66.png)   
 
-- **Select** the Standard VM, which in this case is **java-1.8.0-openjdk**. Then, **click** on **Edit**
+- Standard VMを選択し(下記の例の場合**java-1.8.0-openjdk**)、**Edit** をクリックします。
 
     ![](images/200/Picture67.png)  
 
-- **Click** on the **JRE home: Directory** button
+- **JRE home: Directory** をクリックします。
 
     ![](images/200/Picture68.png)  
 
-- **Navigate** to **usr/java**, select **jdk1.8.0\_102**, and **click** on **OK**
-
-    **Note**: On Windows, the JDK Path will differ. It is likely similar to: **C:\Program Files\Java\jdk1.8.0_31**
+- **usr/java**に移動し、**jdk1.8.0\_102**を選択して**OK** をクリックします。
 
     ![](images/200/Picture69.png)  
 
-- Change the JRE Name to **jdk1.8.0\_102**, and click on **Finish**
+- JRE名を**jdk1.8.0\_102**に変更し、**Finish** をクリックします。
 
     ![](images/200/Picture70.png)  
 
-- Click **OK, Finish** and **OK** when prompted on the following dialogs to complete the  Library changes.
+- **OK**、**Finish**、 **OK** の順で出て来るプロンプトでクリックしてライブラリの設定を完了します。
 
-## Test the Local Cloned Services
+## ローカルにクローンしたサービスの確認
 
-### **STEP 14**: Set Feature 2 Status to In Progress
+### **STEP 14**: Feature 2のステータスをIn Progressに変更
 
-In the previous steps we updated the status of the Tasks assigned to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
+これまでのSTEPではDeveloper Cloud ServiceのBUIを使用して、**Bala Gupta**にアサインされたタスクのステータスを変更しました。このSTEPではEclipseを使用して、タスクのステータスの変更を行います。
 
-- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**.
+- Oracle Cloud Connectionタブ内の**Issues**をダブルクリックして展開し、**Mine**をダブルクリックしてリストを表示します。Issueの一覧が表示されたら、**Create Filter on Twitter Feed** をダブルクリックします。
 
     ![](images/200/Picture71.png)  
 
-- Scroll down to the bottom of the **Create Filter on Twitter Feed** window. In the Actions section, and change the **Actions** to **Accept (change status to ASSIGNED)**, then click on **Submit**.
+- **Create Filter on Twitter Feed**ウィンドウを下までスクロールします。ウィンドウ内の**Actions**セクションで**Accept (change status to ASSIGNED)**を選択し、**Submit** をクリックします。
 
     ![](images/200/Picture72.2.png)  
 
-- Optionally, if you return to the Developer Cloud Service web interface, you’ll see that the Eclipse interface caused the Feature 2 to be moved to the “In Progress” column of the Agile > Active Sprints.
+- Developer Cloud のBUIからEclipseでの変更の反映を確認することができます。
 
     ![](images/200/Picture73.2.png)  
 
-### **STEP 15**: Build and test the TwitterFeedMicroservice
+### **STEP 15**: TwitterFeedMicroserviceのビルドとテスト
 
-- **Right Click** on the **TwitterFeedMicroservice** project. Select **Maven > Update Project**
+- **TwitterFeedMicroservice**プロジェクトで右クリックをして、**Maven > Update Project** を選択します。
 
     ![](images/200/Picture74.png)  
 
-- Keep the defaults, and click **OK**. This will run Maven, and build the project.
+- デフォルトのまま、**OK** をクリックします。これでMavenジョブを実行し、プロジェクトのビルドを行います。
 
     ![](images/200/Picture75.png)  
 
-- To test the local copy of the project code, right click on the **TwitterFeedMicroservice** project and select **Run As > Maven Test**
+- **TwitterFeedMicroservice**を右クリックして、**Run As > Maven Test** を選択してローカルコードのテストを行います。
 
     ![](images/200/Picture76.png)  
 
-- Double Clicking on the **Console tab** will expand The Window. You can minimize the Window by double clicking the tab again. If the TwitterFeedMicroservices test runs successfully, your console window will contain the following – Notice the message with “### Tweets in Static Tweets”. You should see that there were zero Failures. Depending on your installation, you may see an exception as Eclipse's network listener is shutdown.
+- **Console** タブをダブルクリックしてウィンドウを拡大します。もう一度ダブルクリックするとウィンドウを縮小出来ます。TwitterFeedMicroservicesのテストが正常に完了すると、下記のメッセージが表示されます。Failuresの値が0になっている事を確認してください。
 
     ![](images/200/Picture77.png)  
 
-## Add the Filter to the Service
+## サービスへのフィルター追加
 
-The Code we cloned locally contains the entire source necessary to filter the Static Twitter Feed. In this section of the lab, we will un-comment the code and test the filter.
+ローカルにクローンしたソースコードにはフィルターを追加するためのソースコードが含まれています。このセクションではフィルター機能のソースコードのコメントアウトを外し、機能の確認を行います。
 
-### **STEP 16**: Add Filter
+### **STEP 16**: フィルターの追加
 
-- In the Project Explorer, **expand** the **TwitterFeedMicroservice > src/main/java > com.example** and **double click** on **StaticTweets.java** to open the source code.
+- **Project Explorer**で**TwitterFeedMicroservice > src/main/java > com.example**のツリーを展開し、**StaticTweets.java** をダブルクリックして、ソースコードを表示します。
 
     ![](images/200/Picture78.png)  
 
-- In the StaticTweets.java source file, scroll down until you find two lines of code that begin with “**--- Remove this comment**”. **Delete both of these lines** to activate the code that will cause filtering of the Static Tweets file to occur.
+- **StaticTweets.java**のソースコードを下にスクロールしていき、“**--- Remove this comment**”の記述を探します。同じ内容の行が2行あるので、**両方の行を削除し** フィルター機能を有効化します。
 
     ![](images/200/Picture79.png)  
 
-- Your code should now look like this:
+- 修正後のソースコードは下記のようになります。
 
     ![](images/200/Picture75.5.png)  
 
-- Next we will enable the filter in the testing code. Expand the **src/test/java > com.example folder**, and **double click** on **MyServiceTest.java** to open the source file
+- 続いて、テストコードのフィルターに関するテストを有効化します。**src/test/java > com.example folder**のツリーを展開し、**MyServiceTest.java** をダブルクリックして、ソースコードを表示します。
 
     ![](images/200/Picture80.png)  
 
-- In the MyServiceTest.java source file, locate the method **testGetStaticSearchTweets()**, and **remove** the **comments** so that section of code will execute.
+- **MyServiceTest.java**で**testGetStaticSearchTweets()**というメソッドを探し、**コメントアウト**(下記赤点線内)を削除します。
 
     ![](images/200/Picture81.png)  
 
-- Click on the **Save All** icon
+- **Save All** をクリックします。
 
     ![](images/200/Picture82.png)  
 
-## Test the Local Filtered Services
+## ローカルのフィルター機能のテスト
 
-### **STEP 17**: Run Test and Create Branch
+### **STEP 17**: テストの実行とブランチの作成
 
-- Run the Test by right clicking on **TwitterFeedMicroservice** and selecting **Run As > Maven Test**
+- **TwitterFeedMicroservice**を右クリックし、**Run As > Maven Test** を選択して、テストを実行します。
 
     ![](images/200/Picture83.png)  
 
-- Once the test runs, you’ll see the Static Twitter feed returned for both the unfiltered and filtered tests. You should not see any Failures.
+- テストが実行されたら、フィルターされていない結果とフィルターされた結果が表示されます。Failureの値が0である事を確認してください。
 
-- right click on **TwitterFeedMicroservice** and select **Team > Switch To > New Branch**
+- **TwitterFeedMicroservice**を右クリックし、**Team > Switch To > New Branch** を選択します。
 
     ![](images/200/image087.png)  
 
-- Enter **Feature2** for the Branch name, and click on **Finish**
+- Branch Nameに**Feature2**と入力し、**Finish** をクリックします。
 
     ![](images/200/image088.png)  
 
-- We can now commit our code to the branch by Right Clicking on **TwitterFeedMicroservice** and then selecting **Team > Commit**
+- **TwitterFeedMicroservice**を右クリックし、**Team > Commit** を選択して修正したソースコードをコミットします。
 
     ![](images/200/image089.png)  
 
-- Enter “**Feature2: Added Support for Filtering**” in the Commit Message box.
-- **Drag and Drop** the **changed files** into the **Staged Changes** panel.
-- Click on **Commit and Push**. Note: it is possible to change the default Author and Committer to match the current “persona.” However, for the sake of this lab guide, we will leave the defaults.  
+- Commit Messageボックスに“**Feature2: Added Support for Filtering**”と入力します。
+- ソースコードを修正したファイルを**Staged Changes**エリアに**Drag and Drop**します。
+- **Commit and Push** をクリックします。Note: AuthorとCommitterを現在のユーザロールの名前に変更することが出来ますが、このハンズオンでは変更せず、デフォルトの値を使用します。
 
     ![](images/200/image090.png)  
 
-- Accept the Default for the **Push Branch Feature** 2 dialog and click on **Next**
-- Click on the **Finish button** in the Push Confirmation dialog
-- Click on **Ok** in Push Result dialog
+- **Push Branch Feature**ダイアログをAcceptし、**Next**をクリックします。
+- Push Confirmationダイアログの**Finish** をクリックします。
+- Push Resultダイアログの**Ok**をクリックします。
 
-### **STEP 18**: Complete the Create Filter Task
+### **STEP 18**: フィルター作成タスクの完了
 
-- In the lower left Eclipse Task List, double click on **Create Filter on Twitter Feed** task
+- Eclipseの左下の**Task List**タブ内の**Create Filter on Twitter Feed** をダブルクリックします。
 
     ![](images/200/image091.png)  
 
-- In the **Create Filter on Twitter Feed** window, scroll down to the **Actions** Section. Click on **Resolve as FIXED**, and then click on the **Submit** button
+- **Create Filter on Twitter Feed**ウィンドウで
+
+- **Create Filter on Twitter Feed**ウィンドウを下までスクロールします。ウィンドウ内の**Actions**セクションで**Resolve as FIXED**を選択し、**Submit** をクリックします。
 
     ![](images/200/image092.png)  
 
-## Create Merge Request
+## マージリクエストの作成
 
-### **STEP 19**: Review Sprint Status and create Merge Request
+### **STEP 19**: Sprint Statusのレビューとマージリクエストの作成
 
-- Return to the Developer Cloud Service Dashboard in the browser, and select **Agile**. If your default Board is not set to Microservices, then set the Find Board Filter to All, and select the Microservices board.
+- Developer Cloud Serviceダッシュボードに戻り、左側のナビゲーションパネルの**Agile**をクリックします。デフォルトのBoardがMicroservicesになっていない場合、**Find Board Filter**を**All**に設定し、**Microservices** のBoardを表示します。
 
     ![](images/200/image093.png)  
 
-- Click on **Active Sprints** button. Notice that **Feature 2** is now in the **Verify Code** column
+- **Active Sprints**をクリックします。**Feature 2**が**Verify Code** エリアにあることを確認します。
 
-- Next, on navigation panel click **Code**, select the **Feature2** branch and then click on the **Commits sub tab**. Now view the recent commit made to branch from within Eclipse.
+- 左側のナビゲーションパネルで**Code**をクリックして、**Feature2**ブランチを選択し、**Commits sub** タブを選択します。コミットがEclipseからされていることを確認します。
 
     ![](images/200/image094.png)  
 
-- Now that "Bala Gupta" has completed the task of adding the search filter, a **Merge Request** can be created by Bala and assigned to Lisa Jones. Click on **Merge Requests** on navigation panel and then click on the **New Merge Request** button.
+- これで**Bala Gupta**はフィルター追加のタスクを完了したので、**Lisa Jones**に向けて、ブランチのマージリクエストを作成します。**Merge Requests**をクリックして、**New Merge Request** をクリックします。
 
     ![](images/200/image094.5.png)  
 
-- Enter the following information into the **New Merge Request** and click **Next**
+- **New Merge Request**に下記のデータを入力して、**Next** をクリックします。
 
   **Repository:** 	`TwitterFeedMicroservice.git`
 
@@ -570,7 +570,7 @@ The Code we cloned locally contains the entire source necessary to filter the St
     ![](images/200/image096.png)  
 
 
-- Enter the following information into **Details** and click **Create**
+- **Details**に下記のデータを入力して、**Create**をクリックします。
 
   **Summary:** `Merge Feature 2 into master`
 
@@ -578,85 +578,85 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
     ![](images/200/image097.2.png)  
 
-    **Note**: **Bala Gupta** is logically sending this request to **Lisa Jones**
+    **Note**: このSTEPではユーザロール**Bala Gupta**がユーザロール**Lisa Jones**にマージリクエストを送信しています。
 
-- In the **Write box**, enter the following comment and then click on the **Comment** button to save:
+- **Write**ボックスに下記のコメントを入力し、**Comment** をクリックして保存します。
 
   `I added the ability to add a filter request to the end of the URL – e.g. statictweets/alpha`
 
-## Merge the Branch as Lisa Jones
+## Lisa Jonesとしてブランチをマージ
 
-In the following steps “Lisa” will merge the branch create by “Bala” into the master.
+ここからのSTEPでは“Bala”が作成したブランチを“Lisa”がmasterブランチへマージします。
 
-### **STEP 20**: Merge Requests
+### **STEP 20**: マージリクエスト
 
 ![](images/lisa.png)  
 
-- Before moving forward, “Lisa Jones” can take a look at the **Burndown** and **Sprint Reports** by clicking on the **Agile** navigation, then the **Reports** button
+- 左側のナビゲーションパネルの**Agile**をクリックし、右上の**Reports**を選択すると、**Burndown**と**Sprint Reports** が確認できます。
 
     ![](images/200/image104.png)  
 
-- Click **Sprint Report**
+- **Sprint Report** をクリックします。
 
     ![](images/200/image105.png)  
 
-- On navigation panel click **Merge Requests**. Select the **Assigned to Me** search. After the search completes, click on the **Merge Feature 2 into master** assigned request.
+- **Merge Requests**をクリックして、**Assigned to Me**を選択します。**Merge Feature 2 into master** が表示されるのでクリックします。
 
     ![](images/200/image106.png)  
 
-- Once the request has loaded, select the **Changed Files** tab. “Lisa” will now have the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
+- リクエストが表示されたら、**Changed Files** タブを選択します。マージリクエストの承認・拒否・マージを行なう前に、“Lisa”はブランチへの変更、コメント等の確認を行います。
 
     ![](images/200/image107.2.png)  
 
-- Click on the **Merge** button.
+- **Merge** をクリックします。
 
     ![](images/200/image108.png)  
 
-- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+- デフォルトのまま**Merge**をクリックします。
 
     ![](images/200/image109.png)  
 
-- Now that the code has been committed to the Developer Cloud Service repository, the build and deployment will automatically start. On the navigation panel click **Build**, and you should see a **Twitter Feed Build** in the Queue
+- これで修正されたソースコードがDeveloper Cloud Serviceのリポジトリにコミットされましたので、自動でビルド&デプロイが実行されます。左側のナビゲーションパネルで**Build**をクリックして、**Twitter Feed Build** がQueueに入っていることを確認します。
 
     ![](images/200/image110.png)  
 
-- Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
+- ビルドが完了するまで数分待ちます。ビルドが完了すると**Last Success**の内容が**Just Now** に変更されます。
 
     ![](images/200/Picture85.png)  
 
-## Test the JavaTwitterMicroservice in the Cloud
+## Cloud環境でJavaTwitterMicroserviceのテスト
 
-### **STEP 21**: Test Microservice
+### **STEP 21**: マイクロサービスのテスト
 
-- Once the service has successfully deployed, click **Deploy** in the left-hand menu and click on the **JavaTwitterMicroservice** link
+- サービスが正常にデプロイされたら、左側のナビゲーションパネルの**Deploy**をクリックして、**JavaTwitterMicroservice** のリンクをクリックします。
 
     ![](images/200/image113.png)  
 
-- When the new browser tab loads, Append `/statictweets` to the end of the URL and **press enter** to test the original static twitter service
+- ブラウザの新規タブが開いたら、URLの最後に`/statictweets`を追記してページを開き、フィルターなしのTwitterフィードを確認します。
 
     ![](images/200/image114.png)  
 
-- Now change the appended URL to `/statictweets/alpha` and **press enter**. This will cause records containing the text ""**alpha**"" in the tweet’s text or hashtags to be returned.
+- フィルターなしのフィードが確認出来たら、URIを`/statictweets/alpha`に変更し、テキストやハッシュタグに""**alpha**""が含まれたフィードのみがフィルタリングされて表示されていることを確認します。
 
     ![](images/200/image115.png)  
 
-- To complete the Sprint Feature, click **Agile** on left hand navigation. Then click on the **Active Sprints** button.
+- 左側ナビゲーションパネルの**Agile**をクリックし、**Active Sprints** を選択し、Sprint Featureを完了させます。
 
     ![](images/200/image116.png)  
 
-- Complete the feature request by Dragging and Dropping **Feature 2** (Create Filter on Twitter Feed) from the **Verify Column** to the **Completed Column**.
+- **Feature 2** (Create Filter on Twitter Feed)を**Verify**エリアから**Completed**エリアへドラッグ&ドロップで移動します。
 
     ![](images/200/image117.png)  
 
-- Set the Status to **VERIFIED – FIXED** and click **Next**.
+- ステータスを**VERIFIED – FIXED**に変更し、**Next** をクリックします。
 
     ![](images/200/image118.png)  
 
-- Set the **Time Spent** to `1` and click on **OK**.
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/200/image118.5.png)  
 
-- You are now done with this lab.
+- ここまででLab200は完了です。Lab300に進んでください。
 
 # Supplementary Assignment – Twitter Live Feed Credentials
 
