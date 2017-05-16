@@ -18,7 +18,7 @@ labGuide.config(function ($mdThemingProvider) {
     $mdThemingProvider.alwaysWatchTheme(true);
 });
 
-labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize', '$sce', '$mdDialog' 
+labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize', '$sce', '$mdDialog'
     , function ($scope, $http, $mdSidenav, $sanitize, $sce, $mdDialog) {
         $scope.theme = 'default';
         $scope.selection = {
@@ -35,7 +35,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                     , title: "Interactive Tour"
                 };
             }
-            
+
             if($scope.manifest.workshop.theme){
                 console.log("Theme selected",$scope.manifest.workshop.theme);
                 if($scope.manifest.workshop.theme == 'ttc'){
@@ -51,9 +51,14 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         }
         $scope.loadContent = function (page) {
             $http.get(page).then(function (res) {
-                var converter = new showdown.Converter()
-                    , text = res.data
-                    , html = converter.makeHtml(text);
+              var converter = new showdown.Converter({tables: true})
+                , text = res.data;
+              converter.setFlavor('github');
+
+              var html = converter.makeHtml(text);
+              $scope.htmlContent = html;
+
+              $scope.selection.lab = true;
                 $scope.htmlContent = html;
                 page.htmlContent = html;
                 $scope.selection.lab = true;
@@ -97,8 +102,16 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                     });
                 }, 0);
             }, function (msg) {
-                console.log('Error getting lab guide markdown!');
-                console.log(msg);
+                if(page === 'Home.md') {
+                  console.log('Home.md not found. Displaying README.md...');
+                  $scope.getLabGuide({
+                    filename: 'README.md'
+                  });
+                }
+                else {
+                  console.log('Error getting lab guide markdown!');
+                  console.log(msg);
+                }
             });
         }
         $scope.getLabGuide = function (lab) {
