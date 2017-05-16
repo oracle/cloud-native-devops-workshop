@@ -4,65 +4,65 @@ Update: March 31, 2017
 
 ## Introduction
 
-This is the third of several labs that are part of the **Oracle Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+このハンズオンラボは**クラウド･ネイティブ･マイクロサービス ハンズオン**の三つ目のラボです。このハンズオンではソフトウェア開発ライフサイクル(Software Development Lifecycle (SDLC))の流れを複数のマイクロサービスを作成・利用するクラウドネイティブプロジェクト通して理解していきます。
 
-In the previous lab (200), the Java Developer (Bala Gupta) created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
+Lab 200ではJava開発者(Bala Gupta)がTwitterからデータを取得し、キーワードでフィルタリングするマイクロサービスを作成しました。このラボ(Lab 300)ではフロントエンドJavaScript開発者として、Balaが作成したマイクロサービスから取得したデータを表示するNode.jsのWebアプリケーションを作成します。Developer Cloud Serviceでのビルド、Application Container Cloud Serviceのインスタンス上へのデプロイを自動化する設定を行います。
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+## ゴール
 
-## Objectives
+- Developer Cloud Serviceへアクセス
+- 外部Gitリポジトリからのソースコードのインポート
+- プロジェクトのBracketsへのインポート
+- Developer Cloud Service, Application Container Cloud Serviceを使用したプロジェクトのビルド&デプロイ
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+## 前提条件
 
-## Required Artifacts
-
-- The following lab requires an Oracle Cloud account that will be supplied by your instructor. You will need to download and install latest version of the Brackets text editor.
+- Lab 200が完了していること
+- Oracle Public Cloud環境にアクセスが出来ること
+- 最新版のBracketsがインストールされていること(Virtual Box内に予め設定済です。)
 
 
-# Create Initial Twitter Marketing UI Service
+# TwitterマーケティングUIの作成
 
-## Explore Developer Cloud Service
+## Developer Cloud Service
 
-### **STEP 1**: Review Agile Board
+### **STEP 1**: Agile Boardの確認
 
-- This Lab assumes that you completed Lab 100 and 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- このラボではDeveloper Cloud Serviceを使用するので、ダッシュボードを開いていない場合は、再度ダッシュボードを開き"Twitter Feed Marketing Project"を表示してください。
 
     ![](images/200/Picture10.5.png)  
 
-- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps.
+- Trial登録時に作成したユーザアカウントを使用してハンズオンを進めますが、下記のSTEPは**John Dunbar**の手順として進めます。
 
     ![](images/john.png)  
 
-- Click on **Agile** on the navigation panel.
+- 左側のナビゲーションパネルで**Agile**をクリックします。
 
     ![](images/300/image012.png)  
 
-- Click on the **Microservices** Board **Active Sprints**.
+- **Microservices**をクリックして、**Active Sprints** を選択します。
 
     ![](images/300/image014.5.png)  
 
-## Create Initial Git Repository
+## 初期Gitリポジトリの作成
 
-### **STEP 2**: Create Initial Git Repository
+### **STEP 2**: 初期Gitリポジトリの作成
 
-As in the previous lab, we could start coding this application from scratch at this point. However, one of our colleagues has already begun working on the shell for our web application outside of the Developer Cloud Service. We want to use his work as a starting point and extend it to incorporate our twitter microservices. To pull his code into the Developer Cloud Service, we will clone his external GIT repository. First let’s update our agile board to show that we are working on this task:
+TwitterマーケティングUIの開発に先立って、同僚が事前に大枠のアプリケーションを作成しています。そのため、このハンズオンでは一からコーディングを行なうのではなく、外部Gitリポジトリに配置されているソースコードをDeveloper Cloud Serviceにcloneして、そこにTwitterマイクロサービスとの接続機能を追加していきます。同僚のGitリポジトリ内のソースコードをプルするために、Developer Cloud Serviceへリポジトリのクローンを行います。まず初めにAgile Boardを使用してタスクを開始します。
 
-- Drag and drop **Task 3 - Create Initial GIT Repository for Twitter Marketing UI** into the **In Progress** swim-lane.  Click **OK** on Change Progress popup.
+- **Task 3 - Create Initial GIT Repository for Twitter Marketing UI**を**In Progress**のエリアにドラッグ&ドロップします。**Change Progress**のポップアップが表示されたら、**OK** をクリックします。
 
     ![](images/300/image015.png)  
 
     ![](images/300/image016.5.png)  
 
-- Click on **Project** on the navigation panel.
+- 左側のナビゲーションパネルの**Project**をクリックします。
 
-- Click on **New Repository** to create a new Git Repository
+- 右側の**REPOSITORIES**セクションで**New Repository**をクリックして、新しいGitリポジトリを作成します。
 
     ![](images/300/image017.png)  
 
-- In the New Repository wizard enter the following information and click **Create**.
+- **New Repository**ウィザードが作成されたら、下記のデータを入力し、**Create**をクリックします。
 
     **Name:** `TwitterMarketingUIMicroservice`
 
@@ -72,67 +72,78 @@ As in the previous lab, we could start coding this application from scratch at t
 
     ![](images/300/image018.5.png)  
 
-- You have now created a new GIT repository based on an existing repository.
+- これで外部リポジトリからcloneしたDeveloper Cloud Service上のGitリポジトリの作成が完了しました。
 
     ![](images/300/image019.png)  
 
-## Create Default Build and Deployment Process
+## デフォルトビルド、デプロイジョブの作成
 
 ### **STEP 3**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a shell script build process in this section.
+Gitリポジトリにソースコードを取り込めたので、masterブランチへのpushをトリガーにしたビルドジョブの作成を行います。このハンズオンではMavenビルドジョブの設定を行います。
 
-- Click **Build** on the navigation panel to access the build page and click **New Job**.
+- 左側のナビゲーションパネルで**Build**をクリックしてビルドページを表示し、**New Job** をクリックします。
 
     ![](images/300/image020.png)  
 
-- In the New Job popup enter `Twitter Marketing UI Build` for Job Name and click **Save**.
+- **New Job**のポップアップでJob Nameに`Twitter Feed Build`と入力し、**Save** をクリックします。
 
     ![](images/300/image021.png)  
 
-- You are now placed into the job configuration screen.
+- 正常にジョブが作成されると、設定画面に移動します。
 
     ![](images/300/image022.png)  
 
-- Click the **Source Control** tab. Click Git and select **TwitterMarketingUIMicroservice.git** from the URL drop down.
+- **Source Control**タブをクリックします。
 
-    **Note:** Make sure you select the Git repository for the Twitter Marketing UI Microservice.
+- **Git** のラジオボタンを選択し、Repositoryのプルダウンから**TwitterMarketingUIMicroservice.git**を選択します。
+
+    **Note:** Twitter Feed Microserviceではなく、***Twitter Marketing UI Microservice*** のGitリポジトリを選択していることを確認してください。
 
     ![](images/300/image023.png)  
 
-- Click the **Triggers** tab.  Select Based on **SCM polling schedule**.
+- **Triggers**タブをクリックします。
+
+- **Based on SCM polling schedule** にチェックを入れます。
 
     ![](images/300/image024.png)  
 
-- Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
+- **Build Steps**タブをクリックします。
+
+- **Add Build Step**をクリックし、**Execute shell** を選択します。
 
     ![](images/300/image025.png)  
 
-- For **Command** enter: `npm install`
+- **Command**に**npm install** を設定します。
 
     ![](images/300/image026.png)  
 
-- Click the **Post Build** tab. Check **Archive the artifacts** and enter `**/target/*` for Files to Archive.  Verify **GZIP** in the Compression Type.
+- **Post Build**タブをクリックして、下記の設定を行います。
+  - **Archive the artifacts**にチェックを入れます。
+  - **Files to Archive**に** \*\*/target/\***と入力します。
+  - **Compression Type**のプルダウンで**GZIP** を選択します。
 
     ![](images/300/image027.png)  
 
-- Click **Save** to complete the configuration. A build should start automatically within a minute or two.  If it does not start automatically, click on the **Build Now** button. The status will change to the following:
+- 右上の**Save**をクリックして設定を保存します。
+
+- 1-2分でビルドが自動的に開始されます。ビルドが始まらない場合、**Build Now** をクリックし、ビルドの即時実行を行います。30秒から数分でキューされたジョブが実行され、下記のような状態に遷移します。
 
     ![](images/300/image028.png)  
 
-- Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Wait for the build to complete before continuing on to the next step, as we need the build artifact to create the deployment configuration.
+- ビルドは数分で完了します。ビルドが完了すると成功したジョブの回数が**Test Result Trend**セクションに表示されます。ビルドで作成されたファイルをビルドジョブの設定で使用するため、***ビルドが完了するまで次のSTEPには進まないでください。***
 
     ![](images/300/image029.png)  
 
-### **STEP 4**: Create Default Deployment Process
+### **STEP 4**: デフォルトデプロイジョブの作成
 
-Now that we have an automated build process, we will set up a deployment configuration that will push our build artifacts to a node.js environment running on the Application Container Cloud Service whenever a successful build occurs.
+プロジェクトのビルドが正常に完了したので、Application Container Cloud Serviceのインスタンスにビルドされたアプリケーションをデプロイするためのジョブを作成します。デプロイはビルド完了時に自動的に行われるように設定します。
 
-- Click **Deploy** to access the Deployment page and click **New Configuration**.
+- 左側のナビゲーションパネルの**Deploy**をクリックして、**Deployments**ページに移動し、右上の**New Configuration** をクリックします。
 
     ![](images/300/image030.png)  
 
-- Enter the following data:
+    - **New Deployemnt Configuration**ウィザードに下記のデータを入力します。
 
     **Configuration Name:** `TwitterMarketingUIDeploy`
 
@@ -140,11 +151,11 @@ Now that we have an automated build process, we will set up a deployment configu
 
     ![](images/300/image031.png)  
 
-- Right of Deployment Target click **New** and select **Application Container Cloud**
+- **Deployment Target**の右側にある**New**をクリックして、プルダウンから**Application Container Cloud** を選択します。
 
     ![](images/300/image032.png)  
 
-- Enter the following data and click Test Connection. If Successful click Use Connection
+- **Deploy to Application Container Cloud**のポップアップに下記のデータを入力します。
 
     **Data Center**: `<Your Assigned Datacenter>` ***(Ask instructor if needed)***
 
@@ -154,173 +165,182 @@ Now that we have an automated build process, we will set up a deployment configu
 
     **Password**: `<Supplied Password>`
 
+- データ入力後、**Test Connection**をクリックします。接続が成功したら、**Use Connection** をクリックします。
+
     ![](images/300/image033.2.png)  
 
-- Set ACCS Properties to Runtime **Node** and Subscription **Hourly**. 
-- Click Type **Automatic**. 
-- Select Job **Twitter Marketing UI** Build.
-- Select **target/jet-quickstart-client-dist.zip** for Artifact.
+- ウィザードで下記のデータを入力します。
+
+  - **Runtime**: `Node`
+
+  - **Subscription**: `Hourly`
+
+  - **Type:** `Automatic`
+
+  - **Job:** `Twitter Marketing UI`
+
+  - **Artifact:** `target/jet-quickstart-client-dist.zip`
 
     ![](images/300/image034.png)  
 
-- Click **Save**
+- **Save** をクリックします。
 
     ![](images/300/image035.png)  
 
-- Click the gear drop down and select **Start**
+- 右上の歯車をクリックして、プルダウンから**Start**を選択します。
 
     ![](images/300/image036.png)  
 
-- Wait until the message **Starting application** changes to **Last deployment succeeded**
+- メッセージが**Starting application**から**Last deployment succeeded**に変わるまで待ちます。
 
     ![](images/300/image037.png)  
 
-## Verify default deployment of Twitter Marketing UI
+## TwitterマーケティングUIのデプロイの確認
 
-### **STEP 5**: Change status to Verified
+### **STEP 5**: Issueステータスの変更
 
-Now that we have successfully deployed the build artifact to the Application Container Cloud Service, we will update our agile board to reflect that status. Although the complexity of the next task (verification) is quite simple, we will still move the task to the “Verify Code” column before manually verifying the new functionality.
+Application Container Cloud Serviceへのアプリケーションのデプロイが完了したので、Agile Boardのステータスの変更を行います。デプロイしたアプリケーションの機能確認を行なう前にAgile Board内のタスクのステータスを**Veryfy Code**に変更します。
 
-- Click on **Agile**, followed by clicking **Active Sprints**. Drag and drop **Task 3** from **In Progress** to the **Verify Code** column.
+- 左側のナビゲーションパネルで**Agile**をクリックして、**Active Sprints**をクリックします。
+
+- **Task 3** from **In Progress**をドラッグ&ドロップして**Verify Code** エリアに移動します。
 
     ![](images/300/image039.2.png)  
 
-- In the Change Progress popup, Click on **Next**
+- **Change Progress**ポップアップで**Next** をクリックします。
 
     ![](images/300/image040.png)  
 
-- Enter `1` in the **Time Spent** field and click on **OK**.
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/300/image040.5.png)  
 
-- The code is now ready for verification before moving to Completed
+- これでコードが**Completed**へ移動する前の**Verification**のステータスとなりました。
 
     ![](images/300/image041.2.png)  
 
-### **STEP 6**: Login to Oracle Application Container Cloud Service
+### **STEP 6**: Oracle Application Container Cloud Serviceへログイン
 
-- Navigate back to the Oracle Public Cloud tab. Click **Dashboard** to return back to main Cloud Service Dashboard.
+- Developer Cloud Serviceのサービス概要画面に戻り、右上の**Dashboard**からOracle Public Cloudダッシュボードへ移動します。サービスコンソールが残っていない場合、直接Oracle Public Cloudダッシュボードへ移動します。Note: セッションが切れている場合、再度ログインが必要な場合があります。
 
     ![](images/300/image042.2.png)  
 
-- On the Application Container Cloud Service (ACCS) click ![](images/300/image043.png)  and select **Open Service Console**
+- Oracle Public Cloudダッシュボードが表示されたら、**Application Container** の右上にある![](images/300/image043.png)をクリックし、プルダウンから**Open Service Console**を選択します。Note: **Application Container**が表示されていない場合、右上の**Customize Dashboard** から表示させる事が出来ます。
 
     ![](images/300/image044.png)  
 
-- On the ACCS Service Console you can view all the deployed applications including our newly create **JETFrontEndApp**.
+- Application Container Cloud Service(ACCS)のサービスコンソールでは、先ほどデプロイした**JETFrontEndApp**を含め、全てのデプロイメントの一覧が表示されます。
 
     ![](images/300/image045.png)  
 
-- Click on URL or copy and paste the URL into the address bar of a new tab to bring up the application.
+- **URL** をクリックもしくは**URL** をコピーしてアドレスバーに入力するとデプロイされたアプリケーションが開きます。
 
     ![](images/300/image046.png)  
 
-### **STEP 7**: Complete Task
+### **STEP 7**: タスクの完了
 
-We have now verified that our application has been deployed and is functional. To finish up this part of the lab we will want to mark the Issue as completed in our Sprint.
+これでTwitterマーケティングUIのデプロイと正常に稼働していることの確認が完了しました。最後にSprintでこのIssueのステータスを**Completed**に変更します。
 
-- Back in the Developer Cloud Service, click **Agile**, followed by clicking **Active Sprints**.
+- Developer Cloud Serviceのダッシュボード画面に戻り、左側のナビゲーションパネルで**Agile**をクリックして、**Active Sprints**をクリックします。
 
-- Drag and drop **Task 3** from **Verify Code** to **Completed**.
+- **Task 3**をドラッグ&ドロップし、**Verify Code**から**Completed** に移動します。
 
     ![](images/300/image047.png)  
 
-- In the Change Progress popup click **Next**.
+- **Change Progress**ポップアップで**Next** をクリックします。
 
     ![](images/300/image048.png)  
 
-- Change the **Time Spent** to `1` and click on **OK**.
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/300/image048.5.png)  
 
 
-- Your Sprint should now look like the following:
+- Sprintが下記のようになった事を確認します。
 
     ![](images/300/image049.2.png)  
 
-# Extend default application to Display Twitter Feed
+# Twitterフィード表示機能の追加
 
-Now that we have our default application we want to extend this application to add the display of the twitter feed. For this task we will use Brackets text editor to pull down the code from Developer Cloud Service and add in our modifications. Once the new code is ready for deployment we will check the code in on a branch so that it can go through a code review prior to build and deployment.
+ここまでのステップでTwitterフィード表示機能を追加するベースのアプリケーションが完成しました。このタスクではBracketsを利用してDeveloper Cloud Service上のソースコードを取得し、修正を加えます。修正が完了したら、直接自動デプロイが行われないようにレビュー用のブランチを作成し、ソースをコミットます。
 
-### **STEP 8**: Move Task to In Progress
+### **STEP 8**: Issueステータスの変更
 
-To start this part of the lab we will want to mark the Issue as In Progress in our Sprint.
+ソースコードの修正を行なう前にAgile Board内のタスクのステータスを**In Progress**に変更します。
 
-- Back in the Developer Cloud Service, click **Agile**, followed by clicking **Active Sprints**.
+- Developer Cloud Serviceダッシュボードに戻り、左側のナビゲーションパネルで**Agile**をクリックして、**Active Sprints**をクリックします。
 
-- Drag and drop **Feature 4** from **To Do** to **In Progress**.
+- **Feature 4** from **To Do** をドラッグ&ドロップして**In Progress**エリアに移動します。
 
     ![](images/300/image050.2.png)  
 
-- In the Change Progress popup click **OK**
+- **Change Progress**ポップアップで**OK** をクリックします。
 
     ![](images/300/image051.png)  
 
-## Clone Project to Brackets Text Editor
+## Bracketsへのプロジェクトのクローン
 
-### **STEP 9**:	Start Brackets Text Editor
+### **STEP 9**:	Bracketsの起動
 
-- Start **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
+これからの作業はVirtualBox環境内のEclipseを使用して行います。
 
-***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this Workshop. You will find instruction on how to install Git and Configure Brackets.
-
-- Right click **Brackets** desktop icon and select **Open**
+- デスクトップの**Brackets**アイコンを右クリックし、**Open** を選択します。
 
     ![](images/300/image052.png)  
 
-- Brackets should open with the **TwitterMarketingUI** folder already loaded.
+- Bracketsが起動したら、**TwitterMarketingUI** フォルダが開いていることを確認してください。
 
     ![](images/300/image053.2.png)  
 
-### **STEP 10**: Copy GIT URL
+### **STEP 10**: Git URLのコピー
 
-- Back in Developer Cloud Service, click on **Project**. On right side, select the URL for **TwitterMarketingUIMicroservice.git**. Right click and select **Copy**
+Developer Cloud Serviceダッシュボードに戻り、左側のナビゲーションパネルで**Project**をクリックして、右側の**TwitterMarketingUIMicroservice.git**のURLを確認し、右クリックからコピーを行ってください。
 
     ![](images/300/image054.2.png)  
 
-### **STEP 11**: Clone GIT Repository
+### **STEP 11**: リポジトリのローカルクローンの作成
 
-- Back in the Brackets editor, Click on ![](images/300/image055.png) GIT icon found on the right side of the editor.
+- Bracketsに戻り、エディタ右側にある![](images/300/image055.png)のようなGitアイコンをクリックします。
 
   ![](images/300/image055.5.png)  
 
-- Click **Clone**
+- **Clone** をクリックします。
 
   ![](images/300/image056.png)  
 
-- Paste in Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
+- Developer Cloud Serviceダッシュボードで確認したGit URLを貼り付けます。ユーザ名は自動入力されますので、パスワードを入力して**Save credentials**をクリックします。保存が完了したら、**OK** をクリックしてリポジトリのクローンを開始します。
 
     ![](images/300/image057.png)  
 
-- While the clone is running a dialog box will show you the progress.
+- クローン中はダイアログボックスで進捗を確認することが出来ます。
 
     ![](images/300/image058.png)  
 
-- You now have a local copy of the repository.
+- これでリポジトリのローカルコピーが作成されました。
 
     ![](images/300/image059.png)  
 
-### **STEP 12**: Run Live Preview.
+### **STEP 12**: ライブプレビューの確認
 
-- Before we make our code changes lets first run the code locally.
+- 実際にソースコードを編集する前に、現在のアプリケーションをライブプレビューで確認します。
 
-- Expand **doc_root** and select **index.html**
+- **doc_root**を展開し、**index.html** を選択します。
 
     ![](images/300/image060.png)  
 
-- On right hand panel, click ![](images/300/image061.png) Live Preview. This will start your JavaScript application in a browser. Once you verify the application is working you can close the browser.
+- 右側のパネルで![](images/300/image061.png) をクリックすると、ブラウザでJavaScriptアプリケーションのライブプレビューが起動します。アプリケーションの表示が確認できたら、ブラウザを閉じます。
 
-![](images/300/image062.png)  
+    ![](images/300/image062.png)  
 
-## Add Code to display Twitter Feed in Table Format
+## Twitterフィード表示のソースコード追加
 
-### **STEP 13**:	Modify graphics.html
+### **STEP 13**: graphics.htmlの修正
 
-- Expand **doc_root -> js -> views** and click **graphics.html**.
+- **doc_root -> js -> views**の順番で展開し、**graphics.html** を選択します。
 
     ![](images/300/image063.png)  
 
-- Replace the existing code with the code block below:
+- 既存のソースコードを下記のソースコードと置き換えます。
 
 ```
 <h1>Graphics Content</h1>
@@ -341,13 +361,13 @@ To start this part of the lab we will want to mark the Issue as In Progress in o
 
 ![](images/300/image064.png)  
 
-### **STEP 14**: Modify graphics.js
+### **STEP 14**: graphics.jsの修正
 
-- Expand **doc_root -> js -> viewModels** and click **graphics.js**.
+- **doc_root -> js -> viewModels**の順番で展開し、**graphics.js** を選択します。
 
     ![](images/300/image065.png)  
 
-- Add the code block below to the bottom on the **graphics.js** file:
+- 下記のソースコードを**graphics.js** の最下部に追記します。
 
 ```
 /*global $, define, console*/
@@ -396,101 +416,101 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 });
 ```
 
-- Back in the browser; navigate back to the Application Container Cloud Service service console. Copy URL for **JavaTwitterMicroservice** that was created in Lab 200.
+- Application Container Cloud Serviceのサービスコンソールを開き、Lab 200で作成した**JavaTwitterMicroservice**のURLをコピーします。
 
     ![](images/300/image066.png)  
 
-- Replace the existing URL with your URL for the **root variable**. ***Make sure*** there is a '`/`' (front slash) at the **end of the URL**.
+- 変数：**root variable**に設定されているURLをコピーしたURLに置き換えます。***URLの最後に'/'(スラッシュ)が含まれている事を確認してください。***
 
     ![](images/300/image067.png)  
 
-- Completed graphics should look something like the image below:
+- 修正後のソースコードは下記のようになります。
 
     ![](images/300/image068.png)  
 
-- Save all files by clicking **File -> Save All**
+- メニューバーで**File**をクリックして、**Save All** を選択し、全ての修正を保存します。
 
-![](images/300/image069.png)  
+    ![](images/300/image069.png)  
 
-### **STEP 15**: Test new changes
+### **STEP 15**: 修正箇所の確認
 
-- Click ![](images/300/image070.png) Live Preview to test out the new changes.
+- 右側のパネルで![](images/300/image070.png) をクリックして、ライブプレビューを開きます。
 
-- Click ![](images/300/image071.png) and select **Graphics**
+- 右上の![](images/300/image071.png)をクリックし、展開されたメニューから**Graphics**を選択します。
 
     ![](images/300/image072.png)
 
-- In the graphics sections you can now see all the twitter feed data:
+- graphicセクションでTwitterフィードが表示されていることを確認します。
 
     ![](images/300/image073.png)
 
-# Create a new Branch and Commit Code
+# ブランチの作成とコードのコミット
 
-## Create a Branch and Commit Code
+## ブランチを作成とコードのコミット
 
-### **STEP 16**: Create a new Branch and Commit Code
+### **STEP 16**: 新規ブランチを作成し、コードをコミットします。
 
-- First we need to create a new branch to check in all of our changes for this feature. In the left hand navigation panel, select **master** and click **Create new branch**.
+- 機能追加を行ったソースコードをコミットするブランチを作成します。左側のナビゲーションパネルで**master**を選択して、**Create new branch** をクリックします。
 
     ![](images/300/image074.png)
 
-- In popup window, **enter** `Feature4` for branch name and click **OK**.
+- ポップアップが表示されたら、Branch nameに**Feature 4**と入力し、**OK** をクリックします。
 
     ![](images/300/image075.png)
 
-- Click  Git ![](images/300/image076.png) icon. Check the box next to **Commit** to select all modified files.
+- 右側の![](images/300/image076.png)をクリックします。**Commit** の左側のチェックボックスにチェックを付け、修正したソースファイル全てにチェックを付けます。
 
     ![](images/300/image077.png)
 
-- Click **Commit**.
+- **Commit**をクリックします。
 
-- In popup enter the **comment** `Added code to display twitter feed in table format` and click **OK**. This will commit the changes to your local Git repository.
+- ポップアップが表示されたら、**comment**に**Added code to display twitter feed in table format**と入力し、**OK** をクリックします。これでローカルのリポジトリに変更内容がコミットされました。
 
     ![](images/300/image078.png)
 
-- Click ![](images/300/image079.png) Git Push icon.
+- Gitプッシュアイコン ![](images/300/image079.png)をクリックします。
 
-- In popup window leave all defaults and click **OK**
+- ポップアップが表示されたら、全てデフォルトのまま**OK**をクリックします。
 
     ![](images/300/image080.png)
 
-- Once Git Push completes click **OK**.
+- Gitプッシュが完了したら、**OK** をクリックします。
 
     ![](images/300/image081.png)
 
-### **STEP 17**: Complete the Display Twitter Feed Task
+### **STEP 17**: Twitterフィード表示タスクの完了
 
-- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.  Make Sure you are viewing the **Microservices** board.
+- Developer Cloud Serviceのダッシュボード画面に戻り、左側のナビゲーションパネルで**Agile**をクリックして、**Active Sprints**をクリックします。**Microservices**のboardが表示されていることを確認してください。
 
-- Drag and drop **Feature 4** from **In Progress** to **Verify Code**.
+- **Feature 4**をドラッグ&ドロップし、**In Progress**から**Verify Code** に移動します。
 
     ![](images/300/image082.png)
 
-- In the Change Progress popup click **Next**.
+- **Change Progress**ポップアップで**Next** をクリックします。
 
     ![](images/300/image083.png)
 
-- In the **Time Spent** field enter `1` and click on **OK**.
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/300/image083.5.png)
 
-## Create Merge Request
+## マージリクエストの作成
 
-### **STEP 18**: Review Sprint Status and create Merge Request
+### **STEP 18**: Sprint Statusのレビューとマージリクエストの作成
 
-- Click on the **Code** tab, select the **Feature4** branch and then click on the **Commits** sub tab. Now view the recent commit that we made to branch from Brackets.
+- 左側のナビゲーションパネルの**Code**をクリックして、**Feature4**ブランチを選択し、**Commits** タブを表示します。最新のコミットがBracketsからコミットしたものであることを確認します。
 
     ![](images/300/image084.png)
 
-- Now that "John Dunbar" has completed the task of displaying twitter feed in table format, a Merge Request can be created by John and assigned to "Lisa Jones." 
+- これで"John Dunbar"のタスクであるTwitterフィードの表示が完了したので、Johnは"Lisa Jones"にマージリクエストを送信します。
 
     ![](images/300/image084.5.png)
 
-- Click on **Merge Requests**, and then click on the **New Merge Request button**.
+- **Merge Requests**をクリックして、**New Merge Request** をクリックします。
 
     ![](images/300/image085.png)
 
-- Enter the following information into the New Merge Request and click **Next**
+- **New Merge Request**に下記のデータを入力して、**Next** をクリックします。
 
     **Repository:** `TwitterMarketingUIMicroservice.git`
 
@@ -500,7 +520,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image086.png)
 
-- Enter the following information into Details and click **Create**
+- **Details**に下記のデータを入力して、**Create**をクリックします。
 
     **Summary:** `Merge Feature 4 into master`
 
@@ -508,76 +528,75 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image087.5.png)
 
-- In the **Write** box, enter the following comment and then click on the **Comment** button to save
+- **Write**ボックスに下記のコメントを入力し、**Comment** をクリックして保存します。
 
     **Comment:** `I added table of Twitter feed to graphics tab`
 
     ![](images/300/image088.png)
 
-## Merge the Branch as Lisa Jones
+## Lisa Jonesとしてブランチをマージ
 
 
-### **STEP 19**: Merge Requests
+### **STEP 19**: マージリクエスト
 
-- In the following steps the logical persona “Lisa” will merge the branch created by “John” into the master.
+ここからのSTEPでは“John”が作成したブランチを“Lisa”がmasterブランチへマージします。
 
     ![](images/lisa.png)
 
-- Click on **Merge Requests**. Select the **Assigned to Me** search. After the search completes, click on the **Merge Feature 4 into master** assigned request.
+- **Merge Requests**をクリックして、**Assigned to Me**を選択します。**Merge Feature 4 into master** が表示されるのでクリックします。
 
     ![](images/300/image094.png)
 
-- Once the request has loaded, select the **Changed Files tab**. As the persona Lisa, you will now have the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
+- リクエストが表示されたら、**Changed Files** タブを選択します。マージリクエストの承認・拒否・マージを行なう前に、“Lisa”はブランチへの変更、コメント等の確認を行います。
 
     ![](images/300/image095.2.png)
 
-- Click on the **Merge** button.
+- **Merge** をクリックします。
 
     ![](images/300/image096.png)
 
-- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+- デフォルトのまま**Merge**をクリックします。
 
     ![](images/300/image097.png)
 
-- Now that the code has been committed to the Developer Cloud Service repository, the build and deployment will automatically start. Click on **Build**, and you should see a **Twitter Marketing UI Build** in the Queue
+- これで修正されたソースコードがDeveloper Cloud Serviceのリポジトリにコミットされましたので、自動でビルド&デプロイが実行されます。左側のナビゲーションパネルで**Build**をクリックして、**Twitter Marketing UI Build** がQueueに入っていることを確認します。
 
     ![](images/300/image098.png)
 
-- Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
+- ビルドが完了するまで数分待ちます。ビルドが完了すると**Last Success**の内容が**Just Now** に変更されます。
 
     ![](images/300/image099.png)
 
-- Click on Deploy. Wait for the **Deploy** Status to change to **Deployment update in progress**, and then change to **Last deployment succeeded** – **Just now**.
+- 左側のナビゲーションパネルの**Deploy**をクリックして進捗を確認します。**Depoloy**ステータスが**Deployment update in progress**の場合、デプロイが進行中です。**Last deployment succeeded** – **Just now** に変更されたらデプロイ完了なので、次のSTEPに進みます。
 
     ![](images/300/image100.png)
 
-## Test the JETFrontEndAPP UI in the Cloud
+## JETFrontEndAPP UIの確認
 
-### **STEP 20**: Test the Front End
+### **STEP 20**: フロントエンドの確認
 
-- Once the service has successfully deployed, click on the **JETFrontEndApp** link
+- - サービスが正常にデプロイされたら、左側のナビゲーションパネルの**Deploy**をクリックして、**JETFrontEndApp** のリンクをクリックします。
 
     ![](images/300/image101.png)
 
-- When the new browser tab loads, click **Graphics** to display twitter feed data.
+- ブラウザの新規タブが開いたら、**Graphics** をクリックし、Twitterフィードを表示します。
 
     ![](images/300/image102.png)
 
-- To complete the Sprint Feature, click on **Agile** in the Twitter Feed Marketing Project Dashboard. Then click on the **Active Sprints** button.
+- 左側ナビゲーションパネルの**Agile**をクリックし、**Active Sprints** を選択し、Sprint Featureを完了させます。
 
     ![](images/300/image103.png)
 
-- Complete the feature request by Dragging and Dropping **Feature 4** (Display Twitter Feed in Table Format) from the **Verify** Column to the **Completed** Column.
+- **Feature 4** (Display Twitter Feed in Table Format)を**Verify**エリアから**Completed**エリアへドラッグ&ドロップで移動します。
 
     ![](images/300/image104.png)
 
-- Set the Status to **VERIFIED – FIXED** and click **Next**.
+- ステータスを**VERIFIED – FIXED**に変更し、**Next** をクリックします。
 
     ![](images/300/image105.png)
 
-- Enter '`' into the **Time Spent** field and click on **OK**.
+- **Time Spent**を**1 days**に設定して、**OK** をクリックします。
 
     ![](images/300/image105.5.png)
 
-- You are now ready to move to the next lab.
-
+- ここまででLab300は完了です。Lab400に進んでください。
