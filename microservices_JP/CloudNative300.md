@@ -68,7 +68,7 @@ TwitterマーケティングUIの開発に先立って、同僚が事前に大�
 
     **Description:** `Twitter Marketing UI Microservice`
 
-    **Initial content:** Import existing repository and enter the URL: `https://github.com/pcdavies/JETTwitterQuickStart.git`
+    **Initial content:** Import existing repository を選択し次のURLを入力 `https://github.com/pcdavies/JETTwitterQuickStart.git`
 
     ![](images/300/image018.5.png)  
 
@@ -86,7 +86,7 @@ Gitリポジトリにソースコードを取り込めたので、masterブラ�
 
     ![](images/300/image020.png)  
 
-- **New Job**のポップアップでJob Nameに`Twitter Feed Build`と入力し、**Save** をクリックします。
+- **New Job**のポップアップでJob Nameに`Twitter Marketing UI Build`と入力し、**Save** をクリックします。
 
     ![](images/300/image021.png)  
 
@@ -120,7 +120,7 @@ Gitリポジトリにソースコードを取り込めたので、masterブラ�
 
 - **Post Build**タブをクリックして、下記の設定を行います。
   - **Archive the artifacts**にチェックを入れます。
-  - **Files to Archive**に** \*\*/target/\***と入力します。
+  - **Files to Archive**に`**/target/*`と入力します。
   - **Compression Type**のプルダウンで**GZIP** を選択します。
 
     ![](images/300/image027.png)  
@@ -294,7 +294,7 @@ Application Container Cloud Serviceへのアプリケーションのデプロイ
 
 ### **STEP 10**: Git URLのコピー
 
-Developer Cloud Serviceダッシュボードに戻り、左側のナビゲーションパネルで**Project**をクリックして、右側の**TwitterMarketingUIMicroservice.git**のURLを確認し、右クリックからコピーを行ってください。
+- Developer Cloud Serviceダッシュボードに戻り、左側のナビゲーションパネルで**Project**をクリックして、右側の**TwitterMarketingUIMicroservice.git** のURLを確認し、右クリックからコピーを行ってください。
 
     ![](images/300/image054.2.png)  
 
@@ -454,7 +454,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image074.png)
 
-- ポップアップが表示されたら、Branch nameに**Feature 4**と入力し、**OK** をクリックします。
+- ポップアップが表示されたら、Branch nameに**Feature4**と入力し、**OK** をクリックします。
 
     ![](images/300/image075.png)
 
@@ -541,7 +541,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
 ここからのSTEPでは“John”が作成したブランチを“Lisa”がmasterブランチへマージします。
 
-    ![](images/lisa.png)
+![](images/lisa.png)
 
 - **Merge Requests**をクリックして、**Assigned to Me**を選択します。**Merge Feature 4 into master** が表示されるのでクリックします。
 
@@ -555,7 +555,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image096.png)
 
-- デフォルトのまま**Merge**をクリックします。
+- デフォルトのまま**Create a Merge Commit**をクリックします。
 
     ![](images/300/image097.png)
 

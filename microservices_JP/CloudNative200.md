@@ -136,10 +136,10 @@ Gitリポジトリにソースコードを取り込めたので、masterブラ�
 
 - **Post Build**タブをクリックして、下記の設定を行います。
   - **Archive the artifacts**にチェックを入れます。
-  - **Files to Archive**に** \*\*/target/\***と入力します。
+  - **Files to Archive**に`**/target/*`と入力します。
   - **Compression Type**のプルダウンで**GZIP**を選択します。
   - **Publish JUnit test report**にチェックを入れます。
-  - **Test Report XMLs**に**\*\*/target/surefire-reports/\*.xml** と入力します。この設定をすることでビルド毎にテストスクリプトの実行結果の取得が出来ます。
+  - **Test Report XMLs**に`**/target/surefire-reports/*.xml` と入力します。この設定をすることでビルド毎にテストスクリプトの実行結果の取得が出来ます。
 
     ![](images/200/Picture28.png)  
 
@@ -197,7 +197,7 @@ Gitリポジトリにソースコードを取り込めたので、masterブラ�
 
   - **Subscription**: `Hourly`
 
-  - **Type:** `Automatic` and `Deploy stable builds only`
+  - **Type:** `Automatic` の `Deploy stable builds only`
 
   - **Job:** `Twitter Feed Build`
 
