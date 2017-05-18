@@ -4,7 +4,7 @@
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
-    ![](images/WorkshopMenu.png)  
+    ![](images/WorkshopHeader.png)  
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
