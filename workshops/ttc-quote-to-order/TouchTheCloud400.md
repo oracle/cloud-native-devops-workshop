@@ -1,7 +1,4 @@
-<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center> 
-
-Update: March 13, 2017
-
+<img class="float-right" src="https://oracle.github.io/learning-library/workshops/common-content/images/touch-the-cloud/ttc-logo.png" width="200">
 ## Introduction
 
 This is the analytics part of the  **iPaaS - Build a Quote to Order Process Workshop.** This workshop will walk you through the analytics of the  of a typical Quote to Order process.

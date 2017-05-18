@@ -1,8 +1,5 @@
+# iPaaS - Build a Quote to Order Process Workshop
 <center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center>  
-
-Update: April 26, 2017
-
-# Cloud Accelerate: iPaaS - Build a Quote to Order Process Workshop
 
 ## About
 

@@ -1,7 +1,4 @@
-<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center> 
-
-Update: March 13, 2017
-
+<img class="float-right" src="https://oracle.github.io/learning-library/workshops/common-content/images/touch-the-cloud/ttc-logo.png" width="200">
 ## Introduction
 
 This workshop require that there are a couple of configurations done before starting with the workshop. In this document it will be described what needs to be done, and in what sequence.

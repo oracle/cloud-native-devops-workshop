@@ -1,7 +1,4 @@
-<center>![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)</center> 
-
-Update: March 23, 2017
-
+<img class="float-right" src="https://oracle.github.io/learning-library/workshops/common-content/images/touch-the-cloud/ttc-logo.png" width="200">
 # Lab 300 - Integration Cloud Service
 
 ---

@@ -2,9 +2,6 @@
 <img src="https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png" />
 </center>
 
-Update: March 10, 2017
-
-
 #Step-by-step Instructions
 
 # Workshop Overview
