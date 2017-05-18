@@ -16,7 +16,7 @@
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/tree/master/db-devops) repository.
 
-- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnativeDB) for a visual overview of the workshop content. 
+- Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?mysql) for a visual overview of the workshop content. 
 
 **Third**, ***Cloud Accelerate for the Developer***
 
@@ -82,13 +82,13 @@ The Oracle Public Cloud Cloud Native Microservices workshop is a one day worksho
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 500: Create Marketing Application to View Alphaoffice and Twitter Data
+## Lab 500: Cloud Native Developer Cloud Service Administration
 
 **Documentation**: [CloudNative500.md](CloudNative500.md)
 
 ### Objectives
 
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
+- Access the Oracle Developer Cloud Service
+- Follow the Git methodology for source code control
+- Follow the Agile methodology for project management
+- Access additional administrative features of Oracle Developer Cloud Service
