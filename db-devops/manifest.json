@@ -2,6 +2,8 @@
     "workshop": {
         "title": "DevOps and Cloud Native Microservices-DB workshop",
         "description": "The Oracle Public Cloud Cloud Native Microservices workshop is a one day workshop focused on DevOps in the Oracle Public Cloud. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices. You will take on 4 Personas during the workshop. The Project Manager Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers. The Project Manager will then start the initial sprint. The MySQL Database Developer persona will create a test and development database copy, and then update the database schema. The Java Developer persona will develop new REST services that will allow for access to twitter and MySQL data. The JavaScript Developer persona will develop a new Alphaoffice Marketing UI that will display the twitter data to allow for analysis. During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.",
+        "theme": "ttc",
+        "interactive":"https://launch.oracle.com/?mysql",
         "labs": [
             {
                 "number": "0",
