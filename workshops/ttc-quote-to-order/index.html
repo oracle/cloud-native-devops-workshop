@@ -61,7 +61,7 @@
             <md-button ng-click="close()" class="md-primary infra"> Close Menu </md-button>
         </md-content>
     </md-sidenav>
-    <md-button class="md-fab md-fab-top-right" aria-label="Interactive Tour" ng-click="showInteractive()">
+    <md-button class="md-fab md-fab-top-right" aria-label="Interactive Tour" ng-click="showInteractive()" ng-show="enableInteractive">
         <md-tooltip md-direction="left">Interactive Tour</md-tooltip> <img class="interactive-img infra" style="" src="https://oracle.github.io/learning-library/workshops/common-content/images/common/interactive-logo.png" /> </md-button>
     <div id="interactive-popup" style="visibility: hidden">
         <div class="md-dialog-container" id="interactiveDialog">
