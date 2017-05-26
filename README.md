@@ -28,6 +28,7 @@ The content contains several independent modules that cover different aspects of
 #### Container based application development lifecycle using Wercker and Container Cloud Service ####
 
 + [Build Spring Boot container packaged application using Wercker and deploy to Oracle Container Cloud Service](springboot-sample/create.wercker.ci.md)
+	+ [Use Wercker step to restart Oracle Container Cloud Service in Wercker Continuous Delivery workflow](springboot-sample/wercker.step.occs.md)
 + [Build Spring Boot application using Wercker and deploy to Oracle Application Container Cloud Service using custom Wercker Step](springboot-sample/wercker.step.accs.md)
 + [Build Node.js-MongoDB container packaged application using Wercker and deploy to Oracle Container Cloud Service as the Stack of services](containers/nodejs-mongodb-stack/README.md)
 
