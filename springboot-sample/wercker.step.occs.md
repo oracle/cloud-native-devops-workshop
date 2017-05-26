@@ -7,18 +7,18 @@
 ### About this tutorial ###
 **Wercker** provides a Docker-Native CI/CD  Automation platform for Kubernetes & Microservice Deployments. Wercker is integrated with Docker containers, which package up application code and can be easily moved from server to server. In case when Wercker packaged container deployed to Oracle Container Cloud Service would be useful to restart a container whenever new version of application/Docker container available.
 
-Currently this feature is available using publicly available Wercker Step ([oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa)) which allows to restart the container using the specified Docker image.
+Currently this feature is available using publicly available Wercker Step ([https://app.wercker.com/applications/5924200572be0b01001b83aa/tab/details/)) which allows to restart the container using the specified Docker image.
 
-To enable this step define the [oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa) step in the `wercker.yml` and the application workflow. For further details read the step or follow this tutorial. 
+To enable this step define the [oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa/tab/details/) step in the `wercker.yml` and the application workflow. For further details read the step or follow this tutorial. 
 
 **Architecture**
 ![](images/wercker/occs.wercker.png)
 
-The publicly available [oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa) step use the Oracle Container Cloud Service's REST API to manage the container.
+The publicly available [oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa/tab/details/) step use the Oracle Container Cloud Service's REST API to manage the container.
 
 This tutorial demonstrates how to:
 
-- define and configure [oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa) step
+- define and configure [oracle-occs-container-util](https://app.wercker.com/applications/5924200572be0b01001b83aa/tab/details/) step
 
 ### Prerequisites ###
 
