@@ -6,7 +6,7 @@ Update: January 28, 2017
 
 このハンズオンセットアップガイドではハンズオンで使用するOracle Cloud環境の取得手順、クライアント環境の設定手順を説明します。このハンズオンではOracleが提供するクラウドサービスである[**Oracle Developer Cloud Service**](https://cloud.oracle.com/ja_JP/developer_service), [**Oracle Application Container Cloud Service**](https://cloud.oracle.com/ja_JP/acc)に加えてEclipse, Maven, Git, Bracket等のOSSを使用します。
 
-**<font color="Red">ハンズオン参加者の方は事前に下記Step1,2を完了させてください。環境の準備が整っていない場合、ハンズオンに参加していただけない可能性があります。</font>**
+***ハンズオン参加者の方は事前に下記Step1,2を完了させてください。環境の準備が整っていない場合、ハンズオンに参加していただけない可能性があります。***
 
 ## Step1. Oracleクラウド環境の設定
 

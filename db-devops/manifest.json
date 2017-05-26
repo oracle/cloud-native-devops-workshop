@@ -2,6 +2,8 @@
     "workshop": {
         "title": "DevOps and Cloud Native Microservices-DB workshop",
         "description": "The Oracle Public Cloud Cloud Native Microservices workshop is a one day workshop focused on DevOps in the Oracle Public Cloud. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices. You will take on 4 Personas during the workshop. The Project Manager Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers. The Project Manager will then start the initial sprint. The MySQL Database Developer persona will create a test and development database copy, and then update the database schema. The Java Developer persona will develop new REST services that will allow for access to twitter and MySQL data. The JavaScript Developer persona will develop a new Alphaoffice Marketing UI that will display the twitter data to allow for analysis. During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.",
+        "theme": "ttc",
+        "interactive":"https://launch.oracle.com/?mysql",
         "labs": [
             {
                 "number": "0",
@@ -25,7 +27,7 @@
                 "number": "200",
                 "filename": "CloudNative200.md",
                 "title": "Lab 200: Agile Database Development",
-                "description": "Access Developer Cloud Service, import external GIT Repository, create test and development MySQL databases, import project into Eclipse, and update the database using Flyway to version chagnes."
+                "description": "Access Developer Cloud Service, import external GIT Repository, create test and development MySQL databases, import project into Eclipse, and update the database using Flyway to version changes."
             },
             {
                 "number": "300",
@@ -42,8 +44,8 @@
             {
                 "number": "500",
                 "filename": "CloudNative500.md",
-                "title": "Lab 500: Cloud Native Develper Cloud Service Administration",
-                "description": "Access Developer Cloud Service, Complete Sprint, Run Backlog and Sprint Reports and Review Administrative Tasks"
+                "title": "Lab 500: Cloud Native Rapid Javascript Devlopment with node.js",
+                "description": "Complete all the final processes necessary to publish the completed microservices application, and make all the final updates on the Agile board. Lastly, review several administrative screens relevant to the project."
             }
         ]
     }

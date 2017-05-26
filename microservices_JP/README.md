@@ -1,90 +1,83 @@
-## IMPORTANT: How to prepare for this Workshop
+## 重要: ハンズオンのための事前準備
 
-**First**, ***Get an Oracle Cloud Account*** 
-- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
-- For some workshop events, cloud environments will be provided. 
-- For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](https://shop.oracle.com/r/promo?sc=codeny_hol2_cloudpromotion) 
-- If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
+**1.** ***Oracle Cloudアカウントの取得***
+- [Try It](https://shop.oracle.com/r/promo?sc=codeny_hol2_cloudpromotion) からOracle Cloudのトライアル環境を取得します。
 
-**Second**, ***Configure your Client Environment***
-- Your client environment **must be configured prior** to attempting the Hands-on-Workshop labs. 
-- You have two options for configuring your workshop client environment. 
-- ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
-- ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both **Option 1 and 2 are documented** in the [Trial Account Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
+**2.** ***ローカル環境の設定***
+- ***ハンズオンに参加する前に*** クライアント環境を準備しておく必要があります。
+- ハンズオン用Virtual Boxイメージをダウンロードし、起動の確認を行ってください。
+- ダウンロードリンク、設定手順は[ハンズオンセットアップガイド](StudentGuide.md)を参考にしてください。
 
-**Third**, ***How to View the Lab Guides***
+**3.** ***ラボガイドの確認***
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/cloud-native-devops-workshop/microservices) 
+- ラボガイドは下記リンクにアップロードされています。
+- [GitHub Pages (日本語版)](https://oracle.github.io/cloud-native-devops-workshop/microservices_JP)
+- [GitHub Pages (英語版)](https://oracle.github.io/cloud-native-devops-workshop/microservices)
 
-- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
+- ラボガイドの左上のメニューアイコンをクリックすると、Lab 100 - 400までのガイドに移動出来ます。
 
     ![](images/WorkshopMenu.png)  
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/tree/master/microservices) repository.
+- ハンズオンの概要は[Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative)から確認できます。こちらは英語版のみの提供となります。
 
-- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
+## クラウド･ネイティブ･マイクロサービス ハンズオン
 
-**Fourth**, ***Cloud Accelerate for the Developer***
+このハンズオンではソフトウェア開発ライフサイクル(Software Development Lifecycle (SDLC))の流れを複数のマイクロサービスを作成・利用するクラウドネイティブプロジェクト通して理解していきます。ハンズオンラボでは一人のユーザとしてログインし作業を進めますが、下記3人のユーザの作業を行います。このハンズオンでは**Oracle Developer Cloud Service**と**Oracle Application Container Cloud Service**を使用し、アプリケーション開発を行います。
 
-This Cloud Native Microservices Workshop is part of a **Free** Sales Program that Oracle offers. The Program is called **Cloud Accelerate for the Developer**. During this program Oracle can work with you to do the following:
+- **プロジェクトマネージャ**<br>
+  プロジェクトの作成、行なうタスクの追加、開発者へのタスクのアサインを行い、Sprintを開始します。
 
-- Understand your Development Interests and Capabilities
-- Build your personalized Enablement Plan, including Hands-on Technical Enablement.
-- Help you Exercise your acquired knowledge. 
-- If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
+- **Java開発者**<br>
+  twitterのデータ取得・フィルタリングが出来るtwitterフィードサービスの開発を行います。
 
-## DevOps and Cloud Native Microservices Workshop
+- **JavaScript開発者**<br>
+  twitterデータ分析のためのtwitterマーケティング画面を作成します。
 
-This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - you will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
-
-## Workshop Details
-
-**Reference the following Lab Guides by opening their Documentation Files:**
+## ハンズオン詳細
 
 ## Lab 100: Agile Project Management
 
-**Documentation**: [CloudNative100.md](CloudNative100.md)
+**ドキュメント**: [CloudNative100.md](CloudNative100.md)
 
-### Objectives
+### ゴール
 
-- Create Initial Project
-- Add Users to Project
-- Create Product Issues
-- Create Issues for Twitter Feed Microservice
-- Create Issues for Twitter Feed Marketing UI
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
+- プロジェクトを作成
+    - プロジェクトへユーザを追加
+- Issueを作成
+    - TwitterフィードマイクロサービスのIssueを作成
+    - TwitterフィードマーケティングUIのIssueを作成
+- Agile BoardとSprintを作成
+- SprintへIssueを追加
 
 ## Lab 200: Continuous Delivery of Java Microservices
 
-**Documentation**: [CloudNative200.md](CloudNative200.md)
+**ドキュメント**: [CloudNative200.md](CloudNative200.md)
 
-### Objectives
+### ゴール
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Eclipse
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Developer Cloud Serviceへアクセス
+- 外部Gitリポジトリからのソースコードのインポート
+- プロジェクトのEclipseへのインポート
+- Developer Cloud Service, Application Container Cloud Serviceを使用したプロジェクトのビルド&デプロイ
 
 ## Lab 300: Cloud Native Rapid JavaScript Development with node.js
 
-**Documentation**: [CloudNative300.md](CloudNative300.md)
+**ドキュメント**: [CloudNative300.md](CloudNative300.md)
 
-### Objectives
+### ゴール
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Developer Cloud Serviceへアクセス
+- 外部Gitリポジトリからのソースコードのインポート
+- プロジェクトのBracketsへのインポート
+- Developer Cloud Service, Application Container Cloud Serviceを使用したプロジェクトのビルド&デプロイ
 
 ## Lab 400:  Cloud Native Developer Cloud Service Administration
 
-**Documentation**: [CloudNative400.md](CloudNative400.md)
+**ドキュメント**: [CloudNative400.md](CloudNative400.md)
 
-### Objectives
+### ゴール
 
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
+- Developer Cloud Serviceへアクセス
+- Sprintの完了
+- バックログ、Sprintレポートの確認
+- 管理作業の確認

@@ -1,109 +1,109 @@
-![](images/400/PictureTitle.png)  
+![](images/400/PictureTitle.png)
+
 Update: March 31, 2017
 
 ## Introduction
 
-This is the fourth of several labs that are part of the **Oracle Cloud Native Microservices workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+このハンズオンラボは**クラウド･ネイティブ･マイクロサービス ハンズオン**の四つ目のラボです。このハンズオンではソフトウェア開発ライフサイクル(Software Development Lifecycle (SDLC))の流れを複数のマイクロサービスを作成・利用するクラウドネイティブプロジェクト通して理解していきます。
 
-In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view the Agile reports provided by the Oracle Developer Cloud Service
-
-
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+このラボ(Lab 400)ではプロジェクト管理者のLisa JonesとしてSprintを完了し、Oracle Developer Cloud Serviceで出力されたAgileレポートの確認を行います。
 
 ## Objectives
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
+- Developer Cloud Serviceへアクセス
+- Sprintの完了
+- バックログ、Sprintレポートの確認
+- 管理作業の確認
 
 
-## Required Artifacts
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+## 前提条件
+
+- Lab 300が完了していること
+- Oracle Public Cloud環境にアクセスが出来ること
 
 
-# Close the Sprint
+# Sprintの完了
 
-## Connect to the Develop Cloud Service
+## Developer Cloud Serviceへの接続
 
-### **STEP 1**: Select the Agile Dashboard
+### **STEP 1**: Agileダッシュボードの表示
 
-- This Lab assumes that you completed Lab 100, 200, and 300 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- このラボはすでにLab 100,200,300を終了しており、Developer Cloud Serviceダッシュボードの"Twitter Feed Marketing Project"を表示している状態から始めます。ダッシュボードが表示されていない場合、Lab 100 - STEP 3を参考に再度ダッシュボードの表示をしてください。
 
-- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Lisa Jones*** as you perform the following steps.
+- Trial登録時に作成したユーザアカウントを使用してハンズオンを進めますが、下記のSTEPは**Lisa Jones**の手順として進めます。
 
     ![](images/lisa.png)  
 
-- Click on **Agile** on the Microservice Board.
+- 左側のナビゲーションパネルで**Agile**をクリックします。
 
     ![](images/400/image002.png)
 
-- Click on the **Reports** Button and explore the **Burndown Chart**.
+- **Reports**をクリックして、**Burndown Chart** を確認します。
 
     ![](images/400/image003.png)
 
-- Click on the **Sprint Report**.
+- **Sprint Report** をクリックします。
 
 
-### **STEP 2**: Complete the Sprint
+### **STEP 2**: Sprintの完了
 
-- Click on to the **Active Sprints** button, then click **Complete Sprint**.
+- **Active Sprints**をクリックして、**Complete Sprint** をクリックします。
 
 ![](images/400/image005.png)
 
-- **Confirm** and **Complete** the Sprint
+- ポップアップが表示されるので、**Complete Sprint** をクリックします。
 
 ![](images/400/image006.png)
 
-##Run Sprint Reports
+##Sprint Reportの出力
 
-### **STEP 3**: Run Sprint Reports
+### **STEP 3**: Sprint Reportの出力
 
-- Return to the **Reports** Page
+- **Reports** ページに戻ります。
 
     ![](images/400/image007.png)
 
 
-- Review the Burndown Report by Story Points. Note: normally it would take several days to complete this project, and the report would provide information about the Burndown Rate per Day.
+- Burndown Reportでストーリーポイントの消費傾向を確認します。Note: 通常のSprintの場合は数日間かけてSprintを行なうので、Burndown Reportには日毎の消費ポイントが表示されます。
 
     ![](images/400/image015.png)
 
 
-- Click on the **Sprint Report** tab. In this lab, the results will be skewed because the Sprint was completed in a single day. However, the dotted line shows the starting point, and the red line shows the current remaining points. Normally this would step down towards the end of the sprint.
+- **Sprint Report**をクリックします。今回のハンズオンでは１日でSprintが完了しているため、**Sprint Report** タブのグラフは下記のような表示となっていますが、数日間かけてSprintを行った場合、Sprint完了に向けて段階的に数値が減って行きます。緑の点線はSprintの開始を示していて、赤い線はその時点での残ストーリーポイントを示しています。
 
     ![](images/400/image016.png)
 
-# Project Administrative Features
+# プロジェクト管理機能
 
-## Review Administrative Features
+## プロジェクト管理機能の確認
 
-### **STEP 4**: Review Administrative Options
+### **STEP 4**: プロジェクト管理機能の確認
 
-- Click on **Administration** navigation to view the available administrative options. Click on the **Properties icon**.
+- 左側のナビゲーションパネルで**Administration**をクリックすると、管理機能の一覧がプルダウンで表示されます。その中から**Properties icon**をクリックします。
 
     ![](images/400/image008.png)
 
-- From this panel you are able to set the default properties for the Project. This is also the where the project can be deleted.
+- このパネルではプロジェクトのデフォルト設定を確認・変更出来ます。またプロジェクトの削除もこのパネルから行なうことが出来ます。
 
     ![](images/400/image009.png)
 
-- Click on the Administration drop down to view the other Administration options. Select the **Usage Metrics**.
+- 左側のナビゲーションパネルで**Administration**をクリックして、プルダウンから**Usage Metrics**をクリックします。
 
     ![](images/400/image010.png)
 
-- The Usage Metrics will display the available storage allocation and usage for Git, Maven, Hudson, Tasks and the Wiki.
+- このパネルではGitとMaven、Hudson、TaskとWikiで使用可能なストレージの領域を確認出来ます。
 
     ![](images/400/image011.png)
 
-- From the Menu options list select **Issues Tracking** to view the options available for Issue configuration.
+- 左側のナビゲーションパネルで**Administration**をクリックして、プルダウンから**Issues Tracking**をクリックすると下記のようなパネルが表示されます。
 
     ![](images/400/image012.png)
 
-- From the Menu options list, select **Repositories**.
+- 左側のナビゲーションパネルで**Administration**をクリックして、プルダウンから**Repositories**をクリックすると下記のようなパネルが表示されます。
 
     ![](images/400/image013.png)
 
-- From the Menu options list, select **Branches** to view the repository branches by User or Branch.
+- 左側のナビゲーションパネルで**Administration**をクリックして、プルダウンから**Branches**をクリックすると下記のようなパネルが表示されます。このパネルではユーザに紐付けられたBranchの確認を行なうことが出来ます。
 
     ![](images/400/image014.2.png)
 
-- You have now completed this lab
+- これでクラウド・ネイティブ・マイクロサービス ハンズオンは完了です。
