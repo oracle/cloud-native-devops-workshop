@@ -148,7 +148,7 @@ Now switch to **Workflows** tab.
 
 ![alt text](images/wercker/18.workflow.add.pipeline.png)
 
-As mentioned upon creating a project in Wercker, it creates a *build* Workflow with a Git hook which executes a build pipeline. This means whenever you push changes into your github repository then a new build will be triggered. Now add a new pipeline what will do the Docker container image push to your Docker registry. Click *Add new pipeline*.
+As mentioned upon creating a project in Wercker, it creates a *build* Workflow with a Git hook which executes a build pipeline. This means whenever you push changes into your github repository then a new build will be triggered. Now add a new pipeline what will do the deploy to Oracle Application Container Cloud Service. Click *Add new pipeline*.
 
 + **Name**: *deploy-oracle-accs* (but basically it can be anything else)
 + **YML Pipeline name**: it has to be *deploy-accs*, because we already defined this pipeline in  the *wercker.yml*.

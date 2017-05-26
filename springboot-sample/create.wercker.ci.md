@@ -269,7 +269,7 @@ Find your new service in the list. It can happen that you need to jump to the ne
 
 ![alt text](images/wercker/36.deploy.service.png)
 
-Orchestration can be part of service configuration and you can define during the deployment here. This lab doesn't focus on this so leave default everything except the Deployment Name. It is usefule to add unique name however Container Cloud Service will apppend the deployment date to the name. Click **Depoly**.
+Orchestration can be part of service configuration and you can define during the deployment here. This lab doesn't focus on this so leave default everything except the Deployment Name. It is usefule to add unique name however Container Cloud Service will apppend the deployment date to the name. Click **Deploy**.
 
 ![alt text](images/wercker/37.deploy.service.details.png)
 
@@ -287,4 +287,4 @@ Open a new browser (tab) and enter or copy the host's public IP address and appe
 
 Please note your name what you inserted on *welcome.jsp* page.
 
-Optionally modify other text on the page and push changes to build new container. Once the Wercker workflow completed you need to stop and start your deployment to get the changes on your application.
+Optionally [add *wercker-occs-container-util* step](wercker.step.occs.md) step to automatically restart Oracle Container Cloud Service when change happens on the application.
