@@ -109,7 +109,7 @@ Go back to the Wercker's welcome page and click **Create your first application*
 
 ![alt text](images/12.create.application.png)
 
-First select the repository you want to use as sources. By default it will show your Github provider and the available repositories. Select *wercker-springboot* and click **Use selected repo**.
+First select the repository you want to use as sources. By default it will show your Github provider and the available repositories. Select *node-mongodb-crud* and click **Use selected repo**.
 
 ![alt text](images/13.select.repo.png)
 
