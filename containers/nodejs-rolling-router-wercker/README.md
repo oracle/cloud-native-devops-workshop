@@ -45,11 +45,11 @@ make
 
 This will upload the image to your Docker-hub.
 
-![Logo](docker-hub-rolling-router.png)
+![Logo](images/docker-hub-rolling-router.png)
 
 ### Create the OCCS service
 
-Login to OCCS and create a new service `rolling-router-sticky` with the following YML where the image repository refers to your Docker-hub account (bolded): 
+Login to OCCS and create a new service `rolling-router-sticky` with the following YML where the image repository refers to your Docker-hub account (bolded):
 
 <pre>
 version: 2
@@ -76,11 +76,11 @@ Deploy the service.
 
 Check the worker host `public_ip` from the OCCS admin:
 
-![Logo](occs-host-ip.png)
+![Logo](images/occs-host-ip.png)
 
 Check also the `API token` a.k.a Bearer from Settings/My Profile:
 
-![Logo](occs-bearer.png)
+![Logo](images/occs-bearer.png)
 
 From your browser open the URL pointing to the worker host public_ip address e.g. `http://140.86.1.96:8080`.
 
@@ -88,27 +88,27 @@ The rolling router sticky sessions GUI should show up with a setup screen.
 
 Enter the OCCS admin host ip, API Token (Bearer), Application name `docker-hello-world` and the preferred `host port` of the Docker application e.g. 3000:
 
-![Logo](rolling-router-ss-login.png)
+![Logo](images/rolling-router-ss-login.png)
 
 Press OK. The following screen should show up if the login with the given OCCS admin IP and API token was succesful:
 
-![Logo](rolling-router-ss-create-keyvalues.png)
+![Logo](images/rolling-router-ss-create-keyvalues.png)
 
 If the login was unsuccesful the following error should show up:
 
-![Logo](rolling-router-ss-login-error.png)
+![Logo](images/rolling-router-ss-login-error.png)
 
 Create the initial keyvalues for the hello world application deployment by selecting the following values from the dropdowns:
 
-![Logo](rolling-router-ss-set-keyvalues.png)
+![Logo](images/rolling-router-ss-set-keyvalues.png)
 
 Set the values like this:
 
-![Logo](rolling-router-ss-keyvalues-set.png)
+![Logo](images/rolling-router-ss-keyvalues-set.png)
 
 This will store the values in OCCS keyvalues for the hello world application in host port 3000:
 
-![Logo](occs-keyvalues.png)
+![Logo](images/occs-keyvalues.png)
 
 ### GUI login and keyvalues for an existing application
 
@@ -120,7 +120,7 @@ Also, if the keyvalues are changed in the OCCS using the admin or the REST API t
 
 ### Building the Hello world application base box image for Wercker
 
-Since the rolling router sticky sessions Wercker CI/CD script for OCCS uses utilities like `jq`, `recode` and `curl` we have selected `Ubuntu`as the base image for our Hello world `Node.js` application. 
+Since the rolling router sticky sessions Wercker CI/CD script for OCCS uses utilities like `jq`, `recode` and `curl` we have selected `Ubuntu`as the base image for our Hello world `Node.js` application.
 
 #### Build Ubuntu with Node.js and required utilities
 
@@ -151,11 +151,11 @@ docker tag $tag <b>mikarinneoracle</b>/ubuntu:trusty
 docker push mikarinneoracle/ubuntu
 </pre>
 
-![Logo](docker-hub-ubuntu-trusty.png)
+![Logo](images/docker-hub-ubuntu-trusty.png)
 
 #### Build the Hello world application image
 
-Using the custom built Ubuntu image build the Node.js Hello world application. 
+Using the custom built Ubuntu image build the Node.js Hello world application.
 The <a href="https://github.com/mikarinneoracle/hello-world">source code</a> includes a Dockerfile with the following:
 
 <pre>
@@ -187,9 +187,9 @@ docker tag $tag <b>mikarinneoracle</b>/hello-world:latest
 docker push mikarinneoracle/hello-world
 </pre>
 
-![Logo](docker-hub-hello-world.png)
+![Logo](images/docker-hub-hello-world.png)
 
-### Creating the Wercker workflow 
+### Creating the Wercker workflow
 
 Login to your Wercker account and create a Wercker `application` Hello world for the Node.js application that we just built.
 
@@ -197,11 +197,11 @@ Then create a Wercker `workflow` with two steps `build` (the default) and `deplo
 
 Add a new `step` deploy:
 
-![Logo](Wercker-workflow-add-deploy.png)
+![Logo](images/Wercker-workflow-add-deploy.png)
 
 Add it to the workflow after the build step:
 
-![Logo](Wercker-workflow.png)
+![Logo](images/Wercker-workflow.png)
 
 The YML pipeline names are identical to pipeline names.
 
@@ -212,54 +212,54 @@ Create the following application environment values for the Wercker workflow:
 <pre>
   SERVICE_MANAGER:    OCCS admin url e.g. https://140.86.1.162
   API_TOKEN:          OCCS API token (bearer)
-  APP_NAME:           docker-hello-world 
+  APP_NAME:           docker-hello-world
   APP_FRIENDLY_NAME:  Hello-world  
   DOCKER_EMAIL:       Docker hub account email
   DOCKER_USERNAME:    Docker hub account username
   DOCKER_PASSWORD:    Docker hub account password
-  DOCKER_REGISTRY:    Docker hub registry; typically the same as the username e.g. mikarinneoracle 
+  DOCKER_REGISTRY:    Docker hub registry; typically the same as the username e.g. mikarinneoracle
   EXPOSED_PORT:       Hello world application host port e.g. 3000
   IMAGE_NAME:         Wercker.yml box name e.g. hello-world
   APP_TAG:            Wercker.yml box tag e.g. latest
   SCALE_AMOUNT:       OCCS scale amount e.g. 1
-  DOCKER_CMD:         OCCS image command e.g. npm start (for Node.js) 
+  DOCKER_CMD:         OCCS image command e.g. npm start (for Node.js)
 </pre>
 
-![Logo](Wercker-app-env-variables.png)
+![Logo](images/Wercker-app-env-variables.png)
 
 ### Launch the first build with the workflow
 
 After setting the application environment variables you can start the first build by clicking the ` trigger a build now` link as below:
 
-![Logo](Wercker-initial-build.png)
+![Logo](images/Wercker-initial-build.png)
 
 Workflow starts and runs the workflow:
 
-![Logo](Wercker-deploy.png)
+![Logo](images/Wercker-deploy.png)
 
-![Logo](Wercker-deploy-details.png)
+![Logo](images/Wercker-deploy-details.png)
 
 Hello world application candidate image with a `timestamp` tag (i.e. the Wercker environment variable `$WERCKER_MAIN_PIPELINE_STARTED` in the deploy script) was created and pushed to Docker hub:
 
-![Logo](docker-hub-candidate-built.png)
+![Logo](images/docker-hub-candidate-built.png)
 
 The new image was also deployed to OCCS and the candidate image of the Hello world application should be running:
 
-![Logo](occs-candidate-deployed.png)
+![Logo](images/occs-candidate-deployed.png)
 
 The Rolling router sticky sessions GUI was updated to reflect the keyvalue change in OCCS for the application candidate:
 
-![Logo](rolling-router-ss-candidate-deployed.png)
+![Logo](images/rolling-router-ss-candidate-deployed.png)
 
 ### Promoting the candidate image and calling the stable application from browser
 
 Promote the candidate to `stable`by clicking promote button in the Rolling router sticky sessions GUI. The result should be that the stable version is now the image that was just built by Wercker and the candidate is rolling/null:
 
-![Logo](rolling-router-ss-candidate-promoted.png)
+![Logo](images/rolling-router-ss-candidate-promoted.png)
 
 Now you can open a new tab to your browser and call the stable version of application by opening the URL pointing to the worker host public_ip address e.g. `http://140.86.1.96`.
 
-![Logo](rolling-router-ss-stable-running.png)
+![Logo](images/rolling-router-ss-stable-running.png)
 
 (The backgroud color and text can be slightly different)
 
@@ -277,30 +277,30 @@ git push origin master
 
 Wercker should pick up this change automatically and the workflow starts for a new candidate version of Hello world.
 
-![Logo](Wercker-candidate-build.png)
+![Logo](images/Wercker-candidate-build.png)
 
 A new candidate image with a new tag should be uploaded to Docker hub:
 
-![Logo](docker-hub-new-candidate.png)
+![Logo](images/docker-hub-new-candidate.png)
 
 It should be also deployed and started in OCCS now both the stable and candidate running:
 
-![Logo](occs-stable-and-candidate-deployed.png)
+![Logo](images/occs-stable-and-candidate-deployed.png)
 
 The rolling router sticky sessions GUI should now be updated with the candidate to reflect the change in the OCCS keyvalue for the application candidate:
 
-![Logo](rolling-router-ss-stable-and-candidate-running-blend-0.png)
+![Logo](images/rolling-router-ss-stable-and-candidate-running-blend-0.png)
 
 ### Sending load to the candidate version
 
-Since both versions are now running we can test the candidate version by sending load to it. 
+Since both versions are now running we can test the candidate version by sending load to it.
 To do this adjust the blend % to 50:  
 
-![Logo](rolling-router-ss-stable-and-candidate-running-blend-50.png)
+![Logo](images/rolling-router-ss-stable-and-candidate-running-blend-50.png)
 
 Now every other request to the worker host public_ip address e.g. http://140.86.1.96 should go to the candidate version:
 
-![Logo](rolling-router-ss-candidate-running.png)
+![Logo](images/rolling-router-ss-candidate-running.png)
 
 Keep on reloading the page to see the behaviour. You can also try setting the blend percent to 100 for example, then all requests should go to the candidate.
 
@@ -310,15 +310,15 @@ Since the CI/CD pipeline is now working it is easy to build new versions of the 
 
 Again, the new Hello world application image gets built and uploaded to Docker hub with a tag. The existing candidate should be replaced by the new candidate in the OCCS:
 
-![Logo](occs-candidate-rebuild-deployed.png)
+![Logo](images/occs-candidate-rebuild-deployed.png)
 
 And the new candidate should also be updated in the rolling router sticky sessions GUI with the blend % zero:
 
-![Logo](rolling-router-ss-stable-and-candidate-rebuild-running-blend-0.png)
+![Logo](images/rolling-router-ss-stable-and-candidate-rebuild-running-blend-0.png)
 
 You can now increase the blend % and realod your application page a few times depending on blend %. A new version should show up eventually:
 
-![Logo](occs-candidate-rebuild-running.png)
+![Logo](images/occs-candidate-rebuild-running.png)
 
 #### Promoting a new candidate as stable
 
@@ -328,13 +328,13 @@ You also play with the stable and candidate values by selecting them from the dr
 
 ### Session stickyness between stable and candidate
 
-So far you have not played with the session stickiness (a.k.a affinity) yet. 
+So far you have not played with the session stickiness (a.k.a affinity) yet.
 
 This is easy to do just setting the stickyness to true:
 
-![Logo](rolling-router-ss-stable-set-stickiness-true.png)
+![Logo](images/rolling-router-ss-stable-set-stickiness-true.png)
 
-![Logo](rolling-router-ss-stable-set-stickiness.png)
+![Logo](images/rolling-router-ss-stable-set-stickiness.png)
 
 Now every subsequent request from the <i>same</i> client i.e. browser should go to the same application version, either stable or candidate, depending on which one it reached initially (based on the blend %). This means it should keep the session affinity and the user should experince the same version of the application all the time.
 
@@ -394,6 +394,6 @@ The second step `internal/docker-push` pushes the built image to Docker-hub repo
 The final step of deploy pipeline, and the whole workflow, is the actual deploy to Oracle Container Cloud service.
 This is done as a `registry step`that is found in the <a href="https://app.wercker.com/search/steps/oracle">Wercker registry</a> with a name `mikarinneoracle/ORACLE-OCCS-rolling-router-deploy@1.0.0`:
 
-![Logo](Wercker-registry-step-OCCS.png)
+![Logo](images/Wercker-registry-step-OCCS.png)
 
 The source code for it can be found here: <a href="https://github.com/mikarinneoracle/ORACLE-OCCS-rolling-router-deploy">github.com/mikarinneoracle/ORACLE-OCCS-rolling-router-deploy</a> and contains the `run.sh`and the `Wercker-step.yml` definition file.
