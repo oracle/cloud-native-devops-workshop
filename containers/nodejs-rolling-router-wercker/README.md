@@ -176,7 +176,7 @@ EXPOSE 3000
 CMD [ "npm", "start" ]
 </pre>
 
-You can first fork the Hello world project to your git-hub account:
+Start by forking the Hello world project to your git-hub account:
 
 ![Logo](images/Fork-hello-world.png)
 
