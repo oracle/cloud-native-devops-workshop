@@ -180,7 +180,7 @@ Start by forking the Hello world project to your git-hub account:
 
 ![Logo](images/Fork-hello-world.png)
 
-Then clone the project build and push the image to Docker hub (change the repository bolded to match your Docker hub account):
+Then clone the project build and push the image to Docker hub (change the repository bolded to match your Git-hub and Docker hub accounts):
 
 <pre>
 mkdir hello-world
