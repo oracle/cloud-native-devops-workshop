@@ -176,11 +176,15 @@ EXPOSE 3000
 CMD [ "npm", "start" ]
 </pre>
 
-You can clone the project and then build and push the image to Docker hub (change the repository bolded to match your Docker hub account):
+You can first fork the Hello world project to your git-hub account:
+
+![Logo](images/Fork-hello-world.png)
+
+Then clone the project build and push the image to Docker hub (change the repository bolded to match your Docker hub account):
 
 <pre>
 mkdir hello-world
-git clone git@github.com:mikarinneoracle/hello-world.git hello-world
+git clone git@github.com:<b>mikarinneoracle</b>/hello-world.git hello-world
 cd hello-world
 export tag=$(docker build -t hello-world . | grep 'Successfully built' | tail -c 13)
 docker tag $tag <b>mikarinneoracle</b>/hello-world:latest
@@ -191,7 +195,11 @@ docker push mikarinneoracle/hello-world
 
 ### Creating the Wercker workflow
 
-Login to your Wercker account and create a Wercker `application` Hello world for the Node.js application that we just built.
+Login to your Wercker account and create a Wercker `application` Hello world for the Node.js application that we just built using the Hello world git-hub repo:
+
+![Logo](images/Wercker-create-application.png)
+
+Complete by going thru the 3 steps. You can leave the settings to the defaults.
 
 Then create a Wercker `workflow` with two steps `build` (the default) and `deploy`.
 
