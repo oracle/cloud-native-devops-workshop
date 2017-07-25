@@ -36,14 +36,19 @@ REGISTRY_NAME ?= your_docker_hub_username
 
 ### Build the image
 
-Build the `rolling-router-sticky-sessions`image using make:
+Build the `rolling-router-sticky-sessions` image using make. You will need to also build the `runit` and `confd` dependencies if you have not built them before:
 
 <pre>
-cd images/rolling-router-sticky-sessions
-make
+  cd images/runit
+  make
+  cd images/confd
+  make
+  cd images/rolling-router-sticky-sessions
+  make
+  make publish
 </pre>
 
-This will upload the image to your Docker-hub.
+The final `make publish` will upload the image to your Docker-hub.
 
 ![Logo](images/docker-hub-rolling-router.png)
 
@@ -68,7 +73,7 @@ services:
       - '8080:8080/tcp'
 </pre>
 
-If you haven't build the image of your own, you can use the YML above as is.
+If you haven't built the image of your own, you can use the YML above as is.
 
 Deploy the service.
 
