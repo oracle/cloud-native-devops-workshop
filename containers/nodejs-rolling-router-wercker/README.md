@@ -36,14 +36,19 @@ REGISTRY_NAME ?= your_docker_hub_username
 
 ### Build the image
 
-Build the `rolling-router-sticky-sessions`image using make:
+Build the `rolling-router-sticky-sessions` image using make. You will need to also build the `runit` and `confd` dependencies if you have not built them before:
 
 <pre>
-cd images/rolling-router-sticky-sessions
-make
+  cd images/runit
+  make
+  cd images/confd
+  make
+  cd images/rolling-router-sticky-sessions
+  make
+  make publish
 </pre>
 
-This will upload the image to your Docker-hub.
+The final `make publish` will upload the image to your Docker-hub.
 
 ![Logo](images/docker-hub-rolling-router.png)
 
@@ -68,7 +73,7 @@ services:
       - '8080:8080/tcp'
 </pre>
 
-If you haven't build the image of your own, you can use the YML above as is.
+If you haven't built the image of your own, you can use the YML above as is.
 
 Deploy the service.
 
@@ -176,11 +181,15 @@ EXPOSE 3000
 CMD [ "npm", "start" ]
 </pre>
 
-You can clone the project and then build and push the image to Docker hub (change the repository bolded to match your Docker hub account):
+Start by forking the Hello world project to your git-hub account:
+
+![Logo](images/Fork-hello-world.png)
+
+Then clone the project build and push the image to Docker hub (change the repository bolded to match your Git-hub and Docker hub accounts):
 
 <pre>
 mkdir hello-world
-git clone git@github.com:mikarinneoracle/hello-world.git hello-world
+git clone git@github.com:<b>mikarinneoracle</b>/hello-world.git hello-world
 cd hello-world
 export tag=$(docker build -t hello-world . | grep 'Successfully built' | tail -c 13)
 docker tag $tag <b>mikarinneoracle</b>/hello-world:latest
@@ -191,7 +200,11 @@ docker push mikarinneoracle/hello-world
 
 ### Creating the Wercker workflow
 
-Login to your Wercker account and create a Wercker `application` Hello world for the Node.js application that we just built.
+Login to your Wercker account and create a Wercker `application` Hello world for the Node.js application that we just built using the Hello world git-hub repo:
+
+![Logo](images/Wercker-create-application.png)
+
+Complete by going thru the 3 steps. You can leave the settings to the defaults.
 
 Then create a Wercker `workflow` with two steps `build` (the default) and `deploy`.
 
