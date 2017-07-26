@@ -397,16 +397,14 @@ deploy:
         tag: $WERCKER_MAIN_PIPELINE_STARTED
         repository: $DOCKER_REGISTRY/$IMAGE_NAME
         registry: https://registry.hub.docker.com
-    - mikarinneoracle/ORACLE-OCCS-rolling-router-deploy@1.1.0
+        - script:
+            name: deploy
+            code: |
+            ...
 </pre>
 
 The first step `check` is just to verify we have built our box from a correct image having the required utlities available for the actual deploy to Oracle Container Cloud service.
 
 The second step `internal/docker-push` pushes the built image to Docker-hub repository. Here, we are using `$WERCKER_MAIN_PIPELINE_STARTED` timestamp as the tag for the image being pushed.
 
-The final step of deploy pipeline, and the whole workflow, is the actual deploy to Oracle Container Cloud service.
-This is done as a `registry step`that is found in the <a href="https://app.wercker.com/search/steps/oracle">Wercker registry</a> with a name `mikarinneoracle/ORACLE-OCCS-rolling-router-deploy@1.0.0`:
-
-![Logo](images/Wercker-registry-step-OCCS.png)
-
-The source code for it can be found here: <a href="https://github.com/mikarinneoracle/ORACLE-OCCS-rolling-router-deploy">github.com/mikarinneoracle/ORACLE-OCCS-rolling-router-deploy</a> and contains the `run.sh`and the `Wercker-step.yml` definition file.
+The final step of deploy pipeline, and the whole workflow, is the actual deploy to Oracle Container Cloud service. The complete script is <a href="https://github.com/mikarinneoracle/hello-world/blob/master/wercker.yml#L25">here</a>.
