@@ -8,7 +8,7 @@ opc.password=PWD_TO_BE_EDITED
 # Check your generic storage url - see documentation
 opc.storage.generic.url=storage.oraclecloud.com
 # The name of the container to use by Database and Java Cloud Services
-opc.storage.container=wins_container
+opc.storage.container=app2cloud
 
 # SSH key details
 # first you need to create your SSH key pair. Use example Putty's Keygen tool - see documentation
